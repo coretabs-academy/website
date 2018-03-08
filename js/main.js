@@ -1,10 +1,15 @@
 $(function(){
   $("details").removeAttr('open');
+  $("body:not(.home)").prepend('<div class="dark--bg"></div>');
   $(".humberger-icon").on('click', function() {
     $("body").addClass('move');
     $("nav").addClass('move');
   });
   $("body").on('click', '.close svg',function() {
+    $("body").removeClass('move');
+    $("nav").removeClass('move');
+  });
+  $(".dark--bg").on('click',function() {
     $("body").removeClass('move');
     $("nav").removeClass('move');
   });
