@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>[الدرس الثامن]: CSS Basics</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-brand">
+        <div class="">
+          1MAC Courses
+        </div>
+      </div>
+      <div class="icon-container">
+        <div class="humberger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="navbar-nav">
+        <nav>
+          <div class="close">
+            أغلق <i class="fas fa-times"></i>
+          </div>
+          <a href="../../index.html">الرئيسية</a>
+          <a href="../html_css/html-css.html">HTML & CSS</a>
+          <a href="../javascript/javascript.html">JavaScript</a>
+          <a href="../git/git.html">Git</a>
+          <a href="../projects/projects.html">المشاريع</a>
+        </nav>
+      </div>
+    </div>
+    <div class="container">
+      <div class="cooked">
+        <h1>أساسيات CSS</h1>
+        <hr>
+  <p dir="rtl">في الدرس السابق تعرفنا على طرق إضافة أكواد الـ CSS إلى مستند الـ HTML, في هذا الدرس سنتكلم عن أهم الأساسيات لكتابة أكواد الـCSS.</p>
+  <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/3/0/30f7304b363ee6885ba9f225a60b9ad1dd1345b8_1_690x454.png">
+  <p dir="rtl">الكود في الصورة أعلاة هو مثال لأبسط المكونات الأساسية لعمل تنسيق <code dir="ltr">CSS</code> لعناصر الـ <code dir="ltr">HTML</code> وسنفصلها كالتالي:</p>
+  <h2 dir="rtl">1- الـ Selector او ما يمكننا تسميته العنصر المستهدف:</h2>
+  <p dir="rtl">كما قمنا بالتوضيح سابقاً تحتاج الـ <code dir="ltr">CSS</code> لمعرفة من هو العنصر المستهدف الذي ستقوم بتطبيق التنسيقات المرغوبة عليه وسنذكر أبرز ثلاث طرق لعمل ذلك:<br></p>
+  <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/b/c/bcbd0704c8f66890672804c4c5de96afbbb7fe98_1_690x454.png">
+  <ul dir="rtl">
+     <li dir="rtl">
+        <strong dir="rtl">الطريقة الأولى: Element Selector</strong><br>
+        في هذه الطريقة تقوم بإستهداف عنصر بإستخدام الوسم ذاته كما بالصورة السابقة قمنا بإستهداف جميع عناصر الوسم <code dir="ltr">&lt;p&gt;</code>.
+     </li>
+  </ul>
+  <p dir="rtl"><strong dir="rtl">لنأخذ مثال:</strong></p>
+  <!-- HTML generated using hilite.me --><!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!--HTML CODE--&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;p&gt;</span>Hello world!<span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;p&gt;</span>One Million Arab Coder<span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
+<span style="color: #8f5902; font-style: italic">&lt;!-- CSS CODE --&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;style&gt;</span>
+    <span style="color: #204a87; font-weight: bold">p</span> <span style="color: #000000; font-weight: bold">{</span>
+        <span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #204a87">red</span><span style="color: #000000; font-weight: bold">;</span>
+    <span style="color: #000000; font-weight: bold">}</span>
+<span style="color: #204a87; font-weight: bold">&lt;/style&gt;</span>
+</pre></div>
+
+
+
+  <p dir="rtl">قم بتطبيق المثال السابق.</p>
+  <details dir="rtl" open="">
+     <summary dir="rtl">
+        النتيجة كالتالي:
+     </summary>
+
+     <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/2/6/264a9ff7227682db9f8ed3d729e165e5a88c30c1_1_690x421.jpg">
+
+     <p dir="rtl"><strong dir="rtl">الكود كاملاً:</strong></p>
+     <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!doctype html&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;html&gt;</span>
+   <span style="color: #204a87; font-weight: bold">&lt;head&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">charset=</span><span style="color: #4e9a06">"utf-8"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;title&gt;</span>One Million Arab Coder<span style="color: #204a87; font-weight: bold">&lt;/title&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;style&gt;</span>
+         <span style="color: #204a87; font-weight: bold">p</span><span style="color: #000000; font-weight: bold">{</span>
+         <span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #204a87">red</span><span style="color: #000000; font-weight: bold">;</span>
+         <span style="color: #000000; font-weight: bold">}</span>
+      <span style="color: #204a87; font-weight: bold">&lt;/style&gt;</span>
+   <span style="color: #204a87; font-weight: bold">&lt;/head&gt;</span>
+   <span style="color: #204a87; font-weight: bold">&lt;body&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;p&gt;</span>Hello world!<span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;p&gt;</span>One Million Arab Coder<span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
+   <span style="color: #204a87; font-weight: bold">&lt;/body&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/html&gt;</span>
+</pre></div>
+
+  </details>
+  <p dir="rtl"><strong dir="rtl">- لاحظ</strong> انه تم إستهداف جميع عناصر الوسم <code dir="ltr">p</code> دون أي إستثناء<br>
+     <strong dir="rtl">- لاحظ</strong> عند تعريفك للـ Element Selector في الـ CSS تقوم بكتابة إسم الوسم بدون أي إضافات أخرى
+  </p>
+  <hr>
+  <ul dir="rtl">
+     <li dir="rtl">
+        <strong dir="rtl">الطريقة الثانية: ID Selector</strong><br>
+        قمنا بشرح فكرة الـ ID في الدرس السابق وكما لاحظت أننا نقوم بتعريفة من أجل إستهداف عنصر واحد فريد من نوعة في مستند الـ HTML و يعتبر واحد من أهم الـ Selectors وأكثرها إستخداماً.
+     </li>
+  </ul>
+  <p dir="rtl"><strong dir="rtl">لنأخذ مثال:</strong></p>
+  <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!--HTML CODE--&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;p</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"paragraph"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Hello world!<span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;p&gt;</span>One Million Arab Coder<span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
+<span style="color: #8f5902; font-style: italic">&lt;!-- CSS CODE --&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;style&gt;</span>
+   <span style="color: #000000">#paragraph</span><span style="color: #000000; font-weight: bold">{</span>
+   <span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #204a87">red</span><span style="color: #000000; font-weight: bold">;</span>
+   <span style="color: #000000; font-weight: bold">}</span>
+<span style="color: #204a87; font-weight: bold">&lt;/style&gt;</span>
+</pre></div>
+
+
+  <p dir="rtl">قم بتطبيق المثال السابق.</p>
+  <details dir="rtl">
+     <summary dir="rtl">
+        النتيجة كالتالي:
+     </summary>
+
+     <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/b/2/b20a8ed4166b892fb37dc92d56171b1dc4bb858c_1_690x421.jpg" <p="" dir="rtl"><strong dir="rtl">الكود كاملاً:</strong><p></p>
+     <pre dir="ltr"><code class="hljs xml" dir="ltr"><span class="hljs-meta">&lt;!doctype html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>One Million Arab Coder<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+
+<span class="hljs-selector-id">#paragraph</span>{
+     <span class="hljs-attribute">color</span>:red;
+}
+
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"paragraph"</span>&gt;</span>Hello world!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>One Million Arab Coder<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+
+</code></pre>
+  </details>
+  <p dir="rtl"><strong dir="rtl">- لاحظ</strong> انه تم إستهداف العنصر الذي يحمل الـ id المحدد فقط دون سواه.<br>
+     <strong dir="rtl">- لاحظ</strong> عند تعريفك للـ id Selector في الـ CSS تقوم بكتابة <code dir="ltr">#</code> ثم تكتب إسم الـ <code dir="ltr">id</code> كما في مثالنا أعلاة <code dir="ltr">#paragraph</code>.
+  </p>
+  <hr>
+  <ul dir="rtl">
+     <li dir="rtl">
+        <strong dir="rtl">الطريقة الثالة: Class Selector</strong><br>
+        قمنا بشرح فكرة الـ Class  في الدرس السابق وكما لاحظت أننا نقوم بتعريفة من أجل إستهداف عنصر او مجموعة من العناصر في مستند الـ HTML و يعتبر واحد من أهم الـ Selectors وأكثرها إستخداماً.
+     </li>
+  </ul>
+  <p dir="rtl"><strong dir="rtl">لنأخذ مثال:</strong></p>
+
+  <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!--HTML CODE--&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;p</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"paragraph"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Hello world!<span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;p</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"paragraph"</span><span style="color: #204a87; font-weight: bold">&gt;</span>One Million Arab Coder<span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;p&gt;</span>I don't have a class<span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
+<span style="color: #8f5902; font-style: italic">&lt;!-- CSS CODE --&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;style&gt;</span>
+   <span style="color: #000000">.paragraph</span><span style="color: #000000; font-weight: bold">{</span>
+   <span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #204a87">red</span><span style="color: #000000; font-weight: bold">;</span>
+   <span style="color: #000000; font-weight: bold">}</span>
+<span style="color: #204a87; font-weight: bold">&lt;/style&gt;</span>
+</pre></div>
+
+  <p dir="rtl">قم بتطبيق المثال السابق.</p>
+  <details dir="rtl">
+     <summary dir="rtl">
+        النتيجة كالتالي:
+     </summary>
+
+     <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/6/a/6acd6e1e8eded9cdf2d0e28bcb19e6f9bcdc903c_1_690x421.jpg">
+
+     <p dir="rtl"><strong dir="rtl">الكود كاملاً:</strong></p>
+     <pre dir="ltr"><code class="hljs xml" dir="ltr"><span class="hljs-meta">&lt;!doctype html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>One Million Arab Coder<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+
+<span class="hljs-selector-class">.paragraph</span>{
+     <span class="hljs-attribute">color</span>:red;
+}
+
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"paragraph"</span>&gt;</span>Hello world!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"paragraph"</span>&gt;</span>One Million Arab Coder<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>I don't have a class<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+
+</code></pre>
+  </details>
+  <p dir="rtl"><strong dir="rtl">- لاحظ</strong> انه تم إستهداف عنصرين يملكان نفس إسم الكلاس <code dir="ltr">paragraph</code><br>
+     <strong dir="rtl">- لاحظ</strong> عند تعريفك للـ Class Selector في الـ CSS تقوم بكتابة <code dir="ltr">.</code> ثم تكتب إسم الـ <code dir="ltr">class</code> كما في مثالنا أعلاة <code dir="ltr">.paragraph</code>
+  </p>
+  <hr>
+  <h2 dir="rtl">2- الـ Porperty او الخاصية:</h2>
+  <p dir="rtl">الخطوة التالية بعد أن تقوم بتحديد العنصر المستهدف بإستخدام أحد الطرق أعلاة هو أن تبدأ بإضافة التنسيقات له, وللقيام بذلك يجب أن تقوم بتحديد نوع الخاصية المراد تطبيقها.<br></p>
+  <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/d/e/def436e03afa8926eb7d4f2781bab6cf8f3c509f_1_690x454.png">
+  <p dir="rtl">الخاصية في الصورة أعلاة <code dir="ltr">color</code> هي الخاصية المسؤولة عن تغيير لون الخط.<br>
+     أنت غير ملزم بحفظ هذه الخصائص فسوف تنساها وإنما مع الوقت والممارسة ستحفظها ودائماً بإمكانك الرجوع للمرجع الخاص بها لتعلمها ومعرفة فائدتها وطريقة إستخدامها<br>
+     <a href="https://www.w3schools.com/cssref/default.asp" rel="nofollow noopener" dir="rtl">إضغط هنا للذهاب لمرجع خصائص الـ CSS</a>
+  </p>
+  <p dir="rtl"><strong dir="rtl">- لاحظ</strong> طريقة كتابة الخاصية كالتالي <code dir="ltr">color:</code></p>
+  <hr>
+  <h2 dir="rtl">2- الـ  Property Value أو قيمة الخاصية :</h2>
+  <p dir="rtl">الخطوة التالية بعد أن تقوم بتحديد العنصر المستهدف والخاصية المطلوب تنفيذها هي أن تقوم بتحديد قيمة هذه الخاصية.<br></p>
+  <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/a/2/a2cf8a1248e5cb457051171c8e3b382633e9225b_1_690x454.png">
+  <p dir="rtl">الصورة أعلاة توضح قيمة خاصية تغيير لون الخط حيث قمت بطلب تغيير لونة إلى اللون الأحمر <code dir="ltr">red</code></p>
+  <p dir="rtl"><strong dir="rtl">- لاحظ</strong> هناك عدة طرق لتحديد اللون المطلوب بإمكانك تعلمها من <a href="https://www.w3schools.com/cssref/pr_text_color.asp" rel="nofollow noopener" dir="rtl">خلال هذا المرجع</a> وسنتطرق لها لاحقاً.</p>
+  <hr>
+  <p dir="rtl">ملاحظات مهمة:</p>
+  <ul dir="rtl">
+     <li dir="rtl">
+        لاتنسى إغلاق كل خاصية بعد كتابة قيمتها بالفاصلة المنقوطة <code dir="ltr">;</code> حتى وإن كانت الخاصية الأخيرة حتى تعتاد على ذلك وتتجنب الأخطاء.<br>
+        <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/c/e/ce56ac4d316c1d44eabefc327d070303dad2af05_1_690x454.png">
+     </li>
+  </ul>
+  <h2 dir="rtl">هناك معايير محددة لعمل تسميات لأسماء الـ id و الـ class لجعل كودك مرتب ونظيف أحرص على التالي:</h2>
+  <p dir="rtl"><strong dir="rtl">1- قم بإختيار أسماء منطقية حيث بمجرد مراجعتك لكود CSS تعرف اين هو العنصر المقصود بالتنسيق المحدد</strong></p>
+  <p dir="rtl"><strong dir="rtl">على السبيل المثال:</strong> اذا لديك قسم في الموقع خاص بالعملاء قم بتسمية clients وليس sdfgd</p>
+  <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"clients"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+</pre></div>
+
+  <p dir="rtl"><strong dir="rtl">2- اذا اردت كتابة أكثر من وصف لإسم القسم قم بفصلها بعلامة <code dir="ltr">-</code></strong></p>
+  <p dir="rtl"><strong dir="rtl">على سبيل المثال</strong> تريد عمل قسم لـ clients feedback لا تقوم بوضعة بالمسافة هكذا</p>
+  <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"clients feedback"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+</pre></div>
+
+  <p dir="rtl">فهذا الكود يعني أنك أعطيته أثنين كلاسات وليس واحد</p>
+  <p dir="rtl">قم بعمل التالي لجعلة كلاس واحد:</p>
+  <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"clients-feedback"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+</pre></div>
+
+  <p dir="rtl"><strong dir="rtl">3- قم بكتابة أسماء الـ class والـ id بأحرف صغيرة</strong></p>
+  <p dir="rtl"><strong dir="rtl">على سبيل المثال</strong> لا تقم بالتالي:</p>
+  <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"Clients"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+</pre></div>
+
+  <p dir="rtl">بل قم بالتالي:</p>
+  <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"clients"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+</pre></div>
+
+  <hr>
+  <p dir="rtl"><strong dir="rtl">في الختام تذكر أن الـ CSS من أجمل مميزاتها أنك تقوم بكتابة الكود مرة واحدة وتطبيقة على أكثر من عنصر فلا تتجاهل هذا الميزة وتقوم بتكرار اكوادك</strong></p>
+  <p dir="rtl">لنفترض أنك أردت تطبيق نفس التنسيق على كلاسين مختلفين فلا تقم بالتالي:</p>
+  <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.paragraph</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #204a87">red</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+<span style="color: #000000">.client-name</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #204a87">red</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+  <p dir="rtl">لاحظ نريد تطبيق نفس التنسيق بنفس اللون فبإمكاننا دمج هذا الكود بالشكل التالي:</p>
+  <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.paragraph</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #000000">.client-name</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #204a87">red</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+  <p dir="rtl">فقط قم بفصل كل كلاس عن الأخر بفاصلة ودعهم يتشاركوا نفس الخصائص</p>
+  <hr>
+
+</div>
+    </div>
+    <div class="navigate">
+      <a href="#" class="disabled">السابق</a>
+      <a href="#">التالي</a>
+    </div>
+    <footer>
+      <div class="copyright">
+      حقوق النشر 2018. جميع الحقوق محفوظة من قبل XXX
+      </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+  </body>
+</html>

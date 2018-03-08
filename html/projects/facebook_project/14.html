@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>[الدرس السابع] تقسيم وتكويد الـ footer</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-brand">
+        <div class="">
+          1MAC Courses
+        </div>
+      </div>
+      <div class="icon-container">
+        <div class="humberger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="navbar-nav">
+        <nav>
+          <div class="close">
+            أغلق <i class="fas fa-times"></i>
+          </div>
+          <a href="../../../index.html">الرئيسية</a>
+          <a href="../../html_css/html-css.html">HTML & CSS</a>
+          <a href="../../javascript/javascript.html">JavaScript</a>
+          <a href="../../git/git.html">Git</a>
+          <a href="../../projects/projects.html">المشاريع</a>
+        </nav>
+      </div>
+    </div>
+    <div class="container">
+      <div class="cooked">
+
+<h1>العمل على الـ footer</h1>
+<hr>
+<p dir="rtl">في الدرس السابق إنتهيناء من تكويد منطقة الـ main و حتى هذه المرحلة يجب أن يكون شكل موقعك كالتالي:<br>
+<img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/3/0/3045a81697e9594e94094d3e526016d05ff69703.jpg" alt="image" width="625" height="414"></p>
+<hr>
+<h2 dir="rtl">البدء بالعمل على الـ footer</h2>
+<p dir="rtl"><strong dir="rtl">خطة العمل:</strong><br>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/e/1/e1dfbf6671a991d10147c7898a85f0e840c95094.png" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/e1dfbf6671a991d10147c7898a85f0e840c95094" title="image.png" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/e/1/e1dfbf6671a991d10147c7898a85f0e840c95094_1_690x457.png" alt="image" width="625" height="413"></a></div><p></p>
+<p dir="rtl">سنقوم بوضع الـ <code dir="ltr">container</code> بداخل القسم <code dir="ltr">footer</code> ومن ثم سنقوم بتقسيم المنطقة إلى ثلاثة أقسام كالتالي:</p>
+<ol dir="rtl">
+<li dir="rtl">القسم الأول <code dir="ltr">.languages</code> سيحتوي قائمة اللغات</li>
+<li dir="rtl">القسم الثاني <code dir="ltr">.links</code> سيحتوي قسم الروابط</li>
+<li dir="rtl">القسم الثالث <code dir="ltr">.copy-rights</code> سيحتوي قسم الحقوق</li>
+</ol>
+<hr>
+<h3 dir="rtl">البدء بوضع الـ container</h3>
+<p dir="rtl">كالعادة سنقوم بوضع العنصر الذي سيقوم بتوسيط العناصر في الصفحة بداخل القسم footer كالتالي:</p>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"footer"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+
+<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+</pre></div>
+
+<hr>
+<h3 dir="rtl">البدء بالعمل على القسم الأول languages</h3>
+<p dir="rtl">سأقوم بإنشاء قسم جديد بداخل الـ container وسأقوم بإعطائة الكلاس languages كالتالي:</p>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"footer"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+
+  <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"languages"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+
+  <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+</pre></div>
+
+<p dir="rtl">سأقوم الأن بعمل قائمة ul لإضافة اللغات الموجودة في الموقع بحيث أول عنصر سيكون مجرد نص عادي وذلك لانه يعتبر بأنها اللغة المختارة بينما بقية العناصر ستكون روابط بالإضافة للعنصر الأخير في القائمة فسيكون عبارة عن زر بدأخلة أيقونة<br>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/1/b/1bb4893aca8360621901b6a4f31faaf8f81c36fd.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/1bb4893aca8360621901b6a4f31faaf8f81c36fd" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/1/b/1bb4893aca8360621901b6a4f31faaf8f81c36fd_1_690x457.jpg" alt="image" width="625" height="413"></a></div><p></p>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"footer"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+
+  <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"languages"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+    <span style="color: #204a87; font-weight: bold">&lt;ul&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;</span>Türkçe<span style="color: #204a87; font-weight: bold">&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>English (US)<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Ελληνικά<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Română<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Български<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Русский<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>العربية<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Tiếng Việt<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Polski<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Español<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Português (Brasil)<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"more-lang"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;i</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"plus-icon"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;</span>
+    <span style="color: #204a87; font-weight: bold">&lt;/ul&gt;</span>
+  <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+</pre></div>
+
+<p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/d/d/dd373d9f4b8da8242859f8302f09f367a785f160.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/dd373d9f4b8da8242859f8302f09f367a785f160" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/d/d/dd373d9f4b8da8242859f8302f09f367a785f160_1_690x457.jpg" alt="image" width="625" height="413"></a></div><p></p>
+<p dir="rtl"><strong dir="rtl">لنبدأ بعمل التنسيقات:</strong></p>
+<ul dir="rtl">
+<li dir="rtl">سأقوم بإعطاء القسم footer التنسيقات التالية:</li>
+</ul>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">#footer</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100</span><span style="color: #ce5c00; font-weight: bold">%</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#fff</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">30px</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+<p dir="rtl">لن أطيل في شرحها فأعتقد أنها واضحة وسبق وفصلنا كل خاصية في الدروس السابقة.</p>
+<hr>
+<ul dir="rtl">
+<li dir="rtl">سأقوم بإعطاء العنصر ul التنسيقات التالية حتى نلغي التنسيقات الإفتراضية:</li>
+</ul>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">ul</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">list-style-type</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">none</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+<hr>
+<ul dir="rtl">
+<li dir="rtl">سأقوم بإعطاء العناصر li التنسيقات التالية:</li>
+</ul>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">#footer</span> <span style="color: #204a87; font-weight: bold">li</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">font-family</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">Arial</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">inline</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">12px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#737373</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #204a87; font-weight: bold">padding-right</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">8px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">vertical-align</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #204a87; font-weight: bold">middle</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*تقوم بتوسيط العناصر عمودياً*/</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+<p dir="rtl"><strong dir="rtl">النتيجة حتى هذه اللحظة:</strong><br>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/9/d/9dee30cf81b7712ab749638a6119bbc9b763f22b.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/9dee30cf81b7712ab749638a6119bbc9b763f22b" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/9/d/9dee30cf81b7712ab749638a6119bbc9b763f22b_1_690x457.jpg" alt="image" width="625" height="413"></a></div><p></p>
+<hr>
+<ul dir="rtl">
+<li dir="rtl">سأقوم بإضافة بعض التنسيقات للروابط a التي بداخل العناصر li بالـ footer كالتالي:</li>
+</ul>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">#footer</span> <span style="color: #204a87; font-weight: bold">li</span> <span style="color: #204a87; font-weight: bold">a</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">cursor</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">pointer</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#365899</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">text-decoration</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">none</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+<ul dir="rtl">
+<li dir="rtl">سأقوم بإضافة تأثير إظهار خط تحت الروابط عند تمرير مؤشر المأوس عليها بإستخدام <code dir="ltr">:hover</code> كالتالي:</li>
+</ul>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">#footer</span> <span style="color: #204a87; font-weight: bold">li</span> <span style="color: #204a87; font-weight: bold">a</span><span style="color: #5c35cc; font-weight: bold">:hover</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">text-decoration</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">underline</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+<p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/4/1/4123329e5104b800624af88f784208d01efde641.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/4123329e5104b800624af88f784208d01efde641" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/4/1/4123329e5104b800624af88f784208d01efde641_1_690x457.jpg" alt="image" width="625" height="413"></a></div><p></p>
+<hr>
+<p dir="rtl">لنقم بالعمل على الزر الذي قمنا بإضافته كأخر عنصر في القائمة, الكود التالي للتذكير فقط وقد سبق واضفناه مع العناصر في الكود اعلاة</p>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"more-lang"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;i</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"plus-icon"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;</span>
+</pre></div>
+
+<p dir="rtl">لاحظ قمنا بإعطاء الرابط كلاس بإسم <code dir="ltr">more-lang</code> سأقوم بعمل تنسيقات معينه له كالتالي:</p>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.more-lang</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">4px</span> <span style="color: #0000cf; font-weight: bold">9px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background-color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#f6f7f9</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #204a87; font-weight: bold">solid</span> <span style="color: #0000cf; font-weight: bold">#ced0d4</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#4b4f56</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">radius</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">2px</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #000000">transition</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">background-color</span> <span style="color: #0000cf; font-weight: bold">0.2s</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*هذا الكود سيجعل لون الخلفية يتغير بسلاسة عند مرور المأوس على الزر*/</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+<p dir="rtl">قبل أن نشاهد النتيجة سأقوم بتحميل صورة الأيقونة المستخدمة في الزر كما قمنا <a href="https://macdiscussions.udacity.com/t/topic/81690" dir="rtl">بالشرح هنا</a> و كالتالي:<br>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/c/c/cc7418810e410ce2adeb5ffc83f53fc41b8b3d3b.gif" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/cc7418810e410ce2adeb5ffc83f53fc41b8b3d3b" title="plusIcon.gif" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/c/c/cc7418810e410ce2adeb5ffc83f53fc41b8b3d3b_1_690x479.gif" alt="plusIcon" width="625" height="433"></a></div><p></p>
+<p dir="rtl">قمت يحفظ الصورة بمجلد images بإسم icons</p>
+<p dir="rtl">ثم سأستخدم الموقع التالي للحصول على إحداثيات الصورة<br>
+<a href="http://www.spritecow.com" rel="nofollow noopener" dir="rtl">من هنا الموقع</a></p>
+<p dir="rtl">كالتالي:<br>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/1/8/18a475303922097f17dbca47f43ff83b8f955667.gif" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/18a475303922097f17dbca47f43ff83b8f955667" title="s2.gif" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/1/8/18a475303922097f17dbca47f43ff83b8f955667_1_690x479.gif" alt="s2" width="625" height="433"></a></div><p></p>
+<p dir="rtl">ألان سأستخدم كود إحداثيات الأيقونة في عمل تنسيقات الكلاس <code dir="ltr">plus-icon</code> كالتالي:</p>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.plus-icon</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">url('../images/icons.png')</span> <span style="color: #204a87; font-weight: bold">no-repeat</span> <span style="color: #0000cf; font-weight: bold">-39px</span> <span style="color: #0000cf; font-weight: bold">-202px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">10px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">10px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+<p dir="rtl">اذا كنت تواجه صعوبة في هذه الخطوة قم بمراجعة الدرس الخاص بإضافة شعار موقع الفيسبوك حيث ناقشنا التقنية هذه بالتفصيل <strong dir="rtl"><a href="https://macdiscussions.udacity.com/t/topic/86040" dir="rtl">من هنا</a></strong></p>
+<hr>
+<p dir="rtl">قبل أن نشاهد النتيجة اريد إضافة تنسيق أخير للزر عند مرور المأوس علية حتى يتغير لون الخلفية بشكل مطابق للموقع الأصلي كالتالي:</p>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.more-lang</span><span style="color: #5c35cc; font-weight: bold">:hover</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">background-color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#ececec</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+<p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/e/3/e393cb89ac86e8e6e436e25af50d8988af30162e.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/e393cb89ac86e8e6e436e25af50d8988af30162e" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/e/3/e393cb89ac86e8e6e436e25af50d8988af30162e_1_690x457.jpg" alt="image" width="625" height="413"></a></div><p></p>
+<hr>
+<p dir="rtl"><strong dir="rtl">الخطوة الأخيرة:</strong><br>
+نريد أن نقوم بإضافة الخط الفاصل بين القائمة الخاصة باللغات والقائمة الخاصة بقسم الروابط كما تظهر في الموقع في المكان التالي:<br>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/3/4/340c38fe90720341ece9a339073a62cbff057360.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/340c38fe90720341ece9a339073a62cbff057360" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/3/4/340c38fe90720341ece9a339073a62cbff057360_1_690x457.jpg" alt="image" width="625" height="413"></a></div><p></p>
+<p dir="rtl">سأقوم بعمل هذا الفاصل بإستخدام الـ CSS pseudo-element والتي تناولناها في الدرس الخاص بورشة عمل موقع المبادرة <a href="https://macdiscussions.udacity.com/t/topic/95539" dir="rtl">من هنا</a> كالتالي:</p>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.languages</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #5c35cc; font-weight: bold">:after</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">content</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">""</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100</span><span style="color: #ce5c00; font-weight: bold">%</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">border-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #204a87; font-weight: bold">solid</span> <span style="color: #0000cf; font-weight: bold">#dddfe2</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">10px</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #0000cf; font-weight: bold">8px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+<p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/4/1/41e80f430f659273d02171d4432cfc88a03eaa4d.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/41e80f430f659273d02171d4432cfc88a03eaa4d" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/4/1/41e80f430f659273d02171d4432cfc88a03eaa4d_1_690x457.jpg" alt="image" width="625" height="413"></a></div><p></p>
+<hr>
+<h3 dir="rtl">العمل على القسم الثاني links</h3>
+<p dir="rtl">بدأية لنقوم بعمل هذا القسم كالتالي:</p>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"footer"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+  <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"languages"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+    <span style="color: #204a87; font-weight: bold">&lt;ul&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;</span>Türkçe<span style="color: #204a87; font-weight: bold">&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>English (US)<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Ελληνικά<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Română<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Български<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Русский<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>العربية<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Tiếng Việt<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Polski<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Español<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Português (Brasil)<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"more-lang"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;i</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"plus-icon"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;</span>
+    <span style="color: #204a87; font-weight: bold">&lt;/ul&gt;</span>
+  <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+
+
+  <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"links"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+    <span style="color: #8f5902; font-style: italic">&lt;!--هنا سنقوم بكتابة اكواد هذا القسم--&gt;</span>
+  <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+</pre></div>
+
+<p dir="rtl">في هذا القسم سنقوم بإضافة قائمة تحتوي على روابط كالتالي:</p>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"footer"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+  <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"languages"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+    <span style="color: #204a87; font-weight: bold">&lt;ul&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;</span>Türkçe<span style="color: #204a87; font-weight: bold">&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>English (US)<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Ελληνικά<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Română<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Български<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Русский<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>العربية<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Tiếng Việt<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Polski<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Español<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Português (Brasil)<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"more-lang"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;i</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"plus-icon"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;</span>
+    <span style="color: #204a87; font-weight: bold">&lt;/ul&gt;</span>
+  <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+
+
+  <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"links"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+    <span style="color: #204a87; font-weight: bold">&lt;ul&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Kaydol<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Giriş Yap<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Messenger<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Facebook Lite<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Mobil<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Arkadaşlarını Bul<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Kişiler<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Sayfalar<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Yerler<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Oyunlar<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Konumlar<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Ünlüler<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Marketplace<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Gruplar<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Tarifler<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Spor<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Gör<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Moments<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Instagram<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Yerel<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Hakkımızda<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Reklam Oluştur<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Sayfa Oluştur<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Geliştiriciler<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Kariyer Olanakları<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Gizlilik<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Çerezler<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Ad Choices <span style="color: #204a87; font-weight: bold">&lt;i</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"ad-choices"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Koşullar<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Yardım<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+    <span style="color: #204a87; font-weight: bold">&lt;/ul&gt;</span>
+  <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+</pre></div>
+
+<p dir="rtl"><strong dir="rtl">قبل أن نشاهد النتيجة لنقوم ببعض التنسيقات على هذه القائمة كالتالي:</strong></p>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">#footer</span> <span style="color: #000000">.links</span> <span style="color: #204a87; font-weight: bold">li</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">padding-right</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">16px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">margin-bottom</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">2px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">position</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">relative</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+<p dir="rtl">لنقارن موقعنا بالموقع الأصلي:<br>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/b/a/ba2a499d2f02ff259c47f75ab9b0e86dc8edc26f.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/ba2a499d2f02ff259c47f75ab9b0e86dc8edc26f" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/b/a/ba2a499d2f02ff259c47f75ab9b0e86dc8edc26f_1_690x457.jpg" alt="image" width="625" height="413"></a></div><p></p>
+<p dir="rtl">نلاحظ أنه ينقصنا إضافة تلك الأيقونة بجوار احد عناصر القائمة.</p>
+<p dir="rtl">قم بالرجوع لكود عناصر القائمة links وركز على احد العناصر حيث قمنا بكتابته كالتالي:</p>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Ad Choices <span style="color: #204a87; font-weight: bold">&lt;i</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"ad-choices"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;</span>
+</pre></div>
+
+<p dir="rtl"><em dir="rtl">ملاحظة الكود اعلاة قمنا بإضافته سابقاً وانما وضعته للتذكير فقط فلا تقوم بإضافته مرة أخرى.</em></p>
+<p dir="rtl"><strong dir="rtl">هل تلاحظ أنني قمت بإدراج عنصر <code dir="ltr">i</code> بدأخل الرابط واعطيته كلاس بإسم ad-choices ؟</strong><br>
+سنقوم بإستخدام هذا الكلاس لإضافة الأيقونة بجوار الرابط وسنقوم بنفس العملية السابقة بتحديد إحداثيات موقع الايقونة ولكن من صورة الشعار هذه المرة بإستخدام <a href="http://www.spritecow.com" rel="nofollow noopener" dir="rtl">الموقع التالي<span class="badge badge-notification clicks" title="4 clicks" dir="ltr">4</span></a>.<br>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/d/8/d8019c438b3bf9574944a5c480d088ca0bf0fffe.gif" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/d8019c438b3bf9574944a5c480d088ca0bf0fffe" title="icon2.gif" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/d/8/d8019c438b3bf9574944a5c480d088ca0bf0fffe_1_669x500.gif" alt="icon2" width="625" height="467"></a></div><p></p>
+<p dir="rtl">مع إضافة بعض التنسيقات الإضافية سيكون كود التنسيقات كالتالي:</p>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.ad-choices</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">inline</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">url('../images/logo.png')</span> <span style="color: #204a87; font-weight: bold">no-repeat</span> <span style="color: #0000cf; font-weight: bold">-19px</span> <span style="color: #0000cf; font-weight: bold">-81px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">12px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">12px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">position</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">absolute</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">right</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">2px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+<p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/6/0/6098cfb28c650aaceb16dc195197d4acb51ce488.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/6098cfb28c650aaceb16dc195197d4acb51ce488" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/6/0/6098cfb28c650aaceb16dc195197d4acb51ce488_1_690x457.jpg" alt="image" width="625" height="413"></a></div><p></p>
+<p dir="rtl">قمنا بإضافة الأيقونة بنجاح ولكن لاحظ كيف أن المسافة بين العنصر الذي يملك الايقونة والعنصر الذي يلية في الموقع الأصلي أكبر من المسافة في موقعنا لهذا سنحتاج إلى أن نقوم بإضافة هامش خارجي من جهة اليمين <code dir="ltr">margin-right</code> للعنصر الذي لدية الأيقونة والذي ترتيبة بين العناصر رقم 28 كالتالي:</p>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.links</span> <span style="color: #204a87; font-weight: bold">li</span><span style="color: #5c35cc; font-weight: bold">:nth-child</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">28</span><span style="color: #ce5c00; font-weight: bold">)</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">margin-right</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">16px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+<p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/0/9/094d9515f4b495fc0aa775f1992b00d28eb3de9f.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/094d9515f4b495fc0aa775f1992b00d28eb3de9f" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/0/9/094d9515f4b495fc0aa775f1992b00d28eb3de9f_1_690x457.jpg" alt="image" width="625" height="413"></a></div><p></p>
+<hr>
+<h3 dir="rtl">العمل على القسم الثالث copy-rights</h3>
+<p dir="rtl">تبقى لنا الجزء الأخير في الـ footer وفي البدأية لنقوم بعمل القسم وإعطائة كلاس بإسم <code dir="ltr">copy-rights</code> كالتالي:</p>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"footer"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+  <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"languages"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+    <span style="color: #204a87; font-weight: bold">&lt;ul&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;</span>Türkçe<span style="color: #204a87; font-weight: bold">&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>English (US)<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Ελληνικά<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Română<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Български<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Русский<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>العربية<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Tiếng Việt<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Polski<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Español<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Português (Brasil)<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"more-lang"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;i</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"plus-icon"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;</span>
+    <span style="color: #204a87; font-weight: bold">&lt;/ul&gt;</span>
+  <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+
+
+  <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"links"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+    <span style="color: #204a87; font-weight: bold">&lt;ul&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Kaydol<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Giriş Yap<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Messenger<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Facebook Lite<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Mobil<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Arkadaşlarını Bul<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Kişiler<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Sayfalar<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Yerler<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Oyunlar<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Konumlar<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Ünlüler<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Marketplace<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Gruplar<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Tarifler<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Spor<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Gör<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Moments<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Instagram<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Yerel<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Hakkımızda<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Reklam Oluştur<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Sayfa Oluştur<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Geliştiriciler<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Kariyer Olanakları<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Gizlilik<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Çerezler<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Ad Choices <span style="color: #204a87; font-weight: bold">&lt;i</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"ad-choices"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Koşullar<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Yardım<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+    <span style="color: #204a87; font-weight: bold">&lt;/ul&gt;</span>
+  <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+
+
+  <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"copy-rights"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+    <span style="color: #8f5902; font-style: italic">&lt;!--هنا سنقوم بوضع محتويات هذا القسم--&gt;</span>
+  <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+</pre></div>
+
+<p dir="rtl">الأن سنقوم بإضافة نص الحقوق الخاص بالفيسبوك بالشكل التالي:</p>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"copy-rights"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+Facebook <span style="color: #ce5c00">&amp;copy;</span> 2018
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+</pre></div>
+
+<p dir="rtl">لاحظ كيف قمت بإضافة الأيقونة  © في أكواد الـ HTML بإستخدام الكود <code dir="ltr">&amp;copy;</code></p>
+<hr>
+<details dir="rtl" open="open">
+<summary dir="rtl">
+بإمكانك الحصول على العديد من الأيقونات الرائعة دون الحاجة الى ادراج صور او خطوط من خلال المصادر التالية:</summary>
+<p dir="rtl"><a href="https://www.w3schools.com/html/html_symbols.asp" rel="nofollow noopener" dir="rtl">المصدر الأول<span class="badge badge-notification clicks" title="1 click" dir="ltr">1</span></a></p>
+<p dir="rtl"><a href="https://www.w3schools.com/charsets/ref_utf_symbols.asp" rel="nofollow noopener" dir="rtl">المصدر الثاني<span class="badge badge-notification clicks" title="1 click" dir="ltr">1</span></a></p>
+<p dir="rtl"><a href="https://www.toptal.com/designers/htmlarrows/symbols/" rel="nofollow noopener" dir="rtl">المصدر الثالث<span class="badge badge-notification clicks" title="2 clicks" dir="ltr">2</span></a></p>
+</details>
+<hr>
+<p dir="rtl">لنقوم بعمل التنسيقات على نص الحقوق كالتالي:</p>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.copy-rights</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">margin-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">20px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">font-family</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">Arial</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">11px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#737373</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+<p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/9/b/9b2b6390a96b8e99ccd8cc16d1082527460c3279.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/9b2b6390a96b8e99ccd8cc16d1082527460c3279" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/9/b/9b2b6390a96b8e99ccd8cc16d1082527460c3279_1_690x493.jpg" alt="image" width="625" height="446"></a></div><p></p>
+<p dir="rtl">بهذا نكون قد إنتهينا من العمل على موقع الفيس بوك والدرس القادم سنقوم فيه بعمل بعض اللمسات و التشطيبات على الكود من أجل تنظيفه وتقليل عدد الأسطر التي قمنا بكتابتها بأكبر قدر ممكن.</p>
+<hr>
+<p dir="rtl">أتمنى بأن تكونوا قد إستمتعتم بورشة العمل هذه <img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/images/emoji/emoji_one/blush.png?v=5" title=":blush:" style="width:30px;" alt=":blush:"></p>
+<hr>
+
+
+</div>
+    </div>
+    <div class="navigate">
+      <a href="#" class="disabled">السابق</a>
+      <a href="#">التالي</a>
+    </div>
+    <footer>
+      <div class="copyright">
+      حقوق النشر 2018. جميع الحقوق محفوظة من قبل XXX
+      </div>
+    </footer>
+
+    <script src="../../../js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>[الدرس الرابع]: عناصر div, p and span والفرق بينهم</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-brand">
+        <div class="">
+          1MAC Courses
+        </div>
+      </div>
+      <div class="icon-container">
+        <div class="humberger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="navbar-nav">
+        <nav>
+          <div class="close">
+            أغلق <i class="fas fa-times"></i>
+          </div>
+          <a href="../../index.html">الرئيسية</a>
+          <a href="../html_css/html-css.html">HTML & CSS</a>
+          <a href="../javascript/javascript.html">JavaScript</a>
+          <a href="../git/git.html">Git</a>
+          <a href="../projects/projects.html">المشاريع</a>
+        </nav>
+      </div>
+    </div>
+    <div class="container">
+      <div class="cooked">
+
+
+        <h1>عناصر div و p و span والفرق بينهم</h1>
+        <hr>
+
+    <h2 dir="rtl">عناصر div, p and span والفرق بينهم</h2>
+    <p dir="rtl">في الدرس السابق تكلمنا عن عناصر الـ block و الـ inline وفي هذا الدرس سنتكلم عن بعض أهم العناصر التي سنتحتاح أن نفهمها قبل ان نبدأ في التطبيق على أي مشروع.</p>
+    <h2 dir="rtl"><strong dir="rtl">وسم Div</strong></h2>
+    <p dir="rtl">المرة القادمة عندما تشاهد اي موقع قم بتخيل وجود صناديق وهمية تضم عناصرة كما بالصورة التالية:</p>
+    <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/3/b/3baa58fe2d9e13791c4f0e59c3c09eb9d1f10416_1_690x472.jpg">
+    <ul dir="rtl">
+       <li dir="rtl">نستخدم وسم <code dir="ltr">&lt;div&gt;</code> لتقسيم الموقع لاجزء معينة حتى نستطيع تطبيق تصميم معين عليها بإستخدام لغة التنسيقات CSS</li>
+       <li dir="rtl">جميع العناصر يمكن ضمها بداخل العنصر <code dir="ltr">div</code></li>
+    </ul>
+    <!-- HTML generated using hilite.me --><!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div&gt;</span>
+<span style="color: #8f5902; font-style: italic">&lt;!--other elements--&gt;</span>
+<span style="color: #8f5902; font-style: italic">&lt;!--هنا العناصر الأخرى--&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+</pre></div>
+
+    <p dir="rtl"><strong dir="rtl">مثال</strong> :</p>
+    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div&gt;</span>
+ <span style="color: #204a87; font-weight: bold">&lt;h1&gt;</span>hello world!<span style="color: #204a87; font-weight: bold">&lt;/h1&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+</pre></div>
+
+    <p dir="rtl"><strong dir="rtl">النتيجة:</strong></p>
+    <h1 dir="ltr">hello world!</h1>
+    <hr>
+    <h2 dir="rtl">وسم p</h2>
+    <p dir="rtl">كذلك في المرة القادمة عندما تشاهد فقرة ما في أي موقع قم بتخيل صندوق وهمي حولها ولكنه خاص بالنصوص فقط هذه المرة</p>
+    <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/e/b/eb6194172038355fba28f61c3773814a08982370_1_690x472.jpg">
+    <ul dir="rtl">
+       <li dir="rtl">حيث نستخدم وسمَي <code dir="ltr">&lt;p&gt;</code> لكتابة الفقرات (paragraph) فقط وتطبيق تصميم معين عليها بإستخدام لغة التنسيقات CSS</li>
+       <li dir="rtl">لا يمكنك ضم أي عنصر بداخل هذا الوسم الا اذا كان عنصر لعمل تنسيقات على النصوص مثل وسم <code dir="ltr">&lt;strong&gt;&lt;/strong&gt;</code></li>
+    </ul>
+    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;p&gt;</span>
+ <span style="color: #8f5902; font-style: italic">&lt;!--only text and text formating tags--&gt;</span>
+ <span style="color: #8f5902; font-style: italic">&lt;!--هنا فقط نصوص و وسوم تنسيق النصوص--&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
+</pre></div>
+
+    <p dir="rtl"><strong dir="rtl">مثال</strong> :</p>
+    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;p&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;strong&gt;</span>hello <span style="color: #204a87; font-weight: bold">&lt;em&gt;</span>world!<span style="color: #204a87; font-weight: bold">&lt;/em&gt;&lt;/strong&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
+</pre></div>
+
+    <p dir="rtl"><strong dir="rtl">النتيجة:</strong></p>
+    <p dir="ltr"><strong dir="ltr">hello <em dir="ltr"> world!</em></strong></p>
+    <p dir="rtl">لا يمكنك وضع <code dir="ltr">div</code> بداخل <code dir="ltr">p</code> ولكن العكس صحيح.</p>
+    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;p&gt;</span>
+  <span style="color: #204a87; font-weight: bold">&lt;div&gt;</span>هذا الكود غير صحيح<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
+</pre></div>
+
+    <hr>
+    <h2 dir="rtl">وسم span</h2>
+    <p dir="rtl">هذا الوسم كذلك خاص بالنصوص فيتم إستخدامة لعمل تنسيق معين لجزء معين من النص</p>
+    <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/4/8/486119196278da1d357ddf2bbe759ce317022a6b_1_690x472.jpg">
+    <p dir="rtl"><strong dir="rtl">مثال:</strong></p>
+    <p dir="rtl">قمنا بعمل فقرة بإستخدام وسم <code dir="ltr">&lt;p&gt;</code> وعملنا لها استايل يغير لون الفقرة الى الأحمر</p>
+    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;p</span> <span style="color: #c4a000">style=</span><span style="color: #4e9a06">"color:red;"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+   Hello World!
+<span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
+</pre></div>
+
+    <p dir="rtl"><strong dir="rtl">هذه النتيجة:</strong><br></p>
+    <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/9/6/96386119659959806d1dcf3f24390e4b4d367752_1_690x421.jpg">
+    <p dir="rtl">لنفترض أننا نريد أن نغير لون كلمة <code dir="ltr">World!</code> وحدها للون الأزرق</p>
+    <p dir="rtl">في هذه الحالة سنستخدم وسم <code dir="ltr">&lt;span&gt;</code> لان وجوده لا يؤثر على الجملة الا اذا تم تحديد تنسيق معين له.</p>
+    <p dir="rtl">في الكود التالي تم تحويط كلمة <code dir="ltr">World!</code> بإستخدام وسم <code dir="ltr">span</code> وتم إضافة تنسيق تغيير اللون للازرق</p>
+    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;p</span> <span style="color: #c4a000">style=</span><span style="color: #4e9a06">"color:red;"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+  Hello <span style="color: #204a87; font-weight: bold">&lt;span</span> <span style="color: #c4a000">style=</span><span style="color: #4e9a06">"color:blue;"</span><span style="color: #204a87; font-weight: bold">&gt;</span>World!<span style="color: #204a87; font-weight: bold">&lt;/span&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
+</pre></div>
+
+    <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+    <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/e/f/effc353a2351d67e10710efccc72fe186d74c835_1_690x421.jpg">
+    <hr>
+    <p dir="rtl"><strong dir="rtl">في الختام  تذكر التالي:</strong></p>
+    <ul dir="rtl">
+       <li dir="rtl">دائماً وسمي الـ p و الـ span تأتي بدأخل الـ div.</li>
+       <li dir="rtl">لا تقم بوضع وسم div بداخل وسم p او span.</li>
+       <li dir="rtl">بإمكانك وضع وسم span مباشرة بداخل وسم div.</li>
+    </ul>
+    <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/b/a/ba319f89d6e163750528c0a28dd11f11cd63ee45_1_690x472.jpg">
+
+ </div>
+    </div>
+    <div class="navigate">
+      <a href="#" class="disabled">السابق</a>
+      <a href="#">التالي</a>
+    </div>
+    <footer>
+      <div class="copyright">
+      حقوق النشر 2018. جميع الحقوق محفوظة من قبل XXX
+      </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+  </body>
+</html>

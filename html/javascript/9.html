@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>[الدرس السابع]: تطبيق عملي</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-brand">
+        <div class="">
+          1MAC Courses
+        </div>
+      </div>
+      <div class="icon-container">
+        <div class="humberger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="navbar-nav">
+        <nav>
+          <div class="close">
+            أغلق <i class="fas fa-times"></i>
+          </div>
+          <a href="../../index.html">الرئيسية</a>
+          <a href="../html_css/html-css.html">HTML & CSS</a>
+          <a href="../javascript/javascript.html">JavaScript</a>
+          <a href="../git/git.html">Git</a>
+          <a href="../projects/projects.html">المشاريع</a>
+        </nav>
+      </div>
+    </div>
+    <div class="container">
+      <div class="cooked">
+
+
+        <h1>عمل محاكي للكويزات</h1>
+        <hr>
+           <p dir="rtl">في هذه الدرس سنقوم بعمل محاكي للكويزات بحيث نتعلم إستخدام الشروط if / else وكذلك كيفية التعديل على تنسيقات العناصر بإستخدام الـ javascript وكذلك كيفية عمل نافذة منبقة بالـ javascript وغيرها… سأحرص التنويع في إستخدام الأوامر وتفصيلها حتى تتعرفوا على أكبر عدد ممكن منها.</p>
+           <p dir="rtl"><strong dir="rtl">قبل البدء بهذا الدرس يجب أن تكون قد أكملت كل الدروس السابقة في قائمة دروس الجافاسكربت بالفهرس</strong></p>
+           <hr>
+           <h2 dir="rtl">النتيجة النهائية للتطبيق كالتالي:</h2>
+           <p></p>
+           <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/4/9/490295d93f101dd64fcad16c562f2b28bfe902c8_1_644x500.gif">
+           <p></p>
+           <p dir="rtl">البدأية سنقوم بعمل كود الـ HTML و الـ CSS لن أطيل فيه فيفترض أنكم أصبحتم قادرين على القيام على ذلك من خلال ما ممرنا به من دروس في ورش العمل بالفهرس.</p>
+           <h3 dir="rtl">لنبدأ بعمل الهيكل:</h3>
+           <p dir="rtl"><strong dir="rtl">الخطوة الأولى:</strong></p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+   <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"question"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+   <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+   <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"answers"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+   <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;button</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"submit"</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"submit-disabled"</span> <span style="color: #c4a000">disabled</span><span style="color: #204a87; font-weight: bold">&gt;</span>submit<span style="color: #204a87; font-weight: bold">&lt;/button&gt;</span>
+</pre></div>
+
+           <p dir="rtl"><strong dir="rtl">الخطوة التالية:</strong></p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+   <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"question"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;span&gt;</span>QUIZ QUESTION<span style="color: #204a87; font-weight: bold">&lt;/span&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;p&gt;</span>
+         Which of these is a good variable name?
+      <span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
+   <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+   <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"answers"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;ul</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"list"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+         <span style="color: #204a87; font-weight: bold">&lt;li&gt;</span>
+            <span style="color: #204a87; font-weight: bold">&lt;label</span> <span style="color: #c4a000">for=</span><span style="color: #4e9a06">"option1"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+            <span style="color: #204a87; font-weight: bold">&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"radio"</span> <span style="color: #c4a000">value=</span><span style="color: #4e9a06">"1"</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"option1"</span> <span style="color: #c4a000">name=</span><span style="color: #4e9a06">"options"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+            var firstName
+            <span style="color: #204a87; font-weight: bold">&lt;/label&gt;</span>
+         <span style="color: #204a87; font-weight: bold">&lt;/li&gt;</span>
+         <span style="color: #204a87; font-weight: bold">&lt;li&gt;</span>
+            <span style="color: #204a87; font-weight: bold">&lt;label</span> <span style="color: #c4a000">for=</span><span style="color: #4e9a06">"option2"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+            <span style="color: #204a87; font-weight: bold">&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"radio"</span> <span style="color: #c4a000">value=</span><span style="color: #4e9a06">"2"</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"option2"</span> <span style="color: #c4a000">name=</span><span style="color: #4e9a06">"options"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+            var const
+            <span style="color: #204a87; font-weight: bold">&lt;/label&gt;</span>
+         <span style="color: #204a87; font-weight: bold">&lt;/li&gt;</span>
+         <span style="color: #204a87; font-weight: bold">&lt;li&gt;</span>
+            <span style="color: #204a87; font-weight: bold">&lt;label</span> <span style="color: #c4a000">for=</span><span style="color: #4e9a06">"option3"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+            <span style="color: #204a87; font-weight: bold">&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"radio"</span> <span style="color: #c4a000">value=</span><span style="color: #4e9a06">"3"</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"option3"</span> <span style="color: #c4a000">name=</span><span style="color: #4e9a06">"options"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+            var 1stName
+            <span style="color: #204a87; font-weight: bold">&lt;/label&gt;</span>
+         <span style="color: #204a87; font-weight: bold">&lt;/li&gt;</span>
+         <span style="color: #204a87; font-weight: bold">&lt;li&gt;</span>
+            <span style="color: #204a87; font-weight: bold">&lt;label</span> <span style="color: #c4a000">for=</span><span style="color: #4e9a06">"option4"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+            <span style="color: #204a87; font-weight: bold">&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"radio"</span> <span style="color: #c4a000">value=</span><span style="color: #4e9a06">"4"</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"option4"</span> <span style="color: #c4a000">name=</span><span style="color: #4e9a06">"options"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+            var $first Name
+            <span style="color: #204a87; font-weight: bold">&lt;/label&gt;</span>
+         <span style="color: #204a87; font-weight: bold">&lt;/li&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;/ul&gt;</span>
+   <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;button</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"submit"</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"submit-disabled"</span> <span style="color: #c4a000">disabled</span><span style="color: #204a87; font-weight: bold">&gt;</span>submit<span style="color: #204a87; font-weight: bold">&lt;/button&gt;</span>
+</pre></div>
+
+           <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+           <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/d/d/dd8135fbbd0bf0134cbdcfb7910a2cb091377d7c_1_690x457.png">
+           <p></p>
+           <h3 dir="rtl">لنقوم بعمل التنسيقات:</h3>
+           <p dir="rtl"><strong dir="rtl">الجزء الأول:</strong></p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">body</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">font-family</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">arial</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#333</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.container</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">max-width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">600px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">400px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">80px</span> <span style="color: #204a87; font-weight: bold">auto</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #000000">box</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">shadow</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0px</span> <span style="color: #0000cf; font-weight: bold">0px</span> <span style="color: #0000cf; font-weight: bold">5px</span> <span style="color: #0000cf; font-weight: bold">#999</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.question</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">30px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">letter-spacing</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0.5px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">16px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">border-bottom</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #204a87; font-weight: bold">solid</span> <span style="color: #0000cf; font-weight: bold">#dfdfdf</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.question</span> <span style="color: #204a87; font-weight: bold">span</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#7d97ad</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">font-weight</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">700</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">14px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+           <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+           <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/3/2/32c12fca65c6b5737d453b76168e5ab162794d2b_1_690x457.png">
+           <p></p>
+           <hr>
+           <p dir="rtl"><strong dir="rtl">الجزء الثاني:</strong></p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.answers</span> <span style="color: #204a87; font-weight: bold">ul</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">list-style</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">none</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.answers</span> <span style="color: #204a87; font-weight: bold">li</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">position</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">relative</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">border-bottom</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #204a87; font-weight: bold">solid</span> <span style="color: #0000cf; font-weight: bold">#dfdfdf</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.answers</span> <span style="color: #204a87; font-weight: bold">li</span><span style="color: #5c35cc; font-weight: bold">:last-child</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">border-bottom</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">none</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.answers</span> <span style="color: #204a87; font-weight: bold">label</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">inline</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100</span><span style="color: #ce5c00; font-weight: bold">%</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">23px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #000000">box</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">sizing</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">box</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">cursor</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">pointer</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+           <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+           <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/a/1/a17531a137fdc41b35b4001b9e15d96d53dcba07_1_690x457.png">
+           <p></p>
+           <hr>
+           <p dir="rtl">الأن أريد أن أقوم بإعطاء الزر تنسيقات معينة بحث انه سيكون غير مفعل الا بعد إختيار أحد الإجابات <strong dir="rtl">كالتالي:</strong><br></p>
+           <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/c/d/cd36ae14f278a48f37314103f96f99807cf4d3ab_1_621x500.gif">
+           <p></p>
+           <p dir="rtl">تذكر اننا عندما ادرجنا الزر (button) قمنا بجعله غير مفعل <code dir="ltr">disabled</code> وقمت بإعطائة id بإسم <code dir="ltr">submit-disabled</code> سأقوم بإستخدام هذا الـ id لعمل تنسيقات خاصة بالزر وهو غير مفعل وعند إختيار الجواب سنقوم بتغيير الـ id الخاص بالزر الى <code dir="ltr">submit-enabled</code> بإستخدام الجافاسكربت سنرى ذلك لاحقاً وسيكون هذا الـ id هو المسؤول عن اعطائة مظهر الزر المفعل.</p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;button</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"submit"</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"submit-disabled"</span> <span style="color: #c4a000">disabled</span> <span style="color: #204a87; font-weight: bold">&gt;</span> submit <span style="color: #204a87; font-weight: bold">&lt;/button&gt;</span>
+</pre></div>
+
+           <p dir="rtl"><strong dir="rtl">الجزء الثالث:</strong><br>
+              عمل تنسيقات الـ button
+           </p>
+           <!-- HTML generated using hilite.me --><!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.submit</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#fff</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">none</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">15px</span> <span style="color: #0000cf; font-weight: bold">45px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">radius</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">5px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">14px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">text-transform</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">uppercase</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">outline</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">none</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">20px</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">#submit-disabled</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">background-color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#7d97ad</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">opacity</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #0000cf; font-weight: bold">7</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+
+           <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+           <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/4/5/45af834eb936b7d3c058e18c91f9506c4e63910c_1_690x457.png">
+           <p></p>
+           <p dir="rtl">سأقوم الأن بتغيير الـ id الخاص بالـ button مؤقتاً من <code dir="ltr">submit-disabled</code> الى <code dir="ltr">submit-enabled</code> حتى أقوم بعمل تنسيقات الزر المفعل كالتالي:</p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #ce5c00; font-weight: bold">&lt;</span><span style="color: #204a87; font-weight: bold">button</span> <span style="color: #204a87; font-weight: bold">class</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #4e9a06">"submit"</span> <span style="color: #204a87; font-weight: bold">id</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #4e9a06">"submit-enabled"</span> <span style="color: #204a87; font-weight: bold">disabled</span><span style="color: #ce5c00; font-weight: bold">&gt;</span><span style="color: #204a87; font-weight: bold">submit</span><span style="color: #ce5c00; font-weight: bold">&lt;/</span><span style="color: #204a87; font-weight: bold">button</span><span style="color: #ce5c00; font-weight: bold">&gt;</span>
+</pre></div>
+
+           <p dir="rtl"><strong dir="rtl">التنسيقات كالتالي:</strong></p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">#submit-enabled</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">background-color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#02b3e4</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #000000">box</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">shadow</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">12px</span> <span style="color: #0000cf; font-weight: bold">15px</span> <span style="color: #0000cf; font-weight: bold">20px</span> <span style="color: #000000">rgba</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">);</span>
+	<span style="color: #204a87; font-weight: bold">cursor</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">pointer</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #000000">transition</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">all</span> <span style="color: #0000cf; font-weight: bold">0.5s</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">#submit-enabled</span><span style="color: #5c35cc; font-weight: bold">:hover</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">background-color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#0b91b6</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #000000">box</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">shadow</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">none</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+           <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
+              <img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/1/d/1dce67c90caac6f641ab21a47b23eb7e910ea5bf.gif" alt="button2" width="304" height="146">
+           </p>
+           <p dir="rtl"><strong dir="rtl">الأن سنقوم بإعادة الـ id السابق كما كان</strong></p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #ce5c00; font-weight: bold">&lt;</span><span style="color: #204a87; font-weight: bold">button</span> <span style="color: #204a87; font-weight: bold">class</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #4e9a06">"submit"</span> <span style="color: #204a87; font-weight: bold">id</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #4e9a06">"submit-disabled"</span> <span style="color: #204a87; font-weight: bold">disabled</span><span style="color: #ce5c00; font-weight: bold">&gt;</span><span style="color: #204a87; font-weight: bold">submit</span><span style="color: #ce5c00; font-weight: bold">&lt;/</span><span style="color: #204a87; font-weight: bold">button</span><span style="color: #ce5c00; font-weight: bold">&gt;</span>
+</pre></div>
+
+           <hr>
+           <h2 dir="rtl">تصميم تنسيق الإجابة الصحيحة</h2>
+           <p dir="rtl">سنقوم الأن بعمل التصميم الذي سيظهر على الإجابة الصحيحة في حال تم إختيارها للقيام بذلك سيكون علينا إضافة <code dir="ltr">class</code> لاحد عناصر<code dir="ltr">li</code> حتى نشاهد نتيجة التنسيقات ومن ثم سنقوم بإزالة الـ class من القائمة لنقوم لاحقاً بإضافته للإجابة الصحيح بإستخدام الجافاسكربت.</p>
+           <p dir="rtl">سأقوم بإضافة الكلاس <code dir="ltr">correct</code> للعنصر التالي:</p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;li</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"correct"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+   <span style="color: #204a87; font-weight: bold">&lt;label</span> <span style="color: #c4a000">for=</span><span style="color: #4e9a06">"option1"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+   <span style="color: #204a87; font-weight: bold">&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"radio"</span> <span style="color: #c4a000">value=</span><span style="color: #4e9a06">"1"</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"option1"</span> <span style="color: #c4a000">name=</span><span style="color: #4e9a06">"options"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+   var firstName
+   <span style="color: #204a87; font-weight: bold">&lt;/label&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/li&gt;</span>
+</pre></div>
+
+           <p dir="rtl"><strong dir="rtl">التنسيقات:</strong><br>
+              سأقوم بإضافة حدود على شكل ظلال داخلية للعنصر باللون الأخضر <strong dir="rtl">كالتالي:</strong>
+           </p>
+           <!-- HTML generated using hilite.me --><!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.correct</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #000000">box</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">shadow</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0px</span> <span style="color: #0000cf; font-weight: bold">0px</span> <span style="color: #0000cf; font-weight: bold">0px</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #0000cf; font-weight: bold">#15c26b</span> <span style="color: #204a87; font-weight: bold">inset</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+
+           <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+           <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/3/1/31676b71cfe23c19c9c961d8ec10087c73e67e25_1_690x457.png">
+           <p></p>
+           <p dir="rtl">سأقوم بإضافة أيقونة فوق العنصر radio الذي بداخل العنصر label بإستخدام الـ CSS pseudo-element كما ناقشناها </p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.correct</span> <span style="color: #204a87; font-weight: bold">label</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #5c35cc; font-weight: bold">:before</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">content</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">""</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">inline</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">position</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">absolute</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">left</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">16px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">18px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">30px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">30px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#fff</span> <span style="color: #4e9a06">url(https://classroom.udacity.com/images/answer-correct-d7c4d.svg)</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #204a87; font-weight: bold">size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">contain</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">z-index</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">10</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+           <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+           <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/9/3/931889596368c87f8d5a416138c4fb97f92e6500_1_690x457.png">
+           <p></p>
+           <p dir="rtl">الأن بعد أن قمت بعمل التنسيق الذي اريدة للإجابة الصحيحة سأقوم بإزالة الكلاس الـ <code dir="ltr">correct</code> من العنصر <code dir="ltr">li</code> وذلك حتى يتم إسنادة لاحقاً بشكل ديناميكي للإجابة الصحيحة عبر الجافاسكربت.</p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;li&gt;</span>
+   <span style="color: #204a87; font-weight: bold">&lt;label</span> <span style="color: #c4a000">for=</span><span style="color: #4e9a06">"option1"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+   <span style="color: #204a87; font-weight: bold">&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"radio"</span> <span style="color: #c4a000">value=</span><span style="color: #4e9a06">"1"</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"option1"</span> <span style="color: #c4a000">name=</span><span style="color: #4e9a06">"options"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+   var firstName
+   <span style="color: #204a87; font-weight: bold">&lt;/label&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/li&gt;</span>
+</pre></div>
+
+           <p dir="rtl">لا تجعل هذه التنسيقات المؤقته تربكك فنحن نقوم بعملها حتى نجهزها لوقت حاجتنا لها حيث سنقوم بالإضافة التنسيقات والتبديل بينها بإستخدام الجافاسكربت لاحقاً.</p>
+           <hr>
+           <h2 dir="rtl">عمل القائمة المنبثقة</h2>
+           <p dir="rtl">نريد الأن ان نقوم بتصميم هذه القائمة المنبثقة ومن ثم إخفائها حتى نقوم بإظهارها لاحقاً بالجافاسكربت الأفكار مشابهة لما قمنا بعملة في درس عمل قائمة dropdown في دروس ورشة عمل المبادرة <strong dir="rtl"></strong> حيث نقوم بعمل التصميم بشكل طبيعي كاملاً ومن ثم تغيير طريقة عرضها <code dir="ltr">dispaly</code> الى <code dir="ltr">none</code><br></p>
+           <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/4/0/403bfaf5fdc5d4b0797bb98cc0fe65266e377cbd_1_690x457.png">
+           <p></p>
+           <h4 dir="rtl">كود الـ HTML</h4>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #ce5c00; font-weight: bold">&lt;</span><span style="color: #204a87; font-weight: bold">div</span> <span style="color: #204a87; font-weight: bold">id</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #4e9a06">"overlay"</span><span style="color: #ce5c00; font-weight: bold">&gt;</span>
+   <span style="color: #ce5c00; font-weight: bold">&lt;</span><span style="color: #204a87; font-weight: bold">div</span> <span style="color: #204a87; font-weight: bold">class</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #4e9a06">"modal-content"</span><span style="color: #ce5c00; font-weight: bold">&gt;</span>
+      <span style="color: #ce5c00; font-weight: bold">&lt;</span><span style="color: #204a87; font-weight: bold">div</span> <span style="color: #204a87; font-weight: bold">id</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #4e9a06">"modal-elements"</span><span style="color: #ce5c00; font-weight: bold">&gt;</span><span style="color: #204a87; font-weight: bold">Thanks</span> <span style="color: #204a87; font-weight: bold">for</span> <span style="color: #204a87; font-weight: bold">completing</span> <span style="color: #204a87; font-weight: bold">that</span><span style="color: #ce5c00; font-weight: bold">!&lt;/</span><span style="color: #204a87; font-weight: bold">div</span><span style="color: #ce5c00; font-weight: bold">&gt;</span>
+   <span style="color: #ce5c00; font-weight: bold">&lt;/</span><span style="color: #204a87; font-weight: bold">div</span><span style="color: #ce5c00; font-weight: bold">&gt;</span>
+<span style="color: #ce5c00; font-weight: bold">&lt;/</span><span style="color: #204a87; font-weight: bold">div</span><span style="color: #ce5c00; font-weight: bold">&gt;</span>
+</pre></div>
+
+           <h4 dir="rtl">تنسيقات الـ CSS</h4>
+           <p dir="rtl">سأقوم بعمل طبقة الخلفية السوداء الشفافة أعتقد اننا مررنا بجميع هذه التنسيقات بالتفصيل الممل لن نطيل فاذا لديك استفسار عن ما سأقوم بها من تنسيقات ضعه في التعليقات</p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">#overlay</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">position</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">fixed</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">left</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">right</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">bottom</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">background-color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">rgba</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">46</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">60</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">73</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #0000cf; font-weight: bold">7</span><span style="color: #000000; font-weight: bold">);</span>
+	<span style="color: #204a87; font-weight: bold">z-index</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #000000">transition</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">all</span> <span style="color: #0000cf; font-weight: bold">0.5s</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+           <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+           <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/d/f/df3585f0cf81ec878ea781ab36297812c91ab477_1_690x457.png">
+           <p></p>
+           <p dir="rtl">لنقوم بعمل التنسيقات الخاصة بالصندوق <code dir="ltr">modal-content</code></p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.modal-content</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">400px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">210px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#fff</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">radius</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">8px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">80px</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">20px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">z-index</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">101</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #000000">box</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">shadow</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0px</span> <span style="color: #0000cf; font-weight: bold">0px</span> <span style="color: #0000cf; font-weight: bold">10px</span> <span style="color: #000000">rgba</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #0000cf; font-weight: bold">2</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+           <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+           <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/e/c/eca66fd945ef4b86b016d87def82b2aa57623d60_1_690x457.png">
+           <p></p>
+           <p dir="rtl">وأخيراً التنسيقات الأخيرة سأقوم بإضافة الصورة وكذلك عمل تنسيق للنص بالاكواد التالية:</p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">#modal-elements</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">150px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">text-align</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">center</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">16px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">font-weight</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">600</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#02ccba</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">margin-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">10px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">padding-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">160px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">url(https://classroom.udacity.com/images/correct-illustration-ceea2.svg)</span> <span style="color: #204a87; font-weight: bold">no-repeat</span> <span style="color: #204a87; font-weight: bold">center</span> <span style="color: #204a87; font-weight: bold">top</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+           <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+           <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/d/b/db8833713e8341b5bb80c68798cc5729ebd7cf6b_1_690x457.png">
+           <p></p>
+           <p dir="rtl">رائع كما أريد الأن سأقوم بإخفاء هذه العناصر بإعطاء الأب <code dir="ltr">overlay</code>  خاصية <code dir="ltr">display</code> بقيمة <code dir="ltr">none</code> ولاحقاً سنعود إلية واضافة التعديلات اذا لزم الأمر</p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">#overlay</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">none</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #8f5902; font-style: italic">/*أضفت هذه الخاصية*/</span>
+	<span style="color: #204a87; font-weight: bold">position</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">fixed</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">left</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">right</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">bottom</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">background-color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">rgba</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">46</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">60</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">73</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #0000cf; font-weight: bold">7</span><span style="color: #000000; font-weight: bold">);</span>
+	<span style="color: #204a87; font-weight: bold">z-index</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #000000">transition</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">all</span> <span style="color: #0000cf; font-weight: bold">0.5s</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+           <p dir="rtl"><strong dir="rtl">حتى هذه المرحلة يجب أن يكون شكل تصميمك كالتالي:</strong><br></p>
+           <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/d/f/dfb7f89e4313397b5aa82b64105aa867ffffc178_1_690x457.png">
+           <p></p>
+           <hr>
+           <h2 dir="rtl">البدء بالعمل على الـ Jacascript</h2>
+           <p dir="rtl">أول ما نريد القيام به هو تفعيل الرز submit وتغيير تنسيقة بمجرد إختيار أحد عناصر القائمة <code dir="ltr">ul</code><br></p>
+           <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/c/d/cd36ae14f278a48f37314103f96f99807cf4d3ab_1_621x500.gif">
+           <p></p>
+           <p dir="rtl"><strong dir="rtl">كيف سنقوم بذلك ؟</strong></p>
+           <p dir="rtl">الخطوة الأولى سأقوم بتحديد الزر عبر الكلاس الذي يحملة <code dir="ltr">submit</code> حتى تستطيع الجافاسكربت التعامل معه واسناد ذلك التحديد إلى متغير بإسم button حتى يسهل التعامل معه بإستخدام اسم المتغير بدلاً من كتابة جملة التحديد كل مرة نريد التعامل معه <strong dir="rtl">كالتالي:</strong></p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;script&gt;</span>
+   <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">button</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">querySelector</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">".submit"</span><span style="color: #000000; font-weight: bold">);</span>
+
+<span style="color: #204a87; font-weight: bold">&lt;/script&gt;</span>
+</pre></div>
+
+           <p dir="rtl">لاحظ قمت بتعريف المتغير button وأسندت إلية العنصر الذي نريد الوصول إلية عبر الجافاسكربت بواسطة طريقة <code dir="ltr">document.querySelector</code> والتي تتيح لك تحديد أي عنصر سوى بإستخدام class , id وغيرها من الـ selectors.</p>
+           <hr>
+           <p dir="rtl">الخطوة التالية سأقوم بتحديد القائمة <code dir="ltr">ul</code> حتى أستطيع التعامل معها بالجافاسكربت وإسناد ذلك لمتغير بإسم ul</p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;script&gt;</span>
+   <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">button</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">querySelector</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">".submit"</span><span style="color: #000000; font-weight: bold">);</span>
+   <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">ul</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'list'</span><span style="color: #000000; font-weight: bold">);</span>
+
+<span style="color: #204a87; font-weight: bold">&lt;/script&gt;</span>
+</pre></div>
+
+           <p dir="rtl">هذه المرة قمت بتعريف المتغير ul وأسندت إلية العنصر الذي نريد الوصول إلية عبر الجافاسكربت بواسطة طريقة  <code dir="ltr">document.getElementById</code> التي تتيح لك تحديد أي عنصر بإستخدام الـ id الخاصة به فقط.</p>
+           <hr>
+           <h4 dir="rtl">التلاعب بالعناصر عبر الجافاسكريت</h4>
+           <p dir="rtl">الأن بعد أن قمنا بتحديد الزر button وتحديد القائمة التي تحتوي على الإجابات ul نستطيع عمل اي تلاعب بهما عبر الجافاسكربت.</p>
+           <p dir="rtl">في حالتنا هذه ما نريد القيام به هو تفعيل الزر button وتغيير تنسيقة عبر تبديل الـ id الحالي الذي هو بإسم <code dir="ltr">submit-disabled</code> الى الـ id الذي يحمل التنسيقات الأخرى وهو بإسم <code dir="ltr">submit-enabled</code> بمجرد الضغط على أي إجابة من بين الخيارات, <strong dir="rtl">فكيف سنقوم بذلك ؟</strong></p>
+           <p dir="rtl"><strong dir="rtl">لنشاهد الصورة التالية:</strong><br></p>
+           <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/a/1/a17edfd8d4fb727711fa62fd7f1a8dc14e1e3651_1_617x500.gif">
+           <p></p>
+           <p dir="rtl"><strong dir="rtl">هل تلاحظ انه يتم تحديد الإجابة بضغطنا على أي مكان بدأخل القائمة ul ؟</strong><br>
+              اذا سنقوم بعمل دالة تقوم بإنتظار عمل أي ضغطة بمؤشر المأوس على القائمة ul ومن ثم القيام بالتلاعبات المطلوبة
+           </p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">ul</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'click'</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000; font-weight: bold">()</span> <span style="color: #000000; font-weight: bold">{</span>
+    <span style="color: #8f5902; font-style: italic">// في حال تم الضغط على القائمة الأوامر التي هنا ستطبق</span>
+<span style="color: #000000; font-weight: bold">});</span>
+</pre></div>
+
+           <p dir="rtl">لاحظ قمنا بكتابة إسم المتغير <code dir="ltr">ul</code> الذي يقوم بتحديد القائمة المتسهدفة ومن ثم أتبعناه بـ <code dir="ltr">.addEventListener</code> بداخلة قمنا بتحديد نوع الحدث وهو<br>
+              <code dir="ltr">'click'</code> وثم قمنا بعمل فاصلة و كتابة <code dir="ltr">function</code> بمعنى دالة والتي ستحدد الاحداث التي ستحصل عند حصول ذلك الحدث.
+           </p>
+           <p dir="rtl"><strong dir="rtl">الحدث الأول:</strong></p>
+           <p dir="rtl"><strong dir="rtl">نريد إعادة تفعيل الـ button لهذا سنقوم بإلغاء خاصية <code dir="ltr">disabled</code>  بجعلها = false</strong><br>
+              <img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/a/2/a2c413250cf4b69a05003671eec289968ee81a80.png" alt="image" width="681" height="30">
+           </p>
+           <p dir="rtl"><strong dir="rtl">كالتالي:</strong></p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;script&gt;</span>
+   <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">button</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">querySelector</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">".submit"</span><span style="color: #000000; font-weight: bold">);</span>
+   <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">ul</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'list'</span><span style="color: #000000; font-weight: bold">);</span>
+
+     <span style="color: #000000">ul</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'click'</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #204a87; font-weight: bold">function</span><span style="color: #000000; font-weight: bold">(){</span>
+
+          <span style="color: #000000">button</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">disabled</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">false</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*الغاء خاصية عدم تفعيل الزر*/</span>
+
+   <span style="color: #000000; font-weight: bold">});</span>
+
+<span style="color: #204a87; font-weight: bold">&lt;/script&gt;</span>
+</pre></div>
+
+           <p dir="rtl"><strong dir="rtl">الحدث الثاني:</strong></p>
+           <p dir="rtl"><strong dir="rtl">نريد بمجرد الضغط على احد الأجوابة أن يتم تغيير الـ id الخاص بالزر إلى <code dir="ltr">submit-enabled</code> بدلاً من <code dir="ltr">submit-disabled</code></strong><br>
+              <img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/2/4/24135f01b09609923a97cd11cb0faf8a65078627.png" alt="image" width="681" height="30">
+           </p>
+           <p dir="rtl"><strong dir="rtl">كالتالي:</strong></p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;script&gt;</span>
+   <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">button</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">querySelector</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">".submit"</span><span style="color: #000000; font-weight: bold">);</span>
+   <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">ul</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'list'</span><span style="color: #000000; font-weight: bold">);</span>
+
+     <span style="color: #000000">ul</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'click'</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #204a87; font-weight: bold">function</span><span style="color: #000000; font-weight: bold">(){</span>
+
+          <span style="color: #000000">button</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">disabled</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">false</span><span style="color: #000000; font-weight: bold">;</span>
+
+        <span style="color: #000000">button</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">setAttribute</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'id'</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">'submit-enabled'</span><span style="color: #000000; font-weight: bold">);</span>  <span style="color: #8f5902; font-style: italic">/*id تغيير الـ */</span>
+
+   <span style="color: #000000; font-weight: bold">});</span>
+
+<span style="color: #204a87; font-weight: bold">&lt;/script&gt;</span>
+</pre></div>
+
+           <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+           <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/f/5/f5f5306f98464ca51f380c985a2ceb562b87578b_1_635x499.gif">
+           <p></p>
+           <hr>
+           <h2 dir="rtl">إضافة تنسيق الإجابة الصحيحة</h2>
+           <p dir="rtl">الان سنتحتاج لتحديد عنصرين أخرين حتى نستطيع التلاعب بها بإستخدام الجافاسكربت:</p>
+           <p dir="rtl"><strong dir="rtl">1- أريد أن أقوم بتحديد جميع عناصر الـ radio التي عن طريقها سنعرف اذا ما تم اختيار الإجابة الصحيحة ام لا.</strong></p>
+           <p dir="rtl">سأقوم بذلك عبر الكود التالي:</p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">options</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">querySelectorAll</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"input[type=radio]"</span><span style="color: #000000; font-weight: bold">);</span>
+</pre></div>
+
+           <p dir="rtl">قمت بعمل المتغير <code dir="ltr">options</code> وأسندت إلية كل حقول الادخال input من نوع radio الموجودة في الصفحة بإستخدام الطريقة <code dir="ltr">document.querySelectorAll</code> والتي تحدد جميع العناصر بإستخدام اي selector.</p>
+           <p dir="rtl">الطريقة <code dir="ltr">querySelectorAll</code> سترجع لنا قائمة تحتوي على اربعة عناصر radio يبدأ ترتيبها من 0 الى 3 <strong dir="rtl">كالتالي:</strong><br></p>
+           <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/2/f/2f92f4f37d0a6293283fce35a2f0fc759dca3d72_1_625x500.png">
+           <p></p>
+           <p dir="rtl">بمعنى انه اذا اردت التلاعب بالعنصر الاول سأقوم بإستهدافة بالشكل <strong dir="rtl">التالي:</strong></p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">options</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">];</span>
+</pre></div>
+
+           <p dir="rtl">الكود الان سيكون <strong dir="rtl">كالتالي:</strong></p>
+           <!-- HTML generated using hilite.me --><!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;script&gt;</span>
+        <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">button</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">querySelector</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">".submit"</span><span style="color: #000000; font-weight: bold">);</span>
+        <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">ul</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'list'</span><span style="color: #000000; font-weight: bold">);</span>
+        <span style="color: #000000">ul</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'click'</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000; font-weight: bold">()</span> <span style="color: #000000; font-weight: bold">{</span>
+        	<span style="color: #000000">button</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">disabled</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">false</span><span style="color: #000000; font-weight: bold">;</span>
+        	<span style="color: #000000">button</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">setAttribute</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'id'</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">'submit-enabled'</span><span style="color: #000000; font-weight: bold">);</span>
+        <span style="color: #000000; font-weight: bold">});</span>
+        <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">options</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">querySelectorAll</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"input[type=radio]"</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #204a87; font-weight: bold">&lt;/script&gt;</span>
+</pre></div>
+
+
+           <p dir="rtl"><strong dir="rtl">2- أريد أن أقوم بتحديد جميع عناصر الـ li حيث اننا سنقوم بتطبيق التنسيقات عليها في حال كانت الإجابة الصحيحة.</strong></p>
+           <p dir="rtl">كما بالصورة التالية:<br></p>
+           <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/a/1/a1d95ce9b9194ffaa74b5a888e28046c099c7548_1_636x500.png">
+           <p></p>
+           <p dir="rtl">سأقوم بذلك عبر الكود التالي:</p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">li</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementsByTagName</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"li"</span><span style="color: #000000; font-weight: bold">);</span>
+</pre></div>
+
+           <p dir="rtl">قمت هذه المرة بتحديد العناصر <code dir="ltr">li</code> بإستخدام طريقة <code dir="ltr">document.getElementsByTagName</code> والتي تقوم بإستهداف العناصر حسب اسم tag الـ HTML, بنفس الفكرة سترجع لنا قائمة تحتوي على اربعة عناصر li يبدأ ترتيبها من 0 الى 3 <strong dir="rtl">كالتالي:</strong><br></p>
+           <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/a/2/a2bd2dc5fce25ca2997e482bb58065b2394c8fa8_1_642x500.png">
+           <p></p>
+           <p dir="rtl"><strong dir="rtl">ملاحظة:</strong> اقوم بتنويع طرق تحديد العناصر حتى اعرفك على اكبر عدد ممكن منها لتقوم بالبحث عنها وتجربة عمل تطبيقات بها.</p>
+           <hr>
+           <p dir="rtl">الكود الان سيكون كالتالي:</p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;script&gt;</span>
+        <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">button</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">querySelector</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">".submit"</span><span style="color: #000000; font-weight: bold">);</span>
+        <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">ul</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'list'</span><span style="color: #000000; font-weight: bold">);</span>
+        <span style="color: #000000">ul</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'click'</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000; font-weight: bold">()</span> <span style="color: #000000; font-weight: bold">{</span>
+                <span style="color: #000000">button</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">disabled</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">false</span><span style="color: #000000; font-weight: bold">;</span>
+                <span style="color: #000000">button</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">setAttribute</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'id'</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">'submit-enabled'</span><span style="color: #000000; font-weight: bold">);</span>
+        <span style="color: #000000; font-weight: bold">});</span>
+        <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">options</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">querySelectorAll</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"input[type=radio]"</span><span style="color: #000000; font-weight: bold">);</span>
+        <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">li</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementsByTagName</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"li"</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #204a87; font-weight: bold">&lt;/script&gt;</span>
+</pre></div>
+
+           <p dir="rtl">سأقوم بتعريف متغير بإسم <code dir="ltr">correctAnswer</code> سأضع فية رقم الإجابة الصحيحة ففي سؤالنا الإجابة الصحيحة هي صاحبة الترتيب 0 في عناصر الـ radio وفي عناصر القائمة li كذلك:<br></p>
+           <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/a/2/a2bd2dc5fce25ca2997e482bb58065b2394c8fa8_1_642x500.png">
+           <p></p>
+           <p dir="rtl"><strong dir="rtl">الكود كالتالي:</strong></p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;script&gt;</span>
+        <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">button</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">querySelector</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">".submit"</span><span style="color: #000000; font-weight: bold">);</span>
+        <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">ul</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'list'</span><span style="color: #000000; font-weight: bold">);</span>
+        <span style="color: #000000">ul</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'click'</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #204a87; font-weight: bold">function</span><span style="color: #000000; font-weight: bold">(){</span>
+                <span style="color: #000000">button</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">disabled</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">false</span><span style="color: #000000; font-weight: bold">;</span>
+                <span style="color: #000000">button</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">setAttribute</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'id'</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">'submit-enabled'</span><span style="color: #000000; font-weight: bold">);</span>
+        <span style="color: #000000; font-weight: bold">});</span>
+        <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">options</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">querySelectorAll</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"input[type=radio]"</span><span style="color: #000000; font-weight: bold">);</span>
+        <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">li</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementsByTagName</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"li"</span><span style="color: #000000; font-weight: bold">);</span>
+        <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">correctAnswer</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/script&gt;</span>
+</pre></div>
+
+           <hr>
+           <h2 dir="rtl">إختيار الإجابة</h2>
+           <p dir="rtl">سيتم التأكد من رقم الإجابة التي قام الشخص بإختيارها بعد الضغط على زر submit لذا لنقم بكتابة الكود الذي سيننظر لحين ان يتم الضغط على هذا الزر كالتالي:</p>
+           <!-- HTML generated using hilite.me --><!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">button</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'click'</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000; font-weight: bold">()</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #8f5902; font-style: italic">// في حال تم الضغط على الزرالأوامر التي هنا ستطبق</span>
+<span style="color: #000000; font-weight: bold">});</span>
+</pre></div>
+
+
+           <p dir="rtl">**ماذا نريد أن يحصل بعد تحديد الجواب والضغط على زر SUBMIT ؟</p>
+           <p dir="rtl">نريد أن نقوم بعمل الشرط التالي:</p>
+           <p dir="rtl"><strong dir="rtl">اذا</strong> تم تحديد الإجابة الصحيحة : قم بإضافة التنسيق الخاص بالإجابة الصحيحة للعنصر li وقم بفتح النافذة المنبثقة الخاصة بالجواب الصحيح.</p>
+           <p dir="rtl"><strong dir="rtl">الا</strong> قم بفتح النافذة المنبثقة الخاصة بالجواب الخطأ.</p>
+           <p dir="rtl"><strong dir="rtl">لنقم بكتابة الشرط كالتالي:</strong></p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span> <span style="color: #8f5902; font-style: italic">/*تم تحديد الخيار الصحيح*/</span> <span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
+
+	<span style="color: #8f5902; font-style: italic">// قم بإضافة التنسيق الخاص بالإجابة الصحيحة للعنصر</span>
+	<span style="color: #8f5902; font-style: italic">// قم بفتح النافذة المنبثقة الخاصة بالجواب الصحيح</span>
+
+<span style="color: #000000; font-weight: bold">}</span> <span style="color: #204a87; font-weight: bold">else</span> <span style="color: #000000; font-weight: bold">{</span>
+
+	<span style="color: #8f5902; font-style: italic">// قم بفتح النافذة المنبثقة الخاصة بالجواب الخطأ</span>
+
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+           <p dir="rtl">اذا ليس لديك أي فكرة عن الشروط راجع الدرس السابق .</p>
+           <h4 dir="rtl">كتابة الشرط</h4>
+           <p dir="rtl">كما تذكر قبل قليل قمنا بتحديد جميع عناصر الـ radio واسندناها الى متغير بإسم options كالتالي:</p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">options</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">querySelectorAll</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"input[type=radio]"</span><span style="color: #000000; font-weight: bold">);</span>
+</pre></div>
+
+           <p dir="rtl">لهذا اذا نريد أن نتحقق من اذا ما كان قد تم تحديد الجواب الصحيح والذي هو في خانة 0 كما موضح بالصورة ادناه سنقوم بتحديد العنصر الذي بتلك الخانة كالتالي <code dir="ltr">options[0]</code> وحتى نتأكد اذا ما تم عمل check عليه سنضيف الكلمة التالية <code dir="ltr">.checked</code> ومن ثم نتأكد اذا كانت خاصية checked تساوي <code dir="ltr">true</code><br></p>
+           <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/2/f/2f92f4f37d0a6293283fce35a2f0fc759dca3d72_1_625x500.png">
+           <p></p>
+           <p dir="rtl"><strong dir="rtl">الكود كالتالي:</strong></p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">options</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">].</span><span style="color: #000000">checked</span> <span style="color: #ce5c00; font-weight: bold">==</span> <span style="color: #204a87; font-weight: bold">true</span>
+</pre></div>
+
+           <p dir="rtl">لكن هل تذكر أنني قمت بعمل متغير لتخزين رقم الإجابة الصحيحة <code dir="ltr">0</code> فيه واسميته <code dir="ltr">correctAnswer</code> لذا سأقوم بوضعه بدلاً من وضع الرقم مباشرة</p>
+           <p dir="rtl"><strong dir="rtl">الكود الأن كالتالي:</strong></p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">options</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">correctAnswer</span><span style="color: #000000; font-weight: bold">].</span><span style="color: #000000">checked</span> <span style="color: #ce5c00; font-weight: bold">==</span> <span style="color: #204a87; font-weight: bold">true</span>
+</pre></div>
+
+           <p dir="rtl"><strong dir="rtl">اذا سيكون كود الشرط كالتالي:</strong></p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">options</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">correctAnswer</span><span style="color: #000000; font-weight: bold">].</span><span style="color: #000000">checked</span> <span style="color: #ce5c00; font-weight: bold">==</span> <span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
+
+	<span style="color: #8f5902; font-style: italic">// قم بإضافة التنسيق الخاص بالإجابة الصحيحة للعنصر</span>
+	<span style="color: #8f5902; font-style: italic">// قم بفتح النافذة المنبثقة الخاصة بالجواب الصحيح</span>
+
+<span style="color: #000000; font-weight: bold">}</span> <span style="color: #204a87; font-weight: bold">else</span> <span style="color: #000000; font-weight: bold">{</span>
+
+	<span style="color: #8f5902; font-style: italic">// قم بفتح النافذة المنبثقة الخاصة بالجواب الخطأ</span>
+
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+           <h4 dir="rtl">لنقم الأن بإضافة التنسيق المطلوب للإجابة الصحيحة في حال تم إختيارها</h4>
+           <p dir="rtl">هل تذكر سابقاً قمنا بعمل الكلاس <code dir="ltr">correct</code> واضفنا الية التنسيقات التي نرغب بتطبيقها على الجواب الصحيح اذا ما تم إختيارة لهذا نريد ان نقوم بكتابة كود يقوم بإضافة هذا الكلاس للعنصر li الخاص بالإجابة الصحيحة التي تم تخزين رقمها في المتغير <code dir="ltr">correctAnswer</code><br></p>
+           <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/e/0/e0c77b05db40fc6ebe490fbd6bb6033179b4b16d_1_637x500.jpg">
+           <p></p>
+           <p dir="rtl">سنقوم بتحديد العنصر الخاص بالإجابة الصحيحة كالتالي <code dir="ltr">li[correctAnswer]</code> ومن ثم سأتبعة بـ <code dir="ltr">.classList</code> والتي ستحدد قائمة الكلاسات التي لدى هذا العنصر ومن ثم سأطلب إضافة كلاس جديد <code dir="ltr">.add</code> بإسم<code dir="ltr">correct</code></p>
+           <p dir="rtl"><strong dir="rtl">الكود كالتالي:</strong></p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">li</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">correctAnswer</span><span style="color: #000000; font-weight: bold">].</span><span style="color: #000000">classList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">add</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"correct"</span><span style="color: #000000; font-weight: bold">);</span>
+</pre></div>
+
+           <p dir="rtl">سنقوم بإضافة هذا الكود بدأخل الشرط كالتالي:</p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;script&gt;</span>
+    <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">button</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">querySelector</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">".submit"</span><span style="color: #000000; font-weight: bold">);</span>
+    <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">ul</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'list'</span><span style="color: #000000; font-weight: bold">);</span>
+
+    <span style="color: #000000">ul</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'click'</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000; font-weight: bold">()</span> <span style="color: #000000; font-weight: bold">{</span>
+    	<span style="color: #000000">button</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">disabled</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">false</span><span style="color: #000000; font-weight: bold">;</span>
+    	<span style="color: #000000">button</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">setAttribute</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'id'</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">'submit-enabled'</span><span style="color: #000000; font-weight: bold">);</span>
+    <span style="color: #000000; font-weight: bold">});</span>
+
+
+    <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">options</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">querySelectorAll</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"input[type=radio]"</span><span style="color: #000000; font-weight: bold">);</span>
+    <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">li</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementsByTagName</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"li"</span><span style="color: #000000; font-weight: bold">);</span>
+    <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">correctAnswer</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+
+    <span style="color: #000000">button</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'click'</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000; font-weight: bold">()</span> <span style="color: #000000; font-weight: bold">{</span>
+
+    	<span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">options</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">correctAnswer</span><span style="color: #000000; font-weight: bold">].</span><span style="color: #000000">checked</span> <span style="color: #ce5c00; font-weight: bold">==</span> <span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
+
+    		<span style="color: #000000">li</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">correctAnswer</span><span style="color: #000000; font-weight: bold">].</span><span style="color: #000000">classList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">add</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"correct"</span><span style="color: #000000; font-weight: bold">);</span>
+    		<span style="color: #8f5902; font-style: italic">// قم بفتح النافذة المنبثقة الخاصة بالجواب الصحيح</span>
+
+    	<span style="color: #000000; font-weight: bold">}</span> <span style="color: #204a87; font-weight: bold">else</span> <span style="color: #000000; font-weight: bold">{</span>
+
+    		<span style="color: #8f5902; font-style: italic">// قم بفتح النافذة المنبثقة الخاصة بالجواب الخطأ</span>
+
+    	<span style="color: #000000; font-weight: bold">}</span>
+
+    <span style="color: #000000; font-weight: bold">});</span>
+<span style="color: #204a87; font-weight: bold">&lt;/script&gt;</span>
+</pre></div>
+
+           <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+           <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/2/f/2fa4f7971b5c144a8c2b760da433f20ce4e9ade2_1_618x500.gif">
+           <p></p>
+           <p dir="rtl">قم بتجربة الخيارات الأخرى ولاحظ كيف انه لا يتم عمل التنسيق الإ على العنصر الذي قمنا بتحديدة كإجابة صحيحة في المتغير <code dir="ltr">correctAnswer</code>, قم كذلك بتجربة تغيير رقم الاجابة الصحيحة بالمتغير ومن ثم جرب إختيار تلك الاجابة.</p>
+           <hr>
+           <h4 dir="rtl">فتح النافذة المنبثقة</h4>
+           <p dir="rtl">في هذه الخطوة سنقوم بالعمل على إظهار هذه النافذة بهذا الشكل <strong dir="rtl">اذا</strong> تحقق اختيار الاجابة الصحيحة:<br></p>
+           <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/1/5/1592c253ef7d67a3cf880108e2dad1a6ca2762af_1_690x457.png">
+           <p></p>
+           <p dir="rtl"><strong dir="rtl">الا</strong> سنجعلها بهذا الشكل اذا تم إختيار الإجابة الخاطئة:<br></p>
+           <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/b/3/b31c2720c41b9a09777e7f2f03ba4200d95f5bb0_1_690x457.png">
+           <p></p>
+           <h4 dir="rtl">البدء بالعمل</h4>
+           <p dir="rtl">قمنا سأبقاً بتجهيز النافذة المنبثقة ومن ثم قمنا بإخفائها بإعطائها الخاصية <code dir="ltr">display:none</code> حتى نقوم بإظهارها لاحقاً عند حاجتنا لها, لهذا سنقوم الأن بتغيير خاصية العرض <code dir="ltr">display</code> من <code dir="ltr">none</code> الى <code dir="ltr">block</code> حتى تظهر النافذة وللقيام بذلك:</p>
+           <p dir="rtl"><strong dir="rtl">اولاً</strong> سنحتاج لتحديد العنصر الخاص بهذه النافذة حتى نستطيع الوصول الية عبر الجافاسكربت والتلاعب به, كما قمنا سابقاً سأقوم بتعريف متغير بإسم <code dir="ltr">modal</code> وسأسند الية تحديد العنصر الذي يحمل id بإسم <code dir="ltr">overlay</code> حيث وانه الـ id الخاص بهذه النافذة قم بمراجعة اكواد النافذة.</p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">modal</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"overlay"</span><span style="color: #000000; font-weight: bold">);</span>
+</pre></div>
+
+           <p dir="rtl"><strong dir="rtl">ثانياً</strong> بعد تحديد العنصر نستطيع الان التلاعب به وما نريد القيام به هو تغيير تنسيق display وحتى نقوم بذلك سنقوم اولاً بتحديد العنصر الذي نريد التلاعب به وهو <code dir="ltr">modal</code> ومن ثم سأحدد بأنني اريد التلاعب بالتنسيق الخاص به بإستخدام <code dir="ltr">.style</code> بعد ذلك سأحدد الخاصية التي اريد تعديلها وهي <code dir="ltr">.display</code> واخيراً سأعطيها القيمة الجديدة والتي هي <code dir="ltr">block</code> <strong dir="rtl">كالتالي:</strong></p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">modal</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">style</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">display</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"block"</span><span style="color: #000000; font-weight: bold">;</span>
+</pre></div>
+
+           <p dir="rtl">نريد أن تظهر النافذة سوى كانت الإجابة صحيحة ام خاطئة لكن بمحتويات مختلفة لنقوم الان بوضع الاكواد ومن ثم سنحدد ما الذي يلزمنا القيام به</p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;script&gt;</span>
+    <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">button</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">querySelector</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">".submit"</span><span style="color: #000000; font-weight: bold">);</span>
+    <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">ul</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'list'</span><span style="color: #000000; font-weight: bold">);</span>
+
+    <span style="color: #000000">ul</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'click'</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000; font-weight: bold">()</span> <span style="color: #000000; font-weight: bold">{</span>
+    	<span style="color: #000000">button</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">disabled</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">false</span><span style="color: #000000; font-weight: bold">;</span>
+    	<span style="color: #000000">button</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">setAttribute</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'id'</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">'submit-enabled'</span><span style="color: #000000; font-weight: bold">);</span>
+    <span style="color: #000000; font-weight: bold">});</span>
+
+
+    <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">options</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">querySelectorAll</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"input[type=radio]"</span><span style="color: #000000; font-weight: bold">);</span>
+    <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">li</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementsByTagName</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"li"</span><span style="color: #000000; font-weight: bold">);</span>
+    <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">modal</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"overlay"</span><span style="color: #000000; font-weight: bold">);</span> <span style="color: #8f5902; font-style: italic">/*اضفت هذا السطر*/</span>
+    <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">correctAnswer</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+
+    <span style="color: #000000">button</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'click'</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000; font-weight: bold">()</span> <span style="color: #000000; font-weight: bold">{</span>
+
+    	<span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">options</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">correctAnswer</span><span style="color: #000000; font-weight: bold">].</span><span style="color: #000000">checked</span> <span style="color: #ce5c00; font-weight: bold">==</span> <span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
+
+    		<span style="color: #000000">li</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">correctAnswer</span><span style="color: #000000; font-weight: bold">].</span><span style="color: #000000">classList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">add</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"correct"</span><span style="color: #000000; font-weight: bold">);</span>
+    		<span style="color: #000000">modal</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">style</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">display</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"block"</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*اضفت هذا السطر*/</span>
+
+    	<span style="color: #000000; font-weight: bold">}</span> <span style="color: #204a87; font-weight: bold">else</span> <span style="color: #000000; font-weight: bold">{</span>
+
+    		<span style="color: #000000">modal</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">style</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">display</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"block"</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*اضفت هذا السطر*/</span>
+    	<span style="color: #000000; font-weight: bold">}</span>
+
+
+    <span style="color: #000000; font-weight: bold">});</span>
+<span style="color: #204a87; font-weight: bold">&lt;/script&gt;</span>
+</pre></div>
+
+           <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+           <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/a/c/ac0d7670d07ed97b9089a13fec1bc9775831cffa_1_612x500.gif">
+           <p></p>
+           <p dir="rtl"><strong dir="rtl">لدينا ملاحظتين:</strong></p>
+           <p dir="rtl">1- نفس المحتوى يظهر سوى للإجابة الصحيحة او الخاطئة.</p>
+           <p dir="rtl">2- لا يمكننا إغلاق النافذة الا بعمل تحديث للصفحة.</p>
+           <hr>
+           <h4 dir="rtl">العمل على الملاحظة الأولى:</h4>
+           <p dir="rtl">سنقوم بإستخدام الشرط if / else لعمل تنسيقات خاصة بكل حالة للعناصر التالية:<br></p>
+           <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/3/8/388ea09e8f36201bdf228b745045080d0d9f3744_1_690x457.png">
+           <p></p>
+           <p dir="rtl">العناصر التي نحتاج تعديلها هي صورة الخلفية + النص + لون النص</p>
+           <p dir="rtl">اذا سنحتاج لتحديد تلك العناصر حتى نستطيع التلاعب بها بالجافاسكربت وسأقوم بإسنادها إلى متغيرات, <strong dir="rtl">لنبدأ بالصورة ولون الخط:</strong></p>
+           <p dir="rtl"><strong dir="rtl">سأقوم بتحديد العنصر بإستخدام الـ id الخاص به كالتالي:</strong></p>
+           <!-- HTML generated using hilite.me --><!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">modaElements</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'modal-elements'</span><span style="color: #000000; font-weight: bold">);</span>
+</pre></div>
+
+
+           <p dir="rtl">الان نريد ان نقوم بإضافة الصورة ولون الخط للتنسيقات بإستخدام الجافاسكربت لهذا سأقوم بإزالة خاصية background وخاصية color من تنسيقات الـ css الخاصة بالعنصر modal-elements ليصبح كود تنسيقات الصورة كالتالي:</p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">#modal-elements</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">150px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">text-align</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">center</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">16px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">font-weight</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">600</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">margin-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">10px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">padding-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">160px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+           <h3 dir="rtl">إضافة صورة الخلفية</h3>
+           <p dir="rtl"><strong dir="rtl">لنعود لكود الجافاسكربت وسأقوم بإضافة صورة الإجابة الصحيحة كالتالي:</strong></p>
+           <p dir="rtl">سأقوم بتحديد العنصر الذي نريد التعديل عليه وهو في المتغير <code dir="ltr">modaElements</code> ثم سأحدد أني اريد التلاعب بالتنسيقات <code dir="ltr">.style</code> بعد ذلك سأحدد الخاصية التي اريد اضافتها او تعديلها وهي الخلفية<code dir="ltr">.background</code>  ثم سأسند لها التنسيق الخاص بالخلفية كما كنت لتقوم في اكواد الـ CSS كالتالي:</p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">modaElements</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">style</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">background</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"url(https://classroom.udacity.com/images/correct-illustration-ceea2.svg) no-repeat center top"</span><span style="color: #000000; font-weight: bold">;</span>
+</pre></div>
+
+           <p dir="rtl"><strong dir="rtl">بنفس الفكرة سأقوم بإضافة صورة الإجابة الخاطئة كالتالي:</strong></p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">modaElements</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">style</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">background</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"url(https://classroom.udacity.com/images/wrong-illustration-0df77.svg) no-repeat center top"</span><span style="color: #000000; font-weight: bold">;</span>
+</pre></div>
+
+           <p dir="rtl">طبعاً روابط الصور خارجية فلا داعي لتحميل اي صورة بجهازك فقط ضع المسارات كما هي.</p>
+           <h3 dir="rtl">تغيير لون الخط</h3>
+           <p dir="rtl"><strong dir="rtl">بنفس الفكرة سأقوم بإضافة خاصية تغير لون الخط <strong dir="rtl">اذا</strong> كانت الإجابة صحيحة للأخضر كالتالي:</strong></p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">modaElements</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">style</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">color</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"#02ccba"</span><span style="color: #000000; font-weight: bold">;</span>
+</pre></div>
+
+           <p dir="rtl"><strong dir="rtl">وإلا</strong> سيكون لون الخط أحمر كالتالي:</p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">modaElements</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">style</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">color</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"#f65d44"</span><span style="color: #000000; font-weight: bold">;</span>
+</pre></div>
+
+           <p dir="rtl"><strong dir="rtl">الان سنضع كل كود في مكانه المناسب كالتالي:</strong></p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;script&gt;</span>
+    <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">button</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">querySelector</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">".submit"</span><span style="color: #000000; font-weight: bold">);</span>
+    <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">ul</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'list'</span><span style="color: #000000; font-weight: bold">);</span>
+
+    <span style="color: #000000">ul</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'click'</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000; font-weight: bold">()</span> <span style="color: #000000; font-weight: bold">{</span>
+    	<span style="color: #000000">button</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">disabled</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">false</span><span style="color: #000000; font-weight: bold">;</span>
+    	<span style="color: #000000">button</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">setAttribute</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'id'</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">'submit-enabled'</span><span style="color: #000000; font-weight: bold">);</span>
+    <span style="color: #000000; font-weight: bold">});</span>
+
+
+    <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">options</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">querySelectorAll</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"input[type=radio]"</span><span style="color: #000000; font-weight: bold">);</span>
+    <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">li</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementsByTagName</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"li"</span><span style="color: #000000; font-weight: bold">);</span>
+    <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">modal</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"overlay"</span><span style="color: #000000; font-weight: bold">);</span>
+    <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">modaElements</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'modal-elements'</span><span style="color: #000000; font-weight: bold">);</span> <span style="color: #8f5902; font-style: italic">/*أضفت هذه السطر*/</span>
+    <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">correctAnswer</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+
+    <span style="color: #000000">button</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'click'</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000; font-weight: bold">()</span> <span style="color: #000000; font-weight: bold">{</span>
+
+    	<span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">options</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">correctAnswer</span><span style="color: #000000; font-weight: bold">].</span><span style="color: #000000">checked</span> <span style="color: #ce5c00; font-weight: bold">==</span> <span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
+
+    		<span style="color: #000000">li</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">correctAnswer</span><span style="color: #000000; font-weight: bold">].</span><span style="color: #000000">classList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">add</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"correct"</span><span style="color: #000000; font-weight: bold">);</span>
+
+    		<span style="color: #000000">modaElements</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">style</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">background</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"url(https://classroom.udacity.com/images/correct-illustration-ceea2.svg) no-repeat center top"</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*أضفت هذه السطر*/</span>
+
+    		<span style="color: #000000">modaElements</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">style</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">color</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"#02ccba"</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*أضفت هذه السطر*/</span>
+
+    		<span style="color: #000000">modal</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">style</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">display</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"block"</span><span style="color: #000000; font-weight: bold">;</span>
+
+
+    	<span style="color: #000000; font-weight: bold">}</span> <span style="color: #204a87; font-weight: bold">else</span> <span style="color: #000000; font-weight: bold">{</span>
+
+    		<span style="color: #000000">modaElements</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">style</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">background</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"url(https://classroom.udacity.com/images/wrong-illustration-0df77.svg) no-repeat center top"</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*أضفت هذه السطر*/</span>
+
+    		<span style="color: #000000">modaElements</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">style</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">color</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"#f65d44"</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*أضفت هذه السطر*/</span>
+
+    		<span style="color: #000000">modal</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">style</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">display</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"block"</span><span style="color: #000000; font-weight: bold">;</span>
+    	<span style="color: #000000; font-weight: bold">}</span>
+
+
+    <span style="color: #000000; font-weight: bold">});</span>
+<span style="color: #204a87; font-weight: bold">&lt;/script&gt;</span>
+</pre></div>
+
+           <p dir="rtl">يفترض الان انه <strong dir="rtl">اذا</strong> كانت الإجابة صحيحة فستظهر صورة و<strong dir="rtl">الا</strong> فستظهر صورة اخرى</p>
+           <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+           <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/0/a/0a8bb2e2c339b29501d0ffb552049b3707e713d7_1_620x500.gif">
+           <p></p>
+           <hr>
+           <h3 dir="rtl">تغيير النص</h3>
+           <p dir="rtl">تلاحظ ان نفس النص يظهر في كلا الحالتين بينما نريد ان يحصل التالي:</p>
+           <p dir="rtl"><strong dir="rtl">اذا</strong> كانت الإجابة صحيحة اكتب النص التالي:<br>
+              <strong dir="ltr">Thanks for completing that!</strong>
+           </p>
+           <p dir="rtl"><strong dir="rtl">والا</strong> أكتب النص التالي:<br>
+              <strong dir="ltr">Try Again!</strong>
+           </p>
+           <hr>
+           <p dir="rtl"><strong dir="rtl">للقيام بذلك سنقوم بتغيير النص بإستخدام الجافاسكربت كالتالي:</strong></p>
+           <p dir="rtl">العنصر الذي يحتوي على النص تم تحديدة مسبقاً بإسم المتغير <code dir="ltr">modaElements</code> لهذا سنقوم بإستخدام الخاصية <code dir="ltr">.textContent</code> والتي عملها تغيير المحتوى النصي وسنقوم بإسناد النص الذي نريد وضعه بدلاً من النص السابق كالتالي في حالة الإجابة الصحيحة:</p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">modaElements</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">textContent</span><span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"Thanks for completing that!"</span><span style="color: #000000; font-weight: bold">;</span>
+</pre></div>
+
+           <p dir="rtl">اما في حالة الإجابة الخاطئة:</p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">modaElements</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">textContent</span><span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"Try Again!"</span><span style="color: #000000; font-weight: bold">;</span>
+</pre></div>
+
+           <p dir="rtl"><strong dir="rtl">لنضع كل كود في المكان المناسب:</strong></p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;script&gt;</span>
+    <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">button</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">querySelector</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">".submit"</span><span style="color: #000000; font-weight: bold">);</span>
+    <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">ul</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'list'</span><span style="color: #000000; font-weight: bold">);</span>
+
+    <span style="color: #000000">ul</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'click'</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000; font-weight: bold">()</span> <span style="color: #000000; font-weight: bold">{</span>
+    	<span style="color: #000000">button</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">disabled</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">false</span><span style="color: #000000; font-weight: bold">;</span>
+    	<span style="color: #000000">button</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">setAttribute</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'id'</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">'submit-enabled'</span><span style="color: #000000; font-weight: bold">);</span>
+    <span style="color: #000000; font-weight: bold">});</span>
+
+    <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">options</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">querySelectorAll</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"input[type=radio]"</span><span style="color: #000000; font-weight: bold">);</span>
+    <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">li</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementsByTagName</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"li"</span><span style="color: #000000; font-weight: bold">);</span>
+    <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">modal</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"overlay"</span><span style="color: #000000; font-weight: bold">);</span>
+    <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">modaElements</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'modal-elements'</span><span style="color: #000000; font-weight: bold">);</span>
+    <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">correctAnswer</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+
+    <span style="color: #000000">button</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'click'</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000; font-weight: bold">()</span> <span style="color: #000000; font-weight: bold">{</span>
+
+    	<span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">options</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">correctAnswer</span><span style="color: #000000; font-weight: bold">].</span><span style="color: #000000">checked</span> <span style="color: #ce5c00; font-weight: bold">==</span> <span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
+
+    		<span style="color: #000000">li</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">correctAnswer</span><span style="color: #000000; font-weight: bold">].</span><span style="color: #000000">classList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">add</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"correct"</span><span style="color: #000000; font-weight: bold">);</span>
+
+    		<span style="color: #000000">modaElements</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">style</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">background</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"url(https://classroom.udacity.com/images/correct-illustration-ceea2.svg) no-repeat center top"</span><span style="color: #000000; font-weight: bold">;</span>
+
+    		<span style="color: #000000">modaElements</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">style</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">color</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"#02ccba"</span><span style="color: #000000; font-weight: bold">;</span>
+
+    		<span style="color: #000000">modaElements</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">textContent</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"Thanks for completing that!"</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*أضفت هذا*/</span>
+
+    		<span style="color: #000000">modal</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">style</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">display</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"block"</span><span style="color: #000000; font-weight: bold">;</span>
+
+
+    	<span style="color: #000000; font-weight: bold">}</span> <span style="color: #204a87; font-weight: bold">else</span> <span style="color: #000000; font-weight: bold">{</span>
+
+    		<span style="color: #000000">modaElements</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">style</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">background</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"url(https://classroom.udacity.com/images/wrong-illustration-0df77.svg) no-repeat center top"</span><span style="color: #000000; font-weight: bold">;</span>
+
+    		<span style="color: #000000">modaElements</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">style</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">color</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"#f65d44"</span><span style="color: #000000; font-weight: bold">;</span>
+
+    		<span style="color: #000000">modaElements</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">textContent</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"Try Again!"</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*أضفت هذا*/</span>
+
+
+    		<span style="color: #000000">modal</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">style</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">display</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"block"</span><span style="color: #000000; font-weight: bold">;</span>
+    	<span style="color: #000000; font-weight: bold">}</span>
+
+    <span style="color: #000000; font-weight: bold">});</span>
+<span style="color: #204a87; font-weight: bold">&lt;/script&gt;</span>
+</pre></div>
+
+           <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+           <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/5/b/5b9e9b3d0a92c239cbe3ef905bc2823ba8a4e255_1_620x500.gif">
+           <p></p>
+           <hr>
+           <h3 dir="rtl">العمل على الملاحظة الثانية:</h3>
+           <p dir="rtl">عند فتح النافذة المنبثقة لا نستطيع إغلاقها الا بتحديث الصفحة فما اريد القيام به الان هو جعل هذه النافذة تغلق عند الضغط على اي مكان في نافذة المتصفح خارج النافذة المنبثقة على منطقة overlay تحديداً حيث الخلفية السوداء الشفافة:</p>
+           <p dir="rtl">كما قمنا سابقاً مع العناصر التي قمنا بالإنتظار للضغط عليها لتنفيذ بعض الاحداث هذه المرة سننتظر ان يتم الضغط على نافذة المتصفح كالتالي:</p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87">window</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'click'</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000; font-weight: bold">()</span> <span style="color: #000000; font-weight: bold">{</span>
+
+	<span style="color: #8f5902; font-style: italic">// يتم تنفيذ هذه الاوامر عند الضغط في أي مكان بالصفحة</span>
+
+<span style="color: #000000; font-weight: bold">});</span>
+</pre></div>
+
+           <p dir="rtl">كما تلاحظ الكود اعلاة يقوم بتنفيذ الاوامر عند الضغط في اي مكان على الصفحة ونحن لا نريد تنفيذ الاوامر الا عندما يكون العنصر المستهدف بهذا الحدث <code dir="ltr">event.target</code> هو العنصر <code dir="ltr">modal</code></p>
+           <p dir="rtl"><strong dir="rtl">لذا سأضع الشرط التالي:</strong></p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87">window</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'click'</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000; font-weight: bold">()</span> <span style="color: #000000; font-weight: bold">{</span>
+
+	<span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">event</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">target</span> <span style="color: #ce5c00; font-weight: bold">==</span> <span style="color: #000000">modal</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
+
+		<span style="color: #8f5902; font-style: italic">// يتم تنفيذ هذه الاوامر عند الضغط على العنصر المحدد فقط</span>
+
+	<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000; font-weight: bold">});</span>
+</pre></div>
+
+           <p dir="rtl"><strong dir="rtl">اذا</strong> تم الضغط على منطقة العنصر modal قم بإعطاء هذا العنصر خاصية <code dir="ltr">display:none</code> لإخفائة.</p>
+           <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87">window</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">'click'</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000; font-weight: bold">()</span> <span style="color: #000000; font-weight: bold">{</span>
+
+	<span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">event</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">target</span> <span style="color: #ce5c00; font-weight: bold">==</span> <span style="color: #000000">modal</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
+
+		<span style="color: #000000">modal</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">style</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">display</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"none"</span><span style="color: #000000; font-weight: bold">;</span>
+
+	<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000; font-weight: bold">});</span>
+</pre></div>
+
+           <p dir="rtl">تذكر قمنا بتحديد العنصر overlay بإستخدام المتغير modal لهذا فتعاملك مع المتغير modal في الجافاسكربت هو نفس تعاملك مع العنصر overlay في الـHTML و الـ CSS.</p>
+           <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+           <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/3/c/3ca08c1d35ee9e4767ffc348f1b473eedee750c7_1_623x500.gif">
+           <p></p>
+           <hr>
+           <p dir="rtl">في الأخير يمكنك الإطلاع على النتيجة النهائية و الأكواد <strong dir="rtl"><a href="https://jsfiddle.net/jyyzvw1x/6/" rel="nofollow noopener" dir="rtl">من هنا</a></strong>  في حال واجهتك أي مشاكل ولكن تذكر ان عليك أن تفهم كل خطوة وتقوم بمحاولة كتابة الأكواد بنفسك حسب فهمك حتى وإن كانت بطريقة أخرى.</p>
+           <hr>
+           <p dir="rtl">ادرس المصادر التالية:</p>
+           <p dir="rtl"><a href="https://www.w3schools.com/jsref/met_document_addeventlistener.asp" rel="nofollow noopener" dir="rtl">ـ HTML DOM addEventListener() Method</a></p>
+           <p dir="rtl">ـ <a href="https://www.w3schools.com/jsref/event_target.asp" rel="nofollow noopener" dir="ltr">target Event Property</a></p>
+           <p dir="rtl">ـ <a href="https://www.w3schools.com/jsref/dom_obj_style.asp" rel="nofollow noopener" dir="ltr">HTML DOM Style Object</a></p>
+           <p dir="rtl">ـ <a href="https://www.w3schools.com/jsref/prop_element_classlist.asp" rel="nofollow noopener" dir="ltr">HTML DOM classList Property</a></p>
+           <hr>
+           <p dir="rtl">في هذا التطبيق حاولت أبسط الدرس وتفصيل كل خطوة بأكبر قدر ممكن فاذا وجدت صعوبات في فهمة لا تقلق فهذا شي طبيعي فهناك اشياء قد تكون تراها لأول مرة ولكن مع الممارسة والتطبيق ستعتاد عليها فقط احرص على عدم الإعتماد على دروس المسار ودروسي فقط وانما إعتبرها البوابة التي توجهك للبدء بالبحث وقرأة المزيد ومن ثم ترجمة أفكاك إلى تطبيقات حتى تترسخ المعلومات في ذهنك.</p>
+           <p dir="rtl">وعلى فكرة لا تحاول البحث عن اجابات الكويزات الخاصة بيوداستي في الـ source code فلا يتم ادراج رقم الاجابة في الاكواد مباشرة كما قمنا نحن به وانما يتم استيراد السؤال والاجابات ورقم الاجابة الصحيحة وغيرها من المعلومات بطرق اخرى سنتطرق لاحقاً.</p>
+           <hr>
+           <h2 dir="rtl">تمرين اليوم</h2>
+           <p dir="rtl">قبل أن اقول لك ماهو المطلوب قم بإختيار الإجابة الصحيحة ومن ثم قم بإختيار اجابة خاطئة ستجد ان تنسيقات الإجابة الصحيحة تظل مطبقة على الاجابة السابقة كالتالي:<br></p>
+           <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/b/e/bec039be2cd50c159d0c4174ef508c667b06e3c3_1_631x500.gif">
+           <p></p>
+           <p dir="rtl">المطلوب عملة هو ازالة تلك التنسيقات في حال قام المستخدم باختيار الاجابة الصحيحة ومن ثم قام بتغيير الجواب الى جواب خاطئ كالتالي:<br></p>
+           <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/f/b/fbc9b357bc9090059bc636c2cb3bc2a3da875a64_1_650x500.gif">
+           <p></p>
+           <p dir="rtl">العملية بسيطة وستقوم بها في سطر واحد على الاقل او اكثر من سطر حسب طريقتك</p>
+
+
+
+
+
+
+        </div>
+    </div>
+    <div class="navigate">
+      <a href="#" class="disabled">السابق</a>
+      <a href="#">التالي</a>
+    </div>
+    <footer>
+      <div class="copyright">
+      حقوق النشر 2018. جميع الحقوق محفوظة من قبل XXX
+      </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+  </body>
+</html>

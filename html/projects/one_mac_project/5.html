@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>[الجزء الثاني: اليوم الثاني]: درس اليوم الثاني: الجزء الثاني والأخير</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-brand">
+        <div class="">
+          1MAC Courses
+        </div>
+      </div>
+      <div class="icon-container">
+        <div class="humberger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="navbar-nav">
+        <nav>
+          <div class="close">
+            أغلق <i class="fas fa-times"></i>
+          </div>
+          <a href="../../../index.html">الرئيسية</a>
+          <a href="../../html_css/html-css.html">HTML & CSS</a>
+          <a href="../../javascript/javascript.html">JavaScript</a>
+          <a href="../../git/git.html">Git</a>
+          <a href="../../projects/projects.html">المشاريع</a>
+        </nav>
+      </div>
+    </div>
+    <div class="container">
+      <div class="cooked">
+
+<h1 dir="rtl">العمل على about-section</h1>
+<hr>
+<p dir="rtl">في هذا الجزء سنكمل شرح درس تحدي اليوم الثاني.</p>
+
+<p dir="rtl">الخطة كالتالي:<br>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/d/d/dd6710d1fd440394484e314fb25c6bea1737f44a.png" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/dd6710d1fd440394484e314fb25c6bea1737f44a" title="image.png" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/d/d/dd6710d1fd440394484e314fb25c6bea1737f44a_1_690x460.png" alt="image" class="image"></a></div><p></p>
+<p dir="rtl">إنتهيناء من العمل على قسم <code dir="ltr">banner</code> الأن سنبدأ في القسم الجديد <code dir="ltr">about-section</code> وسنضعة بشكل منفصل عن القسم السابق كالتالي:</p>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!--Start banner section--&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"banner"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+
+	<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+		<span style="color: #204a87; font-weight: bold">&lt;h1&gt;</span>مرحبا بكم في مبادرة المليون مبرمج عربي<span style="color: #204a87; font-weight: bold">&lt;/h1&gt;</span>
+		<span style="color: #204a87; font-weight: bold">&lt;h3&gt;</span>مبادرة صاحب السمو الشيخ محمد بن راشد آل مكتوم للنهوض بالمجتمعات العربية عبر تمكينهم من لغة المستقبل<span style="color: #204a87; font-weight: bold">&lt;/h3&gt;</span>
+		<span style="color: #204a87; font-weight: bold">&lt;div&gt;</span>
+			<span style="color: #204a87; font-weight: bold">&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"join-us"</span><span style="color: #204a87; font-weight: bold">&gt;</span>سجل اهتمامك!<span style="color: #204a87; font-weight: bold">&lt;/a&gt;</span>
+		<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+	<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #8f5902; font-style: italic">&lt;!--End banner section--&gt;</span>
+
+<span style="color: #8f5902; font-style: italic">&lt;!--Start about section--&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"about-section"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+         <span style="color: #8f5902; font-style: italic">&lt;!--هنا سيكون عملنا--&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #8f5902; font-style: italic">&lt;!--End about section--&gt;</span>
+</pre></div>
+
+<p dir="rtl">سنقوم بوضع الـ container كالعادة وكما وضحنا بالدرس السابق</p>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"about-section"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+	<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+
+	<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+</pre></div>
+
+<p dir="rtl">سنبدأ بعمل على عنوان هذا الجزء (section) بإستخدام وسم العناوين <code dir="ltr">h2</code> كالتالي</p>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"about-section"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+	<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+		<span style="color: #204a87; font-weight: bold">&lt;h2&gt;</span>عن المبادرة<span style="color: #204a87; font-weight: bold">&lt;/h2&gt;</span>
+	<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+</pre></div>
+
+<details dir="rtl">
+<summary dir="rtl">
+ربما تتسأل متى تستخدم h1 او h2 ؟</summary>
+<p dir="rtl">سنخوض في هذه المواضيع عندما نشرح الـ semantic HTML حيث وان هناك شروط تحسن من موقعك في محركات البحث ما يسمى بالـ SEO بحيث يصبح محتوى موقعك مرتب ترتيب منطقي يسهل على محرك البحث قرأته.</p>
+</details>
+<p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/3/e/3ea37ece1dc0158c3652f3fa51f4e807df5fd6cb.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/3ea37ece1dc0158c3652f3fa51f4e807df5fd6cb" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/3/e/3ea37ece1dc0158c3652f3fa51f4e807df5fd6cb_1_690x460.jpg" alt="image" class="image"></a></div><p></p>
+<p dir="rtl"><strong dir="rtl">الأن سنقوم بإضافة التنسيقات التالية للـ <code dir="ltr">class</code> بإسم <code dir="ltr">about-section</code> :</strong></p>
+<ul dir="rtl">
+<li dir="rtl">1- هوامش داخلية من اعلى واسفل بقيمة 70px.</li>
+<li dir="rtl">2- توسيط النص</li>
+</ul>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.about-section</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">70px</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">text-align</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">center</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+<p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/e/8/e816ddba9c905f2797fe7c086182095d321c0a73.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/e816ddba9c905f2797fe7c086182095d321c0a73" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/e/8/e816ddba9c905f2797fe7c086182095d321c0a73_1_690x460.jpg" alt="image" class="image"></a></div><p></p>
+<p dir="rtl"><strong dir="rtl">الأن سنضيف التنسيقات التالية للعنوان <code dir="ltr">h2</code> بداخل القسم <code dir="ltr">about-section</code>:</strong></p>
+<ul dir="rtl">
+<li dir="rtl">1- نحتاج تغيير حجم الخط الى 35px</li>
+<li dir="rtl">2- نحتاج تغيير لون الخط للون المحدد</li>
+</ul>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.about-section</span> <span style="color: #204a87; font-weight: bold">h2</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">35px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#333</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+<p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/d/4/d49728dd2515d4fbaf98fc3ab99b895934f60ff8.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/d49728dd2515d4fbaf98fc3ab99b895934f60ff8" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/d/4/d49728dd2515d4fbaf98fc3ab99b895934f60ff8_1_690x460.jpg" alt="image" class="image"></a></div><p></p>
+<p dir="rtl">الأن نريد إضافة الخط الظاهر تحت العنوان كما بالصورة التالية:<br>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/2/1/21bcbcfb442dd05e229492616931c0327ec4e597.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/21bcbcfb442dd05e229492616931c0327ec4e597" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/2/1/21bcbcfb442dd05e229492616931c0327ec4e597_1_690x460.jpg" alt="image" class="image"></a></div><br>
+تستطيع إضافة هذا العنصر بطرق كثيرة وكما قام العديد منكم في التحدي الخاص بهذا الدرس ولكننا نريد أن نتعلم طريقة جديدة أكثر ديناميكية فكما تلاحظ فقد تم إعتماد العنصر <code dir="ltr">h2</code> في الموقع كالعناوين الرئيسية لكل قسم فاذا ما إستطعنا القيام بهذا التنسيق بإستخدام الـ css فسيكون رائع ولن نحتاج إلى تكرار كود إضافة هذا العنصر كل مرة نريد فيها إضافة عنوان لقسم رئيسي.<p></p>
+<p dir="rtl"><strong dir="rtl">ما الخطة؟</strong><br>
+سنقوم بإضافة <code dir="ltr">class</code> للعنصر <code dir="ltr">h2</code> حتى لا يتم اعتماد هذا التنسيق على كل العناصر من نوع <code dir="ltr">h2</code> فربما في المستقبل قد نحتاج لإضافة عنصر <code dir="ltr">h2</code> دون ان يتم إضافة هذا الخط تحته او قد تحتاج إضافة هذا التنسيق تحت عنوان أخر كـ <code dir="ltr">h3</code>, سأقوم بتسمية الـclass بإسم <code dir="ltr">underline</code> كالتالي:</p>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"about-section"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+	<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+		<span style="color: #204a87; font-weight: bold">&lt;h2&gt;</span>عن المبادرة<span style="color: #204a87; font-weight: bold">&lt;/h2&gt;</span>
+	<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+</pre></div>
+
+<h2 dir="rtl">العمل بـ CSS pseudo-element</h2>
+<p dir="rtl">الأن سنتعلم شي جديد يسمى <code dir="ltr">CSS pseudo-element</code>  هذه العناصر تسمع لك بتعمل تنسيقات على أجزاء محددة من العنصر المستهدف على سبيل المثال عمل تنسيق مختلف لأول حرف, إضافة محتوى قبل (before) او بعد (after) العنصر… الخ. قم بالبحث عنها وتجربتها فالعمل بها ممتع.</p>
+<p dir="rtl">العنصر الذي سنحتاج لإستخدامة للوصول إلى النتيجة التي نرغب بها بإضافة الخط تحت العنوان هو after وذلك لأننا نريد إضافة الخط بعد العنوان وطريقة إستخدام هذه العناصر لإستهداف العنصر الذي نرغب بتطبيق التنسيقات المحددة عليه هو كالتالي:</p>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.underline</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #5c35cc; font-weight: bold">:after</span><span style="color: #000000; font-weight: bold">{</span>
+
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+<hr>
+<details dir="rtl" open="">
+<summary dir="rtl">
+مثال لتوضيح الفكرة</summary>
+<p dir="rtl">قم بكتابة الخاصية <code dir="ltr">content</code> واعطيها القيمة التي تريد لنفتض نص معين كالتالي:</p>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.underline</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #5c35cc; font-weight: bold">:after</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">content</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">" تجريبي"</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+<p dir="rtl">شاهد النتيجة كيف تم إضافة هذه الكلمة <code dir="rtl">تجريبي</code> بعد الكلمة التي كتبناها بداخل عنصر العنوان <code dir="ltr">h2</code><br>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/1/7/175b2bf3a52a190d372735775c708c127f042461.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/175b2bf3a52a190d372735775c708c127f042461" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/1/7/175b2bf3a52a190d372735775c708c127f042461_1_690x460.jpg" alt="image" class="image"></a></div><p></p>
+</details>
+<hr>
+<p dir="rtl">لاحظ أضفت <code dir="ltr">::after</code> بعد إسم الـ class الخاص بالعنصر الذي سنستهدفة والأن كل ما علينا فعلة هو عمل التنسيقات اللازمة لإضافة ذلك الخط كالتالي:</p>
+<ul dir="rtl">
+<li dir="rtl">1- في البدأية يجب عليك أن تحدد المحتوى الذي تريد إضافته بعد العنصر المستهدف في حالتنا نريد المحتوى ان يكون فارغ لهذا لن نكتب شئ بدأخلة كالتالي:</li>
+</ul>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.underline</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #5c35cc; font-weight: bold">:after</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">content</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">""</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+<ul dir="rtl">
+<li dir="rtl">2- أريد أن يكون العنصر الجديد من نوع block حتى ينزل لسطر جديد ونستطيع التحكم بإبعادة</li>
+</ul>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.underline</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #5c35cc; font-weight: bold">:after</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">content</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">""</span><span style="color: #000000; font-weight: bold">;</span>
+    <span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+<ul dir="rtl">
+<li dir="rtl">3- سأقوم بتحديد عرضة بـ 100px وإرتفاعة بـ 2px</li>
+</ul>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.underline</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #5c35cc; font-weight: bold">:after</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">content</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">""</span><span style="color: #000000; font-weight: bold">;</span>
+    <span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
+    <span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100px</span><span style="color: #000000; font-weight: bold">;</span>
+    <span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">2px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+<ul dir="rtl">
+<li dir="rtl">4- سأقوم بتغيير لون الخلفية لهذا العنصر للون المطابق للموقع الأصلي</li>
+</ul>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.underline</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #5c35cc; font-weight: bold">:after</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">content</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">""</span><span style="color: #000000; font-weight: bold">;</span>
+    <span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
+    <span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100px</span><span style="color: #000000; font-weight: bold">;</span>
+    <span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">2px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">background-color</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #0000cf; font-weight: bold">#11b7e6</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+<p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/2/4/24d511eeae9706dd2889d8639484cd6c595bfef3.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/24d511eeae9706dd2889d8639484cd6c595bfef3" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/2/4/24d511eeae9706dd2889d8639484cd6c595bfef3_1_690x460.jpg" alt="image" class="image"></a></div><br>
+رائع! حصلنا على الشكل المطلوب تبقى لنا أن نقوم بتوسيطة بإستخدام الهوامش الخارجية وعطائة هوامش من اعلى بقيمة 4px واسفل بقيمة 40px كما سبق وشرحنا بهذا الدرس <a href="https://macdiscussions.udacity.com/t/css-margin-property/85103" dir="rtl">من هنا</a>.<p></p>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.underline</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #5c35cc; font-weight: bold">:after</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">content</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">""</span><span style="color: #000000; font-weight: bold">;</span>
+    <span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
+    <span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100px</span><span style="color: #000000; font-weight: bold">;</span>
+    <span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">2px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">background-color</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #0000cf; font-weight: bold">#11b7e6</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">4px</span> <span style="color: #204a87; font-weight: bold">auto</span> <span style="color: #0000cf; font-weight: bold">40px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+<p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/6/a/6a849783820fe738945f9a4a6f35ee3dc6c43cfb.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/6a849783820fe738945f9a4a6f35ee3dc6c43cfb" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/6/a/6a849783820fe738945f9a4a6f35ee3dc6c43cfb_1_690x460.jpg" alt="image" class="image"></a></div><p></p>
+<p dir="rtl">الأن في كل مرة تريد إضافة هذا الخط تحت أي عنوان قم بإعطائة الكلاس <code dir="ltr">underline</code> بكل بساطة</p>
+<hr>
+<h2 dir="rtl">إضافة صورة شعار المبادرة</h2>
+<p dir="rtl">قم بتنزيل الصورة بالطريقة التي شرحناها <a href="https://macdiscussions.udacity.com/t/topic/81690" dir="rtl">سابقاً هنا</a>.</p>
+<p dir="rtl">ثم سنقوم بإضافة الصورة بدأخل قسم جديد كالتالي:</p>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"about-section"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+	<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+		<span style="color: #204a87; font-weight: bold">&lt;h2</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"underline"</span><span style="color: #204a87; font-weight: bold">&gt;</span>عن المبادرة<span style="color: #204a87; font-weight: bold">&lt;/h2&gt;</span>
+		<span style="color: #8f5902; font-style: italic">&lt;!--بدأية كود إضافة الصورة--&gt;</span>
+		<span style="color: #204a87; font-weight: bold">&lt;div&gt;&lt;img</span> <span style="color: #c4a000">src=</span><span style="color: #4e9a06">"images/logo-1.png"</span> <span style="color: #c4a000">alt=</span><span style="color: #4e9a06">""</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+		<span style="color: #8f5902; font-style: italic">&lt;!--نهاية كود إضافة الصورة--&gt;</span>
+	<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+</pre></div>
+
+<p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/2/0/200c365ca9f2271990aba2f246886785c32d8363.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/200c365ca9f2271990aba2f246886785c32d8363" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/2/0/200c365ca9f2271990aba2f246886785c32d8363_1_690x460.jpg" alt="image" class="image"></a></div><p></p>
+<hr>
+<p dir="rtl"><strong dir="rtl">إضافة الفقرة الأولى:</strong></p>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%">	<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"about-section"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+		<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+			<span style="color: #204a87; font-weight: bold">&lt;h2</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"underline"</span><span style="color: #204a87; font-weight: bold">&gt;</span>عن المبادرة<span style="color: #204a87; font-weight: bold">&lt;/h2&gt;</span>
+
+			<span style="color: #204a87; font-weight: bold">&lt;div&gt;&lt;img</span> <span style="color: #c4a000">src=</span><span style="color: #4e9a06">"images/logo-1.png"</span> <span style="color: #c4a000">alt=</span><span style="color: #4e9a06">""</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+
+			<span style="color: #204a87; font-weight: bold">&lt;p&gt;</span>
+			ان مبادرة ’مليون مبرمج عربي‘ احدى مبادرات محمد بن راشد آل مكتوم العالمية، وهي المؤسسة الخيرية الهادفة إلى نشر التعليم والمعرفة لتعزيز نهضة العالم العربي.
+			<span style="color: #204a87; font-weight: bold">&lt;br&gt;</span>
+            تهدف مبادرة ’مليون مبرمج عربي‘ إلى تزويد الشباب العربي بالقدرات والمهارات الأساسية التي سيحتاجونها في الحصول على فرص عمل في المستقبل، فتزودهم بلغة العصر – لغة البرمجة – من خلال دورات تدريبية عبر الأنترنت، ويتكون البرنامج التدريبي من أربعة مسارات هي الأكثر طلباً في مجال تطوير المواقع الإلكترونية، وهي: تطوير المواقع الإلكترونية الكاملة، تطوير صفحات المواقع الإلكترونية، تحليل البيانات، و تطوير تطبيقات الأندرويد.
+			<span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
+
+		<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+	<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+</pre></div>
+
+<p dir="rtl"><strong dir="rtl">النتيحة:</strong><br>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/3/9/3974c23d2b6ce3c379ea88fbf99bbc007d2c5dce.png" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/3974c23d2b6ce3c379ea88fbf99bbc007d2c5dce" title="image.png" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/3/9/3974c23d2b6ce3c379ea88fbf99bbc007d2c5dce_1_690x460.png" alt="image" class="image"></a></div><p></p>
+<p dir="rtl"><strong dir="rtl">التنسيقات المطلوبة:</strong></p>
+<ul dir="rtl">
+<li dir="rtl">1- سأقوم بإعطائة أقصى عرض ممكن بقيمة 720px</li>
+<li dir="rtl">2- هوامش من أعلى وأسفل بقيمة 30px ومن اليمين واليسار auto من أجل توسيطة بداخل الـ container</li>
+</ul>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.about-section</span> <span style="color: #204a87; font-weight: bold">p</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">max-width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">720px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">30px</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+<p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/f/3/f3eb46b8ccaaef0d2637e6dd161fc4107dafddd6.png" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/f3eb46b8ccaaef0d2637e6dd161fc4107dafddd6" title="image.png" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/f/3/f3eb46b8ccaaef0d2637e6dd161fc4107dafddd6_1_690x460.png" alt="image" class="image"></a></div><p></p>
+<hr>
+<h2 dir="rtl">العمل على القسم الأخر</h2>
+<p></p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/5/d/5db08e7de44b21dbfef2f14a08a909452c4e9b66.png" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/5db08e7de44b21dbfef2f14a08a909452c4e9b66" title="image.png" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/5/d/5db08e7de44b21dbfef2f14a08a909452c4e9b66_1_690x347.png" alt="image" class="image"></a></div><p></p>
+<p dir="rtl">لاحظ أن هذا القسم لدية تنسيقات مشتركة مع القسم الذي سبق وأنشأناة <code dir="ltr">about-section</code> مما يوحي لنا بأنه قد نستطيع الإستفادة من تلك التنسيقات التي سبق وكتبناها بدلاً من أن نقوم بكتابة المزيد من التنسيقات المشابهه’ لنفترض بأننا سنقوم بنسخ نفس الأكواد التي قمنا بكتابتها للقسم السابق ولنقم بتغيير المحتوى والعمل على جعل الـ class الخاص بها عام حتى لا يكون مخصص لقسم دون الأخر.</p>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!--Start about section--&gt;</span>
+	<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"about-section"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+		<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+			<span style="color: #204a87; font-weight: bold">&lt;h2</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"underline"</span><span style="color: #204a87; font-weight: bold">&gt;</span>عن المبادرة<span style="color: #204a87; font-weight: bold">&lt;/h2&gt;</span>
+
+			<span style="color: #204a87; font-weight: bold">&lt;div&gt;&lt;img</span> <span style="color: #c4a000">src=</span><span style="color: #4e9a06">"images/logo-1.png"</span> <span style="color: #c4a000">alt=</span><span style="color: #4e9a06">""</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+
+			<span style="color: #204a87; font-weight: bold">&lt;p&gt;</span>
+			ان مبادرة ’مليون مبرمج عربي‘ احدى مبادرات محمد بن راشد آل مكتوم العالمية، وهي المؤسسة الخيرية الهادفة إلى نشر التعليم والمعرفة لتعزيز نهضة العالم العربي.
+			<span style="color: #204a87; font-weight: bold">&lt;br&gt;</span>
+تهدف مبادرة ’مليون مبرمج عربي‘ إلى تزويد الشباب العربي بالقدرات والمهارات الأساسية التي سيحتاجونها في الحصول على فرص عمل في المستقبل، فتزودهم بلغة العصر – لغة البرمجة – من خلال دورات تدريبية عبر الأنترنت، ويتكون البرنامج التدريبي من أربعة مسارات هي الأكثر طلباً في مجال تطوير المواقع الإلكترونية، وهي: تطوير المواقع الإلكترونية الكاملة، تطوير صفحات المواقع الإلكترونية، تحليل البيانات، و تطوير تطبيقات الأندرويد.
+			<span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
+
+		<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+	<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+	<span style="color: #8f5902; font-style: italic">&lt;!--End about section--&gt;</span>
+
+
+
+	<span style="color: #8f5902; font-style: italic">&lt;!--Start about section--&gt;</span>
+	<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"about-section"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+		<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+			<span style="color: #204a87; font-weight: bold">&lt;h2</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"underline"</span><span style="color: #204a87; font-weight: bold">&gt;</span>عن المبادرة<span style="color: #204a87; font-weight: bold">&lt;/h2&gt;</span>
+
+			<span style="color: #204a87; font-weight: bold">&lt;div&gt;&lt;img</span> <span style="color: #c4a000">src=</span><span style="color: #4e9a06">"images/logo-1.png"</span> <span style="color: #c4a000">alt=</span><span style="color: #4e9a06">""</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+
+			<span style="color: #204a87; font-weight: bold">&lt;p&gt;</span>
+			ان مبادرة ’مليون مبرمج عربي‘ احدى مبادرات محمد بن راشد آل مكتوم العالمية، وهي المؤسسة الخيرية الهادفة إلى نشر التعليم والمعرفة لتعزيز نهضة العالم العربي.
+			<span style="color: #204a87; font-weight: bold">&lt;br&gt;</span>
+تهدف مبادرة ’مليون مبرمج عربي‘ إلى تزويد الشباب العربي بالقدرات والمهارات الأساسية التي سيحتاجونها في الحصول على فرص عمل في المستقبل، فتزودهم بلغة العصر – لغة البرمجة – من خلال دورات تدريبية عبر الأنترنت، ويتكون البرنامج التدريبي من أربعة مسارات هي الأكثر طلباً في مجال تطوير المواقع الإلكترونية، وهي: تطوير المواقع الإلكترونية الكاملة، تطوير صفحات المواقع الإلكترونية، تحليل البيانات، و تطوير تطبيقات الأندرويد.
+			<span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
+
+		<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+	<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+	<span style="color: #8f5902; font-style: italic">&lt;!--End about section--&gt;</span>
+</pre></div>
+
+<p dir="rtl">في الكود أعلاة قمت بتكرار أكواد القسم الذي سبق وانشأناة لتكون النتيجة كالتالي:<br>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/8/4/84dee8991fb68b25c70caaf5e63528b6ca595852.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/84dee8991fb68b25c70caaf5e63528b6ca595852" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/8/4/84dee8991fb68b25c70caaf5e63528b6ca595852_1_690x460.jpg" alt="image" class="image"></a></div><p></p>
+<p dir="rtl">لنقم بتغيير العنوان وإزالة الصورة الخاصة بشعار المبادرة بالإضافة للفقرة النصية من القسم الجديد:</p>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!--Start about section--&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"about-section"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+	<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+		<span style="color: #204a87; font-weight: bold">&lt;h2</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"underline"</span><span style="color: #204a87; font-weight: bold">&gt;</span>عن المبادرة<span style="color: #204a87; font-weight: bold">&lt;/h2&gt;</span>
+
+		<span style="color: #204a87; font-weight: bold">&lt;div&gt;&lt;img</span> <span style="color: #c4a000">src=</span><span style="color: #4e9a06">"images/logo-1.png"</span> <span style="color: #c4a000">alt=</span><span style="color: #4e9a06">""</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+		<span style="color: #204a87; font-weight: bold">&lt;p&gt;</span>
+			ان مبادرة ’مليون مبرمج عربي‘ احدى مبادرات محمد بن راشد آل مكتوم العالمية، وهي المؤسسة الخيرية الهادفة إلى نشر التعليم والمعرفة لتعزيز نهضة العالم العربي.
+		<span style="color: #204a87; font-weight: bold">&lt;br&gt;</span>
+           تهدف مبادرة ’مليون مبرمج عربي‘ إلى تزويد الشباب العربي بالقدرات والمهارات الأساسية التي سيحتاجونها في الحصول على فرص عمل في المستقبل، فتزودهم بلغة العصر – لغة البرمجة – من خلال دورات تدريبية عبر الأنترنت، ويتكون البرنامج التدريبي من أربعة مسارات هي الأكثر طلباً في مجال تطوير المواقع الإلكترونية، وهي: تطوير المواقع الإلكترونية الكاملة، تطوير صفحات المواقع الإلكترونية، تحليل البيانات، و تطوير تطبيقات الأندرويد.
+		<span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
+	<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #8f5902; font-style: italic">&lt;!--End about section--&gt;</span>
+
+<span style="color: #8f5902; font-style: italic">&lt;!--Start info section--&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"about-section"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+	<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+		<span style="color: #204a87; font-weight: bold">&lt;h2</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"underline"</span><span style="color: #204a87; font-weight: bold">&gt;</span>معلومات للمدربين والطلاب خاصة بالمجموعة الاولى<span style="color: #204a87; font-weight: bold">&lt;/h2&gt;</span>
+
+	<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #8f5902; font-style: italic">&lt;!--End info section--&gt;</span>
+</pre></div>
+
+<p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/4/a/4a72b2377b0986227ed737f869a8dd0d6fe3c6b9.png" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/4a72b2377b0986227ed737f869a8dd0d6fe3c6b9" title="image.png" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/4/a/4a72b2377b0986227ed737f869a8dd0d6fe3c6b9_1_690x460.png" alt="image" class="image"></a></div><p></p>
+<p dir="rtl">لاحظ اننا مازلنا نستخدم الـ class بإسم <code dir="ltr">about-section</code> للقسم الجديد</p>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!--Start info section--&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"about-section"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+	<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+		<span style="color: #204a87; font-weight: bold">&lt;h2</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"underline"</span><span style="color: #204a87; font-weight: bold">&gt;</span>معلومات للمدربين والطلاب خاصة بالمجموعة الاولى<span style="color: #204a87; font-weight: bold">&lt;/h2&gt;</span>
+
+	<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #8f5902; font-style: italic">&lt;!--End info section--&gt;</span>
+</pre></div>
+
+<p dir="rtl">اذا يجب أن نقوم بتعميم هذه التنسيقات تحت إسم عام حتى نستطيع إستخدامها مع عناصر أخرى لهذا سنقوم ببعض التعديلات على مسميات الكلاسات وسنقوم بتغيير إسم الكلاس <code dir="ltr">about-section</code> إلى <code dir="ltr">section</code> وإسنادة للقسمين كالتالي:</p>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"section"</span><span style="color: #204a87; font-weight: bold">&gt;</span><span style="color: #8f5902; font-style: italic">&lt;!--هنا قمنا بالتعديل على إسم الكلاس--&gt;</span>
+	<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+		<span style="color: #204a87; font-weight: bold">&lt;h2</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"underline"</span><span style="color: #204a87; font-weight: bold">&gt;</span>عن المبادرة<span style="color: #204a87; font-weight: bold">&lt;/h2&gt;</span>
+
+		<span style="color: #204a87; font-weight: bold">&lt;div&gt;&lt;img</span> <span style="color: #c4a000">src=</span><span style="color: #4e9a06">"images/logo-1.png"</span> <span style="color: #c4a000">alt=</span><span style="color: #4e9a06">""</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+
+		<span style="color: #204a87; font-weight: bold">&lt;p&gt;</span>
+		  ان مبادرة ’مليون مبرمج عربي‘ احدى مبادرات محمد بن راشد آل مكتوم العالمية، وهي المؤسسة الخيرية الهادفة إلى نشر التعليم والمعرفة لتعزيز نهضة العالم العربي.
+		<span style="color: #204a87; font-weight: bold">&lt;br&gt;</span>
+          تهدف مبادرة ’مليون مبرمج عربي‘ إلى تزويد الشباب العربي بالقدرات والمهارات الأساسية التي سيحتاجونها في الحصول على فرص عمل في المستقبل، فتزودهم بلغة العصر – لغة البرمجة – من خلال دورات تدريبية عبر الأنترنت، ويتكون البرنامج التدريبي من أربعة مسارات هي الأكثر طلباً في مجال تطوير المواقع الإلكترونية، وهي: تطوير المواقع الإلكترونية الكاملة، تطوير صفحات المواقع الإلكترونية، تحليل البيانات، و تطوير تطبيقات الأندرويد.
+		<span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
+
+	<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+
+
+<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"section"</span><span style="color: #204a87; font-weight: bold">&gt;</span><span style="color: #8f5902; font-style: italic">&lt;!--هنا قمنا بالتعديل على إسم الكلاس--&gt;</span>
+	<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+		<span style="color: #204a87; font-weight: bold">&lt;h2</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"underline"</span><span style="color: #204a87; font-weight: bold">&gt;</span>معلومات للمدربين والطلاب خاصة بالمجموعة الاولى<span style="color: #204a87; font-weight: bold">&lt;/h2&gt;</span>
+
+	<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+</pre></div>
+
+<p dir="rtl">ولاننسى تغيير إسم الكلاس  <code dir="ltr">about-section</code> إلى  <code dir="ltr">section</code> في ملف التنسيقات <code dir="ltr">style.css</code> ليصبح كالتالي:</p>
+<!-- HTML generated using hilite.me --><!-- HTML generated using hilite.me --><!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">/*-start section--*/</span>
+<span style="color: #000000">.section</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">40px</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">text-align</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">center</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+<span style="color: #000000">.section</span> <span style="color: #204a87; font-weight: bold">h2</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">35px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#333</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+<span style="color: #000000">.underline</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #5c35cc; font-weight: bold">:after</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">content</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">""</span><span style="color: #000000; font-weight: bold">;</span>
+    <span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
+    <span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100px</span><span style="color: #000000; font-weight: bold">;</span>
+    <span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">2px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">background-color</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #0000cf; font-weight: bold">#11b7e6</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">4px</span> <span style="color: #204a87; font-weight: bold">auto</span> <span style="color: #0000cf; font-weight: bold">40px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+<span style="color: #000000">.section</span> <span style="color: #204a87; font-weight: bold">p</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">max-width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">720px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">30px</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+
+
+<hr>
+<h2 dir="rtl">إضافة عناصر القائمة</h2>
+<p dir="rtl">تبقى لنا الجزء الأخير سنقوم بإضافته بإستخدام عناصر قائمة <code dir="ltr">ul</code> (unordered list) حيث وقمنا بشرحها في الدرس الأول لورشة العمل هذه.</p>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!--Start info section--&gt;</span>
+	<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"section"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+		<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+			<span style="color: #204a87; font-weight: bold">&lt;h2</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"underline"</span><span style="color: #204a87; font-weight: bold">&gt;</span>معلومات للمدربين والطلاب خاصة بالمجموعة الاولى<span style="color: #204a87; font-weight: bold">&lt;/h2&gt;</span>
+
+
+			<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"info-list"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+				<span style="color: #204a87; font-weight: bold">&lt;ul&gt;</span>
+          			<span style="color: #204a87; font-weight: bold">&lt;li&gt;</span>
+						إذا تم قبولك أن تكون مدربا أو طالبا في المجموعة الاولى من المبادره ، إذن فقد تم إبلاغك بالفعل عبر البريد الإلكتروني الخاص بك في تاريخ ١٥ و ٢٢ كانون الثاني / يناير
+					<span style="color: #204a87; font-weight: bold">&lt;/li&gt;</span>
+					<span style="color: #204a87; font-weight: bold">&lt;li&gt;</span>
+					تم ذكر المسار المحدد الذي تم قبولك فيه  في رسالة القبول الإلكترونية التي تم ارسالها اليك
+					<span style="color: #204a87; font-weight: bold">&lt;/li&gt;</span>
+					<span style="color: #204a87; font-weight: bold">&lt;li&gt;</span>
+						سوف تكون قادراً على الوصول إلى المحتوى التعليمي و ذلك ابتداء من تاريخ 23-25 يناير/ كانون ثاني، فنحن الآن نقوم  بتسجيل الطلاب على مجموعات
+					<span style="color: #204a87; font-weight: bold">&lt;/li&gt;</span>
+					<span style="color: #204a87; font-weight: bold">&lt;li&gt;</span>
+						يمكنك الوصول لصفحتك التعليمية الرئيسية من خلال <span style="color: #204a87; font-weight: bold">&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"https://classroom.udacity.com/"</span> <span style="color: #c4a000">target=</span><span style="color: #4e9a06">"_blank"</span><span style="color: #204a87; font-weight: bold">&gt;</span>هذا الرابط<span style="color: #204a87; font-weight: bold">&lt;/a&gt;</span>
+					<span style="color: #204a87; font-weight: bold">&lt;/li&gt;</span>
+					<span style="color: #204a87; font-weight: bold">&lt;li&gt;</span>
+						إذا كنت قد تقدمت بطلب الانضمام الى المجموعة الاولي في المبادرة، ولكن قد تم قبولك في المجموعة الثانية، فالرجاء الانتظار في الفترة الحالية ؛ وسوف نقوم نحن بالاتصال بك قبل بداية المجموعة الثانية في تاريخ 2 أبريل
+					<span style="color: #204a87; font-weight: bold">&lt;/li&gt;</span>
+        		<span style="color: #204a87; font-weight: bold">&lt;/ul&gt;</span>
+			<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+
+
+
+		<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+	<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+	<span style="color: #8f5902; font-style: italic">&lt;!--End info section--&gt;</span>
+</pre></div>
+
+<p dir="rtl">لاحظ قمت بإضافتها بداخل قسم <code dir="ltr">div</code> وأعطيته <code dir="ltr">class</code> بإسم <code dir="ltr">info-list</code> سأستخدمة لإستهداف هذه القائمة بشكل خاص, بإمكانك وضعها مباشرة وإستهدافها بشكل مباشر.</p>
+<p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/a/2/a21a283b2dbe29a1d18d1f50f62cef64c1ad1b0c.png" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/a21a283b2dbe29a1d18d1f50f62cef64c1ad1b0c" title="image.png" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/a/2/a21a283b2dbe29a1d18d1f50f62cef64c1ad1b0c_1_690x460.png" alt="image" class="image"></a></div><p></p>
+<p dir="rtl"><strong dir="rtl">الأن لنقوم ببعض التنسيقات على القائمة <code dir="ltr">ul</code> كالتالي:</strong></p>
+<ul dir="rtl">
+<li dir="rtl">1- أريد لعناصر القائمة ان تكتب من اليمين الى اليسار لهذا سأعطيها محاذاة لليمين</li>
+<li dir="rtl">2- نريد أن نقوم بتغيير نوع النقاط التي تظهر على يمين كل عنصر في القائمة الى الشكل النوع المستخدم في الموقع الأصلي</li>
+</ul>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.info-list</span> <span style="color: #204a87; font-weight: bold">ul</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">text-align</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">right</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*محاذاة النص لليمين*/</span>
+	<span style="color: #204a87; font-weight: bold">list-style-type</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">circle</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*تغيير نوع النقاط*/</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+<p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/6/c/6cdc4031651acd2a0ce539b75f09e11541489b9f.png" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/6cdc4031651acd2a0ce539b75f09e11541489b9f" title="image.png" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/6/c/6cdc4031651acd2a0ce539b75f09e11541489b9f_1_690x460.png" alt="image" class="image"></a></div><p></p>
+<p dir="rtl"><strong dir="rtl">الان لنستهدف كل عنصر <code dir="ltr">li</code> من هذه القائمة ونعطية التنسيقات التالية:</strong></p>
+<ul dir="rtl">
+<li dir="rtl">1- لنقوم بإعطائها هامش سفلي بقيمة 18px</li>
+<li dir="rtl">2- لنقوم بتغيير حجم الخط الى 14px</li>
+<li dir="rtl">3- لنقوم بتغيير لون الخط ليطابق الموقع الاصلي</li>
+</ul>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.info-list</span> <span style="color: #204a87; font-weight: bold">ul</span> <span style="color: #204a87; font-weight: bold">li</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">margin-bottom</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">18px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">14px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#333</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+<p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/4/1/4176f08c01bf768bff6017f00728035dca6c360e.png" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/4176f08c01bf768bff6017f00728035dca6c360e" title="image.png" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/4/1/4176f08c01bf768bff6017f00728035dca6c360e_1_690x460.png" alt="image" class="image"></a></div><p></p>
+<p dir="rtl">تبقى لنا تنسيق الرابط بداخل هذه المنطقة بإزالة الخط من تحته وكذلك تغيير لونة</p>
+<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.info-list</span> <span style="color: #204a87; font-weight: bold">li</span> <span style="color: #204a87; font-weight: bold">a</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">text-decoration</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">none</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#00aaf6</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+<h2 dir="rtl"><strong dir="rtl">النتيجة النهائية:</strong></h2>
+<p></p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/2/1/21998d59dda93e47f507bb32d9368511c943445b.gif" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/21998d59dda93e47f507bb32d9368511c943445b" title="daytwo-finalresult.gif" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/2/1/21998d59dda93e47f507bb32d9368511c943445b_1_690x379.gif" alt="daytwo-finalresult" class="image"></a></div><p></p>
+<hr>
+
+
+</div>
+    </div>
+    <div class="navigate">
+      <a href="#" class="disabled">السابق</a>
+      <a href="#">التالي</a>
+    </div>
+    <footer>
+      <div class="copyright">
+      حقوق النشر 2018. جميع الحقوق محفوظة من قبل XXX
+      </div>
+    </footer>
+
+    <script src="../../../js/main.js"></script>
+  </body>
+</html>

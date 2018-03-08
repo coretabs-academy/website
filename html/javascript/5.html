@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>[الدرس الثالث: الجزء الثاني]: Data Types</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-brand">
+        <div class="">
+          1MAC Courses
+        </div>
+      </div>
+      <div class="icon-container">
+        <div class="humberger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="navbar-nav">
+        <nav>
+          <div class="close">
+            أغلق <i class="fas fa-times"></i>
+          </div>
+          <a href="../../index.html">الرئيسية</a>
+          <a href="../html_css/html-css.html">HTML & CSS</a>
+          <a href="../javascript/javascript.html">JavaScript</a>
+          <a href="../git/git.html">Git</a>
+          <a href="../projects/projects.html">المشاريع</a>
+        </nav>
+      </div>
+    </div>
+    <div class="container">
+      <div class="cooked">
+
+
+        <h1 dir="rtl">الجزء الثاني من Data types</h1>
+        <hr>
+    <p dir="rtl">في الدرس السابق تعرفنا على الـ numbers و الـ strings. في هذا الدرس سنكمل مناقشة أنواع البيانات Data Type  الأخرى.</p>
+
+    <hr>
+    <h2 dir="rtl">النوع الثالث: undefined</h2>
+    <p dir="rtl">عند قيامك بتعريف متغير بدون إسناد أي قيمة إلية تقوم الجافاسكربت بإسناد القيمة undefined لذلك المتغير (ما يعني ان قيمته غير محددة).</p>
+    <p dir="rtl"><strong dir="rtl">مثال:</strong></p>
+    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">x</span><span style="color: #000000; font-weight: bold">;</span>
+</pre></div>
+
+    <p dir="rtl">لنقوم بطباعة قيمة المتغير x على الـ console ونشاهد القيمة التي تشير اليها x</p>
+    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">x</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"x value = "</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">x</span><span style="color: #000000; font-weight: bold">);</span>
+</pre></div>
+
+    <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+    <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/2/0/2038d911d23380ec2c838bc6e4b0f882ff7db505_1_690x457.png">
+    <p></p>
+    <p dir="rtl">اذا كانت لا تعرف كيف تستخدم الـ console راجع <a href="2.html" dir="rtl">الدرس الأول</a>.</p>
+    <hr>
+    <h2 dir="rtl">النوع الرابع: null</h2>
+    <p dir="rtl">القيمة null تعني لا شئ وهي قيمة تسند للمتغير في حال أردت جعلة بدون أي قيمة</p>
+    <p dir="rtl"><strong dir="rtl">مثال:</strong></p>
+    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">x</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">null</span><span style="color: #000000; font-weight: bold">;</span>
+</pre></div>
+
+    <p dir="rtl">لنقوم بطباعة قيمة المتغير x على الـ console ونشاهد القيمة التي تم تخزينها في x<br></p>
+    <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/1/1/11a7a3643ed3913c7f2d1b0bbce948d21cf641de_1_690x457.png">
+    <p></p>
+    <hr>
+    <h4 dir="rtl">ربما تتسأل ما الفرق بين undefined و null ؟</h4>
+    <p dir="rtl">في الواقع undefined و null متساويات في القيمة ومحتلفات بالنوع وسنثبت ذلك في الدرس الخاص بعمليات المقارنة.</p>
+    <ul dir="rtl">
+       <li dir="rtl">نستطيع القول بأن null قيمة تقوم انت بإسنادها للمتغير لجعلة بدون قيمة بينما undefined تقوم الجافاسكربت بإسنادها للمتغير في حال انك قمت بتعريفة وتركته بدون أي قيمة.</li>
+    </ul>
+    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">x</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">null</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">// no value</span>
+<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">y</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">// undefined</span>
+</pre></div>
+
+    <ul dir="rtl">
+       <li dir="rtl">نستخدم null لمسح قيمة المتغير لنفترض على سبيل المثال قمت بتعريف متغير x واسندت إلية قيمة وثم في وقت لاحق أردت أن تقوم بإسناد لا شئ للمتغير x</li>
+    </ul>
+    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">x</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">5</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000">x</span><span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">null</span><span style="color: #000000; font-weight: bold">;</span>
+</pre></div>
+
+    <p dir="rtl">هذا ما يكفي لمعرفته بخصوص هذين النوعين في الوقت الحالي حتى لا ترتبك لذا ننتقل للنوع الأخر</p>
+    <hr>
+    <h2 dir="rtl">النوع الخامس: boolean</h2>
+    <p dir="rtl">هذا النوع يسمى القيم المنطقية وتحتمل قيمتين فقط و هما <code dir="ltr">true</code> او <code dir="ltr">false</code> هذا النوع من البيانات تقوم بالتفاعل معه في حياتك اليومية لنأحذ على سبيل المثال الأمثلة التالية:</p>
+    <p dir="rtl">ربما قبل قليل قمت بإعطاء شخص إعجاب على موضوع في المنتدى هل لاحظت بأن هذا الزر لا يحتمل سوى حالتين (true / false)<br>
+       <img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/e/2/e200799755c3aa2b6c7cc1837755555df21afc00.gif" alt="Untitled-25" width="222" height="112">
+    </p>
+    <p dir="rtl">هل سبق لك وأن شاهدت مثل هذا المفتاح ؟<br>
+       <img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/7/1/718b84f2885a552f338e4c2cd2766f7770150cae.jpg" alt="image" width="189" height="164">
+    </p>
+    <p dir="rtl"><strong dir="rtl">اذا سألتك وقلت لك هل المفتاح هذا الأن في وضع الـ ON ام OFF؟</strong><br>
+       انا متأكد بأنك ستقول بأنه في وضع ON
+    </p>
+    <p dir="rtl"><strong dir="rtl">ما الذي جعلك تعتقد ذلك ؟</strong><br>
+       بالتأكيد الذي جعلك تعتقد ذلك هي الرموز المرسومة على المفتاح فهناك رمزين أو بالأصح رقمين <code dir="ltr">1</code> و <code dir="ltr">0</code>
+    </p>
+    <p dir="rtl"><strong dir="rtl">هل تستطيع أن الأن أن تربط علاقة بين الـ 1 و الـ true و بين الـ 0 و الـ false ؟</strong><br>
+       نستطيع أن نستنتج بأن true تساوي 1 في القيمة وكذلك false تساوي 0 في القيمة, سنقوم بإثبات ذلك في الامثلة القادمة بالدرس التالي.
+    </p>
+    <hr>
+    <h3 dir="rtl">طريقة إسناد boolean data type للمتغيرات</h3>
+    <p dir="rtl">تستطيع إسناد القيمة true او false للمتغير مباشرة كالتالي:</p>
+
+    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">lightSwitch</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">false</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">lightSwitch</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">;</span>
+</pre></div>
+
+    <p dir="rtl"><strong dir="rtl">مثال:</strong><br>
+       سأقوم بتعريف متغير واسناد القيمة false الية ومن ثم اظهر قيمته في نافذة منبثقة
+    </p>
+    <!-- HTML generated using hilite.me --><!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;script&gt;</span>
+   <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">lightSwitch</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">false</span><span style="color: #000000; font-weight: bold">;</span>
+   <span style="color: #000000">alert</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">lightSwitch</span><span style="color: #000000; font-weight: bold">);</span>
+
+<span style="color: #204a87; font-weight: bold">&lt;/script&gt;</span>
+</pre></div>
+
+
+    <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+    <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/4/9/49067008f1ddbe54c23186c87e68d6eafb659845_1_690x457.png">
+    <p></p>
+    <p dir="rtl">الان لنقوم بتعديل الكود السابق بإضافة <strong dir="rtl">علامة تعجب</strong> <strong dir="ltr">!</strong> قبل اسم المتغير بداخل دالة <strong dir="ltr">alert</strong>:</p>
+    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;script&gt;</span>
+   <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">lightSwitch</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">false</span><span style="color: #000000; font-weight: bold">;</span>
+   <span style="color: #000000">alert</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #ce5c00; font-weight: bold">!</span><span style="color: #000000">lightSwitch</span><span style="color: #000000; font-weight: bold">);</span> <span style="color: #8f5902; font-style: italic">// اضفت هنا علامة التعجب ! قبل المتغير</span>
+
+<span style="color: #204a87; font-weight: bold">&lt;/script&gt;</span>
+</pre></div>
+
+    <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+    <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/b/d/bd931bd9c0d786617d5d25fd753048a800237e19_1_690x459.png">
+    <p></p>
+    <p dir="rtl">هل لاحظت كيف تغيرت قيمة المتغير من false الى true  وكانه كان هناك مفتاح في حالة flase و من ثم قمت لاحقاً بتفعيلة true.</p>
+    <p dir="rtl"><strong dir="rtl">بإمكانك اعتبار بأن ما قمنا به بشكل مشابة لما يحصل في الصورة التالية:</strong><br>
+       <img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/d/d/dd1d217da938cd81eb994a7d919fcb9622ed1e8e.gif" alt="Untitled-24" width="222" height="112">
+    </p>
+    <p dir="rtl"><strong dir="rtl">ما الذي تعنية علامة التعجب <code dir="ltr">!</code> في البرمجة ؟</strong><br>
+       تعني <strong dir="ltr">not</strong> فعندما وضعنا علامة التعجب امام اسم المتغير الذي يحمل قيمة false كأننا نقول not false
+    </p>
+    <p dir="rtl"><strong dir="rtl">اذا قلت لك not false ماذا يعني ذلك ؟</strong><br>
+       يعني <strong dir="ltr">true</strong> اليس كذلك ؟
+    </p>
+    <hr>
+    <p dir="rtl">بهذا نكون قد غطينا أهم أنواع البيانات (Data Types)  و بقي لنا شرح الـ Object حيث سنتطرق الية في وقته.</p>
+    <hr>
+
+
+
+ </div>
+    </div>
+    <div class="navigate">
+      <a href="#" class="disabled">السابق</a>
+      <a href="#">التالي</a>
+    </div>
+    <footer>
+      <div class="copyright">
+      حقوق النشر 2018. جميع الحقوق محفوظة من قبل XXX
+      </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+  </body>
+</html>
