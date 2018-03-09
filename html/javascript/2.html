@@ -44,7 +44,7 @@
     <hr>
     <p dir="rtl">سأقوم بشرح هذا الدرس بأبسط قدر ممكن وبشكل عملي حتى تفهموا الفكرة العامة  و سأتجنب شرح المصطلحات و الكلام النظري الذي قد يشتتكم لكن أرجوا البحث والقرأة عن الموضوع أكثر بعد أن تفهموا الفكرة العامة حتى تكونوا ملمين بالموضوع بشكل كامل</p>
     <p dir="rtl"><strong dir="rtl">ماهو ال(DOM) ؟</strong><br></p>
-    <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/e/6/e68ee4950c198118a75ab18ea4e35a8010ab960f_1_571x500.jpg">
+    <img class="image" src="../../images/javascript/2/1.png">
     <p></p>
     <p dir="rtl">عند فتحك للمتصفح يكون امامك كائنين (Two Objects) الاول هو BOM والثاني هو ال DOM اعتقد ان الصورة واضحة لا اريد ان اقوم بعمل ترجمة حرفية للمصطلحات حتى لا يكون الموضوع مربك لكم.</p>
     <p dir="rtl">ال DOM هو واجهة برمجية خاصة بـ HTML و  XML. هذه الواجهة البرمجية تسمح لك بإستخدام بعض اللغات كـ Javascript لعمل تلاعب بالمحتوى والهيكلة كـ (جلب, تعديل, إضافة, حذف) للعناصر عن طريق التعامل معها ك Nodes.</p>
@@ -55,7 +55,7 @@
        <li dir="rtl">مايقوم به المتصفح هو عملية إنشاء لل DOM بإستخدام كود ال HTML الذي قمت بكتابته (Source code)  وأثناء هذه العملية يتم إنشاء شجرة للعناصر تتكون من الجذر و الأب والإبن.</li>
     </ul>
     <p dir="rtl">خلونا نطبق على الكود التالي</p>
-    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;html&gt;</span>
+    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;html&gt;</span>
    <span style="color: #204a87; font-weight: bold">&lt;head&gt;</span>
       <span style="color: #204a87; font-weight: bold">&lt;title&gt;</span>One Million Arab Coders<span style="color: #204a87; font-weight: bold">&lt;/title&gt;</span>
    <span style="color: #204a87; font-weight: bold">&lt;/head&gt;</span>
@@ -70,7 +70,7 @@
 
     <p dir="rtl">عند حفظ هذا الكود وعرضة يقوم المتصفح بإنشاء DOM Tree كالتالي:</p>
     <p></p>
-    <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/6/a/6a95af57a2d804d8e838acd2029127cabc5ca952_1_690x489.jpg">
+    <img class="image" src="../../images/javascript/2/2.png">
     <p></p>
     <p dir="rtl">نلاحظ من الصورة أعلاة كيف تم إنشاء الشجرة بحيث<br>
        <code dir="ltr">&lt;Html&gt;</code> هي الجذر (root)<br>
@@ -82,7 +82,7 @@
     <p dir="rtl">الان بإمكانك إعتبار كل عنصر بداخل هذه الشجرة Node</p>
     <p dir="rtl">الصورة التالية وضحت فيها بعض الـ Nodes</p>
     <p></p>
-    <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/6/2/628c91851122cf85a2674161a053da36af4bbdf7_1_690x226.jpg">
+    <img class="image" src="../../images/javascript/2/3.png">
     <p></p>
     <p dir="rtl">في الوقت الحالي لا تهتم للمسميات فقط أفهمها ولاحقاً عندما تبدأ في التعمق ستعرف ماذا تستفيد منها</p>
     <hr>
@@ -91,12 +91,12 @@
        <li dir="rtl">قم بحفظ الكود أعلاة وفتحة في المتصفح ثم إضغط بزر الماوس الأيمن على الصفحة وقم بأختيار Inspect Element</li>
     </ul>
     <p></p>
-    <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/4/3/437d8175d502ccb4a98b3ed15a3d598d4a4c4691_1_690x454.jpg">
+    <img class="image" src="../../images/javascript/2/4.png">
     <p></p>
     <ul dir="rtl">
        <li dir="rtl">
           <p dir="rtl">ستظهر لك النوافذ التالية<br></p>
-          <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/e/3/e3b28806483c52cf2c3f2460c215da78b68c2b40_1_690x462.jpg">
+          <img class="image" src="../../images/javascript/2/5.png">
           <p></p>
        </li>
        <li dir="rtl">
@@ -104,7 +104,7 @@
        </li>
     </ul>
     <p></p>
-    <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/0/0/00e397f733d1b979fc0c4aaf84aa051afb3b2367_1_571x500.jpg">
+    <img class="image" src="../../images/javascript/2/6.png">
     <p></p>
     <p dir="rtl">ما تشاهدة حالياً هي الواجهة التي ستعامل معها للتلاعب بالعناصر بإستخدام الـDOM</p>
     <ul dir="rtl">
@@ -126,7 +126,7 @@
           فعندما تقوم بعمل تلاعب على الكود بإستخدام الـDOM فلا يتم المساس بمصدر الكود وإنما تتم التعديلات على الكود الذي قام المتصفح بإنشائة بإستخدام المصدر وعند عمل تحديث للصفحة يتم إستدعاء مصدر الكود و إعادة إنشاء نسخة جديدة للـDOM يتم فيها إلغاء جميع التعديلات
        </p>
        <p></p>
-       <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/1/1/111668f0dc28294d7a8d38918391b1048e4a9454_1_690x416.jpg">
+       <img class="image" src="../../images/javascript/2/7.png">
        <p></p>
        <p dir="rtl">ما أردت توضيحة فيه هذه الصورة</p>
        <ul dir="rtl">
@@ -147,7 +147,7 @@
        أعتقد بأنك حتى هذه اللحظة قد أدركت بأن HTML تساعدك على عمل مواقع بمحتوى ثأبت وتتسأل كيف بإمكانك جعل الموقع يتفاعل مع المستخدم وجعل محتوياته ديناميكية عن طريق التلاعب ببعض اكواد الـ HTML وإستبدالها على سبيل المثال.
     </p>
     <p dir="rtl">مثلا بإمكانك سؤال المستخدم عن إسمة عند دخولة للموقع ثم تقوم بالترحيب به بإسمة</p>
-    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!DOCTYPE html&gt;</span>
+    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!DOCTYPE html&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;html&gt;</span>
    <span style="color: #204a87; font-weight: bold">&lt;head&gt;</span>
       <span style="color: #204a87; font-weight: bold">&lt;title&gt;</span>One Million Arab Coders<span style="color: #204a87; font-weight: bold">&lt;/title&gt;</span>
@@ -169,7 +169,7 @@
     <hr>
     <p dir="rtl">لنبدأ بتطبيق مثال بسيط بإستخدام ال DOM</p>
     <p dir="rtl">قم بعمل مستند HTML جديد وضع فيه الوسوم التالية:</p>
-    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!DOCTYPE html&gt;</span>
+    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!DOCTYPE html&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;html&gt;</span>
    <span style="color: #204a87; font-weight: bold">&lt;head&gt;</span>
       <span style="color: #204a87; font-weight: bold">&lt;title&gt;</span>One Million Arab Coders<span style="color: #204a87; font-weight: bold">&lt;/title&gt;</span>
@@ -181,34 +181,34 @@
 
     <p dir="rtl">الان قم بحفظه الملف وفتحة بالمتصفح</p>
     <p></p>
-    <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/6/7/679d11ea07d8b8408bb8a592d8ca37219e81da52_1_690x462.jpg">
+    <img class="image" src="../../images/javascript/2/8.png">
     <p></p>
     <p dir="rtl">لدينا صفحة بيضاء خالية من أي محتوى</p>
     <p dir="rtl">سنقوم الأن بإستخدام نافذة Console لكتابة كود Javascript يقوم بإضافة تنسيق لوسم <code dir="ltr">&lt;body&gt;</code> وسنغير لون الخلفية إلى أي لون وليكن الأسود</p>
     <p></p>
-    <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/e/7/e747badf768a7089609d3c7334004fb93fac8a44_1_690x461.jpg">
+    <img class="image" src="../../images/javascript/2/9.png">
     <p></p>
     <p dir="rtl">قمت بكتابة الكود التالي في الـConsole وضغطت على Enter:</p>
-    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">body</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">style</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">backgroundColor</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"black"</span><span style="color: #000000; font-weight: bold">;</span>
+    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">body</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">style</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">backgroundColor</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"black"</span><span style="color: #000000; font-weight: bold">;</span>
 </pre></div>
 
     <p dir="rtl">الكود أعلاة يقوم بعمل تحديد لـ Node <code dir="ltr">&lt;body&gt;</code> في جزئية :</p>
-    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">body</span>
+    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">body</span>
 </pre></div>
 
-    <p><img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/b/6/b666e31dfa0808585f213f6d85f1220adaab35ab.jpg"></p>
+    <p><img class="image" src="../../images/javascript/2/10.png"></p>
     <p dir="rtl">ثم يقوم بإضافة Style نوع backgroundColor والتي تقوم بتغيير لون الخلفية للون المحدد black</p>
-    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">style</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">backgroundColor</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"black"</span><span style="color: #000000; font-weight: bold">;</span>
+    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">style</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">backgroundColor</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"black"</span><span style="color: #000000; font-weight: bold">;</span>
 </pre></div>
 
     <p dir="rtl"><strong dir="rtl">هل لاحظت كيف قام الـDOM بعملة؟</strong><br>
        لنعود لنقارن كود الـHTML قبل كتابتنا لكود الJavascript وبعد كتابتنا له
     </p>
     <p></p>
-    <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/a/c/ac36dc9553f5222622d726481af64d8eee9ee0bb_1_690x461.jpg">
+    <img class="image" src="../../images/javascript/2/11.png">
     <p></p>
     <p dir="rtl">هلا لاحظت الفرق وكيف قام الـ DOM بالتلاعب بكود الـHTML فقد أضاف كود لعمل تنسيق لوسم <code dir="ltr">&lt;body&gt;</code> كالتالي:</p>
-    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;body</span> <span style="color: #c4a000">style=</span><span style="color: #4e9a06">"background-color: black;"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;body</span> <span style="color: #c4a000">style=</span><span style="color: #4e9a06">"background-color: black;"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
 </pre></div>
 
     <hr>
@@ -220,7 +220,7 @@
     <p dir="rtl"><strong dir="rtl">لنجرب شئ جديد</strong><br>
        بإمكانك الأن تطوير الكود ليقوم بسؤال الزائر عن لونة المفضل وتطبيقة على الخلفية - حاول تطبيق الكود من نفسك قبل أن تنسخة وبإمكانك الرجوع لسكربت السؤال عن إسم المستخدم فالفكرة مشابهة
     </p>
-    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!DOCTYPE html&gt;</span>
+    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!DOCTYPE html&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;html&gt;</span>
    <span style="color: #204a87; font-weight: bold">&lt;head&gt;</span>
       <span style="color: #204a87; font-weight: bold">&lt;title&gt;</span>One Million Arab Coders<span style="color: #204a87; font-weight: bold">&lt;/title&gt;</span>
