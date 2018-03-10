@@ -58,7 +58,6 @@ body{
 	-o-transition: right .5s ease-in-out;
 	transition: right .5s ease-in-out;
 	overflow-x: hidden;
-	z-index: -100;
 }
 body.move{
 	right: 320px;
@@ -1036,4 +1035,11 @@ code {
     color: #D81B60;
     border-radius: 5px;
     padding: 2px;
+}
+pre{
+	text-align: left;
+	max-height: 600px;
+}
+.emoji{
+	width: 30px;
 }
