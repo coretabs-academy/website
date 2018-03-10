@@ -1035,6 +1035,7 @@ code {
     color: #D81B60;
     border-radius: 5px;
     padding: 2px;
+		display: inline-block;
 }
 pre{
 	text-align: left;
