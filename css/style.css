@@ -2,6 +2,9 @@
 /*=====================================
 Global Style
 =======================================*/
+*{
+	outline: none;
+}
 html{
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
