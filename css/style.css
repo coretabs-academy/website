@@ -5,6 +5,9 @@ Global Style
 *{
 	outline: none;
 }
+img{
+	margin-top: 20px;
+}
 html{
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
