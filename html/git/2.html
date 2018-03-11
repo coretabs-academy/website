@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>[الدرس الثاني : المهمة الثانية] ماهي git commit & git push</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-brand">
+        <div class="">
+          1MAC Courses
+        </div>
+      </div>
+      <div class="icon-container">
+        <div class="humberger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="navbar-nav">
+        <nav>
+          <div class="close">
+            أغلق <i class="fas fa-times"></i>
+          </div>
+          <a href="../../index.html">الرئيسية</a>
+          <a href="../html_css/html-css.html">HTML & CSS</a>
+          <a href="../javascript/javascript.html">JavaScript</a>
+          <a href="../git/git.html">Git</a>
+          <a href="../projects/projects.html">المشاريع</a>
+        </nav>
+      </div>
+    </div>
+    <div class="container">
+      <div class="cooked">
+       <h1>ورشة عمل git commit و git push </h1>
+       <hr>
+
+<ul dir="rtl">
+
+<li dir="rtl">
+<h3 dir="rtl">مالذي قمنا به في الدرس السابق ؟</h3>
+<p dir="rtl">قمنا باستخدام GitKraken كوسيط للعمل مع git… بمعنى أنه git client GUI.</p>
+</li><hr>
+<li dir="rtl">
+<h3 dir="rtl">لماذا Git ؟</h3>
+<p dir="rtl">هو عبارة عن نظام مفتوح المصدر الهدف منه إدارة عمليات برمجة وتطوير الانظمة والمواقع.</p>
+<p dir="rtl">من خلاله يقوم الفريق البرمجي بمتابعة وإدارة النسخ للنظام الذي يعملون عليه. خلال العمل على أي نظام يقوم  الفريق البرمجي بعمل تعديلات ونسخ من النظام.</p>
+<p dir="rtl">النسخة الأخيرة <strong dir="rtl">ليست دائمًا هي الأفضل</strong> قد يضطر أحيانًا المبرمج للرجوع إلى نسخ سابقة للعمل عليها أو تعديلها.</p>
+</li>
+<hr><li dir="rtl">
+<h3 dir="rtl">هل تتذكر هذا الموقف:</h3>
+<p><img src="../../images/git/2/1.png" alt="Untitled2" class="image"></p>
+<p dir="rtl">كل مرة تقوم بعمل نسخة جديدة تقوم بتسميتها final حتى يصبح الأمر ممل <img src="../../images/git/2/2.png" title=":smile:" class="emoji" alt=":smile:"></p>
+<p dir="rtl">أو تخيل أن هناك مطورين يرغبوا في التعاون والتشارك في نسخ الكود !</p>
+<h4 dir="rtl">وعليه… تأتي الحاجة لأنظمة إدارة الإصدارات Version Control Systems.</h4>
+</li>
+<hr><li dir="rtl">
+<h3 dir="rtl">ماهو الهدف من git ؟</h3>
+</li>
+<li dir="rtl">
+<p dir="rtl">تنظيم النسخ من العمل.</p>
+</li>
+<li dir="rtl">
+<p dir="rtl">إمكانية الرجوع للنسخة الأخيرة أو لنقاط معينة من نسخ سابقة، نعم نقاط سابقة من العمل كما لو كانت صور تم التقاطها على مراحل مختلفة من العمل ونريد العودة لاحداها حتى لو لم تكن الأخيرة… فقط بهذي السهولة.</p>
+</li>
+<hr><li dir="rtl">
+<h3 dir="rtl">ما معنى هذا الكلام ؟</h3>
+<p dir="rtl">نحن هنا نتحدث عن ما يسمى ادارة النسخ  Version Control.</p>
+<p dir="rtl">عند العمل على مشاريع برمجية كبيرة يشترك فيها فريق مطورين لتحديث والعمل على نفس الاجزاء من الاكواد، سواء أكان العمل مع مطور واحد آخر او العمل مع الاف المطورين في انظمة مفتوحة المصدر.</p>
+</li>
+<hr><li dir="rtl">
+<h3 dir="rtl">ماهي مهام التطوير الأساسية؟</h3>
+<p dir="rtl">المهام الأساسية التي نقوم بها عادة كالتالي: انشاء ملفات جديدة … اضافة محتوى لها … حفظها … فتحها في حال التعديل … ثم لاحفظ مرة أخرى.<br>
+تكمن المشكلة هنا في التخزين بعد التعديل … هنا يتطلب الموقف أحيانًا ذكر لماذا تم التعديل وما الاضافات او التعديلات التي حصلت ؟</p>
+<p dir="rtl">هذا الامر يبدو بسيطًا وسلسًا عند التعامل مع ملف واحد ومطور واحد لكنه كارثيًا في حال عدد كبير من الملفات وعدد من المطورين يعملون عليها هنا تتغير المعلوماتالتي نحتاجها إلى من قام بالتعديل ومتى قام بالتعديل ؟ وما هي العديلات التي حصلت ؟ ولماذا؟</p>
+</li>
+<hr><li dir="rtl">
+<h3 dir="rtl">هل يوجد نظام Version Control آخر؟</h3>
+<p dir="rtl">نعم يوجد أنظمة أخرى:<br>
+Mercurial, Bazaar  و Darcs</p>
+</li>
+<hr><li dir="rtl">
+<h3 dir="rtl">كيف يعمل نظام version control ؟</h3>
+<p dir="rtl">يوفر Git  لنا طرقًا سريعة وحديثة لإدارة النسخ version control.</p>
+<p dir="rtl">توفر لنا مساراً تاريخيا يوضح معلومات كافية عن التحديثات.<br>
+لدينا هنا عدة أشخاص يعملون على نفس الملفات بالطريقة التالية على مسار زمني timeline كما هو موضح:</p>
+<p></p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="Untitled.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/2/3.png" alt="Untitled" class="image"></a></div><p></p>
+<hr><p dir="rtl">تخيل أنك تقوم بكتابة التاريخ باستعمال git !</p><hr>
+</li>
+<li dir="rtl">
+<h3 dir="rtl">ماهو التاريخ في حالتنا ؟</h3>
+<p dir="rtl">التاريخ ببساطة هو repository خاصتك.</p>
+</li>
+<hr><li dir="rtl">
+<h3 dir="rtl">ماهي أحداث هذا التاريخ ؟</h3>
+<p dir="rtl">كل حدث في repository  يعرف بـ commit.</p>
+</li>
+<hr><li dir="rtl">
+<h3 dir="rtl">أين سأكتب هذا التاريخ ؟</h3>
+<p dir="rtl">ستقوم بكتابته محلياً, على جهازك, وبإمكانك ارساله ليراه الآخرين على موقع GitHub. يسهل العمل التعاوني  المشترك على الملفات حتى إذا كان العمل متزامن أي أن المطورين يعملون على ذات الملفات ووذات الوقت (تزامن).</p>
+<p dir="rtl">يستطيع المطور العمل على أنواع مختلفة من الملفات قد تكون تصاميم او ملفات برمجية أو وثائق او غير ذلك.</p>
+</li>
+<hr><li dir="rtl">
+<h3 dir="rtl">أين يتم حفظ هذا التاريخ ؟</h3>
+<p dir="rtl">هل لاحظت مجلد .git</p>
+<p dir="rtl">هنا يتم الحفاظ على التاريخ كاملاً, لا تقم أبداً أبداً بالعبث بهذا المجلد.</p>
+</li>
+<hr><li dir="rtl">
+<h3 dir="rtl">ماهي الثلاثة الأوامر الرئيسية في git ؟</h3>
+<ol dir="rtl">
+<li dir="rtl">
+<h4 dir="rtl">لإنشاء المستودع الذي سيتم التخزين فيه repository:</h4>
+<div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">git init
+</pre></div>
+
+</li>
+<li dir="rtl">
+<h4 dir="rtl">لعمل نسخة من الملفات الموجودة في المستودع repository إلى جهاز الكمبيوتر:</h4>
+<div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">git clone
+</pre></div>
+
+</li>
+<li dir="rtl">
+<h3 dir="rtl">لمعرفة حالة repository:</h3>
+<div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">git status
+</pre></div>
+
+</li>
+</ol>
+</li>
+<hr><li dir="rtl">
+<h3 dir="rtl">كيف نقوم بعمل commit جديدة ؟</h3>
+<p dir="rtl">الأمر التالي يجهز الملفات التي سيتم نسخها ليكونوا في قائمة الانتظار:</p>
+<div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">git add .
+</pre></div>
+
+<p dir="rtl">ثم الامر الذي يقوم بحفظ التعديلات، وهنا لابد من إضافة رسالة (وصف):</p>
+<div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">git commit –m <span style="color: #4e9a06">"Seperated HTML from CSS"</span>
+</pre></div>
+
+<p dir="rtl">أخيراً إرسال التعديلات إلى GitHub:</p>
+<div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">git push origin master
+</pre></div>
+
+<p dir="rtl">هنا صورة متحركة للقيام بالعملية:</p>
+<p></p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="github-commit.gif" rel="nofollow noopener" dir="ltr"><img src="../../images/git/2/4.gif" alt="github-commit" class="image"></a></div><p></p>
+</li>
+
+</ul>
+<div data-poll-type="regular" data-poll-name="name" data-poll-status="open" class="poll"></div>
+
+
+<ul dir="rtl">
+<hr><li dir="rtl">
+<h3 dir="rtl">ماهي المهمة المطلوبة ؟</h3>
+<ul dir="rtl">
+<li dir="rtl">
+<p dir="rtl">قم بتعديل ملف index.html ليصبح بهذا الشكل:</p>
+<div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!doctype html&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;html&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;head&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">charset=</span><span style="color: #4e9a06">"utf-8"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;title&gt;</span>Untitled Document<span style="color: #204a87; font-weight: bold">&lt;/title&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;link</span> <span style="color: #c4a000">rel=</span><span style="color: #4e9a06">"stylesheet"</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"style.css"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/head&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;body&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"header"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+    <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+        <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"float-left"</span><span style="color: #204a87; font-weight: bold">&gt;</span> <span style="color: #204a87; font-weight: bold">&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"logo"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Facebook<span style="color: #204a87; font-weight: bold">&lt;/a&gt;</span> <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+        <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"float-right"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+
+            <span style="color: #8f5902; font-style: italic">&lt;!--منطقة حقل الإيميل--&gt;</span>
+            <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"login-box"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;div&gt;</span>
+                    <span style="color: #204a87; font-weight: bold">&lt;label</span> <span style="color: #c4a000">for=</span><span style="color: #4e9a06">"email"</span><span style="color: #204a87; font-weight: bold">&gt;</span>E-posta veya Telefon<span style="color: #204a87; font-weight: bold">&lt;/label&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;div&gt;</span>
+                    <span style="color: #204a87; font-weight: bold">&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"email"</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"email"</span> <span style="color: #c4a000">autofocus</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+            <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+
+            <span style="color: #8f5902; font-style: italic">&lt;!--منطقة حقل الباسورد--&gt;</span>
+            <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"login-box"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;div&gt;</span>
+                    <span style="color: #204a87; font-weight: bold">&lt;label</span> <span style="color: #c4a000">for=</span><span style="color: #4e9a06">"password"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Şifre<span style="color: #204a87; font-weight: bold">&lt;/label&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;div&gt;</span>
+                    <span style="color: #204a87; font-weight: bold">&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"password"</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"password"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;div&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Hesabını mı unuttun?<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/div&gt;</span>
+            <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+
+            <span style="color: #8f5902; font-style: italic">&lt;!--منطقة زر تسجيل الدخول--&gt;</span>
+            <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"login-box"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"submit"</span> <span style="color: #c4a000">value=</span><span style="color: #4e9a06">"Giriş Yap"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+            <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+        <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+    <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"main"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+    <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+        <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"float-left"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+            <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"description"</span><span style="color: #204a87; font-weight: bold">&gt;</span> Facebook tanıdıklarınla iletişim kurmanı ve hayatında olup bitenleri paylaşmanı sağlar. <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+            <span style="color: #204a87; font-weight: bold">&lt;div&gt;</span> <span style="color: #204a87; font-weight: bold">&lt;img</span> <span style="color: #c4a000">src=</span><span style="color: #4e9a06">"https://static.xx.fbcdn.net/rsrc.php/v3/yc/r/GwFs3_KxNjS.png"</span> <span style="color: #c4a000">alt=</span><span style="color: #4e9a06">""</span><span style="color: #204a87; font-weight: bold">&gt;</span> <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+        <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+        <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"float-right"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+            <span style="color: #204a87; font-weight: bold">&lt;form&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;table&gt;</span>
+                    <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
+                        <span style="color: #204a87; font-weight: bold">&lt;td</span> <span style="color: #c4a000">colspan=</span><span style="color: #4e9a06">"2"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;h2&gt;</span>Hesap Aç<span style="color: #204a87; font-weight: bold">&lt;/h2&gt;&lt;/td&gt;</span>
+                    <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
+                    <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
+                        <span style="color: #204a87; font-weight: bold">&lt;td</span> <span style="color: #c4a000">colspan=</span><span style="color: #4e9a06">"2"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;span&gt;</span>Ücretsizdir ve her zaman ücretsiz kalacaktır.<span style="color: #204a87; font-weight: bold">&lt;/span&gt;&lt;/td&gt;</span>
+                    <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
+                    <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
+                        <span style="color: #204a87; font-weight: bold">&lt;td&gt;&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"text"</span> <span style="color: #c4a000">placeholder=</span><span style="color: #4e9a06">"Adın"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/td&gt;</span>
+                        <span style="color: #204a87; font-weight: bold">&lt;td&gt;&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"text"</span> <span style="color: #c4a000">placeholder=</span><span style="color: #4e9a06">"Soyadın"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/td&gt;</span>
+                    <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
+                    <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
+                        <span style="color: #204a87; font-weight: bold">&lt;td</span> <span style="color: #c4a000">colspan=</span><span style="color: #4e9a06">"2"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"email"</span> <span style="color: #c4a000">placeholder=</span><span style="color: #4e9a06">"Cep telefonu numarası veya e-posta"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/td&gt;</span>
+                    <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
+                    <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
+                        <span style="color: #204a87; font-weight: bold">&lt;td</span> <span style="color: #c4a000">colspan=</span><span style="color: #4e9a06">"2"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"password"</span> <span style="color: #c4a000">placeholder=</span><span style="color: #4e9a06">"Yeni şifre"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/td&gt;</span>
+                    <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
+                    <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
+                        <span style="color: #204a87; font-weight: bold">&lt;td</span> <span style="color: #c4a000">colspan=</span><span style="color: #4e9a06">"2"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;span&gt;</span>Doğum Tarihi<span style="color: #204a87; font-weight: bold">&lt;/span&gt;&lt;/td&gt;</span>
+                    <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
+                    <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
+                        <span style="color: #8f5902; font-style: italic">&lt;!--خلية حقول تاريخ الميلاد--&gt;</span>
+                        <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>
+                            <span style="color: #204a87; font-weight: bold">&lt;select&gt;</span>
+                                <span style="color: #204a87; font-weight: bold">&lt;option&gt;</span>Gün<span style="color: #204a87; font-weight: bold">&lt;/option&gt;</span>
+                                <span style="color: #204a87; font-weight: bold">&lt;option&gt;</span>1<span style="color: #204a87; font-weight: bold">&lt;/option&gt;</span>
+                                <span style="color: #204a87; font-weight: bold">&lt;option&gt;</span>2<span style="color: #204a87; font-weight: bold">&lt;/option&gt;</span>
+                            <span style="color: #204a87; font-weight: bold">&lt;/select&gt;</span>
+                            <span style="color: #204a87; font-weight: bold">&lt;select&gt;</span>
+                                <span style="color: #204a87; font-weight: bold">&lt;option&gt;</span>Ay<span style="color: #204a87; font-weight: bold">&lt;/option&gt;</span>
+                                <span style="color: #204a87; font-weight: bold">&lt;option&gt;</span>Oca<span style="color: #204a87; font-weight: bold">&lt;/option&gt;</span>
+                                <span style="color: #204a87; font-weight: bold">&lt;option&gt;</span>Mar<span style="color: #204a87; font-weight: bold">&lt;/option&gt;</span>
+                            <span style="color: #204a87; font-weight: bold">&lt;/select&gt;</span>
+                            <span style="color: #204a87; font-weight: bold">&lt;select&gt;</span>
+                                <span style="color: #204a87; font-weight: bold">&lt;option&gt;</span>Yıl<span style="color: #204a87; font-weight: bold">&lt;/option&gt;</span>
+                                <span style="color: #204a87; font-weight: bold">&lt;option&gt;</span>2018<span style="color: #204a87; font-weight: bold">&lt;/option&gt;</span>
+                                <span style="color: #204a87; font-weight: bold">&lt;option&gt;</span>2017<span style="color: #204a87; font-weight: bold">&lt;/option&gt;</span>
+                            <span style="color: #204a87; font-weight: bold">&lt;/select&gt;</span>
+                        <span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
+
+                        <span style="color: #8f5902; font-style: italic">&lt;!--خلية الرابط--&gt;</span>
+                        <span style="color: #204a87; font-weight: bold">&lt;td&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Doğum tarihimi vermem neden gerekiyor?<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/td&gt;</span>
+                    <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
+                    <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
+                        <span style="color: #204a87; font-weight: bold">&lt;td</span> <span style="color: #c4a000">colspan=</span><span style="color: #4e9a06">"2"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+                            <span style="color: #204a87; font-weight: bold">&lt;div&gt;</span>
+                                <span style="color: #204a87; font-weight: bold">&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"radio"</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"Kadın"</span> <span style="color: #c4a000">name=</span><span style="color: #4e9a06">"gender"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+                                <span style="color: #204a87; font-weight: bold">&lt;label</span> <span style="color: #c4a000">for=</span><span style="color: #4e9a06">"Kadın"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Kadın<span style="color: #204a87; font-weight: bold">&lt;/label&gt;</span>
+                            <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+                            <span style="color: #204a87; font-weight: bold">&lt;div&gt;</span>
+                                <span style="color: #204a87; font-weight: bold">&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"radio"</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"Erkek"</span> <span style="color: #c4a000">name=</span><span style="color: #4e9a06">"gender"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+                                <span style="color: #204a87; font-weight: bold">&lt;label</span> <span style="color: #c4a000">for=</span><span style="color: #4e9a06">"Erkek"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Erkek<span style="color: #204a87; font-weight: bold">&lt;/label&gt;</span>
+                            <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+                        <span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
+                    <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
+                    <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
+                        <span style="color: #204a87; font-weight: bold">&lt;td</span> <span style="color: #c4a000">colspan=</span><span style="color: #4e9a06">"2"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;p&gt;</span> Hesap Aç düğmesine tıklayarak,<span style="color: #204a87; font-weight: bold">&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span> Çerez Kullanımı<span style="color: #204a87; font-weight: bold">&lt;/a&gt;</span> dahil Veri <span style="color: #204a87; font-weight: bold">&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>İlkemizi<span style="color: #204a87; font-weight: bold">&lt;/a&gt;</span> okuduğunu ve <span style="color: #204a87; font-weight: bold">&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Koşullarımızı<span style="color: #204a87; font-weight: bold">&lt;/a&gt;</span> kabul etmiş olursun. Facebook'tan SMS Bildirimleri alabilir ve bu bildirimleri istediğin zaman durdurabilirsin. <span style="color: #204a87; font-weight: bold">&lt;/p&gt;&lt;/td&gt;</span>
+                    <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
+                    <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
+                        <span style="color: #204a87; font-weight: bold">&lt;td</span> <span style="color: #c4a000">colspan=</span><span style="color: #4e9a06">"2"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"submit"</span> <span style="color: #c4a000">value=</span><span style="color: #4e9a06">"Hesap Aç"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/td&gt;</span>
+                    <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
+                    <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
+                        <span style="color: #204a87; font-weight: bold">&lt;td</span> <span style="color: #c4a000">colspan=</span><span style="color: #4e9a06">"2"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;p&gt;</span>Ünlü biri, müzik grubu veya şirket için <span style="color: #204a87; font-weight: bold">&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Sayfa oluştur<span style="color: #204a87; font-weight: bold">&lt;/a&gt;</span>.<span style="color: #204a87; font-weight: bold">&lt;/p&gt;&lt;/td&gt;</span>
+                    <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;/table&gt;</span>
+            <span style="color: #204a87; font-weight: bold">&lt;/form&gt;</span>
+        <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+    <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"footer"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+    <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+        <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"languages"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+            <span style="color: #204a87; font-weight: bold">&lt;ul&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;</span>Türkçe<span style="color: #204a87; font-weight: bold">&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>English (US)<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Ελληνικά<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Română<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Български<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Русский<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>العربية<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Tiếng Việt<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Polski<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Español<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Português (Brasil)<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"more-lang"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;i</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"plus-icon"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;</span>
+            <span style="color: #204a87; font-weight: bold">&lt;/ul&gt;</span>
+        <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+        <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"links"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+            <span style="color: #204a87; font-weight: bold">&lt;ul&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Kaydol<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Giriş Yap<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Messenger<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Facebook Lite<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Mobil<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Arkadaşlarını Bul<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Kişiler<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Sayfalar<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Yerler<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Oyunlar<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Konumlar<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Ünlüler<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Marketplace<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Gruplar<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Tarifler<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Spor<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Gör<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Moments<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Instagram<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Yerel<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Hakkımızda<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Reklam Oluştur<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Sayfa Oluştur<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Geliştiriciler<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Kariyer Olanakları<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Gizlilik<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Çerezler<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Ad Choices <span style="color: #204a87; font-weight: bold">&lt;i</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"ad-choices"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Koşullar<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #204a87; font-weight: bold">&lt;li&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Yardım<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/li&gt;</span>
+            <span style="color: #204a87; font-weight: bold">&lt;/ul&gt;</span>
+        <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+        <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"copy-rights"</span><span style="color: #204a87; font-weight: bold">&gt;</span> Facebook <span style="color: #ce5c00">&amp;copy;</span> 2018 <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+    <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/body&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/html&gt;</span>
+</pre></div>
+
+</li>
+<li dir="rtl">
+<p dir="rtl">قم بإضافة ملف style.css ليصبح بهذا الشكل:</p>
+<div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">/***removing body margin***/</span>
+
+<span style="color: #204a87; font-weight: bold">body</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">font-family</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">Arial</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+
+<span style="color: #8f5902; font-style: italic">/***general***/</span>
+
+<span style="color: #000000">.container</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">980px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">overflow</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+
+<span style="color: #8f5902; font-style: italic">/***header***/</span>
+
+<span style="color: #000000">#header</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100</span><span style="color: #ce5c00; font-weight: bold">%</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">min-width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">980px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">82px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background-color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#3b5998</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">linear</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">gradient</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">#4e69a2</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">#3b5998</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #204a87; font-weight: bold">border-bottom</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #204a87; font-weight: bold">solid</span> <span style="color: #0000cf; font-weight: bold">#133783</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.float-left</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">float</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">left</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.float-right</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">float</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">right</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">#logo</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">170px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">34px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background-image</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">url("https://static.xx.fbcdn.net/rsrc.php/v3/yi/r/b1rgWyjYfmY.png")</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background-position</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">margin-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">30px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">overflow</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">hidden</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">text-indent</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">-100px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.login-box</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">82px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">padding-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">13px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">float</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">left</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">margin-left</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">15px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000">box</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">sizing</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">box</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.login-box</span> <span style="color: #204a87; font-weight: bold">label</span><span style="color: #ce5c00; font-weight: bold">,</span>
+<span style="color: #000000">.login-box</span> <span style="color: #204a87; font-weight: bold">a</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">12px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">padding-left</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.login-box</span> <span style="color: #204a87; font-weight: bold">label</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#fff</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.login-box</span> <span style="color: #204a87; font-weight: bold">a</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#9cb4d8</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">text-decoration</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">none</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.login-box</span> <span style="color: #204a87; font-weight: bold">input</span><span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #204a87; font-weight: bold">type</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #4e9a06">"email"</span><span style="color: #ce5c00; font-weight: bold">],</span>
+<span style="color: #000000">.login-box</span> <span style="color: #204a87; font-weight: bold">input</span><span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #204a87; font-weight: bold">type</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #4e9a06">"password"</span><span style="color: #ce5c00; font-weight: bold">]</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">142px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">17px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #204a87; font-weight: bold">solid</span> <span style="color: #0000cf; font-weight: bold">#1d2a5b</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">12px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">margin-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">4px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">2px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">margin-bottom</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">2px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.login-box</span> <span style="color: #204a87; font-weight: bold">input</span><span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #204a87; font-weight: bold">type</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #4e9a06">"submit"</span><span style="color: #ce5c00; font-weight: bold">]</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">background-color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#4267b2</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #204a87; font-weight: bold">solid</span> <span style="color: #0000cf; font-weight: bold">#29487d</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#fff</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">24px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">2px</span> <span style="color: #0000cf; font-weight: bold">6px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">12px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">font-weight</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">bold</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">margin-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">22px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">radius</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">2px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">line-height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">18px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">cursor</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">pointer</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.login-box</span> <span style="color: #204a87; font-weight: bold">input</span><span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #204a87; font-weight: bold">type</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #4e9a06">"submit"</span><span style="color: #ce5c00; font-weight: bold">]</span><span style="color: #5c35cc; font-weight: bold">:hover</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">background-color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#365899</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.login-box</span> <span style="color: #204a87; font-weight: bold">a</span><span style="color: #5c35cc; font-weight: bold">:hover</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">text-decoration</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">underline</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #204a87; font-weight: bold">input</span><span style="color: #5c35cc; font-weight: bold">:focus</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">outline</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">none</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+
+<span style="color: #8f5902; font-style: italic">/**main**/</span>
+
+<span style="color: #000000">#main</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100</span><span style="color: #ce5c00; font-weight: bold">%</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">min-width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">980px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">600px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background-color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#fff</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">linear</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">gradient</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">#fff</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">#d3d8e8</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.description</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">450px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">20px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#0e385f</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">font-weight</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">bold</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">margin-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">40px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">line-height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">29px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.float-left</span> <span style="color: #204a87; font-weight: bold">img</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">537px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">195px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">400px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">td</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">4px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">50</span><span style="color: #ce5c00; font-weight: bold">%</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">input</span><span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #204a87; font-weight: bold">type</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #4e9a06">"text"</span><span style="color: #ce5c00; font-weight: bold">],</span>
+<span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">input</span><span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #204a87; font-weight: bold">type</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #4e9a06">"email"</span><span style="color: #ce5c00; font-weight: bold">],</span>
+<span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">input</span><span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #204a87; font-weight: bold">type</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #4e9a06">"password"</span><span style="color: #ce5c00; font-weight: bold">]</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100</span><span style="color: #ce5c00; font-weight: bold">%</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #204a87; font-weight: bold">solid</span> <span style="color: #0000cf; font-weight: bold">#bdc7d8</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">radius</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">5px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">8px</span> <span style="color: #0000cf; font-weight: bold">10px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">18px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000">box</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">sizing</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">box</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">select</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">13px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">30px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">5px</span> <span style="color: #0000cf; font-weight: bold">4px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">border-color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#bdc7d8</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">select</span><span style="color: #5c35cc; font-weight: bold">:nth-of-type</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">2</span><span style="color: #ce5c00; font-weight: bold">),</span>
+<span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">select</span><span style="color: #5c35cc; font-weight: bold">:nth-of-type</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">3</span><span style="color: #ce5c00; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">margin-left</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">-4px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">h2</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">36px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#333</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">17px</span> <span style="color: #204a87; font-weight: bold">auto</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">span</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#1d2129</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">19px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">p</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#777</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">11px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">316px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">line-height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">14px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">div</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">inline</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#1d2129</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">18px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">5px</span> <span style="color: #0000cf; font-weight: bold">10px</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #0000cf; font-weight: bold">3px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">input</span><span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #204a87; font-weight: bold">type</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #4e9a06">"submit"</span><span style="color: #ce5c00; font-weight: bold">]</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">linear</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">gradient</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">#67ae55</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">#578843</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #204a87; font-weight: bold">background-color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#69a74e</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000">box</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">shadow</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">inset</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #0000cf; font-weight: bold">#a4e388</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #204a87; font-weight: bold">solid</span> <span style="color: #0000cf; font-weight: bold">#3b6e22</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">radius</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">5px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#fff</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">cursor</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">pointer</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">text-shadow</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #0000cf; font-weight: bold">2px</span> <span style="color: #000000">rgba</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #0000cf; font-weight: bold">5</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #204a87; font-weight: bold">min-width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">194px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">7px</span> <span style="color: #0000cf; font-weight: bold">20px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">text-align</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">center</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">19px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">font-weight</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">bold</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">tr</span><span style="color: #5c35cc; font-weight: bold">:nth-of-type</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">3</span><span style="color: #ce5c00; font-weight: bold">)</span> <span style="color: #204a87; font-weight: bold">td</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">padding-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">15px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">tr</span><span style="color: #5c35cc; font-weight: bold">:nth-of-type</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">5</span><span style="color: #ce5c00; font-weight: bold">)</span> <span style="color: #204a87; font-weight: bold">td</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">padding-bottom</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">15px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">tr</span><span style="color: #5c35cc; font-weight: bold">:nth-of-type</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">7</span><span style="color: #ce5c00; font-weight: bold">)</span> <span style="color: #204a87; font-weight: bold">a</span><span style="color: #ce5c00; font-weight: bold">,</span>
+<span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">a</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">inline</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">11px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">max-width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">150px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#365899</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">cursor</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">pointer</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">text-decoration</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">none</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">line-height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">14px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">tr</span><span style="color: #5c35cc; font-weight: bold">:nth-of-type</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">7</span><span style="color: #ce5c00; font-weight: bold">)</span> <span style="color: #204a87; font-weight: bold">a</span><span style="color: #5c35cc; font-weight: bold">:hover</span><span style="color: #ce5c00; font-weight: bold">,</span>
+<span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">a</span><span style="color: #5c35cc; font-weight: bold">:hover</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">text-decoration</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">underline</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">tr</span><span style="color: #5c35cc; font-weight: bold">:last-of-type</span> <span style="color: #204a87; font-weight: bold">p</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">border-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #204a87; font-weight: bold">solid</span> <span style="color: #0000cf; font-weight: bold">#dddfe2</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#666</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">13px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">font-weight</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">bold</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">margin-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">10px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">padding-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">15px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">tr</span><span style="color: #5c35cc; font-weight: bold">:last-of-type</span> <span style="color: #204a87; font-weight: bold">p</span> <span style="color: #204a87; font-weight: bold">a</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">13px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">font-weight</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">bold</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+
+<span style="color: #8f5902; font-style: italic">/*footer*/</span>
+
+<span style="color: #000000">#footer</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100</span><span style="color: #ce5c00; font-weight: bold">%</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#fff</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">30px</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #204a87; font-weight: bold">ul</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">list-style-type</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">none</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">#footer</span> <span style="color: #204a87; font-weight: bold">li</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">inline</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">12px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#737373</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">vertical-align</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">middle</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">padding-right</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">8px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">#footer</span> <span style="color: #204a87; font-weight: bold">li</span> <span style="color: #204a87; font-weight: bold">a</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">cursor</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">pointer</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#365899</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">text-decoration</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">none</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">#footer</span> <span style="color: #204a87; font-weight: bold">li</span> <span style="color: #204a87; font-weight: bold">a</span><span style="color: #5c35cc; font-weight: bold">:hover</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">text-decoration</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">underline</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.more-lang</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">4px</span> <span style="color: #0000cf; font-weight: bold">9px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background-color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#f6f7f9</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #204a87; font-weight: bold">solid</span> <span style="color: #0000cf; font-weight: bold">#ced0d4</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#4b4f56</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">radius</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">2px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000">transition</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">background-color</span> <span style="color: #0000cf; font-weight: bold">0.2s</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.more-lang</span><span style="color: #5c35cc; font-weight: bold">:hover</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">background-color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#ececec</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.plus-icon</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">url("https://static.xx.fbcdn.net/rsrc.php/v3/yg/r/X05JQ1RQ6cR.png")</span> <span style="color: #204a87; font-weight: bold">no-repeat</span> <span style="color: #0000cf; font-weight: bold">-39px</span> <span style="color: #0000cf; font-weight: bold">-202px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">10px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">10px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.languages</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #5c35cc; font-weight: bold">:after</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">content</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">""</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100</span><span style="color: #ce5c00; font-weight: bold">%</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">border-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #204a87; font-weight: bold">solid</span> <span style="color: #0000cf; font-weight: bold">#dddfe2</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">10px</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #0000cf; font-weight: bold">8px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">#footer</span> <span style="color: #000000">.links</span> <span style="color: #204a87; font-weight: bold">li</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">padding-right</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">16px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">margin-bottom</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">2px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">position</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">relative</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.ad-choices</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">inline</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">url("https://static.xx.fbcdn.net/rsrc.php/v3/yi/r/b1rgWyjYfmY.png")</span> <span style="color: #204a87; font-weight: bold">no-repeat</span> <span style="color: #0000cf; font-weight: bold">-19px</span> <span style="color: #0000cf; font-weight: bold">-81px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">12px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">12px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">position</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">absolute</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">right</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">2px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.links</span> <span style="color: #204a87; font-weight: bold">li</span><span style="color: #5c35cc; font-weight: bold">:nth-child</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">28</span><span style="color: #ce5c00; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">margin-right</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">16px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.copy-rights</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">margin-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">20px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">11px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#737373</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">#footer</span> <span style="color: #204a87; font-weight: bold">label</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">transparent</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">text-shadow</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #0000cf; font-weight: bold">12px</span> <span style="color: #0000cf; font-weight: bold">#8a8a8a</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">cursor</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">pointer</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">#footer</span> <span style="color: #204a87; font-weight: bold">input</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">none</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">#footer</span> <span style="color: #204a87; font-weight: bold">input</span><span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #204a87; font-weight: bold">type</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #4e9a06">"checkbox"</span><span style="color: #ce5c00; font-weight: bold">]</span><span style="color: #5c35cc; font-weight: bold">:checked</span><span style="color: #ce5c00; font-weight: bold">~</span><span style="color: #204a87; font-weight: bold">label</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#999</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">text-shadow</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">none</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+</li>
+<li dir="rtl">
+<p dir="rtl">قم بعمل git add . لإضافة الملفات إلى قائمة الإنتظار.</p>
+</li>
+<li dir="rtl">
+<p dir="rtl">ثم git commit لعمل حفظ للتعديلات.</p>
+</li>
+<li dir="rtl">
+<p dir="rtl">لا تنسى عمل git push لإرسال التعديلات إلى GitHub.</p>
+</li>
+</ul>
+</li>
+<hr><li dir="rtl">
+<h3 dir="rtl">كيف سيكون شكل النتيجة النهائية ؟</h3>
+<p dir="rtl">هذا شكل المستودع repository النهائي:<br>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/2/5.png" alt="image" class="image"></a></div><p></p>
+<p dir="rtl">لاحظ أننا قمنا بفصل ملف html عن ملف css.</p>
+<p dir="rtl">هذا رابط المستودع:</p>
+<p dir="ltr"><a href="https://github.com/0xRumple/git-workshop" rel="nofollow noopener" dir="ltr">https://github.com/0xRumple/git-workshop</a></p>
+</li><hr>
+
+</ul>
+
+
+<ul dir="rtl">
+
+</ul></div>
+    </div>
+    <div class="navigate">
+      <a href="#" class="disabled">السابق</a>
+      <a href="#">التالي</a>
+    </div>
+    <footer>
+      <div class="copyright">
+      حقوق النشر 2018. جميع الحقوق محفوظة من قبل XXX
+      </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+  </body>
+</html>

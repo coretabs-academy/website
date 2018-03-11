@@ -40,11 +40,11 @@
 
         <h1>تكويد الجزء الأيمن حيث منطقة التسجيل</h1>
         <hr>
-<details dir="rtl" open="open">
+<details dir="rtl">
 <summary dir="rtl">
 قبل بدأية هذا الدرس يجب أن يكون لديك التالي</summary>
 <p dir="rtl">1- ملف index.html</p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!doctype html&gt;</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!doctype html&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;html&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;head&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">charset=</span><span style="color: #4e9a06">"utf-8"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
@@ -114,7 +114,7 @@
 </pre></div>
 
 <p dir="rtl">2- ملف style.css</p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">/***removing body margin***/</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">/***removing body margin***/</span>
 <span style="color: #204a87; font-weight: bold">body</span><span style="color: #000000; font-weight: bold">{</span>
  <span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #204a87; font-weight: bold">min-height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1500px</span><span style="color: #000000; font-weight: bold">;</span>
@@ -247,12 +247,12 @@
 <p dir="rtl">في الدرس السابق إنتهيناء من تكويد الجزء الأيسر لمنطقة الـ main في هذا الدرس سنقوم بتكويد الجزء الأيمن حيث منطقة التسجيل وحتى نتدرب على عنصر جديد فسنستخدم هذه المرة الجدول (table)  لتقسيم هذه المنطقة.</p>
 <hr>
 <h4 dir="rtl">مالذي يجب عليك أن تعرفة عن عنصر table (الجدول)  قبل البدء بهذا الدرس؟</h4>
-<p dir="rtl">قمت بشرح النقاط المهمة التي تحتاج لفهمها قبل البدء بالعمل على الجداول في هذا الدرس <a href="https://macdiscussions.udacity.com/t/html-table/103696" dir="rtl"><strong dir="rtl">إضغط هنا</strong><span class="badge badge-notification clicks" title="4 clicks" dir="ltr">4</span></a></p>
+<p dir="rtl">قمت بشرح النقاط المهمة التي تحتاج لفهمها قبل البدء بالعمل على الجداول في هذا الدرس <a href="../../../html/html_css/10.html" dir="rtl"><strong dir="rtl">إضغط هنا</strong></a></p>
 <hr>
 <p dir="rtl">سأقوم بإنشاء جدول بالتقسيم التالي:<br>
-</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/5/2/52d688fbc74d05260141e905b7ef3682120b89a5.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/52d688fbc74d05260141e905b7ef3682120b89a5" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/5/2/52d688fbc74d05260141e905b7ef3682120b89a5_1_600x500.jpg" alt="image" class="image"></a></div><p></p>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/13/1.png" alt="image" class="image"></a></div><p></p>
 <p dir="rtl">ما يعني بأننا سنحتاج لعمل جدول يتكون من 11 صف بدأخل القسم float-right بداخل المنطقة main كالتالي:</p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"float-right"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"float-right"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
 
     <span style="color: #204a87; font-weight: bold">&lt;table&gt;</span>
 
@@ -275,12 +275,12 @@
 
 <p dir="rtl"><strong dir="rtl">الان لنعود لصورة التقسيم ونحدد عدد الخلايا بدأخل هذه الصفوف:</strong><br>
 نلاحظ أنه لدينا 9 صفوف تتكون من خلية واحدة ولدينا صفين يتكونان من خليتين كالتالي:<br>
-</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/2/0/20e80549aa922d8de2dbd570a3ab55af34eecc73.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/20e80549aa922d8de2dbd570a3ab55af34eecc73" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/2/0/20e80549aa922d8de2dbd570a3ab55af34eecc73_1_600x500.jpg" alt="image" class="image"></a></div><p></p>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/13/2.png" alt="image" class="image"></a></div><p></p>
 <p dir="rtl">بما أنه لدينا صفوف لديها خليتين فيجب علينا ان نعتمد هذا العدد من الخلايا بدأخل كل صف ولكن كما تلاحظ في تقسيمنا نحن نريد خلية واحدة فقط بدأخل 9 من هذه الصفوف لهذا سنقوم بعمل دمج للخلايا بداخل هذه الصفوف كما هو موضح بهذه الصورة:<br>
-<img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/b/3/b3e5dd06bb599aa7f7473705e457ae6b6ac2bd42.gif" alt="example" class="image"></p>
+<img src="../../../images/projects/facebook_project/13/3.gif" alt="example" class="image"></p>
 <p dir="rtl">بالتأكيد تعرف الأن أننا سنستخدم <code dir="ltr">colspan attribute</code> لعمل هذا الدمج كما قمنا بشرح ذلك في درس الجداول.</p>
 <p dir="rtl">لنقم الأن بعمل الخلايا بدأخل هذه الصفوف وتذكر بأننا سنقوم بدمج خليتين في 9 من هذه الصفوف و بينما سنضع خليتين في الصفين الأخرين كالتالي:</p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"float-right"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"float-right"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
 
 <span style="color: #204a87; font-weight: bold">&lt;table&gt;</span>
        <span style="color: #8f5902; font-style: italic">&lt;!--الصف الأول--&gt;</span>
@@ -346,7 +346,7 @@
 </pre></div>
 
 <p dir="rtl">لنبدأ بإضافة المحتويات الخاصة بكل صف حيث سأضيف في الصف الأول العنوان بإستخدام</p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
   <span style="color: #204a87; font-weight: bold">&lt;td</span> <span style="color: #c4a000">colspan=</span><span style="color: #4e9a06">"2"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
   <span style="color: #204a87; font-weight: bold">&lt;h2&gt;</span>Hesap Aç<span style="color: #204a87; font-weight: bold">&lt;/h2&gt;</span>
   <span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
@@ -356,7 +356,7 @@
 <p dir="rtl"><strong dir="rtl">قبل أن أستمر بوضع المحتويات الأخرى أريد التأكد من أنني أقوم بالعمل المطلوب لهذا سأقوم بعمل بعض التنسيقات على الجدول حتى نشاهدة</strong><br>
 1- سأقوم بإعطاء الجدول عرض بقيمة 400px<br>
 2- سأقوم بتغيير نوع الخط حتى يطابق الموقع الأصلي</p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span><span style="color: #000000; font-weight: bold">{</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span><span style="color: #000000; font-weight: bold">{</span>
   <span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">400px</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #204a87; font-weight: bold">font-family</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">Arial</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #000000; font-weight: bold">}</span>
@@ -365,17 +365,17 @@
 <p dir="rtl"><strong dir="rtl">سنقوم كذلك بإضافة بعض التنسيقات على خلايا الجدول كالتالي:</strong><br>
 1- سأقوم بإعطائها حدود بلون أسود حتى نستطيع مشاهدة الخلايا<br>
 2- سأقوم بإعطائها هوامش داخلية بقيمة 5px</p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">td</span><span style="color: #000000; font-weight: bold">{</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">td</span><span style="color: #000000; font-weight: bold">{</span>
 <span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #204a87; font-weight: bold">solid</span> <span style="color: #0000cf; font-weight: bold">#000</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">5px</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #000000; font-weight: bold">}</span>
 </pre></div>
 
 <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
-</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/7/3/73258a1b526d0b813b914526b30f673de39eba71.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/73258a1b526d0b813b914526b30f673de39eba71" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/7/3/73258a1b526d0b813b914526b30f673de39eba71_1_690x466.jpg" alt="image" class="image"></a></div><p></p>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/13/4.png" alt="image" class="image"></a></div><p></p>
 <p dir="rtl">كما هو مطلوب, <strong dir="rtl">لنكمل إضافة المحتوى:</strong></p>
 <p dir="rtl"><strong dir="rtl">الصف الثاني:</strong></p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;td</span> <span style="color: #c4a000">colspan=</span><span style="color: #4e9a06">"2"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
   <span style="color: #204a87; font-weight: bold">&lt;span&gt;</span>Ücretsizdir ve her zaman ücretsiz kalacaktır.<span style="color: #204a87; font-weight: bold">&lt;/span&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
@@ -384,7 +384,7 @@
 
 <p dir="rtl"><strong dir="rtl">الصف الثالث:</strong><br>
 كما تلاحظ الصف الثالث لدينا خليتين الأولى ستكون لحقل الإسم الأول والحقل الثاني سيكون للإسم الأخير سنضيفها <strong dir="rtl">كالتالي:</strong></p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>
    <span style="color: #204a87; font-weight: bold">&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"text"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
@@ -397,7 +397,7 @@
 
 <p dir="rtl"><strong dir="rtl">الصف الرابع:</strong><br>
 سنضيف الية حقل الإيميل كالتالي:</p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;td</span> <span style="color: #c4a000">colspan=</span><span style="color: #4e9a06">"2"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
   <span style="color: #204a87; font-weight: bold">&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"email"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
@@ -406,7 +406,7 @@
 
 <p dir="rtl"><strong dir="rtl">الصف الخامس:</strong><br>
 سنضيف إلية حقل الباسورد</p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;td</span> <span style="color: #c4a000">colspan=</span><span style="color: #4e9a06">"2"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
   <span style="color: #204a87; font-weight: bold">&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"password"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
@@ -415,7 +415,7 @@
 
 <p dir="rtl"><strong dir="rtl">الصف السادس:</strong><br>
 سنضيف الية عنوان كالتالي:</p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;td</span> <span style="color: #c4a000">colspan=</span><span style="color: #4e9a06">"2"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
   <span style="color: #204a87; font-weight: bold">&lt;span&gt;</span>Doğum Tarihi<span style="color: #204a87; font-weight: bold">&lt;/span&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
@@ -424,7 +424,7 @@
 
 <p dir="rtl"><strong dir="rtl">الصف السابع:</strong><br>
 لدينا هنا حقلين الأول لحقول تاريخ الميلاد كالتالي:</p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
 <span style="color: #8f5902; font-style: italic">&lt;!--خلية حقول تاريخ الميلاد--&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>
   <span style="color: #8f5902; font-style: italic">&lt;!--حقل إختيار اليوم--&gt;</span>
@@ -458,7 +458,7 @@
 <p dir="rtl">ملاحظة لم أقم الا بإضافة يومين وشهرين وسنتين فقط لإختصار الكود</p>
 <p dir="rtl"><strong dir="rtl">الصف الثامن:</strong><br>
 سنقوم بإضافة حقلي إختيار ذكر او أنثى وسنقوم بإعطاء زري الـ radio أسم موحد<code dir="ltr">name="gender"</code> وذلك حتى لا يتم السماح إلى بإختيار أحدهما وليس الجنسين مع بعض.</p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;td</span> <span style="color: #c4a000">colspan=</span><span style="color: #4e9a06">"2"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
 
   <span style="color: #204a87; font-weight: bold">&lt;div&gt;</span>
@@ -477,7 +477,7 @@
 
 <p dir="rtl"><strong dir="rtl">الصف التاسع:</strong><br>
 سنقوم بإضافة فقرة تحتوي على بعض الروابط</p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;td</span> <span style="color: #c4a000">colspan=</span><span style="color: #4e9a06">"2"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
   <span style="color: #204a87; font-weight: bold">&lt;p&gt;</span>
   Hesap Aç düğmesine tıklayarak,<span style="color: #204a87; font-weight: bold">&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span> Çerez Kullanımı<span style="color: #204a87; font-weight: bold">&lt;/a&gt;</span> dahil Veri <span style="color: #204a87; font-weight: bold">&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>İlkemizi<span style="color: #204a87; font-weight: bold">&lt;/a&gt;</span> okuduğunu ve <span style="color: #204a87; font-weight: bold">&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span> Koşullarımızı<span style="color: #204a87; font-weight: bold">&lt;/a&gt;</span> kabul etmiş olursun. Facebook'tan SMS Bildirimleri alabilir ve bu bildirimleri istediğin zaman durdurabilirsin.
@@ -488,7 +488,7 @@
 
 <p dir="rtl"><strong dir="rtl">الصف العاشر:</strong><br>
 سنقوم بإضافة زر إنشاء الحساب</p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;td</span> <span style="color: #c4a000">colspan=</span><span style="color: #4e9a06">"2"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
   <span style="color: #204a87; font-weight: bold">&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"submit"</span> <span style="color: #c4a000">value=</span><span style="color: #4e9a06">"Hesap Aç"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
@@ -497,7 +497,7 @@
 
 <p dir="rtl"><strong dir="rtl">الصف الحادي عشر:</strong><br>
 سنضيف فقرة تحتوي على رابط</p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;td</span> <span style="color: #c4a000">colspan=</span><span style="color: #4e9a06">"2"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
   <span style="color: #204a87; font-weight: bold">&lt;p&gt;</span>Ünlü biri, müzik grubu veya şirket için <span style="color: #204a87; font-weight: bold">&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Sayfa oluştur<span style="color: #204a87; font-weight: bold">&lt;/a&gt;</span>.<span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
@@ -505,9 +505,9 @@
 </pre></div>
 
 <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
-</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/2/4/246db08a3b4080cae63a32a5da3b1f17fd23cf43.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/246db08a3b4080cae63a32a5da3b1f17fd23cf43" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/2/4/246db08a3b4080cae63a32a5da3b1f17fd23cf43_1_690x474.jpg" alt="image" class="image"></a></div><p></p>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/13/5.png" alt="image" class="image"></a></div><p></p>
 <p dir="rtl">لنبدأ بعمل التنسيقات ولكن أولاً سأقوم بإزالة الحدود التي أعطيناها للخلايا</p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">td</span><span style="color: #000000; font-weight: bold">{</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">td</span><span style="color: #000000; font-weight: bold">{</span>
 <span style="color: #8f5902; font-style: italic">/*border:1px solid #000;*/</span>
 <span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">5px</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #000000; font-weight: bold">}</span>
@@ -517,7 +517,7 @@
 <h2 dir="rtl">البدء بالعمل على التنسيقات</h2>
 <h5 dir="rtl">تنسيق الحقول:</h5>
 <p dir="rtl">سأبدا بإعطاء كل حقول الإخال عرض بقيمة 100% كالتالي:</p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">input</span><span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #204a87; font-weight: bold">type</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #204a87; font-weight: bold">text</span><span style="color: #ce5c00; font-weight: bold">],</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">input</span><span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #204a87; font-weight: bold">type</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #204a87; font-weight: bold">text</span><span style="color: #ce5c00; font-weight: bold">],</span>
 <span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">input</span><span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #204a87; font-weight: bold">type</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #204a87; font-weight: bold">email</span><span style="color: #ce5c00; font-weight: bold">],</span>
 <span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">input</span><span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #204a87; font-weight: bold">type</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #204a87; font-weight: bold">password</span><span style="color: #ce5c00; font-weight: bold">]</span><span style="color: #000000; font-weight: bold">{</span>
 <span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100</span><span style="color: #ce5c00; font-weight: bold">%</span><span style="color: #000000; font-weight: bold">;</span>
@@ -525,9 +525,9 @@
 </pre></div>
 
 <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
-</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/1/e/1ec3fa6a49f194554702dc6a8b2607886794c762.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/1ec3fa6a49f194554702dc6a8b2607886794c762" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/1/e/1ec3fa6a49f194554702dc6a8b2607886794c762_1_690x456.jpg" alt="image" class="image"></a></div><p></p>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/13/6.png" alt="image" class="image"></a></div><p></p>
 <p dir="rtl">حصلنا على المطلوب بجعل الحقول تتمدد بعرض 100% من حجم الخلية ولكن ظهرت لنا مشكلة حيث أن حقل الإسم الأول ظهر أصغر من حقل الإسم الأخير بينما نحن نريدهم أن يكونوا بنفس العرض لهذا حتى نحل هذا المشكلة سنقوم بإعطاء الخلية الواحدة عرض بمقدار 50% وذلك لانه لدينا خليتين في كل صف:</p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">td</span><span style="color: #000000; font-weight: bold">{</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">td</span><span style="color: #000000; font-weight: bold">{</span>
 <span style="color: #8f5902; font-style: italic">/*border:1px solid #000;*/</span>
 <span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">4px</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*قمت كذلك بالتعديل على الهوامش*/</span>
 <span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">50</span><span style="color: #ce5c00; font-weight: bold">%</span><span style="color: #000000; font-weight: bold">;</span>
@@ -535,14 +535,14 @@
 </pre></div>
 
 <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
-</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/2/6/268fc1ee7161ada09eb8ac34d81b2be411e49906.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/268fc1ee7161ada09eb8ac34d81b2be411e49906" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/2/6/268fc1ee7161ada09eb8ac34d81b2be411e49906_1_690x453.jpg" alt="image" class="image"></a></div><p></p>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/13/7.png" alt="image" class="image"></a></div><p></p>
 <p dir="rtl">لنكمل العمل على تنسيق الحقول:<br>
 1- سأقوم بإضافة حدود للحقول بلون محدد<br>
 2- سأجعل زوايا الحقول دائرية بقيمة 5px<br>
 3- سأقوم بإعطاء الحقول هوامش داخلية<br>
 4- سنجعل حجم الخط 18px<br>
 5- سأقوم بجعل العنصر يحتسب الهوامش من حجمة الأصلي دون أي زيادة أخرى</p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">input</span><span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #204a87; font-weight: bold">type</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #204a87; font-weight: bold">text</span><span style="color: #ce5c00; font-weight: bold">],</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">input</span><span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #204a87; font-weight: bold">type</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #204a87; font-weight: bold">text</span><span style="color: #ce5c00; font-weight: bold">],</span>
 <span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">input</span><span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #204a87; font-weight: bold">type</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #204a87; font-weight: bold">email</span><span style="color: #ce5c00; font-weight: bold">],</span>
 <span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">input</span><span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #204a87; font-weight: bold">type</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #204a87; font-weight: bold">password</span><span style="color: #ce5c00; font-weight: bold">]</span><span style="color: #000000; font-weight: bold">{</span>
 <span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100</span><span style="color: #ce5c00; font-weight: bold">%</span><span style="color: #000000; font-weight: bold">;</span>
@@ -555,10 +555,10 @@
 </pre></div>
 
 <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
-</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/1/1/11e01a00a8b0b9945b35c3ce80e9a8ae414b8390.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/11e01a00a8b0b9945b35c3ce80e9a8ae414b8390" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/1/1/11e01a00a8b0b9945b35c3ce80e9a8ae414b8390_1_690x453.jpg" alt="image" class="image"></a></div><p></p>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/13/8.png" alt="image" class="image"></a></div><p></p>
 <p dir="rtl">رائع كما هو مطلوب ولكننا نسينا أن نقوم بإضافة <code dir="ltr">placeholder Attribute</code> لحقول الإدخال والذي سيقوم بوضع وصف للزائر عن المطلوب كتابته في هذا الحقل وبمجرد الضغط على الحقل يختفي هذا الوصف.</p>
 <p dir="rtl"><strong dir="rtl">إذا لنعود لإضافة هذه الصفة للعناصر - سأقوم بشرح إضافتها لإحد عناصر حقول الإدخال وأنت اكمل الباقي كالتالي:</strong></p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>
   <span style="color: #204a87; font-weight: bold">&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"text"</span> <span style="color: #c4a000">placeholder=</span><span style="color: #4e9a06">"Adın"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
@@ -569,13 +569,13 @@
 </pre></div>
 
 <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
-</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/f/c/fc5e65ea272f0506d8ead1484dce3476ed03b958.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/fc5e65ea272f0506d8ead1484dce3476ed03b958" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/f/c/fc5e65ea272f0506d8ead1484dce3476ed03b958_1_690x461.jpg" alt="image" class="image"></a></div><p></p>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/13/9.png" alt="image" class="image"></a></div><p></p>
 <h4 dir="rtl">لنكمل العمل على التنسيقات الخاصة بحقول إختيار تاريخ الميلاد:</h4>
 <p dir="rtl">1- سنعطي الخط حجم 13px<br>
 2- إرتفاع بقيمة 30px<br>
 3- هوامش داخلية بقيمة 5px<br>
 4- سأقوم بتغيير لون الحدود</p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">select</span><span style="color: #000000; font-weight: bold">{</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">select</span><span style="color: #000000; font-weight: bold">{</span>
   <span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">13px</span><span style="color: #000000; font-weight: bold">;</span>
   <span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">30px</span><span style="color: #000000; font-weight: bold">;</span>
   <span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">5px</span> <span style="color: #0000cf; font-weight: bold">4px</span><span style="color: #000000; font-weight: bold">;</span>
@@ -584,9 +584,9 @@
 </pre></div>
 
 <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
-</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/7/a/7a1f71aa60e72da036fceeba408a3afdf0c289bc.png" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/7a1f71aa60e72da036fceeba408a3afdf0c289bc" title="image.png" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/7/a/7a1f71aa60e72da036fceeba408a3afdf0c289bc_1_690x454.png" alt="image" class="image"></a></div><p></p>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/13/10.png" alt="image" class="image"></a></div><p></p>
 <p dir="rtl">هل لاحظت المسافة التي بين هذه القوائم, نريد أن نقوم بإزالتها حتى تطابق الموقع الأصلي وسنقوم بذلك من خلال تطبيق هامش خارجي من اليسار بقيمة سالبة لكل من العنصر الثاني والثالث كالتالي:</p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">select</span><span style="color: #5c35cc; font-weight: bold">:nth-of-type</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">2</span><span style="color: #ce5c00; font-weight: bold">),</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">select</span><span style="color: #5c35cc; font-weight: bold">:nth-of-type</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">2</span><span style="color: #ce5c00; font-weight: bold">),</span>
 <span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">select</span><span style="color: #5c35cc; font-weight: bold">:nth-of-type</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">3</span><span style="color: #ce5c00; font-weight: bold">)</span><span style="color: #000000; font-weight: bold">{</span>
 <span style="color: #204a87; font-weight: bold">margin-left</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">-4px</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #000000; font-weight: bold">}</span>
@@ -594,10 +594,10 @@
 
 
 <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
-</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/a/2/a27ae0822f710e4a96570c50b4a268852cace553.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/a27ae0822f710e4a96570c50b4a268852cace553" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/a/2/a27ae0822f710e4a96570c50b4a268852cace553_1_690x461.jpg" alt="image" class="image"></a></div><p></p>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/13/11.png" alt="image" class="image"></a></div><p></p>
 <p dir="rtl">لنقوم بالعمل على عدد من التنسيقات حتى لا نطيل ثم نطلع على النتيجة لانني أعتقد أنكم في هذه المرحلة أصبحتم قادرين على فهم التنسيقات التي نقوم بها كوننا مررنا بأغلبها خلال الدروس السابقة.</p>
 <p dir="rtl"><strong dir="rtl">تنسيق العنوان h2:</strong></p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">h2</span><span style="color: #000000; font-weight: bold">{</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">h2</span><span style="color: #000000; font-weight: bold">{</span>
 <span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">36px</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#333</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">17px</span> <span style="color: #204a87; font-weight: bold">auto</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
@@ -605,14 +605,14 @@
 </pre></div>
 
 <p dir="rtl"><strong dir="rtl">تنسيق عناصر span:</strong></p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">span</span><span style="color: #000000; font-weight: bold">{</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">span</span><span style="color: #000000; font-weight: bold">{</span>
 <span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#1d2129</span><span style="color: #000000; font-weight: bold">;</span>
   <span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">19px</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #000000; font-weight: bold">}</span>
 </pre></div>
 
 <p dir="rtl"><strong dir="rtl">تنسيق الفقرات p:</strong></p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">p</span><span style="color: #000000; font-weight: bold">{</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">p</span><span style="color: #000000; font-weight: bold">{</span>
   <span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#777</span><span style="color: #000000; font-weight: bold">;</span>
   <span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">11px</span><span style="color: #000000; font-weight: bold">;</span>
   <span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">316px</span><span style="color: #000000; font-weight: bold">;</span>
@@ -621,10 +621,10 @@
 </pre></div>
 
 <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
-</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/4/e/4eef737b03133ac45dd1f623317e2f77da5feded.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/4eef737b03133ac45dd1f623317e2f77da5feded" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/4/e/4eef737b03133ac45dd1f623317e2f77da5feded_1_690x456.jpg" alt="image" class="image"></a></div><p></p>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/13/12.png" alt="image" class="image"></a></div><p></p>
 <p dir="rtl"><strong dir="rtl">لنقم بالعمل على ازرار ذكر/أنثى:</strong><br>
 كما تذكروا قمنا بوضع كلاً من هذه العناصر بدأخل div لهذا سنستهدف الـ div ونقوم بإعطائة خاصية float او نغير طريقة عرضة الى inline-block حتى يكون العنصران في نفس السطر. قمت كذلك بإعطائهما بعض التنسيقات كالتالي:</p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">div</span><span style="color: #000000; font-weight: bold">{</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">div</span><span style="color: #000000; font-weight: bold">{</span>
 <span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">inline</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#1d2129</span><span style="color: #000000; font-weight: bold">;</span>
   <span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">18px</span><span style="color: #000000; font-weight: bold">;</span>
@@ -633,9 +633,9 @@
 </pre></div>
 
 <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
-</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/b/9/b97b0d6e4aba4ab98137f4f20863f4847d339e37.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/b97b0d6e4aba4ab98137f4f20863f4847d339e37" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/b/9/b97b0d6e4aba4ab98137f4f20863f4847d339e37_1_690x454.jpg" alt="image" class="image"></a></div><p></p>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/13/13.png" alt="image" class="image"></a></div><p></p>
 <p dir="rtl"><strong dir="rtl">سأقوم بإضافة التنسيقات الخاصة بزر submit:</strong></p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">input</span><span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #204a87; font-weight: bold">type</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #204a87; font-weight: bold">submit</span><span style="color: #ce5c00; font-weight: bold">]</span><span style="color: #000000; font-weight: bold">{</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">input</span><span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #204a87; font-weight: bold">type</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #204a87; font-weight: bold">submit</span><span style="color: #ce5c00; font-weight: bold">]</span><span style="color: #000000; font-weight: bold">{</span>
   <span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">linear</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">gradient</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">#67ae55</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">#578843</span><span style="color: #000000; font-weight: bold">);</span>
   <span style="color: #204a87; font-weight: bold">background-color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#69a74e</span><span style="color: #000000; font-weight: bold">;</span>
   <span style="color: #000000">box</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">shadow</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">inset</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #0000cf; font-weight: bold">#a4e388</span><span style="color: #000000; font-weight: bold">;</span>
@@ -654,26 +654,26 @@
 
 <p dir="rtl">صحيح أنها تنسيقات كثيرة ولكني أعتقد بأنكم في هذه المرحلة تعرفوا عمل كل واحد منها وقد فصلناها سابقاً فلا أريد أن أطيل عليكم فإذا كان لديكم أي استفسار بخصوصها ضعوة في التعليقات</p>
 <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
-</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/7/7/77d78929818408137cba8cf57798caf8663399cc.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/77d78929818408137cba8cf57798caf8663399cc" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/7/7/77d78929818408137cba8cf57798caf8663399cc_1_690x447.jpg" alt="image" class="image"></a></div><p></p>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/13/14.png" alt="image" class="image"></a></div><p></p>
 <p dir="rtl">لنقم بعمل مقارنة بين الموقع الأصلي وبين موقعنا لتحديد التنسيقات الناقصة:<br>
-</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/a/9/a9a315396eeb67511e51672758e40dae90d0b624.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/a9a315396eeb67511e51672758e40dae90d0b624" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/a/9/a9a315396eeb67511e51672758e40dae90d0b624_1_690x383.jpg" alt="image" class="image"></a></div><p></p>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/13/15.png" alt="image" class="image"></a></div><p></p>
 <p dir="rtl">سأبدا بإضافة الهوامش بين حقلي الاسم الاول والاخير وبين النص الذي اعلاهما كالتالي:</p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">tr</span><span style="color: #5c35cc; font-weight: bold">:nth-of-type</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">3</span><span style="color: #ce5c00; font-weight: bold">)</span> <span style="color: #204a87; font-weight: bold">td</span><span style="color: #000000; font-weight: bold">{</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">tr</span><span style="color: #5c35cc; font-weight: bold">:nth-of-type</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">3</span><span style="color: #ce5c00; font-weight: bold">)</span> <span style="color: #204a87; font-weight: bold">td</span><span style="color: #000000; font-weight: bold">{</span>
 <span style="color: #204a87; font-weight: bold">padding-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">15px</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #000000; font-weight: bold">}</span>
 </pre></div>
 
 <p dir="rtl">قمت بإستهداف الصف الثالث ومن ثم إعطاء خلايا هذا الصف هوامش داخلية من أعلى بقيمة 15px</p>
 <p dir="rtl">وينفس الفكرة سأقوم بإستهداف الصف الخامس وإعطاء خلايا هذا الصف هوامش داخلية من أسفل بقيمة 15px</p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">tr</span><span style="color: #5c35cc; font-weight: bold">:nth-of-type</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">5</span><span style="color: #ce5c00; font-weight: bold">)</span> <span style="color: #204a87; font-weight: bold">td</span><span style="color: #000000; font-weight: bold">{</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">tr</span><span style="color: #5c35cc; font-weight: bold">:nth-of-type</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">5</span><span style="color: #ce5c00; font-weight: bold">)</span> <span style="color: #204a87; font-weight: bold">td</span><span style="color: #000000; font-weight: bold">{</span>
 <span style="color: #204a87; font-weight: bold">padding-bottom</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #0000cf; font-weight: bold">15px</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #000000; font-weight: bold">}</span>
 </pre></div>
 
 <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
-</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/3/4/3421c6cc6622a82436a4c5dd216a97077915e779.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/3421c6cc6622a82436a4c5dd216a97077915e779" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/3/4/3421c6cc6622a82436a4c5dd216a97077915e779_1_690x451.jpg" alt="image" class="image"></a></div><p></p>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/13/16.png" alt="image" class="image"></a></div><p></p>
 <p dir="rtl">سأقوم بإضافة التنسيقات التالية للروابط حتى تتطابق مع الموقع الأصلي:</p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">tr</span><span style="color: #5c35cc; font-weight: bold">:nth-of-type</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">7</span><span style="color: #ce5c00; font-weight: bold">)</span> <span style="color: #204a87; font-weight: bold">a</span><span style="color: #ce5c00; font-weight: bold">,</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">tr</span><span style="color: #5c35cc; font-weight: bold">:nth-of-type</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">7</span><span style="color: #ce5c00; font-weight: bold">)</span> <span style="color: #204a87; font-weight: bold">a</span><span style="color: #ce5c00; font-weight: bold">,</span>
 <span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">a</span><span style="color: #000000; font-weight: bold">{</span>
 <span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">inline</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">11px</span><span style="color: #000000; font-weight: bold">;</span>
@@ -686,17 +686,17 @@
 </pre></div>
 
 <p dir="rtl">كذلك نريد عند مرور مؤشر المأوس على الروابط أن يظهر خط تحتها</p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">tr</span><span style="color: #5c35cc; font-weight: bold">:nth-of-type</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">7</span><span style="color: #ce5c00; font-weight: bold">)</span> <span style="color: #204a87; font-weight: bold">a</span><span style="color: #5c35cc; font-weight: bold">:hover</span><span style="color: #ce5c00; font-weight: bold">,</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">tr</span><span style="color: #5c35cc; font-weight: bold">:nth-of-type</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">7</span><span style="color: #ce5c00; font-weight: bold">)</span> <span style="color: #204a87; font-weight: bold">a</span><span style="color: #5c35cc; font-weight: bold">:hover</span><span style="color: #ce5c00; font-weight: bold">,</span>
 <span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">a</span><span style="color: #5c35cc; font-weight: bold">:hover</span><span style="color: #000000; font-weight: bold">{</span>
 <span style="color: #204a87; font-weight: bold">text-decoration</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">underline</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #000000; font-weight: bold">}</span>
 </pre></div>
 
 <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
-</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/d/9/d9cace53d20b74dc7de5070c398494dd9e2808db.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/d9cace53d20b74dc7de5070c398494dd9e2808db" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/d/9/d9cace53d20b74dc7de5070c398494dd9e2808db_1_690x444.jpg" alt="image" class="image"></a></div><p></p>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/13/17.png" alt="image" class="image"></a></div><p></p>
 <hr>
 <p dir="rtl">تبقى لنا تنسيق الفقرة التي في أخر صف سأقوم بإستهدافها كالتالي:</p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">tr</span><span style="color: #5c35cc; font-weight: bold">:last-of-type</span> <span style="color: #204a87; font-weight: bold">p</span><span style="color: #000000; font-weight: bold">{</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">tr</span><span style="color: #5c35cc; font-weight: bold">:last-of-type</span> <span style="color: #204a87; font-weight: bold">p</span><span style="color: #000000; font-weight: bold">{</span>
 <span style="color: #204a87; font-weight: bold">border-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #204a87; font-weight: bold">solid</span> <span style="color: #0000cf; font-weight: bold">#dddfe2</span><span style="color: #000000; font-weight: bold">;</span>
   <span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#666</span><span style="color: #000000; font-weight: bold">;</span>
   <span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">13px</span><span style="color: #000000; font-weight: bold">;</span>
@@ -709,16 +709,16 @@
 
 <p dir="rtl">لاحظ قمت بتحديد أخر صف <code dir="ltr">tr:last-of-type</code> ومن ثم إستهدفت الفقرة p.</p>
 <p dir="rtl">لنقم كذلك بإعطاء الرابط التنسيقات المطلوبة قبل عرض النتيجة:</p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">tr</span><span style="color: #5c35cc; font-weight: bold">:last-of-type</span> <span style="color: #204a87; font-weight: bold">p</span> <span style="color: #204a87; font-weight: bold">a</span><span style="color: #000000; font-weight: bold">{</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-right</span> <span style="color: #204a87; font-weight: bold">table</span> <span style="color: #204a87; font-weight: bold">tr</span><span style="color: #5c35cc; font-weight: bold">:last-of-type</span> <span style="color: #204a87; font-weight: bold">p</span> <span style="color: #204a87; font-weight: bold">a</span><span style="color: #000000; font-weight: bold">{</span>
 <span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">13px</span><span style="color: #000000; font-weight: bold">;</span>
   <span style="color: #204a87; font-weight: bold">font-weight</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">bold</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #000000; font-weight: bold">}</span>
 </pre></div>
 
 <p dir="rtl"><strong dir="rtl">النتيجة النهائية:</strong><br>
-</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox" href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/4/4/44cca84147a5db191ba8da743933ce24eb3b6083.jpg" data-download-href="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/44cca84147a5db191ba8da743933ce24eb3b6083" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/4/4/44cca84147a5db191ba8da743933ce24eb3b6083_1_690x458.jpg" alt="image" class="image"></a></div><p></p>
+</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/13/18.png" alt="image" class="image"></a></div><p></p>
 <p dir="rtl">قبل الختام تذكر بأننا إستخدمنا form في هذا الدرس ولم نضع الوسم الخاص به, سوف نقوم بوضعة حول الجدول كالتالي:</p>
-<!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;form&gt;</span>
+<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;form&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;table&gt;</span>
      .
      .

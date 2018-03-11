@@ -46,15 +46,15 @@
    <h3 dir="rtl">الخطوة العاشرة</h3>
    <p dir="rtl">نريد أن نجعل قائمة المهام الخاصة بنا تفاعليه حيث أنه يتم شطب المهام التي تم الإنتهاء منها بالضغط عليها سأحاول القيام بعمل ذلك بأبسط طريقة وسنبدأ خطوة بخطوة فالأمر سهل</p>
    <p dir="rtl"><strong dir="rtl">1- أريد أن أقوم بإضافة class لعناصر القائمة li</strong> التي نقوم بإضافتها بإستخدام الجافاسكربت وسأعطي الكلاس إسم index, لذا لنعود للكود ونقوم بالتعديل التالي:</p>
-   <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">toDoList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span>  <span style="color: #ce5c00; font-weight: bold">+=</span> <span style="color: #4e9a06">'&lt;li class="index"&gt;'</span><span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">"&lt;/li&gt;"</span><span style="color: #000000; font-weight: bold">;</span>
+   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">toDoList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span>  <span style="color: #ce5c00; font-weight: bold">+=</span> <span style="color: #4e9a06">'&lt;li class="index"&gt;'</span><span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">"&lt;/li&gt;"</span><span style="color: #000000; font-weight: bold">;</span>
 </pre></div>
 
    <p dir="rtl">لاحظ قمت بجعل علامة التنصيص الخارجية فردية وعلامة التنصيص الداخلية مزدوجة وذلك لأنني اريد ان يتم إضافة خاصية الكلاس بالعلامة المزدوجة في كود الـ HTML.</p>
    <p dir="rtl"><strong dir="rtl">كالتالي:</strong><br></p>
-   <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/5/a/5af4ce83a141aa8b6e3e023844a822a9d4596ec8_1_690x457.png">
+   <img class="image" src="../../images/javascript/12/1.png">
    <p></p>
    <p dir="rtl"><strong dir="rtl">2- سأقوم بإضافة تنسيق</strong> للعناصر التي تحمل الكلاس <code dir="ltr">index</code> بحيث يظهر بجوارها ما يشابة الـ checkbox كالتالي:</p>
-   <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.index</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #5c35cc; font-weight: bold">:before</span> <span style="color: #000000; font-weight: bold">{</span>
+   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.index</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #5c35cc; font-weight: bold">:before</span> <span style="color: #000000; font-weight: bold">{</span>
 	<span style="color: #204a87; font-weight: bold">content</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">" "</span><span style="color: #000000; font-weight: bold">;</span>
 	<span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">inline</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
 	<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">20px</span><span style="color: #000000; font-weight: bold">;</span>
@@ -69,35 +69,35 @@
 </pre></div>
 
    <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-   <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/b/4/b49bd8c99948817f3226b30dcd27d017008c524c_1_690x480.png">
+   <img class="image" src="../../images/javascript/12/2.png">
    <p></p>
    <p dir="rtl">قمت بإضافة التنسيق بإستخدام الـ CSS pseudo-element.</p>
    <hr>
    <h3 dir="rtl">الخطوة الحادية عشر</h3>
    <p dir="rtl">الأن عندما يقوم المستخدم بالضغط على مهمة من المهام نريد أن نحصل على رقم (ترتيب) هذه المهمة بين قائمة المهام حتى نعرف اي عنصر سنقوم بالتلاعب به.</p>
    <p dir="rtl"><strong dir="rtl">بدأية لنستذكر هذه الصورة:</strong><br>
-      <img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/6/c/6c22eba324dcf3d8846f07a4f405e9b6f5fc68ea.png" class="image">
+      <img src="../../images/javascript/12/3.png" class="image">
    </p>
    <p dir="rtl">نعرف أنه في كل مرة يتم إضافة عنصر جديد يكون ترتيبة يساوي <code dir="ltr">(list.length-1)</code> فلماذا لا نقوم بتخزين الـ index الخاص بهذا العنصر عند إدراجة للقائمة بدأخل id حتى سنستطيع من خلالة معرفة أي عنصر من القائمة تم الضغط عليه فنستطيع الوصول إلية والتلاعب به.</p>
    <p dir="rtl">سأقوم بإضافة القيمة <code dir="ltr">(list.length-1)</code> الى الـ id كالتالي:<br></p>
-   <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/d/6/d6c3ec46e7d0d73aad81ce980453aa0242eafa20_1_690x138.gif">
+   <img class="image" src="../../images/javascript/12/4.gif">
    <p></p>
-   <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">toDoList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span>  <span style="color: #ce5c00; font-weight: bold">+=</span> <span style="color: #4e9a06">'&lt;li class="index" id="'</span><span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">)</span><span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">'"&gt;'</span><span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">"&lt;/li&gt;"</span><span style="color: #000000; font-weight: bold">;</span>
+   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">toDoList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span>  <span style="color: #ce5c00; font-weight: bold">+=</span> <span style="color: #4e9a06">'&lt;li class="index" id="'</span><span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">)</span><span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">'"&gt;'</span><span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">"&lt;/li&gt;"</span><span style="color: #000000; font-weight: bold">;</span>
 </pre></div>
 
    <p dir="rtl">لنقوم الأن بمشاهدة الكود الخاص بعناصر القائمة بعد إضافة عدد منها:<br></p>
-   <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/d/1/d112245bd20f638dd82902e7d015cdee8cd26a93_1_690x480.png">
+   <img class="image" src="../../images/javascript/12/5.png">
    <p></p>
    <p dir="rtl">لاحظ كيف تم إعطاء كل عنصر id برقم ترتيبة في القائمة بشكل ديناميكي.</p>
    <hr>
    <h3 dir="rtl">الخطوة الثانية عشر</h3>
    <p dir="rtl">سنقوم هذه المرة بتجربة طريقة جديدة لإدراج أكواد الـ Javascript بطريقة inline بمعنى انه سنقوم بوضع كود الجافاسكربت ضمن الـ attributes الخاصة بالعنصر, بنفس فكرة إضافة تنسيقات الـ CSS بطريقة inline كما بالمثال التالي:</p>
-   <!-- HTML generated using hilite.me --><!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;li</span> <span style="color: #c4a000">style=</span><span style="color: #4e9a06">"color:red"</span> <span style="color: #204a87; font-weight: bold">&gt;&lt;/li&gt;</span>
+   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;li</span> <span style="color: #c4a000">style=</span><span style="color: #4e9a06">"color:red"</span> <span style="color: #204a87; font-weight: bold">&gt;&lt;/li&gt;</span>
 </pre></div>
 
 
    <p dir="rtl">نستطيع إضافة الجافاسكربت بما يسمى بـ <a href="https://www.w3schools.com/js/js_events.asp" rel="nofollow noopener" dir="ltr">JavaScript event Handeler</a> كالتالي:</p>
-   <!-- HTML generated using hilite.me --><!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;li</span> <span style="color: #c4a000">onclick=</span><span style="color: #4e9a06">"alert('hi!')"</span> <span style="color: #204a87; font-weight: bold">&gt;&lt;/li&gt;</span>
+   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;li</span> <span style="color: #c4a000">onclick=</span><span style="color: #4e9a06">"alert('hi!')"</span> <span style="color: #204a87; font-weight: bold">&gt;&lt;/li&gt;</span>
 </pre></div>
 
 
@@ -106,7 +106,7 @@
    </p>
    <p dir="rtl">في حالتنا هذه سأقوم بإدراج الكود عبر الجافاسكربت نفسها ما يعني بأنه نوعاً ما مقبول بعكس ادراج اكواد الجافاسكربت بشكل مباشر بين اكواد الـ HTML بحيث انه في حالتنا يضل لدينا تحكم بعملية ادراج هذه الاكواد ستتضح لكم الصورة اذا ما قرأتم عن الموضوع.</p>
    <p dir="rtl">لنبدأ بالعمل على الـ onclick event</p>
-   <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">onclick</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #4e9a06">" "</span>
+   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">onclick</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #4e9a06">" "</span>
 </pre></div>
 
    <p dir="rtl">ما نريد القيام به عند الضغط على احد عناصر القائمة <code dir="ltr">li</code> هو أن نقوم بإرسال الـ id الخاص به لدالة (function) تقوم بإستقبال هذا الـ id وتحدد العنصر الذي تم الضغط عليه حتى نستطيع التلاعب به.</p>
@@ -120,16 +120,16 @@
    <hr>
    <p dir="rtl">سأقوم بإختيار أي إسم للدالة وليكن done قمت بإختيار هذا الإسم ليرمز بأن المهمة التي تم الضغط عليها تم الإنتهاء منها.</p>
    <p dir="rtl"><strong dir="rtl">لنقوم بوضع الـ function بداخل الـ onclick event كالتالي:</strong></p>
-   <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">onclick</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #4e9a06">" done() "</span>
+   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">onclick</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #4e9a06">" done() "</span>
 </pre></div>
 
    <p dir="rtl">سنحتاج الأن لأن نقوم بتمرير الـ id الخاص بالعنصر للدالة بإستخدام <code dir="ltr">this.id</code></p>
-   <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">onclick</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #4e9a06">" done(this.id) "</span>
+   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">onclick</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #4e9a06">" done(this.id) "</span>
 </pre></div>
 
    <p dir="rtl">ما يعنية الكود اعلاة هو انه عند الضغط على هذا العنصر قم بإرسال الـ id الخاص به للدالة done لتقوم بالتعامل معه حسب الإجراءات الموضحة بداخل هذه الدالة.</p>
    <p dir="rtl"><strong dir="rtl">لنقوم بإضافة الكود للعنصر li</strong></p>
-   <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">toDoList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span>  <span style="color: #ce5c00; font-weight: bold">+=</span> <span style="color: #4e9a06">'&lt;li class="index"  onclick="done(this.id)" id="'</span><span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">)</span><span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">'"&gt;'</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">"&lt;/li&gt;"</span><span style="color: #000000; font-weight: bold">;</span>
+   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">toDoList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span>  <span style="color: #ce5c00; font-weight: bold">+=</span> <span style="color: #4e9a06">'&lt;li class="index"  onclick="done(this.id)" id="'</span><span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">)</span><span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">'"&gt;'</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">"&lt;/li&gt;"</span><span style="color: #000000; font-weight: bold">;</span>
 </pre></div>
 
    <hr>
@@ -137,7 +137,7 @@
       <summary dir="rtl">
          الكود كاملاً حتى اللحظة
       </summary>
-      <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"> <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">input</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"input"</span><span style="color: #000000; font-weight: bold">);</span>
+      <div class="code"><pre style="margin: 0; line-height: 125%"> <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">input</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"input"</span><span style="color: #000000; font-weight: bold">);</span>
  <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">btn</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"btn"</span><span style="color: #000000; font-weight: bold">);</span>
  <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">toDoList</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"todo-list"</span><span style="color: #000000; font-weight: bold">);</span>
  <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">itemIndex</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementsByClassName</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"index"</span><span style="color: #000000; font-weight: bold">);</span>
@@ -168,16 +168,16 @@
    </details>
    <hr>
    <p dir="rtl">سنحتاج الأن بأن نقوم بتحديد عناصر الـ li والتي تحمل الكلاس بإسم index حتى نستطيع التلاعب بها بالجافاسكربت وسنقوم بذلك كالتالي:</p>
-   <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">index</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementsByClassName</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"index"</span><span style="color: #000000; font-weight: bold">);</span>
+   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">index</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementsByClassName</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"index"</span><span style="color: #000000; font-weight: bold">);</span>
 </pre></div>
 
    <p dir="rtl">الطريقة <code dir="ltr">getElementsByClassName</code> تقوم بتحديد جميع العناصر التي تحمل الكلاس index ونستطيع الوصول لأول عنصر بإسم المتغير الذي قمنا بتعريفة بالإسم index ايضاً كالتالي:</p>
-   <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">index</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">];</span>
+   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">index</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">];</span>
 </pre></div>
 
    <hr>
    <p dir="rtl">لنقوم الأن بتعريف الدالة done والتي سيتم إستدعائها بمجرد الضغط على أي عنصر من عناصر قائمة المهام وستستقبل الـ id الذي قمنا بإرسالة كالتالي:</p>
-   <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">done</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">id</span><span style="color: #000000; font-weight: bold">){</span>
+   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">done</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">id</span><span style="color: #000000; font-weight: bold">){</span>
 
 <span style="color: #8f5902; font-style: italic">// سيتم تنفيذ الأوامر التي هنا بمجرد إستدعاء هذه الدالة ولا يتم إستدعائها الإ بالضغط على احد العناصر</span>
 
@@ -185,10 +185,10 @@
 </pre></div>
 
    <p dir="rtl">عند إستدعاء هذه الدالة نريد أن نقوم بعمل تنسيق جديد للعنصر الذي تم الضغط علية بالشكل التالي:<br></p>
-   <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/e/1/e174bff0a08d120db2135999a479a5fc35a48497_1_690x480.png">
+   <img class="image" src="../../images/javascript/12/6.png">
    <p></p>
    <p dir="rtl"><strong dir="rtl">سنقوم بعمل كلاس جديد بإسم checked ونضيف عليه التنسيقات المطلوبة بالشكل التالي:</strong></p>
-   <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.checked</span> <span style="color: #000000; font-weight: bold">{</span>
+   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.checked</span> <span style="color: #000000; font-weight: bold">{</span>
 	<span style="color: #204a87; font-weight: bold">text-decoration</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">line-through</span><span style="color: #000000; font-weight: bold">;</span>
 	<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#ccc</span><span style="color: #000000; font-weight: bold">;</span>
 	<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#fefefe</span><span style="color: #000000; font-weight: bold">;</span>
@@ -206,7 +206,7 @@
 </pre></div>
 
    <p dir="rtl">الان سأقوم بإضافة هذه التنسيق للعناصر التي سيتم الضغط عليها بإستخدام الدالة done</p>
-   <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #204a87; font-weight: bold">done</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">id</span><span style="color: #ce5c00; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
+   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #204a87; font-weight: bold">done</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">id</span><span style="color: #ce5c00; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
 	<span style="color: #000000">index</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">id</span><span style="color: #000000; font-weight: bold">]</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">classList</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">toggle</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"checked"</span><span style="color: #000000; font-weight: bold">);</span>
 <span style="color: #000000; font-weight: bold">}</span>
 </pre></div>
@@ -215,12 +215,12 @@
    <p dir="rtl">1- في البدأية تكون الـ function غير فعالة لنفترض بأنها نائمة وتنتظر أن يتم إستدعائها من خلال الأمر onclick وبمجرد الضغط على أي عنصر تستيقظ <strong dir="rtl">كالتالي:</strong><br>
       .<br>
    </p>
-   <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/c/9/c9adff21dddfd03102bc949bae8da8e2027b2ff3_1_690x457.gif">
+   <img class="image" src="../../images/javascript/12/7.gif">
    <p></p>
    <p dir="rtl">2- بمجرد الضغط على أي عنصر يتم تمرير الـ id الخاص به للدالة done <strong dir="rtl">كالتالي:</strong><br>
       .<br>
    </p>
-   <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/7/2/72995af331b43c41ff67049ca58bdfacadad70e1_1_690x457.gif">
+   <img class="image" src="../../images/javascript/12/8.gif">
    <p></p>
    <p dir="rtl">هذه هي فكرة الـ functions ببساطة لنعتبر هذه مقدمة للدرس القادم.</p>
    <hr>
@@ -228,7 +228,7 @@
       ما يعني انه اذا كان الكلاس موجود فسيتم ازالته واذا لم يكن موجود فسيتم إضافتة كما في الصورة التالية:
    </p>
    <p></p>
-   <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/b/6/b61aa7bfd1eb1001eca867287a965639760e32df_1_690x357.gif">
+   <img class="image" src="../../images/javascript/12/9.gif">
    <p></p>
    <p dir="rtl">لاحظ في الصورة كيف يتم اضافة وازالة الكلاس checked من العنصر مع كل ضغطة</p>
    <hr>
@@ -237,7 +237,7 @@
          فقط اذا اردت معرفة طريقة عمل ما سبق وقمنا به دون إستخدام الـ inline events
       </summary>
       <p dir="rtl">في حال لديك فضول للإطلاع على طريقة القيام بذلك فسنقوم بعمل for loop عبرها نحدد أي عنصر تم الضغط عليه</p>
-      <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">for</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">&lt;</span> <span style="color: #000000">index</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span> <span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">++</span><span style="color: #000000; font-weight: bold">){</span>
+      <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">for</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">&lt;</span> <span style="color: #000000">index</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span> <span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">++</span><span style="color: #000000; font-weight: bold">){</span>
 
 <span style="color: #000000">index</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">i</span><span style="color: #000000; font-weight: bold">].</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"click"</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #204a87; font-weight: bold">function</span><span style="color: #000000; font-weight: bold">(){</span>
 
@@ -255,7 +255,7 @@
          الكود حتى هذه اللحظة
       </summary>
       <p dir="rtl"><strong dir="rtl">1- كود الـ HTML</strong></p>
-      <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+      <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
    <span style="color: #204a87; font-weight: bold">&lt;h2&gt;</span>To Do List:<span style="color: #204a87; font-weight: bold">&lt;/h2&gt;</span>
    <span style="color: #204a87; font-weight: bold">&lt;div&gt;</span>
       <span style="color: #204a87; font-weight: bold">&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"text"</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"input"</span> <span style="color: #c4a000">autofocus</span> <span style="color: #204a87; font-weight: bold">&gt;</span>
@@ -269,7 +269,7 @@
 </pre></div>
 
       <p dir="rtl"><strong dir="rtl">2- كود الـ CSS</strong></p>
-      <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #ce5c00; font-weight: bold">*</span> <span style="color: #000000; font-weight: bold">{</span>
+      <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #ce5c00; font-weight: bold">*</span> <span style="color: #000000; font-weight: bold">{</span>
 	<span style="color: #000000">box</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">sizing</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">box</span><span style="color: #000000; font-weight: bold">;</span>
 	<span style="color: #204a87; font-weight: bold">outline</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">none</span><span style="color: #000000; font-weight: bold">;</span>
 	<span style="color: #204a87; font-weight: bold">vertical-align</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">middle</span><span style="color: #000000; font-weight: bold">;</span>
@@ -370,7 +370,7 @@
 </pre></div>
 
       <p dir="rtl">3- كود الـ JavaScript</p>
-      <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">input</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"input"</span><span style="color: #000000; font-weight: bold">);</span>
+      <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">input</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"input"</span><span style="color: #000000; font-weight: bold">);</span>
 <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">btn</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"btn"</span><span style="color: #000000; font-weight: bold">);</span>
 <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">toDoList</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"todo-list"</span><span style="color: #000000; font-weight: bold">);</span>
 <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">index</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementsByClassName</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"index"</span><span style="color: #000000; font-weight: bold">);</span>
@@ -407,7 +407,7 @@
    <hr>
    <h2 dir="rtl">تخزين البيانات بإستخدام الـ LocalStorage</h2>
    <p dir="rtl">لنشاهد ما اذا كان موقع المنتدى يستخدم الـ localstorage لتخزين البيانات<br></p>
-   <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/2/8/28ebefaa648dcfc40c31c7f32336ce546cd5ac14_1_690x480.png">
+   <img class="image" src="../../images/javascript/12/10.png">
    <p></p>
    <p dir="rtl">لاحظ هناك عدد من البيانات يتم تخزينها ومانشاهدة في الصورة هو مصفوفة تم تخزين فيها عدد من الـ emojis التي تم إستخدامها من قبلي.</p>
    <hr>
@@ -421,11 +421,11 @@
    <p dir="rtl">قم بالبحث عنها وفهمها فهي شي أساسي يجب عليك أن تكون ملم عنه كمطور واجهات ويب. <a href="https://www.w3schools.com/js/js_json_intro.asp" rel="nofollow noopener" dir="rtl">هنا مصدر</a>.</p>
    <hr>
    <p dir="rtl">حتى نقوم بتخزين بيانات في الـLocalStorage يجب أن نقوم بتعريف key و value كالتالي:</p>
-   <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">localStorage</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #4e9a06">"key"</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">value</span><span style="color: #000000; font-weight: bold">;</span>
+   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">localStorage</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #4e9a06">"key"</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">value</span><span style="color: #000000; font-weight: bold">;</span>
 </pre></div>
 
    <p dir="rtl">حيث أن الـ key نستطيع القول بأنه الإسم الذي يشير للبيانات بينما الـ value هي القيمة المخزنة فيه لنقوم بتجربة <strong dir="rtl">التالي:</strong></p>
-   <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">btn</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"click"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span><span style="color: #000000; font-weight: bold">(){</span>
+   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">btn</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"click"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span><span style="color: #000000; font-weight: bold">(){</span>
 
 <span style="color: #204a87; font-weight: bold">if</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">value</span> <span style="color: #ce5c00; font-weight: bold">!=</span> <span style="color: #4e9a06">""</span><span style="color: #000000; font-weight: bold">){</span>
 
@@ -445,18 +445,18 @@
 
    <p dir="rtl">في الكود اعلاة قمت بطلب تخزين الجملة mow the lawn بداخل الـ LocalStorage تحت key بإسم task عند إضافة عنصر لقائمة المهام.</p>
    <p dir="rtl">لنقوم بفتح نافذة الـ storage ونرى اذا ما تم تخزين هذه البيانات:<br></p>
-   <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/9/2/9244400ecc4b2ee9a493100777fb8fef66d096b5_1_690x439.gif">
+   <img class="image" src="../../images/javascript/12/11.gif">
    <p></p>
    <p dir="rtl">رائع! تعمل كما هو مطلوب.</p>
    <hr>
    <h3 dir="rtl">تخزين المصفوفة في الـ localStorage</h3>
    <p dir="rtl">لنقوم الأن بتخزن المصفوفة الخاصة بنا بإستخدام الكود التالي:</p>
-   <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">localStorage</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #4e9a06">"tasks"</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">JSON</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">stringify</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">);</span>
+   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">localStorage</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #4e9a06">"tasks"</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">JSON</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">stringify</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">);</span>
 </pre></div>
 
    <p dir="rtl">قمت بالكود اعلاة بتسمية الـ key بـ tasks وقمت بإسناد المصفوفة list الية بعد تحويلها إلى string بإستخدام الدالة <code dir="ltr">JSON.stringify()</code> فكما سبق وشرحنا بأننا لا يمكننا تخزين المصفوفة مباشرة بل يجب تحويلها الى string.</p>
    <p dir="rtl">لنقوم بتجربة التطبيق اذا ماكان يقوم بتخزين عناصر المصفوفة في الـ Local Storage:<br></p>
-   <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/3/8/38354c37fb130f61bee366a23f5b5457170410fb_1_690x439.gif">
+   <img class="image" src="../../images/javascript/12/12.gif">
    <p></p>
    <p dir="rtl">رائع الأن أصبحت قائمة المهام الخاصة بنا مخزنة في الـ Local Storage.</p>
    <hr>
@@ -464,7 +464,7 @@
       <summary dir="rtl">
          لمراجعة الكود يفترض بأن يكون في المرحلة هذه كالتالي:
       </summary>
-      <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">input</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"input"</span><span style="color: #000000; font-weight: bold">);</span>
+      <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">input</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"input"</span><span style="color: #000000; font-weight: bold">);</span>
 <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">btn</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"btn"</span><span style="color: #000000; font-weight: bold">);</span>
 <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">toDoList</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"todo-list"</span><span style="color: #000000; font-weight: bold">);</span>
 <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">index</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementsByClassName</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"index"</span><span style="color: #000000; font-weight: bold">);</span>
@@ -505,7 +505,7 @@
    <hr>
    <h3 dir="rtl">إسترجاع البيانات من الـ localStorage</h3>
    <p dir="rtl">حتى نستطيع إسترجاع أي بيانات من الـ LocalStorage سنقوم بعمل ذلك بإستخدام الكود التالي:</p>
-   <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">retrievedTasks</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">localStorage</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getItem</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"list"</span><span style="color: #000000; font-weight: bold">);</span>
+   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">retrievedTasks</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">localStorage</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getItem</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"list"</span><span style="color: #000000; font-weight: bold">);</span>
 </pre></div>
 
    <p dir="rtl">في الكود اعلاة قمت بتعريف متغير حتى نخزن فية البيانات المسترجعة وإسندت الية <code dir="ltr">localStorage.getItem("tasks")</code> والتي تقوم بعملية إسترجاع البيانات المخزنة بدأخل الـ key المسمى بـ tasks.</p>
@@ -515,7 +515,7 @@
       <summary dir="rtl">
          الكود كاملاً لمراجعتة
       </summary>
-      <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">input</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"input"</span><span style="color: #000000; font-weight: bold">);</span>
+      <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">input</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"input"</span><span style="color: #000000; font-weight: bold">);</span>
 <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">btn</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"btn"</span><span style="color: #000000; font-weight: bold">);</span>
 <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">toDoList</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"todo-list"</span><span style="color: #000000; font-weight: bold">);</span>
 <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">index</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementsByClassName</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"index"</span><span style="color: #000000; font-weight: bold">);</span>
@@ -552,17 +552,17 @@
    </details>
    <hr>
    <p dir="rtl"><strong dir="rtl">التجربة:</strong><br></p>
-   <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/d/a/dab31923230f26090749eecf1f96e276783f3bbe_1_690x439.gif">
+   <img class="image" src="../../images/javascript/12/13.gif">
    <p></p>
    <p dir="rtl">تم طباعة المهام التي تم تخزينها ولكن لحظة هل يبدوا بأنه تم طباعتها كـ array ؟ الم نقل بأنه سيتم تخزينها كنص لنقوم بالتأكد من ذلك بطباعة اول عنصر مخزن بدأخل المتغير <code dir="ltr">retrievedTasks</code></p>
-   <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">retrievedTasks</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">];</span>
+   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">retrievedTasks</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">];</span>
 </pre></div>
 
    <p dir="rtl"><strong dir="rtl">التجربة:</strong><br></p>
-   <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/8/6/8611efdfd0fabc6776c2fe2e88d4404ecd77d08d_1_690x439.gif">
+   <img class="image" src="../../images/javascript/12/14.gif">
    <p></p>
    <p dir="rtl">هل تلاحظوا كيف يتم طباعة العناصر على حرف حرف ما يعني ان البيانات المخزنة في الـ Local Storage من النوع string كالتالي:</p>
-   <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">retrievedTasks</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">'["Task 1", "Task 2", "Task 3"]'</span><span style="color: #000000; font-weight: bold">;</span>
+   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">retrievedTasks</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">'["Task 1", "Task 2", "Task 3"]'</span><span style="color: #000000; font-weight: bold">;</span>
 </pre></div>
 
    <p dir="rtl">لاحظ تم كتابة النص الذي يشبة تعريف المصفوفة بين علامتي تنصيص مفردة <code dir="ltr">' '</code> ما يعني انه لم يعد مصفوفة وسيتم التعامل معه كأي نص عادي<br>
@@ -570,7 +570,7 @@
    </p>
    <hr>
    <p dir="rtl"><strong dir="rtl">اذاً ما قمنا به سابقاً هو بتحويل المصفوفة إلى نص بإستخدام الدالة <code dir="ltr">JSON.stringify()</code></strong> والأن نريد أن نقوم بعملية عكسية ونقوم بتحويل هذا النص المخزن بداخل المتغير <code dir="ltr">retrievedTasks</code> الى مصفوفة وسوف نقوم بذلك بإستخدام الدالة <code dir="ltr">JSON.parse()</code> كالتالي:</p>
-   <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">if</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"tasks"</span> <span style="color: #204a87; font-weight: bold">in</span> <span style="color: #000000">localStorage</span><span style="color: #000000; font-weight: bold">){</span>
+   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">if</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"tasks"</span> <span style="color: #204a87; font-weight: bold">in</span> <span style="color: #000000">localStorage</span><span style="color: #000000; font-weight: bold">){</span>
 
 <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">retrievedTasks</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">localStorage</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getItem</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"tasks"</span><span style="color: #000000; font-weight: bold">);</span>
 
@@ -588,7 +588,7 @@
       <summary dir="rtl">
          لمراجعة الكود حتى هذه المرحلة
       </summary>
-      <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">input</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"input"</span><span style="color: #000000; font-weight: bold">);</span>
+      <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">input</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"input"</span><span style="color: #000000; font-weight: bold">);</span>
 <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">btn</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"btn"</span><span style="color: #000000; font-weight: bold">);</span>
 <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">toDoList</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"todo-list"</span><span style="color: #000000; font-weight: bold">);</span>
 <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">index</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementsByClassName</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"index"</span><span style="color: #000000; font-weight: bold">);</span>
@@ -628,10 +628,10 @@
    <p dir="rtl">نلاحظ أنه عند قيامنا بتحديث الصفحة تختفي التعديلات التي تمت بإستخدام الجافاسكربت على الـ DOM وتختفي معها قائمة المهام كالتالي:<br>
       .<br>
    </p>
-   <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/4/e/4ef114a1a68483296439ac7bf1ef9f593691b4db_1_690x470.gif">
+   <img class="image" src="../../images/javascript/12/15.gif">
    <p></p>
    <p dir="rtl">لكن لا داعي للقلق فالبيانات التي تختفي أصبحت مخزنة بدأخل المصفوفة list من خلال الـ Local storage فما علينا القيام به هو طباعة تلك البيانات من خلال المصفوفة بإستخدام الحلقة for كالتالي:</p>
-   <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"tasks"</span> <span style="color: #204a87; font-weight: bold">in</span> <span style="color: #000000">localStorage</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
+   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"tasks"</span> <span style="color: #204a87; font-weight: bold">in</span> <span style="color: #000000">localStorage</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
 
 	<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">retrievedTasks</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">localStorage</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getItem</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"tasks"</span><span style="color: #000000; font-weight: bold">);</span>
 
@@ -649,7 +649,7 @@
    <p dir="rtl"><strong dir="rtl">ـ start from</strong><br>
       نحتاج لتعريف الحلقة من الرقم كم تبدأ العد وفي حالتنا سنحتاج أن تبدأ من الرقم 0 وذلك لأن الرقم التسلسلي لأول عنصر في المصفوفة هو 0 لذلك سأقوم بتعرف متغير بإسم <code dir="ltr">i</code> وأقوم بإسناد القيمة 0 الية كالتالي
    </p>
-   <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">for</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #0000cf; font-weight: bold">0</span>   <span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*condition*/</span>  <span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*increment*/</span> <span style="color: #000000; font-weight: bold">){</span>
+   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">for</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #0000cf; font-weight: bold">0</span>   <span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*condition*/</span>  <span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*increment*/</span> <span style="color: #000000; font-weight: bold">){</span>
 <span style="color: #8f5902; font-style: italic">// الأمر الذي سيتم تنفيذة طالما الشرط متحقق	</span>
 <span style="color: #000000; font-weight: bold">}</span>
 </pre></div>
@@ -657,7 +657,7 @@
    <p dir="rtl"><strong dir="rtl">ـ condition</strong><br>
       نحتاج لتحديد شرط حتى يتوقف العداد عن العمل كي لا ندخل في حلقة لا نهائية وفي حالتنا هذه نريد أن يتوقف العداد بعد طباعة أخر عنصر في المصفوفة لهذا سنطلب من العداد ان يستمر بالعد طالما وهو أصغر من طول المصفوفة كالتالي:
    </p>
-   <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">for</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #0000cf; font-weight: bold">0</span>   <span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">&lt;</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span> <span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*increment*/</span> <span style="color: #000000; font-weight: bold">){</span>
+   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">for</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #0000cf; font-weight: bold">0</span>   <span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">&lt;</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span> <span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*increment*/</span> <span style="color: #000000; font-weight: bold">){</span>
 <span style="color: #8f5902; font-style: italic">// الأمر الذي سيتم تنفيذة طالما الشرط متحقق	</span>
 <span style="color: #000000; font-weight: bold">}</span>
 </pre></div>
@@ -665,7 +665,7 @@
    <p dir="rtl"><strong dir="rtl">ـ increment</strong><br>
       في كل مرة نقوم بطباعة عنصر من عناصر المصفوفة نريد أن نقوم بطباعة العنصر التالي والذي سيكون الرقم التسلسلي الخاص به أكبر من الرقم التسلسلي الخاص بالعنصر السابق بـ 1 لهذا سنقوم بإضافة 1 للعداد في كل مرة كالتالي <code dir="ltr">i = i + 1</code> او نستطيع كتابه هذه العملية بشكل مختصر كالتالي <code dir="ltr">i++</code>
    </p>
-   <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">for</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #0000cf; font-weight: bold">0</span>   <span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">&lt;</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span> <span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">++</span> <span style="color: #000000; font-weight: bold">){</span>
+   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">for</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #0000cf; font-weight: bold">0</span>   <span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">&lt;</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span> <span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">++</span> <span style="color: #000000; font-weight: bold">){</span>
 
 <span style="color: #8f5902; font-style: italic">// الأمر الذي سيتم تنفيذة طالما الشرط متحقق</span>
 
@@ -673,18 +673,18 @@
 </pre></div>
 
    <p dir="rtl">الان سنقوم بنسخ نفس الكود الذي إستخدمناه لطباعة عناصر قائمة المهام عند الضغط على الزر btn وسنقوم بتغيير بسيط في الكود كالتالي:</p>
-   <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">for</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">&lt;</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span> <span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">++</span> <span style="color: #000000; font-weight: bold">){</span>
+   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">for</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">&lt;</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span> <span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">++</span> <span style="color: #000000; font-weight: bold">){</span>
     <span style="color: #000000">toDoList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span>  <span style="color: #ce5c00; font-weight: bold">+=</span> <span style="color: #4e9a06">'&lt;li class="index"  onclick="done(this.id)" id="'</span><span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">'"&gt;'</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">i</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">"&lt;/li&gt;"</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #000000; font-weight: bold">}</span>
 </pre></div>
 
    <p dir="rtl">التغيير في الكود هو أنني قمت بإستبدال <code dir="ltr">list.length-1</code> بالعداد <code dir="ltr">i</code> حيث سنحصل عبرة على الرقم التسلسلي الخاص بكل عنصر في المصفوفة كونة يبدأ بالعد من 0 الى الرقم الأصغر من list.length اي الى الرقم list.length-1</p>
    <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-   <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/3/3/3347dfffa4ff64832c87faa7ebe42202d6548e3e_1_625x500.gif">
+   <img class="image" src="../../images/javascript/12/16.gif">
    <p></p>
    <p dir="rtl">لاحظوا بعد قيامي بإضافة المهام وعمل تحديث للصفحة لا تختفي المهام وذلك لأننا نقوم بإستدعائها من خلال الـ Local Storage</p>
    <p dir="rtl">لنجرب مسح الـ key الخاص بتخزين المهام في الـ Local Storage ونقوم بتحديث الصفحة:<br></p>
-   <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/7/7/7708770b831316ea6f2d6b2410a2073d7690d6ec_1_627x500.gif">
+   <img class="image" src="../../images/javascript/12/17.gif">
    <p></p>
    <p dir="rtl">لاحظوا كيف أن المهام تم مسحها بعد أن قمنا بإزالة البيانات من الـ Local Storage وقمنا بتحديث الصفحة.</p>
    <hr>
@@ -692,7 +692,7 @@
       <summary dir="rtl">
          الكود حتى هذه المرحلة
       </summary>
-      <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">input</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"input"</span><span style="color: #000000; font-weight: bold">);</span>
+      <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">input</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"input"</span><span style="color: #000000; font-weight: bold">);</span>
 <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">btn</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"btn"</span><span style="color: #000000; font-weight: bold">);</span>
 <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">toDoList</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"todo-list"</span><span style="color: #000000; font-weight: bold">);</span>
 <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">index</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementsByClassName</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"index"</span><span style="color: #000000; font-weight: bold">);</span>
@@ -737,7 +737,7 @@
    <hr>
    <h2 dir="rtl">تحدي اليوم</h2>
    <p dir="rtl">أريد منكم إضافة زر يقوم بعمل rest للقائمة حيث أنه بالضغط على هذا الزر يستطيع المستخدم البدء بعمل قائمة مهام جديدة كما موضح بالصورة التالية:<br></p>
-   <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/c/3/c350262b485164ac410657902266e896473eacb8_1_628x500.gif">
+   <img class="image" src="../../images/javascript/12/18.gif">
    <p></p>
    <p dir="rtl">تلميح لا تقوم بفتحة الا بعد المحاولة:</p>
    <div class="spoiled" dir="rtl">

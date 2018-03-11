@@ -48,7 +48,7 @@
     <p dir="rtl">نفس الفكرة تحصل في اللغات البرمجية فهل فكرت يوماً ما <strong dir="rtl">لماذا لا يمكنك خداع الصراف الألي (ATM) وسحب كما تريد من المال؟</strong><br>
        ذلك غير ممكن لان الصراف الألي يقوم بإتخاذ قرار اعطائك مبلغ من المال بعد التأكد من شروط عديدة سنأخذ منها أحد الشروط والتي هي التأكد من أن رصيدك يحتوي على مبلغ مالي أكبر أو يساوي المبلغ الذي تريد سحبة فاذا لم يكن لديك الرصيد الكافي سيقوم برفض إكمال العملية. <strong dir="rtl">لنكتب الكود الذي سيقوم بذلك:</strong>
     </p>
-    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">accountBalance</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">100</span><span style="color: #000000; font-weight: bold">;</span>
+    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">accountBalance</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">100</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">moneyRequest</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">99</span><span style="color: #000000; font-weight: bold">;</span>
 </pre></div>
 
@@ -57,7 +57,7 @@
        <strong dir="rtl">الثاني</strong> <code dir="ltr">moneyRequest</code> يحتوي المبلغ الذي سيتم طلب سحبة من الصراف الألي
     </p>
     <p dir="rtl"><strong dir="rtl">سيقوم الصراف الألي بالتالي بعد حصولة على هذه المعطيات:</strong></p>
-    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">accountBalance</span>  <span style="color: #ce5c00; font-weight: bold">&gt;=</span>  <span style="color: #000000">moneyRequest</span> <span style="color: #000000; font-weight: bold">){</span>
+    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">accountBalance</span>  <span style="color: #ce5c00; font-weight: bold">&gt;=</span>  <span style="color: #000000">moneyRequest</span> <span style="color: #000000; font-weight: bold">){</span>
 
   <span style="color: #8f5902; font-style: italic">//يتم تنفيذ الاكواد التي هنا في حال كان الشرط متحقق   </span>
 
@@ -70,11 +70,11 @@
 </pre></div>
 
     <p dir="rtl">لاحظوا وضع الشرط بين قوسين بعد كلمة <code dir="ltr">if</code> والتي تعني <code dir="rtl">اذا</code> كالتالي:</p>
-    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">accountBalance</span>  <span style="color: #ce5c00; font-weight: bold">&gt;=</span>  <span style="color: #000000">moneyRequest</span>
+    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">accountBalance</span>  <span style="color: #ce5c00; font-weight: bold">&gt;=</span>  <span style="color: #000000">moneyRequest</span>
 </pre></div>
 
     <p dir="rtl">من الدرس الخاص بالمقارنات نعرف بأن هذه العملية سترجع لنا قيمة منطقية <code dir="ltr">true</code> وذلك لان رصيدي يحتوي على مبلغ <code dir="ltr">100</code> اكبر او يساوي المبلغ الذي طلبت سحبة <code dir="ltr">99</code> لهذا سيتم التعويض عن العملية اعلاة كالتالي:</p>
-    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">){</span>
+    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">){</span>
 
   <span style="color: #8f5902; font-style: italic">//يتم تنفيذ الاكواد التي هنا في حال كان الشرط متحقق   </span>
 
@@ -87,7 +87,7 @@
 </pre></div>
 
     <p dir="rtl">طالما وقد تم التعويض عنها بـ true فذلك يعني أن الشرط متحقق وسيتم الدخول لتنفيذ الأوامر في تلك المنطقة, لهذا سيقوم الصراف الألي بالموفقة على العملية وسيقوم بخصم المبلغ الذي طلبته من رصيدك الحالي كالتالي:</p>
-    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">){</span>
+    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">){</span>
 
  <span style="color: #000000">accountBalance</span> <span style="color: #ce5c00; font-weight: bold">=</span>  <span style="color: #000000">accountBalance</span> <span style="color: #ce5c00; font-weight: bold">-</span> <span style="color: #000000">moneyRequest</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">// خصم المبلغ من رصيدك وتخزين المبلغ الحالي في متغير الرصيد</span>
 
@@ -102,11 +102,11 @@
 </pre></div>
 
     <p dir="rtl"><strong dir="rtl">الأن لنفترض بأنك تريد سحب مبلغ 50 من رصيدك الذي تبقى فيه 1 من اخر عملية سحب قمت بها فسيتم التأكد من الشرط التالي:</strong></p>
-    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">accountBalance</span>  <span style="color: #ce5c00; font-weight: bold">&gt;=</span>  <span style="color: #000000">moneyRequest</span>
+    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">accountBalance</span>  <span style="color: #ce5c00; font-weight: bold">&gt;=</span>  <span style="color: #000000">moneyRequest</span>
 </pre></div>
 
     <p dir="rtl">نعرف ايضاً من الدرس السابق ان هذه العملية سترجع لنا قيمة false وذلك لان المبلغ الذي طلبت سحبة هو 50 بينما رصيدي يحتوي على 1 فقط لهذا فالرصيد الحالي ليس أكبر او يساوي المبلغ المطلوب فسيتم التعويض عن هذه العملية بالقيمة المنطقية <code dir="ltr">flase</code> <strong dir="rtl">كالتالي:</strong></p>
-    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">false</span><span style="color: #000000; font-weight: bold">){</span>
+    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">false</span><span style="color: #000000; font-weight: bold">){</span>
 
  <span style="color: #000000">accountBalance</span> <span style="color: #ce5c00; font-weight: bold">=</span>  <span style="color: #000000">accountBalance</span> <span style="color: #ce5c00; font-weight: bold">-</span> <span style="color: #000000">moneyRequest</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">// خصم المبلغ من رصيدك وتخزين المبلغ الحالي في متغير الرصيد</span>
 
@@ -121,7 +121,7 @@
 </pre></div>
 
     <p dir="rtl">طالما والشرط غير متحقق فلن يقوم الصراف الألي بتنفيذ الأوامر التي بدأخل الشرط <code dir="ltr">if</code> ولكن سيقوم بتنفيذ الأوامر التي بدأخل الشرط <code dir="ltr">else</code> لهذا لنقوم بإخبار العميل بأن رصيدة غير كافي <strong dir="rtl">كالتالي:</strong></p>
-    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">false</span><span style="color: #000000; font-weight: bold">){</span>
+    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">false</span><span style="color: #000000; font-weight: bold">){</span>
 
  <span style="color: #000000">accountBalance</span> <span style="color: #ce5c00; font-weight: bold">=</span>  <span style="color: #000000">accountBalance</span> <span style="color: #ce5c00; font-weight: bold">-</span> <span style="color: #000000">moneyRequest</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">// خصم المبلغ من رصيدك وتخزين المبلغ الحالي في متغير الرصيد</span>
 
@@ -153,11 +153,11 @@
     </ul>
     <p dir="rtl">نلاحظ انه لدينا <strong dir="ltr">6</strong> شروط يجب التأكد منها ما يعني أننا سنحتاج الى امر إضافي للتحقق من الشروط الاخرى, في هذه الحالة سنستخدم الحالة  <strong dir="ltr">else if</strong> سنقوم بعمل <strong dir="rtl">التالي:</strong></p>
     <p dir="rtl">سنقوم بعمل المتغير التالي grade لتخزين درجة الطالب</p>
-    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">grade</span><span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">68</span><span style="color: #000000; font-weight: bold">;</span>
+    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">grade</span><span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">68</span><span style="color: #000000; font-weight: bold">;</span>
 </pre></div>
 
     <p dir="rtl">الان سنقوم بمقارنة الدرجة بالشروط التي قمنا بتحديدها اعلاة كالتالي:</p>
-    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">grade</span> <span style="color: #ce5c00; font-weight: bold">&gt;=</span> <span style="color: #0000cf; font-weight: bold">90</span>  <span style="color: #000000; font-weight: bold">){</span>
+    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">grade</span> <span style="color: #ce5c00; font-weight: bold">&gt;=</span> <span style="color: #0000cf; font-weight: bold">90</span>  <span style="color: #000000; font-weight: bold">){</span>
 
   <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"ممتاز"</span><span style="color: #000000; font-weight: bold">);</span>
 
@@ -189,13 +189,13 @@
 </pre></div>
 
     <p dir="rtl">سيتم طباعة <strong dir="rtl">مقبول</strong> كتقدير للطالب الذي قمنا بوضع درجته في المتغير grade, شاهد الصورة التالية لتعرف كيف تم المرور على الشروط حتى تم إجاد الشرط المتحقق فتم الدخول لتنفيذ الأوامر بداخلة<br></p>
-    <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/4/b/4b625385e235b036c301a11288abc9a700d753f9_1_500x500.gif">
+    <img class="image" src="../../images/javascript/8/1.gif">
     <p></p>
     <hr>
     <h2 dir="rtl">ـ Logical AND</h2>
     <p dir="rtl">احياناً نريد التحقق من شرطين فإذا تحققا مع بعض نقوم بأمر ما واذا لم يتحققا مع بعضهما البعض نقوم بشي أخر فعلى سبيل المثال عند محاولتك تسجيل الدخول على المنتدى ماذا يطلب منك ؟</p>
     <p dir="rtl">يطلب منك كتابة إيميلك وكتابة الباسوورد وليس إحداهما وحتى يسمح لك بتسجيل الدخول يجب أن تكون هذه البيانات صحيحة ومتحقق وجودها في قاعدة البيانات</p>
-    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">email</span> <span style="color: #ce5c00; font-weight: bold">===</span> <span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #ce5c00; font-weight: bold">&amp;&amp;</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">password</span> <span style="color: #ce5c00; font-weight: bold">===</span> <span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">){</span>
+    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">email</span> <span style="color: #ce5c00; font-weight: bold">===</span> <span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #ce5c00; font-weight: bold">&amp;&amp;</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">password</span> <span style="color: #ce5c00; font-weight: bold">===</span> <span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">){</span>
 
    <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"اهلاً وسهلاً بك مرة أخرى"</span><span style="color: #000000; font-weight: bold">);</span>
 
@@ -226,7 +226,7 @@
        </li>
     </ul>
     <p dir="rtl">لاحظ أنه يكفينا ان يتحقق احد الثلاثة الشروط حتى نعرض هذه الرسالة وكذلك لا مشكلة اذا ما تحقق اكثر من شرط في نفس الوقت كان يكون نهاية الاسبوع وكذلك الساعة تعدت الخامسة مساء</p>
-    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">time</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">12</span><span style="color: #000000; font-weight: bold">;</span>
+    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">time</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">12</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #000000">weekend</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">;</span>
 
 <span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">time</span> <span style="color: #ce5c00; font-weight: bold">&lt;</span> <span style="color: #0000cf; font-weight: bold">8</span> <span style="color: #ce5c00; font-weight: bold">||</span> <span style="color: #000000">time</span> <span style="color: #ce5c00; font-weight: bold">&gt;</span> <span style="color: #0000cf; font-weight: bold">17</span> <span style="color: #ce5c00; font-weight: bold">||</span> <span style="color: #000000">weekend</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
@@ -254,7 +254,7 @@
     <p dir="rtl">أحياناً تحتاج كتابة شروط بدأخل الشروط فلا مشكلة بإمكانك ذلك.</p>
     <p dir="rtl">على سبيل المثال لنفترض أنك تريد شراء غلاف لجوال iphone x باللون الازرق اذا هو متوفر واذا لم يكن متوفر ستأخذ اللون الأحمر ولكن منطقياً لن تقوم بشراء اي من هذه الغلافات الا اذا كان لديك جوال لتضعة فيه واذا لم يكن لديك الجوال حينها يلزمك أن تشترية من وثم بإمكانك التفكير بالحصول على غلاف.</p>
     <p dir="rtl">كالتالي:</p>
-    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">iphoneX</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">;</span>
+    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">iphoneX</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">blueCaseAvailable</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">false</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">redCaseAvailable</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">;</span>
 
@@ -278,15 +278,15 @@
     <hr>
     <h2 dir="rtl">ـ Ternary Operator</h2>
     <p dir="rtl">هناك طريقة مختصرة لـ if و else تتم عبر التالي:</p>
-    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">condition</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #ce5c00; font-weight: bold">?</span> <span style="color: #000000">expression</span> <span style="color: #000000">on</span> <span style="color: #204a87; font-weight: bold">true</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">expression</span> <span style="color: #000000">on</span> <span style="color: #204a87; font-weight: bold">false</span>
+    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">condition</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #ce5c00; font-weight: bold">?</span> <span style="color: #000000">expression</span> <span style="color: #000000">on</span> <span style="color: #204a87; font-weight: bold">true</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">expression</span> <span style="color: #000000">on</span> <span style="color: #204a87; font-weight: bold">false</span>
 </pre></div>
 
     <p dir="rtl">بالعربي:<br></p>
-    <img class="image" src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/optimized/3X/e/3/e3c0aa3b2852cb2ce06471d19b3f64f73c186d71_1_690x133.png">
+    <img class="image" src="../../images/javascript/8/2.png">
     <p></p>
     <p dir="rtl">هذه الحالة نقوم بإسنادها إلى متغير.</p>
     <p dir="rtl">لنأخذ مثال ونفترض أننا نريد أن نقوم بتحديد سعر منتج بناء على نوع عضوية الزائر فاذا كان عضو vip بالموقع سيتم اسناد السعر 10 الى المتغير price واذا كان عضو عادي فسوف يكون السعر 20 كالتالي:</p>
-    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">isVip</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">;</span>
+    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">isVip</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">;</span>
 
 <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">price</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">isVip</span><span style="color: #ce5c00; font-weight: bold">?</span> <span style="color: #0000cf; font-weight: bold">10</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">20</span><span style="color: #000000; font-weight: bold">;</span>
 
@@ -294,10 +294,10 @@
 </pre></div>
 
     <p dir="rtl">ستتم عملية الإسناد بالشكل التالي:<br>
-       <img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/c/5/c53739710aeea42f129de9908610e5e01167181b.gif" alt="c1" width="440" height="200"><br>
+       <img src="../../images/javascript/8/3.gif" alt="c1" width="440" height="200"><br>
        اما الكود التالي:
     </p>
-    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">isVip</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">false</span><span style="color: #000000; font-weight: bold">;</span>
+    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">isVip</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">false</span><span style="color: #000000; font-weight: bold">;</span>
 
 <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">price</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">isVip</span><span style="color: #ce5c00; font-weight: bold">?</span> <span style="color: #0000cf; font-weight: bold">10</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">20</span><span style="color: #000000; font-weight: bold">;</span>
 
@@ -305,10 +305,10 @@
 </pre></div>
 
     <p dir="rtl">ستتم عملية الإسناد بالشكل التالي:<br>
-       <img src="https://discourse-cdn-sjc3.com/udacitymillioncoders/uploads/default/original/3X/c/8/c8f8a839fa771a4f2c3c6cba5e5797bd56d75a7d.gif" alt="c2" width="440" height="200">
+       <img src="../../images/javascript/8/4.gif" alt="c2" width="440" height="200">
     </p>
     <p dir="rtl">لاحظ كيف قمنا بإختصار عملية التحقق في سطر واحد بدلاً من كتابتها بالشكل التالي:</p>
-    <!-- HTML generated using hilite.me --><div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">isVip</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">;</span>
+    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">isVip</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">;</span>
 
 <span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">isVip</span> <span style="color: #ce5c00; font-weight: bold">===</span> <span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">){</span>
 

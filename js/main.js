@@ -1,10 +1,15 @@
 $(function(){
   $("details").removeAttr('open');
+  $("body:not(.home)").prepend('<div class="dark--bg"></div>');
   $(".humberger-icon").on('click', function() {
     $("body").addClass('move');
     $("nav").addClass('move');
   });
   $("body").on('click', '.close svg',function() {
+    $("body").removeClass('move');
+    $("nav").removeClass('move');
+  });
+  $(".dark--bg").on('click',function() {
     $("body").removeClass('move');
     $("nav").removeClass('move');
   });
@@ -19,7 +24,7 @@ $(function(){
     prev.addClass('disabled');
     next.attr('href', (currentPageNumber+1)+'.html');
   }
-  else if((currentPageNumber===14 && currentPage==="html_css") || (currentPageNumber===16 && currentPage==="javascript") || (currentPageNumber===11 && currentPage==="one_mac_project") || (currentPageNumber===15 && currentPage==="facebook_project")){
+  else if((currentPageNumber===14 && currentPage==="html_css") || (currentPageNumber===16 && currentPage==="javascript") || (currentPageNumber===3 && currentPage==="git") || (currentPageNumber===11 && currentPage==="one_mac_project") || (currentPageNumber===15 && currentPage==="facebook_project")){
     next.addClass('disabled');
     prev.removeClass('disabled');
     prev.attr('href', (currentPageNumber-1)+'.html');
