@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Cairo');
+@import url('https://fonts.googleapis.com/css?family=Cairo:300,700');
 /*=====================================
 Global Style
 =======================================*/
@@ -316,19 +316,23 @@ nav a:hover{
 Container Style
 =======================================*/
 .container{
-	/* background: yellow; */
-	width: 60%;
-	min-width: 720px;
+	width: 80%;
 	margin: auto;
 	position: relative;
 	top: 160px;
 	z-index: -1;
+	padding-right: 300px;
+	min-width: 1000px;
 }
-@media screen and (max-width:750px) {
+.container.fix{
+	padding-right: 0;
+}
+@media screen and (max-width:1050px) {
 	.container{
 		width: 95%;
 		min-width: 300px;
 		margin: auto;
+		padding-right: 0;
 	}
 }
 hr{
@@ -352,9 +356,8 @@ Button Style
 =======================================*/
 .navigate{
 	position: relative;
-	top: 220px;
 	width:500px;
-	margin: 0 auto 60px;
+	margin: 60px auto 60px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -879,19 +882,19 @@ about_us Style
 /*=====================================
 Container Links Style
 =======================================*/
-.container.links a{
+.container.links p a{
 	color: #3e2723;
 	text-decoration: none;
 	font-size: 1.1rem;
 	position: relative;
 }
-.container.links a:hover{
+.container.links p a:hover{
 	text-decoration: underline;
 }
-.container.links a:active{
+.container.links p a:active{
 	color: #4b7bec;
 }
-.container.links a::before{
+.container.links p a::before{
 	content: '';
 	background: #2bcbba;
 	width: 15px;
@@ -904,7 +907,7 @@ Container Links Style
 	-o-transition: .5s ease;
 	transition: .5s ease;
 }
-.container.links a:hover::before{
+.container.links p a:hover::before{
 	-webkit-transition: .5s ease;
 	-o-transition: .5s ease;
 	transition: .5s ease;
@@ -1043,4 +1046,38 @@ pre{
 }
 .emoji{
 	width: 30px;
+}
+aside{
+	display: inline-block;
+	position: fixed;
+	z-index: 100;
+	top: 90px;
+	height: calc(100vh - 90px);
+	right: 20px;
+	width: 25%;
+	max-width: 400px;
+	min-width: 300px;
+	font-size: 16px;
+}
+aside{
+	padding-top: 90px;
+	border-left: 1px double rgba(0,0,0,.1);
+	overflow-y: auto;
+}
+aside p{
+	    border-bottom: 1px dashed rgb(243, 243, 243);
+	padding: 5px;
+}
+aside a{
+	text-decoration: none;
+	color: #909090;
+}
+aside .active{
+	color: #2bcbba;
+	font-weight: bold;
+}
+@media screen and (max-width:1050px) {
+	aside{
+		display: none;
+	}
 }
