@@ -3,8 +3,13 @@
 /*=====================================
 Global Style
 =======================================*/
-
-html {
+*{
+	outline: none;
+}
+img{
+	margin-top: 20px;
+}
+html{
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	scroll-behavior: smooth;
@@ -104,7 +109,7 @@ Navbar Style
 	-webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.11);
 	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.11);
 	padding: 0 45px;
-	height: 90px;
+	height: 60px;
 	position: fixed;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -267,8 +272,8 @@ nav a {
 
 nav a:hover {
 	background: #1fab9c;
-	-webkit-box-shadow: 0 -10px #0c655b inset;
-	box-shadow: 0 -10px #0c655b inset;
+	-webkit-box-shadow: 0 -5px #0c655b inset;
+	box-shadow: 0 -5px #0c655b inset;
 	-webkit-transition: -webkit-box-shadow .3s ease;
 	transition: -webkit-box-shadow .3s ease;
 	-o-transition: box-shadow .3s ease;
@@ -398,14 +403,6 @@ hr {
 	max-width: 100%;
 	max-height: 100%;
 }
-
-
-/* @media screen and (max-width:300px) {
-	.image{
-		width: auto;
-	}
-} */
-
 
 /*=====================================
 Button Style
@@ -781,14 +778,13 @@ Main Style
 	border-radius: 0 5px 5px 0;
 	position: relative;
 }
-
-.beauty-box .button-link {
-	border: 1px solid #4b7bec;
+.beauty-box .button-link{
+	background: #4b7bec;
+	color: #fff;
 	display: -webkit-inline-box;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
-	width: 100px;
-	height: 30px;
+	padding: 4px 40px;
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
@@ -1028,10 +1024,9 @@ Container Links Style
 	transition: .5s ease;
 	border-radius: 3px;
 }
-
-.container.links p {
-	padding: 20px 60px 20px 0;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+.container.links p{
+	padding: 20px 30px 20px 0;
+	border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 
@@ -1097,6 +1092,9 @@ Projects Style
 	-webkit-box-sizing: content-box;
 	box-sizing: content-box;
 	border-radius: 0;
+}
+.beauty-box.projects {
+	padding-top: 90px;
 }
 
 .beauty-box.projects .box:first-of-type::after {
