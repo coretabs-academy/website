@@ -1216,8 +1216,8 @@ aside a {
 	color: #909090;
 }
 
-aside a {
-	color: red;
+aside a:not(.active):hover {
+	color: black;
 }
 
 aside .active {

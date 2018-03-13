@@ -37,7 +37,208 @@
       </div>
       <div class="container">
          <div class="cooked">
-            <h1>CSS Flexbox</h1>
+            <h1>خاصية position: relative vs absolute</h1>
+            <hr>
+            <p dir="rtl">خاصية <code dir="ltr">Position</code> واحدة من أهم الخواص في الـ <code dir="ltr">CSS</code> حيث تعطينا إمكانية تغيير موقع أي عنصر في الصفحة لكن تبدوا مربكة بعض الشي في البدأية وأتذكر أنها أخذت مني وقت حتى فهمت فكرة عملها لهذا أريد أن أقوم بشرحها حتى تتضح الفكرة لمن واجهوا نفس مشكلتي معها.</p>
+            <p dir="rtl">تركيزي سيكون على الخاصية بقيمتي <code dir="ltr">relative</code> و <code dir="ltr">absolute</code> اما البقية فهي بسيطة لهذا سنمر عليها سريعاً</p>
+            <h2 dir="rtl">لنبدأ</h2>
+            <p dir="rtl">سأقوم بعمل العناصر التالية:</p>
+            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+
+<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"bee"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"element"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl">وسأقوم بإعطائها بعض التنسيقات كالتالي:</p>
+            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.bee</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #0000cf; font-weight: bold">54px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #0000cf; font-weight: bold">59px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">url(http://alhakem.me/1mac/images/position/bee.png)</span> <span style="color: #204a87; font-weight: bold">no-repeat</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+<span style="color: #000000">.element</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">60px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">20px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">5px</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#ebc516</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/html_css/12/1.png"  alt="image" class="image"></a></div>
+            <p></p>
+            <h3 dir="rtl">القيمة static:</h3>
+            <p dir="rtl">لنقوم بإعطاء النحلة الخاصية position  بقيمة static ومن ثم نقوم بإزاحتها بقيمة 50px من أعلى و 100px من اليسار كالتالي:</p>
+            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.bee</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #0000cf; font-weight: bold">118px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">128px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">url(http://alhakem.me/1mac/images/position/bee.png)</span> <span style="color: #204a87; font-weight: bold">no-repeat</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">position</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">static</span><span style="color: #000000; font-weight: bold">;</span>
+ <span style="color: #204a87; font-weight: bold">top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">50px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">left</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/html_css/12/2.png"  alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl"><strong dir="rtl">لا يوجد أي تغيير !</strong><br>
+               لاحظ اننا أعطينا العنصر الخاصية position  بقيمة static فهذه الخاصية تعتبر القيمة الإفتراضية وتقوم بتحديد موقع العنصر في الصفحة حسب ترتيبة بين الأكواد لهذا لن تؤثر عليه خصائص تحديد الموقع من أعلى ومن اليسار.
+            </p>
+            <p dir="rtl">بإمكانك إعتبار وجوده هذه القيمة كعدمة اما ما فائدتها فسنناقشة في أخر الدرس.</p>
+            <hr>
+            <h3 dir="rtl">القيمة relative:</h3>
+            <p dir="rtl">لنقم بتغيير الخاصية من static إلى relative:</p>
+            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.bee</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #0000cf; font-weight: bold">118px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">128px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">url(http://alhakem.me/1mac/images/position/bee.png)</span> <span style="color: #204a87; font-weight: bold">no-repeat</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">position</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">relative</span><span style="color: #000000; font-weight: bold">;</span>
+ <span style="color: #204a87; font-weight: bold">top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">50px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">left</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/html_css/12/3.png" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl"><strong dir="rtl">هذه المرة تغير موقع النحلة ولكن كيف تم ذلك؟</strong><br>
+               عند إعطائنا للنحلة الخاصية position  بقيمة relative وقتها نستطيع التحكم بموقعها إعتماداً على موقعها الأصلي فعند إضافتنا لخاصية top بقيمة 50px تمت إزاحتها من أعلى بهذه القيمة وكذلك بالنسبة للإزاحة التي حصلت من اليسار ولكن نلاحظ كأن موقع النحلة السابق مازال محجوز.
+            </p>
+            <p dir="rtl"><strong dir="rtl">شاهد الصورة التالية لتفهم قصدي:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/html_css/12/4.png" alt="image" class="image"></a></div>
+            <p></p>
+            <hr>
+            <h3 dir="rtl">القيمة absolute:</h3>
+            <p dir="rtl">لنقم بتغيير خاصية relative إلى absolute</p>
+            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.bee</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #0000cf; font-weight: bold">118px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">128px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">url(http://alhakem.me/1mac/images/position/bee.png)</span> <span style="color: #204a87; font-weight: bold">no-repeat</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">position</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">absolute</span><span style="color: #000000; font-weight: bold">;</span>
+ <span style="color: #204a87; font-weight: bold">top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">50px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">left</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/html_css/12/5.png" alt="image" class="image"></a></div>
+            <br>
+            <strong dir="rtl">هذه المرة كذلك تم تغير موقع النحلة ولكن كيف تم ذلك؟</strong><br>
+            نلاحظ في هذه المرة عند إستخدامنا للقيمة absolute تم تغيير موقع العنصر وفي نفس الوقت تم إعتبارة كأنه أصبح غير موجود أي لن يتم حجز موقعة السابق بين العناصر حيث لاحظنا صعود الصندوق الأصفر لموقع النحلة السابق بعكس ما حصل مع القيمة relative والتي تعتبر العنصر لازال موجود بين بقية العناصر.
+            <p></p>
+            <hr>
+            <h3 dir="rtl">العلاقة بين absolute و relative</h3>
+            <p dir="rtl">عند قيامك بإعطاء عنصر الخاصية بقيمة absolute فما يتم هو تحديد موقع ذلك العنصر وإزاحته نسبياً لأول أب يحمل الخاصية بقيمة relative.</p>
+            <p dir="rtl"><strong dir="rtl">ما الذي يعني ذلك؟</strong><br>
+               لنقم بتعديل كود التنسيقات الخاص بنا بإزالة الخاصية position من النحلة ولنقم بإضافة تنسيقات للعنصر container كالتالي:
+            </p>
+            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.bee</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #0000cf; font-weight: bold">54px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #0000cf; font-weight: bold">59px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">url(http://alhakem.me/1mac/images/position/bee.png)</span> <span style="color: #204a87; font-weight: bold">no-repeat</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+<span style="color: #000000">.element</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">60px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">20px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">5px</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#ebc516</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+<span style="color: #000000">.container</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">500px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">200px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100px</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">5px</span> <span style="color: #204a87; font-weight: bold">solid</span> <span style="color: #0000cf; font-weight: bold">#000</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">15px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#fafafa</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/html_css/12/6.png" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">نلاحظ انه لدينا عنصر container يعتبر <strong dir="rtl">الأب</strong> للنحلة وللصندوق الأصفر.</p>
+            <p dir="rtl">لنقم الأن بإعطاء النحلة خاصية position بقيمة absolute كالتالي:</p>
+            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.bee</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #0000cf; font-weight: bold">54px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #0000cf; font-weight: bold">59px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">url(http://alhakem.me/1mac/images/position/bee.png)</span> <span style="color: #204a87; font-weight: bold">no-repeat</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">position</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">absolute</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">50px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">left</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/html_css/12/7.png" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl"><strong dir="rtl">مالذي حصل؟</strong><br>
+               الذي حصل هو أنه تم إعطاء النحلة موقع absolute وإزاحتها من اليسار واليمين نسبياً للـ body  كالتالي:<br>
+            </p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/html_css/12/8.png" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl"><strong dir="rtl">ماذا لو أردت أن اقوم بتحديد موقع النحلة كـ absolute نسبياً لعنصر الـ container حيث تظل النحلة بدأخلة وليس للـ body حيث يسبب ذلك خروج النحلة عن العنصر الذي يحويها ؟</strong></p>
+            <blockquote dir="rtl">
+               <p dir="rtl">عند قيامك بإعطاء عنصر الخاصية بقيمة absolute فما يتم هو تحديد موقع ذلك العنصر وإزاحته نسبياً لأول أب يحمل الخاصية بقيمة relative.</p>
+            </blockquote>
+            <p dir="rtl">سبق وقلنا أنه يتم تحديد موقع العنصر نسبياً لأول أب يحمل خاصية الـ position بقيمة relative فالذي حصل في المثال أعلاة هو أن العنصر قام بالنظر للأب إذا ما كان يحمل هذه الخاصية بقيمة relative وبما أنه لا يحمل هذه الخاصية تم إعتماد الـ body ليكون العنصر الذي سيتم تحديد الموقع بالنسبة إلية.</p>
+            <p dir="rtl">لنقم بإضافة الخاصية position بقيمة relative للعنصر container كالتالي :</p>
+            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.container</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">500px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">200px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100px</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">5px</span> <span style="color: #204a87; font-weight: bold">solid</span> <span style="color: #0000cf; font-weight: bold">#000</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">15px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#fafafa</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">position</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">relative</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/html_css/12/9.png" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">لاحظ الأن يتم عمل ازاحة للعنصر نسبياً لحدود الأب container وذلك لأننا قمنا بإضافة الخاصية position  بقيمة relative له.<br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/html_css/12/10.png" alt="image" class="image"></a></div>
+            <p></p>
+            <h3 dir="rtl">قمت بعمل أداة ستساعدك على تجربة هذه الخاصية وفهمها:</h3>
+            <p dir="rtl">بإستخدام الأداة التالي ستستطيع تجربة تغيير موقع الـ bug والـ container في الصفحة لعدة قيم لتفهم الفرق بين القيم المختلفة بشكل مباشر.</p>
+            <p dir="rtl">قم بتجربتها <strong dir="rtl"><a href="https://codepen.io/AlHakem/full/YayxBo/" rel="nofollow noopener" dir="rtl">من هنا</a></strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="1-2.gif" rel="nofollow noopener" dir="ltr"><img src="../../images/html_css/12/11.gif" alt="1-2" class="image"></a></div>
+            <p></p>
+            <hr>
+            <h3 dir="rtl">القيمة fixed:</h3>
+            <p dir="rtl">هذه القيمة تعمل كما تعمل الـ absolute  فيتم إعتبار العنصر كانه لا وجود له بين العناصر إلا أنها تقوم دائماً بتحديد موقع العنصر نسبياً للـ body بمعنى أنه لا يهم اذا ما كان الأب يملك الخاصية بقيمة relative ام لا فالموقع سيحدد بالنسبة لجسم الصفحة, أيضاً يتم تثبت العنصر في الصفحة <strong dir="rtl">كالتالي:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="2-2.gif" rel="nofollow noopener" dir="ltr"><img src="../../images/html_css/12/12.gif" alt="2-2" class="image"></a></div>
+            <p></p>
+            <hr>
+            <h3 dir="rtl">القيمة inherit:</h3>
+            <p dir="rtl">هذه القيمة توجد في العديد من الخصائص وهي تعني أن يتم وراثة قيمة الخاصية من الأب على سبيل المثال التالي:<br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="3-3.gif" rel="nofollow noopener" dir="ltr"><img src="../../images/html_css/12/13.gif" alt="3-3" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">1- ما قمت به أعلاة هو إعطاء الـ bug الخاصية بقيمة inherit بمعنى أنها سترث نفس القيمة التي سنعطيها للأب container.<br>
+               2- تركت الأب بقيمة static وقمت بإعطاء إزاحة من أعلى للـ bug بقيمة 50px ولكن لم تتأثر لانه ترث القيمة static من الأب<br>
+               3- قمت بتغيير قيمة الأب إلى relative فتغير موقع الـ bug بحسب الإزاحة التي قمنا بإعطائة لان موقعه أصبح بقيمة relative كما ورثها من الأب.
+            </p>
+            <hr>
+            <h1 dir="rtl">ما فائدة القيمة static اذا كان وجودها مثل عدمها</h1>
+            <p dir="rtl">نعم قد يبدوا وجودها مثل عدمه لكن لنفترض أنك قمت بإستخدام قيمة أخرى وتريد لاحقاً أن تقوم بإرجاع القيمة الإفتراضية كما قمت انا في الصورة التالية:<br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="4-4.gif" rel="nofollow noopener" dir="ltr"><img src="../../images/html_css/12/14.gif" alt="4-4" class="image"></a></div>
+            <p></p>
+            <hr>
+            <p dir="rtl">تبقى قيمتين للخاصية position بإمكانك الإطلاع عليها وقرأة المزيد من خلال المصادر التالية:</p>
+            <p dir="rtl"><a href="https://www.w3schools.com/css/css_positioning.asp" rel="nofollow noopener" dir="rtl">المصدر الأول w3schools</a><br>
+               <a href="https://css-tricks.com/almanac/properties/p/position/" rel="nofollow noopener" dir="rtl">المصدر الثاني css-tricks</a>
+            </p>
+            <p dir="rtl">الأداة التي تم الشرح بإستخدامها من <a href="https://codepen.io/AlHakem/pen/YayxBo">هنا</a> <br></p>
             <hr>
          </div>
       </div>
