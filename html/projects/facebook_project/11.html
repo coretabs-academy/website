@@ -1,65 +1,71 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>[الدرس السادس:الجزء الأول] تقسيم قسم الـ main</title>
-    <link rel="stylesheet" href="../../../css/style.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-  </head>
-  <body>
-    <div class="navbar">
-      <div class="navbar-brand">
-        <div class="">
-          1MAC Courses
-        </div>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>[الدرس السادس:الجزء الأول] تقسيم قسم الـ main</title>
+      <link rel="stylesheet" href="../../../css/style.css">
+      <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+   </head>
+   <body>
+      <div class="navbar">
+         <div class="navbar-brand">
+            <div class="">
+               1MAC Courses
+            </div>
+         </div>
+         <div class="icon-container">
+            <div class="humberger-icon">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+         </div>
+         <div class="navbar-nav">
+            <nav>
+               <div class="close">
+                  أغلق <i class="fas fa-times"></i>
+               </div>
+               <a href="../../../index.html">الرئيسية</a>
+               <a href="../../html_css/html-css.html">HTML & CSS</a>
+               <a href="../../javascript/javascript.html">JavaScript</a>
+               <a href="../../git/git.html">Git</a>
+               <a href="../../projects/projects.html">المشاريع</a>
+            </nav>
+         </div>
       </div>
-      <div class="icon-container">
-        <div class="humberger-icon">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-      <div class="navbar-nav">
-        <nav>
-          <div class="close">
-            أغلق <i class="fas fa-times"></i>
-          </div>
-          <a href="../../../index.html">الرئيسية</a>
-          <a href="../../html_css/html-css.html">HTML & CSS</a>
-          <a href="../../javascript/javascript.html">JavaScript</a>
-          <a href="../../git/git.html">Git</a>
-          <a href="../../projects/projects.html">المشاريع</a>
-        </nav>
-      </div>
-    </div>
-    <div class="container">
-      <div class="cooked">
-<h1> حل مشكلة الخلفية</h1>
-<hr>
-
-<details dir="rtl" open="">
-<summary dir="rtl">
-حل مشكلة الـ header في التمرين السابق</summary>
-<h2 dir="rtl">واجهنا في الدرس السابق مشكلة في خلفية منطقة الـ header كالتالي:</h2>
-<p></p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="bg.gif" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/11/1.gif" alt="bg" class="image"></a></div><p></p>
-<p dir="rtl"><strong dir="rtl">ما سبب هذه المشكلة؟</strong><br>
-هل تذكروا كود الـ header</p>
-<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">#header</span><span style="color: #000000; font-weight: bold">{</span>
+      <div class="container">
+         <div class="cooked">
+            <h1> حل مشكلة الخلفية</h1>
+            <hr>
+            <details dir="rtl" open="">
+               <summary dir="rtl">
+                  حل مشكلة الـ header في التمرين السابق
+               </summary>
+               <h2 dir="rtl">واجهنا في الدرس السابق مشكلة في خلفية منطقة الـ header كالتالي:</h2>
+               <p></p>
+               <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="bg.gif" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/11/1.gif" alt="bg" class="image"></a></div>
+               <p></p>
+               <p dir="rtl"><strong dir="rtl">ما سبب هذه المشكلة؟</strong><br>
+                  هل تذكروا كود الـ header
+               </p>
+               <div class="code">
+                  <pre style="margin: 0; line-height: 125%"><span style="color: #000000">#header</span><span style="color: #000000; font-weight: bold">{</span>
 <span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100</span><span style="color: #ce5c00; font-weight: bold">%</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">82px</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #204a87; font-weight: bold">background-color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#3b5998</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">linear</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">gradient</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">#4e69a2</span><span style="color: #ce5c00; font-weight: bold">,</span><span style="color: #0000cf; font-weight: bold">#3b5998</span><span style="color: #000000; font-weight: bold">);</span>
 <span style="color: #204a87; font-weight: bold">border-bottom</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #204a87; font-weight: bold">solid</span> <span style="color: #0000cf; font-weight: bold">#133783</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #000000; font-weight: bold">}</span>
-</pre></div>
-
-<p dir="rtl">كما نلاحظ أننا قمنا بإعطائة عرض (<code dir="ltr">width</code>) بقيمة <code dir="ltr">100%</code> مما يعني بأن عرضة سيكون بكامل عرض نافذة المتصفح لهذا عندما نقوم بتصغير نافذة المتصفح يتأقلم الـ header مع العرض الجديد ويقوم بإضافة التنسيقات للمنطقة المحددة بذلك العرض فقط.</p>
-<p dir="rtl"><strong dir="rtl">كيف سنقوم بحل هذه المشكلة؟</strong><br>
-بما أن عرض موقعنا الذي قمنا بتحديدة للـ container الذي يحتوي على العناصر هو 980px سنقوم بإخبار المتصفح بإن يعتبر ذلك أقل عرض يمكن لموقعنا ان يحصل علية حتى يتم تطبيق التنسيقات المطلوبة على تلك المنطقة كحد أدنى, سنستخدم خاصية جديدة لتحديد أقل عرض وهي <code dir="ltr">min-width</code> كالتالي:</p>
-<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">#header</span><span style="color: #000000; font-weight: bold">{</span>
+</pre>
+               </div>
+               <p dir="rtl">كما نلاحظ أننا قمنا بإعطائة عرض (<code dir="ltr">width</code>) بقيمة <code dir="ltr">100%</code> مما يعني بأن عرضة سيكون بكامل عرض نافذة المتصفح لهذا عندما نقوم بتصغير نافذة المتصفح يتأقلم الـ header مع العرض الجديد ويقوم بإضافة التنسيقات للمنطقة المحددة بذلك العرض فقط.</p>
+               <p dir="rtl"><strong dir="rtl">كيف سنقوم بحل هذه المشكلة؟</strong><br>
+                  بما أن عرض موقعنا الذي قمنا بتحديدة للـ container الذي يحتوي على العناصر هو 980px سنقوم بإخبار المتصفح بإن يعتبر ذلك أقل عرض يمكن لموقعنا ان يحصل علية حتى يتم تطبيق التنسيقات المطلوبة على تلك المنطقة كحد أدنى, سنستخدم خاصية جديدة لتحديد أقل عرض وهي <code dir="ltr">min-width</code> كالتالي:
+               </p>
+               <div class="code">
+                  <pre style="margin: 0; line-height: 125%"><span style="color: #000000">#header</span><span style="color: #000000; font-weight: bold">{</span>
 <span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100</span><span style="color: #ce5c00; font-weight: bold">%</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #204a87; font-weight: bold">min-width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">980px</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*أقل عرض للموقع*/</span>
 <span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">82px</span><span style="color: #000000; font-weight: bold">;</span>
@@ -67,35 +73,34 @@
 <span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">linear</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">gradient</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">#4e69a2</span><span style="color: #ce5c00; font-weight: bold">,</span><span style="color: #0000cf; font-weight: bold">#3b5998</span><span style="color: #000000; font-weight: bold">);</span>
 <span style="color: #204a87; font-weight: bold">border-bottom</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #204a87; font-weight: bold">solid</span> <span style="color: #0000cf; font-weight: bold">#133783</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #000000; font-weight: bold">}</span>
-</pre></div>
-
-<p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
-</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="min-width.gif" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/11/2.gif" alt="min-width" class="image"></a></div><p></p>
-</details>
-<hr>
-<h2 dir="rtl">تقسيم قسم الـ main</h2>
-<p dir="rtl">الصورة التالية توضح خطة العمل على هذا القسم وسنحتاج للتالي:<br>
-</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/11/3.png" alt="image" class="image"></a></div><p></p>
-<ul dir="rtl">
-<li dir="rtl">
-<p dir="rtl"><strong dir="rtl">1- قسم الـ main سيكون بعرض الشاشة كاملة 100% وسنقوم بعمل الخلفية المتدرجة له.</strong></p>
-</li>
-<li dir="rtl">
-<p dir="rtl"><strong dir="rtl">2- بداخلة قسم الـ container الذي سنستخدمة لإعطاء الموقع عرض محدد بـ 980px ومن ثم توسيطة بالصفحة.</strong></p>
-</li>
-<li dir="rtl">
-<p dir="rtl"><strong dir="rtl">3- بدأخلة قسمي الـ float-right و الـ float-left والتي ستكون الصناديق الحاوية للعناصر.</strong></p>
-</li>
-</ul>
-<hr>
-<p dir="rtl">تلاحظ ان مسميات الأقسام هي نفسها التي إستخدمناها في قسم الـ header مما يعني بأننا لن نحتاج لكتابة المزيد من الأكواد وسنحاول أن نستفيد من فكرة الـ class بأكبر قدر ممكن للتقليل من كتابة التنسيقات بشكل مكرر.</p>
-<p dir="rtl">الدرس القادم سنبدأ في العمل.</p>
-<hr>
-
-
-</div>
-    </div>
-
-    <script src="../../../js/main.js"></script>
-  </body>
+</pre>
+               </div>
+               <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+               <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="min-width.gif" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/11/2.gif" alt="min-width" class="image"></a></div>
+               <p></p>
+            </details>
+            <hr>
+            <h2 dir="rtl">تقسيم قسم الـ main</h2>
+            <p dir="rtl">الصورة التالية توضح خطة العمل على هذا القسم وسنحتاج للتالي:<br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/11/3.png" alt="image" class="image"></a></div>
+            <p></p>
+            <ul dir="rtl">
+               <li dir="rtl">
+                  <p dir="rtl"><strong dir="rtl">1- قسم الـ main سيكون بعرض الشاشة كاملة 100% وسنقوم بعمل الخلفية المتدرجة له.</strong></p>
+               </li>
+               <li dir="rtl">
+                  <p dir="rtl"><strong dir="rtl">2- بداخلة قسم الـ container الذي سنستخدمة لإعطاء الموقع عرض محدد بـ 980px ومن ثم توسيطة بالصفحة.</strong></p>
+               </li>
+               <li dir="rtl">
+                  <p dir="rtl"><strong dir="rtl">3- بدأخلة قسمي الـ float-right و الـ float-left والتي ستكون الصناديق الحاوية للعناصر.</strong></p>
+               </li>
+            </ul>
+            <hr>
+            <p dir="rtl">تلاحظ ان مسميات الأقسام هي نفسها التي إستخدمناها في قسم الـ header مما يعني بأننا لن نحتاج لكتابة المزيد من الأكواد وسنحاول أن نستفيد من فكرة الـ class بأكبر قدر ممكن للتقليل من كتابة التنسيقات بشكل مكرر.</p>
+            <p dir="rtl">الدرس القادم سنبدأ في العمل.</p>
+            <hr>
+         </div>
+      </div>
+      <script src="../../../js/main.js"></script>
+   </body>
 </html>

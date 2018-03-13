@@ -1,51 +1,51 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>[الدرس السابع]: CSS Implementation</title>
-    <link rel="stylesheet" href="../../css/style.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-  </head>
-  <body>
-    <div class="navbar">
-      <div class="navbar-brand">
-        <div class="">
-          1MAC Courses
-        </div>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>[الدرس السابع]: CSS Implementation</title>
+      <link rel="stylesheet" href="../../css/style.css">
+      <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+   </head>
+   <body>
+      <div class="navbar">
+         <div class="navbar-brand">
+            <div class="">
+               1MAC Courses
+            </div>
+         </div>
+         <div class="icon-container">
+            <div class="humberger-icon">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+         </div>
+         <div class="navbar-nav">
+            <nav>
+               <div class="close">
+                  أغلق <i class="fas fa-times"></i>
+               </div>
+               <a href="../../index.html">الرئيسية</a>
+               <a href="../html_css/html-css.html">HTML & CSS</a>
+               <a href="../javascript/javascript.html">JavaScript</a>
+               <a href="../git/git.html">Git</a>
+               <a href="../projects/projects.html">المشاريع</a>
+            </nav>
+         </div>
       </div>
-      <div class="icon-container">
-        <div class="humberger-icon">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-      <div class="navbar-nav">
-        <nav>
-          <div class="close">
-            أغلق <i class="fas fa-times"></i>
-          </div>
-          <a href="../../index.html">الرئيسية</a>
-          <a href="../html_css/html-css.html">HTML & CSS</a>
-          <a href="../javascript/javascript.html">JavaScript</a>
-          <a href="../git/git.html">Git</a>
-          <a href="../projects/projects.html">المشاريع</a>
-        </nav>
-      </div>
-    </div>
-    <div class="container">
-      <div class="cooked">
-
-    <h1 dir="rtl">طرق إستخدام أكواد CSS في صفحات HTML</h1>
-    <hr>
-    <p dir="rtl">سنشرح ثلاث طرق ونجرب عليها أمثلة تطبيقية<br></p>
-    <img class="image" src="../../images/html_css/7/1.png">
-    <p></p>
-    <h1 dir="rtl">الطريقة الأولى: أضافة أكواد <code dir="ltr">CSS</code> لوسم <code dir="ltr">HTML</code> مباشرة</h1>
-    <p dir="rtl"><strong dir="rtl">مثال:</strong></p>
-    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!doctype html&gt;</span>
+      <div class="container">
+         <div class="cooked">
+            <h1 dir="rtl">طرق إستخدام أكواد CSS في صفحات HTML</h1>
+            <hr>
+            <p dir="rtl">سنشرح ثلاث طرق ونجرب عليها أمثلة تطبيقية<br></p>
+            <img class="image" src="../../images/html_css/7/1.png">
+            <p></p>
+            <h1 dir="rtl">الطريقة الأولى: أضافة أكواد <code dir="ltr">CSS</code> لوسم <code dir="ltr">HTML</code> مباشرة</h1>
+            <p dir="rtl"><strong dir="rtl">مثال:</strong></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!doctype html&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;html&gt;</span>
    <span style="color: #204a87; font-weight: bold">&lt;head&gt;</span>
       <span style="color: #204a87; font-weight: bold">&lt;title&gt;</span>One Million Arab Coders<span style="color: #204a87; font-weight: bold">&lt;/title&gt;</span>
@@ -54,33 +54,36 @@
       <span style="color: #204a87; font-weight: bold">&lt;p</span> <span style="color: #c4a000">style=</span><span style="color: #4e9a06">"color:white; font-size:25px;"</span><span style="color: #204a87; font-weight: bold">&gt;</span>One million Arab Coders<span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
    <span style="color: #204a87; font-weight: bold">&lt;/body&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/html&gt;</span>
-</pre></div>
-
-    <p dir="rtl"><strong dir="rtl">النتيجة:</strong></p>
-    <p></p>
-    <img class="image" src="../../images/html_css/7/2.jpg">
-    <p></p>
-    <p dir="rtl">الذي قمت بعملة هو أضافة خاصية <code dir="ltr">style</code> لوسم <code dir="ltr">body</code> وتغيير لون الخلفية للأسود بإستخدام خاصية <code dir="ltr">background-color</code> كما في التالي</p>
-    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;body</span> <span style="color: #c4a000">style=</span><span style="color: #4e9a06">"background-color: black;"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
-</pre></div>
-
-    <p dir="rtl">واضفت <code dir="ltr">style</code> لوسم <code dir="ltr">p</code> وقمت بتغيير لون الخط وحجمة</p>
-    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;p</span> <span style="color: #c4a000">style=</span><span style="color: #4e9a06">"color:white; font-size:25px;"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
-</pre></div>
-
-    <p dir="rtl">لا ينصح بإستخدام هذه الطريقة لإضافة أكواد ال CSS لعناصر <code dir="ltr">HTML</code> وذلك لانه عند كتابتك لملف <code dir="ltr">HTML</code> لنقول يتكون من <code dir="ltr">1000</code> سطر وقتها إضافة ال <code dir="ltr">CSS</code> بهذه الطريقة سيزيد حجم الملف و سيكون من الصعب عمل التعديلات على التصميم ناهيك عن التقسيم والترتيب السئ للاكواد.</p>
-    <hr>
-    <h1 dir="rtl">الطريقة الثانية: تضمين أكواد ال <code dir="ltr">CSS</code> بداخل مستند <code dir="ltr">HTML</code> بشكل مباشر</h1>
-    <p dir="rtl">هذه الطريقة أنظف من السابقة حيث بإمكانك كتابة أكواد ال <code dir="ltr">CSS</code> بداخل وسم <code dir="ltr">style</code></p>
-    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;style&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong></p>
+            <p></p>
+            <img class="image" src="../../images/html_css/7/2.jpg">
+            <p></p>
+            <p dir="rtl">الذي قمت بعملة هو أضافة خاصية <code dir="ltr">style</code> لوسم <code dir="ltr">body</code> وتغيير لون الخلفية للأسود بإستخدام خاصية <code dir="ltr">background-color</code> كما في التالي</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;body</span> <span style="color: #c4a000">style=</span><span style="color: #4e9a06">"background-color: black;"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl">واضفت <code dir="ltr">style</code> لوسم <code dir="ltr">p</code> وقمت بتغيير لون الخط وحجمة</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;p</span> <span style="color: #c4a000">style=</span><span style="color: #4e9a06">"color:white; font-size:25px;"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl">لا ينصح بإستخدام هذه الطريقة لإضافة أكواد ال CSS لعناصر <code dir="ltr">HTML</code> وذلك لانه عند كتابتك لملف <code dir="ltr">HTML</code> لنقول يتكون من <code dir="ltr">1000</code> سطر وقتها إضافة ال <code dir="ltr">CSS</code> بهذه الطريقة سيزيد حجم الملف و سيكون من الصعب عمل التعديلات على التصميم ناهيك عن التقسيم والترتيب السئ للاكواد.</p>
+            <hr>
+            <h1 dir="rtl">الطريقة الثانية: تضمين أكواد ال <code dir="ltr">CSS</code> بداخل مستند <code dir="ltr">HTML</code> بشكل مباشر</h1>
+            <p dir="rtl">هذه الطريقة أنظف من السابقة حيث بإمكانك كتابة أكواد ال <code dir="ltr">CSS</code> بداخل وسم <code dir="ltr">style</code></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;style&gt;</span>
     <span style="color: #8f5902; font-style: italic">/* هنا الأكواد */</span>
 <span style="color: #204a87; font-weight: bold">&lt;/style&gt;</span>
-</pre></div>
-
-
-    <p dir="rtl">يتم وضع هذا الوسم في منطقة ال<code dir="ltr">head</code></p>
-    <p dir="rtl"><strong dir="rtl">كالتالي:</strong></p>
-    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!doctype html&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl">يتم وضع هذا الوسم في منطقة ال<code dir="ltr">head</code></p>
+            <p dir="rtl"><strong dir="rtl">كالتالي:</strong></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!doctype html&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;html&gt;</span>
   <span style="color: #204a87; font-weight: bold">&lt;head&gt;</span>
     <span style="color: #204a87; font-weight: bold">&lt;title&gt;</span>One Million Arab Coders
@@ -100,39 +103,41 @@
     <span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
   <span style="color: #204a87; font-weight: bold">&lt;/body&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/html&gt;</span>
-</pre></div>
-
-    <p dir="rtl"><strong dir="rtl">النتيجة كما في التصميم السابق:</strong></p>
-    <p></p>
-    <img class="image" src="../../images/html_css/7/3.jpg">
-    <p></p>
-    <p dir="rtl">في هذا الكود تم إستهداف وسم <code dir="ltr">body</code> وتغيير لون خلفيته</p>
-    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">body</span> <span style="color: #000000; font-weight: bold">{</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة كما في التصميم السابق:</strong></p>
+            <p></p>
+            <img class="image" src="../../images/html_css/7/3.jpg">
+            <p></p>
+            <p dir="rtl">في هذا الكود تم إستهداف وسم <code dir="ltr">body</code> وتغيير لون خلفيته</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">body</span> <span style="color: #000000; font-weight: bold">{</span>
   <span style="color: #204a87; font-weight: bold">background-color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87">black</span><span style="color: #000000; font-weight: bold">;</span>
  <span style="color: #8f5902; font-style: italic">/*تغيير لون الخلفية للأسود*/</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #000000; font-weight: bold">}</span>
-</pre></div>
-
-
-    <p dir="rtl">وبنفس الفكرة مع وسم <code dir="ltr">p</code> قمنا بإعطائة إسم كلاس <code dir="ltr">paragraph</code> وإستخدمناه لإضافة التنسيقات كالتالي:</p>
-    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.paragraph</span> <span style="color: #000000; font-weight: bold">{</span>
+</pre>
+            </div>
+            <p dir="rtl">وبنفس الفكرة مع وسم <code dir="ltr">p</code> قمنا بإعطائة إسم كلاس <code dir="ltr">paragraph</code> وإستخدمناه لإضافة التنسيقات كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.paragraph</span> <span style="color: #000000; font-weight: bold">{</span>
   <span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87">white</span><span style="color: #000000; font-weight: bold">;</span>
  <span style="color: #8f5902; font-style: italic">/*تغيير لون الخط للأبيض*/</span>
   <span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">25px</span><span style="color: #000000; font-weight: bold">;</span>
  <span style="color: #8f5902; font-style: italic">/*تغيير حجم الخط*/</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #000000; font-weight: bold">}</span>
-</pre></div>
-
-
-    <p dir="rtl">ما يميز هذه الطريقة عن التي قبلها أنك تقوم بكتابة الأكواد في منطقة واحدة مما يسهل عليك عمل التعديلات لكن يضل لها تكلفة في حال كان حجم الكود كبير</p>
-    <hr>
-    <h1 dir="rtl">الطريقة الثالثة: ربط مستند HTML بملف CSS منفصل</h1>
-    <p dir="rtl">في هذه الطريقة تقوم بإنشاء ملفين منفصلين الأول خاص بأكواد ال <code dir="ltr">HTML</code> والثاني خاص بأكواد ال <code dir="ltr">CSS</code> ثم تقوم بربط ملف ال <code dir="ltr">HTML</code> بملف التنسيقات عن طريق إستيرادة بإستخدام كود HTML التالي:</p>
-    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;link</span> <span style="color: #c4a000">rel=</span><span style="color: #4e9a06">"stylesheet"</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"text/css"</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"style.css"</span> <span style="color: #204a87; font-weight: bold">/&gt;</span>
-</pre></div>
-
-    <p dir="rtl">حيث تم فية تحديد موقع واسم الملف الخاص بال <code dir="ltr">CSS</code> والذي أسمة <code dir="ltr">style.css</code> ويتم وضع هذا الكود في منطقة ال <code dir="ltr">head</code> كالتالي:</p>
-    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!doctype html&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl">ما يميز هذه الطريقة عن التي قبلها أنك تقوم بكتابة الأكواد في منطقة واحدة مما يسهل عليك عمل التعديلات لكن يضل لها تكلفة في حال كان حجم الكود كبير</p>
+            <hr>
+            <h1 dir="rtl">الطريقة الثالثة: ربط مستند HTML بملف CSS منفصل</h1>
+            <p dir="rtl">في هذه الطريقة تقوم بإنشاء ملفين منفصلين الأول خاص بأكواد ال <code dir="ltr">HTML</code> والثاني خاص بأكواد ال <code dir="ltr">CSS</code> ثم تقوم بربط ملف ال <code dir="ltr">HTML</code> بملف التنسيقات عن طريق إستيرادة بإستخدام كود HTML التالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;link</span> <span style="color: #c4a000">rel=</span><span style="color: #4e9a06">"stylesheet"</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"text/css"</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"style.css"</span> <span style="color: #204a87; font-weight: bold">/&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl">حيث تم فية تحديد موقع واسم الملف الخاص بال <code dir="ltr">CSS</code> والذي أسمة <code dir="ltr">style.css</code> ويتم وضع هذا الكود في منطقة ال <code dir="ltr">head</code> كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!doctype html&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;html&gt;</span>
   <span style="color: #204a87; font-weight: bold">&lt;head&gt;</span>
     <span style="color: #204a87; font-weight: bold">&lt;title&gt;</span>One Million Arab Coders
@@ -144,10 +149,11 @@
     <span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
   <span style="color: #204a87; font-weight: bold">&lt;/body&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/html&gt;</span>
-</pre></div>
-
-    <p dir="rtl">الان بداخل ملف <code dir="ltr">style.css</code> سأقوم بتحديد الخصائص كما قمنا في الطريقة الثانية ولكن هذه المرة لا نحتاج لتحويطها بوسم <code dir="ltr">style</code> كونه قد تم تحديد نوع الملف بأنه ملف تنسيقات <code dir="ltr">CSS</code>:</p>
-    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">body</span> <span style="color: #000000; font-weight: bold">{</span>
+</pre>
+            </div>
+            <p dir="rtl">الان بداخل ملف <code dir="ltr">style.css</code> سأقوم بتحديد الخصائص كما قمنا في الطريقة الثانية ولكن هذه المرة لا نحتاج لتحويطها بوسم <code dir="ltr">style</code> كونه قد تم تحديد نوع الملف بأنه ملف تنسيقات <code dir="ltr">CSS</code>:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">body</span> <span style="color: #000000; font-weight: bold">{</span>
   <span style="color: #204a87; font-weight: bold">background-color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87">black</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #000000; font-weight: bold">}</span>
 
@@ -155,16 +161,12 @@
   <span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87">white</span><span style="color: #000000; font-weight: bold">;</span>
   <span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">25px</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #000000; font-weight: bold">}</span>
-</pre></div>
-
-
-    <p dir="rtl">هذه تعتبر أفضل طريقة لكتابة أكواد <code dir="ltr">HTML</code> حيث أن فصل ملف التنسيقات عن صفحة ال <code dir="ltr">HTML</code> يساعدنا على ربطها بأكثر من صفحة وتطبيق نفس التنسيقات على الصفحات المرتبطة بها وكذلك عمل التعديل على التنسيقات بملف واحد وتطبيقة على أكثر من ملف <code dir="ltr">HTML</code> بالإضافة إلى ان فصل الملفات بهذه الطريقة يساعد على تنظيم الأكود وتقسيم ملفات الموقع.</p>
-    <hr>
-
- </div>
-    </div>
-
-
-    <script src="../../js/main.js"></script>
-  </body>
+</pre>
+            </div>
+            <p dir="rtl">هذه تعتبر أفضل طريقة لكتابة أكواد <code dir="ltr">HTML</code> حيث أن فصل ملف التنسيقات عن صفحة ال <code dir="ltr">HTML</code> يساعدنا على ربطها بأكثر من صفحة وتطبيق نفس التنسيقات على الصفحات المرتبطة بها وكذلك عمل التعديل على التنسيقات بملف واحد وتطبيقة على أكثر من ملف <code dir="ltr">HTML</code> بالإضافة إلى ان فصل الملفات بهذه الطريقة يساعد على تنظيم الأكود وتقسيم ملفات الموقع.</p>
+            <hr>
+         </div>
+      </div>
+      <script src="../../js/main.js"></script>
+   </body>
 </html>

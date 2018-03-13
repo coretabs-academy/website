@@ -1,133 +1,127 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>[الدرس الخامس]: Javascript Coding Convention + Rules</title>
-    <link rel="stylesheet" href="../../css/style.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-  </head>
-  <body>
-    <div class="navbar">
-      <div class="navbar-brand">
-        <div class="">
-          1MAC Courses
-        </div>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>[الدرس الخامس]: Javascript Coding Convention + Rules</title>
+      <link rel="stylesheet" href="../../css/style.css">
+      <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+   </head>
+   <body>
+      <div class="navbar">
+         <div class="navbar-brand">
+            <div class="">
+               1MAC Courses
+            </div>
+         </div>
+         <div class="icon-container">
+            <div class="humberger-icon">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+         </div>
+         <div class="navbar-nav">
+            <nav>
+               <div class="close">
+                  أغلق <i class="fas fa-times"></i>
+               </div>
+               <a href="../../index.html">الرئيسية</a>
+               <a href="../html_css/html-css.html">HTML & CSS</a>
+               <a href="../javascript/javascript.html">JavaScript</a>
+               <a href="../git/git.html">Git</a>
+               <a href="../projects/projects.html">المشاريع</a>
+            </nav>
+         </div>
       </div>
-      <div class="icon-container">
-        <div class="humberger-icon">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-      <div class="navbar-nav">
-        <nav>
-          <div class="close">
-            أغلق <i class="fas fa-times"></i>
-          </div>
-          <a href="../../index.html">الرئيسية</a>
-          <a href="../html_css/html-css.html">HTML & CSS</a>
-          <a href="../javascript/javascript.html">JavaScript</a>
-          <a href="../git/git.html">Git</a>
-          <a href="../projects/projects.html">المشاريع</a>
-        </nav>
-      </div>
-    </div>
-    <div class="container">
-      <div class="cooked">
-
-
-        <h1 dir="rtl">طرق كتابة وتضمين اكواد الـJavascript</h1>
-        <hr>
-    <p dir="rtl">في الدروس الأخيرة تعرفنا على المتغيرات وعلى أنواع البيانات وعمل المقارنة بينها, في درس اليوم سننتهي من هذا الموضوع بمناقشة بعض النقاط حيث و أنه قد أعطيناها ما تستحقة من الوقت كونها مفاهيم أساسية ومهمة.</p>
-    <hr>
-    <p dir="rtl">1- تستطيع كتابة أكواد الجافاسكربت بين وسم <code dir="ltr">script</code> و وضعة في منطقة الـ head او الـ body</p>
-    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;script&gt;</span>
+      <div class="container">
+         <div class="cooked">
+            <h1 dir="rtl">طرق كتابة وتضمين اكواد الـJavascript</h1>
+            <hr>
+            <p dir="rtl">في الدروس الأخيرة تعرفنا على المتغيرات وعلى أنواع البيانات وعمل المقارنة بينها, في درس اليوم سننتهي من هذا الموضوع بمناقشة بعض النقاط حيث و أنه قد أعطيناها ما تستحقة من الوقت كونها مفاهيم أساسية ومهمة.</p>
+            <hr>
+            <p dir="rtl">1- تستطيع كتابة أكواد الجافاسكربت بين وسم <code dir="ltr">script</code> و وضعة في منطقة الـ head او الـ body</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;script&gt;</span>
 <span style="color: #8f5902; font-style: italic">// هنا</span>
 <span style="color: #204a87; font-weight: bold">&lt;/script&gt;</span>
-</pre></div>
-
-    <p dir="rtl">2- تستطيع كتابة اكواد الـ Javascript في ملف خارجي ومن ثم تضمينه في ملف الـ HTML بإستخدام الكود التالي:</p>
-    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;script </span><span style="color: #c4a000">src=</span><span style="color: #4e9a06">"javascript.js"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/script&gt;</span>
-</pre></div>
-
-    <p dir="rtl">يفضل إستخدام الطريقة الثانية وكذلك وضع اكواد استدعاء ملفات الجافاسكربت قبل وسم اغلاق الـ <code dir="ltr">body</code> وذلك حتى يتم تحميل الموقع ومن ثم يتم استدعاء السكربتات حتى لا يحصل أي تأخير في تحميل الصفحة للزائر بسبب استدعاء هذه الاكواد وكذلك من أجل تجنب أي مشاكل في عرض الموقع في حال وجود أي مشاكل في اكواد الـ Javascript</p>
-    <hr>
-    <h2 dir="rtl">شروط تسمية المتغيرات</h2>
-    <p dir="rtl">عند إختيارك لإسم المتغير يجب أن تراعي هذه الشروط:</p>
-    <p dir="rtl">1- تستطيع إستخدام الأحرف والارقام وعلامتي <code dir="ltr">_</code> و <code dir="ltr">$</code> فقط لتسمية المتغيرات</p>
-    <p dir="rtl">2- يجب أن تبدأ إسم المتغير بحرف وليس برقم</p>
-    <p dir="rtl">3- تستطيع بدء إسم المتغير بأحد الرمزين <code dir="ltr">$</code> و <code dir="ltr">_</code></p>
-    <p dir="rtl">4- لا يمكنك إستخدام الأسماء المحجوزة في لغة الجافاسكربت مثلاً لا يمكنك عمل التالي:</p>
-    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #204a87; font-weight: bold">const</span><span style="color: #000000; font-weight: bold">;</span>
-</pre></div>
-
-    <p dir="rtl">وذلك لأن const اسم محجوز لتعريف الثوابت</p>
-    <hr>
-    <h2 dir="rtl">حساسية الأحرف في أسماء المتغيرات</h2>
-    <p dir="rtl">عند تعريفك لمتغير يجب أن تعرف أن حالة الأحرف حساسة حيث أن المتغير <code dir="ltr">price</code> ليس هو نفسة <code dir="ltr">Price</code></p>
-    <hr>
-    <h2 dir="rtl">تعريف أكثر من متغير في سطر واحد</h2>
-    <p dir="rtl">تستطيع تعريف أكثر من متغير بنفس السطر وذلك بكتابة الإسم المحجوز الخاص بتعريف المتغيرات <code dir="ltr">var</code> وتتبعة بأسماء المتغيرات مفصولة بفاصلة كالتالي:</p>
-    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">donuts</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #0000cf; font-weight: bold">10</span> <span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">croissant</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #0000cf; font-weight: bold">10</span><span style="color: #000000; font-weight: bold">;</span>
-</pre></div>
-
-    <hr>
-    <h2 dir="rtl">الفاصلة المنقوطة</h2>
-    <p dir="rtl">وضع الفاصلة المنقوطة عند نهاية كل سطر برمجي في الجافاسكربت هو إختياري ولكنة يعتبر مهم و صمام أمان لتجنب تنفيذ اكثر من سطر برمجي كأنه سطر واحد.</p>
-    <p dir="rtl">الجافاسكربت تقوم بإدراج الفاصلة المنقوطة بشكل تلقائي عند نهاية كل سطر, بإمكانك تجربة الكود التالي وستجدة يعمل:</p>
-    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;script&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl">2- تستطيع كتابة اكواد الـ Javascript في ملف خارجي ومن ثم تضمينه في ملف الـ HTML بإستخدام الكود التالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;script </span><span style="color: #c4a000">src=</span><span style="color: #4e9a06">"javascript.js"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/script&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl">يفضل إستخدام الطريقة الثانية وكذلك وضع اكواد استدعاء ملفات الجافاسكربت قبل وسم اغلاق الـ <code dir="ltr">body</code> وذلك حتى يتم تحميل الموقع ومن ثم يتم استدعاء السكربتات حتى لا يحصل أي تأخير في تحميل الصفحة للزائر بسبب استدعاء هذه الاكواد وكذلك من أجل تجنب أي مشاكل في عرض الموقع في حال وجود أي مشاكل في اكواد الـ Javascript</p>
+            <hr>
+            <h2 dir="rtl">شروط تسمية المتغيرات</h2>
+            <p dir="rtl">عند إختيارك لإسم المتغير يجب أن تراعي هذه الشروط:</p>
+            <p dir="rtl">1- تستطيع إستخدام الأحرف والارقام وعلامتي <code dir="ltr">_</code> و <code dir="ltr">$</code> فقط لتسمية المتغيرات</p>
+            <p dir="rtl">2- يجب أن تبدأ إسم المتغير بحرف وليس برقم</p>
+            <p dir="rtl">3- تستطيع بدء إسم المتغير بأحد الرمزين <code dir="ltr">$</code> و <code dir="ltr">_</code></p>
+            <p dir="rtl">4- لا يمكنك إستخدام الأسماء المحجوزة في لغة الجافاسكربت مثلاً لا يمكنك عمل التالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #204a87; font-weight: bold">const</span><span style="color: #000000; font-weight: bold">;</span>
+</pre>
+            </div>
+            <p dir="rtl">وذلك لأن const اسم محجوز لتعريف الثوابت</p>
+            <hr>
+            <h2 dir="rtl">حساسية الأحرف في أسماء المتغيرات</h2>
+            <p dir="rtl">عند تعريفك لمتغير يجب أن تعرف أن حالة الأحرف حساسة حيث أن المتغير <code dir="ltr">price</code> ليس هو نفسة <code dir="ltr">Price</code></p>
+            <hr>
+            <h2 dir="rtl">تعريف أكثر من متغير في سطر واحد</h2>
+            <p dir="rtl">تستطيع تعريف أكثر من متغير بنفس السطر وذلك بكتابة الإسم المحجوز الخاص بتعريف المتغيرات <code dir="ltr">var</code> وتتبعة بأسماء المتغيرات مفصولة بفاصلة كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">donuts</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #0000cf; font-weight: bold">10</span> <span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">croissant</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #0000cf; font-weight: bold">10</span><span style="color: #000000; font-weight: bold">;</span>
+</pre>
+            </div>
+            <hr>
+            <h2 dir="rtl">الفاصلة المنقوطة</h2>
+            <p dir="rtl">وضع الفاصلة المنقوطة عند نهاية كل سطر برمجي في الجافاسكربت هو إختياري ولكنة يعتبر مهم و صمام أمان لتجنب تنفيذ اكثر من سطر برمجي كأنه سطر واحد.</p>
+            <p dir="rtl">الجافاسكربت تقوم بإدراج الفاصلة المنقوطة بشكل تلقائي عند نهاية كل سطر, بإمكانك تجربة الكود التالي وستجدة يعمل:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;script&gt;</span>
    <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">x</span>
    <span style="color: #000000">x</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #0000cf; font-weight: bold">1</span>
    <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">x</span><span style="color: #000000; font-weight: bold">)</span>
 <span style="color: #204a87; font-weight: bold">&lt;/script&gt;</span>
-</pre></div>
-
-    <p dir="rtl">لكن احياناً يتم إعتبار سطرين كأنهما سطر واحد في بعض حالات, وكذلك عدم وضع الفاصلة المنقوطة يمنعك من ضغط الاكواد حيث ان ضغط الاكواد يجعلها في سطر واحد وبدون الفاصلة المنقوطة لن يعرف المتصفح نهاية كل سطر برمجي.</p>
-    <p dir="rtl"><strong dir="rtl">لهذا يفضل أن تضع الفاصلة المنقوطة في نهاية كل سطر برمجي الا اذا كنت تعرف ما الذي تقوم به.</strong></p>
-    <hr>
-    <h2 dir="rtl">ـ Javascript Coding Convention</h2>
-    <p dir="rtl">تذكرون إتفاقنا على اسلوب كتابة أسماء الـ class و الـ id في الـ css حيث إتفقنا أن نقوم بكتابتها بأحرف صغيرة وعند كتابتنا لكلمتين نفصلهما بشرطة <code dir="ltr">-</code> هذا كان بالنسبة للـ CSS وتم مناقشة ذلك .</p>
-    <h5 dir="rtl">نريد الأن ان نتفق على إسلوب كتابة أسماء المتغيرات في الجافاسكربت حيث تم إعتماد ما يسمى إسلوب الـ camelCase <img src="../../images/javascript/7/1.png" title=":dromedary_camel:" class="emoji" alt=":dromedary_camel:" style="width:30px;"> لكتابة المتغيرات كالتالي:</h5>
-    <ul dir="rtl">
-       <li dir="rtl">في حال لديك اسم متغير يتكون من كلمة واحدة قم بتكتابتها بأحرف صغيرة</li>
-    </ul>
-    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">product</span><span style="color: #000000; font-weight: bold">;</span>
-</pre></div>
-
-    <ul dir="rtl">
-       <li dir="rtl">في حال لديك اسم متغير يتكون من اكثر من كلمة قم بكتابة اول كلمة باحرف صغيرة ومن ثم قم بكتابة الحرف الأول من كل كلمة اخرى باحرف كبيرة (capital letters) كالتالي:</li>
-    </ul>
-    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">productPrice</span><span style="color: #000000; font-weight: bold">;</span>
-</pre></div>
-
-    <p dir="rtl"><strong dir="rtl">كذلك قم بوضع مسافات حول العمليات <code dir="ltr">= + - * /</code>  وحول الفاصلة <code dir="ltr">,</code> فلا تقوم بالتالي:</strong></p>
-    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">x</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #000000">x</span><span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">;</span>
-</pre></div>
-
-    <p dir="rtl">قم بالتالي:</p>
-    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">x</span><span style="color: #ce5c00; font-weight: bold"> = </span><span style="color: #000000">x</span><span style="color: #ce5c00; font-weight: bold"> + </span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">;</span>
-</pre></div>
-
-    <p dir="rtl">بالتأكيد هذه التفاصيل ليست إلزامية ولكن إذا ما اعطيتني كود يهتم بهذه التفاصيل وبهذا النظام بمجرد النظر إلية سأقول لك بأن هذا المبرمج يهتم بالقيام بعملة بشكل منظم وسأخذ نظرة جيدة عنه.</p>
-    <hr>
-
-
-
-
-
-
-
-
-
-
-
- </div>
-    </div>
-
-
-    <script src="../../js/main.js"></script>
-  </body>
+</pre>
+            </div>
+            <p dir="rtl">لكن احياناً يتم إعتبار سطرين كأنهما سطر واحد في بعض حالات, وكذلك عدم وضع الفاصلة المنقوطة يمنعك من ضغط الاكواد حيث ان ضغط الاكواد يجعلها في سطر واحد وبدون الفاصلة المنقوطة لن يعرف المتصفح نهاية كل سطر برمجي.</p>
+            <p dir="rtl"><strong dir="rtl">لهذا يفضل أن تضع الفاصلة المنقوطة في نهاية كل سطر برمجي الا اذا كنت تعرف ما الذي تقوم به.</strong></p>
+            <hr>
+            <h2 dir="rtl">ـ Javascript Coding Convention</h2>
+            <p dir="rtl">تذكرون إتفاقنا على اسلوب كتابة أسماء الـ class و الـ id في الـ css حيث إتفقنا أن نقوم بكتابتها بأحرف صغيرة وعند كتابتنا لكلمتين نفصلهما بشرطة <code dir="ltr">-</code> هذا كان بالنسبة للـ CSS وتم مناقشة ذلك .</p>
+            <h5 dir="rtl">نريد الأن ان نتفق على إسلوب كتابة أسماء المتغيرات في الجافاسكربت حيث تم إعتماد ما يسمى إسلوب الـ camelCase <img src="../../images/javascript/7/1.png" title=":dromedary_camel:" class="emoji" alt=":dromedary_camel:" style="width:30px;"> لكتابة المتغيرات كالتالي:</h5>
+            <ul dir="rtl">
+               <li dir="rtl">في حال لديك اسم متغير يتكون من كلمة واحدة قم بتكتابتها بأحرف صغيرة</li>
+            </ul>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">product</span><span style="color: #000000; font-weight: bold">;</span>
+</pre>
+            </div>
+            <ul dir="rtl">
+               <li dir="rtl">في حال لديك اسم متغير يتكون من اكثر من كلمة قم بكتابة اول كلمة باحرف صغيرة ومن ثم قم بكتابة الحرف الأول من كل كلمة اخرى باحرف كبيرة (capital letters) كالتالي:</li>
+            </ul>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">productPrice</span><span style="color: #000000; font-weight: bold">;</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">كذلك قم بوضع مسافات حول العمليات <code dir="ltr">= + - * /</code>  وحول الفاصلة <code dir="ltr">,</code> فلا تقوم بالتالي:</strong></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">x</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #000000">x</span><span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">;</span>
+</pre>
+            </div>
+            <p dir="rtl">قم بالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">x</span><span style="color: #ce5c00; font-weight: bold"> = </span><span style="color: #000000">x</span><span style="color: #ce5c00; font-weight: bold"> + </span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">;</span>
+</pre>
+            </div>
+            <p dir="rtl">بالتأكيد هذه التفاصيل ليست إلزامية ولكن إذا ما اعطيتني كود يهتم بهذه التفاصيل وبهذا النظام بمجرد النظر إلية سأقول لك بأن هذا المبرمج يهتم بالقيام بعملة بشكل منظم وسأخذ نظرة جيدة عنه.</p>
+            <hr>
+         </div>
+      </div>
+      <script src="../../js/main.js"></script>
+   </body>
 </html>

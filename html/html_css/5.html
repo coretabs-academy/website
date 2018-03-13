@@ -1,78 +1,80 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>[الدرس الخامس]: Class vs ID</title>
-    <link rel="stylesheet" href="../../css/style.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-  </head>
-  <body>
-    <div class="navbar">
-      <div class="navbar-brand">
-        <div class="">
-          1MAC Courses
-        </div>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>[الدرس الخامس]: Class vs ID</title>
+      <link rel="stylesheet" href="../../css/style.css">
+      <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+   </head>
+   <body>
+      <div class="navbar">
+         <div class="navbar-brand">
+            <div class="">
+               1MAC Courses
+            </div>
+         </div>
+         <div class="icon-container">
+            <div class="humberger-icon">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+         </div>
+         <div class="navbar-nav">
+            <nav>
+               <div class="close">
+                  أغلق <i class="fas fa-times"></i>
+               </div>
+               <a href="../../index.html">الرئيسية</a>
+               <a href="../html_css/html-css.html">HTML & CSS</a>
+               <a href="../javascript/javascript.html">JavaScript</a>
+               <a href="../git/git.html">Git</a>
+               <a href="../projects/projects.html">المشاريع</a>
+            </nav>
+         </div>
       </div>
-      <div class="icon-container">
-        <div class="humberger-icon">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-      <div class="navbar-nav">
-        <nav>
-          <div class="close">
-            أغلق <i class="fas fa-times"></i>
-          </div>
-          <a href="../../index.html">الرئيسية</a>
-          <a href="../html_css/html-css.html">HTML & CSS</a>
-          <a href="../javascript/javascript.html">JavaScript</a>
-          <a href="../git/git.html">Git</a>
-          <a href="../projects/projects.html">المشاريع</a>
-        </nav>
-      </div>
-    </div>
-    <div class="container">
-      <div class="cooked">
-        <h1>مقارنة بين Class و ID</h1>
-        <hr>
-    <p dir="rtl">حتى هذه اللحظة تعرفنا على عناصر الـ HTML وأنواع الوسوم و تبقى لنا أن نناقش سؤال مهم وهو:</p>
-    <p dir="rtl"><strong dir="rtl">كيف أستطيع الوصول لأي عنصر محدد في الصفحة والتلاعب به بإضافة التنسيقات عليه؟</strong></p>
-    <p dir="rtl">قبل الجواب على هذا السؤال لنأخذ مثال بسيط عن عضويتك بهذه المبادرة<br></p>
-    <img class="image" src="../../images/html_css/5/1.jpg">
-    <p dir="rtl">لنفترض أنني أستطيع التحكم بالعضويات وأنت الأن كعنصر في هذه المبادرة يمكنني الوصول إليك بطريقتين:</p>
-    <p dir="rtl"><strong dir="rtl">الطريقة الأولى: عبر إيميلك الشخصي</strong></p>
-    <ul dir="rtl">
-       <li dir="rtl">إذا ما أعطيتني إيميلك الشخصي فسأستطيع الوصول إليك أنت وحدك مباشرة والتأثير على عضويتك بطريقة أو بأخرى.</li>
-       <li dir="rtl">تلاحظ أن أيميلك الشخصي لا يمكن لأحد أن يستخدمة أو يحصل على أيميل مطابق له فهو يخصك أنت وحدك.</li>
-    </ul>
-    <p dir="rtl"><strong dir="rtl">الطريقة الثانية: عبر المجموعة التي تم ضمَك لها</strong></p>
-    <ul dir="rtl">
-       <li dir="rtl">أنت كعنصر في هذه المبادرة تم ضمَك لمجموعة مسار تطوير واجهات الويب فاذا انا ما قمت بالتأثير والتعديل على هذه المجموعة فعضويتك ستتأثر كذلك.</li>
-       <li dir="rtl">تلاحظ أن هذه المجموعة أنت تشاركها مع بقية الأعضاء وليست شئ خاص بك وحدك والتعديل عليها يؤثر عليكم جميعاً.</li>
-    </ul>
-    <hr>
-    <h2 dir="rtl">الطريقة الأولى كانت بإختصار ما يسمى بالـ id</h2>
-    <p dir="rtl">حيث وانه يتم منح العنصر مسمى يميزة عن غيرة حتى نستطيع أن نستهدفة ونتلاعب بة دون غيره.</p>
-    <p dir="rtl"><strong dir="rtl">يجب أن تعرف عن الـ id التالي:</strong></p>
-    <ul dir="rtl">
-       <li dir="rtl">لكل عنصر id واحد.</li>
-       <li dir="rtl">تحتوي الصفحة الواحدة على عنصر وحيد يحمل Id فريد خاص به دون غيرة</li>
-    </ul>
-    <p dir="rtl"><strong dir="rtl">مثال:</strong></p>
-    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"header"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+      <div class="container">
+         <div class="cooked">
+            <h1>مقارنة بين Class و ID</h1>
+            <hr>
+            <p dir="rtl">حتى هذه اللحظة تعرفنا على عناصر الـ HTML وأنواع الوسوم و تبقى لنا أن نناقش سؤال مهم وهو:</p>
+            <p dir="rtl"><strong dir="rtl">كيف أستطيع الوصول لأي عنصر محدد في الصفحة والتلاعب به بإضافة التنسيقات عليه؟</strong></p>
+            <p dir="rtl">قبل الجواب على هذا السؤال لنأخذ مثال بسيط عن عضويتك بهذه المبادرة<br></p>
+            <img class="image" src="../../images/html_css/5/1.jpg">
+            <p dir="rtl">لنفترض أنني أستطيع التحكم بالعضويات وأنت الأن كعنصر في هذه المبادرة يمكنني الوصول إليك بطريقتين:</p>
+            <p dir="rtl"><strong dir="rtl">الطريقة الأولى: عبر إيميلك الشخصي</strong></p>
+            <ul dir="rtl">
+               <li dir="rtl">إذا ما أعطيتني إيميلك الشخصي فسأستطيع الوصول إليك أنت وحدك مباشرة والتأثير على عضويتك بطريقة أو بأخرى.</li>
+               <li dir="rtl">تلاحظ أن أيميلك الشخصي لا يمكن لأحد أن يستخدمة أو يحصل على أيميل مطابق له فهو يخصك أنت وحدك.</li>
+            </ul>
+            <p dir="rtl"><strong dir="rtl">الطريقة الثانية: عبر المجموعة التي تم ضمَك لها</strong></p>
+            <ul dir="rtl">
+               <li dir="rtl">أنت كعنصر في هذه المبادرة تم ضمَك لمجموعة مسار تطوير واجهات الويب فاذا انا ما قمت بالتأثير والتعديل على هذه المجموعة فعضويتك ستتأثر كذلك.</li>
+               <li dir="rtl">تلاحظ أن هذه المجموعة أنت تشاركها مع بقية الأعضاء وليست شئ خاص بك وحدك والتعديل عليها يؤثر عليكم جميعاً.</li>
+            </ul>
+            <hr>
+            <h2 dir="rtl">الطريقة الأولى كانت بإختصار ما يسمى بالـ id</h2>
+            <p dir="rtl">حيث وانه يتم منح العنصر مسمى يميزة عن غيرة حتى نستطيع أن نستهدفة ونتلاعب بة دون غيره.</p>
+            <p dir="rtl"><strong dir="rtl">يجب أن تعرف عن الـ id التالي:</strong></p>
+            <ul dir="rtl">
+               <li dir="rtl">لكل عنصر id واحد.</li>
+               <li dir="rtl">تحتوي الصفحة الواحدة على عنصر وحيد يحمل Id فريد خاص به دون غيرة</li>
+            </ul>
+            <p dir="rtl"><strong dir="rtl">مثال:</strong></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"header"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
 <span style="color: #8f5902; font-style: italic">&lt;!--Header content here--&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
-</pre></div>
-
-    <ul dir="rtl">
-       <li dir="rtl">لاحظ قمت بإعطاء هذا الـ <code dir="ltr">div</code> هوية تعريفية خاصة به وحدة <code dir="ltr">(id)</code> بمعنى أنه لا يمكنني أن أقوم بإنشاء عنصر أخر وأعطية نفس الـ <code dir="ltr">id</code>.</li>
-       <li dir="rtl">أستطيع الأن أن اقوم بإضافة تنسيقات لهذا العنصر دون سواه بإستخدام الـ CSS عن طريق إستهدافه بإسم الـ id الذي منحناة كالتالي:</li>
-    </ul>
-    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;style&gt;</span>
+</pre>
+            </div>
+            <ul dir="rtl">
+               <li dir="rtl">لاحظ قمت بإعطاء هذا الـ <code dir="ltr">div</code> هوية تعريفية خاصة به وحدة <code dir="ltr">(id)</code> بمعنى أنه لا يمكنني أن أقوم بإنشاء عنصر أخر وأعطية نفس الـ <code dir="ltr">id</code>.</li>
+               <li dir="rtl">أستطيع الأن أن اقوم بإضافة تنسيقات لهذا العنصر دون سواه بإستخدام الـ CSS عن طريق إستهدافه بإسم الـ id الذي منحناة كالتالي:</li>
+            </ul>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;style&gt;</span>
 
   <span style="color: #000000">#header</span><span style="color: #000000; font-weight: bold">{</span>
        <span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #0000cf; font-weight: bold">100</span><span style="color: #ce5c00; font-weight: bold">%</span><span style="color: #000000; font-weight: bold">;</span>
@@ -81,16 +83,17 @@
    <span style="color: #000000; font-weight: bold">}</span>
 
 <span style="color: #204a87; font-weight: bold">&lt;/style&gt;</span>
-</pre></div>
-
-    <p dir="rtl">لاحظ عند تعريف الـ <code dir="ltr">id</code> في الـ <code dir="ltr">CSS</code> نقوم بوضع <code dir="ltr">#</code> قبل إسم الـ <code dir="ltr">id</code></p>
-    <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-    <img class="image" src="../../images/html_css/5/2.png">
-    <details dir="rtl" open="">
-       <summary dir="rtl">
-          الكود كاملاً
-       </summary>
-       <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!doctype html&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl">لاحظ عند تعريف الـ <code dir="ltr">id</code> في الـ <code dir="ltr">CSS</code> نقوم بوضع <code dir="ltr">#</code> قبل إسم الـ <code dir="ltr">id</code></p>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <img class="image" src="../../images/html_css/5/2.png">
+            <details dir="rtl" open="">
+               <summary dir="rtl">
+                  الكود كاملاً
+               </summary>
+               <div class="code">
+                  <pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!doctype html&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;html&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;head&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">charset=</span><span style="color: #4e9a06">"utf-8"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
@@ -111,32 +114,34 @@
 <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/body&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/html&gt;</span>
-</pre></div>
-
-    </details>
-    <hr>
-    <h2 dir="rtl">الطريقة الثانية كانت بإختصار ما يسمى بالـ class</h2>
-    <p dir="rtl">حيث وانه يتم منح العنصر او مجموعة من العناصر مسمى يميزهم عن غيرهم حتى نستطيع أن نستهدفهم ونتلاعب بهم دون غيرهم .</p>
-    <p dir="rtl"><strong dir="rtl">يجب أن تعرف عن الـ class التالي:</strong></p>
-    <ul dir="rtl">
-       <li dir="rtl">يمكن أن يُستخدم الـ class لأكثر من عنصر.</li>
-       <li dir="rtl">يمكن أن يُستخدم أكثر من class للعنصر الواحد.</li>
-    </ul>
-    <p dir="rtl"><strong dir="rtl">مثال:</strong></p>
-    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;p</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"paragraph"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+</pre>
+               </div>
+            </details>
+            <hr>
+            <h2 dir="rtl">الطريقة الثانية كانت بإختصار ما يسمى بالـ class</h2>
+            <p dir="rtl">حيث وانه يتم منح العنصر او مجموعة من العناصر مسمى يميزهم عن غيرهم حتى نستطيع أن نستهدفهم ونتلاعب بهم دون غيرهم .</p>
+            <p dir="rtl"><strong dir="rtl">يجب أن تعرف عن الـ class التالي:</strong></p>
+            <ul dir="rtl">
+               <li dir="rtl">يمكن أن يُستخدم الـ class لأكثر من عنصر.</li>
+               <li dir="rtl">يمكن أن يُستخدم أكثر من class للعنصر الواحد.</li>
+            </ul>
+            <p dir="rtl"><strong dir="rtl">مثال:</strong></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;p</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"paragraph"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
   Hello world!
 <span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
 
 <span style="color: #204a87; font-weight: bold">&lt;p</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"paragraph"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
   One Million Arab Coder
 <span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
-</pre></div>
-
-    <ul dir="rtl">
-       <li dir="rtl">لاحظ قمت بعمل عنصرين وإعطائهما نفس الـ <code dir="ltr">class</code> حيث اني الان أستطيع أن اضيف التنسيق مرة واحدة وسيتم تطبيقه على جميع العناصر التي تحمل نفس أسم الـ <code dir="ltr">class</code></li>
-    </ul>
-    <p dir="rtl"><strong dir="rtl">مثال:</strong></p>
-    <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;style&gt;</span>
+</pre>
+            </div>
+            <ul dir="rtl">
+               <li dir="rtl">لاحظ قمت بعمل عنصرين وإعطائهما نفس الـ <code dir="ltr">class</code> حيث اني الان أستطيع أن اضيف التنسيق مرة واحدة وسيتم تطبيقه على جميع العناصر التي تحمل نفس أسم الـ <code dir="ltr">class</code></li>
+            </ul>
+            <p dir="rtl"><strong dir="rtl">مثال:</strong></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;style&gt;</span>
 
  <span style="color: #000000">.paragraph</span><span style="color: #000000; font-weight: bold">{</span>
      <span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #0000cf; font-weight: bold">#fff</span><span style="color: #000000; font-weight: bold">;</span>
@@ -146,16 +151,17 @@
    <span style="color: #000000; font-weight: bold">}</span>
 
 <span style="color: #204a87; font-weight: bold">&lt;/style&gt;</span>
-</pre></div>
-
-    <p dir="rtl">لاحظ عند تعريف الـ <code dir="ltr">class</code> في الـ <code dir="ltr">CSS</code> نقوم بوضع <code dir="ltr">.</code> قبل إسم الـ <code dir="ltr">class</code></p>
-    <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-    <img class="image" src="../../images/html_css/5/3.png">
-    <details dir="rtl" open="">
-       <summary dir="rtl">
-          الكود كاملاً
-       </summary>
-       <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!doctype html&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl">لاحظ عند تعريف الـ <code dir="ltr">class</code> في الـ <code dir="ltr">CSS</code> نقوم بوضع <code dir="ltr">.</code> قبل إسم الـ <code dir="ltr">class</code></p>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <img class="image" src="../../images/html_css/5/3.png">
+            <details dir="rtl" open="">
+               <summary dir="rtl">
+                  الكود كاملاً
+               </summary>
+               <div class="code">
+                  <pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!doctype html&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;html&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;head&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">charset=</span><span style="color: #4e9a06">"utf-8"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
@@ -181,37 +187,35 @@
 <span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/body&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/html&gt;</span>
-</pre></div>
-
-    </details>
-    <hr>
-    <details dir="rtl" open="">
-       <summary dir="rtl">
-          كيف أعرف متى أستخدم الـ `id` او الـ `class` ؟
-       </summary>
-       <p dir="rtl">الـ id تقوم بإستخدامه مع العناصر التي لا تتكرر في الصفحة لنأخذ على سبيل المثال الشعار في هذا المنتدى
-بإمكاننا إعطائه <code dir="ltr">id</code></p>
-       <img class="image" src="../../images/html_css/5/4.png">
-       <p dir="rtl">اما الـ class تقوم بإستخدامة مع العناصر التي تتكرر في الصفحة لنأخذ على سبيل المثال هذا الجزء في المنتدى حيث يتكرر نفس التنسيق.</p>
-       <img class="image" src="../../images/html_css/5/5.png">
-       <p dir="rtl">لكن هذا لا يعني أنه لا يمكنك إعطاء الشعار class بدلاً من id فالأمر راجع إليك.</p>
-    </details>
-    <hr>
-    <details dir="rtl" open="">
-       <summary dir="rtl">
-          هل يمكنني إعطاء العنصر Class و id بنفس الوقت؟
-       </summary>
-       <p dir="rtl">أرجع لمثالنا عن عضويتك بهذه المبادرة هل أنت تملك id و class بنفس الوقت ؟<br>
-          اذا فالوضع ليس مختلف عن هذا
-       </p>
-    </details>
-    <hr>
-    <p dir="rtl">في الختام أحرص على أن تفهم الفكرة الرئيسية ولا تقلق من أكواد التنسيقات حيث أننا سنفصلها لاحقاً وستصبح مألوفة لديك مع الممارسة</p>
-
- </div>
-    </div>
-
-
-    <script src="../../js/main.js"></script>
-  </body>
+</pre>
+               </div>
+            </details>
+            <hr>
+            <details dir="rtl" open="">
+               <summary dir="rtl">
+                  كيف أعرف متى أستخدم الـ `id` او الـ `class` ؟
+               </summary>
+               <p dir="rtl">الـ id تقوم بإستخدامه مع العناصر التي لا تتكرر في الصفحة لنأخذ على سبيل المثال الشعار في هذا المنتدى
+                  بإمكاننا إعطائه <code dir="ltr">id</code>
+               </p>
+               <img class="image" src="../../images/html_css/5/4.png">
+               <p dir="rtl">اما الـ class تقوم بإستخدامة مع العناصر التي تتكرر في الصفحة لنأخذ على سبيل المثال هذا الجزء في المنتدى حيث يتكرر نفس التنسيق.</p>
+               <img class="image" src="../../images/html_css/5/5.png">
+               <p dir="rtl">لكن هذا لا يعني أنه لا يمكنك إعطاء الشعار class بدلاً من id فالأمر راجع إليك.</p>
+            </details>
+            <hr>
+            <details dir="rtl" open="">
+               <summary dir="rtl">
+                  هل يمكنني إعطاء العنصر Class و id بنفس الوقت؟
+               </summary>
+               <p dir="rtl">أرجع لمثالنا عن عضويتك بهذه المبادرة هل أنت تملك id و class بنفس الوقت ؟<br>
+                  اذا فالوضع ليس مختلف عن هذا
+               </p>
+            </details>
+            <hr>
+            <p dir="rtl">في الختام أحرص على أن تفهم الفكرة الرئيسية ولا تقلق من أكواد التنسيقات حيث أننا سنفصلها لاحقاً وستصبح مألوفة لديك مع الممارسة</p>
+         </div>
+      </div>
+      <script src="../../js/main.js"></script>
+   </body>
 </html>

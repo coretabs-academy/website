@@ -1,123 +1,137 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>[الدرس الثامن] اللمسات الأخيرة على الموقع</title>
-    <link rel="stylesheet" href="../../../css/style.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-  </head>
-  <body>
-    <div class="navbar">
-      <div class="navbar-brand">
-        <div class="">
-          1MAC Courses
-        </div>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>[الدرس الثامن] اللمسات الأخيرة على الموقع</title>
+      <link rel="stylesheet" href="../../../css/style.css">
+      <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+   </head>
+   <body>
+      <div class="navbar">
+         <div class="navbar-brand">
+            <div class="">
+               1MAC Courses
+            </div>
+         </div>
+         <div class="icon-container">
+            <div class="humberger-icon">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+         </div>
+         <div class="navbar-nav">
+            <nav>
+               <div class="close">
+                  أغلق <i class="fas fa-times"></i>
+               </div>
+               <a href="../../../index.html">الرئيسية</a>
+               <a href="../../html_css/html-css.html">HTML & CSS</a>
+               <a href="../../javascript/javascript.html">JavaScript</a>
+               <a href="../../git/git.html">Git</a>
+               <a href="../../projects/projects.html">المشاريع</a>
+            </nav>
+         </div>
       </div>
-      <div class="icon-container">
-        <div class="humberger-icon">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-      <div class="navbar-nav">
-        <nav>
-          <div class="close">
-            أغلق <i class="fas fa-times"></i>
-          </div>
-          <a href="../../../index.html">الرئيسية</a>
-          <a href="../../html_css/html-css.html">HTML & CSS</a>
-          <a href="../../javascript/javascript.html">JavaScript</a>
-          <a href="../../git/git.html">Git</a>
-          <a href="../../projects/projects.html">المشاريع</a>
-        </nav>
-      </div>
-    </div>
-    <div class="container">
-      <div class="cooked">
-        <h1>عمل تشطيبات ولمسات أخيرة</h1>
-        <hr>
-    <p dir="rtl">في الدرس السابق قمنا بإكمال العمل على مشروع إستنساخ واجهة موقع الفيس بوك و وصلنا للنتيجة <strong dir="rtl">التالية:</strong><br>
-<img src="../../../images/projects/facebook_project/15/1.png" alt="image" class="image"></p>
-<p dir="rtl">في درس اليوم سنقوم بعمل تشطيبات ولمسات أخيرة</p>
-<hr>
-<h2 dir="rtl">إضافة الـ Favicon</h2>
-<p dir="rtl">قمنا بمناقشة إضافة هذه الأيقونة في الدرس الاخير  من ورشة إستنساخ موقع المبادرة.<br>
-<img src="../../../images/projects/facebook_project/15/2.png" alt="image" class="image"></p>
-<p dir="rtl"><strong dir="rtl">قم أولاً بحفظ الأيقونة بإسم favicon كالتالي:</strong><br>
-.<br>
-</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="2018-03-03_12-15-29.gif" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/15/3.gif" alt="2018-03-03_12-15-29" class="image"></a></div><p></p>
-<p dir="rtl">ستجد الكود الذي حصلت منه على رابط الصورة بداخل منطقة الـ head</p>
-<p dir="rtl"><strong dir="rtl">ثم سنقوم بإضافة الكود التالي في منطقة الـ head:</strong></p>
-<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;link</span> <span style="color: #c4a000">rel=</span><span style="color: #4e9a06">"shortcut icon"</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"images/favicon.ico"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
-</pre></div>
-
-<p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
-<img src="../../../images/projects/facebook_project/15/4.png" alt="image" class="image"></p>
-<hr>
-<h2 dir="rtl">تعميم نوع الخط</h2>
-<p dir="rtl">سأقوم بمسح خاصية <code dir="ltr">font-family: Arial;</code> من كل العناصر وإضافتها بشكل عام للـ body كالتالي:</p>
-<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">body</span><span style="color: #000000; font-weight: bold">{</span>
+      <div class="container">
+         <div class="cooked">
+            <h1>عمل تشطيبات ولمسات أخيرة</h1>
+            <hr>
+            <p dir="rtl">في الدرس السابق قمنا بإكمال العمل على مشروع إستنساخ واجهة موقع الفيس بوك و وصلنا للنتيجة <strong dir="rtl">التالية:</strong><br>
+               <img src="../../../images/projects/facebook_project/15/1.png" alt="image" class="image">
+            </p>
+            <p dir="rtl">في درس اليوم سنقوم بعمل تشطيبات ولمسات أخيرة</p>
+            <hr>
+            <h2 dir="rtl">إضافة الـ Favicon</h2>
+            <p dir="rtl">قمنا بمناقشة إضافة هذه الأيقونة في الدرس الاخير  من ورشة إستنساخ موقع المبادرة.<br>
+               <img src="../../../images/projects/facebook_project/15/2.png" alt="image" class="image">
+            </p>
+            <p dir="rtl"><strong dir="rtl">قم أولاً بحفظ الأيقونة بإسم favicon كالتالي:</strong><br>
+               .<br>
+            </p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="2018-03-03_12-15-29.gif" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/15/3.gif" alt="2018-03-03_12-15-29" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">ستجد الكود الذي حصلت منه على رابط الصورة بداخل منطقة الـ head</p>
+            <p dir="rtl"><strong dir="rtl">ثم سنقوم بإضافة الكود التالي في منطقة الـ head:</strong></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;link</span> <span style="color: #c4a000">rel=</span><span style="color: #4e9a06">"shortcut icon"</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"images/favicon.ico"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
+               <img src="../../../images/projects/facebook_project/15/4.png" alt="image" class="image">
+            </p>
+            <hr>
+            <h2 dir="rtl">تعميم نوع الخط</h2>
+            <p dir="rtl">سأقوم بمسح خاصية <code dir="ltr">font-family: Arial;</code> من كل العناصر وإضافتها بشكل عام للـ body كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">body</span><span style="color: #000000; font-weight: bold">{</span>
    <span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
    <span style="color: #204a87; font-weight: bold">font-family</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">Arial</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #000000; font-weight: bold">}</span>
-</pre></div>
-
-
-<hr>
-<h2 dir="rtl">التأكد من خلو كودنا من الأخطاء وتوافقة مع المعايير القياسية</h2>
-<h3 dir="rtl">إختبار كود الـ HTML</h3>
-<p dir="rtl">سأقوم بنسخ كود الـ HTML للموقع التالي <strong dir="rtl"><a href="https://validator.w3.org/nu/#textarea" rel="nofollow noopener" dir="rtl">من هنا</a></strong><br>
-.<br>
-</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="checkHTML.gif" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/15/5.gif" alt="checkHTML" class="image"></a></div><p></p>
-<p dir="rtl">لا يوجد أخطاء في كودنا ولكن لدينا تحذيرين <strong dir="rtl">كالتالي:</strong><br>
-.<br>
-</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/15/6.png" alt="image" class="image"></a></div><p></p>
-<p dir="rtl">قمت بإضافة شرطة (-) زائدة في التعليقات الموضحة في الصورة ويطلب مني إزالتها, لذا لنقوم بالتعديلات و إعادة أختبار الكود.<br>
-</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/15/7.png" alt="image" width="625" height="47"></a></div><p></p>
-<p dir="rtl">بعد عمل التعديلات المطلوبة حصلنا على كود HTML خالي من الأخطاء والتحذيرات</p>
-<hr>
-<h3 dir="rtl">إختبار كود الـ CSS</h3>
-<p dir="rtl">سأقوم بنسخ كود الـ CSS للموقع التالي <strong dir="rtl"><a href="https://jigsaw.w3.org/css-validator/#validate_by_input" rel="nofollow noopener" dir="rtl">من هنا</a></strong><br>
-.<br>
-</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/15/8.png" alt="image" width="625" height="67"></a></div><br>
-لا يوجد لدي أي أخطاء<p></p>
-<hr>
-<p dir="rtl"><strong dir="rtl">في حال كان لديك أي خطأ فسيتم توضيح مكان الخطأ وسبب الخطأ كالتالي:</strong><br>
-</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/15/9.png" alt="image" class="image"></a></div><p></p>
-<p dir="rtl"><strong dir="rtl">الخطأ في:</strong><br>
-<strong dir="rtl">- السطر:</strong> الـ 13<br>
-<strong dir="rtl">- الكلاس:</strong> <code dir="ltr">.container</code><br>
-<strong dir="rtl">- سبب المشكلة :</strong> فاصلة منقوطة مفقودة قبل الخاصية overflow:<br>
-<img src="../../../images/projects/facebook_project/15/10.png" alt="image" class="image"></p>
-<hr>
-<h2 dir="rtl">إضافة أكواد الـ Meta</h2>
-<p dir="rtl"><strong dir="rtl">1- إضافة وصف الموقع description :</strong><br>
-قم بالبحث في قوقل عن facebook وستجد النتيجة التالية:<br>
-<img src="../../../images/projects/facebook_project/15/11.png" alt="image" class="image"></p>
-<p dir="rtl">هل تلاحظوا الجملة المظلل عليها باللون الأخضر؟ و يا ترى من أين تأتي هذه الجملة؟</p>
-<p dir="rtl">حتى نقوم بإضافة هذا الوصف سنستخدم Meta Description Tag كالتالي:</p>
-<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">name=</span><span style="color: #4e9a06">"description"</span> <span style="color: #c4a000">content=</span><span style="color: #4e9a06">"Create an account or log into Facebook. Connect with friends, family and other people you know. Share photos and videos, send messages and get updates."</span><span style="color: #204a87; font-weight: bold">&gt;</span>
-</pre></div>
-
-<p dir="rtl"><strong dir="rtl">تذكر أننا دائماً نضع اكواد الـ Meta في منطقة الـ head</strong></p>
-<p dir="rtl">هنا مصدر لتعلم المزيد عن هذا الوسم:</p>
-<hr>
-<p dir="rtl">الـ Meta tags عديدة وهي وسوم تقوم بوصف محتوى موقعك بشكل عام ولديها تأثير غير مباشر بتحسين تقييم موقعك على شبكة الإنترنت ما يسمى الـ SEO بإمكانك البحث عنها ومعرفة إستخدام كل تاق وفائدتة بالإضافة للإطلاع على المصدر التالي:<br>
-</p>
-<p></p>
-<hr>
-<h4 dir="rtl">بهذا نكون قد إنتهينا من مشروع تطوير واجهة موقع الفيس بوك أتمنى بأن تكونوا قد إستفدتم وأن تكونوا إستمتعتم بهذه التجربة.</h4>
-<p dir="rtl">اكواد المشروع على Codepen<br>
-</p>
-<p></p>
-<hr>
-
-</div>
-    </div>
-
-    <script src="../../../js/main.js"></script>
-  </body>
+</pre>
+            </div>
+            <hr>
+            <h2 dir="rtl">التأكد من خلو كودنا من الأخطاء وتوافقة مع المعايير القياسية</h2>
+            <h3 dir="rtl">إختبار كود الـ HTML</h3>
+            <p dir="rtl">سأقوم بنسخ كود الـ HTML للموقع التالي <strong dir="rtl"><a href="https://validator.w3.org/nu/#textarea" rel="nofollow noopener" dir="rtl">من هنا</a></strong><br>
+               .<br>
+            </p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="checkHTML.gif" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/15/5.gif" alt="checkHTML" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">لا يوجد أخطاء في كودنا ولكن لدينا تحذيرين <strong dir="rtl">كالتالي:</strong><br>
+               .<br>
+            </p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/15/6.png" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">قمت بإضافة شرطة (-) زائدة في التعليقات الموضحة في الصورة ويطلب مني إزالتها, لذا لنقوم بالتعديلات و إعادة أختبار الكود.<br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/15/7.png" alt="image" width="625" height="47"></a></div>
+            <p></p>
+            <p dir="rtl">بعد عمل التعديلات المطلوبة حصلنا على كود HTML خالي من الأخطاء والتحذيرات</p>
+            <hr>
+            <h3 dir="rtl">إختبار كود الـ CSS</h3>
+            <p dir="rtl">سأقوم بنسخ كود الـ CSS للموقع التالي <strong dir="rtl"><a href="https://jigsaw.w3.org/css-validator/#validate_by_input" rel="nofollow noopener" dir="rtl">من هنا</a></strong><br>
+               .<br>
+            </p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/15/8.png" alt="image" width="625" height="67"></a></div>
+            <br>
+            لا يوجد لدي أي أخطاء
+            <p></p>
+            <hr>
+            <p dir="rtl"><strong dir="rtl">في حال كان لديك أي خطأ فسيتم توضيح مكان الخطأ وسبب الخطأ كالتالي:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/15/9.png" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl"><strong dir="rtl">الخطأ في:</strong><br>
+               <strong dir="rtl">- السطر:</strong> الـ 13<br>
+               <strong dir="rtl">- الكلاس:</strong> <code dir="ltr">.container</code><br>
+               <strong dir="rtl">- سبب المشكلة :</strong> فاصلة منقوطة مفقودة قبل الخاصية overflow:<br>
+               <img src="../../../images/projects/facebook_project/15/10.png" alt="image" class="image">
+            </p>
+            <hr>
+            <h2 dir="rtl">إضافة أكواد الـ Meta</h2>
+            <p dir="rtl"><strong dir="rtl">1- إضافة وصف الموقع description :</strong><br>
+               قم بالبحث في قوقل عن facebook وستجد النتيجة التالية:<br>
+               <img src="../../../images/projects/facebook_project/15/11.png" alt="image" class="image">
+            </p>
+            <p dir="rtl">هل تلاحظوا الجملة المظلل عليها باللون الأخضر؟ و يا ترى من أين تأتي هذه الجملة؟</p>
+            <p dir="rtl">حتى نقوم بإضافة هذا الوصف سنستخدم Meta Description Tag كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">name=</span><span style="color: #4e9a06">"description"</span> <span style="color: #c4a000">content=</span><span style="color: #4e9a06">"Create an account or log into Facebook. Connect with friends, family and other people you know. Share photos and videos, send messages and get updates."</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">تذكر أننا دائماً نضع اكواد الـ Meta في منطقة الـ head</strong></p>
+            <p dir="rtl">هنا مصدر لتعلم المزيد عن هذا الوسم:</p>
+            <hr>
+            <p dir="rtl">الـ Meta tags عديدة وهي وسوم تقوم بوصف محتوى موقعك بشكل عام ولديها تأثير غير مباشر بتحسين تقييم موقعك على شبكة الإنترنت ما يسمى الـ SEO بإمكانك البحث عنها ومعرفة إستخدام كل تاق وفائدتة بالإضافة للإطلاع على المصدر التالي:<br></p>
+            <p></p>
+            <hr>
+            <h4 dir="rtl">بهذا نكون قد إنتهينا من مشروع تطوير واجهة موقع الفيس بوك أتمنى بأن تكونوا قد إستفدتم وأن تكونوا إستمتعتم بهذه التجربة.</h4>
+            <p dir="rtl">اكواد المشروع على Codepen<br></p>
+            <p></p>
+            <hr>
+         </div>
+      </div>
+      <script src="../../../js/main.js"></script>
+   </body>
 </html>

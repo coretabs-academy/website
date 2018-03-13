@@ -1,72 +1,74 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>[الدرس العاشر]: HTML table</title>
-    <link rel="stylesheet" href="../../css/style.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-  </head>
-  <body>
-    <div class="navbar">
-      <div class="navbar-brand">
-        <div class="">
-          1MAC Courses
-        </div>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>[الدرس العاشر]: HTML table</title>
+      <link rel="stylesheet" href="../../css/style.css">
+      <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+   </head>
+   <body>
+      <div class="navbar">
+         <div class="navbar-brand">
+            <div class="">
+               1MAC Courses
+            </div>
+         </div>
+         <div class="icon-container">
+            <div class="humberger-icon">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+         </div>
+         <div class="navbar-nav">
+            <nav>
+               <div class="close">
+                  أغلق <i class="fas fa-times"></i>
+               </div>
+               <a href="../../index.html">الرئيسية</a>
+               <a href="../html_css/html-css.html">HTML & CSS</a>
+               <a href="../javascript/javascript.html">JavaScript</a>
+               <a href="../git/git.html">Git</a>
+               <a href="../projects/projects.html">المشاريع</a>
+            </nav>
+         </div>
       </div>
-      <div class="icon-container">
-        <div class="humberger-icon">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-      <div class="navbar-nav">
-        <nav>
-          <div class="close">
-            أغلق <i class="fas fa-times"></i>
-          </div>
-          <a href="../../index.html">الرئيسية</a>
-          <a href="../html_css/html-css.html">HTML & CSS</a>
-          <a href="../javascript/javascript.html">JavaScript</a>
-          <a href="../git/git.html">Git</a>
-          <a href="../projects/projects.html">المشاريع</a>
-        </nav>
-      </div>
-    </div>
-    <div class="container">
-      <div class="cooked">
-  <h1 dir="rtl">الجداول Table</h1>
-  <hr>
-  <p dir="rtl">نعرف جميعاً بأن أي جدول يحتوي على صفوف وكل صف يحتوي على خلايا <strong dir="rtl">كالتالي:</strong><br>
-     <img src="../../images/html_css/10/1.png" alt="image" class="image">
-  </p>
-  <p dir="rtl"><strong dir="rtl">بنفس هذه الفكرة نستطيع إنشاء جداول في الـ HTML حيث يلزمنا التالي:</strong><br>
-     1- بدأية تعريف الجدول بإستخدام وسم <code dir="ltr">&lt;table&gt;</code><br>
-     2- تعريف الصف بإستخدام الوسم <code dir="ltr">&lt;tr&gt;</code><br>
-     3- تعريف خلايا الصف بإستخدام الوسم <code dir="ltr">&lt;td&gt;</code>
-  </p>
-  <p dir="rtl"><strong dir="rtl">لنقم بعمل جدول بسيط:</strong><br></p>
-  <img class="image" src="../../images/html_css/10/2.png">
-  <p></p>
-  <p dir="rtl">لاحظ قمنا بتعريف الجدول بوسم <code dir="ltr">table</code> كالتالي:</p>
-  <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;table&gt;</span>
+      <div class="container">
+         <div class="cooked">
+            <h1 dir="rtl">الجداول Table</h1>
+            <hr>
+            <p dir="rtl">نعرف جميعاً بأن أي جدول يحتوي على صفوف وكل صف يحتوي على خلايا <strong dir="rtl">كالتالي:</strong><br>
+               <img src="../../images/html_css/10/1.png" alt="image" class="image">
+            </p>
+            <p dir="rtl"><strong dir="rtl">بنفس هذه الفكرة نستطيع إنشاء جداول في الـ HTML حيث يلزمنا التالي:</strong><br>
+               1- بدأية تعريف الجدول بإستخدام وسم <code dir="ltr">&lt;table&gt;</code><br>
+               2- تعريف الصف بإستخدام الوسم <code dir="ltr">&lt;tr&gt;</code><br>
+               3- تعريف خلايا الصف بإستخدام الوسم <code dir="ltr">&lt;td&gt;</code>
+            </p>
+            <p dir="rtl"><strong dir="rtl">لنقم بعمل جدول بسيط:</strong><br></p>
+            <img class="image" src="../../images/html_css/10/2.png">
+            <p></p>
+            <p dir="rtl">لاحظ قمنا بتعريف الجدول بوسم <code dir="ltr">table</code> كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;table&gt;</span>
     <span style="color: #8f5902; font-style: italic">&lt;!--تعريف الجدول--&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/table&gt;</span>
-</pre></div>
-
-
-  <p dir="rtl">ثم قمت بعمل الصف الأول بوسم <code dir="ltr">tr</code> كالتالي:</p>
-  <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;table&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl">ثم قمت بعمل الصف الأول بوسم <code dir="ltr">tr</code> كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;table&gt;</span>
     <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
         <span style="color: #8f5902; font-style: italic">&lt;!--تعريف صف--&gt;</span>
     <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/table&gt;</span>
-</pre></div>
-
-  <p dir="rtl">ثم قمت بعمل كل خلية بداخل الجدول بالوسم <code dir="ltr">td</code> كالتالي:</p>
-  <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;table</span> <span style="color: #c4a000">border=</span><span style="color: #4e9a06">“1”</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl">ثم قمت بعمل كل خلية بداخل الجدول بالوسم <code dir="ltr">td</code> كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;table</span> <span style="color: #c4a000">border=</span><span style="color: #4e9a06">“1”</span><span style="color: #204a87; font-weight: bold">&gt;</span>
    <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
       <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>Cell 1<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
       <span style="color: #8f5902; font-style: italic">&lt;!--الخلية الأولى في الصف--&gt;</span>
@@ -74,16 +76,17 @@
       <span style="color: #8f5902; font-style: italic">&lt;!--الخلية الثانية في الصف--&gt;</span>
    <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/table&gt;</span>
-</pre></div>
-
-  <p dir="rtl">اذا ما قمنا به في الكود أعلاة هو تعريف جدول يحتوي على صف واحد وبداخل هذا الصف يوجد خليتين كما هو موضح في الصورة أعلاة.</p>
-  <hr>
-  <h4 dir="rtl">لنقوم بعمل الجدول التالي:</h4>
-  <p></p>
-  <img class="image" src="../../images/html_css/10/3.png">
-  <p></p>
-  <p dir="rtl">نحتاج إلى أن نقوم بتعريف الجدول ومن ثم تعريف ثلاثة صفوف كالتالي:</p>
-  <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;table</span> <span style="color: #c4a000">border=</span><span style="color: #4e9a06">“1”</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl">اذا ما قمنا به في الكود أعلاة هو تعريف جدول يحتوي على صف واحد وبداخل هذا الصف يوجد خليتين كما هو موضح في الصورة أعلاة.</p>
+            <hr>
+            <h4 dir="rtl">لنقوم بعمل الجدول التالي:</h4>
+            <p></p>
+            <img class="image" src="../../images/html_css/10/3.png">
+            <p></p>
+            <p dir="rtl">نحتاج إلى أن نقوم بتعريف الجدول ومن ثم تعريف ثلاثة صفوف كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;table</span> <span style="color: #c4a000">border=</span><span style="color: #4e9a06">“1”</span><span style="color: #204a87; font-weight: bold">&gt;</span>
    <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
       <span style="color: #8f5902; font-style: italic">&lt;!--الصف الأول--&gt;</span>
    <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
@@ -94,10 +97,11 @@
       <span style="color: #8f5902; font-style: italic">&lt;!--الصف الثالث--&gt;</span>
    <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/table&gt;</span>
-</pre></div>
-
-  <p dir="rtl">كما نلاحظ لدينا في كل صف ثلاث خلايا اذا لنقوم بإضافتها كالتالي:</p>
-  <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;table</span> <span style="color: #c4a000">border=</span><span style="color: #4e9a06">“1”</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl">كما نلاحظ لدينا في كل صف ثلاث خلايا اذا لنقوم بإضافتها كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;table</span> <span style="color: #c4a000">border=</span><span style="color: #4e9a06">“1”</span><span style="color: #204a87; font-weight: bold">&gt;</span>
    <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
       <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>
          <span style="color: #8f5902; font-style: italic">&lt;!--الخلية الأولى بالصف الأول--&gt;</span>
@@ -132,10 +136,11 @@
       <span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
    <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/table&gt;</span>
-</pre></div>
-
-  <p dir="rtl">لنقم الأن بإضافة المحتوى الخاص بكل خلية كالتالي:</p>
-  <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;table</span> <span style="color: #c4a000">border=</span><span style="color: #4e9a06">“1”</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl">لنقم الأن بإضافة المحتوى الخاص بكل خلية كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;table</span> <span style="color: #c4a000">border=</span><span style="color: #4e9a06">“1”</span><span style="color: #204a87; font-weight: bold">&gt;</span>
    <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
       <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>Time<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
       <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>Sunday<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
@@ -152,21 +157,22 @@
       <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>class 4<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
    <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/table&gt;</span>
-</pre></div>
-
-  <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-  <img class="image" src="../../images/html_css/10/4.png">
-  <p></p>
-  <hr>
-  <h4 dir="rtl">لنفترض أننا الأن نريد أن نقوم بعمل الجدول التالي:</h4>
-  <p></p>
-  <img class="image" src="../../images/html_css/10/5.png">
-  <p></p>
-  <p dir="rtl">لاحظ اننا الأن لدينا في الصف الثالث خليتين فقط بينما في بقية الصفوف لدينا ثلاث خلايا<br>
-     <img src="../../images/html_css/10/6.png" alt="image" width="257" height="153">
-  </p>
-  <p dir="rtl">لنقم بعمل الجدول كما قمنا سابقاً ولكن هذه المرة الصف الثالث سيحتوي على خليتين فقط كالتالي:</p>
-  <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;table</span> <span style="color: #c4a000">border=</span><span style="color: #4e9a06">“1”</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <img class="image" src="../../images/html_css/10/4.png">
+            <p></p>
+            <hr>
+            <h4 dir="rtl">لنفترض أننا الأن نريد أن نقوم بعمل الجدول التالي:</h4>
+            <p></p>
+            <img class="image" src="../../images/html_css/10/5.png">
+            <p></p>
+            <p dir="rtl">لاحظ اننا الأن لدينا في الصف الثالث خليتين فقط بينما في بقية الصفوف لدينا ثلاث خلايا<br>
+               <img src="../../images/html_css/10/6.png" alt="image" width="257" height="153">
+            </p>
+            <p dir="rtl">لنقم بعمل الجدول كما قمنا سابقاً ولكن هذه المرة الصف الثالث سيحتوي على خليتين فقط كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;table</span> <span style="color: #c4a000">border=</span><span style="color: #4e9a06">“1”</span><span style="color: #204a87; font-weight: bold">&gt;</span>
    <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
       <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>Time<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
       <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>Sunday<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
@@ -182,23 +188,24 @@
       <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>Lunch time<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
    <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/table&gt;</span>
-</pre></div>
-
-  <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-  <img class="image" src="../../images/html_css/10/7.png">
-  <p></p>
-  <p dir="rtl">هل تلاحظ اننا لم نحصل على النتيجة المطلوبة حيث وكأنه قد تم حجز مكان الخلية الثالثة في الصف الثالث بينما كنا نريد أن نقوم بدمج خليتين في خلية واحدة كالتالي:<br>
-     <img src="../../images/html_css/10/8.gif" alt="colspan" width="267" height="138">
-  </p>
-  <hr>
-  <h2 dir="rtl">في الجداول نستطيع دمج الخلايا بطريقتين:</h2>
-  <h4 dir="rtl">1- دمج الخلايا أفقياً colspan:</h4>
-  <p dir="rtl">حيث يتم دمج خلية مع العدد المطلوب من الخلايا التي تليها كالتالي:<br>
-     <img src="../../images/html_css/10/9.gif" alt="colspan1" width="267" height="138">
-  </p>
-  <p dir="rtl">للقيام بهذا نستخدم <code dir="ltr">colspan attribute</code> لنقم بتجربة ذلك على مثالنا السابق ولنرى اذا ما كنا سنحصل على النتيجة التي أردناها.</p>
-  <p dir="rtl">للقيام بذلك سنحتاج إلى أن نقوم بطلب دمج خليتين بإستخدام <code dir="ltr">colspan="2"</code> في وسم الخلية التي نرغب بتطبيق ذلك عليها وفي حالتنا نريد تطبيق ذلك على الخلية الثانية في الصف الثالث كالتالي:</p>
-  <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;table</span> <span style="color: #c4a000">border=</span><span style="color: #4e9a06">"1"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <img class="image" src="../../images/html_css/10/7.png">
+            <p></p>
+            <p dir="rtl">هل تلاحظ اننا لم نحصل على النتيجة المطلوبة حيث وكأنه قد تم حجز مكان الخلية الثالثة في الصف الثالث بينما كنا نريد أن نقوم بدمج خليتين في خلية واحدة كالتالي:<br>
+               <img src="../../images/html_css/10/8.gif" alt="colspan" width="267" height="138">
+            </p>
+            <hr>
+            <h2 dir="rtl">في الجداول نستطيع دمج الخلايا بطريقتين:</h2>
+            <h4 dir="rtl">1- دمج الخلايا أفقياً colspan:</h4>
+            <p dir="rtl">حيث يتم دمج خلية مع العدد المطلوب من الخلايا التي تليها كالتالي:<br>
+               <img src="../../images/html_css/10/9.gif" alt="colspan1" width="267" height="138">
+            </p>
+            <p dir="rtl">للقيام بهذا نستخدم <code dir="ltr">colspan attribute</code> لنقم بتجربة ذلك على مثالنا السابق ولنرى اذا ما كنا سنحصل على النتيجة التي أردناها.</p>
+            <p dir="rtl">للقيام بذلك سنحتاج إلى أن نقوم بطلب دمج خليتين بإستخدام <code dir="ltr">colspan="2"</code> في وسم الخلية التي نرغب بتطبيق ذلك عليها وفي حالتنا نريد تطبيق ذلك على الخلية الثانية في الصف الثالث كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;table</span> <span style="color: #c4a000">border=</span><span style="color: #4e9a06">"1"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
    <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
       <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>Time<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
       <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>Sunday<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
@@ -214,23 +221,24 @@
       <span style="color: #204a87; font-weight: bold">&lt;td</span> <span style="color: #c4a000">colspan=</span><span style="color: #4e9a06">"2"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Lunch time<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
    <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/table&gt;</span>
-</pre></div>
-
-  <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-  <img class="image" src="../../images/html_css/10/10.png">
-  <br>
-  رائع! حصلنا على الشكل المطلوب.
-  <p></p>
-  <hr>
-  <h4 dir="rtl">1- دمج الخلايا عمودياً rowspan:</h4>
-  <p dir="rtl">حيث يتم دمج خلية مع العدد المطلوب من الخلايا التي تقع أسفلها كالتالي:<br>
-     <img src="../../images/html_css/10/11.gif" alt="rowspan" width="267" height="138">
-  </p>
-  <p dir="rtl">لنقوم بعمل الجدول التالي:<br></p>
-  <img class="image" src="../../images/html_css/10/12.png">
-  <p></p>
-  <p dir="rtl">في البدأية لنقم بحذف الخلية التي تحتوي على 14:00pm ونشاهد النتيجة</p>
-  <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;table</span> <span style="color: #c4a000">border=</span><span style="color: #4e9a06">"1"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <img class="image" src="../../images/html_css/10/10.png">
+            <br>
+            رائع! حصلنا على الشكل المطلوب.
+            <p></p>
+            <hr>
+            <h4 dir="rtl">1- دمج الخلايا عمودياً rowspan:</h4>
+            <p dir="rtl">حيث يتم دمج خلية مع العدد المطلوب من الخلايا التي تقع أسفلها كالتالي:<br>
+               <img src="../../images/html_css/10/11.gif" alt="rowspan" width="267" height="138">
+            </p>
+            <p dir="rtl">لنقوم بعمل الجدول التالي:<br></p>
+            <img class="image" src="../../images/html_css/10/12.png">
+            <p></p>
+            <p dir="rtl">في البدأية لنقم بحذف الخلية التي تحتوي على 14:00pm ونشاهد النتيجة</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;table</span> <span style="color: #c4a000">border=</span><span style="color: #4e9a06">"1"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
    <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
       <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>Time<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
       <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>Sunday<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
@@ -245,13 +253,14 @@
       <span style="color: #204a87; font-weight: bold">&lt;td</span> <span style="color: #c4a000">colspan=</span><span style="color: #4e9a06">"2"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Lunch time<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
    <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/table&gt;</span>
-</pre></div>
-
-  <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-  <img class="image" src="../../images/html_css/10/13.png">
-  <p></p>
-  <p dir="rtl">الأن لنقم بإضافة <code dir="ltr">rowspan="2"</code> لوسم الخلية التي تحتوي على 12:00pm ليتم دمجها كخليتين عمودياً</p>
-  <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;table</span> <span style="color: #c4a000">border=</span><span style="color: #4e9a06">"1"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <img class="image" src="../../images/html_css/10/13.png">
+            <p></p>
+            <p dir="rtl">الأن لنقم بإضافة <code dir="ltr">rowspan="2"</code> لوسم الخلية التي تحتوي على 12:00pm ليتم دمجها كخليتين عمودياً</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;table</span> <span style="color: #c4a000">border=</span><span style="color: #4e9a06">"1"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
    <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
       <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>Time<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
       <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>Sunday<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
@@ -266,22 +275,17 @@
       <span style="color: #204a87; font-weight: bold">&lt;td</span> <span style="color: #c4a000">colspan=</span><span style="color: #4e9a06">"2"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Lunch time<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
    <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/table&gt;</span>
-</pre></div>
-
-  <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-  <img class="image" src="../../images/html_css/10/14.png">
-  <p></p>
-  <p dir="rtl">رائع! حصلنا على الشكل المطلوب.</p>
-  <hr>
-  <p dir="rtl"><strong dir="rtl">ملاحظة:</strong> تم وضع هذا الدرس من أجل توضيح ما سنحتاج إلية في درس تطبيقي ولم يتم وضعه لتغطية جميع خصائص الجداول لهذا أرجوا الإطلاع على <a href="https://www.w3schools.com/html/html_tables.asp" rel="nofollow noopener" dir="rtl">هذا المصدر</a> لمعرفة المزيد عن الجداول في الـ HTML.</p>
-  <hr>
-
-
-
-</div>
-    </div>
-
-
-    <script src="../../js/main.js"></script>
-  </body>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <img class="image" src="../../images/html_css/10/14.png">
+            <p></p>
+            <p dir="rtl">رائع! حصلنا على الشكل المطلوب.</p>
+            <hr>
+            <p dir="rtl"><strong dir="rtl">ملاحظة:</strong> تم وضع هذا الدرس من أجل توضيح ما سنحتاج إلية في درس تطبيقي ولم يتم وضعه لتغطية جميع خصائص الجداول لهذا أرجوا الإطلاع على <a href="https://www.w3schools.com/html/html_tables.asp" rel="nofollow noopener" dir="rtl">هذا المصدر</a> لمعرفة المزيد عن الجداول في الـ HTML.</p>
+            <hr>
+         </div>
+      </div>
+      <script src="../../js/main.js"></script>
+   </body>
 </html>

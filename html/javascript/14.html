@@ -1,183 +1,187 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>[الدرس الحادي عشر] Functions</title>
-    <link rel="stylesheet" href="../../css/style.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-  </head>
-  <body>
-    <div class="navbar">
-      <div class="navbar-brand">
-        <div class="">
-          1MAC Courses
-        </div>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>[الدرس الحادي عشر] Functions</title>
+      <link rel="stylesheet" href="../../css/style.css">
+      <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+   </head>
+   <body>
+      <div class="navbar">
+         <div class="navbar-brand">
+            <div class="">
+               1MAC Courses
+            </div>
+         </div>
+         <div class="icon-container">
+            <div class="humberger-icon">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+         </div>
+         <div class="navbar-nav">
+            <nav>
+               <div class="close">
+                  أغلق <i class="fas fa-times"></i>
+               </div>
+               <a href="../../index.html">الرئيسية</a>
+               <a href="../html_css/html-css.html">HTML & CSS</a>
+               <a href="../javascript/javascript.html">JavaScript</a>
+               <a href="../git/git.html">Git</a>
+               <a href="../projects/projects.html">المشاريع</a>
+            </nav>
+         </div>
       </div>
-      <div class="icon-container">
-        <div class="humberger-icon">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-      <div class="navbar-nav">
-        <nav>
-          <div class="close">
-            أغلق <i class="fas fa-times"></i>
-          </div>
-          <a href="../../index.html">الرئيسية</a>
-          <a href="../html_css/html-css.html">HTML & CSS</a>
-          <a href="../javascript/javascript.html">JavaScript</a>
-          <a href="../git/git.html">Git</a>
-          <a href="../projects/projects.html">المشاريع</a>
-        </nav>
-      </div>
-    </div>
-    <div class="container">
-      <div class="cooked">
-
-          <h1>الدوال Functions</h1>
-        <hr>
-   <p dir="rtl">في هذا الدرس سنتعلم الدوال (functions) وكيف أنها تعبر أحد أهم اللبنات الأساسية في لغة الجافاسكربت.</p>
-   <hr>
-   <h2 dir="rtl">مثال من الحياة الواقعية</h2>
-   <p dir="rtl">الـ functions نعامل معها بشكل دوري في حياتنا اليومية فعلى سبيل المثال أنت بذاتك تعمل كـ function عند ذهابك للدوام وقيامك بالأعمال التي اسندت اليك. كذلك أعضاء جسمك تقوم بعمل كالـ functions.</p>
-   <h4 dir="rtl">لنأخذ عضو اليد على سبيل المثال:</h4>
-   <p dir="rtl">تخيل أنك في كل مرة تريد أن تقوم بإستخدام يدك تحتاج إلى يد جديدة ولا يمكنك إستخدام اليد السابقة.<br>
-       <img class="image" src="../../images/javascript/14/1.png">
-
-   </p>
-   <p dir="rtl"><strong dir="rtl">الأمر جنوني اليس كذلك؟</strong><br>
-      ستحتاج إلى مئات الأيدي في اليوم للقيام بمهامك. وربما خلال فترة زمنية ستصبح غارق بين هذه الأيدي ولن تستطيع القيام بأي مهمة جديدة.
-   </p>
-   <p dir="rtl"><strong dir="rtl">مالذي يحصل في الواقع:</strong><br>
-      في الواقع ليس لديك سوى يدين ويتم إستخدامهما من أجل جميع الوظائف لنقوم بتحليل طريقة عمل أحد اليدين.
-   </p>
-   <p dir="rtl"><strong dir="rtl">1- يدك معرفة في جسدك وتم تحديد الوظائف التي تستطيع القيام بها</strong><br>
-      يدك موجودة في جسدك مسبقاً ولا يتم خلقها عند الحاجة وكذلك تم تعريف المهام التي لها القدرة على القيام بها.
-   </p>
-   <p dir="rtl"><strong dir="rtl">2- يدك لا تعمل إلا عندما تقوم بإستدعائها</strong><br>
-      يدك في وضعها الطبيعي ساكنه ولا تقوم بعمل أي شئ الإ عند رغبتك بذلك
-   </p>
-   <p dir="rtl"><strong dir="rtl">3- عند إستدعائك ليدك تقوم بالعمل وفق المعطيات التي تقوم بإعطائها</strong><br>
-      في حال اردت إستخدام يدك تقوم بإستدعائها وتحديد المهمة التي ستقوم بها.
-   </p>
-   <h3 dir="rtl">دعونا نقوم بتلخيص هذه النقاط في مثال عملي:</h3>
-   <ul dir="rtl">
-      <li dir="rtl">
-         <p dir="rtl">عندما تريد أن تقوم بصفع أحد فأنت تقوم <strong dir="rtl">بإستدعاء يدك</strong> وإرسال الأمر <strong dir="rtl">صفع</strong><br>
-            <img class="image" src="../../images/javascript/14/2.gif" style="max-width:300px;">
-         </p>
-      </li>
-      <li dir="rtl">
-         <p dir="rtl">عندما تريد أن إلقاء التحية فأنت تقوم <strong dir="rtl">بإستدعاء يدك</strong> وإرسال الأمر <strong dir="rtl">تحية</strong><br>
-            <img class="image" src="../../images/javascript/14/3.gif" style="max-width:300px;">
-         </p>
-      </li>
-   </ul>
-   <p dir="rtl"><strong dir="rtl">ماذا نستنتج؟</strong><br>
-      نستطيع أن نستنتج بأننا نقوم بإستخدام نفس اليد للقيام بالعديد من الوظائف وهذا ما يسمى بالـ function ببساطة
-   </p>
-   <hr>
-   <h2 dir="rtl">لنقم الأن بتعريف الـ Function ؟</h2>
-   <p dir="rtl">نستطيع أن نعرف الـ function بأنها هي مجموعة من الأوامر (المهام) المعرفة تحت إسم معين (يد) والتي تقوم بوظيفة محددة عند منادتها (ساكنة لحين إستدعائها) .</p>
-   <hr>
-   <h2 dir="rtl">الـ Functions في الجافاسكربت</h2>
-   <p dir="rtl">الجافاسكربت تسمى بـ functional programing language فالدوال هي في قلب هذه اللغة.</p>
-   <p dir="rtl"><strong dir="rtl">ماذا أعني بأن الـ functions هي في قلب الجافاسكربت؟</strong><br>
-      جميعنا في هذه المرحلة نعرف الكود التالي:
-   </p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">();</span>
-</pre></div>
-
-   <p dir="rtl">نعرف أن الكود اعلاة له وظيفة محددة وهي طباعة مهما اردت في الـ console. لحظة هل قلنا <strong dir="rtl">وظيفة</strong> لنجرب إسقاط النقاط الثلاث التي ذكرناها في المثال اعلاة على هذا السطر البرمجي لتعرف اذا ما كان function ام لا.</p>
-   <hr>
-   <details dir="rtl" open="">
-      <summary dir="rtl">
-         هنا النقاط قم بمراجعتها
-      </summary>
-      <p dir="rtl"><strong dir="rtl">1- يدك معرفة في جسدك وتم تحديد الوظائف التي تستطيع القيام بها</strong></p>
-      <p dir="rtl"><strong dir="rtl">2- يدك لا تعمل إلا عندما تقوم بإستدعائها</strong></p>
-      <p dir="rtl"><strong dir="rtl">3- عند إستدعائك ليدك تقوم بالعمل وفق المعطيات التي تقوم بإعطائها</strong></p>
-   </details>
-   <hr>
-   <p dir="rtl"><strong dir="rtl">1- الأمر console.log معرف مسبقاً وتم تحديد وظيفته بالطباعة على الـ console</strong></p>
-   <p dir="rtl"><strong dir="rtl">2-  الأمر console.log لا يعمل إلا عندما نقوم بإستدعائة</strong></p>
-   <p dir="rtl"><strong dir="rtl">3- عند إستدعائنا للأمر console.log يقوم بطباعة المعطيات التي قمنا بإعطائة</strong></p>
-   <h3 dir="rtl">ماذا نستنتج؟</h3>
-   <p dir="rtl">اذا نستنتج بأن الأمر البرمجي</p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">();</span>
-</pre></div>
-
-   <p dir="rtl">هو عبارة عن Function تم تعريفها في قلب المتصفح لتقوم بتنفيذ وظيفتها المحددة.</p>
-   <p dir="rtl"><strong dir="rtl">دعني أسئلك كيف تعمل يدك وما المنطق خلفها؟</strong><br>
-      اليد عملها في الحقيقة معقد جداً فعندما تقوم بإستدعائها ما يحصل هو عمليات كثيرة كإرسال الاوامر للدماغ ومن ثم اوامر للاعصاب وغيرة من العملية التي تحصل في كواليس جسدك بينما تتم الإستجابة في اجزاء من الثانية.
-   </p>
-   <p dir="rtl">هكذا في الحقيقة تعمل البرمجة فلا تعتقد ان الامر بهذه البساطة أن تقوم بكتابة <code dir="ltr">console.log</code> ويتم طباعة ما تريدة مباشرة فالاستجابة التي تجدها والنتيجة ليست سوى ما تم ارجاعة لنافذة الـ console بعد المرور بعمليات واوامر كثيرة ربما تتعدى عشرات الأسطر البرمجية في كواليس المتصفح من أجل طباعة حرف واحد.</p>
-   <h3 dir="rtl">ماذا لو لم يكن هناك Function ؟</h3>
-   <p dir="rtl"><strong dir="rtl">تخيل بأنه لم يتم تعريف الدالة console.log وتريد القيام بطباعة شي على نافذة الـ console فكيف ستقوم بذلك ؟</strong></p>
-   <ul dir="rtl">
-      <li dir="rtl">
-         <p dir="rtl">لنفترض ان الأوامر التي تم كتابتها للدالة console.log هي 100 سطر فاذا لم تكن الدالة هذه معرفة فهذا يعني أنك ستحتاج الى ان تقوم بكتابة 100 سطر برمجي للطباعة على الـ console حتى وان كنت تريد طباعة حرف واحد. فقط تخيل ذلك, بالنسبة لي سأترك البرمجة وابحث عن عمل جديد.</p>
-      </li>
-      <li dir="rtl">
-         <p dir="rtl">لنفترض بأنك تريد طباعة شي أخر وقتها ستقوم بتكرير ذلك الكود مرة اخرى في كل مرة تريد طباعة شئ ما يعني بانه من اجل عمل ابسط برنامج ستحتاج ربما الى مئات الأسطر ما يعني استهلاك للذاكرة والمصادر, هل تذكر ما قلنا بانه قد يحصل لك في حال انك اردت يد جديدة للقيام بكل مهمة وانك خلال فترة من الزمن ستصبح مكدس بالأيدي؟ هذا ما سيحصل بالضبط لبرنامجك.</p>
-      </li>
-   </ul>
-   <p dir="rtl"><strong dir="rtl">من خلال النقاط التي ذكرناها أعلاة تستطيع ان تستخلص كيف أن الـ functions تسهل علينا الأمور وتساعدنا على كتابة برنامج نظيف, مقروء, خفيف وسهل الصيانة.</strong></p>
-   <hr>
-   <h2 dir="rtl">كيف تقوم بكتابة الـ Function</h2>
-   <p dir="rtl">تحتاج أن تقوم بإخبار الجافاسكربت بأنك تريد تعريف function ومن ثم تتبع ذلك بإسم الـ function الخاصة بك كالتالي:</p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(){</span>
+      <div class="container">
+         <div class="cooked">
+            <h1>الدوال Functions</h1>
+            <hr>
+            <p dir="rtl">في هذا الدرس سنتعلم الدوال (functions) وكيف أنها تعبر أحد أهم اللبنات الأساسية في لغة الجافاسكربت.</p>
+            <hr>
+            <h2 dir="rtl">مثال من الحياة الواقعية</h2>
+            <p dir="rtl">الـ functions نعامل معها بشكل دوري في حياتنا اليومية فعلى سبيل المثال أنت بذاتك تعمل كـ function عند ذهابك للدوام وقيامك بالأعمال التي اسندت اليك. كذلك أعضاء جسمك تقوم بعمل كالـ functions.</p>
+            <h4 dir="rtl">لنأخذ عضو اليد على سبيل المثال:</h4>
+            <p dir="rtl">تخيل أنك في كل مرة تريد أن تقوم بإستخدام يدك تحتاج إلى يد جديدة ولا يمكنك إستخدام اليد السابقة.<br>
+               <img class="image" src="../../images/javascript/14/1.png">
+            </p>
+            <p dir="rtl"><strong dir="rtl">الأمر جنوني اليس كذلك؟</strong><br>
+               ستحتاج إلى مئات الأيدي في اليوم للقيام بمهامك. وربما خلال فترة زمنية ستصبح غارق بين هذه الأيدي ولن تستطيع القيام بأي مهمة جديدة.
+            </p>
+            <p dir="rtl"><strong dir="rtl">مالذي يحصل في الواقع:</strong><br>
+               في الواقع ليس لديك سوى يدين ويتم إستخدامهما من أجل جميع الوظائف لنقوم بتحليل طريقة عمل أحد اليدين.
+            </p>
+            <p dir="rtl"><strong dir="rtl">1- يدك معرفة في جسدك وتم تحديد الوظائف التي تستطيع القيام بها</strong><br>
+               يدك موجودة في جسدك مسبقاً ولا يتم خلقها عند الحاجة وكذلك تم تعريف المهام التي لها القدرة على القيام بها.
+            </p>
+            <p dir="rtl"><strong dir="rtl">2- يدك لا تعمل إلا عندما تقوم بإستدعائها</strong><br>
+               يدك في وضعها الطبيعي ساكنه ولا تقوم بعمل أي شئ الإ عند رغبتك بذلك
+            </p>
+            <p dir="rtl"><strong dir="rtl">3- عند إستدعائك ليدك تقوم بالعمل وفق المعطيات التي تقوم بإعطائها</strong><br>
+               في حال اردت إستخدام يدك تقوم بإستدعائها وتحديد المهمة التي ستقوم بها.
+            </p>
+            <h3 dir="rtl">دعونا نقوم بتلخيص هذه النقاط في مثال عملي:</h3>
+            <ul dir="rtl">
+               <li dir="rtl">
+                  <p dir="rtl">عندما تريد أن تقوم بصفع أحد فأنت تقوم <strong dir="rtl">بإستدعاء يدك</strong> وإرسال الأمر <strong dir="rtl">صفع</strong><br>
+                     <img class="image" src="../../images/javascript/14/2.gif" style="max-width:300px;">
+                  </p>
+               </li>
+               <li dir="rtl">
+                  <p dir="rtl">عندما تريد أن إلقاء التحية فأنت تقوم <strong dir="rtl">بإستدعاء يدك</strong> وإرسال الأمر <strong dir="rtl">تحية</strong><br>
+                     <img class="image" src="../../images/javascript/14/3.gif" style="max-width:300px;">
+                  </p>
+               </li>
+            </ul>
+            <p dir="rtl"><strong dir="rtl">ماذا نستنتج؟</strong><br>
+               نستطيع أن نستنتج بأننا نقوم بإستخدام نفس اليد للقيام بالعديد من الوظائف وهذا ما يسمى بالـ function ببساطة
+            </p>
+            <hr>
+            <h2 dir="rtl">لنقم الأن بتعريف الـ Function ؟</h2>
+            <p dir="rtl">نستطيع أن نعرف الـ function بأنها هي مجموعة من الأوامر (المهام) المعرفة تحت إسم معين (يد) والتي تقوم بوظيفة محددة عند منادتها (ساكنة لحين إستدعائها) .</p>
+            <hr>
+            <h2 dir="rtl">الـ Functions في الجافاسكربت</h2>
+            <p dir="rtl">الجافاسكربت تسمى بـ functional programing language فالدوال هي في قلب هذه اللغة.</p>
+            <p dir="rtl"><strong dir="rtl">ماذا أعني بأن الـ functions هي في قلب الجافاسكربت؟</strong><br>
+               جميعنا في هذه المرحلة نعرف الكود التالي:
+            </p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">();</span>
+</pre>
+            </div>
+            <p dir="rtl">نعرف أن الكود اعلاة له وظيفة محددة وهي طباعة مهما اردت في الـ console. لحظة هل قلنا <strong dir="rtl">وظيفة</strong> لنجرب إسقاط النقاط الثلاث التي ذكرناها في المثال اعلاة على هذا السطر البرمجي لتعرف اذا ما كان function ام لا.</p>
+            <hr>
+            <details dir="rtl" open="">
+               <summary dir="rtl">
+                  هنا النقاط قم بمراجعتها
+               </summary>
+               <p dir="rtl"><strong dir="rtl">1- يدك معرفة في جسدك وتم تحديد الوظائف التي تستطيع القيام بها</strong></p>
+               <p dir="rtl"><strong dir="rtl">2- يدك لا تعمل إلا عندما تقوم بإستدعائها</strong></p>
+               <p dir="rtl"><strong dir="rtl">3- عند إستدعائك ليدك تقوم بالعمل وفق المعطيات التي تقوم بإعطائها</strong></p>
+            </details>
+            <hr>
+            <p dir="rtl"><strong dir="rtl">1- الأمر console.log معرف مسبقاً وتم تحديد وظيفته بالطباعة على الـ console</strong></p>
+            <p dir="rtl"><strong dir="rtl">2-  الأمر console.log لا يعمل إلا عندما نقوم بإستدعائة</strong></p>
+            <p dir="rtl"><strong dir="rtl">3- عند إستدعائنا للأمر console.log يقوم بطباعة المعطيات التي قمنا بإعطائة</strong></p>
+            <h3 dir="rtl">ماذا نستنتج؟</h3>
+            <p dir="rtl">اذا نستنتج بأن الأمر البرمجي</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">();</span>
+</pre>
+            </div>
+            <p dir="rtl">هو عبارة عن Function تم تعريفها في قلب المتصفح لتقوم بتنفيذ وظيفتها المحددة.</p>
+            <p dir="rtl"><strong dir="rtl">دعني أسئلك كيف تعمل يدك وما المنطق خلفها؟</strong><br>
+               اليد عملها في الحقيقة معقد جداً فعندما تقوم بإستدعائها ما يحصل هو عمليات كثيرة كإرسال الاوامر للدماغ ومن ثم اوامر للاعصاب وغيرة من العملية التي تحصل في كواليس جسدك بينما تتم الإستجابة في اجزاء من الثانية.
+            </p>
+            <p dir="rtl">هكذا في الحقيقة تعمل البرمجة فلا تعتقد ان الامر بهذه البساطة أن تقوم بكتابة <code dir="ltr">console.log</code> ويتم طباعة ما تريدة مباشرة فالاستجابة التي تجدها والنتيجة ليست سوى ما تم ارجاعة لنافذة الـ console بعد المرور بعمليات واوامر كثيرة ربما تتعدى عشرات الأسطر البرمجية في كواليس المتصفح من أجل طباعة حرف واحد.</p>
+            <h3 dir="rtl">ماذا لو لم يكن هناك Function ؟</h3>
+            <p dir="rtl"><strong dir="rtl">تخيل بأنه لم يتم تعريف الدالة console.log وتريد القيام بطباعة شي على نافذة الـ console فكيف ستقوم بذلك ؟</strong></p>
+            <ul dir="rtl">
+               <li dir="rtl">
+                  <p dir="rtl">لنفترض ان الأوامر التي تم كتابتها للدالة console.log هي 100 سطر فاذا لم تكن الدالة هذه معرفة فهذا يعني أنك ستحتاج الى ان تقوم بكتابة 100 سطر برمجي للطباعة على الـ console حتى وان كنت تريد طباعة حرف واحد. فقط تخيل ذلك, بالنسبة لي سأترك البرمجة وابحث عن عمل جديد.</p>
+               </li>
+               <li dir="rtl">
+                  <p dir="rtl">لنفترض بأنك تريد طباعة شي أخر وقتها ستقوم بتكرير ذلك الكود مرة اخرى في كل مرة تريد طباعة شئ ما يعني بانه من اجل عمل ابسط برنامج ستحتاج ربما الى مئات الأسطر ما يعني استهلاك للذاكرة والمصادر, هل تذكر ما قلنا بانه قد يحصل لك في حال انك اردت يد جديدة للقيام بكل مهمة وانك خلال فترة من الزمن ستصبح مكدس بالأيدي؟ هذا ما سيحصل بالضبط لبرنامجك.</p>
+               </li>
+            </ul>
+            <p dir="rtl"><strong dir="rtl">من خلال النقاط التي ذكرناها أعلاة تستطيع ان تستخلص كيف أن الـ functions تسهل علينا الأمور وتساعدنا على كتابة برنامج نظيف, مقروء, خفيف وسهل الصيانة.</strong></p>
+            <hr>
+            <h2 dir="rtl">كيف تقوم بكتابة الـ Function</h2>
+            <p dir="rtl">تحتاج أن تقوم بإخبار الجافاسكربت بأنك تريد تعريف function ومن ثم تتبع ذلك بإسم الـ function الخاصة بك كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(){</span>
 
   <span style="color: #8f5902; font-style: italic">//الأوامر التي سيتم تنفيذها عند مناداة الدالة</span>
 
 <span style="color: #000000; font-weight: bold">}</span>
-</pre></div>
-
-   <p dir="rtl">تسميه الدالة يجب أن يكون وفق نفس الشروط التي ذكرناها في درس شروط تسمية المتغيرات </p>
-   <p dir="rtl">في الكود اعلاة قمت بتعريف دالة بإسم hand لنقوم بتجربة الدالة وكتابة جملة في الـconsole عند إستدعاء الدالة</p>
-   <p dir="rtl"><strong dir="rtl">قم بعمل ملف HTML وادراج كود الجافاسكربت التالي فيه:</strong></p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(){</span>
+</pre>
+            </div>
+            <p dir="rtl">تسميه الدالة يجب أن يكون وفق نفس الشروط التي ذكرناها في درس شروط تسمية المتغيرات </p>
+            <p dir="rtl">في الكود اعلاة قمت بتعريف دالة بإسم hand لنقوم بتجربة الدالة وكتابة جملة في الـconsole عند إستدعاء الدالة</p>
+            <p dir="rtl"><strong dir="rtl">قم بعمل ملف HTML وادراج كود الجافاسكربت التالي فيه:</strong></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(){</span>
 
   <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"This is a hand ✋"</span><span style="color: #000000; font-weight: bold">);</span>
 
 <span style="color: #000000; font-weight: bold">}</span>
-</pre></div>
-
-
-   <p dir="rtl">الأن قم بفتح الصفحة ومن ثم فتح نافذة الـ console لنشاهد <strong dir="rtl">النتيجة:</strong><br></p>
-   <img class="image" src="../../images/javascript/14/4.png">
-   <p></p>
-   <p dir="rtl">لا يوجد شئ <img src="../../images/javascript/14/5.png" title=":thinking:" class="emoji" alt=":thinking:" style="width:30px;"> <strong dir="rtl">لماذا؟</strong></p>
-   <p dir="rtl">صحيح سبق وذكرنا بأن الـ function لا تقوم بأي عمل حتى يتم إستدعائها.</p>
-   <p dir="rtl"><strong dir="rtl">كيف يتم إستدعاء الـ function ؟</strong><br>
-      بنفس طريقة إستدعائك للدوال الجافاسكربت كدالة console.log لذا حتى نقوم بإستدعاء الدالة الخاصة بنا سنكتب إسمها ونتبعها بأقواس كالتالي:
-   </p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">();</span>
-</pre></div>
-
-   <p dir="rtl">ستقوم بوضع الإستدعاء في أي مكان تريدة كالتالي:</p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(){</span>
+</pre>
+            </div>
+            <p dir="rtl">الأن قم بفتح الصفحة ومن ثم فتح نافذة الـ console لنشاهد <strong dir="rtl">النتيجة:</strong><br></p>
+            <img class="image" src="../../images/javascript/14/4.png">
+            <p></p>
+            <p dir="rtl">لا يوجد شئ <img src="../../images/javascript/14/5.png" title=":thinking:" class="emoji" alt=":thinking:" style="width:30px;"> <strong dir="rtl">لماذا؟</strong></p>
+            <p dir="rtl">صحيح سبق وذكرنا بأن الـ function لا تقوم بأي عمل حتى يتم إستدعائها.</p>
+            <p dir="rtl"><strong dir="rtl">كيف يتم إستدعاء الـ function ؟</strong><br>
+               بنفس طريقة إستدعائك للدوال الجافاسكربت كدالة console.log لذا حتى نقوم بإستدعاء الدالة الخاصة بنا سنكتب إسمها ونتبعها بأقواس كالتالي:
+            </p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">();</span>
+</pre>
+            </div>
+            <p dir="rtl">ستقوم بوضع الإستدعاء في أي مكان تريدة كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(){</span>
 
    <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"This is a hand ✋"</span><span style="color: #000000; font-weight: bold">);</span>
 
 <span style="color: #000000; font-weight: bold">}</span>
 
 <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">();</span>
-</pre></div>
-
-   <p dir="rtl">في الكود أعلاة عرفنا الدالة ومن ثم قمنا بإستدعائها فالمتوقع ان تقوم بتنفيذ الأوامر التي بداخلها والتي هي طباعة الجملة المحددة<br>
-      <strong dir="rtl">النتيجة</strong><br>
-   </p>
-   <img class="image" src="../../images/javascript/14/6.png">
-   <p></p>
-   <p dir="rtl"><strong dir="rtl">رائع!</strong> تم إستدعاء الدالة.</p>
-   <hr>
-   <p dir="rtl">الأن لنقوم بإستعراض فائدة الـ functions ولنفترض بأننا قمنا بعمليات اخرى ومن ثم اردنا إستدعاء اليد مرة أخرى</p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(){</span>
+</pre>
+            </div>
+            <p dir="rtl">في الكود أعلاة عرفنا الدالة ومن ثم قمنا بإستدعائها فالمتوقع ان تقوم بتنفيذ الأوامر التي بداخلها والتي هي طباعة الجملة المحددة<br>
+               <strong dir="rtl">النتيجة</strong><br>
+            </p>
+            <img class="image" src="../../images/javascript/14/6.png">
+            <p></p>
+            <p dir="rtl"><strong dir="rtl">رائع!</strong> تم إستدعاء الدالة.</p>
+            <hr>
+            <p dir="rtl">الأن لنقوم بإستعراض فائدة الـ functions ولنفترض بأننا قمنا بعمليات اخرى ومن ثم اردنا إستدعاء اليد مرة أخرى</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(){</span>
 
 	<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"This is a hand ✋"</span><span style="color: #000000; font-weight: bold">);</span>
 <span style="color: #000000; font-weight: bold">}</span>
@@ -189,48 +193,52 @@
 <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"I want to shake someone hand..."</span><span style="color: #000000; font-weight: bold">);</span>
 
 <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">();</span>
-</pre></div>
-
-   <p dir="rtl">في الكود اعلاة عرفت اليد ومن ثم قمت بالتفكير بأخذ كوب من الماء فإستدعيت اليد ومن ثم أردت مصافحة أحد ما فقمت بإستدعاء اليد<br>
-      <strong dir="rtl">النتيجة:</strong><br>
-   </p>
-   <img class="image" src="../../images/javascript/14/7.png">
-   <p></p>
-   <p dir="rtl">لاحظت كيف أنني الأن لا أحتاج لأن أقوم بتكرير تعريف اليد وانما أقوم كل مرة بإستدعاء اليد التي تم تعريفها بكتابة<code dir="ltr">hand();</code> فقط.</p>
-   <hr>
-   <p dir="rtl">قد يبدوا الأن انه لا يوجد فرق بين استدعاء الدالة وبين كتابة الامر الذي بداخلها كون أن دالة hand لا تحتوي سوى سطر واحد ولكن في الواقع الدالة قد تحتوي على عشرات الأسطر وقتها ستدرك أهمية الدالة والفارق الذي ستصنعه بإستدعاها بإستخدام كلمة بدلاً من اعادة كتابة الأوامر كاملة.</p>
-   <hr>
-   <h2 dir="rtl">الـ Parameters والـ Arguments في الـ function</h2>
-   <p dir="rtl">قمنا سابقاً بكتابة تعريف دالة اليد كالتالي:</p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(){</span>
-
-   <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"This is a hand ✋"</span><span style="color: #000000; font-weight: bold">);</span>
-
-<span style="color: #000000; font-weight: bold">}</span>
-</pre></div>
-
-   <p dir="rtl"><strong dir="rtl">لنفترض بأنني أريد أن أحدد أي يد أريد أن أستخدم اليمين او اليسار فكيف سنقوم بذلك؟</strong><br>
-      بإمكاننا تمرير معطيات للدالة ومن ثم التعامل مع هذه المعطيات بدأخل الدالة, وللقيام بذلك سنقوم بتعريف إسم للبيانات التي نريد تمريرها بداخل الأقواس الدائرية <code dir="rtl">( /*هنا*/ )</code>.
-   </p>
-   <p dir="rtl">سأقوم بتمرير معطى بإسم whichOne <strong dir="rtl">كالتالي:</strong></p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">whichOne</span> <span style="color: #000000; font-weight: bold">){</span>
+</pre>
+            </div>
+            <p dir="rtl">في الكود اعلاة عرفت اليد ومن ثم قمت بالتفكير بأخذ كوب من الماء فإستدعيت اليد ومن ثم أردت مصافحة أحد ما فقمت بإستدعاء اليد<br>
+               <strong dir="rtl">النتيجة:</strong><br>
+            </p>
+            <img class="image" src="../../images/javascript/14/7.png">
+            <p></p>
+            <p dir="rtl">لاحظت كيف أنني الأن لا أحتاج لأن أقوم بتكرير تعريف اليد وانما أقوم كل مرة بإستدعاء اليد التي تم تعريفها بكتابة<code dir="ltr">hand();</code> فقط.</p>
+            <hr>
+            <p dir="rtl">قد يبدوا الأن انه لا يوجد فرق بين استدعاء الدالة وبين كتابة الامر الذي بداخلها كون أن دالة hand لا تحتوي سوى سطر واحد ولكن في الواقع الدالة قد تحتوي على عشرات الأسطر وقتها ستدرك أهمية الدالة والفارق الذي ستصنعه بإستدعاها بإستخدام كلمة بدلاً من اعادة كتابة الأوامر كاملة.</p>
+            <hr>
+            <h2 dir="rtl">الـ Parameters والـ Arguments في الـ function</h2>
+            <p dir="rtl">قمنا سابقاً بكتابة تعريف دالة اليد كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(){</span>
 
    <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"This is a hand ✋"</span><span style="color: #000000; font-weight: bold">);</span>
 
 <span style="color: #000000; font-weight: bold">}</span>
-</pre></div>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">لنفترض بأنني أريد أن أحدد أي يد أريد أن أستخدم اليمين او اليسار فكيف سنقوم بذلك؟</strong><br>
+               بإمكاننا تمرير معطيات للدالة ومن ثم التعامل مع هذه المعطيات بدأخل الدالة, وللقيام بذلك سنقوم بتعريف إسم للبيانات التي نريد تمريرها بداخل الأقواس الدائرية <code dir="rtl">( /*هنا*/ )</code>.
+            </p>
+            <p dir="rtl">سأقوم بتمرير معطى بإسم whichOne <strong dir="rtl">كالتالي:</strong></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">whichOne</span> <span style="color: #000000; font-weight: bold">){</span>
 
-   <p dir="rtl"><strong dir="rtl">ملاحظة:</strong> ما قمنا بتمريرة للدالة بإسم whichOne <strong dir="rtl">عند تعريفها</strong> يسمى الـ Function Parameter</p>
-   <hr>
-   <p dir="rtl"><strong dir="rtl">عند إستدعائي للدالة في المرة القادمة سأقوم بتحديد أي يد أريد أن أستخدم كالتالي:</strong></p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #4e9a06">"right"</span> <span style="color: #000000; font-weight: bold">);</span>
-</pre></div>
+   <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"This is a hand ✋"</span><span style="color: #000000; font-weight: bold">);</span>
 
-   <p dir="rtl">لاحظ مررت القيمة <code dir="ltr">right</code> بدأخل كود الإستدعاء وسأقوم بإستخدام هذه القيمة بدأخل الدالة بإستخدام الشروط <code dir="ltr">if / else</code> لمعرفة ما ان كنت قد إخترت اليد اليمين او اليسار</p>
-   <p dir="rtl"><strong dir="rtl">ملاحظة:</strong> ما القيمة التي قمنا بتمريرها للدالة (right) <strong dir="rtl">عند إستدعائها</strong> تسمى بـ Function Argument</p>
-   <hr>
-   <p dir="rtl">الأن نستطيع إستخدام الـ Parameter في تعريف الدالة لتحديد ما إن تم طلب إستخدام اليد اليسار ام اليمين بإستخدام الشروط <strong dir="rtl">كالتالي:</strong></p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">whichOne</span> <span style="color: #000000; font-weight: bold">){</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">ملاحظة:</strong> ما قمنا بتمريرة للدالة بإسم whichOne <strong dir="rtl">عند تعريفها</strong> يسمى الـ Function Parameter</p>
+            <hr>
+            <p dir="rtl"><strong dir="rtl">عند إستدعائي للدالة في المرة القادمة سأقوم بتحديد أي يد أريد أن أستخدم كالتالي:</strong></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #4e9a06">"right"</span> <span style="color: #000000; font-weight: bold">);</span>
+</pre>
+            </div>
+            <p dir="rtl">لاحظ مررت القيمة <code dir="ltr">right</code> بدأخل كود الإستدعاء وسأقوم بإستخدام هذه القيمة بدأخل الدالة بإستخدام الشروط <code dir="ltr">if / else</code> لمعرفة ما ان كنت قد إخترت اليد اليمين او اليسار</p>
+            <p dir="rtl"><strong dir="rtl">ملاحظة:</strong> ما القيمة التي قمنا بتمريرها للدالة (right) <strong dir="rtl">عند إستدعائها</strong> تسمى بـ Function Argument</p>
+            <hr>
+            <p dir="rtl">الأن نستطيع إستخدام الـ Parameter في تعريف الدالة لتحديد ما إن تم طلب إستخدام اليد اليسار ام اليمين بإستخدام الشروط <strong dir="rtl">كالتالي:</strong></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">whichOne</span> <span style="color: #000000; font-weight: bold">){</span>
 
 	<span style="color: #204a87; font-weight: bold">if</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">whichOne</span> <span style="color: #ce5c00; font-weight: bold">===</span> <span style="color: #4e9a06">"right"</span><span style="color: #000000; font-weight: bold">){</span>
 		<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"Right hand is here ✋"</span><span style="color: #000000; font-weight: bold">);</span>
@@ -242,12 +250,13 @@
 		<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"Sorry no third hand available ❌"</span><span style="color: #000000; font-weight: bold">);</span>
 	<span style="color: #000000; font-weight: bold">}</span>
 <span style="color: #000000; font-weight: bold">}</span>
-</pre></div>
-
-   <p dir="rtl">قمت في الكود أعلاة بعمل شرط يتأكد من القيمة (Argument) التي تم تمريرها للـ Parameter الذي بإسم whichOne  عند إستدعاء الدالة وعلى أساس تلك القيمة يتم طباعة جمل مختلفة.</p>
-   <p dir="rtl">في هذه المرحلة يجب أن تكون متمكن من الشروط اذا تواجه صعوبات في ذلك راجع الدرس الخاص بها <a href="https://macdiscussions.udacity.com/t/conditionals/114025" dir="rtl"></a></p>
-   <p dir="rtl"><strong dir="rtl">لنقم بتجربة هذا الكود:</strong></p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">whichOne</span> <span style="color: #000000; font-weight: bold">){</span>
+</pre>
+            </div>
+            <p dir="rtl">قمت في الكود أعلاة بعمل شرط يتأكد من القيمة (Argument) التي تم تمريرها للـ Parameter الذي بإسم whichOne  عند إستدعاء الدالة وعلى أساس تلك القيمة يتم طباعة جمل مختلفة.</p>
+            <p dir="rtl">في هذه المرحلة يجب أن تكون متمكن من الشروط اذا تواجه صعوبات في ذلك راجع الدرس الخاص بها <a href="https://macdiscussions.udacity.com/t/conditionals/114025" dir="rtl"></a></p>
+            <p dir="rtl"><strong dir="rtl">لنقم بتجربة هذا الكود:</strong></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">whichOne</span> <span style="color: #000000; font-weight: bold">){</span>
 
 	<span style="color: #204a87; font-weight: bold">if</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">whichOne</span> <span style="color: #ce5c00; font-weight: bold">===</span> <span style="color: #4e9a06">"right"</span><span style="color: #000000; font-weight: bold">){</span>
 		<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"Right hand is here ✋"</span><span style="color: #000000; font-weight: bold">);</span>
@@ -261,15 +270,16 @@
 <span style="color: #000000; font-weight: bold">}</span>
 
 <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"right"</span><span style="color: #000000; font-weight: bold">);</span>
-</pre></div>
-
-   <p dir="rtl">قمت بإستدعاء اليد اليمين.<br>
-      <strong dir="rtl">النتيجة:</strong><br>
-   </p>
-   <img class="image" src="../../images/javascript/14/8.png">
-   <p></p>
-   <p dir="rtl"><strong dir="rtl">لنجرب الكود التالي:</strong></p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">whichOne</span> <span style="color: #000000; font-weight: bold">){</span>
+</pre>
+            </div>
+            <p dir="rtl">قمت بإستدعاء اليد اليمين.<br>
+               <strong dir="rtl">النتيجة:</strong><br>
+            </p>
+            <img class="image" src="../../images/javascript/14/8.png">
+            <p></p>
+            <p dir="rtl"><strong dir="rtl">لنجرب الكود التالي:</strong></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">whichOne</span> <span style="color: #000000; font-weight: bold">){</span>
 
 	<span style="color: #204a87; font-weight: bold">if</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">whichOne</span> <span style="color: #ce5c00; font-weight: bold">===</span> <span style="color: #4e9a06">"right"</span><span style="color: #000000; font-weight: bold">){</span>
 		<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"Right hand is here ✋"</span><span style="color: #000000; font-weight: bold">);</span>
@@ -287,36 +297,17 @@
 <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"After couple lines of codes...."</span><span style="color: #000000; font-weight: bold">);</span>
 
 <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"left"</span><span style="color: #000000; font-weight: bold">);</span>
-</pre></div>
-
-   <p dir="rtl">في الكود اعلاة لنفترض بأنني قمت بإستدعاء اليد اليمنى ومن ثم بعد عدد من الأسطر البرمجية اردت إستدعاء اليد اليسرى<br>
-      <strong dir="rtl">النتيجة:</strong><br>
-   </p>
-   <img class="image" src="../../images/javascript/14/9.png">
-   <p></p>
-   <hr>
-   <p dir="rtl">قم بتجربة إستدعاء الدالة بدون تمرير إي قيمة كالتالي:</p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">whichOne</span> <span style="color: #000000; font-weight: bold">){</span>
-
-	<span style="color: #204a87; font-weight: bold">if</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">whichOne</span> <span style="color: #ce5c00; font-weight: bold">===</span> <span style="color: #4e9a06">"right"</span><span style="color: #000000; font-weight: bold">){</span>
-		<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"Right hand is here ✋"</span><span style="color: #000000; font-weight: bold">);</span>
-	<span style="color: #000000; font-weight: bold">}</span>
-	<span style="color: #204a87; font-weight: bold">else</span> <span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">whichOne</span> <span style="color: #ce5c00; font-weight: bold">===</span> <span style="color: #4e9a06">"left"</span><span style="color: #000000; font-weight: bold">){</span>
-		<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"Left hand is here  ✋"</span><span style="color: #000000; font-weight: bold">);</span>
-	<span style="color: #000000; font-weight: bold">}</span>
-	<span style="color: #204a87; font-weight: bold">else</span><span style="color: #000000; font-weight: bold">{</span>
-		<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"Sorry no third hand available ❌"</span><span style="color: #000000; font-weight: bold">);</span>
-	<span style="color: #000000; font-weight: bold">}</span>
-<span style="color: #000000; font-weight: bold">}</span>
-
-<span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">();</span>
-</pre></div>
-
-   <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-   <img class="image" src="../../images/javascript/14/10.png">
-   <p></p>
-   <p dir="rtl">لاحظ تم تنفيذ الكود الذي بدأخل الشرط else كما هو متوقع ولكنني أن اجعل البرنامج يعتبر أن اليد اليمنى هي الإفتراضية ففي حالة عدم كتابة أي شي يتم إستدعاء اليد اليمنى, وعند كتابة أي قيمة مختلفة عن الـ right او الـ left يتم إظهار الرسالة التي بالصورة السابقة. لذا سأقوم بتحديد قيمة إفتراضية للـ Parameter كالتالي:</p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">whichOne</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"right"</span> <span style="color: #000000; font-weight: bold">){</span>
+</pre>
+            </div>
+            <p dir="rtl">في الكود اعلاة لنفترض بأنني قمت بإستدعاء اليد اليمنى ومن ثم بعد عدد من الأسطر البرمجية اردت إستدعاء اليد اليسرى<br>
+               <strong dir="rtl">النتيجة:</strong><br>
+            </p>
+            <img class="image" src="../../images/javascript/14/9.png">
+            <p></p>
+            <hr>
+            <p dir="rtl">قم بتجربة إستدعاء الدالة بدون تمرير إي قيمة كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">whichOne</span> <span style="color: #000000; font-weight: bold">){</span>
 
 	<span style="color: #204a87; font-weight: bold">if</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">whichOne</span> <span style="color: #ce5c00; font-weight: bold">===</span> <span style="color: #4e9a06">"right"</span><span style="color: #000000; font-weight: bold">){</span>
 		<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"Right hand is here ✋"</span><span style="color: #000000; font-weight: bold">);</span>
@@ -330,19 +321,41 @@
 <span style="color: #000000; font-weight: bold">}</span>
 
 <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">();</span>
-</pre></div>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <img class="image" src="../../images/javascript/14/10.png">
+            <p></p>
+            <p dir="rtl">لاحظ تم تنفيذ الكود الذي بدأخل الشرط else كما هو متوقع ولكنني أن اجعل البرنامج يعتبر أن اليد اليمنى هي الإفتراضية ففي حالة عدم كتابة أي شي يتم إستدعاء اليد اليمنى, وعند كتابة أي قيمة مختلفة عن الـ right او الـ left يتم إظهار الرسالة التي بالصورة السابقة. لذا سأقوم بتحديد قيمة إفتراضية للـ Parameter كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">whichOne</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"right"</span> <span style="color: #000000; font-weight: bold">){</span>
 
-   <p dir="rtl">لاحظ أسندت له القيمة right كقيمة إفتراضية <code dir="ltr">whichOne = "right"</code>.<br>
-      <strong dir="rtl">النتيجة:</strong><br>
-   </p>
-   <img class="image" src="../../images/javascript/14/11.png">
-   <br>
-   <strong dir="rtl">رائع!</strong> قم بتجربة الكود بتمرير قيم مختلفة.
-   <p></p>
-   <hr>
-   <h2 dir="rtl">كيف كان الكود ليبدوا بدون إستخدام الـ function</h2>
-   <p dir="rtl">لنقوم بكتابة الكود التالي بدون إستخدام دالة:</p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">whichOne</span> <span style="color: #000000; font-weight: bold">){</span>
+	<span style="color: #204a87; font-weight: bold">if</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">whichOne</span> <span style="color: #ce5c00; font-weight: bold">===</span> <span style="color: #4e9a06">"right"</span><span style="color: #000000; font-weight: bold">){</span>
+		<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"Right hand is here ✋"</span><span style="color: #000000; font-weight: bold">);</span>
+	<span style="color: #000000; font-weight: bold">}</span>
+	<span style="color: #204a87; font-weight: bold">else</span> <span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">whichOne</span> <span style="color: #ce5c00; font-weight: bold">===</span> <span style="color: #4e9a06">"left"</span><span style="color: #000000; font-weight: bold">){</span>
+		<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"Left hand is here  ✋"</span><span style="color: #000000; font-weight: bold">);</span>
+	<span style="color: #000000; font-weight: bold">}</span>
+	<span style="color: #204a87; font-weight: bold">else</span><span style="color: #000000; font-weight: bold">{</span>
+		<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"Sorry no third hand available ❌"</span><span style="color: #000000; font-weight: bold">);</span>
+	<span style="color: #000000; font-weight: bold">}</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">();</span>
+</pre>
+            </div>
+            <p dir="rtl">لاحظ أسندت له القيمة right كقيمة إفتراضية <code dir="ltr">whichOne = "right"</code>.<br>
+               <strong dir="rtl">النتيجة:</strong><br>
+            </p>
+            <img class="image" src="../../images/javascript/14/11.png">
+            <br>
+            <strong dir="rtl">رائع!</strong> قم بتجربة الكود بتمرير قيم مختلفة.
+            <p></p>
+            <hr>
+            <h2 dir="rtl">كيف كان الكود ليبدوا بدون إستخدام الـ function</h2>
+            <p dir="rtl">لنقوم بكتابة الكود التالي بدون إستخدام دالة:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">whichOne</span> <span style="color: #000000; font-weight: bold">){</span>
 
 	<span style="color: #204a87; font-weight: bold">if</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">whichOne</span> <span style="color: #ce5c00; font-weight: bold">===</span> <span style="color: #4e9a06">"right"</span><span style="color: #000000; font-weight: bold">){</span>
 		<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"Right hand is here ✋"</span><span style="color: #000000; font-weight: bold">);</span>
@@ -360,10 +373,11 @@
 <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"After couple lines of codes...."</span><span style="color: #000000; font-weight: bold">);</span>
 
 <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"left"</span><span style="color: #000000; font-weight: bold">);</span>
-</pre></div>
-
-   <p dir="rtl">الكود بدون إستخدام دالة كالتالي:</p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">hand</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"right"</span><span style="color: #000000; font-weight: bold">;</span>
+</pre>
+            </div>
+            <p dir="rtl">الكود بدون إستخدام دالة كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">hand</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"right"</span><span style="color: #000000; font-weight: bold">;</span>
 
 <span style="color: #204a87; font-weight: bold">if</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">hand</span> <span style="color: #ce5c00; font-weight: bold">===</span> <span style="color: #4e9a06">"right"</span><span style="color: #000000; font-weight: bold">){</span>
 	<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"Right hand is here ✋"</span><span style="color: #000000; font-weight: bold">);</span>
@@ -390,37 +404,41 @@
 <span style="color: #204a87; font-weight: bold">else</span><span style="color: #000000; font-weight: bold">{</span>
 	<span style="color: #4e9a06">"After couple lines of codes....""Sorry no third hand available ❌"</span><span style="color: #000000; font-weight: bold">);</span>
 <span style="color: #000000; font-weight: bold">}</span>
-</pre></div>
-
-   <p dir="rtl">شاهد كيف تم تكرار كتابة نفس الأكواد الخاصة بالتحقق من الشروط. أعتقد أنك الأن أصبحت مدرك لأهمية الـ Functions</p>
-   <hr>
-   <p dir="rtl">لنعود بشكل سريع لإلقاء نظرة على دالة console.log حتى كالتالي:</p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #4e9a06">"After couple lines of codes...."</span><span style="color: #000000; font-weight: bold">;</span>
-</pre></div>
-
-   <p dir="rtl">هل أصبحت الأمور واضحة الأن وكيف ان هناك دالة معرفة في الكواليس بإسم console.log تقوم بإستقبال Argument والذي هو في حالتنا <code dir="ltr">"After couple lines of codes...."</code> وتقوم بالتعامل معه حتى يتم طباعته.</p>
-   <p dir="rtl">لنتخيل تعريف الدالة <strong dir="rtl">كالتالي:</strong></p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">parameter</span> <span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
+</pre>
+            </div>
+            <p dir="rtl">شاهد كيف تم تكرار كتابة نفس الأكواد الخاصة بالتحقق من الشروط. أعتقد أنك الأن أصبحت مدرك لأهمية الـ Functions</p>
+            <hr>
+            <p dir="rtl">لنعود بشكل سريع لإلقاء نظرة على دالة console.log حتى كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #4e9a06">"After couple lines of codes...."</span><span style="color: #000000; font-weight: bold">;</span>
+</pre>
+            </div>
+            <p dir="rtl">هل أصبحت الأمور واضحة الأن وكيف ان هناك دالة معرفة في الكواليس بإسم console.log تقوم بإستقبال Argument والذي هو في حالتنا <code dir="ltr">"After couple lines of codes...."</code> وتقوم بالتعامل معه حتى يتم طباعته.</p>
+            <p dir="rtl">لنتخيل تعريف الدالة <strong dir="rtl">كالتالي:</strong></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">parameter</span> <span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
 
    <span style="color: #8f5902; font-style: italic">// print the argument that passed throw the parameter </span>
 
 <span style="color: #000000; font-weight: bold">}</span>
 
 <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">argument</span> <span style="color: #000000; font-weight: bold">);</span>
-</pre></div>
-
-   <hr>
-   <h2 dir="rtl">هل بإمكاننا كتابة Function بداخل Function ؟</h2>
-   <p dir="rtl">نعم بإمكننا ذلك لنقوم بالعودة لدالة hand الخاصة بنا ونقوم بجعلها تستقبل الأحداث وتقوم بها.</p>
-   <p dir="rtl"><strong dir="rtl">أريد أن اضيف Parameter جديد في تعريف الدالة بإسم action والذي سيقوم بتمرير الحدث كالتالي:</strong></p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">whichOne</span> <span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">action</span> <span style="color: #000000; font-weight: bold">){</span>
+</pre>
+            </div>
+            <hr>
+            <h2 dir="rtl">هل بإمكاننا كتابة Function بداخل Function ؟</h2>
+            <p dir="rtl">نعم بإمكننا ذلك لنقوم بالعودة لدالة hand الخاصة بنا ونقوم بجعلها تستقبل الأحداث وتقوم بها.</p>
+            <p dir="rtl"><strong dir="rtl">أريد أن اضيف Parameter جديد في تعريف الدالة بإسم action والذي سيقوم بتمرير الحدث كالتالي:</strong></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">whichOne</span> <span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">action</span> <span style="color: #000000; font-weight: bold">){</span>
 
 <span style="color: #000000; font-weight: bold">}</span>
-</pre></div>
-
-   <p dir="rtl">لاحظ قمت بالفصل بين الـ Parameters بفاصلة ونستطيع إضافة ما يصل الى 255 من الـ Parameter</p>
-   <p dir="rtl">سأقوم بكتابة الكود التالي الذي سيقوم بالتأكد من نوع الحدث وعلى أساسة يتم إظهار رسالة معينة:</p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">whichOne</span> <span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">action</span> <span style="color: #000000; font-weight: bold">){</span>
+</pre>
+            </div>
+            <p dir="rtl">لاحظ قمت بالفصل بين الـ Parameters بفاصلة ونستطيع إضافة ما يصل الى 255 من الـ Parameter</p>
+            <p dir="rtl">سأقوم بكتابة الكود التالي الذي سيقوم بالتأكد من نوع الحدث وعلى أساسة يتم إظهار رسالة معينة:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">whichOne</span> <span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">action</span> <span style="color: #000000; font-weight: bold">){</span>
 
    <span style="color: #204a87; font-weight: bold">if</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">whichOne</span> <span style="color: #ce5c00; font-weight: bold">===</span> <span style="color: #4e9a06">"right"</span><span style="color: #000000; font-weight: bold">){</span>
 
@@ -443,13 +461,14 @@
 	    <span style="color: #000000; font-weight: bold">}</span>
 
      <span style="color: #000000; font-weight: bold">}</span>
-</pre></div>
-
-   <p dir="rtl">لاحظ في الكود أعلاة كيف أن هناك تكرار في كتابة الأكواد كما موضح بالصورة التالية:<br>
-      <img class="image" src="../../images/javascript/14/12.png">
-   </p>
-   <p dir="rtl">ربما نستطيع تحسين الكود بإستخدام function لذا سأقوم بمسح الأكواد المتكرر وعمل دالة جديدة بإسم <code dir="ltr">actionFunc</code> بدأخل الدالة hand و وضع الكود الذي تكرر بدأخل هذه الدالة الجديدة <strong dir="rtl">كالتالي:</strong></p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">whichOne</span> <span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">action</span> <span style="color: #000000; font-weight: bold">){</span>
+</pre>
+            </div>
+            <p dir="rtl">لاحظ في الكود أعلاة كيف أن هناك تكرار في كتابة الأكواد كما موضح بالصورة التالية:<br>
+               <img class="image" src="../../images/javascript/14/12.png">
+            </p>
+            <p dir="rtl">ربما نستطيع تحسين الكود بإستخدام function لذا سأقوم بمسح الأكواد المتكرر وعمل دالة جديدة بإسم <code dir="ltr">actionFunc</code> بدأخل الدالة hand و وضع الكود الذي تكرر بدأخل هذه الدالة الجديدة <strong dir="rtl">كالتالي:</strong></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">whichOne</span> <span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">action</span> <span style="color: #000000; font-weight: bold">){</span>
 
 	<span style="color: #204a87; font-weight: bold">if</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">whichOne</span> <span style="color: #ce5c00; font-weight: bold">===</span> <span style="color: #4e9a06">"right"</span><span style="color: #000000; font-weight: bold">){</span>
 
@@ -472,10 +491,11 @@
     <span style="color: #8f5902; font-style: italic">/*نهاية الدالة الجديدة*/</span>
 
 <span style="color: #000000; font-weight: bold">}</span>
-</pre></div>
-
-   <p dir="rtl">سأقوم الأن بكتابة نفس الشروط ولكن بطريقة <code dir="ltr">Ternary Operator</code> قم بمراجعتها </p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">whichOne</span> <span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">action</span> <span style="color: #000000; font-weight: bold">){</span>
+</pre>
+            </div>
+            <p dir="rtl">سأقوم الأن بكتابة نفس الشروط ولكن بطريقة <code dir="ltr">Ternary Operator</code> قم بمراجعتها </p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">whichOne</span> <span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">action</span> <span style="color: #000000; font-weight: bold">){</span>
 
 	<span style="color: #204a87; font-weight: bold">if</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">whichOne</span> <span style="color: #ce5c00; font-weight: bold">===</span> <span style="color: #4e9a06">"right"</span><span style="color: #000000; font-weight: bold">){</span>
 
@@ -498,10 +518,11 @@
     <span style="color: #8f5902; font-style: italic">/*نهاية الدالة الجديدة*/</span>
 
 <span style="color: #000000; font-weight: bold">}</span>
-</pre></div>
-
-   <p dir="rtl">الأن سأقوم بمنادة هذه الدالة الجديدة بدأخل الشروط التي تحدد اليد كالتالي:</p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">whichOne</span> <span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">action</span> <span style="color: #000000; font-weight: bold">){</span>
+</pre>
+            </div>
+            <p dir="rtl">الأن سأقوم بمنادة هذه الدالة الجديدة بدأخل الشروط التي تحدد اليد كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">whichOne</span> <span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">action</span> <span style="color: #000000; font-weight: bold">){</span>
 
 	<span style="color: #204a87; font-weight: bold">if</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">whichOne</span> <span style="color: #ce5c00; font-weight: bold">===</span> <span style="color: #4e9a06">"right"</span><span style="color: #000000; font-weight: bold">){</span>
 		<span style="color: #000000">actionFunc</span><span style="color: #000000; font-weight: bold">();</span>
@@ -525,32 +546,35 @@
 <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"right"</span> <span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">"write"</span><span style="color: #000000; font-weight: bold">);</span>
 <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"left"</span> <span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">"write"</span><span style="color: #000000; font-weight: bold">);</span>
 <span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"right"</span><span style="color: #000000; font-weight: bold">);</span>
-</pre></div>
-
-   <p dir="rtl">قم بتجربة الكود أعلاة, <strong dir="rtl">النتيجة:</strong><br></p>
-   <img class="image" src="../../images/javascript/14/13.png">
-   <p></p>
-   <p dir="rtl">عند إستدعاء الدالة بالكود التالي:</p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"right"</span> <span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">"write"</span><span style="color: #000000; font-weight: bold">);</span>
-</pre></div>
-
-   <p dir="rtl"><strong dir="rtl">تم الدخول للشرط المتحقق ومن ثم تم توجيهها للدالة actionFunc كالتالي:</strong><br></p>
-   <img class="image" src="../../images/javascript/14/14.png">
-   <p></p>
-   <hr>
-   <h2 dir="rtl">إسناد الـ functions للمتغيرات و عملية الـ return</h2>
-   <p dir="rtl">لنقوم بعمل دالة تجمع رقمين كالتالي:</p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">add</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">num1</span> <span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">num2</span><span style="color: #000000; font-weight: bold">){</span>
+</pre>
+            </div>
+            <p dir="rtl">قم بتجربة الكود أعلاة, <strong dir="rtl">النتيجة:</strong><br></p>
+            <img class="image" src="../../images/javascript/14/13.png">
+            <p></p>
+            <p dir="rtl">عند إستدعاء الدالة بالكود التالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">hand</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"right"</span> <span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">"write"</span><span style="color: #000000; font-weight: bold">);</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">تم الدخول للشرط المتحقق ومن ثم تم توجيهها للدالة actionFunc كالتالي:</strong><br></p>
+            <img class="image" src="../../images/javascript/14/14.png">
+            <p></p>
+            <hr>
+            <h2 dir="rtl">إسناد الـ functions للمتغيرات و عملية الـ return</h2>
+            <p dir="rtl">لنقوم بعمل دالة تجمع رقمين كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">add</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">num1</span> <span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">num2</span><span style="color: #000000; font-weight: bold">){</span>
 
     <span style="color: #204a87; font-weight: bold">return</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">num1</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">num2</span><span style="color: #000000; font-weight: bold">);</span>
 
 <span style="color: #000000; font-weight: bold">}</span>
-</pre></div>
-
-   <p dir="rtl">الكود أعلاة قمت بعمل داالة بإسم add تقبل رقمين num1 و num2 ومن ثم تقوم بجمع الرقمين وإرجاعهما كخلاصة العملية فكل ما اريدة من هذه الدالة هو ان تعطيني الناتج النهائي حتى أستفيد منه في مكان أخر.</p>
-   <p dir="rtl">الدالة السابقة التي قمنا بعملها للـ hand كنا نقوم بطباعة نصوص مباشرة من خلال الدالة نفسها ولم نكن نحتاج لإرجاع اي قيمة منها ولكن في الدالة add  لنفترض بأنك لا تريد ان تقوم الدالة بطباعة النتيجة بل تريد منها أن تقوم بعملية الجمع ومن ثم تقوم بعمل إرجاع (return) للناتج حتى تقوم بإسناده لمتغير وتستفيد منه في عملية اخرى.</p>
-   <p dir="rtl"><strong dir="rtl">مثال:</strong></p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">add</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">num1</span> <span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">num2</span><span style="color: #000000; font-weight: bold">){</span>
+</pre>
+            </div>
+            <p dir="rtl">الكود أعلاة قمت بعمل داالة بإسم add تقبل رقمين num1 و num2 ومن ثم تقوم بجمع الرقمين وإرجاعهما كخلاصة العملية فكل ما اريدة من هذه الدالة هو ان تعطيني الناتج النهائي حتى أستفيد منه في مكان أخر.</p>
+            <p dir="rtl">الدالة السابقة التي قمنا بعملها للـ hand كنا نقوم بطباعة نصوص مباشرة من خلال الدالة نفسها ولم نكن نحتاج لإرجاع اي قيمة منها ولكن في الدالة add  لنفترض بأنك لا تريد ان تقوم الدالة بطباعة النتيجة بل تريد منها أن تقوم بعملية الجمع ومن ثم تقوم بعمل إرجاع (return) للناتج حتى تقوم بإسناده لمتغير وتستفيد منه في عملية اخرى.</p>
+            <p dir="rtl"><strong dir="rtl">مثال:</strong></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">add</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">num1</span> <span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">num2</span><span style="color: #000000; font-weight: bold">){</span>
 
     <span style="color: #204a87; font-weight: bold">return</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">num1</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">num2</span><span style="color: #000000; font-weight: bold">);</span>
 
@@ -558,101 +582,111 @@
 
 <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">x</span> <span style="color: #ce5c00; font-weight: bold">=</span>  <span style="color: #000000">add</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #0000cf; font-weight: bold">1</span> <span style="color: #000000; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">2</span> <span style="color: #000000; font-weight: bold">);</span>
 <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">x</span><span style="color: #000000; font-weight: bold">);</span>
-</pre></div>
-
-   <p dir="rtl">قمت بإستدعاء الدالة ومررت لها الرقمين 1 و 2 ومن ثم قمت بإسناد القيمة المرجعة من الدالة والتي هي ناتج الجمع لهذين العديد لمتغير إسمة x ما يعني أنني الأن استطيع إستخدام الـ x في علميات أخرة كتمريرة لدالة اخرى او طباعته. قم بتجربة ذلك.</p>
-   <h4 dir="rtl">الدوال المجهولة anonymous function</h4>
-   <p dir="rtl">تستطيع إسناد الدالة السابقة بشكل مباشر لمتغير بالشكل التالي:</p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">x</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">add</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">num1</span> <span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">num2</span><span style="color: #000000; font-weight: bold">){</span>
+</pre>
+            </div>
+            <p dir="rtl">قمت بإستدعاء الدالة ومررت لها الرقمين 1 و 2 ومن ثم قمت بإسناد القيمة المرجعة من الدالة والتي هي ناتج الجمع لهذين العديد لمتغير إسمة x ما يعني أنني الأن استطيع إستخدام الـ x في علميات أخرة كتمريرة لدالة اخرى او طباعته. قم بتجربة ذلك.</p>
+            <h4 dir="rtl">الدوال المجهولة anonymous function</h4>
+            <p dir="rtl">تستطيع إسناد الدالة السابقة بشكل مباشر لمتغير بالشكل التالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">x</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">add</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">num1</span> <span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">num2</span><span style="color: #000000; font-weight: bold">){</span>
 
     <span style="color: #204a87; font-weight: bold">return</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">num1</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">num2</span><span style="color: #000000; font-weight: bold">);</span>
 
 <span style="color: #000000; font-weight: bold">}</span>
-</pre></div>
-
-   <p dir="rtl"><strong dir="rtl">لكن لماذا سميت مجهولة؟</strong><br>
-      وذلك لان في هذه الحالة لم يعد لإسم الدالة أي تأثير فوجودة مثل عدمة ولن تستطيع إستدعائها بالشكل التالي:
-   </p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">add</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #0000cf; font-weight: bold">2</span><span style="color: #000000; font-weight: bold">);</span>
-</pre></div>
-
-   <p dir="rtl">بل تستدعيها بإسم المتغير كالتالي:</p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">x</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #0000cf; font-weight: bold">2</span><span style="color: #000000; font-weight: bold">);</span>
-</pre></div>
-
-   <p dir="rtl">لهذا لنقوم بمسح إسم الدالة add ولنجعلها هكذا:</p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">x</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">num1</span> <span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">num2</span><span style="color: #000000; font-weight: bold">){</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">لكن لماذا سميت مجهولة؟</strong><br>
+               وذلك لان في هذه الحالة لم يعد لإسم الدالة أي تأثير فوجودة مثل عدمة ولن تستطيع إستدعائها بالشكل التالي:
+            </p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">add</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #0000cf; font-weight: bold">2</span><span style="color: #000000; font-weight: bold">);</span>
+</pre>
+            </div>
+            <p dir="rtl">بل تستدعيها بإسم المتغير كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">x</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #0000cf; font-weight: bold">2</span><span style="color: #000000; font-weight: bold">);</span>
+</pre>
+            </div>
+            <p dir="rtl">لهذا لنقوم بمسح إسم الدالة add ولنجعلها هكذا:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">x</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">num1</span> <span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">num2</span><span style="color: #000000; font-weight: bold">){</span>
 
     <span style="color: #204a87; font-weight: bold">return</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">num1</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">num2</span><span style="color: #000000; font-weight: bold">);</span>
 
 <span style="color: #000000; font-weight: bold">}</span>
 
 <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">x</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #0000cf; font-weight: bold">2</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">);</span>
-</pre></div>
-
-   <p dir="rtl">قم بتجربة الكود أعلاة.</p>
-   <hr>
-   <h2 dir="rtl">ماهو الـ Hoisting</h2>
-   <p dir="rtl">لنتعرف على ماذا يعني ذلك بالنسبة للمتغيرات قبل أن نعرف ماذا يعني ذلك بالنسبة للدوال.</p>
-   <p dir="rtl"><strong dir="rtl">عند تعريفنا لمتغير نقوم بما يسمى بـ الـ declaration كالتالي:</strong></p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">x</span><span style="color: #000000; font-weight: bold">;</span>
-</pre></div>
-
-   <p dir="rtl"><strong dir="rtl">وعندما نقوم بتعريف متغير وإعطائه قيمة إبتدائية نقوم بما يسمى بـ الـ initialization كالتالي:</strong></p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">x</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">;</span>
-</pre></div>
-
-   <h3 dir="rtl">تعامل الـ Hoisting مع الـ declaration</h3>
-   <p dir="rtl">هناك ما يسمى في الجافاسكربت بالـ Hoisting حيث يتم في هذه العملية رفع تعريف المتغيرات الـ declaration ليكون في بدأية الكود قبل أي كود أخر في النطاق الخاص به (scope) فمثالاً إذا قمنا بالتالي:</p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">x</span><span style="color: #000000; font-weight: bold">);</span>
+</pre>
+            </div>
+            <p dir="rtl">قم بتجربة الكود أعلاة.</p>
+            <hr>
+            <h2 dir="rtl">ماهو الـ Hoisting</h2>
+            <p dir="rtl">لنتعرف على ماذا يعني ذلك بالنسبة للمتغيرات قبل أن نعرف ماذا يعني ذلك بالنسبة للدوال.</p>
+            <p dir="rtl"><strong dir="rtl">عند تعريفنا لمتغير نقوم بما يسمى بـ الـ declaration كالتالي:</strong></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">x</span><span style="color: #000000; font-weight: bold">;</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">وعندما نقوم بتعريف متغير وإعطائه قيمة إبتدائية نقوم بما يسمى بـ الـ initialization كالتالي:</strong></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">x</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">;</span>
+</pre>
+            </div>
+            <h3 dir="rtl">تعامل الـ Hoisting مع الـ declaration</h3>
+            <p dir="rtl">هناك ما يسمى في الجافاسكربت بالـ Hoisting حيث يتم في هذه العملية رفع تعريف المتغيرات الـ declaration ليكون في بدأية الكود قبل أي كود أخر في النطاق الخاص به (scope) فمثالاً إذا قمنا بالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">x</span><span style="color: #000000; font-weight: bold">);</span>
 <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">x</span><span style="color: #000000; font-weight: bold">;</span>
-</pre></div>
-
-   <p dir="rtl">فلن يكون هناك مشكلة ولن يتم اخبارك بانك تطلب طباعة متغير قبل أن تقوم بتعريفة حيث ستنظر الجافاسكربت للكود بعد عمل hoisting للـ declaration  كالتالي:</p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">x</span><span style="color: #000000; font-weight: bold">;</span>
+</pre>
+            </div>
+            <p dir="rtl">فلن يكون هناك مشكلة ولن يتم اخبارك بانك تطلب طباعة متغير قبل أن تقوم بتعريفة حيث ستنظر الجافاسكربت للكود بعد عمل hoisting للـ declaration  كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">x</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">x</span><span style="color: #000000; font-weight: bold">);</span>
-</pre></div>
-
-   <p dir="rtl">ما يعني أنه بإمكانك إسناد لقيمة لمتغير وإستخدامه قبل حتى ان تقوم بتعريفة كالتالي:</p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">x</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">;</span>
+</pre>
+            </div>
+            <p dir="rtl">ما يعني أنه بإمكانك إسناد لقيمة لمتغير وإستخدامه قبل حتى ان تقوم بتعريفة كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">x</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">x</span><span style="color: #000000; font-weight: bold">);</span>
 <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">x</span><span style="color: #000000; font-weight: bold">;</span>
-</pre></div>
-
-   <p dir="rtl">قم بتجربة الكود السابق وشاهد كيف سيتم طباعة الرقم 1 المخزن في المتغير حيث ستقوم الجافاسكربت بعمل hoisting للـ declaration  كالتالي:</p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">x</span><span style="color: #000000; font-weight: bold">;</span>
+</pre>
+            </div>
+            <p dir="rtl">قم بتجربة الكود السابق وشاهد كيف سيتم طباعة الرقم 1 المخزن في المتغير حيث ستقوم الجافاسكربت بعمل hoisting للـ declaration  كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">x</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #000000">x</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">x</span><span style="color: #000000; font-weight: bold">);</span>
-</pre></div>
-
-   <h3 dir="rtl">تعامل الـ Hoisting مع الـ initialization</h3>
-   <p dir="rtl">كما سبق وقلنا بأن الجافاسكربت ستقوم برفع الـ declaration  ولكن ماذا عن الـ initialization او القيمة المسندة للمتغير؟</p>
-   <p dir="rtl">لنجرب الكود التالي:</p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">x</span><span style="color: #000000; font-weight: bold">);</span>
+</pre>
+            </div>
+            <h3 dir="rtl">تعامل الـ Hoisting مع الـ initialization</h3>
+            <p dir="rtl">كما سبق وقلنا بأن الجافاسكربت ستقوم برفع الـ declaration  ولكن ماذا عن الـ initialization او القيمة المسندة للمتغير؟</p>
+            <p dir="rtl">لنجرب الكود التالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">x</span><span style="color: #000000; font-weight: bold">);</span>
 <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">x</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">;</span>
-</pre></div>
-
-   <p dir="rtl">شاهد النتيجة وستجد أنه تم تعريف المتغير ولكن لم يتم طباعة القيمة المسندة له وذلك لان الجافاسكربت قامت برفع تعريف المتغير الـ declaration<br>
-      فقط ولم تقم برفع القيمة التي أسندت الية حيث ستنظر للكود كالتالي:
-   </p>
-   <div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">x</span><span style="color: #000000; font-weight: bold">;</span>
+</pre>
+            </div>
+            <p dir="rtl">شاهد النتيجة وستجد أنه تم تعريف المتغير ولكن لم يتم طباعة القيمة المسندة له وذلك لان الجافاسكربت قامت برفع تعريف المتغير الـ declaration<br>
+               فقط ولم تقم برفع القيمة التي أسندت الية حيث ستنظر للكود كالتالي:
+            </p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">x</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">x</span><span style="color: #000000; font-weight: bold">);</span>
 <span style="color: #000000">x</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">;</span>
-</pre></div>
-
-   <h3 dir="rtl">الـ Hoisting بالنسبة للـ Functions</h3>
-   <p dir="rtl">بنفس الفكرة تقوم الجافاسكربت دائماً برفع تعاريف الدوال الـ declaration  لأعلى المستند قبل أي كود أخر في ضمن النطاق الخاص بها&gt;</p>
-   <p dir="rtl">على سبيل المثال الكود السابق الذي قمنا فيه بكتابته الدالة <code dir="ltr">hand();</code> قمنا بدأخلها بإستدعاء الدالة <code dir="ltr">actionFunc();</code>  قبل أن يتم تعريفها ومع ذلك لم تقول لنا الجافاسكربت بأنها لم تتعرف على الدالة كونها لم تجد تعريفها. وذلك لأنه في الحقيقة بعد عمل الـ Hoisting للـ declaration سيكون الكود بالنسبة لنظر الجافاسكربت كالتالي:<br></p>
-   <img class="image" src="../../images/javascript/14/15.gif">
-   <p></p>
-   <p dir="rtl">اذا كانت الجافاسكربت لا تقوم بالـ Hoisting كان سيلزمك دائماً التأكد من تعريف المتغيرات والدوال قبل إستدعائها وإلا فأنك ستكون تقوم بعملية إستدعاء لشي غير معرف.</p>
-   <hr>
-   <p dir="rtl">كانت هذه أهم أساسيات الدوال و بهذا يكون قد تبقى لنا الدرس الأخير وهو الـ objects ومن ثم سنبدأ في الـ Git. أرجوا بأن تصلكم فكرة الـ functions فهي سهلة و ممتعة ولكن تحتاج منك أن تقوم بتعلم المزيد عنها وممارستها بشكل مكثف حتى تتقنها فتذكر دائماً أن الدروس التي أضعها ليست الا سوى فتح الباب لمجال واسع يتطلب منك أن تتعمق فيه حتى تثبت نفسك.</p>
-   <hr>
-</div>
-    </div>
-
-
-    <script src="../../js/main.js"></script>
-  </body>
+</pre>
+            </div>
+            <h3 dir="rtl">الـ Hoisting بالنسبة للـ Functions</h3>
+            <p dir="rtl">بنفس الفكرة تقوم الجافاسكربت دائماً برفع تعاريف الدوال الـ declaration  لأعلى المستند قبل أي كود أخر في ضمن النطاق الخاص بها&gt;</p>
+            <p dir="rtl">على سبيل المثال الكود السابق الذي قمنا فيه بكتابته الدالة <code dir="ltr">hand();</code> قمنا بدأخلها بإستدعاء الدالة <code dir="ltr">actionFunc();</code>  قبل أن يتم تعريفها ومع ذلك لم تقول لنا الجافاسكربت بأنها لم تتعرف على الدالة كونها لم تجد تعريفها. وذلك لأنه في الحقيقة بعد عمل الـ Hoisting للـ declaration سيكون الكود بالنسبة لنظر الجافاسكربت كالتالي:<br></p>
+            <img class="image" src="../../images/javascript/14/15.gif">
+            <p></p>
+            <p dir="rtl">اذا كانت الجافاسكربت لا تقوم بالـ Hoisting كان سيلزمك دائماً التأكد من تعريف المتغيرات والدوال قبل إستدعائها وإلا فأنك ستكون تقوم بعملية إستدعاء لشي غير معرف.</p>
+            <hr>
+            <p dir="rtl">كانت هذه أهم أساسيات الدوال و بهذا يكون قد تبقى لنا الدرس الأخير وهو الـ objects ومن ثم سنبدأ في الـ Git. أرجوا بأن تصلكم فكرة الـ functions فهي سهلة و ممتعة ولكن تحتاج منك أن تقوم بتعلم المزيد عنها وممارستها بشكل مكثف حتى تتقنها فتذكر دائماً أن الدروس التي أضعها ليست الا سوى فتح الباب لمجال واسع يتطلب منك أن تتعمق فيه حتى تثبت نفسك.</p>
+            <hr>
+         </div>
+      </div>
+      <script src="../../js/main.js"></script>
+   </body>
 </html>

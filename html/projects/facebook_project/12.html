@@ -1,50 +1,51 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>[الدرس السادس:الجزء الثاني] تكويد قسم الـ main</title>
-    <link rel="stylesheet" href="../../../css/style.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-  </head>
-  <body>
-    <div class="navbar">
-      <div class="navbar-brand">
-        <div class="">
-          1MAC Courses
-        </div>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>[الدرس السادس:الجزء الثاني] تكويد قسم الـ main</title>
+      <link rel="stylesheet" href="../../../css/style.css">
+      <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+   </head>
+   <body>
+      <div class="navbar">
+         <div class="navbar-brand">
+            <div class="">
+               1MAC Courses
+            </div>
+         </div>
+         <div class="icon-container">
+            <div class="humberger-icon">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+         </div>
+         <div class="navbar-nav">
+            <nav>
+               <div class="close">
+                  أغلق <i class="fas fa-times"></i>
+               </div>
+               <a href="../../../index.html">الرئيسية</a>
+               <a href="../../html_css/html-css.html">HTML & CSS</a>
+               <a href="../../javascript/javascript.html">JavaScript</a>
+               <a href="../../git/git.html">Git</a>
+               <a href="../../projects/projects.html">المشاريع</a>
+            </nav>
+         </div>
       </div>
-      <div class="icon-container">
-        <div class="humberger-icon">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-      <div class="navbar-nav">
-        <nav>
-          <div class="close">
-            أغلق <i class="fas fa-times"></i>
-          </div>
-          <a href="../../../index.html">الرئيسية</a>
-          <a href="../../html_css/html-css.html">HTML & CSS</a>
-          <a href="../../javascript/javascript.html">JavaScript</a>
-          <a href="../../git/git.html">Git</a>
-          <a href="../../projects/projects.html">المشاريع</a>
-        </nav>
-      </div>
-    </div>
-    <div class="container">
-      <div class="cooked">
-
-        <h1> بداية العمل على قسم main</h1>
-          <hr>
-<details dir="rtl" open="open">
-<summary dir="rtl">
-قبل بدأية هذا الدرس يجب أن يكون لديك التالي</summary>
-<p dir="rtl">1- ملف <code dir="ltr">index.html</code> بهذا المحتوى</p>
-<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!doctype html&gt;</span>
+      <div class="container">
+         <div class="cooked">
+            <h1> بداية العمل على قسم main</h1>
+            <hr>
+            <details dir="rtl" open="open">
+               <summary dir="rtl">
+                  قبل بدأية هذا الدرس يجب أن يكون لديك التالي
+               </summary>
+               <p dir="rtl">1- ملف <code dir="ltr">index.html</code> بهذا المحتوى</p>
+               <div class="code">
+                  <pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!doctype html&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;html&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;head&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">charset=</span><span style="color: #4e9a06">"utf-8"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
@@ -89,10 +90,11 @@
 <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"footer"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/body&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/html&gt;</span>
-</pre></div>
-
-<p dir="rtl">2- ملف <code dir="ltr">style.css</code> بهذا المحتوى</p>
-<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">/***removing body margin***/</span>
+</pre>
+               </div>
+               <p dir="rtl">2- ملف <code dir="ltr">style.css</code> بهذا المحتوى</p>
+               <div class="code">
+                  <pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">/***removing body margin***/</span>
 <span style="color: #204a87; font-weight: bold">body</span><span style="color: #000000; font-weight: bold">{</span>
  <span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #000000; font-weight: bold">}</span>
@@ -192,108 +194,135 @@
 <span style="color: #204a87; font-weight: bold">input</span><span style="color: #5c35cc; font-weight: bold">:focus</span><span style="color: #000000; font-weight: bold">{</span>
   <span style="color: #204a87; font-weight: bold">outline</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">none</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #000000; font-weight: bold">}</span>
-</pre></div>
-
-<p dir="rtl">3- صورتين في مجلد الصور : الاولى خاصة بالخريطة, الثانية بشعار الفيس بوك</p>
-<p dir="rtl"><strong dir="rtl">ملاحظة انا لا اعطيك هذه الاكواد لتنسخها بل لتتأكد من أكوادك فاذا لم يكن لديك الترتيبات أعلاة أرجوا مراجعة الدروس السابقة</strong></p>
-</details>
-<h2 dir="rtl">قبل البدء بالعمل على قسم main</h2>
-<p dir="rtl">في الدروس السابقة إنتهيناء من عمل الـ <code dir="ltr">header</code> في هذا الدرس سنبدأ في العمل على قسم <code dir="ltr">main</code>.<br>
-<strong dir="rtl">سيكون عملنا في هذه المنطقة:</strong></p>
-<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"main"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+</pre>
+               </div>
+               <p dir="rtl">3- صورتين في مجلد الصور : الاولى خاصة بالخريطة, الثانية بشعار الفيس بوك</p>
+               <p dir="rtl"><strong dir="rtl">ملاحظة انا لا اعطيك هذه الاكواد لتنسخها بل لتتأكد من أكوادك فاذا لم يكن لديك الترتيبات أعلاة أرجوا مراجعة الدروس السابقة</strong></p>
+            </details>
+            <h2 dir="rtl">قبل البدء بالعمل على قسم main</h2>
+            <p dir="rtl">في الدروس السابقة إنتهيناء من عمل الـ <code dir="ltr">header</code> في هذا الدرس سنبدأ في العمل على قسم <code dir="ltr">main</code>.<br>
+               <strong dir="rtl">سيكون عملنا في هذه المنطقة:</strong>
+            </p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"main"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
 
 <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
-</pre></div>
-
-<p dir="rtl">بنفس الخطوات التي قمنا بها في الدروس السابقة سنحتاج الى ان نقوم بعمل container لنستخدمة لتوسيط العناصر في الصفحة.</p>
-<p dir="rtl"><strong dir="rtl">لكن هل نحتاج لكتابة أكواد جديدة؟</strong><br>
-بالتأكيد لا فكما ذكرنا سابقاً اننا نحرص على أن نستفيد من فكرة الـ <code dir="ltr">class</code> لهذا سنستخدم نفس الـ <code dir="ltr">container</code>  الذي إستخدمناه مع قسم الـ <code dir="ltr">header</code> وسنحصل على النتيجة المطلوبة بعد أن نقوم بتغيير بعض الخصائص المخصصة التي قمنا بإعطائة سابقاً.</p>
-<p dir="rtl">لنعود لكود تنسيقات الـ  <code dir="ltr">container</code>:</p>
-<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.container</span><span style="color: #000000; font-weight: bold">{</span>
+</pre>
+            </div>
+            <p dir="rtl">بنفس الخطوات التي قمنا بها في الدروس السابقة سنحتاج الى ان نقوم بعمل container لنستخدمة لتوسيط العناصر في الصفحة.</p>
+            <p dir="rtl"><strong dir="rtl">لكن هل نحتاج لكتابة أكواد جديدة؟</strong><br>
+               بالتأكيد لا فكما ذكرنا سابقاً اننا نحرص على أن نستفيد من فكرة الـ <code dir="ltr">class</code> لهذا سنستخدم نفس الـ <code dir="ltr">container</code>  الذي إستخدمناه مع قسم الـ <code dir="ltr">header</code> وسنحصل على النتيجة المطلوبة بعد أن نقوم بتغيير بعض الخصائص المخصصة التي قمنا بإعطائة سابقاً.
+            </p>
+            <p dir="rtl">لنعود لكود تنسيقات الـ  <code dir="ltr">container</code>:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.container</span><span style="color: #000000; font-weight: bold">{</span>
 <span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">980px</span><span style="color: #000000; font-weight: bold">;</span>
   <span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">82px</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #000000; font-weight: bold">}</span>
-</pre></div>
-
-<ul dir="rtl">
-<li dir="rtl">
-<p dir="rtl">1- لاحظ في الكود أعلاة انه يحتوي على تنسيق يحدد عرض الـ <code dir="ltr">container</code> بـ 980 بيكسل وهذا تنسيق عام فنحن لا نريدة ان يكون بهذا العرض فقط في الـ header بل نريد هذا العرض كذلك بالـ main لذا سنتركة كما هو.</p>
-</li>
-<li dir="rtl">
-<p dir="rtl">2- لاحظ قمنا بإعطاء العنصر هوامش خارجية <code dir="ltr">(margin)</code> تعمل على توسيطة بالصفحة وهذا كذلك تنسيق عام فجميع العناصر نريدها ان تكون بداخل حاوية في موقع متوسط بالنسبة للصفحة لهذا لن نمسة كذلك. <a href="https://macdiscussions.udacity.com/t/css-margin-property/85103" dir="rtl">هنا درس الـ margin اذا لم تفهم فكرة عملها</a>.</p>
-</li>
-<li dir="rtl">
-<p dir="rtl">3- لاحظ اننا اعطينا الـ <code dir="ltr">container</code> إرتفاع محدد بقيمة 82 بيكسل مما يعني اننا قد خصصناة بهذا التنسيق لمنطقة الـ header فاذا اردنا ان نستخدمة لمنطقة الـ main فيجب أن نجعل إرتفاعة مرن و متغير بقدر ما يحوية من عناصر بشكل اوتوماتيكي لهذا سنغير قيمة خاصية الإرتفاع الى <code dir="ltr">auto</code> بدلاً من القيمة المحددة.</p>
-</li>
-</ul>
-<p dir="rtl"><strong dir="rtl">الكود بعد التعديل كالتالي:</strong></p>
-<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.container</span><span style="color: #000000; font-weight: bold">{</span>
+</pre>
+            </div>
+            <ul dir="rtl">
+               <li dir="rtl">
+                  <p dir="rtl">1- لاحظ في الكود أعلاة انه يحتوي على تنسيق يحدد عرض الـ <code dir="ltr">container</code> بـ 980 بيكسل وهذا تنسيق عام فنحن لا نريدة ان يكون بهذا العرض فقط في الـ header بل نريد هذا العرض كذلك بالـ main لذا سنتركة كما هو.</p>
+               </li>
+               <li dir="rtl">
+                  <p dir="rtl">2- لاحظ قمنا بإعطاء العنصر هوامش خارجية <code dir="ltr">(margin)</code> تعمل على توسيطة بالصفحة وهذا كذلك تنسيق عام فجميع العناصر نريدها ان تكون بداخل حاوية في موقع متوسط بالنسبة للصفحة لهذا لن نمسة كذلك. <a href="https://macdiscussions.udacity.com/t/css-margin-property/85103" dir="rtl">هنا درس الـ margin اذا لم تفهم فكرة عملها</a>.</p>
+               </li>
+               <li dir="rtl">
+                  <p dir="rtl">3- لاحظ اننا اعطينا الـ <code dir="ltr">container</code> إرتفاع محدد بقيمة 82 بيكسل مما يعني اننا قد خصصناة بهذا التنسيق لمنطقة الـ header فاذا اردنا ان نستخدمة لمنطقة الـ main فيجب أن نجعل إرتفاعة مرن و متغير بقدر ما يحوية من عناصر بشكل اوتوماتيكي لهذا سنغير قيمة خاصية الإرتفاع الى <code dir="ltr">auto</code> بدلاً من القيمة المحددة.</p>
+               </li>
+            </ul>
+            <p dir="rtl"><strong dir="rtl">الكود بعد التعديل كالتالي:</strong></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.container</span><span style="color: #000000; font-weight: bold">{</span>
 <span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">980px</span><span style="color: #000000; font-weight: bold">;</span>
   <span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;;</span>
 <span style="color: #000000; font-weight: bold">}</span>
-</pre></div>
-
-<p dir="rtl">لنشاهد التغييرات التي حصلت للـ header بعد تطبيق هذا التعديل:</p>
-<p></p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/12/1.png" alt="image" class="image"></a></div><p></p>
-<p dir="rtl">لن تلاحظ أي تغيير ولكن استخدم أداة الـ inspect element وقم بالتحديد على عنصر <code dir="ltr">container</code> ستجد وكانة لا وجود له لهذا من أجل ان نحل هذه المشكلة سنقوم بإعطائة خاصية تجعلة يقوم بالإلتفاف حول العناصر التي بدأخلة ويحصل على إرتفاع بقدر ارتفاع محتوياته بإستخدام الخاصية <code dir="ltr">overflew</code> والقيمة <code dir="ltr">auto</code> كالتالي:</p>
-<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.container</span><span style="color: #000000; font-weight: bold">{</span>
+</pre>
+            </div>
+            <p dir="rtl">لنشاهد التغييرات التي حصلت للـ header بعد تطبيق هذا التعديل:</p>
+            <p></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/12/1.png" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">لن تلاحظ أي تغيير ولكن استخدم أداة الـ inspect element وقم بالتحديد على عنصر <code dir="ltr">container</code> ستجد وكانة لا وجود له لهذا من أجل ان نحل هذه المشكلة سنقوم بإعطائة خاصية تجعلة يقوم بالإلتفاف حول العناصر التي بدأخلة ويحصل على إرتفاع بقدر ارتفاع محتوياته بإستخدام الخاصية <code dir="ltr">overflew</code> والقيمة <code dir="ltr">auto</code> كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.container</span><span style="color: #000000; font-weight: bold">{</span>
 <span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">980px</span><span style="color: #000000; font-weight: bold">;</span>
   <span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;;</span>
 <span style="color: #000000; font-weight: bold">}</span>
-</pre></div>
-
-<p></p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/12/2.png" alt="image" class="image"></a></div><p></p>
-<p dir="rtl">لاحظ الأن عند إستخدامك للـ inspect element سيظهر كالصندوق. الأن أصبح العنصر <code dir="ltr">container</code> جاهز للإستخدام في أي مكان على الصفحة والتأقلم مع أي محتوى بهذه التنسيقات العامة.</p>
-<h2 dir="rtl">البدء بالعمل على قسم main</h2>
-<p dir="rtl"><strong dir="rtl">سنحتاج أن نقوم بعمل التنسيقات التالية لهذا القسم</strong></p>
-<ul dir="rtl">
-<li dir="rtl">1- أن يكون عرضة 100% من عرض الشاشة</li>
-<li dir="rtl">2- أن نعطية أقل عرض بقيمة 980 بيكسل لنفس السبب الذي شرحناه عن الـ header في هذا الدرس <a href="https://macdiscussions.udacity.com/t/main/91521" dir="rtl">من هنا</a>
-</li>
-<li dir="rtl">3- أن نعطية إرتفاع مؤقت بقيمة 600 بيكسل حتى نشاهد التغييرات</li>
-<li dir="rtl">4- إعطائة لون أبيض للخلفية</li>
-<li dir="rtl">5- إضافة خاصية التدرج</li>
-</ul>
-<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">#main</span><span style="color: #000000; font-weight: bold">{</span>
+</pre>
+            </div>
+            <p></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/12/2.png" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">لاحظ الأن عند إستخدامك للـ inspect element سيظهر كالصندوق. الأن أصبح العنصر <code dir="ltr">container</code> جاهز للإستخدام في أي مكان على الصفحة والتأقلم مع أي محتوى بهذه التنسيقات العامة.</p>
+            <h2 dir="rtl">البدء بالعمل على قسم main</h2>
+            <p dir="rtl"><strong dir="rtl">سنحتاج أن نقوم بعمل التنسيقات التالية لهذا القسم</strong></p>
+            <ul dir="rtl">
+               <li dir="rtl">1- أن يكون عرضة 100% من عرض الشاشة</li>
+               <li dir="rtl">2- أن نعطية أقل عرض بقيمة 980 بيكسل لنفس السبب الذي شرحناه عن الـ header في هذا الدرس <a href="https://macdiscussions.udacity.com/t/main/91521" dir="rtl">من هنا</a></li>
+               <li dir="rtl">3- أن نعطية إرتفاع مؤقت بقيمة 600 بيكسل حتى نشاهد التغييرات</li>
+               <li dir="rtl">4- إعطائة لون أبيض للخلفية</li>
+               <li dir="rtl">5- إضافة خاصية التدرج</li>
+            </ul>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">#main</span><span style="color: #000000; font-weight: bold">{</span>
 <span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100</span><span style="color: #ce5c00; font-weight: bold">%</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #204a87; font-weight: bold">min-width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">980px</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">600px</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #204a87; font-weight: bold">background-color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#fff</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">linear</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">gradient</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">#ffffff</span><span style="color: #ce5c00; font-weight: bold">,</span><span style="color: #0000cf; font-weight: bold">#d3d8e8</span><span style="color: #000000; font-weight: bold">);</span>
 <span style="color: #000000; font-weight: bold">}</span>
-</pre></div>
-
-<p dir="rtl">هنا شرح كيف حصلت على الألوان الخاصة بالتدرج</p>
-<p></p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="main_bg.gif" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/12/3.gif" alt="main_bg" class="image"></a></div><p></p>
-<p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
-</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/12/4.png" alt="image" class="image"></a></div><p></p>
-<h2 dir="rtl">إضافة الـ container:</h2>
-<p></p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="continer-explaination.gif" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/12/5.gif" alt="continer-explaination" class="image"></a></div><p></p>
-<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"main"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl">هنا شرح كيف حصلت على الألوان الخاصة بالتدرج</p>
+            <p></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="main_bg.gif" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/12/3.gif" alt="main_bg" class="image"></a></div>
+            <p></p>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/12/4.png" alt="image" class="image"></a></div>
+            <p></p>
+            <h2 dir="rtl">إضافة الـ container:</h2>
+            <p></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="continer-explaination.gif" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/12/5.gif" alt="continer-explaination" class="image"></a></div>
+            <p></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"main"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
 
 <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
 
 <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
 
 <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
-</pre></div>
-
-<p dir="rtl">حتى نتأكد من أننا نقوم بالعمل الصحيح سأقوم بتغيير لون خلفية الـ container للأسود واعطية ارتفاع بقيمة 80px واشاهد اذا كان في المكان المطلوب ام لا قبل البدء بإضافة أي عناصر أخرى.</p>
-<p></p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/12/6.png" alt="image" class="image"></a></div><p></p>
-<p dir="rtl">كما اريد بالضبط, لاحظ وجود الـ container في منطقة الـ header وكذلك في منطقة الـ main يؤدوا نفس الغرض.</p>
-<p dir="rtl">الأن ساقوم بأزالة تلك التنسيقات المؤقته وأقوم بإضافة القسمين الذان سيحتويان على العناصر بداخل هذا الجزء كما خططنا في الدرس السابق.</p>
-<details dir="rtl" open="open">
-<summary dir="rtl">
-هنا صورة المخطط اذا اردت مراجعته</summary>
-<p></p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/12/7.png" alt="image" class="image"><div class="meta" dir="ltr">
-<span class="filename" dir="ltr">image.png</span><span class="informations" dir="ltr">1500x1000 185 KB</span><span class="expand"></span>
-</div></a></div><p></p>
-</details>
-<h2 dir="rtl">إضافة قسمي float-left و float-right</h2>
-<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"main"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl">حتى نتأكد من أننا نقوم بالعمل الصحيح سأقوم بتغيير لون خلفية الـ container للأسود واعطية ارتفاع بقيمة 80px واشاهد اذا كان في المكان المطلوب ام لا قبل البدء بإضافة أي عناصر أخرى.</p>
+            <p></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/12/6.png" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">كما اريد بالضبط, لاحظ وجود الـ container في منطقة الـ header وكذلك في منطقة الـ main يؤدوا نفس الغرض.</p>
+            <p dir="rtl">الأن ساقوم بأزالة تلك التنسيقات المؤقته وأقوم بإضافة القسمين الذان سيحتويان على العناصر بداخل هذا الجزء كما خططنا في الدرس السابق.</p>
+            <details dir="rtl" open="open">
+               <summary dir="rtl">
+                  هنا صورة المخطط اذا اردت مراجعته
+               </summary>
+               <p></p>
+               <div class="lightbox-wrapper" dir="ltr">
+                  <a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr">
+                     <img src="../../../images/projects/facebook_project/12/7.png" alt="image" class="image">
+                     <div class="meta" dir="ltr">
+                        <span class="filename" dir="ltr">image.png</span><span class="informations" dir="ltr">1500x1000 185 KB</span><span class="expand"></span>
+                     </div>
+                  </a>
+               </div>
+               <p></p>
+            </details>
+            <h2 dir="rtl">إضافة قسمي float-left و float-right</h2>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"main"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
   <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
 
   <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"float-left"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
@@ -302,22 +331,24 @@
 
   <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
-</pre></div>
-
-<p dir="rtl">قم بعمل تجربة التأكد من أنهما في المكان المناسب.</p>
-<h2 dir="rtl">البدء بالعمل على منطقة float-left</h2>
-<p dir="rtl">سنقوم بتقسيمها كالتالي:<br>
-</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/12/8.png" alt="image" class="image"></a></div><p></p>
-<ul dir="rtl">
-<li dir="rtl">
-<p dir="rtl">1- قسم للنص المكتوب أعلى الصورة لوصف الموقع لنسمية description</p>
-</li>
-<li dir="rtl">
-<p dir="rtl">2- قسم للصورة الخاصة بالخريطة</p>
-</li>
-</ul>
-<p dir="rtl">كالتالي:</p>
-<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"main"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl">قم بعمل تجربة التأكد من أنهما في المكان المناسب.</p>
+            <h2 dir="rtl">البدء بالعمل على منطقة float-left</h2>
+            <p dir="rtl">سنقوم بتقسيمها كالتالي:<br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/12/8.png" alt="image" class="image"></a></div>
+            <p></p>
+            <ul dir="rtl">
+               <li dir="rtl">
+                  <p dir="rtl">1- قسم للنص المكتوب أعلى الصورة لوصف الموقع لنسمية description</p>
+               </li>
+               <li dir="rtl">
+                  <p dir="rtl">2- قسم للصورة الخاصة بالخريطة</p>
+               </li>
+            </ul>
+            <p dir="rtl">كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"main"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
 
   <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"float-left"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
@@ -330,11 +361,12 @@
   <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"float-right"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
-</pre></div>
-
-<p dir="rtl">تذكر بأننا نعمل بدأخل منطقة <code dir="ltr">float-left</code> فضع الاكواد بالمكان المناسب.</p>
-<p dir="rtl"><strong dir="rtl">سأقوم بإضافة النص وكذلك الصورة ليصبح الكود لدينا كالتالي:</strong></p>
-<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"main"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl">تذكر بأننا نعمل بدأخل منطقة <code dir="ltr">float-left</code> فضع الاكواد بالمكان المناسب.</p>
+            <p dir="rtl"><strong dir="rtl">سأقوم بإضافة النص وكذلك الصورة ليصبح الكود لدينا كالتالي:</strong></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"main"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
   <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"float-left"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
 
@@ -352,27 +384,37 @@
   <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"float-right"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
-</pre></div>
-
-<details dir="rtl" open="open">
-<summary dir="rtl">
-ركز قمت بتغيير إسم صورة الخريطة</summary>
-<p></p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/12/9.png" alt="image" class="image"><div class="meta" dir="ltr">
-<span class="filename" dir="ltr">image.jpg</span><span class="informations" dir="ltr">980x576 36.3 KB</span><span class="expand"></span>
-</div></a></div><p></p>
-</details>
-<p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
-</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/12/10.png" alt="image" class="image"></a></div><p></p>
-<p dir="rtl">لنبدأ بعمل التنسيقات الخاصة بالوصف:</p>
-<ul dir="rtl">
-<li dir="rtl">1- سنعطي القسم عرض بـ 450px</li>
-<li dir="rtl">2- نريد تكبير حجم الخط</li>
-<li dir="rtl">3- نريد تغيير نوع الخط</li>
-<li dir="rtl">4- نريد تغيير لون الخط</li>
-<li dir="rtl">5- نريد جعل الخط غليظ</li>
-<li dir="rtl">6- نريد هامش علوي بقيمة 40px</li>
-</ul>
-<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.description</span><span style="color: #000000; font-weight: bold">{</span>
+</pre>
+            </div>
+            <details dir="rtl" open="open">
+               <summary dir="rtl">
+                  ركز قمت بتغيير إسم صورة الخريطة
+               </summary>
+               <p></p>
+               <div class="lightbox-wrapper" dir="ltr">
+                  <a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr">
+                     <img src="../../../images/projects/facebook_project/12/9.png" alt="image" class="image">
+                     <div class="meta" dir="ltr">
+                        <span class="filename" dir="ltr">image.jpg</span><span class="informations" dir="ltr">980x576 36.3 KB</span><span class="expand"></span>
+                     </div>
+                  </a>
+               </div>
+               <p></p>
+            </details>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/12/10.png" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">لنبدأ بعمل التنسيقات الخاصة بالوصف:</p>
+            <ul dir="rtl">
+               <li dir="rtl">1- سنعطي القسم عرض بـ 450px</li>
+               <li dir="rtl">2- نريد تكبير حجم الخط</li>
+               <li dir="rtl">3- نريد تغيير نوع الخط</li>
+               <li dir="rtl">4- نريد تغيير لون الخط</li>
+               <li dir="rtl">5- نريد جعل الخط غليظ</li>
+               <li dir="rtl">6- نريد هامش علوي بقيمة 40px</li>
+            </ul>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.description</span><span style="color: #000000; font-weight: bold">{</span>
 <span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">450px</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">20px</span><span style="color: #000000; font-weight: bold">;</span>
   <span style="color: #204a87; font-weight: bold">font-family</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">Arial</span><span style="color: #000000; font-weight: bold">;</span>
@@ -380,12 +422,14 @@
   <span style="color: #204a87; font-weight: bold">font-weight</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">bold</span><span style="color: #000000; font-weight: bold">;</span>
   <span style="color: #204a87; font-weight: bold">margin-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">40px</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #000000; font-weight: bold">}</span>
-</pre></div>
-
-<p dir="rtl"><strong dir="rtl">لاحظ النتيجة لنقارن بين النص في الموقع الأصلي وفي موقعنا:</strong><br>
-</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/12/11.png" alt="image" class="image"></a></div><p></p>
-<p dir="rtl">نريد أن نضيف مسافة بين الأسطر كما تلاحظ في الصورة وسنقوم بذلك بإستخدام خاصية <code dir="ltr">line-height</code> وسنعطية قيمة 29px</p>
-<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.description</span><span style="color: #000000; font-weight: bold">{</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">لاحظ النتيجة لنقارن بين النص في الموقع الأصلي وفي موقعنا:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/12/11.png" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">نريد أن نضيف مسافة بين الأسطر كما تلاحظ في الصورة وسنقوم بذلك بإستخدام خاصية <code dir="ltr">line-height</code> وسنعطية قيمة 29px</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.description</span><span style="color: #000000; font-weight: bold">{</span>
 <span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">450px</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">20px</span><span style="color: #000000; font-weight: bold">;</span>
   <span style="color: #204a87; font-weight: bold">font-family</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">Arial</span><span style="color: #000000; font-weight: bold">;</span>
@@ -394,34 +438,37 @@
   <span style="color: #204a87; font-weight: bold">margin-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">40px</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #204a87; font-weight: bold">line-height</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #0000cf; font-weight: bold">29px</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*عمل مسافة بين الأسطر*/</span>
 <span style="color: #000000; font-weight: bold">}</span>
-</pre></div>
-
-<p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
-</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/12/12.png" alt="image" class="image"></a></div><p></p>
-<h2 dir="rtl">رائع! الأن سننتقل للعمل على صورة الخريطة</h2>
-<p dir="rtl">تلاحظ ان الصورة حجمها كبير وكل ما نريد القيام به هو تصغير حجمها للأبعاد التالية:<br>
-عرض 537px<br>
-طول 195px</p>
-<p dir="rtl">بإمكاننا القيام بذلك عبر وضع الأبعاد في وسم الصورة مباشرة كالتالي:</p>
-<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;img</span> <span style="color: #c4a000">src=</span><span style="color: #4e9a06">"images/map.png"</span> <span style="color: #c4a000">alt=</span><span style="color: #4e9a06">""</span> <span style="color: #c4a000">width=</span><span style="color: #4e9a06">"537"</span> <span style="color: #c4a000">height=</span><span style="color: #4e9a06">"195"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
-</pre></div>
-
-<p dir="rtl">او بإمكانك القيام بذلك عبر اكواد الcss كالتالي:</p>
-<div class="code"><pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-left</span> <span style="color: #204a87; font-weight: bold">img</span><span style="color: #000000; font-weight: bold">{</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/12/12.png" alt="image" class="image"></a></div>
+            <p></p>
+            <h2 dir="rtl">رائع! الأن سننتقل للعمل على صورة الخريطة</h2>
+            <p dir="rtl">تلاحظ ان الصورة حجمها كبير وكل ما نريد القيام به هو تصغير حجمها للأبعاد التالية:<br>
+               عرض 537px<br>
+               طول 195px
+            </p>
+            <p dir="rtl">بإمكاننا القيام بذلك عبر وضع الأبعاد في وسم الصورة مباشرة كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;img</span> <span style="color: #c4a000">src=</span><span style="color: #4e9a06">"images/map.png"</span> <span style="color: #c4a000">alt=</span><span style="color: #4e9a06">""</span> <span style="color: #c4a000">width=</span><span style="color: #4e9a06">"537"</span> <span style="color: #c4a000">height=</span><span style="color: #4e9a06">"195"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl">او بإمكانك القيام بذلك عبر اكواد الcss كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-left</span> <span style="color: #204a87; font-weight: bold">img</span><span style="color: #000000; font-weight: bold">{</span>
 <span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">537px</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">195px</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #000000; font-weight: bold">}</span>
-</pre></div>
-
-<p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
-</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/12/13.png" alt="image" class="image"></a></div><p></p>
-<hr>
-<p dir="rtl">في الدرس القادم سنكمل الجزء الأيمن من هذه المنطقة قم بالتجربة بالبدء بالعمل عليها و أرفقوا لنا تجربتكم في التعليقات</p>
-<hr>
-
-</div>
-    </div>
-
-    <script src="../../../js/main.js"></script>
-  </body>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/12/13.png" alt="image" class="image"></a></div>
+            <p></p>
+            <hr>
+            <p dir="rtl">في الدرس القادم سنكمل الجزء الأيمن من هذه المنطقة قم بالتجربة بالبدء بالعمل عليها و أرفقوا لنا تجربتكم في التعليقات</p>
+            <hr>
+         </div>
+      </div>
+      <script src="../../../js/main.js"></script>
+   </body>
 </html>

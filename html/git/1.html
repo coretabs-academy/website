@@ -1,120 +1,129 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>[الدرس الأول : المهمة الأولى] مدخل Git & GitHub</title>
-    <link rel="stylesheet" href="../../css/style.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-  </head>
-  <body>
-    <div class="navbar">
-      <div class="navbar-brand">
-        <div class="">
-          1MAC Courses
-        </div>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>[الدرس الأول : المهمة الأولى] مدخل Git & GitHub</title>
+      <link rel="stylesheet" href="../../css/style.css">
+      <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+   </head>
+   <body>
+      <div class="navbar">
+         <div class="navbar-brand">
+            <div class="">
+               1MAC Courses
+            </div>
+         </div>
+         <div class="icon-container">
+            <div class="humberger-icon">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+         </div>
+         <div class="navbar-nav">
+            <nav>
+               <div class="close">
+                  أغلق <i class="fas fa-times"></i>
+               </div>
+               <a href="../../index.html">الرئيسية</a>
+               <a href="../html_css/html-css.html">HTML & CSS</a>
+               <a href="../javascript/javascript.html">JavaScript</a>
+               <a href="../git/git.html">Git</a>
+               <a href="../projects/projects.html">المشاريع</a>
+            </nav>
+         </div>
       </div>
-      <div class="icon-container">
-        <div class="humberger-icon">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-      <div class="navbar-nav">
-        <nav>
-          <div class="close">
-            أغلق <i class="fas fa-times"></i>
-          </div>
-          <a href="../../index.html">الرئيسية</a>
-          <a href="../html_css/html-css.html">HTML & CSS</a>
-          <a href="../javascript/javascript.html">JavaScript</a>
-          <a href="../git/git.html">Git</a>
-          <a href="../projects/projects.html">المشاريع</a>
-        </nav>
-      </div>
-    </div>
-    <div class="container">
-      <div class="cooked">
-        <h1>مدخل إلى Git و GitHub</h1>
-        <hr>
-<ul>
-
-<li>
-<h2>ماهو GitHub ؟</h2>
-<p>هو موقع يستعمل (من قبل المطورين غالباً) لنشر المشاريع والعمل عليها بشكل تعاوني, وأيضاً يسهل عليك الحفاظ على النسخ من مشروعك بحيث إذا كان لديك النسخة 1.0 والنسخة 2.0 من مشروعك, بإمكانك أن ترى الفروق بينهم بسهولة كبيرة.</p>
-<p></p><div class="lightbox-wrapper"><a class="lightbox" title="image.png" rel="nofollow noopener"><img src="../../images/git/1/1.png" alt="image" class="image"></a></div><p></p>
-<p>بالأعلى صورة من GitHub في طريقة عرضه للفروق بين الكود القديم والجديد.</p>
-<p>بالنسبة لنا سنستعمله لمشاركة المهام المطلوبة بشكل متواصل وسلس باستعمال Git Client  <img src="../../images/git/1/2.png" title=":wink:" class="emoji" alt=":wink:"></p>
-</li>
-<hr><li>
-<h2>كيفية التسجيل على GitHub ؟</h2>
-<p>طريقة التسجيل سهلة جداً… شاهد الخطوات في 4 دقائق <img src="../../images/git/1/3.png" title=":smile:" class="emoji" alt=":smile:"></p>
-<iframe class="image" src="https://www.youtube.com/embed/7Qo-weIAL3o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
-</li>
-<hr><li>
-<h2>ماهو Git ؟</h2>
-<p><strong>النظام الذي يعمل عليه GitHub</strong>, يسمى Git.,… و يوجد مواقع كثيرة أخرى تعتمد نظام Git مثل موقع Bitbucket وأيضاً موقع Team Foundation Service من الشركة العملاقة مايكروسوفت… هنا سنستعمل GitHub.</p>
-</li>
-<hr><li>
-<h2>ماهو Git Client ؟</h2>
-<p>ببساطة هو <strong>البرنامج الوسيط بينك وبين GitHub</strong>, يوجد الكثير من الـ Git Clients ونحن <strong>سنستعمل GitKraken</strong> (برنامج بسيط وجميل) <img src="../../images/git/1/4.png" title=":smile:" class="emoji" alt=":smile:"></p>
-<p>يحتوي الـ Git Client على واجهة رسومية جميلة تقوم فيها بأوامر Git بدون أن تكتب الأوامر بالطريقة التقليدية. بمعنى بدلاً أن تكتب على سطر الأوامر:</p>
-<div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">git commit
-</pre></div>
-
-
-<p>ستقوم ببساطة بالضغط على الزر commit في برنامج GitKraken, بهذا الشكل:</p>
-
-</li>
-<hr><li>
-<h2>كيف أقوم بتنصيب GitKraken ؟</h2>
-<p>توجه إلى الموقع خاصته وقم بتحميله ثم تنصيبه: <a href="https://www.gitkraken.com" rel="nofollow noopener">https://www.gitkraken.com</a></p>
-<p>بعدها ستحتاج إلى ربط البرنامج مع حسابك على GitHub, كما في الفيديو:</p>
-<iframe class="image" src="https://www.youtube.com/embed/5nhNfMcczlQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
-</li>
-<hr><li>
-<h2>كيف سأقوم بعمل Repositroy جديدة ؟</h2>
-<ul>
-<li>
-<h3>ماهي الـ Repository أولاً ؟</h3>
-<p>بإمكانك أن تعتبر أن الـ repository تعني مستودع لمشروعك أو project, بمعنى ستضع المشروع على repository في GitHub.</p>
-</li>
-<li>
-<h3>كيف سأقوم بإنشاءها ؟</h3>
-<p>الأمر سهل جداً, إما من GitHub مباشرة بهذا الشكل:</p>
-<p></p><div class="lightbox-wrapper"><a class="lightbox" title="Untitled.png" rel="nofollow noopener"><img src="../../images/git/1/6.png" alt="Untitled" class="image"></a></div><p></p>
-</li>
-</ul>
-<p>أو باستعمال GitKraken كونه مرتبط بحسابك, أي أنه يستطيع القيام بانشاء وتعديل الـ repositories الموجودة بحسابك على GitHub.</p>
-<ul>
-<hr><li>
-<h3>مالطريقة التي تفضلها لإنشاء مستودع (Repository) ؟</h3>
-<p>بالتأكيد أفضل GitKraken لأنه أسرع وأسهل.</p>
-<p>قمت بعمل فيديو قصير مكون من ثلاث دقائق, يشرح الأمر بسهولة :</p>
-</li>
-</ul>
-</li>
-</ul>
-
-<iframe class="image" src="https://www.youtube.com/embed/YHZFAsKVg5g" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
-
-<hr><hr><ul>
-<li>
-<h3>هل تجد هذه المفاهيم صعبة ؟</h3>
-<p>لا مشكلة يا صديقي, بإمكانك مراجعة الدروس على الكورس وفهمها بسرعة والعودة لتطبيق ما تعلمته بشكل واقعي… فمدير عملك في المستقبل سيطلب منك أن تنشر المشروع بأسرع وقت ممكن <img src="../../images/git/1/7.png" title=":grin:" class="emoji" alt=":grin:"></p>
-</li><hr>
-<li>
-<h2>ماهو الملف الذي سنضيفه إلى المستودع ؟</h2>
-<p>سنقوم بإضافة ملف index.html إلى المستودع.</p>
-<ul>
-<li>
-<h3>ماهو محتوى الملف ؟</h3>
-<p>سنقوم بالعمل على ملف ال html التالي والذي تم عملة في ورشة استنساخ موقع الفيسبوك في مسار ال front-end</p>
-
-<p>قم بنسخ ولصق المحتوى وإدخاله إلى المستودع repository خاصتك.</p>
-<div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!doctype html&gt;</span>
+      <div class="container">
+         <div class="cooked">
+            <h1>مدخل إلى Git و GitHub</h1>
+            <hr>
+            <ul>
+               <li>
+                  <h2>ماهو GitHub ؟</h2>
+                  <p>هو موقع يستعمل (من قبل المطورين غالباً) لنشر المشاريع والعمل عليها بشكل تعاوني, وأيضاً يسهل عليك الحفاظ على النسخ من مشروعك بحيث إذا كان لديك النسخة 1.0 والنسخة 2.0 من مشروعك, بإمكانك أن ترى الفروق بينهم بسهولة كبيرة.</p>
+                  <p></p>
+                  <div class="lightbox-wrapper"><a class="lightbox" title="image.png" rel="nofollow noopener"><img src="../../images/git/1/1.png" alt="image" class="image"></a></div>
+                  <p></p>
+                  <p>بالأعلى صورة من GitHub في طريقة عرضه للفروق بين الكود القديم والجديد.</p>
+                  <p>بالنسبة لنا سنستعمله لمشاركة المهام المطلوبة بشكل متواصل وسلس باستعمال Git Client  <img src="../../images/git/1/2.png" title=":wink:" class="emoji" alt=":wink:"></p>
+               </li>
+               <hr>
+               <li>
+                  <h2>كيفية التسجيل على GitHub ؟</h2>
+                  <p>طريقة التسجيل سهلة جداً… شاهد الخطوات في 4 دقائق <img src="../../images/git/1/3.png" title=":smile:" class="emoji" alt=":smile:"></p>
+                  <iframe class="image" src="https://www.youtube.com/embed/7Qo-weIAL3o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+               </li>
+               <hr>
+               <li>
+                  <h2>ماهو Git ؟</h2>
+                  <p><strong>النظام الذي يعمل عليه GitHub</strong>, يسمى Git.,… و يوجد مواقع كثيرة أخرى تعتمد نظام Git مثل موقع Bitbucket وأيضاً موقع Team Foundation Service من الشركة العملاقة مايكروسوفت… هنا سنستعمل GitHub.</p>
+               </li>
+               <hr>
+               <li>
+                  <h2>ماهو Git Client ؟</h2>
+                  <p>ببساطة هو <strong>البرنامج الوسيط بينك وبين GitHub</strong>, يوجد الكثير من الـ Git Clients ونحن <strong>سنستعمل GitKraken</strong> (برنامج بسيط وجميل) <img src="../../images/git/1/4.png" title=":smile:" class="emoji" alt=":smile:"></p>
+                  <p>يحتوي الـ Git Client على واجهة رسومية جميلة تقوم فيها بأوامر Git بدون أن تكتب الأوامر بالطريقة التقليدية. بمعنى بدلاً أن تكتب على سطر الأوامر:</p>
+                  <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+                     <pre style="margin: 0; line-height: 125%">git commit
+</pre>
+                  </div>
+                  <p>ستقوم ببساطة بالضغط على الزر commit في برنامج GitKraken, بهذا الشكل:</p>
+               </li>
+               <hr>
+               <li>
+                  <h2>كيف أقوم بتنصيب GitKraken ؟</h2>
+                  <p>توجه إلى الموقع خاصته وقم بتحميله ثم تنصيبه: <a href="https://www.gitkraken.com" rel="nofollow noopener">https://www.gitkraken.com</a></p>
+                  <p>بعدها ستحتاج إلى ربط البرنامج مع حسابك على GitHub, كما في الفيديو:</p>
+                  <iframe class="image" src="https://www.youtube.com/embed/5nhNfMcczlQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+               </li>
+               <hr>
+               <li>
+                  <h2>كيف سأقوم بعمل Repositroy جديدة ؟</h2>
+                  <ul>
+                     <li>
+                        <h3>ماهي الـ Repository أولاً ؟</h3>
+                        <p>بإمكانك أن تعتبر أن الـ repository تعني مستودع لمشروعك أو project, بمعنى ستضع المشروع على repository في GitHub.</p>
+                     </li>
+                     <li>
+                        <h3>كيف سأقوم بإنشاءها ؟</h3>
+                        <p>الأمر سهل جداً, إما من GitHub مباشرة بهذا الشكل:</p>
+                        <p></p>
+                        <div class="lightbox-wrapper"><a class="lightbox" title="Untitled.png" rel="nofollow noopener"><img src="../../images/git/1/6.png" alt="Untitled" class="image"></a></div>
+                        <p></p>
+                     </li>
+                  </ul>
+                  <p>أو باستعمال GitKraken كونه مرتبط بحسابك, أي أنه يستطيع القيام بانشاء وتعديل الـ repositories الموجودة بحسابك على GitHub.</p>
+                  <ul>
+                     <hr>
+                     <li>
+                        <h3>مالطريقة التي تفضلها لإنشاء مستودع (Repository) ؟</h3>
+                        <p>بالتأكيد أفضل GitKraken لأنه أسرع وأسهل.</p>
+                        <p>قمت بعمل فيديو قصير مكون من ثلاث دقائق, يشرح الأمر بسهولة :</p>
+                     </li>
+                  </ul>
+               </li>
+            </ul>
+            <iframe class="image" src="https://www.youtube.com/embed/YHZFAsKVg5g" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+            <hr>
+            <hr>
+            <ul>
+               <li>
+                  <h3>هل تجد هذه المفاهيم صعبة ؟</h3>
+                  <p>لا مشكلة يا صديقي, بإمكانك مراجعة الدروس على الكورس وفهمها بسرعة والعودة لتطبيق ما تعلمته بشكل واقعي… فمدير عملك في المستقبل سيطلب منك أن تنشر المشروع بأسرع وقت ممكن <img src="../../images/git/1/7.png" title=":grin:" class="emoji" alt=":grin:"></p>
+               </li>
+               <hr>
+               <li>
+                  <h2>ماهو الملف الذي سنضيفه إلى المستودع ؟</h2>
+                  <p>سنقوم بإضافة ملف index.html إلى المستودع.</p>
+                  <ul>
+                     <li>
+                        <h3>ماهو محتوى الملف ؟</h3>
+                        <p>سنقوم بالعمل على ملف ال html التالي والذي تم عملة في ورشة استنساخ موقع الفيسبوك في مسار ال front-end</p>
+                        <p>قم بنسخ ولصق المحتوى وإدخاله إلى المستودع repository خاصتك.</p>
+                        <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+                           <pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!doctype html&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;html&gt;</span>
    <span style="color: #204a87; font-weight: bold">&lt;head&gt;</span>
       <span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">charset=</span><span style="color: #4e9a06">"utf-8"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
@@ -583,39 +592,42 @@
       <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
    <span style="color: #204a87; font-weight: bold">&lt;/body&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/html&gt;</span>
-</pre></div>
-
-
-</li>
-</ul>
-</li><hr>
-<li>
-<h2>كيف أقوم بإنشاء الملف ؟</h2>
-<p>شاهد الصورة المتحركة:<br>
-</p><div class="lightbox-wrapper"><a class="lightbox" title="create-index.gif" rel="nofollow noopener"><img src="../../images/git/1/8.gif" alt="create-index" class="image"></a></div><p></p>
-</li><hr>
-<li>
-<h2>ماهي المهمة المطلوبة ؟</h2>
-<ul>
-<li>قم بعمل حساب GitHub.</li>
-<li>قم بتحميل GitKraken أو أي برنامج تفضله.</li>
-<li>قم بربط برنامج GitKraken مع حسابك على GitHub.</li>
-<li>قم بعمل مستودع (Repository) للمشروع.</li>
-<li>قم بوضع ملف index.html في المشروع الخاص بك.</li>
-<li>قم بمشاركة رابط المشروع معنا.</li>
-</ul>
-</li>
-<li>
-<h2>النتيجة المطلوبة:</h2>
-<p>شيء مثل هذا سيفي بالغرض:<br>
-</p><div class="lightbox-wrapper"><a class="lightbox" title="image.png" rel="nofollow noopener"><img src="../../images/git/1/9.png" alt="image" width="342" height="91"></a></div><p></p>
-<p>رابط المستودع الذي أنشأته في الفيديو:</p>
-<p><a href="https://github.com/0xRumple/git-workshop" rel="nofollow noopener">https://github.com/0xRumple/git-workshop</a></p><hr>
-</li>
-
-</ul></div>
-    </div>
-
-    <script src="../../js/main.js"></script>
-  </body>
+</pre>
+                        </div>
+                     </li>
+                  </ul>
+               </li>
+               <hr>
+               <li>
+                  <h2>كيف أقوم بإنشاء الملف ؟</h2>
+                  <p>شاهد الصورة المتحركة:<br></p>
+                  <div class="lightbox-wrapper"><a class="lightbox" title="create-index.gif" rel="nofollow noopener"><img src="../../images/git/1/8.gif" alt="create-index" class="image"></a></div>
+                  <p></p>
+               </li>
+               <hr>
+               <li>
+                  <h2>ماهي المهمة المطلوبة ؟</h2>
+                  <ul>
+                     <li>قم بعمل حساب GitHub.</li>
+                     <li>قم بتحميل GitKraken أو أي برنامج تفضله.</li>
+                     <li>قم بربط برنامج GitKraken مع حسابك على GitHub.</li>
+                     <li>قم بعمل مستودع (Repository) للمشروع.</li>
+                     <li>قم بوضع ملف index.html في المشروع الخاص بك.</li>
+                     <li>قم بمشاركة رابط المشروع معنا.</li>
+                  </ul>
+               </li>
+               <li>
+                  <h2>النتيجة المطلوبة:</h2>
+                  <p>شيء مثل هذا سيفي بالغرض:<br></p>
+                  <div class="lightbox-wrapper"><a class="lightbox" title="image.png" rel="nofollow noopener"><img src="../../images/git/1/9.png" alt="image" width="342" height="91"></a></div>
+                  <p></p>
+                  <p>رابط المستودع الذي أنشأته في الفيديو:</p>
+                  <p><a href="https://github.com/0xRumple/git-workshop" rel="nofollow noopener">https://github.com/0xRumple/git-workshop</a></p>
+                  <hr>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <script src="../../js/main.js"></script>
+   </body>
 </html>

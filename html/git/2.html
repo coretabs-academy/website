@@ -1,167 +1,191 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>[الدرس الثاني : المهمة الثانية] ماهي git commit & git push</title>
-    <link rel="stylesheet" href="../../css/style.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-  </head>
-  <body>
-    <div class="navbar">
-      <div class="navbar-brand">
-        <div class="">
-          1MAC Courses
-        </div>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>[الدرس الثاني : المهمة الثانية] ماهي git commit & git push</title>
+      <link rel="stylesheet" href="../../css/style.css">
+      <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+   </head>
+   <body>
+      <div class="navbar">
+         <div class="navbar-brand">
+            <div class="">
+               1MAC Courses
+            </div>
+         </div>
+         <div class="icon-container">
+            <div class="humberger-icon">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+         </div>
+         <div class="navbar-nav">
+            <nav>
+               <div class="close">
+                  أغلق <i class="fas fa-times"></i>
+               </div>
+               <a href="../../index.html">الرئيسية</a>
+               <a href="../html_css/html-css.html">HTML & CSS</a>
+               <a href="../javascript/javascript.html">JavaScript</a>
+               <a href="../git/git.html">Git</a>
+               <a href="../projects/projects.html">المشاريع</a>
+            </nav>
+         </div>
       </div>
-      <div class="icon-container">
-        <div class="humberger-icon">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-      <div class="navbar-nav">
-        <nav>
-          <div class="close">
-            أغلق <i class="fas fa-times"></i>
-          </div>
-          <a href="../../index.html">الرئيسية</a>
-          <a href="../html_css/html-css.html">HTML & CSS</a>
-          <a href="../javascript/javascript.html">JavaScript</a>
-          <a href="../git/git.html">Git</a>
-          <a href="../projects/projects.html">المشاريع</a>
-        </nav>
-      </div>
-    </div>
-    <div class="container">
-      <div class="cooked">
-       <h1>ورشة عمل git commit و git push </h1>
-       <hr>
-
-<ul dir="rtl">
-
-<li dir="rtl">
-<h3 dir="rtl">مالذي قمنا به في الدرس السابق ؟</h3>
-<p dir="rtl">قمنا باستخدام GitKraken كوسيط للعمل مع git… بمعنى أنه git client GUI.</p>
-</li><hr>
-<li dir="rtl">
-<h3 dir="rtl">لماذا Git ؟</h3>
-<p dir="rtl">هو عبارة عن نظام مفتوح المصدر الهدف منه إدارة عمليات برمجة وتطوير الانظمة والمواقع.</p>
-<p dir="rtl">من خلاله يقوم الفريق البرمجي بمتابعة وإدارة النسخ للنظام الذي يعملون عليه. خلال العمل على أي نظام يقوم  الفريق البرمجي بعمل تعديلات ونسخ من النظام.</p>
-<p dir="rtl">النسخة الأخيرة <strong dir="rtl">ليست دائمًا هي الأفضل</strong> قد يضطر أحيانًا المبرمج للرجوع إلى نسخ سابقة للعمل عليها أو تعديلها.</p>
-</li>
-<hr><li dir="rtl">
-<h3 dir="rtl">هل تتذكر هذا الموقف:</h3>
-<p><img src="../../images/git/2/1.png" alt="Untitled2" class="image"></p>
-<p dir="rtl">كل مرة تقوم بعمل نسخة جديدة تقوم بتسميتها final حتى يصبح الأمر ممل <img src="../../images/git/2/2.png" title=":smile:" class="emoji" alt=":smile:"></p>
-<p dir="rtl">أو تخيل أن هناك مطورين يرغبوا في التعاون والتشارك في نسخ الكود !</p>
-<h4 dir="rtl">وعليه… تأتي الحاجة لأنظمة إدارة الإصدارات Version Control Systems.</h4>
-</li>
-<hr><li dir="rtl">
-<h3 dir="rtl">ماهو الهدف من git ؟</h3>
-</li>
-<li dir="rtl">
-<p dir="rtl">تنظيم النسخ من العمل.</p>
-</li>
-<li dir="rtl">
-<p dir="rtl">إمكانية الرجوع للنسخة الأخيرة أو لنقاط معينة من نسخ سابقة، نعم نقاط سابقة من العمل كما لو كانت صور تم التقاطها على مراحل مختلفة من العمل ونريد العودة لاحداها حتى لو لم تكن الأخيرة… فقط بهذي السهولة.</p>
-</li>
-<hr><li dir="rtl">
-<h3 dir="rtl">ما معنى هذا الكلام ؟</h3>
-<p dir="rtl">نحن هنا نتحدث عن ما يسمى ادارة النسخ  Version Control.</p>
-<p dir="rtl">عند العمل على مشاريع برمجية كبيرة يشترك فيها فريق مطورين لتحديث والعمل على نفس الاجزاء من الاكواد، سواء أكان العمل مع مطور واحد آخر او العمل مع الاف المطورين في انظمة مفتوحة المصدر.</p>
-</li>
-<hr><li dir="rtl">
-<h3 dir="rtl">ماهي مهام التطوير الأساسية؟</h3>
-<p dir="rtl">المهام الأساسية التي نقوم بها عادة كالتالي: انشاء ملفات جديدة … اضافة محتوى لها … حفظها … فتحها في حال التعديل … ثم لاحفظ مرة أخرى.<br>
-تكمن المشكلة هنا في التخزين بعد التعديل … هنا يتطلب الموقف أحيانًا ذكر لماذا تم التعديل وما الاضافات او التعديلات التي حصلت ؟</p>
-<p dir="rtl">هذا الامر يبدو بسيطًا وسلسًا عند التعامل مع ملف واحد ومطور واحد لكنه كارثيًا في حال عدد كبير من الملفات وعدد من المطورين يعملون عليها هنا تتغير المعلوماتالتي نحتاجها إلى من قام بالتعديل ومتى قام بالتعديل ؟ وما هي العديلات التي حصلت ؟ ولماذا؟</p>
-</li>
-<hr><li dir="rtl">
-<h3 dir="rtl">هل يوجد نظام Version Control آخر؟</h3>
-<p dir="rtl">نعم يوجد أنظمة أخرى:<br>
-Mercurial, Bazaar  و Darcs</p>
-</li>
-<hr><li dir="rtl">
-<h3 dir="rtl">كيف يعمل نظام version control ؟</h3>
-<p dir="rtl">يوفر Git  لنا طرقًا سريعة وحديثة لإدارة النسخ version control.</p>
-<p dir="rtl">توفر لنا مساراً تاريخيا يوضح معلومات كافية عن التحديثات.<br>
-لدينا هنا عدة أشخاص يعملون على نفس الملفات بالطريقة التالية على مسار زمني timeline كما هو موضح:</p>
-<p></p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="Untitled.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/2/3.png" alt="Untitled" class="image"></a></div><p></p>
-<hr><p dir="rtl">تخيل أنك تقوم بكتابة التاريخ باستعمال git !</p><hr>
-</li>
-<li dir="rtl">
-<h3 dir="rtl">ماهو التاريخ في حالتنا ؟</h3>
-<p dir="rtl">التاريخ ببساطة هو repository خاصتك.</p>
-</li>
-<hr><li dir="rtl">
-<h3 dir="rtl">ماهي أحداث هذا التاريخ ؟</h3>
-<p dir="rtl">كل حدث في repository  يعرف بـ commit.</p>
-</li>
-<hr><li dir="rtl">
-<h3 dir="rtl">أين سأكتب هذا التاريخ ؟</h3>
-<p dir="rtl">ستقوم بكتابته محلياً, على جهازك, وبإمكانك ارساله ليراه الآخرين على موقع GitHub. يسهل العمل التعاوني  المشترك على الملفات حتى إذا كان العمل متزامن أي أن المطورين يعملون على ذات الملفات ووذات الوقت (تزامن).</p>
-<p dir="rtl">يستطيع المطور العمل على أنواع مختلفة من الملفات قد تكون تصاميم او ملفات برمجية أو وثائق او غير ذلك.</p>
-</li>
-<hr><li dir="rtl">
-<h3 dir="rtl">أين يتم حفظ هذا التاريخ ؟</h3>
-<p dir="rtl">هل لاحظت مجلد .git</p>
-<p dir="rtl">هنا يتم الحفاظ على التاريخ كاملاً, لا تقم أبداً أبداً بالعبث بهذا المجلد.</p>
-</li>
-<hr><li dir="rtl">
-<h3 dir="rtl">ماهي الثلاثة الأوامر الرئيسية في git ؟</h3>
-<ol dir="rtl">
-<li dir="rtl">
-<h4 dir="rtl">لإنشاء المستودع الذي سيتم التخزين فيه repository:</h4>
-<div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">git init
-</pre></div>
-
-</li>
-<li dir="rtl">
-<h4 dir="rtl">لعمل نسخة من الملفات الموجودة في المستودع repository إلى جهاز الكمبيوتر:</h4>
-<div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">git clone
-</pre></div>
-
-</li>
-<li dir="rtl">
-<h3 dir="rtl">لمعرفة حالة repository:</h3>
-<div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">git status
-</pre></div>
-
-</li>
-</ol>
-</li>
-<hr><li dir="rtl">
-<h3 dir="rtl">كيف نقوم بعمل commit جديدة ؟</h3>
-<p dir="rtl">الأمر التالي يجهز الملفات التي سيتم نسخها ليكونوا في قائمة الانتظار:</p>
-<div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">git add .
-</pre></div>
-
-<p dir="rtl">ثم الامر الذي يقوم بحفظ التعديلات، وهنا لابد من إضافة رسالة (وصف):</p>
-<div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">git commit –m <span style="color: #4e9a06">"Seperated HTML from CSS"</span>
-</pre></div>
-
-<p dir="rtl">أخيراً إرسال التعديلات إلى GitHub:</p>
-<div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">git push origin master
-</pre></div>
-
-<p dir="rtl">هنا صورة متحركة للقيام بالعملية:</p>
-<p></p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="github-commit.gif" rel="nofollow noopener" dir="ltr"><img src="../../images/git/2/4.gif" alt="github-commit" class="image"></a></div><p></p>
-</li>
-
-</ul>
-<div data-poll-type="regular" data-poll-name="name" data-poll-status="open" class="poll"></div>
-
-
-<ul dir="rtl">
-<hr><li dir="rtl">
-<h3 dir="rtl">ماهي المهمة المطلوبة ؟</h3>
-<ul dir="rtl">
-<li dir="rtl">
-<p dir="rtl">قم بتعديل ملف index.html ليصبح بهذا الشكل:</p>
-<div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!doctype html&gt;</span>
+      <div class="container">
+         <div class="cooked">
+            <h1>ورشة عمل git commit و git push </h1>
+            <hr>
+            <ul dir="rtl">
+               <li dir="rtl">
+                  <h3 dir="rtl">مالذي قمنا به في الدرس السابق ؟</h3>
+                  <p dir="rtl">قمنا باستخدام GitKraken كوسيط للعمل مع git… بمعنى أنه git client GUI.</p>
+               </li>
+               <hr>
+               <li dir="rtl">
+                  <h3 dir="rtl">لماذا Git ؟</h3>
+                  <p dir="rtl">هو عبارة عن نظام مفتوح المصدر الهدف منه إدارة عمليات برمجة وتطوير الانظمة والمواقع.</p>
+                  <p dir="rtl">من خلاله يقوم الفريق البرمجي بمتابعة وإدارة النسخ للنظام الذي يعملون عليه. خلال العمل على أي نظام يقوم  الفريق البرمجي بعمل تعديلات ونسخ من النظام.</p>
+                  <p dir="rtl">النسخة الأخيرة <strong dir="rtl">ليست دائمًا هي الأفضل</strong> قد يضطر أحيانًا المبرمج للرجوع إلى نسخ سابقة للعمل عليها أو تعديلها.</p>
+               </li>
+               <hr>
+               <li dir="rtl">
+                  <h3 dir="rtl">هل تتذكر هذا الموقف:</h3>
+                  <p><img src="../../images/git/2/1.png" alt="Untitled2" class="image"></p>
+                  <p dir="rtl">كل مرة تقوم بعمل نسخة جديدة تقوم بتسميتها final حتى يصبح الأمر ممل <img src="../../images/git/2/2.png" title=":smile:" class="emoji" alt=":smile:"></p>
+                  <p dir="rtl">أو تخيل أن هناك مطورين يرغبوا في التعاون والتشارك في نسخ الكود !</p>
+                  <h4 dir="rtl">وعليه… تأتي الحاجة لأنظمة إدارة الإصدارات Version Control Systems.</h4>
+               </li>
+               <hr>
+               <li dir="rtl">
+                  <h3 dir="rtl">ماهو الهدف من git ؟</h3>
+               </li>
+               <li dir="rtl">
+                  <p dir="rtl">تنظيم النسخ من العمل.</p>
+               </li>
+               <li dir="rtl">
+                  <p dir="rtl">إمكانية الرجوع للنسخة الأخيرة أو لنقاط معينة من نسخ سابقة، نعم نقاط سابقة من العمل كما لو كانت صور تم التقاطها على مراحل مختلفة من العمل ونريد العودة لاحداها حتى لو لم تكن الأخيرة… فقط بهذي السهولة.</p>
+               </li>
+               <hr>
+               <li dir="rtl">
+                  <h3 dir="rtl">ما معنى هذا الكلام ؟</h3>
+                  <p dir="rtl">نحن هنا نتحدث عن ما يسمى ادارة النسخ  Version Control.</p>
+                  <p dir="rtl">عند العمل على مشاريع برمجية كبيرة يشترك فيها فريق مطورين لتحديث والعمل على نفس الاجزاء من الاكواد، سواء أكان العمل مع مطور واحد آخر او العمل مع الاف المطورين في انظمة مفتوحة المصدر.</p>
+               </li>
+               <hr>
+               <li dir="rtl">
+                  <h3 dir="rtl">ماهي مهام التطوير الأساسية؟</h3>
+                  <p dir="rtl">المهام الأساسية التي نقوم بها عادة كالتالي: انشاء ملفات جديدة … اضافة محتوى لها … حفظها … فتحها في حال التعديل … ثم لاحفظ مرة أخرى.<br>
+                     تكمن المشكلة هنا في التخزين بعد التعديل … هنا يتطلب الموقف أحيانًا ذكر لماذا تم التعديل وما الاضافات او التعديلات التي حصلت ؟
+                  </p>
+                  <p dir="rtl">هذا الامر يبدو بسيطًا وسلسًا عند التعامل مع ملف واحد ومطور واحد لكنه كارثيًا في حال عدد كبير من الملفات وعدد من المطورين يعملون عليها هنا تتغير المعلوماتالتي نحتاجها إلى من قام بالتعديل ومتى قام بالتعديل ؟ وما هي العديلات التي حصلت ؟ ولماذا؟</p>
+               </li>
+               <hr>
+               <li dir="rtl">
+                  <h3 dir="rtl">هل يوجد نظام Version Control آخر؟</h3>
+                  <p dir="rtl">نعم يوجد أنظمة أخرى:<br>
+                     Mercurial, Bazaar  و Darcs
+                  </p>
+               </li>
+               <hr>
+               <li dir="rtl">
+                  <h3 dir="rtl">كيف يعمل نظام version control ؟</h3>
+                  <p dir="rtl">يوفر Git  لنا طرقًا سريعة وحديثة لإدارة النسخ version control.</p>
+                  <p dir="rtl">توفر لنا مساراً تاريخيا يوضح معلومات كافية عن التحديثات.<br>
+                     لدينا هنا عدة أشخاص يعملون على نفس الملفات بالطريقة التالية على مسار زمني timeline كما هو موضح:
+                  </p>
+                  <p></p>
+                  <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="Untitled.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/2/3.png" alt="Untitled" class="image"></a></div>
+                  <p></p>
+                  <hr>
+                  <p dir="rtl">تخيل أنك تقوم بكتابة التاريخ باستعمال git !</p>
+                  <hr>
+               </li>
+               <li dir="rtl">
+                  <h3 dir="rtl">ماهو التاريخ في حالتنا ؟</h3>
+                  <p dir="rtl">التاريخ ببساطة هو repository خاصتك.</p>
+               </li>
+               <hr>
+               <li dir="rtl">
+                  <h3 dir="rtl">ماهي أحداث هذا التاريخ ؟</h3>
+                  <p dir="rtl">كل حدث في repository  يعرف بـ commit.</p>
+               </li>
+               <hr>
+               <li dir="rtl">
+                  <h3 dir="rtl">أين سأكتب هذا التاريخ ؟</h3>
+                  <p dir="rtl">ستقوم بكتابته محلياً, على جهازك, وبإمكانك ارساله ليراه الآخرين على موقع GitHub. يسهل العمل التعاوني  المشترك على الملفات حتى إذا كان العمل متزامن أي أن المطورين يعملون على ذات الملفات ووذات الوقت (تزامن).</p>
+                  <p dir="rtl">يستطيع المطور العمل على أنواع مختلفة من الملفات قد تكون تصاميم او ملفات برمجية أو وثائق او غير ذلك.</p>
+               </li>
+               <hr>
+               <li dir="rtl">
+                  <h3 dir="rtl">أين يتم حفظ هذا التاريخ ؟</h3>
+                  <p dir="rtl">هل لاحظت مجلد .git</p>
+                  <p dir="rtl">هنا يتم الحفاظ على التاريخ كاملاً, لا تقم أبداً أبداً بالعبث بهذا المجلد.</p>
+               </li>
+               <hr>
+               <li dir="rtl">
+                  <h3 dir="rtl">ماهي الثلاثة الأوامر الرئيسية في git ؟</h3>
+                  <ol dir="rtl">
+                     <li dir="rtl">
+                        <h4 dir="rtl">لإنشاء المستودع الذي سيتم التخزين فيه repository:</h4>
+                        <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+                           <pre style="margin: 0; line-height: 125%">git init
+</pre>
+                        </div>
+                     </li>
+                     <li dir="rtl">
+                        <h4 dir="rtl">لعمل نسخة من الملفات الموجودة في المستودع repository إلى جهاز الكمبيوتر:</h4>
+                        <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+                           <pre style="margin: 0; line-height: 125%">git clone
+</pre>
+                        </div>
+                     </li>
+                     <li dir="rtl">
+                        <h3 dir="rtl">لمعرفة حالة repository:</h3>
+                        <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+                           <pre style="margin: 0; line-height: 125%">git status
+</pre>
+                        </div>
+                     </li>
+                  </ol>
+               </li>
+               <hr>
+               <li dir="rtl">
+                  <h3 dir="rtl">كيف نقوم بعمل commit جديدة ؟</h3>
+                  <p dir="rtl">الأمر التالي يجهز الملفات التي سيتم نسخها ليكونوا في قائمة الانتظار:</p>
+                  <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+                     <pre style="margin: 0; line-height: 125%">git add .
+</pre>
+                  </div>
+                  <p dir="rtl">ثم الامر الذي يقوم بحفظ التعديلات، وهنا لابد من إضافة رسالة (وصف):</p>
+                  <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+                     <pre style="margin: 0; line-height: 125%">git commit –m <span style="color: #4e9a06">"Seperated HTML from CSS"</span>
+</pre>
+                  </div>
+                  <p dir="rtl">أخيراً إرسال التعديلات إلى GitHub:</p>
+                  <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+                     <pre style="margin: 0; line-height: 125%">git push origin master
+</pre>
+                  </div>
+                  <p dir="rtl">هنا صورة متحركة للقيام بالعملية:</p>
+                  <p></p>
+                  <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="github-commit.gif" rel="nofollow noopener" dir="ltr"><img src="../../images/git/2/4.gif" alt="github-commit" class="image"></a></div>
+                  <p></p>
+               </li>
+            </ul>
+            <div data-poll-type="regular" data-poll-name="name" data-poll-status="open" class="poll"></div>
+            <ul dir="rtl">
+               <hr>
+               <li dir="rtl">
+                  <h3 dir="rtl">ماهي المهمة المطلوبة ؟</h3>
+                  <ul dir="rtl">
+                     <li dir="rtl">
+                        <p dir="rtl">قم بتعديل ملف index.html ليصبح بهذا الشكل:</p>
+                        <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+                           <pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!doctype html&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;html&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;head&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">charset=</span><span style="color: #4e9a06">"utf-8"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
@@ -336,12 +360,13 @@ Mercurial, Bazaar  و Darcs</p>
 <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/body&gt;</span>
 <span style="color: #204a87; font-weight: bold">&lt;/html&gt;</span>
-</pre></div>
-
-</li>
-<li dir="rtl">
-<p dir="rtl">قم بإضافة ملف style.css ليصبح بهذا الشكل:</p>
-<div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">/***removing body margin***/</span>
+</pre>
+                        </div>
+                     </li>
+                     <li dir="rtl">
+                        <p dir="rtl">قم بإضافة ملف style.css ليصبح بهذا الشكل:</p>
+                        <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+                           <pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">/***removing body margin***/</span>
 
 <span style="color: #204a87; font-weight: bold">body</span> <span style="color: #000000; font-weight: bold">{</span>
 <span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
@@ -690,37 +715,36 @@ Mercurial, Bazaar  و Darcs</p>
 <span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#999</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #204a87; font-weight: bold">text-shadow</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">none</span><span style="color: #000000; font-weight: bold">;</span>
 <span style="color: #000000; font-weight: bold">}</span>
-</pre></div>
-
-</li>
-<li dir="rtl">
-<p dir="rtl">قم بعمل git add . لإضافة الملفات إلى قائمة الإنتظار.</p>
-</li>
-<li dir="rtl">
-<p dir="rtl">ثم git commit لعمل حفظ للتعديلات.</p>
-</li>
-<li dir="rtl">
-<p dir="rtl">لا تنسى عمل git push لإرسال التعديلات إلى GitHub.</p>
-</li>
-</ul>
-</li>
-<hr><li dir="rtl">
-<h3 dir="rtl">كيف سيكون شكل النتيجة النهائية ؟</h3>
-<p dir="rtl">هذا شكل المستودع repository النهائي:<br>
-</p><div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/2/5.png" alt="image" class="image"></a></div><p></p>
-<p dir="rtl">لاحظ أننا قمنا بفصل ملف html عن ملف css.</p>
-<p dir="rtl">هذا رابط المستودع:</p>
-<p dir="ltr"><a href="https://github.com/0xRumple/git-workshop" rel="nofollow noopener" dir="ltr">https://github.com/0xRumple/git-workshop</a></p>
-</li><hr>
-
-</ul>
-
-
-<ul dir="rtl">
-
-</ul></div>
-    </div>
-
-    <script src="../../js/main.js"></script>
-  </body>
+</pre>
+                        </div>
+                     </li>
+                     <li dir="rtl">
+                        <p dir="rtl">قم بعمل git add . لإضافة الملفات إلى قائمة الإنتظار.</p>
+                     </li>
+                     <li dir="rtl">
+                        <p dir="rtl">ثم git commit لعمل حفظ للتعديلات.</p>
+                     </li>
+                     <li dir="rtl">
+                        <p dir="rtl">لا تنسى عمل git push لإرسال التعديلات إلى GitHub.</p>
+                     </li>
+                  </ul>
+               </li>
+               <hr>
+               <li dir="rtl">
+                  <h3 dir="rtl">كيف سيكون شكل النتيجة النهائية ؟</h3>
+                  <p dir="rtl">هذا شكل المستودع repository النهائي:<br></p>
+                  <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/2/5.png" alt="image" class="image"></a></div>
+                  <p></p>
+                  <p dir="rtl">لاحظ أننا قمنا بفصل ملف html عن ملف css.</p>
+                  <p dir="rtl">هذا رابط المستودع:</p>
+                  <p dir="ltr"><a href="https://github.com/0xRumple/git-workshop" rel="nofollow noopener" dir="ltr">https://github.com/0xRumple/git-workshop</a></p>
+               </li>
+               <hr>
+            </ul>
+            <ul dir="rtl">
+            </ul>
+         </div>
+      </div>
+      <script src="../../js/main.js"></script>
+   </body>
 </html>
