@@ -3,16 +3,23 @@
 /*=====================================
 Global Style
 =======================================*/
-*{
+
+* {
 	outline: none;
 }
-img{
+
+img {
 	margin-top: 20px;
 }
-html{
+
+html {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	scroll-behavior: smooth;
+}
+
+html {
+	overflow-x: hidden;
 }
 
 *,
@@ -71,18 +78,6 @@ body {
 	direction: rtl;
 	position: relative;
 	z-index: -100;
-	right: 0;
-	-webkit-transition: right .5s ease-in-out;
-	-o-transition: right .5s ease-in-out;
-	transition: right .5s ease-in-out;
-	overflow-x: hidden;
-}
-
-body.move {
-	right: 320px;
-	-webkit-transition: right .5s ease-in-out;
-	-o-transition: right .5s ease-in-out;
-	transition: right .5s ease-in-out;
 }
 
 li {
@@ -207,19 +202,27 @@ Navbar Style
 	position: absolute;
 	top: 0;
 	right: -100%;
+	-webkit-transition: right .25s ease;
+	-o-transition: right .25s ease;
 	transition: right .25s ease;
 }
 
 .humberger-icon:hover span::before {
 	right: 0;
+	-webkit-transition: right .25s ease;
+	-o-transition: right .25s ease;
 	transition: right .25s ease;
 }
 
 .humberger-icon:hover span:nth-of-type(2)::before {
+	-webkit-transition-delay: .05s;
+	-o-transition-delay: .05s;
 	transition-delay: .05s;
 }
 
 .humberger-icon:hover span:nth-of-type(1)::before {
+	-webkit-transition-delay: .1s;
+	-o-transition-delay: .1s;
 	transition-delay: .1s;
 }
 
@@ -298,7 +301,16 @@ nav a:hover {
 		top: 0;
 		right: -320px;
 		padding-top: 80px;
+		-webkit-transition: right 0.5s ease-in-out;
+		-o-transition: right 0.5s ease-in-out;
+		transition: right 0.5s ease-in-out;
 		z-index: 2;
+	}
+	.move nav {
+		right: 0;
+		-webkit-transition: right 0.5s ease-in-out;
+		-o-transition: right 0.5s ease-in-out;
+		transition: right 0.5s ease-in-out;
 	}
 	nav a {
 		width: 100%;
@@ -372,7 +384,7 @@ Container Style
 	width: 80%;
 	margin: auto;
 	position: relative;
-	top: 160px;
+	top: 130px;
 	z-index: -1;
 	padding-right: 300px;
 	min-width: 1000px;
@@ -382,7 +394,7 @@ Container Style
 	padding-right: 0;
 }
 
-@media screen and (max-width:1050px) {
+@media screen and (max-width:1080px) {
 	.container {
 		width: 95%;
 		min-width: 300px;
@@ -403,6 +415,7 @@ hr {
 	max-width: 100%;
 	max-height: 100%;
 }
+
 
 /*=====================================
 Button Style
@@ -778,7 +791,8 @@ Main Style
 	border-radius: 0 5px 5px 0;
 	position: relative;
 }
-.beauty-box .button-link{
+
+.beauty-box .button-link {
 	background: #4b7bec;
 	color: #fff;
 	display: -webkit-inline-box;
@@ -1024,9 +1038,10 @@ Container Links Style
 	transition: .5s ease;
 	border-radius: 3px;
 }
-.container.links p{
+
+.container.links p {
 	padding: 20px 30px 20px 0;
-	border-bottom: 1px solid rgba(0,0,0,0.05);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 
@@ -1093,6 +1108,7 @@ Projects Style
 	box-sizing: content-box;
 	border-radius: 0;
 }
+
 .beauty-box.projects {
 	padding-top: 90px;
 }
@@ -1160,6 +1176,8 @@ hr {
 	visibility: hidden;
 	top: 0;
 	right: 0;
+	-webkit-transition: .5s ease-in-out;
+	-o-transition: .5s ease-in-out;
 	transition: .5s ease-in-out;
 }
 
@@ -1167,6 +1185,8 @@ hr {
 	background: rgba(0, 0, 0, 0.5);
 	visibility: visible;
 	right: 320px;
+	-webkit-transition: .5s ease-in-out;
+	-o-transition: .5s ease-in-out;
 	transition: .5s ease-in-out;
 }
 
@@ -1192,8 +1212,8 @@ aside {
 	display: inline-block;
 	position: fixed;
 	z-index: 100;
-	top: 90px;
-	height: calc(100vh - 90px);
+	top: 60px;
+	height: calc(100vh - 60px);
 	right: 20px;
 	width: 25%;
 	max-width: 400px;
@@ -1223,7 +1243,7 @@ aside .active {
 	font-weight: bold;
 }
 
-@media screen and (max-width:1050px) {
+@media screen and (max-width:1080px) {
 	aside {
 		display: none;
 	}
