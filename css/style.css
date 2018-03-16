@@ -1228,6 +1228,7 @@ New Style Overwrite
 details {
 	margin: 15px 0;
 	padding: 15px 0;
+	cursor: pointer;
 }
 
 hr {
