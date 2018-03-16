@@ -1007,6 +1007,9 @@ Container Links Style
 	text-decoration: none;
 	font-size: 1.1rem;
 	position: relative;
+	display: block;
+	width: 100%;
+	padding: 20px 30px 20px 0;
 	
 }
 
@@ -1040,7 +1043,7 @@ Container Links Style
 }
 
 .container.links p {
-	padding: 20px 30px 20px 0;
+
 	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
