@@ -99,7 +99,7 @@ Navbar Style
 	width: 100%;
 	-webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.11);
 	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.11);
-	padding: 0 45px;
+	padding: 0 0 0 45px;
 	height: 60px;
 	position: fixed;
 	display: -webkit-box;
@@ -1028,8 +1028,8 @@ Container Links Style
 	width: 15px;
 	height: 15px;
 	position: absolute;
-	top: 12.5px;
-	right: -25px;
+	top: 34px;
+	right: 0px;
 	border-radius: 50%;
 	-webkit-transition: .5s ease;
 	-o-transition: .5s ease;
