@@ -1293,8 +1293,9 @@ code {
 	border: 1px solid #c4c4c4;
 	color: #D81B60;
 	border-radius: 5px;
-	padding: 2px;
+	padding: 2px 4px;
 	display: inline-block;
+	line-height: 15px;
 }
 
 pre {
