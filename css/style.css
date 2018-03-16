@@ -1322,12 +1322,15 @@ aside {
 
 aside p {
 	border-bottom: 1px dashed rgb(243, 243, 243);
-	padding: 5px;
+	
 }
 
 aside a {
 	text-decoration: none;
 	color: #909090;
+	display: block;
+	width: 100%;
+	padding: 5px;
 }
 
 aside a:not(.active):hover {
