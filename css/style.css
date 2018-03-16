@@ -382,6 +382,7 @@ Container Style
 	z-index: -1;
 	padding-right: 300px;
 	min-width: 1000px;
+	line-height: 40px;
 }
 
 .container.fix {
