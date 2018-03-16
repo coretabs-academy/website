@@ -265,7 +265,6 @@ nav a {
 	-webkit-transition: -webkit-box-shadow .3s ease;
 	transition: -webkit-box-shadow .3s ease;
 	-o-transition: box-shadow .3s ease;
-	transition: box-shadow .3s ease;
 	transition: box-shadow .3s ease, -webkit-box-shadow .3s ease;
 }
 
@@ -276,7 +275,6 @@ nav a:hover {
 	-webkit-transition: -webkit-box-shadow .3s ease;
 	transition: -webkit-box-shadow .3s ease;
 	-o-transition: box-shadow .3s ease;
-	transition: box-shadow .3s ease;
 	transition: box-shadow .3s ease, -webkit-box-shadow .3s ease;
 }
 
@@ -413,6 +411,9 @@ hr {
 	margin-top: 20px;
 }
 
+.lightbox-wrapper{
+	text-align: right;
+}
 
 /*=====================================
 Button Style
