@@ -1309,7 +1309,7 @@ aside {
 	display: inline-block;
 	position: fixed;
 	z-index: 100;
-	top: 10px;
+	top: 0px;
 	height: calc(100vh - 60px);
 	right: 20px;
 	width: 25%;
