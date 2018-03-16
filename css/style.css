@@ -1310,8 +1310,10 @@ aside {
 	position: fixed;
 	z-index: 100;
 	top: 0px;
-	height: calc(100vh - 60px);
-	right: 20px;
+	height: 100vh;
+	background: #fafafa;
+	padding-right: 20px;
+	right: 0px;
 	width: 25%;
 	max-width: 400px;
 	min-width: 300px;
