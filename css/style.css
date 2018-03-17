@@ -656,7 +656,7 @@ Main Style
 	height: 5px;
 	top: 43px;
 	position: absolute;
-	border-radius: 5px;
+
 }
 .beauty-box .title::before{
 	left: -70px;
@@ -795,7 +795,7 @@ Main Style
 	display: -webkit-inline-box;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
-	padding: 4px 40px;
+	padding: 5px 45px;
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
@@ -805,15 +805,19 @@ Main Style
 	text-decoration: none;
 	border-radius: 5px;
 	position: absolute;
-	bottom: 60px;
+	bottom: 45px;
 	z-index: 10;
 	-webkit-box-shadow: none;
 	box-shadow: none;
+	transition: all .3s;
+	font-weight: 600;
+	
 }
 
 .beauty-box .button-link:hover {
-	-webkit-box-shadow: -2px 4px 8px 0 rgba(0, 0, 0, .1);
-	box-shadow: -2px 4px 8px 0 rgba(0, 0, 0, .1);
+	background: #5e8bf4;
+	-webkit-box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, .1);
+	box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, .1);
 }
 
 .beauty-box .box-link {
