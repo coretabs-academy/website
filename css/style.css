@@ -1245,9 +1245,9 @@ hr {
 
 .projects--title {
 	top: 0;
-	width: 85%;
+	width: 100%;
 	max-width: 960px;
-	margin: auto;
+	margin: 10px auto 20px;
 	position: relative;
 	z-index: -1;
 }
