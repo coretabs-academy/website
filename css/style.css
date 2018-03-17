@@ -744,7 +744,6 @@ Main Style
 
 .beauty-box .box:first-of-type::after {
 	content: '';
-	height: 1100px;
 	right: -25px;
 	width: 2px;
 	top: 30px;
@@ -811,7 +810,7 @@ Main Style
 	box-shadow: none;
 	transition: all .3s;
 	font-weight: 600;
-	
+
 }
 
 .beauty-box .button-link:hover {
@@ -874,25 +873,10 @@ Main Style
 	.beauty-box .button-link {
 		display: none;
 	}
-	.beauty-box .box:first-of-type::after {
-		height: 775px;
-	}
 	.beauty-box .project img {
 		-webkit-transform: scale(0.8);
 		-ms-transform: scale(0.8);
 		transform: scale(0.8);
-	}
-}
-
-@media screen and (max-width:717px) {
-	.beauty-box .box:first-of-type::after {
-		height: 800px;
-	}
-}
-
-@media screen and (max-width:710px) {
-	.beauty-box .box:first-of-type::after {
-		height: 850px;
 	}
 }
 
@@ -1006,7 +990,7 @@ Container Links Style
 	display: block;
 	width: 100%;
 	padding: 20px 30px 20px 0;
-	
+
 }
 
 .container.links p a:hover {
@@ -1203,15 +1187,6 @@ Projects Style
 .beauty-box.projects {
 	padding-top: 90px;
 }
-
-.beauty-box.projects .box:first-of-type::after {
-	height: 370px;
-}
-
-@media screen and (max-width:850px) {
-	.beauty-box.projects .box:first-of-type::after {
-		height: 270px;
-	}
 }
 
 
@@ -1320,7 +1295,7 @@ aside {
 
 aside p {
 	border-bottom: 1px dashed rgb(243, 243, 243);
-	
+
 }
 
 aside a {

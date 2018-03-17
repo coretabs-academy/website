@@ -1,4 +1,8 @@
 $(function () {
+	var firstBoxTopOffset;
+	var lastBoxTopOffset;
+	var distanceBetween;
+
 	$("details").removeAttr('open');
 	$("body:not(.home)").prepend('<div class="dark--bg"></div>');
 	$(".humberger-icon").on('click', function () {
@@ -49,4 +53,16 @@ $(function () {
 	if (!Number.isInteger(Number(path.split('/')[path.split('/').length - 1].split('.')[0]))) {
 		$(".container").addClass('fix');
 	}
+	//change the courses connector height dynamically
+	$(window).on("resize", changeConnectorHeight);
+	function changeConnectorHeight(){
+		if ($("body").hasClass("home") || currentPage==="projects") {
+
+			firstBoxTopOffset=$(".courses_image").eq(0).offset().top;
+			lastBoxTopOffset=$(".courses_image").eq($(".courses_image").length-1).offset().top;
+			distanceBetween=lastBoxTopOffset-firstBoxTopOffset;
+			$(".connectorStyle").text(".beauty-box .box:first-of-type::after{height:"+distanceBetween+"px}");
+		}
+	}
+	changeConnectorHeight();
 });
