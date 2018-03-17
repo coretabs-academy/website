@@ -939,7 +939,7 @@ about_us Style
 
 .about h1 {
 	position: relative;
-	font-size: 2.5rem;
+	font-size: 2rem;
 	color: rgb(62, 39, 35);
 	width: 220px;
 	text-align: center;
@@ -951,32 +951,25 @@ about_us Style
 	user-select: none;
 }
 
-.about h1::before {
-	content: '';
-	background: rgb(62, 39, 35);
-	width: 60px;
-	height: 5px;
-	left: -70px;
-	top: 43px;
-	position: absolute;
-	border-radius: 5px;
-}
+
 
 .about h1::after {
 	content: '';
 	background: rgb(62, 39, 35);
 	width: 60px;
-	height: 5px;
-	right: -70px;
-	top: 43px;
+	height: 4px;
+	right:0;
+	left: 0;
+	margin: 0 auto;
+	top: 70px;
 	position: absolute;
-	border-radius: 5px;
+
 }
 
 .about p {
 	width: 95%;
 	max-width: 800px;
-	margin: auto;
+	margin: 50px auto 0;
 	text-align: center;
 }
 
