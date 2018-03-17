@@ -639,36 +639,32 @@ Main Style
 	user-select: none;
 }
 
-.beauty-box .title {
+.title {
 	position: absolute;
 	height: 100px;
-	top: 75px;
+	top: 85px;
 	margin-top: -50px;
-	font-size: 3rem;
+	font-size: 2.5rem;
 	color: rgb(62, 39, 35);
 }
 
-.beauty-box .title::before {
+.beauty-box .title::before,
+.beauty-box .title::after{
 	content: '';
 	background: rgb(62, 39, 35);
 	width: 60px;
 	height: 5px;
-	left: -70px;
-	top: 55px;
+	top: 43px;
 	position: absolute;
 	border-radius: 5px;
+}
+.beauty-box .title::before{
+	left: -70px;
+}
+.beauty-box .title::after{
+	right: -70px;
 }
 
-.beauty-box .title::after {
-	content: '';
-	background: rgb(62, 39, 35);
-	width: 60px;
-	height: 5px;
-	right: -70px;
-	top: 55px;
-	position: absolute;
-	border-radius: 5px;
-}
 
 @media screen and (max-width:400px) {
 	.beauty-box .title {
@@ -943,9 +939,9 @@ about_us Style
 
 .about h1 {
 	position: relative;
-	font-size: 3rem;
+	font-size: 2.5rem;
 	color: rgb(62, 39, 35);
-	width: 250px;
+	width: 220px;
 	text-align: center;
 	margin: auto;
 	margin-bottom: 30px;
@@ -961,7 +957,7 @@ about_us Style
 	width: 60px;
 	height: 5px;
 	left: -70px;
-	top: 55px;
+	top: 43px;
 	position: absolute;
 	border-radius: 5px;
 }
@@ -972,7 +968,7 @@ about_us Style
 	width: 60px;
 	height: 5px;
 	right: -70px;
-	top: 55px;
+	top: 43px;
 	position: absolute;
 	border-radius: 5px;
 }
@@ -1351,4 +1347,22 @@ aside .active {
 	aside {
 		display: none;
 	}
+}
+
+/***Facebook icon***/
+.facebook{
+	display: block;
+	width: 45px;
+	height: 45px;
+	margin: 0 auto;
+	margin-top: 20px;
+	background: url(../images/facebook_icon.png);
+	opacity: 0.5;
+    filter: alpha(opacity=50);
+	transition: all 0.4s;
+	cursor: pointer;
+}
+.facebook:hover{
+	opacity: 0.7;
+    filter: alpha(opacity=70);
 }
