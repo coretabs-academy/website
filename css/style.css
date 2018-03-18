@@ -938,8 +938,6 @@ about_us Style
 	user-select: none;
 }
 
-
-
 .about h1::after {
 	content: '';
 	background: rgb(62, 39, 35);
@@ -962,17 +960,11 @@ about_us Style
 
 @media screen and (max-width:400px) {
 	.about h1 {
-		font-size: 2rem;
-	}
-	.about h1::before {
-		left: -5px;
-		top: 35px;
-		width: 40px;
+		font-size: 1.7rem;
 	}
 	.about h1::after {
-		right: -5px;
-		top: 35px;
-		width: 40px;
+		height: 3px;
+		top: 60px;
 	}
 }
 
