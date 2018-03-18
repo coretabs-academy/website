@@ -422,7 +422,8 @@ Button Style
 .navigate {
 	position: relative;
 	width: 500px;
-	margin: 60px auto 60px;
+	margin: 60px auto 0;
+	padding-bottom: 60px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
