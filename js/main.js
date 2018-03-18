@@ -65,4 +65,18 @@ $(function () {
 		}
 	}
 	changeConnectorHeight();
+
+	//hide sidebar menu on screen width greater than 1080px
+	var screenWidth;
+	$(window).on('resize', function(){
+		screenWidth=$(window).width();
+		if (screenWidth>=1080) {
+			$("body").addClass('no-an');
+			$("body").removeClass('move');
+			$("nav").removeClass('move');
+			setTimeout(function(){
+				$("body").removeClass('no-an');
+			}, 500);
+		}
+	});
 });
