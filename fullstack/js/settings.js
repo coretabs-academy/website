@@ -1,8 +1,8 @@
 var converter = new showdown.Converter();
 
 $(function() {
-    var topicsJSON, quizJSON;
-    var categoryTitle, topicTitle, quizTitle;
+    var topicsJSON, quizJSON, categoryTitle, topicTitle, autoId;
+    var navigationScope = [];
     
     var lang = Cookies.get('lang');
     if (lang === undefined) { lang = "ar"; }
@@ -13,24 +13,33 @@ $(function() {
     });
     
     $(".container aside").html("<p>loading ...</p>");
+    $(".navigate").hide();
+    $(".navigate a").removeAttr("href");
+
     $.ajax({
         type: "GET",
         url: "https://rawgit.com/coretabs-academy/fullstack-tutorials/master/topics.json",
         success: function(response) {
             topicsJSON = response;
             $(".container aside").empty();
-            $.each(topicsJSON.categories, function(index, category) {
+            $.each(topicsJSON.categories, function(cIndex, category) {
                 if (lang == "ar") { categoryTitle = category["title-ar"]; } else { categoryTitle = category["title-en"]; }
                 
-                $(".navbar-nav nav").append("<a data-idx='" + index + "'>" + categoryTitle + "</a>");
-                if (index == 0) {
-                    $.each(category.topics, function(index, topic) {
+                $(".navbar-nav nav").append("<a data-idx='" + cIndex + "'>" + categoryTitle + "</a>");
+                if (cIndex == 0) {
+                    navigationScope = [];
+                    $.each(category.topics, function(tIndex, topic) {
+                        navigationScope.push([topic.id, "topic"]);
+                        if (tIndex == 0) { autoId = topic.id; }
                         if (lang == "ar") { topicTitle = topic["title-ar"]; quizTitle="اختبار"; } else { topicTitle = topic["title-en"]; quizTitle="َQuiz"; }
                         $(".container aside").append("<p><a class='topic' data-id='" + topic.id + "'>" + topicTitle + "</a></p>");
                         if (topic.quiz == "true") {
+                            navigationScope.push([topic.id, "quiz"]);
                             $(".container aside").append("<p><a class='quiz' data-id='" + topic.id + "'>" + quizTitle + ": " + topicTitle + "</a></p>");
                         }
                     });
+
+                    $("a.topic[data-id='" + autoId + "']").trigger("click");
                 }
             });
         }
@@ -45,24 +54,31 @@ $(function() {
             if (lang == "ar") { categoryTitle = category["title-ar"]; } else { categoryTitle = category["title-en"]; }
 
             if (index == idx) {
+                navigationScope = [];
                 $.each(category.topics, function(index, topic) {
+                    navigationScope.push([topic.id, "topic"]);
+                    if (index == 0) { autoId = topic.id; }
                     if (lang == "ar") { topicTitle = topic["title-ar"]; quizTitle="اختبار"; } else { topicTitle = topic["title-en"]; quizTitle="َQuiz"; }
                     $(".container aside").append("<p><a class='topic' data-id='" + topic.id + "'>" + topicTitle + "</a></p>");
                     if (topic.quiz == "true") {
+                        navigationScope.push([topic.id, "quiz"]);
                         $(".container aside").append("<p><a class='quiz' data-id='" + topic.id + "'>" + quizTitle + ": " + topicTitle + "</a></p>");
                     }
                 });
+
+                $("a.topic[data-id='" + autoId + "']").trigger("click");
+                
             }
         });
     });
 
-    $("aside").on("click", "a.topic", function(event) {
-        $("aside a").removeClass("active");
-        $(this).addClass("active");
-        $(".cooked").html("<p>loading ...</p>");
-
+    $("aside, .navigate").on("click", "a.topic", function(event) {
         var id = $(this).attr("data-id");
-        var title = $(this).attr("data-category");
+        var navigationIndex = isItemInArray([Number(id), "topic"], navigationScope);
+
+        $("aside a, a.topic").removeClass("active");
+        $("a.topic[data-id='" + id + "']").addClass("active");
+        $(".cooked").html("<p>loading ...</p>");
 
         var youtube = /(?:http?s?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=)?(.+)/g;
         var link = /(?!\S+youtube\.com|youtu\.be)(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
@@ -74,17 +90,20 @@ $(function() {
             $(".cooked").html(html);
             $(".cooked img").each(function () {
                 var src = $(this).attr("src")
-                $(this).attr("src", topicsJSON.host + topic.id + "/" + src);
-            })
+                $(this).attr("src", topicsJSON.host + id + "/" + src);
+            });
+
+            viewNavigation(navigationIndex);
         }, 'text');
     });
-
-    $("aside").on("click", "a.quiz", function(event){
-        $("aside a").removeClass("active");
-        $(this).addClass("active");
-        $(".cooked").html("<p>loading ...</p>");
-
+    
+    $("aside, .navigate").on("click", "a.quiz", function(event){
         var id = $(this).attr("data-id");
+        var navigationIndex = isItemInArray([Number(id), "quiz"], navigationScope);
+
+        $("aside a, a.quiz").removeClass("active");
+        $("a.quiz[data-id='" + id + "']").addClass("active");
+        $(".cooked").html("<p>loading ...</p>");
         
         $.ajax({
             type: "GET",
@@ -105,6 +124,8 @@ $(function() {
                     form.append("<div class='submit'><input type='submit' name='submit' value='إرسال' /></div>");
                     if (qIndex == 0) { $(".cooked").html(form); } else { $(".cooked").append(form); }
                 })
+
+                viewNavigation(navigationIndex);
             }
         });
     });
@@ -132,4 +153,36 @@ $(function() {
             }
         });
     });
+
+    function isItemInArray(item, array) {
+        for (var i = 0; i < array.length; i++) {
+            if (array[i][0] == item[0] && array[i][1] == item[1]) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    function viewNavigation(navigationIndex) {
+        $(".navigate").show();
+        $(".navigate a").removeAttr("data-id");
+        $(".navigate a").removeClass();
+    
+        if (navigationIndex == 0) {
+            $(".navigate a").first().addClass("disabled");
+        } else {
+            $(".navigate a").first().attr("data-id", navigationScope[navigationIndex - 1][0]);
+            $(".navigate a").first().addClass(navigationScope[navigationIndex - 1][1]);
+        }
+    
+        if (navigationIndex == navigationScope.length - 1) {
+            $(".navigate a").last().addClass("disabled");
+        } else {
+            $(".navigate a").last().attr("data-id", navigationScope[navigationIndex + 1][0]);
+            $(".navigate a").last().addClass(navigationScope[navigationIndex + 1][1]);
+        }
+    }
 });
+
+
+
