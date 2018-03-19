@@ -2,6 +2,16 @@ var converter = new showdown.Converter();
 
 $(function() {
     var topicsJSON, quizJSON;
+    var categoryTitle, topicTitle, quizTitle;
+    
+    var lang = Cookies.get('lang');
+    if (lang === undefined) { lang = "ar"; }
+    if (lang == "ar") { $(".lang").html("EN"); } else { $(".lang").html("عربي"); }
+    $(".navbar-brand").on("click", ".lang", function(event){
+        if (lang == "ar") { Cookies.set('lang', 'en', { expires: 365 }); } else { Cookies.set('lang', 'ar', { expires: 365 }); }
+        location.reload();
+    });
+    
     $(".container aside").html("<p>loading ...</p>");
     $.ajax({
         type: "GET",
@@ -10,18 +20,43 @@ $(function() {
             topicsJSON = response;
             $(".container aside").empty();
             $.each(topicsJSON.categories, function(index, category) {
-                $(".container aside").append("<p><a>" + category.title + "</a></p>");
-                $.each(category.topics, function(index, topic) {
-                    $(".container aside").append("<p><a class='topic' data-id='" + topic.id + "' data-category='" + category.title + "'>" + topic.title + "</a></p>");
-                    if (topic.quiz == "true") {
-                        $(".container aside").append("<p><a class='quiz' data-id='" + topic.id + "'>quiz: " + topic.title + "</a></p>");
-                    }
-                });
+                if (lang == "ar") { categoryTitle = category["title-ar"]; } else { categoryTitle = category["title-en"]; }
+                
+                $(".navbar-nav nav").append("<a data-idx='" + index + "'>" + categoryTitle + "</a>");
+                if (index == 0) {
+                    $.each(category.topics, function(index, topic) {
+                        if (lang == "ar") { topicTitle = topic["title-ar"]; quizTitle="اختبار"; } else { topicTitle = topic["title-en"]; quizTitle="َQuiz"; }
+                        $(".container aside").append("<p><a class='topic' data-id='" + topic.id + "'>" + topicTitle + "</a></p>");
+                        if (topic.quiz == "true") {
+                            $(".container aside").append("<p><a class='quiz' data-id='" + topic.id + "'>" + quizTitle + ": " + topicTitle + "</a></p>");
+                        }
+                    });
+                }
             });
         }
     });
+    
+    $(".navbar-nav nav").on("click", "a", function(event){
+        $(".container aside, .cooked").empty();
 
-    $("aside").on("click", "a.topic", function(event){
+        var idx = $(this).attr("data-idx");
+
+        $.each(topicsJSON.categories, function(index, category) {
+            if (lang == "ar") { categoryTitle = category["title-ar"]; } else { categoryTitle = category["title-en"]; }
+
+            if (index == idx) {
+                $.each(category.topics, function(index, topic) {
+                    if (lang == "ar") { topicTitle = topic["title-ar"]; quizTitle="اختبار"; } else { topicTitle = topic["title-en"]; quizTitle="َQuiz"; }
+                    $(".container aside").append("<p><a class='topic' data-id='" + topic.id + "'>" + topicTitle + "</a></p>");
+                    if (topic.quiz == "true") {
+                        $(".container aside").append("<p><a class='quiz' data-id='" + topic.id + "'>" + quizTitle + ": " + topicTitle + "</a></p>");
+                    }
+                });
+            }
+        });
+    });
+
+    $("aside").on("click", "a.topic", function(event) {
         $("aside a").removeClass("active");
         $(this).addClass("active");
         $(".cooked").html("<p>loading ...</p>");
@@ -32,25 +67,16 @@ $(function() {
         var youtube = /(?:http?s?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=)?(.+)/g;
         var link = /(?!\S+youtube\.com|youtu\.be)(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
         
-        $.each(topicsJSON.categories, function (index, category) {
-            if (category.title == title) {
-                $(".cooked").empty();
-                $.each(category.topics, function(index, topic) {
-                    if (topic.id == id) {
-                        $.get(topicsJSON.host + id + "/topic.txt", function(markdown) {
-                            markdown = markdown.replace(youtube, "<iframe width='420' height='345' src='http://www.youtube.com/embed/$1' frameborder='0' allowfullscreen></iframe>");
-                            markdown = markdown.replace(link, "<a href='$1' target='_blank'>$1</a>");
-                            var html = converter.makeHtml(markdown);
-                            $(".cooked").html(html);
-                            $(".cooked img").each(function () {
-                                var src = $(this).attr("src")
-                                $(this).attr("src", topicsJSON.host + topic.id + "/" + src);
-                            })
-                        }, 'text');
-                    }
-                })
-            }
-        });
+        $.get(topicsJSON.host + id + "/topic-" + lang + ".txt", function(markdown) {
+            markdown = markdown.replace(youtube, "<iframe width='420' height='345' src='http://www.youtube.com/embed/$1' frameborder='0' allowfullscreen></iframe>");
+            markdown = markdown.replace(link, "<a href='$1' target='_blank'>$1</a>");
+            var html = converter.makeHtml(markdown);
+            $(".cooked").html(html);
+            $(".cooked img").each(function () {
+                var src = $(this).attr("src")
+                $(this).attr("src", topicsJSON.host + topic.id + "/" + src);
+            })
+        }, 'text');
     });
 
     $("aside").on("click", "a.quiz", function(event){
@@ -65,7 +91,6 @@ $(function() {
             url: topicsJSON.host + id + "/quiz.json",
             success: function(response) {
                 quizJSON = response;
-                $(".cooked").empty();
                 $.each(quizJSON, function (qIndex, question) {
                     var form = $("<form id='quiz-form-" + qIndex + "' class='quiz-form' method='post'></form>");
                     form.append("<div class='result'></div>")

@@ -1,7 +1,5 @@
-ul  {
-    list-style: none;
-}
-
-ul ul {
-    list-style: disc;
-}
+a { cursor: pointer; }
+ul  { list-style: none; }
+ul ul { list-style: disc; }
+nav a { width: auto; padding: 0 10px; }
+.navbar-brand div.lang { margin-left: 10px; padding: 5px 10px; }
