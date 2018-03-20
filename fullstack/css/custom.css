@@ -3,3 +3,14 @@ ul  { list-style: none; }
 ul ul { list-style: disc; }
 nav a { width: auto; padding: 0 10px; }
 .navbar-brand div.lang { margin-left: 10px; padding: 5px 10px; }
+iframe.youtube { width: 420px; }
+@media screen and (max-width: 1080px) {
+    img { width: 100%; }
+}
+@media screen and (max-width: 420px) {
+    iframe.youtube { width: 100%; }
+}
+@media screen and (max-width: 380px) {
+    .navbar-brand { background: none; }
+    .navbar-brand div.lang { margin-left: 10px; padding: 3px 10px; }
+}

@@ -84,7 +84,7 @@ $(function() {
         var link = /(?!\S+youtube\.com|youtu\.be)(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
         
         $.get(topicsJSON.host + id + "/topic-" + lang + ".txt", function(markdown) {
-            markdown = markdown.replace(youtube, "<iframe width='420' height='345' src='http://www.youtube.com/embed/$1' frameborder='0' allowfullscreen></iframe>");
+            markdown = markdown.replace(youtube, "<iframe class='youtube' height='345' src='http://www.youtube.com/embed/$1' frameborder='0' allowfullscreen></iframe>");
             markdown = markdown.replace(link, "<a href='$1' target='_blank'>$1</a>");
             var html = converter.makeHtml(markdown);
             $(".cooked").html(html);
