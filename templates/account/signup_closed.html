@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block head_title %}Sign up{% endblock %}
+
+{% block content %}
+    <h1>Activation</h1>
+    <p>If you have signup code you can enter it below.</p>
+    <form method="get" action="">
+        <div><input type="text" name="code" placeholder="Your signup code..." /></div>
+        <div><input type="submit">Activate</div>
+    </form>
+{% endblock %}

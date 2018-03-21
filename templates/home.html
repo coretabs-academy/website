@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block head_title %} Coretabs {% endblock %}
+
+{% block content %}
+    <p><a href="{% url "account_login" %}">
+        Login
+    </a></p>
+
+    <p><a href="{% url "account_signup" %}">
+        Signup
+    </a></p>
+
+    --------------
+
+    <p><a href="{% url "account_logout" %}">
+        Logout
+    </a></p>
+
+    <p><a href="{% url "account_settings" %}">
+        Account
+    </a></p>
+
+    <p><a href="{% url "account_password" %}">
+        Change password
+    </a></p>
+
+    <p><a href="{% url "account_delete" %}">
+        Delete account
+    </a></p>
+
+{% endblock %}
