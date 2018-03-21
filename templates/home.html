@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-{% load static %}
+
+{% load static i18n %}
+
+
 <html lang="ar" dir="rtl">
    <head>
       <meta charset="utf-8">
@@ -11,7 +14,7 @@
    </head>
    <body class="home">
      
-         {% if request.user.is_authenticated %}
+    {% if request.user.is_authenticated %}
 
         <p><a href="{% url "account_logout" %}">
             Logout
