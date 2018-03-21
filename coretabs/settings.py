@@ -140,6 +140,8 @@ STATICFILES_DIRS = [
 # Account Settings
 ACCOUNT_EMAIL_CONFIRMATION_REQUIRED = True
 
+ACCOUNT_LANGUAGES = LANGUAGES
+
 # Email Server Settings
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
