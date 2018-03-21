@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% load i18n %}
+
+{% block head %}
+        <title>{% trans 'All Books' %}</title>
+{% endblock %}
+
+{% block content %}
+   <form action="{% url 'set_language' %}" method="post">
+        {% csrf_token %}
+        <input name="next" type="hidden" value="{{ redirect_to }}" />
+        <select name="language">
+            {% get_current_language as LANGUAGE_CODE %}
+            {% get_available_languages as LANGUAGES %}
+            {% for lang in LANGUAGES %}
+                <option value="{{ lang.0 }}" {% if lang.0 == LANGUAGE_CODE %} selected="selected"{% endif %}>
+                    {{ lang.1 }} ({{ lang.0 }})
+                </option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Go" />
+    </form>
+    <h1>{% trans 'All Books' %}</h1>
+    <table border="1">
+       
+        <thead>
+            <tr>
+                <th>{% trans 'Title' %}</th>
+                <th>{% trans 'Publication Date' %}</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for book in books %}
+            <tr>
+                <td>
+                    {{ book.title }}
+                </td>
+                <td>
+                    {{ book.pub_date }}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

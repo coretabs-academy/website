@@ -20,5 +20,6 @@ from coretabs import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('account/', include('account.urls')),
+    path('books/', include('library.urls')),
     path('', views.home)
 ]
