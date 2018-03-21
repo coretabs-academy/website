@@ -52,6 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "account.middleware.LocaleMiddleware",
     "account.middleware.TimezoneMiddleware",
+    "library.middleware.SetLangCookie"
 ]
 
 ROOT_URLCONF = 'coretabs.urls'

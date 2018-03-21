@@ -5,7 +5,10 @@
 {% block head_title %}{% trans 'All Books' %}{% endblock %}
 
 {% block content %}
-   <p><a href="{% url "account_settings" %}"> Change Time and Language Settings</a></p>
+    {% if request.user.is_authenticated %}
+        <p><a href="{% url "account_settings" %}"> Change Time and Language Settings</a></p>
+    {% endif %}
+
     <h1>{% trans 'All Books' %}</h1>
     <table border="1">
        
