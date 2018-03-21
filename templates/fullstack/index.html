@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+{% load static%}
 <html>
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>دروس Full Stack</title>
-		<link rel="stylesheet" href="../css/style.css">
-		<link rel="stylesheet" href="css/custom.css">
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+		<link rel="stylesheet" href="{% static 'css/custom.css' %}">
 	</head>
 	<body>
 		<div class="navbar">
@@ -45,7 +46,7 @@
 			crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.min.js"></script>
-		<script src="../js/main.js"></script>
-        <script src="js/settings.js"></script>
+		<script src="{% static 'js/main.js' %}"></script>
+        <script src="{% static 'js/settings.js' %}"></script>
 	</body>
 </html>

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static%}
 <html lang="ar" dir="rtl">
    <head>
       <meta charset="utf-8">
@@ -31,7 +32,7 @@
          <div class="courses_container">
             <div class="html_css box">
                <div class="courses_image">
-                  <img src="images/html_css.png" alt="">
+                  <img src="{% static 'images/html_css.png'%}" alt="">
                </div>
                <div class="text">
                   <h2>دروس HTML و CSS</h2>
@@ -42,7 +43,7 @@
             </div>
             <div class="javascript box">
                <div class="courses_image">
-                  <img src="images/js.png" alt="">
+                  <img src="{% static 'images/js.png'%}" alt="">
                </div>
                <div class="text">
                   <h2>دروس JavaScript</h2>
@@ -55,7 +56,7 @@
             </div>
             <div class="git box">
                <div class="courses_image">
-                  <img src="images/git.png" alt="">
+                  <img src="{% static 'images/git.png'%}" alt="">
                </div>
                <div class="text">
                   <h2>دروس Git</h2>
@@ -67,7 +68,7 @@
             </div>
             <div class="project box">
                <div class="courses_image">
-                  <img src="images/project.png" alt="">
+                  <img src="{% static 'images/project.png'%}" alt="">
                </div>
                <div class="text">
                   <h2>المشاريع</h2>
@@ -88,14 +89,14 @@
       </div>
       <footer>
            <div class="text">
-             Made with <img src="images/heart.png" alt="heart" width="20"> by
+             Made with <img src="{% static 'images/heart.png'%}" alt="heart" width="20"> by
            </div>
            <div class="text">
              <a href="http://alhakem.me/" target="_blank">Mohammed Al-Hakem
-               <span class="profile"><img src="images/mohammed.png" alt="Mohammed Al-Hakem's photo"></span>
+               <span class="profile"><img src="{% static 'images/mohammed.png'%}" alt="Mohammed Al-Hakem's photo"></span>
              </a>&nbsp; &amp; &nbsp;
              <a href="https://www.behance.net/SalahGFX" target="_blank">Salah Eddine Lachkar
-               <span class="profile"><img src="images/salah-eddine.png" alt="Salah Eddine Lachkar's photo"></span>
+               <span class="profile"><img src="{% static 'images/salah-eddine.png'%}" alt="Salah Eddine Lachkar's photo"></span>
              </a>
            </div>
       </footer>

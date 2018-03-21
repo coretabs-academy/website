@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static%}
 <html>
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>[الدرس السادس]: Basic Structure of an HTML Document</title>
-      <link rel="stylesheet" href="../../css/style.css">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
       <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
    </head>
@@ -78,7 +79,7 @@
             <hr>
             <ul dir="rtl">
                <li dir="rtl">
-                  <strong dir="rtl">ملاحظة هامة: عند قيامك بكتابة أكواد الـ HTML فكر كأنك تصنع ساندويتش <img src="../../images/html_css/6/2.png" title=":sandwich:" class="emoji" alt=":sandwich:" style="width:30px;"> وتأكد من فتح و إغلاق كل وسم في المكان المناسب شاهد الصورة التالية حتى تفهم قصدي:</strong><br>
+                  <strong dir="rtl">ملاحظة هامة: عند قيامك بكتابة أكواد الـ HTML فكر كأنك تصنع ساندويتش <img src="{% static 'images/html_css/6/2.png'%}" title=":sandwich:" class="emoji" alt=":sandwich:" style="width:30px;"> وتأكد من فتح و إغلاق كل وسم في المكان المناسب شاهد الصورة التالية حتى تفهم قصدي:</strong><br>
                   <img class="image" src="../../images/html_css/6/3.jpg">
                </li>
             </ul>
@@ -86,6 +87,6 @@
             <p dir="rtl">في هذه المرحلة يفترض أن الجميع قد أصبح قادر على إنشاء صفحة ويب وكتابة أكواد البنية الأساسية ويعرفها جيداً لهذا لن أتكلم بأي تفاصيل مملة فقط أحببت على أن نؤكد بأن هذه هي أهم الوسوم التي الأساسية والتي ستكون حجر الأساس لمشاريعنا القادمة فاذا لديك أي إستفسار ارجوا وضعة بالتعليقات.</p>
          </div>
       </div>
-      <script src="../../js/main.js"></script>
+      <script src="{% static 'js/main.js' %}"></script>
    </body>
 </html>

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static%}
 <html>
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>[الدرس السادس]: Conditionals</title>
-      <link rel="stylesheet" href="../../css/style.css">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
       <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
    </head>
@@ -294,7 +295,7 @@
 </pre>
             </div>
             <p dir="rtl">بالعربي:<br></p>
-            <img class="image" src="../../images/javascript/8/2.png">
+            <img class="image" src="{% static 'images/javascript/8/2.png'%}">
             <p></p>
             <p dir="rtl">هذه الحالة نقوم بإسنادها إلى متغير.</p>
             <p dir="rtl">لنأخذ مثال ونفترض أننا نريد أن نقوم بتحديد سعر منتج بناء على نوع عضوية الزائر فاذا كان عضو vip بالموقع سيتم اسناد السعر 10 الى المتغير price واذا كان عضو عادي فسوف يكون السعر 20 كالتالي:</p>
@@ -343,6 +344,6 @@
             <p dir="rtl"><br></p>
          </div>
       </div>
-      <script src="../../js/main.js"></script>
+      <script src="{% static 'js/main.js' %}"></script>
    </body>
 </html>

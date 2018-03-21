@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static%}
 <html>
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>[الجزء الثالث: اليوم الثاني]: درس اليوم الثالث: الجزء الأول</title>
-      <link rel="stylesheet" href="../../../css/style.css">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
       <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
    </head>
@@ -39,16 +40,16 @@
          <div class="cooked">
             <h1 dir="rtl">نظرة عن المواقع التجاوبية وتقنية الـ Fexbox</h1>
             <hr>
-            <p dir="rtl">أولاً احسنتم جميعاًً على أعمالكم الرائعة <img src="../../../images/projects/one_mac_project/7/1.png"  title=":star_struck:" style="width:30px;" alt=":star_struck:"> في التحدي السابق من يوم لأخر وأنتم تثبتوا جدارتكم وان لديكم مهارات عالية. إطلعت على أكود كل من شارك في التحدي ووجدت تنوع الأفكار وطرق العمل والنتيجة واحدة <strong dir="rtl">عمل رائع!</strong></p>
+            <p dir="rtl">أولاً احسنتم جميعاًً على أعمالكم الرائعة <img src="{% static 'images/projects/one_mac_project/7/1.png'%}"  title=":star_struck:" style="width:30px;" alt=":star_struck:"> في التحدي السابق من يوم لأخر وأنتم تثبتوا جدارتكم وان لديكم مهارات عالية. إطلعت على أكود كل من شارك في التحدي ووجدت تنوع الأفكار وطرق العمل والنتيجة واحدة <strong dir="rtl">عمل رائع!</strong></p>
             <hr>
             <p dir="rtl">في درس اليوم سنتعلم تقنية رائعة تسمى الـ Flexbox هذا التقنية تعطيك قدرات خارقة في القدرة على توزيع العناصر بإحترافية وكذلك جعل المواقع تجاوبية بمعنى انها تتجاوب مع حجم الشاشة وتقوم بتغيير طريقة عرض العناصر بطريقة أخرى - لن أخوض في هذه التفاصيل في هذا الدرس لانها ستكون موضوعنا القادم وسنقوم بعمل موقع بتقنية Mobile-First وكذلك Responsive Design حتى يتوافق موقعك مع أجهزة الموبايل فكما نعرف في الوقت الحالي ان مستخدمي الجوال هم الغالبية ولهذا اغلب الزيارات للمواقع تتم عبر هذه الأجهزة لهذا يجب أن نحرص على أن يحصلوا على تجربة مستخدم رائعة.<br>
-               <img src="../../../images/projects/one_mac_project/7/2.png"  alt="image" class="image"><br>
+               <img src="{% static 'images/projects/one_mac_project/7/2.png'%}"  alt="image" class="image"><br>
             </p>
             <h2 dir="rtl">لنبدأ درسنا</h2>
             <p dir="rtl">أريد منكم جميعاً عند العمل على مشاريع الويب التركيز على تقليل عدد الأكواد التي تستخدمونها بإكبر قدر ممكن والإستفادة من فكرة الـ class وذلك بإنشاء كلاس وإستخدامة بشكل عام بأكبر قدر ممكن لنتجنب تكرار كتابة أكواد التنسيقات في هذا الدرس ستلاحظوا كيف سنستفيد من الكلاسات التي سبق وأنشأناها لنستخدمها مع العناصر في الأقسام التي سنقوم اليوم بتكويدها.</p>
             <h2 dir="rtl">خطة العمل</h2>
             <p></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/7/3.png"  alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/7/3.png'%}"  alt="image" class="image"></a></div>
             <p></p>
             <ul dir="rtl">
                <li dir="rtl">1- سنقوم بإستخدام الكلاس الذي انشأناة سابقاً بإسم section لضم كل هذه العناصر الرئيسية الخاصة بوصف المسارات وسنعتبرها كقسم كامل وذلك كونها مرتبطة ببعضها البعض.</li>
@@ -69,7 +70,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/7/4.png"  alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/7/4.png'%}"  alt="image" class="image"></a></div>
             <p></p>
             <h2 dir="rtl">رائع الأن لنبدأ بإضافة القسم الأول الخاص بالمسار الأول</h2>
             <ul dir="rtl">
@@ -122,7 +123,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/7/5.png"  alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/7/5.png'%}"  alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">تلاحظ وجود إرتفاع للعنصر وذلك يعود للهوامش من اعلى واسفل وعندما نقوم بإضافة المحتويات سيزيد ارتفاعة بحسب حاجتنا.</p>
             <p dir="rtl"><strong dir="rtl">الأن لنبدأ بالعمل بدأخل هذا العنصر:</strong></p>
@@ -172,7 +173,7 @@
 </pre>
             </div>
             <p dir="rtl">حتى الأن لا يوجد أن فرق في النتيجة لاننا لم نضف أي عنصر فعلي بل مازلنا نقوم بعملية التقسيم وللتأكد شاهد <strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/7/6.png"  alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/7/6.png'%}"  alt="image" class="image"></a></div>
             <p></p>
             <h2 dir="rtl">البدء بالعمل على العناصر الخاصة بكل مسار</h2>
             <p dir="rtl">قبل أن اقوم بإضافة أي عناصر أخرى أريد أن اقوم بالتأكد بأنني أقوم بالعمل الصحيح لهذا سأقوم بإضافة بعض التنسيقات <strong dir="rtl">التجريبية</strong> كالعادة بشكل مؤقت حتى نشاهد هذا الصناديق:</p>
@@ -193,7 +194,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/7/7.png"  alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/7/7.png'%}"  alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">خطتنا الان هي وضع هذه الصناديق بجوار بعضها البعض واحد للفيديو والاخر للوصف النصي <strong dir="rtl">فكيف سنقوم بذلك بالطريقة العادية؟</strong></p>
             <p dir="rtl">هل تفكر بعمل تعويم للعناصر نحو اليسار مثلاً ؟ رائع لنجرب ذلك</p>
@@ -208,17 +209,17 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">لنشاهد النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/7/8.png"  alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/7/8.png'%}"  alt="image" class="image"></a></div>
             <p></p>
-            <p dir="rtl"><strong dir="rtl">لماذا لم تصعد العناصر بجوار بعضها البعض <img src="../../../images/projects/one_mac_project/7/9.png"  title=":thinking:" style="width:30px;" alt=":thinking:"> ؟</strong></p>
+            <p dir="rtl"><strong dir="rtl">لماذا لم تصعد العناصر بجوار بعضها البعض <img src="{% static 'images/projects/one_mac_project/7/9.png'%}"  title=":thinking:" style="width:30px;" alt=":thinking:"> ؟</strong></p>
             <p dir="rtl">لنحسب المساحة المتاحة لنا ربما نجد الجواب<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/7/10.png"  alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/7/10.png'%}"  alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">قمنا بإعطاء كل عنصر عرض بقدر 50% وقمنا بإضافة هامش خارجي لكل عنصر بقدر 20px من جميع الاتجاهات ولكننا مهتمين بجهتي اليسار واليمين التي لها علاقة بالعرض لهذا سيأخذ كل عنصر 50% العرض المحدد له + 20px هامش من اليسار + 20px هامش من اليمين <strong dir="rtl">مايعني:</strong></p>
             <p dir="rtl">للعنصر الأول 50%+40px<br>
                للعنصر الثاني 50%+40px<br>
             </p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/7/11.png"  alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/7/11.png'%}"  alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">لنجمع المساحات لهذين العنصرين لاننا نريد ان يكونوا بنفس الصف اليس كذلك ما يعني ان العنصرين سيحتاجان الى 100% + 80px ولكنة هذا غير ممكن اذا كان العنصران سيأخذان 100% من المساحة فمن أين سنأتي بالـ 80px الزائدة مايعني بأن المساحة لن تكون كافية لعرض هذين الصندوقين بجوار بعضهما البعض. لكن لنقم بتعديل الكود الخاص بنا ونعطي كل عنصر عرض 40% بدلاً من 50%</p>
             <div class="code">
@@ -232,11 +233,11 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/7/12.png"  alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/7/12.png'%}"  alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">لقد ظهرا بجوار بعضهما البعض ولكن سنحتاج ان نكون اكثر دقة في حساباتنا لنجعلهما يتقاسمان المساحة بالشكل المطلوب مناصفة.</p>
-            <p dir="rtl"><strong dir="rtl">هذا الأمر مزعج اليس كذلك ان تكون مجبراً بأن تقوم بعمليات حسابية دقيقة للوصول لهدف معين الن يكون من الرائع وجود طريقة تقوم بعمل هذه الحسابات بنفسها وتعطينا النتيجة المطلوبة <img src="../../../images/projects/one_mac_project/7/13.png"  title=":thinking:" style="width:30px;" alt=":thinking:">؟</strong></p>
-            <p dir="rtl">دعني أقول لك بأن هناك تقنية ستقوم بكل ذلك من أجلك <img src="../../../images/projects/one_mac_project/7/14.png"  title=":star_struck:" style="width:30px;" alt=":star_struck:"> نعم وتسمى الـ Flexbox ومن إسمها توحي الى انها flexible ما يعني بانها ستعطيك المرونة في التعامل مع مثل هكذا حالات لنشرح كيف سنقوم بإستخدامها بشكل عام وسنفصلها في الدرس الخاص بها إن شاء الله.</p>
+            <p dir="rtl"><strong dir="rtl">هذا الأمر مزعج اليس كذلك ان تكون مجبراً بأن تقوم بعمليات حسابية دقيقة للوصول لهدف معين الن يكون من الرائع وجود طريقة تقوم بعمل هذه الحسابات بنفسها وتعطينا النتيجة المطلوبة <img src="{% static 'images/projects/one_mac_project/7/13.png'%}"  title=":thinking:" style="width:30px;" alt=":thinking:">؟</strong></p>
+            <p dir="rtl">دعني أقول لك بأن هناك تقنية ستقوم بكل ذلك من أجلك <img src="{% static 'images/projects/one_mac_project/7/14.png'%}"  title=":star_struck:" style="width:30px;" alt=":star_struck:"> نعم وتسمى الـ Flexbox ومن إسمها توحي الى انها flexible ما يعني بانها ستعطيك المرونة في التعامل مع مثل هكذا حالات لنشرح كيف سنقوم بإستخدامها بشكل عام وسنفصلها في الدرس الخاص بها إن شاء الله.</p>
             <h2 dir="rtl">إستخدام الـ Flexbox</h2>
             <p dir="rtl">هناك شيئين أساسيين يجب أن تقوم بعملهما حتى تستطيع العمل مع الـ flexbox</p>
             <ul dir="rtl">
@@ -279,7 +280,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/7/15.png"  alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/7/15.png'%}"  alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">لنبدأ بتعريف الـ flex container وكما ذكرنا سابقاً بأننا سنستخدم العنصر <code dir="ltr">container</code> من أجل ذلك لهذا سنقوم بإستهداف العنصر <code dir="ltr">container</code> الذي بداخل العنصر <code dir="ltr">track</code> فقط بحيث لا يؤثر هذا التغيير على أي <code dir="ltr">container</code> في أي منطقة أخرى كالتالي:</p>
             <div class="code">
@@ -290,7 +291,7 @@
             </div>
             <p dir="rtl">لاحظ قمت بتعريفة كـ  flex container  بتغيير طريقة عرضة الى النوع flex</p>
             <p dir="rtl">لنشاهد التغيير الحاصل على موقعنا:<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/7/16.png"  alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/7/16.png'%}"  alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">لاحظ كيف أصبح العنصرين بجوار بعضهما البعض. ولكننا نريد أن نجعل هذين العنصرين أن يتقاسما مساحة الأب الذي تم تعريفة كـ  flex container اذا يجب علينا تحديد ذلك لعناصر  flex items والتي تحمل كلاس بإسم <code dir="ltr">track-desc</code>:</p>
             <p dir="rtl">سنستخدم خاصية flex وسنعطيها قيمة 1 ما يعني ان كل العناصر التي بداخل هذا يجب ان يكون حجمها متساوي وتتقاسم كل المساحة المتاحة كالتالي:</p>
@@ -302,9 +303,9 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/7/17.png"  alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/7/17.png'%}"  alt="image" class="image"></a></div>
             <p></p>
-            <p dir="rtl"><strong dir="rtl"><img src="../../../images/projects/one_mac_project/7/18.png"  title=":star_struck:" style="width:30px;" alt=":star_struck:"> تم صف العنصرين بجوار بعضهما البعض وكل عنصر أخذ نفس المساحة.</strong></p>
+            <p dir="rtl"><strong dir="rtl"><img src="{% static 'images/projects/one_mac_project/7/18.png'%}"  title=":star_struck:" style="width:30px;" alt=":star_struck:"> تم صف العنصرين بجوار بعضهما البعض وكل عنصر أخذ نفس المساحة.</strong></p>
             <p dir="rtl">لنجرب إعطاء العناصر هامش خارجي من اليسار مثلاً  بمقدار 20px :</p>
             <div class="code">
                <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.track</span> <span style="color: #000000">.track-desc</span><span style="color: #000000; font-weight: bold">{</span>
@@ -315,7 +316,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">ألنتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/7/19.png"  alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/7/19.png'%}"  alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">لاحظ كيف يتم إحتساب المساحة بشكل تلقائي والقيام بالعمليات الحسابية اللازمة لتقسيم المساحة بالشكل الأكثر فعالية</strong></p>
             <p dir="rtl">الان لنعود لكود الـ HTML لنكمل عملنا</p>
@@ -358,7 +359,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/7/20.png"  alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/7/20.png'%}"  alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">لنقوم بعمل التنسيقات اللازمة لتحسين الفيديو في الوقت الحالي قبل أن نكمل إضافة بقية المحتوى:</strong></p>
             <p dir="rtl">سنقوم بإستهداف عنصر الـ <code dir="ltr">iframe</code> الذي بداخل العنصر <code dir="ltr">track</code> بشكل مباشر ونقوم بعمل التالي:</p>
@@ -376,7 +377,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/7/21.png"  alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/7/21.png'%}"  alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">لنتخلص من الخلفية البيضاء وكذلك من الهامش الخارجي من الكود الخاص بتنسيق العنصر <code dir="ltr">track-desc</code></p>
             <div class="code">
@@ -386,7 +387,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/7/22.png"  alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/7/22.png'%}"  alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">لنبدأ بالعمل على المحتوى الخاص بالوصف النصي للمسار ولكن قبل ذلك هل تلاحظوا بأن اول قسم بالموقع الرئيسي الفيديو باليسار والوصف باليمين ؟</p>
             <p dir="rtl">لنقوم بتعديل إتجاة عرض العناصر بدأخل العنصر الذي عرفناة كالـ Flex container بإستخدام خاصية <code dir="ltr">flex-direction</code> وإعطائها قيمة <code dir="ltr">row-reverse</code> ما يعني إعكس العناصر بالصف</p>
@@ -398,11 +399,11 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/7/23.png"  alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/7/23.png'%}"  alt="image" class="image"></a></div>
             <p></p>
-            <p dir="rtl">هل تلاحظوا مدى مرونة هذه الخصائص <img src="../../../images/projects/one_mac_project/7/24.png"  title=":heart_eyes:" style="width:30px;" alt=":heart_eyes:"> هناك المزيد سنتطرق لها بالدرس المخصص حتما ستحبون هذه الـ Flexbox</p>
-            <p dir="rtl">لنعود لموضوعنا <img src="../../../images/projects/one_mac_project/7/25.png"  title=":sweat_smile:" style="width:30px;" alt=":sweat_smile:">, سنقوم بإضافة العناصر كالتالي:<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/7/26.png"  alt="image" class="image"></a></div>
+            <p dir="rtl">هل تلاحظوا مدى مرونة هذه الخصائص <img src="{% static 'images/projects/one_mac_project/7/24.png'%}"  title=":heart_eyes:" style="width:30px;" alt=":heart_eyes:"> هناك المزيد سنتطرق لها بالدرس المخصص حتما ستحبون هذه الـ Flexbox</p>
+            <p dir="rtl">لنعود لموضوعنا <img src="{% static 'images/projects/one_mac_project/7/25.png'%}"  title=":sweat_smile:" style="width:30px;" alt=":sweat_smile:">, سنقوم بإضافة العناصر كالتالي:<br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/7/26.png'%}"  alt="image" class="image"></a></div>
             <p></p>
             <div class="code">
                <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"section"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
@@ -434,7 +435,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/7/27.png"  alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/7/27.png'%}"  alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">لنبدأ بالتنسيقات:</p>
             <ul dir="rtl">
@@ -460,7 +461,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة حتى هذه المرحلة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/7/28.png"  alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/7/28.png'%}"  alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">نريد جعل الخط الازرق الذي تحت عنوان المسار يذهب لليمين بدلاً من الوسط لهذا سنقوم بإستهداف العنصر الذي بداخل العنصر <code dir="ltr">track-desc</code> فقط حتى لا تتأثر العناوين الأخرى:</p>
             <div class="code">
@@ -470,7 +471,7 @@
 </pre>
             </div>
             <p dir="rtl">ركز قمنا بإزالة الهوامش من اليمين واليسار والتي تقوم بعملية التوسيط وكذلك غيرنا بعض القيم من اعلى واسفل وبما اننا حددنا بأننا نريد هذه التغييرات على العناصر بداخل العنصر <code dir="ltr">.track-desc</code> فلن تتأثر عناويننا السابقة بهذا التغيير وسيظل الخط في الوسط<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/7/29.png"  alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/7/29.png'%}"  alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">لنقوم بإضافة التنسيقات على العنصر <code dir="ltr">h3</code></strong><br>
                سنقوم بتغيير لونة وتكبير حجم الخط
@@ -483,7 +484,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/7/30.png"  alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/7/30.png'%}"  alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">لاحظ نريد تقليل المسافة بين الاسطر للعنوان h2</p>
             <div class="code">
@@ -503,11 +504,11 @@
             <p></p>
             <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="flexbox-final1.gif" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/7/31.gif"  alt="flexbox-final1" class="image"></a></div>
             <p></p>
-            <p dir="rtl">في الجزء القادم سنقوم بإكمال عمل بقية الأقسام الخاصة بالمسارات الأخرى وسنتعلم أشياء جديدة ممتعة <img src="../../../images/projects/one_mac_project/7/32.png"  title=":grin:" style="width:30px;" alt=":grin:">.</p>
+            <p dir="rtl">في الجزء القادم سنقوم بإكمال عمل بقية الأقسام الخاصة بالمسارات الأخرى وسنتعلم أشياء جديدة ممتعة <img src="{% static 'images/projects/one_mac_project/7/32.png'%}"  title=":grin:" style="width:30px;" alt=":grin:">.</p>
             <p dir="rtl">في الوقت الحالي أرجوا من الجميع التدرب على هذا الدرس ومقارنه أكوادهم بما قمت به, اما بالنسبة لدرس الـ flexbox فسوف تجدوة من ضمن دروس الخطة سأقوم بتجهيز درس متكامل بشرح مبسط ونقوم بعمل تطبيقات عملية عليه.</p>
             <hr>
          </div>
       </div>
-      <script src="../../../js/main.js"></script>
+      <script src="{% static 'js/main.js' %}"></script>
    </body>
 </html>

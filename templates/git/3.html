@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static%}
 <html>
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>[الدرس الثالث] First & Second Lessons Recap</title>
-      <link rel="stylesheet" href="../../css/style.css">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
       <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
    </head>
@@ -43,13 +44,13 @@
             <p dir="rtl">تعرفنا على ماهو الـ Git وتم شرح الموقع الذي سنقوم بإستخدامة في هذه الورشة وهو الـ GitHub ومن ثم بدأنا بالعمل على أول مستودع لنا بإستخدام الـ GUI أو ما يسمى بالواجهة الرسومية عبر برنامج GitKraken لعمل الأوامر الرئيسية:<br>
                staging - commit - push على مشروعنا.<br>
             </p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../images/git/3/1.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/1.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">في الدرس الثاني:</strong></p>
             <p dir="rtl">تعرفنا على لماذا نحتاج الـ Git وماهو الهدف منه ومن ثم قمنا بعمل أول مستودع لنا بإستخدام الـ CLI او ما يسمى بواجهة الأوامر لعمل الأوامر الرئيسية<br>
                staging - commit - push على مشروعنا.<br>
             </p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/3/2.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/2.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <hr>
             <h2 dir="rtl">درس اليوم سيكون ملخص لشرح لتلك الأوامر بعد أن ممرت بتجربة تطبيقية معها</h2>
@@ -60,7 +61,7 @@
             <p dir="rtl">نظام التحكم بالإصدارات (VCS) لا يتتبع ما تقوم به بشكل تلقائي بل يجب عليك إخبارة بما علية القيام به عند إنتهائك من كل مهمة بإستخدام بعض الأوامر, في هذا الجزء سنتحدث عن الثلاث الخطوات الرئيسية لتسجيل التغييرات على مشروعنا وهي <strong dir="rtl">كالتالي:</strong></p>
             <h2 dir="rtl">1- الـ Staging:</h2>
             <p dir="rtl">عندما تقوم بعمل تعديلات على ملفاتك ومن ثم تريد أن تقوم برفعها للمستودع ففي البدأية يجب عليك أن تقوم بتحديد الملفات التي سيتم رفعها وكأنك تقوم بتقديمها للمنصة.<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../images/git/3/3.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/3.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">لماذا يجب علي أن أقوم بذلك يدوياً ألا يفترض على نظام التحكم بالإصدارات أن يقوم بتحديد كل الملفات التي بدأخل المجلد الخاص بنا بشكل تلقائي؟</strong><br>
                في الحقيقة عدم قيام النظام بذلك هو في صالحنا ويسمح لنا بإبقاء بعض الملفات في ملف مشروعنا بعيداً عن المستودع فليس كل ما بداخل مجلد مشروعك قد تحتاج رفعه للمستودع و مشاركته مع الأخرين فربما لديك ملف تحتفظ فيه على بيانات حساسة أو هناك ملفات لا تريد رفعها في الوقت الحالي.
@@ -99,7 +100,7 @@
             <hr>
             <h2 dir="rtl">2- الـ committing:</h2>
             <p dir="rtl">بمجرد أن تقوم بعمل staging للملفات يتم وضعها في قائمة الإنتظار قبل أن يتم حفظ تلك التعديلات, وهنا يأتي دور الـ commit حيث تقوم بعمل حفظ للتعديلات التي تمت على الملفات التي قمنا بتقديمها للمنصة.<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../images/git/3/6.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/6.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <h4 dir="rtl">طريقة القيام بهذه العملية:</h4>
             <h3 dir="rtl">1- بإستخدام الـ Command Line Interface واجهة الأوامر.</h3>
@@ -139,7 +140,7 @@
             <hr>
             <h2 dir="rtl">2- الـ Pushing:</h2>
             <p dir="rtl">ما إن تقوم بعمل commit لتعديل حتى يتم حفظ ذلك التعديل على المشروع محلياً بجهازك وحتى يتم رفعة للمستودع الخاص بالمشروع يجب أن نقوم بتوجية ذلك الأمر بإستخدام push.<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../images/git/3/9.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/9.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <h4 dir="rtl">طريقة القيام بهذه العملية:</h4>
             <h3 dir="rtl">1- بإستخدام الـ Command Line Interface واجهة الأوامر.</h3>
@@ -158,7 +159,7 @@
             <p></p>
             <hr>
             <p dir="rtl">الأن لنذهب لموقع GitHub ونشاهد إذا ما كان قد تم رفع ملف index,html للمستودع الخاص بنا<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/3/12.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/12.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">رائع!</strong> قمنا بالعمل كما يفترض به أن يتم.</p>
             <hr>
@@ -173,14 +174,14 @@
             <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="status.gif" rel="nofollow noopener" dir="ltr"><img src="../../images/git/3/13.gif" alt="status" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">لنقوم بتفصيل ذلك:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/3/14.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/14.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">1- تم تحديد أي فرع أعمل عليه وهو الـ master<br>
                2- النسخة التي أعمل عليها محدتة بأخر تحديث للنسخة التي على المستودع الذي على موقع GitHub <code dir="ltr">(Remote Repositry)</code><br>
                3- يتم إختباري بأنه هناك تعديل تم على ملف index.html ولم أقم بعمل staging و commit له
             </p>
             <p dir="rtl"><strong dir="rtl">دعوني أقوم بعمل تعديل على الملف ولكن من خلال موقع GitHub ومن ثم أقوم بالإطلاع على حالة النسخة التي أعمل عليها:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/3/15.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/15.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">لاحظوا كيف تغيرت تلك الرسالة إلى أن الملفات التي أعمل عليها متأخرة بعملية commit واحدة عن التي في المستودع</p>
             <hr>
@@ -188,7 +189,7 @@
             <hr>
             <p dir="rtl">سأقوم الأن بعمل بعض التعديلات على ملف الـ index.html وكذلك فصل ملف التنسيقات عنه و وضعه بجوار ملف الـ index كما قمتم في المهمة السابقة.</p>
             <p dir="rtl"><strong dir="rtl">الأن سأقوم بالتأكد من حالة ملفات المشروع كالتالي:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/3/16.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/16.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">نلاحظ أنه لدينا ملفين الأول تم التعديل عليه والثاني تم إضافته لمجلد مشروعنا.</p>
             <p dir="rtl">سأقوم بتنفيذ الثلاثة الأوامر السابقة staging, committing, pushing حتى أقوم بحفظ التعديلات إلى المستودع الخاص بنا. ولكن تذكر ماسبق وقلت لك بخصوص تقسيم الـ commits إلى أجزاء لها علاقة ببعضها البعض.</p>
@@ -236,7 +237,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/3/17.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/17.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">شاهدوا في الصورة اعلاة يقول لي بأن ملفات المشروع التي لدي متقدمة عن ملفات المستودع بـ 2 commits وهذا بالفعل ما قمنا به قبل قليل مع ملفي الـ index و الـ style</p>
             <p dir="rtl"><strong dir="rtl">لنقم بعمل الـ pushing:</strong></p>
@@ -245,7 +246,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النيتجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/3/18.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/18.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">لاحظ قمت بعمل commits للملفين ومن ثم قمت بعمل push واحدة وبإمكانك كذلك عمل push لكل ملف على حدة.</p>
             <hr>
@@ -260,7 +261,7 @@
             <p></p>
             <hr>
             <p dir="rtl">لنلقي نظرة على المستودع الخاص بنا:<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/3/20.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/20.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">نجد أنه تم رفع التعديلات التي قمنا بها للمستودع, وتم إضافة الـ commits الأخيرة التي قمنا بعملها.</p>
             <hr>
@@ -280,7 +281,7 @@
             <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="gitlog.gif" rel="nofollow noopener" dir="ltr"><img src="../../images/git/3/22.gif" alt="gitlog" class="image"></a></div>
             <p></p>
             <p dir="rtl">لنقم بتفصيل الذي ظهر لنا في واجهة الأوامر:<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/3/23.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/23.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">نلاحظ أنه ظهرت لنا قائمة بالـ commits التي قمنا بها خلال عملنا ويبدأ ترتيب هذه الـ commits من أخر واحدة قمنا بها ويتبعها التي قبلها وهكذا حتى نصل في أخر القائمة إلى أول commit قمنا بعملة.</p>
             <p dir="rtl"><strong dir="rtl">التالي تفصيل لما في الصورة أعلاة:</strong></p>
@@ -316,7 +317,7 @@
             <p dir="rtl"><strong dir="rtl">ملاحظة:</strong> للخروج من هذه القائمة بإمكانك الضغط على الحرف <code dir="ltr">q</code> من لوحة المفاتيح</p>
             <h3 dir="rtl">الإطلاع على التفاصيل أعلاة من خلال الواجهة الرسومية:</h3>
             <p></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/3/24.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/24.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <hr>
             <h2 dir="rtl">الأمر git log --oneline</h2>
@@ -329,7 +330,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/3/25.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/25.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">نلاحظ أنه تم كتابة أول 6 أحرف من الـ SHA بلإضافة إلى الـ Commit Message فقط.</p>
             <hr>
@@ -340,6 +341,6 @@
             <hr>
          </div>
       </div>
-      <script src="../../js/main.js"></script>
+      <script src="{% static 'js/main.js' %}"></script>
    </body>
 </html>

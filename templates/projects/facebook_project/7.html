@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static%}
 <html>
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>[الدرس الخامس:الجزء الثالث] تقسيم الـ container</title>
-      <link rel="stylesheet" href="../../../css/style.css">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
       <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
    </head>
@@ -98,7 +99,7 @@
             <hr>
             <p dir="rtl">الصورة التالي نشاهد فيها التركيز على الـ container الذ قمنا بعملة في الدرس السابق</p>
             <p></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/7/1.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/7/1.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">كما تلاحظ في الصورة اعلاة نحتاح إلى صندوقين</strong><br>
                <strong dir="rtl">الأول</strong> يطفو نحو اليسار والذي بداخلة الشعار.<br>
@@ -142,7 +143,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/7/2.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/7/2.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">بالفعل كما توقعنا النتيجة.</p>
             <hr>
@@ -178,7 +179,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">هذه هي النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/7/3.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/7/3.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <hr>
             <p dir="rtl"><strong dir="rtl">رائع الان الصناديق في المكان المناسب وبعد أن تأكدت من ذلك سأقوم بإزلة التنسيقات التي وضعتها من أجل التحقق من النتيجة</strong></p>
@@ -197,6 +198,6 @@
             <hr>
          </div>
       </div>
-      <script src="../../../js/main.js"></script>
+      <script src="{% static 'js/main.js' %}"></script>
    </body>
 </html>

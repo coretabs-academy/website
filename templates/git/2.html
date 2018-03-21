@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static%}
 <html>
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>[الدرس الثاني : المهمة الثانية] ماهي git commit & git push</title>
-      <link rel="stylesheet" href="../../css/style.css">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
       <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
    </head>
@@ -54,8 +55,8 @@
                <hr>
                <li dir="rtl">
                   <h3 dir="rtl">هل تتذكر هذا الموقف:</h3>
-                  <p><img src="../../images/git/2/1.png" alt="Untitled2" class="image"></p>
-                  <p dir="rtl">كل مرة تقوم بعمل نسخة جديدة تقوم بتسميتها final حتى يصبح الأمر ممل <img src="../../images/git/2/2.png" title=":smile:" class="emoji" alt=":smile:"></p>
+                  <p><img src="{% static 'images/git/2/1.png' %}" alt="Untitled2" class="image"></p>
+                  <p dir="rtl">كل مرة تقوم بعمل نسخة جديدة تقوم بتسميتها final حتى يصبح الأمر ممل <img src="{% static 'images/git/2/2.png' %}" title=":smile:" class="emoji" alt=":smile:"></p>
                   <p dir="rtl">أو تخيل أن هناك مطورين يرغبوا في التعاون والتشارك في نسخ الكود !</p>
                   <h4 dir="rtl">وعليه… تأتي الحاجة لأنظمة إدارة الإصدارات Version Control Systems.</h4>
                </li>
@@ -98,7 +99,7 @@
                      لدينا هنا عدة أشخاص يعملون على نفس الملفات بالطريقة التالية على مسار زمني timeline كما هو موضح:
                   </p>
                   <p></p>
-                  <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="Untitled.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/2/3.png" alt="Untitled" class="image"></a></div>
+                  <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="Untitled.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/2/3.png %}" alt="Untitled" class="image"></a></div>
                   <p></p>
                   <hr>
                   <p dir="rtl">تخيل أنك تقوم بكتابة التاريخ باستعمال git !</p>
@@ -172,7 +173,7 @@
                   </div>
                   <p dir="rtl">هنا صورة متحركة للقيام بالعملية:</p>
                   <p></p>
-                  <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="github-commit.gif" rel="nofollow noopener" dir="ltr"><img src="../../images/git/2/4.gif" alt="github-commit" class="image"></a></div>
+                  <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="github-commit.gif" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/2/4.gif' %}" alt="github-commit" class="image"></a></div>
                   <p></p>
                </li>
             </ul>
@@ -733,7 +734,7 @@
                <li dir="rtl">
                   <h3 dir="rtl">كيف سيكون شكل النتيجة النهائية ؟</h3>
                   <p dir="rtl">هذا شكل المستودع repository النهائي:<br></p>
-                  <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/2/5.png" alt="image" class="image"></a></div>
+                  <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/2/5.png' %}" alt="image" class="image"></a></div>
                   <p></p>
                   <p dir="rtl">لاحظ أننا قمنا بفصل ملف html عن ملف css.</p>
                   <p dir="rtl">هذا رابط المستودع:</p>
@@ -745,6 +746,6 @@
             </ul>
          </div>
       </div>
-      <script src="../../js/main.js"></script>
+      <script src="{% static 'js/main.js' %}"></script>
    </body>
 </html>

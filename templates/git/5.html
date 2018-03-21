@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static%}
 <html>
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>[الدرس الثالث] First & Second Lessons Recap</title>
-      <link rel="stylesheet" href="../../css/style.css">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
       <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
    </head>
@@ -60,17 +61,17 @@
 </pre>
             </div>
             <p dir="rtl">هذا الأمر يقوم بتنزيل وجلب التعديلات من على المستودع البعيد إلى المستودع المحلي فقط.<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/5/1.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/5/1.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">تم تنزيل التحديثات والأن لنقم بتشييك حالة المستودع الخاص بنا بعد قيامنا بذلك:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/5/2.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/5/2.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">لاحظ أن المستودع المحلي متاخر عن المستودع البعيد بـ commit واحدة. ما يعني بأنه أحد أعضاء الفريق قام بعمل commit جديدة وقام برفعها للمستودع.</p>
             <p dir="rtl">أيضاً بعد قيامك بتطبيق الأمر git fetch ستلاحظ بأنه لم يتم إحداث أي تغيير على الملفات التي تعمل عليها ولكن أصبح لديك في مستودعك المحلي أخر تحديث للملفات بينما انت ما تزال تعمل على الفرع الخاص بك.</p>
             <p dir="rtl"><strong dir="rtl">راجع الفيديو التالي حتى الدقيقة 0:32 فقط:</strong><br></p>
             <iframe class="image" src="https://www.youtube.com/embed/kxXdk2HcOBo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
             <p dir="rtl">كما شاهدت في الفيديو أعلاة فالأمر git fetch قام بتنزيل التحديثات من المستودع البعيد ولكن مازلنا نعمل على الفرع الخاص بنا بالمستودع المحلي master كما بالصورة التالية:<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../images/git/5/3.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/5/3.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <h4 dir="rtl">الأن سأقوم بإستخدام الأمر git diff لمشاهدة الفرق بين ملفاتي وبين التحديثات الجديدة:</h4>
             <p dir="rtl">لاحظ في الصورة أعلاة أن الفرع الذي أعمل عليه بإسم master وأن الفرع الخاص بتتبع التعديلات على المستودع البعيد هو origin/master وأريد ان أعرف الفرق بينهما لهذا سأقوم بكتابتهما كالتالي:</p>
@@ -79,7 +80,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/5/4.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/5/4.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">من النتيجة أعلاة أستطيع أن أعرف بأن الـ commit التي مستودعي المحلي متاخر بها عن المستودع البعيد هي في ملف الـ index.html حيث أنه يتم الإشارة إليها بعلامة + على اليسار ولون الكود الخاص بالتعديل بالون الأخضر.</p>
             <p dir="rtl">بإمكانك ايضاً مشاهد الإختلافات في الملف كامل بإستخدام الأمر التالي:</p>
@@ -88,7 +89,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">لنلقي نظرة على ملف الـ index.html على مستودعي المحلي:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/5/5.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/5/5.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">من خلال المقارنة الأن أصبحت أعرف أنه اذا ما سأقوم بدمج الملف الخاص مع التعديلات الجديدة فإنه سيتم إضافتها مكان السهم الأخضر في الصورة أعلاة ولا يوجد أي تعارض لدي حيث أن الدمج لن يسبب أي مشاكل بالكود الخاص بي. لذا سأنتقل لأمر الدمج.</p>
             <h3 dir="rtl">الأمر git merge</h3>
@@ -99,11 +100,11 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/5/6.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/5/6.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">لاحظ أنه تم القيام بعملية الدمج وإضافة 7 أسطر جديدة في ملف index.html كما هو موضع في واجهة الأوامر.</p>
             <p dir="rtl"><strong dir="rtl">لنلقي نظرة على الملف الخاص بي:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/5/7.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/5/7.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">تم إضافة الأسطر الجديدة دون حصول أي تعارض.</p>
             <hr>
@@ -112,7 +113,7 @@
             <h3 dir="rtl">الأمر git pull</h3>
             <p dir="rtl">هذا الأمر يقوم بسحب التعديلات ودمجها في نفس الوقت أي انه يقوم بعمل الأمر git fetch ومن ثم يتبعة بعمل الأمر git merge.</p>
             <p dir="rtl">شاهد الصورة التالية لتعرف الفرق بين الطريقة الأولى والطريقة الثانية:<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/5/8.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/5/8.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <h4 dir="rtl">لنقم بتطبيق الأمر git pull:</h4>
             <p dir="rtl">لنفترض أن أحد المطورين قام بعمل تعديل للمستودع وأريد أن أقوم بجلب هذه التعديلات ودمجها مع ملفات مستودعي المحلي, سأقوم بكتابة الكود كالتالي:</p>
@@ -121,7 +122,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/5/9.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/5/9.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">لاحظ في واجهة الأوامر تم إخباري بأنه تم جلب التعديلات ودمجها عبر إضافة 6 أسطر جديدة في ملف الـ index.html</p>
             <hr>
@@ -133,11 +134,11 @@
             <hr>
             <h2 dir="rtl">مثال:</h2>
             <p dir="rtl">لنفترض أنني بدأت العمل على المشروع وقمت بعمل جلب التعديلات الأخيرة قبل أن أبداء عبر الأمر git pull.<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/5/10.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/5/10.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">ومن ثم بدأت بالعمل وقمت بعمل commit وفي نفس الوقت يوجد مساهم أخر في المشروع يقوم بعمل تعديلات وقام بعمل commit للمستودع البعيد حيث أنه الأن أصبح لدي على مستودعي المحلي commit لم أقم برفعة للمستودع البعيد بعد وكذلك يوجد commit في المستودع البعيد لم أقم بجلبة بعد.</p>
             <p dir="rtl">لنفترض أنني أريد أن أقوم برفع تعديلاتي للمستودع البعيد دون أن أقوم بالتأكد من وجود أي تعديلات سبقني أحد المطورين بوضعها كالتالي:<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/5/11.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/5/11.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">نلاحظ انه تم رفض رفع عملية الرفع بسبب وجود تعديلات على المستودع البعيد ليست على مستودعي المحلي.</strong></p>
             <p dir="rtl">في هذه الحالة يجب علي أن أقوم بجلب تلك التعديلات للمستودع المحلي وهناك إحتمالية أنني سأواجة تعارض في الأكواد إذا ما قام ذلك المساهم بعمل تعديلات في نفس الأسطر التي قمت أنا بالعمل عليها وحينها سيكون علي أن اقوم بحل هذا التعارض بشكل يدوي.</p>
@@ -147,11 +148,11 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/5/12.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/5/12.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">تم جلب التعديلات ولكن لم يعمل الأمر pull كما يجب فقد فشلت عملية الدمج بسبب وجود تعارض بين تعديلاتي وبين تعديلات المساهم الذي قام بعمل commit قبلي.</p>
             <p dir="rtl"><strong dir="rtl">سأقوم الأن بفتح ملف الـ index.html حتى أقوم بحل التعارض بين الأكواد :</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/5/13.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/5/13.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">تلاحظ في الصورة أعلاة انه تم وضع فواصل والتي قمت بتظليلها باللون الأصفر</p>
             <p dir="rtl"><strong dir="rtl">الفاصل التالي يحدد مكان بدء التعارض:</strong></p>
@@ -170,7 +171,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">الأن سأحتاج لأن أقوم بإصلاح التعارض بشكل يدوي ومن ثم مسح الفواصل حيث سيصبح الكود الخاص بي كالتالي:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/5/14.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/5/14.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">بعد أن قمت بترتيب الكود وإصلاح التعارض سأقوم بحفظ الملف index.html ومن ثم سأقوم بعمل staging و commit للتعديل كما سبق وشرحنا في الدروس السابقة كالتالي:</p>
             <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
@@ -183,7 +184,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/5/15.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/5/15.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">الأن سأقوم برفع التعديلات للمستودع البعيد بالأمر التالي:</p>
             <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
@@ -191,24 +192,24 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/5/16.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/5/16.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">تم الرفع بنجاح بعد أن تعاملنا مع التعارض الذي حصل لنا.</p>
             <hr>
             <h2 dir="rtl">مهمة اليوم</h2>
             <p dir="rtl">في الدرس السابق قمنا بعمل clone لمشروع من مستودع على موقع الـ GitHub حيث يفترض أن يكون لديك الملفات كالتالي:<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/5/17.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/5/17.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">بعد أن قمت بعمل إستنساخ للمشروع وبعد أن تم إضافتك كمساهم فية (contributor) أصبح لديك إمكانية القيام بعمل التعديلات على المشروع وحفظها ومن ثم عمل push للملفات من المستودع الذي على جهازك لمستودع الـ GitHub بشكل مباشر.</p>
             <h2 dir="rtl">المهمة كالتالي:</h2>
             <p dir="rtl">1- قم قبل كل شي بعمل تحديث للنسخة التي لديك بإستخدام الأمر الخاص بذلك كما شرحنا في الدرس أعلاة.</p>
             <p dir="rtl">سحب الملفات من المستودع البعيد قبل البدء بالعمل يضمن لك حصولك على أحدث نسخة من الموقع بعد قيام أعضاء الفريق بالتعديل عليها فلا تنسى أن تبدأ بهذا الأمر دائماً.</p>
             <p dir="rtl">2- قم بفتح ملف index.html ستجد التالي:<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../images/git/5/18.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/5/18.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">سيقوم كل واحد مننا بالإجابة على السؤال السابق ومن ثم يقوم بوضع سؤال جديد للشخص الذي يلية <strong dir="rtl">فكيف سنقوم بذلك؟</strong></p>
             <p dir="rtl"><strong dir="rtl">قم بفتح ملف الـ index.html بإستخدام محرر الأكواد وإتبع الخطوات التالية:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/git/5/19.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/5/19.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">ستجد الـ Object التالي:</strong></p>
             <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
@@ -252,7 +253,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../images/git/5/20.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/5/20.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">3- ستقوم بحفظ تعديلك على المستودع المحلي وستكتب رسالة الـ commit بإستخدام رقم السؤال الذي قمت بالإجابة عليه كالتالي:</p>
             <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
@@ -265,6 +266,6 @@
             <hr>
          </div>
       </div>
-      <script src="../../js/main.js"></script>
+      <script src="{% static 'js/main.js' %}"></script>
    </body>
 </html>

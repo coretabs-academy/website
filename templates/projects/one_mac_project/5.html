@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static%}
 <html>
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>[الجزء الثاني: اليوم الثاني]: درس اليوم الثاني: الجزء الثاني والأخير</title>
-      <link rel="stylesheet" href="../../../css/style.css">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
       <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
    </head>
@@ -41,7 +42,7 @@
             <hr>
             <p dir="rtl">في هذا الجزء سنكمل شرح درس تحدي اليوم الثاني.</p>
             <p dir="rtl">الخطة كالتالي:<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/5/1.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/5/1.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">إنتهيناء من العمل على قسم <code dir="ltr">banner</code> الأن سنبدأ في القسم الجديد <code dir="ltr">about-section</code> وسنضعة بشكل منفصل عن القسم السابق كالتالي:</p>
             <div class="code">
@@ -91,7 +92,7 @@
                <p dir="rtl">سنخوض في هذه المواضيع عندما نشرح الـ semantic HTML حيث وان هناك شروط تحسن من موقعك في محركات البحث ما يسمى بالـ SEO بحيث يصبح محتوى موقعك مرتب ترتيب منطقي يسهل على محرك البحث قرأته.</p>
             </details>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/5/2.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/5/2.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">الأن سنقوم بإضافة التنسيقات التالية للـ <code dir="ltr">class</code> بإسم <code dir="ltr">about-section</code> :</strong></p>
             <ul dir="rtl">
@@ -106,7 +107,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/5/3.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/5/3.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">الأن سنضيف التنسيقات التالية للعنوان <code dir="ltr">h2</code> بداخل القسم <code dir="ltr">about-section</code>:</strong></p>
             <ul dir="rtl">
@@ -121,10 +122,10 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/5/4.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/5/4.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">الأن نريد إضافة الخط الظاهر تحت العنوان كما بالصورة التالية:<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/5/5.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/5/5.png'%}" alt="image" class="image"></a></div>
             <br>
             تستطيع إضافة هذا العنصر بطرق كثيرة وكما قام العديد منكم في التحدي الخاص بهذا الدرس ولكننا نريد أن نتعلم طريقة جديدة أكثر ديناميكية فكما تلاحظ فقد تم إعتماد العنصر <code dir="ltr">h2</code> في الموقع كالعناوين الرئيسية لكل قسم فاذا ما إستطعنا القيام بهذا التنسيق بإستخدام الـ css فسيكون رائع ولن نحتاج إلى تكرار كود إضافة هذا العنصر كل مرة نريد فيها إضافة عنوان لقسم رئيسي.
             <p></p>
@@ -161,7 +162,7 @@
 </pre>
                </div>
                <p dir="rtl">شاهد النتيجة كيف تم إضافة هذه الكلمة <code dir="rtl">تجريبي</code> بعد الكلمة التي كتبناها بداخل عنصر العنوان <code dir="ltr">h2</code><br></p>
-               <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/5/6.png" alt="image" class="image"></a></div>
+               <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/5/6.png'%}" alt="image" class="image"></a></div>
                <p></p>
             </details>
             <hr>
@@ -211,7 +212,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/5/7.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/5/7.png'%}" alt="image" class="image"></a></div>
             <br>
             رائع! حصلنا على الشكل المطلوب تبقى لنا أن نقوم بتوسيطة بإستخدام الهوامش الخارجية وعطائة هوامش من اعلى بقيمة 4px واسفل بقيمة 40px كما سبق وشرحنا بهذا الدرس <a href="https://macdiscussions.udacity.com/t/css-margin-property/85103" dir="rtl">من هنا</a>.
             <p></p>
@@ -227,7 +228,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/5/8.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/5/8.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">الأن في كل مرة تريد إضافة هذا الخط تحت أي عنوان قم بإعطائة الكلاس <code dir="ltr">underline</code> بكل بساطة</p>
             <hr>
@@ -246,7 +247,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/5/9.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/5/9.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <hr>
             <p dir="rtl"><strong dir="rtl">إضافة الفقرة الأولى:</strong></p>
@@ -268,7 +269,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيحة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/5/10.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/5/10.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">التنسيقات المطلوبة:</strong></p>
             <ul dir="rtl">
@@ -283,12 +284,12 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/5/11.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/5/11.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <hr>
             <h2 dir="rtl">العمل على القسم الأخر</h2>
             <p></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/5/12.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/5/12.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">لاحظ أن هذا القسم لدية تنسيقات مشتركة مع القسم الذي سبق وأنشأناة <code dir="ltr">about-section</code> مما يوحي لنا بأنه قد نستطيع الإستفادة من تلك التنسيقات التي سبق وكتبناها بدلاً من أن نقوم بكتابة المزيد من التنسيقات المشابهه’ لنفترض بأننا سنقوم بنسخ نفس الأكواد التي قمنا بكتابتها للقسم السابق ولنقم بتغيير المحتوى والعمل على جعل الـ class الخاص بها عام حتى لا يكون مخصص لقسم دون الأخر.</p>
             <div class="code">
@@ -330,7 +331,7 @@
 </pre>
             </div>
             <p dir="rtl">في الكود أعلاة قمت بتكرار أكواد القسم الذي سبق وانشأناة لتكون النتيجة كالتالي:<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/5/13.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/5/13.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">لنقم بتغيير العنوان وإزالة الصورة الخاصة بشعار المبادرة بالإضافة للفقرة النصية من القسم الجديد:</p>
             <div class="code">
@@ -360,7 +361,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/5/14.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/5/14.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">لاحظ اننا مازلنا نستخدم الـ class بإسم <code dir="ltr">about-section</code> للقسم الجديد</p>
             <div class="code">
@@ -464,7 +465,7 @@
             </div>
             <p dir="rtl">لاحظ قمت بإضافتها بداخل قسم <code dir="ltr">div</code> وأعطيته <code dir="ltr">class</code> بإسم <code dir="ltr">info-list</code> سأستخدمة لإستهداف هذه القائمة بشكل خاص, بإمكانك وضعها مباشرة وإستهدافها بشكل مباشر.</p>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/5/15.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/5/15.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">الأن لنقوم ببعض التنسيقات على القائمة <code dir="ltr">ul</code> كالتالي:</strong></p>
             <ul dir="rtl">
@@ -479,7 +480,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/5/16.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/5/16.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">الان لنستهدف كل عنصر <code dir="ltr">li</code> من هذه القائمة ونعطية التنسيقات التالية:</strong></p>
             <ul dir="rtl">
@@ -496,7 +497,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/5/17.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/5/17.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">تبقى لنا تنسيق الرابط بداخل هذه المنطقة بإزالة الخط من تحته وكذلك تغيير لونة</p>
             <div class="code">
@@ -513,6 +514,6 @@
             <hr>
          </div>
       </div>
-      <script src="../../../js/main.js"></script>
+      <script src="{% static 'js/main.js' %}"></script>
    </body>
 </html>

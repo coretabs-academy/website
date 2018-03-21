@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static%}
 <html>
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>[الجزء الأول: اليوم الثاني]: درس اليوم الأول الـ header + navbar</title>
-      <link rel="stylesheet" href="../../../css/style.css">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
       <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
    </head>
@@ -40,7 +41,7 @@
             <h1 dir="rtl">العمل على الجزء الأول</h1>
             <hr>
             <p dir="rtl">سنقوم بمثل ما قمنا به في التطبيقات السابقة حيث ساعتمد التقسيم التالي:<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/2/1.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/2/1.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">1- سأقوم بعمل div واعطية class بإسم header سنستخدمة للخلفية المتمددة.<br>
                2- سأقوم بعمل div واعطية class بإسم container سنستخدمة لإعطاء عرض محدد وتوسيطة من اجل توسيط المحتوى<br>
@@ -71,7 +72,7 @@
 </pre>
             </div>
             <p></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/2/2.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/2/2.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <h2 dir="rtl"><strong dir="rtl">الان سنضيف قسم الـ container</strong></h2>
             <div class="code">
@@ -97,7 +98,7 @@
             </div>
             <p dir="rtl">التنسيقات التي اضفتها للتجربة حتى نتأكد من ان عملنا صحيح وسنقوم بإزالتها بعد التأكد</p>
             <p></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/2/3.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/2/3.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">كما نريد بالضبط الان سأقوم بازالة التنسيقات التي اخبرتك بأنها من اجل التنسيق وسأبداء بالعمل داخل الـ container</p>
             <h2 dir="rtl">إضافة أقسام  كلاً من الشعار <strong dir="ltr">logo</strong> والقائمة <strong dir="ltr">navbar</strong></h2>
@@ -171,7 +172,7 @@
             </div>
             <p dir="rtl">لاحظ ادرجنا الشعار مثل أي صورة عادية وجعلناها كرابط قابل للضغط يقوم بالتحويل للصفحة الرئيسية <code dir="ltr">index.html</code></p>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/2/5.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/2/5.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">رائع! لنبدأ بعمل التنسيقات:<br>
                1- اريد ان اجعل الرابط من نوع block حتى يكون كالصندوق<br>
@@ -185,7 +186,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/2/6.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/2/6.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">تذكر دائماً هناك أكثر من طريقة للحصول على نفس التنسيق لا تتقيد بنفس الاكواد التي اكتبها اذا لديك افكار اخرى فالهدف هو ايضاح الفكرة والتطبيق يعود اليك طالما وستخرج بنفس النتيجة.</p>
             <p dir="rtl">سأتوقف هنا واذهب للعمل على القائمة navbar واذا احتجنا العودة للشعار سنعود لاحقاً.</p>
@@ -224,7 +225,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة :</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/2/7.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/2/7.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">لا تبدوا جميلة ولكننا نقوم بالعمل المطلوب, الان سنقوم بتجريدها من كل التنسيقات الافتراضية حتى نستطيع إضافة التنسيقات الخاصة بنا</p>
             <p dir="rtl"><strong dir="rtl">سأقوم بالتالي:</strong><br>
@@ -243,7 +244,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/2/8.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/2/8.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">لاحظ ان كل عنصر في هذه القائمة هو عنصر <code dir="ltr">li</code> وكلاُ من هذه العناصر أتى في سطر جديد بينما أريد ان تكون بجوار بعضها البعض لهذا سأقوم بتعويم عناصر الـ <code dir="ltr">li</code> نحو اليمين حتى تصبح جوار بعضها البعض:</p>
             <div class="code">
@@ -253,7 +254,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/2/9.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/2/9.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">الان أريد أن اقوم بتنسيق الروابط <code dir="ltr">a</code> التي بداخل عناصر <code dir="ltr">li</code> لتكون بالشكل المطلوب:</p>
             <p dir="rtl"><strong dir="rtl">نريد عمل التالي:</strong><br>
@@ -274,17 +275,17 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/2/10.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/2/10.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">لنقم الأن بتغيير نوع الخط ليطابق الموقع الأصلي</strong></p>
             <p dir="rtl">سنستخدم خطوط قوقل أدخل الموقع من الرابط التالي <a href="https://fonts.google.com" rel="nofollow noopener" dir="rtl">من هنا</a> وإتبع الخطوات التالية:<br></p>
             <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="cairo_font.gif" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/2/11.gif" alt="cairo_font" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/2/12.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/2/12.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">لاحظ ان عناصر القائمة خرجت عن حدود الـ container لهذا يجب أن نعود الية ونعطية خاصية تجعلة يقوم بالإلتفاف حول العناصر التي تخرج عنه<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/2/13.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/2/13.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">بالإضافة لإصلاح هذه المشكلة سأقوم بإعطاء العنصر هوامش داخلية بقيمة 15 بيكسل من اليمين واليسار واعطية خاصية تقوم بإحتساب هذه الهوامش من حال عرضة دون اي زيادة اخرى</p>
             <div class="code">
@@ -298,7 +299,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/2/14.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/2/14.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">تقريباً إنتهينا تبقى لنا أن نقوم بإضافة القائمة المنسدلة وعمل بعض اللمسات.</p>
             <h2 dir="rtl">إضافة القائمة المنسدلة</h2>
@@ -336,7 +337,7 @@
 </pre>
             </div>
             <p dir="rtl">قمت بإضافة القائمة الجديدة بداخل العنصر المسؤول عن إظهارها ركز على تركيب الأكود, حالياً اضفت عنصرين فقط حتى نركز على عملنا وأضفت للقائمة الفرعية class بإسم dropdown-content حتى نستطيع إضافة التنسيقات الخاصة.<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/2/15.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/2/15.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">لنبدأ بعمل التنسيقات:</strong></p>
             <p dir="rtl">1- نريد أن نجعل موقع القائمة الفرعية مطلق, نستطيع ان نقول غير مقيد بأي شي حتى تظهر تحت العنصر المسؤول عن إظهارها سنقوم بذلك بإستخدام خاصية تسمى <code dir="ltr">position</code> بإستخدام احد قيمها والتي تسمى <code dir="ltr">absolute</code></p>
@@ -348,7 +349,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/2/16.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/2/16.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">الان لنضيف بعض التنسيقات كالتالي:<br>
                1- لنغير لون خلفية القائمة الفرعية ليكون مطابق للموقع الاصلي<br>
@@ -367,7 +368,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/2/17.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/2/17.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">كما تشاهد عناصر القائمة بجوار بعضها البعض والسبب لذلك اننا قمنا في السابق بإعطاء عناصر <code dir="ltr">li</code> خاصية تعويم float لليمين. الان نريد ان نستثني هذه العناصر من هذه الخاصية حتى تعود لتعرض كل عنصر في السطر الخاص به لهذا سنقوم بإستهداف عناصر <code dir="ltr">li</code> التي بداخل القائمة الفرعية فقط ونغير قيمة الـ <code dir="ltr">float</code> الى <code dir="ltr">none</code> ما يعني بدون تعويم</p>
             <div class="code">
@@ -377,7 +378,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/2/18.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/2/18.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">رائع! كما نريد بالضبط تبقى بعض التنسيقات وتكون مطابقة للقائمة الرئيسية</p>
             <p dir="rtl"><strong dir="rtl">لنقوم بإعطاء الروابط الخاصة بالقائمة الفرعية التنسيقات اللازمة كالتالي:</strong></p>
@@ -396,7 +397,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/2/19.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/2/19.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">جميل جداً كما هو مطلوب.</p>
             <h2 dir="rtl">إضافة الـ hover</h2>
@@ -467,7 +468,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/2/21.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/2/21.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">الان كيف سأقوم بإظهارها ؟</strong></p>
             <p dir="rtl">نريد بأن نقوم بعمل عنصر يعمل كالحساس بمجرد مرور المأوس علية يقوم بتغيير تنسيق القائمة التي إخفيناها ويظهرها بمعنا انه سوف يقوم بتغيير الكود التالي:</p>
@@ -505,7 +506,7 @@
             <p dir="rtl"><strong dir="rtl">انتهينا من عمل كل شي تبقت اللمسات الأخيرة</strong></p>
             <h2 dir="rtl">إصلاح إتجاة القائمة</h2>
             <p dir="rtl">هل لاحظت أن القائنة الفرعية ليست بالشكل المطلوب حيث انها تظهر من اليسار الى اليمين دعني اوضح لك<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/2/23.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/2/23.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">ما السبب وما الحل؟ اريد منكم التفكير به وكتابته في التعليقات</strong></p>
             <h2 dir="rtl">جعل تأثيرات الـ hover تدخل بسلاسة</h2>
@@ -566,10 +567,10 @@
             <p></p>
             <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="final.gif" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/2/26.gif" alt="final" class="image"></a></div>
             <p></p>
-            <h1 dir="rtl">بإنتظار جوابكم بخصوص الحل لإتجاة القائمة <img src="../../../images/projects/one_mac_project/2/27.png" title=":wink:" style="width:30px;" alt=":wink:"></h1>
+            <h1 dir="rtl">بإنتظار جوابكم بخصوص الحل لإتجاة القائمة <img src="{% static 'images/projects/one_mac_project/2/27.png'%}" title=":wink:" style="width:30px;" alt=":wink:"></h1>
             <hr>
          </div>
       </div>
-      <script src="../../../js/main.js"></script>
+      <script src="{% static 'js/main.js' %}"></script>
    </body>
 </html>

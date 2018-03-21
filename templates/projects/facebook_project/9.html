@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static%}
 <html>
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>[الدرس الخامس:الجزء الخامس] الإنتهاء من تكويد قسم الـ header</title>
-      <link rel="stylesheet" href="../../../css/style.css">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
       <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
    </head>
@@ -124,7 +125,7 @@
             <hr>
             <h2 dir="rtl"><strong dir="rtl">في الصورة التالية خطة العمل:</strong></h2>
             <p dir="rtl">أعتقد أن في هذه المرحلة لن أحتاج إلى تفسير خطتنا لهذا المنطقة بعد إطلاعي على تطبيقاتكم في الدروس السابقة أعرف بانكم ستفهموا الفكرة من مجرد النظر للصورة التالية.<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/9/1.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/9/1.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <h2 dir="rtl">لنبدأ العمل</h2>
             <p dir="rtl">عملنا هذه المرة سيكون بداخل العنصر الذي يحمل <code dir="ltr">class</code> بإسم <code dir="ltr">float-right</code>:</p>
@@ -135,7 +136,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">سنبدأ بتكويد القسم الذي سيقوم بضم مجموعة العناصر في الاقسام الثلاثة وسأعطية class بإسم <code dir="ltr">login-box</code></strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/9/2.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/9/2.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <div class="code">
                <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"float-right"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
@@ -155,7 +156,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/9/3.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/9/3.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">رائع حيث أريد, الان سنبدأ بإنشاء العناصر بداخلة. بإمكاننا الأن إزالة لون الخلفية وجعل عرض العنصر <code dir="ltr">auto</code> حتى يكبر عرضة بمقدار عرض العناصر التي بداخلة بشكل اوتوماتيكي</p>
             <div class="code">
@@ -210,7 +211,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">لنشاهد النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/9/4.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/9/4.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">جيد لنقوم ببعض التنسيقات ولكن قبل ذلك سنحتاج إلى ان نضع النص الذي يصف حقل الإدخال بداخل عنصر يسمى label ليكون الكود كالتالي:</p>
             <div class="code">
@@ -240,7 +241,7 @@
             </p>
             <p dir="rtl">لنشاهد التصميم الأصلي لموقع فيس بوك وتصميمنا ونحدد ماهو المطلوب عملة</p>
             <p></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/9/5.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/9/5.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">1- سنحتاج إلى تغيير لون الخط إلى الأبيض.<br>
                2- سنقوم بتغيير نوع الخط.<br>
@@ -256,7 +257,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/9/6.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/9/6.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <hr>
             <p dir="rtl">لنعود للكود الخاص بتنسيق العنصر الذي يحمل كلاس <code dir="ltr">login-box</code> حتى نعطي الصندوق هامش من أعلى ليطابق الموقع الأصلي ولنفترض 14px</p>
@@ -269,7 +270,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/9/7.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/9/7.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">كما تلاحظوا نمر على التنسيقات واحد واحد وقد نحتاج أن نعود لعنصر مرة أخرى حتى نقوم بالتعديلات اللازمة للخروج بالشكل المطلوب فلا تفكر بأن الموضوع صعب ويحتاج  أن تكون ملم بجميع التنسيقات لكل عنصر من اول مرة…</p>
             <h2 dir="rtl">لنستمر</h2>
@@ -299,7 +300,7 @@
                <p dir="rtl">لا يوجد أي فرق في طريقة كتابة الأكواد وإنما الفرق هو ان الـ margin تقوم بعمل هوامش من <strong dir="rtl">خارجية</strong> بينما الـ padding تقوم بعمل الهوامش <strong dir="rtl">داخلية</strong></p>
                <p dir="rtl">راجع درس الـ margin حتى تفهم طريقة كتابة الاكواد <a href="https://macdiscussions.udacity.com/t/css-margin-property/85103" dir="rtl">من هنا<span class="badge badge-notification clicks" title="2 clicks" dir="ltr">2</span></a></p>
                <p></p>
-               <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/9/8.png" alt="image" class="image"></a></div>
+               <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/9/8.png'%}" alt="image" class="image"></a></div>
                <p></p>
             </details>
             <hr>
@@ -316,7 +317,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">:النتيجة</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/9/9.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/9/9.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <hr>
             <p dir="rtl">هذا الكود الذي وصلنا إلية حتى الان:</p>
@@ -440,7 +441,7 @@
             </div>
             <p dir="rtl">ربما تتسأل لماذا وضعت <code dir="ltr">#</code> بداخل منطقة كتابة الرابط وذلك لانه ليس لدي رابط لوضعه لذلك العنصر في الوقت الحالي</p>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/9/10.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/9/10.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">لاحظ أن الصندوق <code dir="ltr">.login-box</code> أتى في سطر جديد لانه <code dir="ltr">div</code> ومن نوع <code dir="ltr">block</code> لذا سأعطية خاصية التعويم حتى أجعل الصناديق تطفو نحو اليسار بجانب بعضها البعض</p>
             <div class="code">
@@ -453,7 +454,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/9/11.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/9/11.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">الأن نفس التنسيقات التي أضفناها لحقل الإيميل سنقوم بإضافتها لحقل الباسورد ولكن لن نكررها من جديد بل سنضيف الكود الذي من خلالة سنستهدف حقل الباسورد بجوار كود استهداف حقل الإيميل ونضع بينهما فاصلة.</p>
             <div class="code">
@@ -480,7 +481,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/9/12.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/9/12.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">لنقوم بعمل تنسيقات لرابط <code dir="ltr">forgot account?</code></p>
             <p dir="rtl">1- سنحتاج لتغيير لونة للأزرق الفاتح<br>
@@ -519,7 +520,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/9/13.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/9/13.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">اريد عمل بعض التنسيقات قبل أن ننتقل لعمل زر <code dir="ltr">login</code></p>
             <p dir="rtl">1- اضافة هامش داخلي <code dir="ltr">padding</code> لنصوص وصف الحقل وللرابط اسفل الحقل من جهة اليسار بقيمة 1px</p>
@@ -556,7 +557,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/9/14.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/9/14.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <h2 dir="rtl">لنقوم بإضافة زر الـ login</h2>
             <p dir="rtl">سنستخدم نفس العنصر <code dir="ltr">.login-box</code>  كالعمل منطقة رز تسجيل الدخول:</p>
@@ -593,7 +594,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/9/15.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/9/15.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">الأن سأقوم بإضافة التنسيقات التالية:</strong><br>
                1- تغيير لون الخلفية<br>
@@ -615,7 +616,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/9/16.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/9/16.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">مالذي نريد عملة الأن حتى يصبح الزر مطابق للموقع الأصلي؟</strong><br>
                1- اعطاء الزر هامش من اعلى بقيمة 22px<br>
@@ -640,7 +641,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/9/17.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/9/17.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">تبقى لنا شي واحد. قم بوضع الماوس على الرز في موقعنا ثم قم بوضعة على زر تسجيل الدخول في الموقع الأصلي, <strong dir="rtl">ماذا تلاحظ؟</strong></p>
             <p dir="rtl">هل تلاحظ تحول شكل مؤشر الماوس إلى شكل يد مما يوحي بأن هذا الزر قابل للضغط ؟</p>
@@ -668,6 +669,6 @@
             <hr>
          </div>
       </div>
-      <script src="../../../js/main.js"></script>
+      <script src="{% static 'js/main.js' %}"></script>
    </body>
 </html>

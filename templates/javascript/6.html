@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static%}
 <html>
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>[الدرس الرابع]: Comparison Operators</title>
-      <link rel="stylesheet" href="../../css/style.css">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
       <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
    </head>
@@ -65,7 +66,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/6/1.png">
+            <img class="image" src="{% static 'images/javascript/6/1.png'%}">
             <p></p>
             <p dir="rtl">بالفعل الرقم 5 أكبر من الرقم 0 لهذا تم إرجاع القيمة <strong dir="ltr">true</strong></p>
             <hr>
@@ -75,7 +76,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/6/2.png">
+            <img class="image" src="{% static 'images/javascript/6/2.png'%}">
             <p></p>
             <p dir="rtl">بالفعل الرقم 5 ليس أكبر من الرقم 5 لهذا تم إرجاع القيمة <strong dir="ltr">false</strong></p>
             <hr>
@@ -85,22 +86,22 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/6/3.png">
+            <img class="image" src="{% static 'images/javascript/6/3.png'%}">
             <p></p>
             <p dir="rtl">بالفعل الرقم 5 أكبر أو يساوي الرقم 5 لهذا تم إرجاع القيمة <strong dir="ltr">true</strong></p>
             <hr>
             <h4 dir="rtl">من الأمثلة أعلاة نستنتج بأننا نستطيع عمل مقارنة بإستخدام العمليات التالية:</h4>
             <p dir="rtl"><strong dir="rtl">أكبر من</strong><br>
-               <img src="../../images/javascript/6/4.png" alt="image" width="119" height="102">
+               <img src="{% static 'images/javascript/6/4.png'%}" alt="image" width="119" height="102">
             </p>
             <p dir="rtl"><strong dir="rtl">أصغر من</strong><br>
-               <img src="../../images/javascript/6/5.png" alt="image" width="119" height="102">
+               <img src="{% static 'images/javascript/6/5.png'%}" alt="image" width="119" height="102">
             </p>
             <p dir="rtl"><strong dir="rtl">أكبر من أو يساوي</strong><br>
-               <img src="../../images/javascript/6/6.png" alt="image" width="117" height="104">
+               <img src="{% static 'images/javascript/6/6.png'%}" alt="image" width="117" height="104">
             </p>
             <p dir="rtl"><strong dir="rtl">أصغر من أو يساوي</strong><br>
-               <img src="../../images/javascript/6/7.png" alt="image" width="119" height="102">
+               <img src="{% static 'images/javascript/6/7.png'%}" alt="image" width="119" height="102">
             </p>
             <p dir="rtl"><strong dir="rtl">هذه العمليات ستقوم دائماَ بإرجاع قيمة منطقية (boolean) إما true او false</strong></p>
             <hr>
@@ -109,10 +110,10 @@
             <h3 dir="rtl">الـ Strict equality</h3>
             <p dir="rtl">عند قيامنا بهذه المقارنة تقوم الجافاسكربت بمقارنة البيانات من حيث تطابق قيمتها وتطابق نوعها.</p>
             <p dir="rtl">للقيام بعملية مقارنة <strong dir="rtl">المساواة</strong> نستخدم<br>
-               <img src="../../images/javascript/6/8.png" alt="image" width="119" height="102">
+               <img src="{% static 'images/javascript/6/8.png'%}" alt="image" width="119" height="102">
             </p>
             <p dir="rtl">للقيام بعملية مقارنة <strong dir="rtl">عدم المساواة</strong> نستخدم<br>
-               <img src="../../images/javascript/6/9.png" alt="image" width="119" height="102">
+               <img src="{% static 'images/javascript/6/9.png'%}" alt="image" width="119" height="102">
             </p>
             <p dir="rtl"><strong dir="rtl">مثال 1:</strong><br>
                لنجرب كتابة العملية التالية في الـ console
@@ -122,7 +123,7 @@
 </pre>
             </div>
             <p></p>
-            <img class="image" src="../../images/javascript/6/10.png">
+            <img class="image" src="{% static 'images/javascript/6/10.png'%}">
             <p></p>
             <p dir="rtl">تم إرجاع قيمة <strong dir="ltr">true</strong> وذلك لأننا قمنا بعملية مقارنة بين الرقمين 5 و 5 حيث أنهما <strong dir="rtl">متطابقات بالقيمة</strong> و <strong dir="rtl">متطابقان بالنوع</strong> فالإثنان من النوع number</p>
             <p dir="rtl"><strong dir="rtl">مثال 2:</strong><br>
@@ -133,17 +134,17 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/6/11.png">
+            <img class="image" src="{% static 'images/javascript/6/11.png'%}">
             <p></p>
             <p dir="rtl">تم إرجاع القيمة <strong dir="ltr">false</strong> وذلك لأننا قمنا بعملية مقارنة بين الرقم 5 وبين النص “5” حيث أنهما <strong dir="rtl">محتلفان بالنوع</strong> فالأول من النوع number و الثاني من النوع string</p>
             <hr>
             <h3 dir="rtl">الـ Abstract Equality</h3>
             <p dir="rtl">عند قيامنا بهذه المقارنة تقوم الجافاسكربت بمقارنة البيانات من حيث تطابق قيمتها بغض النظر عن نوعها حيث أنها تقوم أولاً بتحويل البيانات إلى نفس النوع ومن ثم تطبيق عملية المقارنة بإستخدام الـStrict equality</p>
             <p dir="rtl">للقيام بعملية مقارنة <strong dir="rtl">المساواة</strong> نستخدم<br>
-               <img src="../../images/javascript/6/12.png" alt="image" width="119" height="102">
+               <img src="{% static 'images/javascript/6/12.png'%}" alt="image" width="119" height="102">
             </p>
             <p dir="rtl">للقيام بعملية مقارنة <strong dir="rtl">عدم المساواة</strong> نستخدم<br>
-               <img src="../../images/javascript/6/13.png" alt="image" width="119" height="102">
+               <img src="{% static 'images/javascript/6/13.png'%}" alt="image" width="119" height="102">
             </p>
             <p dir="rtl"><strong dir="rtl">مثال 1:</strong><br>
                لنجرب كتابة العملية التالية في الـ console
@@ -153,7 +154,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/6/14.png">
+            <img class="image" src="{% static 'images/javascript/6/14.png'%}">
             <p></p>
             <p dir="rtl">تم إرجاع قيمة <strong dir="ltr">true</strong> وذلك لأن الرقم 5  والرقم 5 متطابقان بالقيمة و متطابقان بالنوع لذا لا حاجة لتحويلهما الى بيانات من نوع واحد قبل المقارنة</p>
             <p dir="rtl"><strong dir="rtl">مثال :</strong><br>
@@ -164,7 +165,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/6/15.png">
+            <img class="image" src="{% static 'images/javascript/6/15.png'%}">
             <p></p>
             <p dir="rtl">تم إرجاع قيمة <strong dir="ltr">true</strong> وذلك لان النص 5 والرقم 5 سيكونا متساويان في القيمة بعد أن يتم تحويل “5” التي هي من نوع string الى 5 من نوع number</p>
             <hr>
@@ -183,7 +184,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/6/16.png">
+            <img class="image" src="{% static 'images/javascript/6/16.png'%}">
             <p></p>
             <p dir="rtl">تم إرجاع القيمة <strong dir="ltr">false</strong> ما يعني بانها اما غير متساوية في  القيمة او غير متساوية في النوع او كلاهما.</p>
             <p dir="rtl">في الحقيقة نحن نعرف بأن البيانات التي نقوم بمقارنتها هي مختلفة بالنوع حيث أن true هي نوع boolean و 1 من نوع number لهذا كان من المتوقع ارجاع القيمة false عند مقارنتها بإستخدام Strict Equality</p>
@@ -192,7 +193,7 @@
             <pre dir="ltr"><code class="hljs ini" dir="ltr"><span class="hljs-attr">true</span> == <span class="hljs-number">1</span>
 </code></pre>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/6/17.png">
+            <img class="image" src="{% static 'images/javascript/6/17.png'%}">
             <p></p>
             <p dir="rtl">لاحظ حصلنا على القيمة <strong dir="ltr">true</strong> ما يعني ان قيمة البيانات التي قمنا بمقارنتها متساوية بغض النظر عن نوعها. مما يؤكد لنا ما قمنا بذكرة سابقاً</p>
             <blockquote dir="rtl">
@@ -207,7 +208,7 @@
             <h1 dir="rtl">هل نستطيع مقارنة النصوص ؟</h1>
             <p dir="rtl">للإجابة عن هذا السؤال يجب عليك أن تعرف أن لكل حرف رقم يمثلة فعند قيامك بمقارنة النصوص في الحقيقة الجافاسكربت تقوم بتحويلها لأرقام وتقوم بمقارنتها</p>
             <p dir="rtl">في الجدول التالي تجد أن بجوار كل حرف رقم يمثلة:<br>
-               <img class="image" src="../../images/javascript/6/18.png">
+               <img class="image" src="{% static 'images/javascript/6/18.png'%}">
             </p>
             <p dir="rtl">على سبيل المثال:<br>
             <div style="background: #202020; overflow:auto;width:auto;border:solid rgb(188, 60, 72);border-radius:5px; border-width:.1em .1em .1em .8em;padding:.2em .6em;">
@@ -224,7 +225,7 @@
             <p dir="rtl">قمت بسؤال الجافاسكربت: هل a اكبر من A ؟<br>
                <strong dir="rtl">النتيجة:</strong><br>
             </p>
-            <img class="image" src="../../images/javascript/6/19.png">
+            <img class="image" src="{% static 'images/javascript/6/19.png'%}">
             <p></p>
             <p dir="rtl">لاحظ تم إرجاع القيمة true ما يعني ان ذلك صحيح.</p>
             <hr>
@@ -234,10 +235,10 @@
 </pre>
             </div>
             <p dir="rtl">تمر الجافاسكربت على كل حرف وتقوم بمقارنته بكل حرف يقابلة و على اساس ذلك يتم تحديد أي من النصوص اكبر من الأخر او أصغر من الأخر حسب العملية المستخدمة كالتالي:<br></p>
-            <img class="image" src="../../images/javascript/6/20.png">
+            <img class="image" src="{% static 'images/javascript/6/20.png'%}">
             <p></p>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/6/21.png">
+            <img class="image" src="{% static 'images/javascript/6/21.png'%}">
             <p></p>
             <p dir="rtl">لاحظ تم إرجاع القيمة false لتعني بأن النص Mohammed ليس أكبر من النص mohammed وذلك لان الحرف m أكبر من الحرف M حسب القيمة العددية المقابلة له في جدول ترتيب الأحرف.</p>
             <hr>
@@ -249,12 +250,12 @@
             </div>
             <p dir="rtl">بما أن black ليست أكبر من blue سيتم إسناد القيمة المنطقية false للمتغير x</p>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/6/22.png">
+            <img class="image" src="{% static 'images/javascript/6/22.png'%}">
             <p></p>
             <p dir="rtl">إرجع للجدول لتعرف لماذا تم إعتبار blue اكبر من black وقم بإخباري بذلك في التعليقات</p>
             <hr>
          </div>
       </div>
-      <script src="../../js/main.js"></script>
+      <script src="{% static 'js/main.js' %}"></script>
    </body>
 </html>

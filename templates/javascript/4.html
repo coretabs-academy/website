@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static%}
 <html>
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>[الدرس الثالث: الجزء الأول]: Data Types</title>
-      <link rel="stylesheet" href="../../css/style.css">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
       <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
    </head>
@@ -77,7 +78,7 @@
                <p dir="rtl">سيقوم الأمر <code dir="ltr">document.write(total);</code> بطباعة محتوى المتغير <code dir="ltr">total</code> على الصفحة<br>
                   <strong dir="rtl">النتيجة:</strong><br>
                </p>
-               <img class="image" src="../../images/javascript/4/1.png">
+               <img class="image" src="{% static 'images/javascript/4/1.png'%}">
                <p></p>
                <p dir="rtl">لنقوم بكتابة الكود بطريقة أخرى:</p>
                <div class="code">
@@ -111,7 +112,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">يتم تخزين النصوص كسلسلة من الأحرف يبدأ ترتيب أول حرف من الرقم 0 كما هو موضح في الصورة التالية:</strong><br></p>
-            <img class="image" src="../../images/javascript/4/2.png">
+            <img class="image" src="{% static 'images/javascript/4/2.png'%}">
             <p></p>
             <p dir="rtl">حيث أن <code dir="ltr">firstName</code> يمثل الإسم كاملاً <code dir="ltr">Mohammed</code></p>
             <p dir="rtl">بينما <code dir="ltr">firstName[0]</code> يمثل الحرف الذي يقع بالخانة <code dir="ltr">0</code></p>
@@ -130,7 +131,7 @@
 </pre>
                </div>
                <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-               <img class="image" src="../../images/javascript/4/3.png">
+               <img class="image" src="{% static 'images/javascript/4/3.png'%}">
                <p></p>
                <p dir="rtl">الأن قم بطلب طباعة الحرف الأول فقط والذي يقع في الخانة <code dir="ltr">0</code> عبر كتابة هذا الكود:</p>
                <div class="code">
@@ -142,7 +143,7 @@
 </pre>
                </div>
                <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-               <img class="image" src="../../images/javascript/4/4.png">
+               <img class="image" src="{% static 'images/javascript/4/4.png'%}">
                <p></p>
                <p dir="rtl">هل بإمكانك الأن طباعة الحرف الأخير فقط ؟</p>
             </details>
@@ -168,12 +169,12 @@
                2- قمت بطلب جمع محتوى المتغير بالرقم خمسة <code dir="ltr">number+5</code> و كتابة النتيجة على الصفحة.
             </p>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/4/5.png">
+            <img class="image" src="{% static 'images/javascript/4/5.png'%}">
             <p></p>
             <p dir="rtl">هل هذا فعلاً ما توقعته فقذ طلبت جمع الرقم الذي بدأخل المتغير number والذي هو 1 بالرقم 5 حيث كنت أتوقع الرقم 6 كنتيجة ولكن الذي حصل هو انه تم طباعة الرقم 15 على الشاشة.</p>
             <p dir="rtl"><strong dir="rtl">ما تفسير ذلك؟</strong><br>
                في الحقيقة بمجرد وضعنا للرقم بدأخل علامتي التنصيص <code dir="ltr">" "</code> إعتبرته الجافاسكربت كنص ولم يعد كرقم يقبل تطبيق العمليات الحسابية علية وبمجرد ما ان وجدت الجافاسكربت بجوار هذا النص علامة الجمع  <code dir="ltr">+</code>  تذكرت بأنها في العادة تستخدم هذه العلامة لدمج النصوص لهذا ستقوم بإعتبار تلك العلامة علامة الربط بين النصوص وليس عملية حسابية لهذا قامت بتحويل الرقم 5 الى نص ومن ثم دمج النصين 1 و 5 بإعتبارهما سلسلة من الاحرف التي تكون كلمة واحدة وتم طباعة 5 بجوار الـ 1 كالتالي:<br>
-               <img class="image" src="../../images/javascript/4/6.png">
+               <img class="image" src="{% static 'images/javascript/4/6.png'%}">
             </p>
             <p dir="rtl">لكن لنجرب الأن بتغيير العملية الحسابية من الجمع إلى الطرح كالتالي:</p>
             <div class="code">
@@ -186,10 +187,10 @@
             </div>
             <p dir="rtl"><strong dir="rtl">ما الذي تتوقع رؤيته على المتصفح ؟</strong><br>
                كالعادة تقوم الجافاسكربت بالمرور على العمليات من اليسار الى اليمين وفي حالتنا هذه ستلاحظ وجود متغير من نوع string يتبعة عملية حسابية ولكن هذه المرة عملية طرح <code dir="ltr">-</code> وليست جمع <code dir="ltr">+</code> وبما أن الجافاسكربت تعتقد بأنها ذكية ستقوم بتحويل النص <code dir="ltr">"1"</code> الى رقم <code dir="ltr">1</code> ومن ثم تقوم بعملية الطرح <code dir="ltr">1-5</code> لنحصل على الناتج <code dir="ltr">-4</code><br>
-               <img class="image" src="../../images/javascript/4/7.png">
+               <img class="image" src="{% static 'images/javascript/4/7.png'%}">
             </p>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/4/8.png">
+            <img class="image" src="{% static 'images/javascript/4/8.png'%}">
             <br>
             وبنفس الطريقة ستتعامل الجافاسكربت مع بقية العمليات الحسابية.
             <p></p>
@@ -201,7 +202,7 @@
 </pre>
             </div>
             <p dir="rtl">اذا ما قمت بتطبيق هذا الكود ستجد النتيجة:<br></p>
-            <img class="image" src="../../images/javascript/4/9.png">
+            <img class="image" src="{% static 'images/javascript/4/9.png'%}">
             <p></p>
             <p dir="rtl"><strong dir="rtl">ربما تتسأل ما الفائدة من تقسيم النصوص هكذا لماذا لا اقوم بكتابتها بين علامتي تنصيص واحدة ؟</strong></p>
             <p dir="rtl">لنفترض أنك تقوم بتخزين عدد المبرمجين بداخل متغير كالتالي:</p>
@@ -216,7 +217,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/4/10.png">
+            <img class="image" src="{% static 'images/javascript/4/10.png'%}">
             <p></p>
             <p dir="rtl">تم اعتبار اسم المتغير كنص ولم يتم التعويض عنه بالقيمة التي كنت أتوقع بأن يتم طباعتها وذلك بسبب وجود اسم المتغير بين علامات التنصيص التي تقوم بتعريف اي شي بداخلها كنص.</p>
             <p dir="rtl"><strong dir="rtl">اذا نحتاج ان نقوم بتقسيم النص بحيث يتاح لنا وضع اسم المتغير بخارج علامات التنصيص حتى يتم اعتبارة كمتغير.</strong></p>
@@ -226,7 +227,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/4/11.png">
+            <img class="image" src="{% static 'images/javascript/4/11.png'%}">
             <br>
             لاحظ كيف قمت بفصل المتغير عن النصوص وكيف تم التعويض عنة بقيمته وحصلنا على النتيجة المطلوبة.
             <p></p>
@@ -241,10 +242,10 @@
                <summary dir="rtl">
                   الجدول التالي يحدد أولوية العمليات وإتجاهها
                </summary>
-               <p><img src="../../images/javascript/4/12.png" class="image" alt="image"></p>
+               <p><img src="{% static 'images/javascript/4/12.png'%}" class="image" alt="image"></p>
             </details>
          </div>
       </div>
-      <script src="../../js/main.js"></script>
+      <script src="{% static 'js/main.js' %}"></script>
    </body>
 </html>

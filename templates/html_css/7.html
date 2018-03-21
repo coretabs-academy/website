@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static%}
 <html>
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>[الدرس السابع]: CSS Implementation</title>
-      <link rel="stylesheet" href="../../css/style.css">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
       <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
    </head>
@@ -40,7 +41,7 @@
             <h1 dir="rtl">طرق إستخدام أكواد CSS في صفحات HTML</h1>
             <hr>
             <p dir="rtl">سنشرح ثلاث طرق ونجرب عليها أمثلة تطبيقية<br></p>
-            <img class="image" src="../../images/html_css/7/1.png">
+            <img class="image" src="{% static 'images/html_css/7/1.png'%}">
             <p></p>
             <h1 dir="rtl">الطريقة الأولى: أضافة أكواد <code dir="ltr">CSS</code> لوسم <code dir="ltr">HTML</code> مباشرة</h1>
             <p dir="rtl"><strong dir="rtl">مثال:</strong></p>
@@ -167,6 +168,6 @@
             <hr>
          </div>
       </div>
-      <script src="../../js/main.js"></script>
+      <script src="{% static 'js/main.js' %}"></script>
    </body>
 </html>

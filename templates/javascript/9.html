@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static%}
 <html>
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>[الدرس السابع]: تطبيق عملي</title>
-      <link rel="stylesheet" href="../../css/style.css">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
       <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
    </head>
@@ -101,7 +102,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/9/2.png">
+            <img class="image" src="{% static 'images/javascript/9/2.png'%}">
             <p></p>
             <h3 dir="rtl">لنقوم بعمل التنسيقات:</h3>
             <p dir="rtl"><strong dir="rtl">الجزء الأول:</strong></p>
@@ -133,7 +134,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/9/3.png">
+            <img class="image" src="{% static 'images/javascript/9/3.png'%}">
             <p></p>
             <hr>
             <p dir="rtl"><strong dir="rtl">الجزء الثاني:</strong></p>
@@ -164,7 +165,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/9/4.png">
+            <img class="image" src="{% static 'images/javascript/9/4.png'%}">
             <p></p>
             <hr>
             <p dir="rtl">الأن أريد أن أقوم بإعطاء الزر تنسيقات معينة بحث انه سيكون غير مفعل الا بعد إختيار أحد الإجابات <strong dir="rtl">كالتالي:</strong><br></p>
@@ -198,7 +199,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/9/6.png">
+            <img class="image" src="{% static 'images/javascript/9/6.png'%}">
             <p></p>
             <p dir="rtl">سأقوم الأن بتغيير الـ id الخاص بالـ button مؤقتاً من <code dir="ltr">submit-disabled</code> الى <code dir="ltr">submit-enabled</code> حتى أقوم بعمل تنسيقات الزر المفعل كالتالي:</p>
             <div class="code">
@@ -251,7 +252,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/9/8.png">
+            <img class="image" src="{% static 'images/javascript/9/8.png'%}">
             <p></p>
             <p dir="rtl">سأقوم بإضافة أيقونة فوق العنصر radio الذي بداخل العنصر label بإستخدام الـ CSS pseudo-element كما ناقشناها </p>
             <div class="code">
@@ -270,7 +271,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/9/9.png">
+            <img class="image" src="{% static 'images/javascript/9/9.png'%}">
             <p></p>
             <p dir="rtl">الأن بعد أن قمت بعمل التنسيق الذي اريدة للإجابة الصحيحة سأقوم بإزالة الكلاس الـ <code dir="ltr">correct</code> من العنصر <code dir="ltr">li</code> وذلك حتى يتم إسنادة لاحقاً بشكل ديناميكي للإجابة الصحيحة عبر الجافاسكربت.</p>
             <div class="code">
@@ -286,7 +287,7 @@
             <hr>
             <h2 dir="rtl">عمل القائمة المنبثقة</h2>
             <p dir="rtl">نريد الأن ان نقوم بتصميم هذه القائمة المنبثقة ومن ثم إخفائها حتى نقوم بإظهارها لاحقاً بالجافاسكربت الأفكار مشابهة لما قمنا بعملة في درس عمل قائمة dropdown في دروس ورشة عمل المبادرة <strong dir="rtl"></strong> حيث نقوم بعمل التصميم بشكل طبيعي كاملاً ومن ثم تغيير طريقة عرضها <code dir="ltr">dispaly</code> الى <code dir="ltr">none</code><br></p>
-            <img class="image" src="../../images/javascript/9/10.png">
+            <img class="image" src="{% static 'images/javascript/9/10.png'%}">
             <p></p>
             <h4 dir="rtl">كود الـ HTML</h4>
             <div class="code">
@@ -313,7 +314,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/9/11.png">
+            <img class="image" src="{% static 'images/javascript/9/11.png'%}">
             <p></p>
             <p dir="rtl">لنقوم بعمل التنسيقات الخاصة بالصندوق <code dir="ltr">modal-content</code></p>
             <div class="code">
@@ -330,7 +331,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/9/12.png">
+            <img class="image" src="{% static 'images/javascript/9/12.png'%}">
             <p></p>
             <p dir="rtl">وأخيراً التنسيقات الأخيرة سأقوم بإضافة الصورة وكذلك عمل تنسيق للنص بالاكواد التالية:</p>
             <div class="code">
@@ -348,7 +349,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/9/13.png">
+            <img class="image" src="{% static 'images/javascript/9/13.png'%}">
             <p></p>
             <p dir="rtl">رائع كما أريد الأن سأقوم بإخفاء هذه العناصر بإعطاء الأب <code dir="ltr">overlay</code>  خاصية <code dir="ltr">display</code> بقيمة <code dir="ltr">none</code> ولاحقاً سنعود إلية واضافة التعديلات اذا لزم الأمر</p>
             <div class="code">
@@ -367,7 +368,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">حتى هذه المرحلة يجب أن يكون شكل تصميمك كالتالي:</strong><br></p>
-            <img class="image" src="../../images/javascript/9/14.png">
+            <img class="image" src="{% static 'images/javascript/9/14.png'%}">
             <p></p>
             <hr>
             <h2 dir="rtl">البدء بالعمل على الـ Jacascript</h2>
@@ -416,7 +417,7 @@
             </p>
             <p dir="rtl"><strong dir="rtl">الحدث الأول:</strong></p>
             <p dir="rtl"><strong dir="rtl">نريد إعادة تفعيل الـ button لهذا سنقوم بإلغاء خاصية <code dir="ltr">disabled</code>  بجعلها = false</strong><br>
-               <img src="../../images/javascript/9/17.png" alt="image" width="681" height="30">
+               <img src="{% static 'images/javascript/9/17.png'%}" alt="image" width="681" height="30">
             </p>
             <p dir="rtl"><strong dir="rtl">كالتالي:</strong></p>
             <div class="code">
@@ -435,7 +436,7 @@
             </div>
             <p dir="rtl"><strong dir="rtl">الحدث الثاني:</strong></p>
             <p dir="rtl"><strong dir="rtl">نريد بمجرد الضغط على احد الأجوابة أن يتم تغيير الـ id الخاص بالزر إلى <code dir="ltr">submit-enabled</code> بدلاً من <code dir="ltr">submit-disabled</code></strong><br>
-               <img src="../../images/javascript/9/18.png" alt="image" width="681" height="30">
+               <img src="{% static 'images/javascript/9/18.png'%}" alt="image" width="681" height="30">
             </p>
             <p dir="rtl"><strong dir="rtl">كالتالي:</strong></p>
             <div class="code">
@@ -468,7 +469,7 @@
             </div>
             <p dir="rtl">قمت بعمل المتغير <code dir="ltr">options</code> وأسندت إلية كل حقول الادخال input من نوع radio الموجودة في الصفحة بإستخدام الطريقة <code dir="ltr">document.querySelectorAll</code> والتي تحدد جميع العناصر بإستخدام اي selector.</p>
             <p dir="rtl">الطريقة <code dir="ltr">querySelectorAll</code> سترجع لنا قائمة تحتوي على اربعة عناصر radio يبدأ ترتيبها من 0 الى 3 <strong dir="rtl">كالتالي:</strong><br></p>
-            <img class="image" src="../../images/javascript/9/20.png">
+            <img class="image" src="{% static 'images/javascript/9/20.png'%}">
             <p></p>
             <p dir="rtl">بمعنى انه اذا اردت التلاعب بالعنصر الاول سأقوم بإستهدافة بالشكل <strong dir="rtl">التالي:</strong></p>
             <div class="code">
@@ -490,7 +491,7 @@
             </div>
             <p dir="rtl"><strong dir="rtl">2- أريد أن أقوم بتحديد جميع عناصر الـ li حيث اننا سنقوم بتطبيق التنسيقات عليها في حال كانت الإجابة الصحيحة.</strong></p>
             <p dir="rtl">كما بالصورة التالية:<br></p>
-            <img class="image" src="../../images/javascript/9/21.png">
+            <img class="image" src="{% static 'images/javascript/9/21.png'%}">
             <p></p>
             <p dir="rtl">سأقوم بذلك عبر الكود التالي:</p>
             <div class="code">
@@ -498,7 +499,7 @@
 </pre>
             </div>
             <p dir="rtl">قمت هذه المرة بتحديد العناصر <code dir="ltr">li</code> بإستخدام طريقة <code dir="ltr">document.getElementsByTagName</code> والتي تقوم بإستهداف العناصر حسب اسم tag الـ HTML, بنفس الفكرة سترجع لنا قائمة تحتوي على اربعة عناصر li يبدأ ترتيبها من 0 الى 3 <strong dir="rtl">كالتالي:</strong><br></p>
-            <img class="image" src="../../images/javascript/9/22.png">
+            <img class="image" src="{% static 'images/javascript/9/22.png'%}">
             <p></p>
             <p dir="rtl"><strong dir="rtl">ملاحظة:</strong> اقوم بتنويع طرق تحديد العناصر حتى اعرفك على اكبر عدد ممكن منها لتقوم بالبحث عنها وتجربة عمل تطبيقات بها.</p>
             <hr>
@@ -517,7 +518,7 @@
 </pre>
             </div>
             <p dir="rtl">سأقوم بتعريف متغير بإسم <code dir="ltr">correctAnswer</code> سأضع فية رقم الإجابة الصحيحة ففي سؤالنا الإجابة الصحيحة هي صاحبة الترتيب 0 في عناصر الـ radio وفي عناصر القائمة li كذلك:<br></p>
-            <img class="image" src="../../images/javascript/9/23.png">
+            <img class="image" src="{% static 'images/javascript/9/23.png'%}">
             <p></p>
             <p dir="rtl"><strong dir="rtl">الكود كالتالي:</strong></p>
             <div class="code">
@@ -569,7 +570,7 @@
 </pre>
             </div>
             <p dir="rtl">لهذا اذا نريد أن نتحقق من اذا ما كان قد تم تحديد الجواب الصحيح والذي هو في خانة 0 كما موضح بالصورة ادناه سنقوم بتحديد العنصر الذي بتلك الخانة كالتالي <code dir="ltr">options[0]</code> وحتى نتأكد اذا ما تم عمل check عليه سنضيف الكلمة التالية <code dir="ltr">.checked</code> ومن ثم نتأكد اذا كانت خاصية checked تساوي <code dir="ltr">true</code><br></p>
-            <img class="image" src="../../images/javascript/9/24.png">
+            <img class="image" src="{% static 'images/javascript/9/24.png'%}">
             <p></p>
             <p dir="rtl"><strong dir="rtl">الكود كالتالي:</strong></p>
             <div class="code">
@@ -598,7 +599,7 @@
             </div>
             <h4 dir="rtl">لنقم الأن بإضافة التنسيق المطلوب للإجابة الصحيحة في حال تم إختيارها</h4>
             <p dir="rtl">هل تذكر سابقاً قمنا بعمل الكلاس <code dir="ltr">correct</code> واضفنا الية التنسيقات التي نرغب بتطبيقها على الجواب الصحيح اذا ما تم إختيارة لهذا نريد ان نقوم بكتابة كود يقوم بإضافة هذا الكلاس للعنصر li الخاص بالإجابة الصحيحة التي تم تخزين رقمها في المتغير <code dir="ltr">correctAnswer</code><br></p>
-            <img class="image" src="../../images/javascript/9/25.png">
+            <img class="image" src="{% static 'images/javascript/9/25.png'%}">
             <p></p>
             <p dir="rtl">سنقوم بتحديد العنصر الخاص بالإجابة الصحيحة كالتالي <code dir="ltr">li[correctAnswer]</code> ومن ثم سأتبعة بـ <code dir="ltr">.classList</code> والتي ستحدد قائمة الكلاسات التي لدى هذا العنصر ومن ثم سأطلب إضافة كلاس جديد <code dir="ltr">.add</code> بإسم<code dir="ltr">correct</code></p>
             <p dir="rtl"><strong dir="rtl">الكود كالتالي:</strong></p>
@@ -646,10 +647,10 @@
             <hr>
             <h4 dir="rtl">فتح النافذة المنبثقة</h4>
             <p dir="rtl">في هذه الخطوة سنقوم بالعمل على إظهار هذه النافذة بهذا الشكل <strong dir="rtl">اذا</strong> تحقق اختيار الاجابة الصحيحة:<br></p>
-            <img class="image" src="../../images/javascript/9/27.png">
+            <img class="image" src="{% static 'images/javascript/9/27.png'%}">
             <p></p>
             <p dir="rtl"><strong dir="rtl">الا</strong> سنجعلها بهذا الشكل اذا تم إختيار الإجابة الخاطئة:<br></p>
-            <img class="image" src="../../images/javascript/9/28.png">
+            <img class="image" src="{% static 'images/javascript/9/28.png'%}">
             <p></p>
             <h4 dir="rtl">البدء بالعمل</h4>
             <p dir="rtl">قمنا سأبقاً بتجهيز النافذة المنبثقة ومن ثم قمنا بإخفائها بإعطائها الخاصية <code dir="ltr">display:none</code> حتى نقوم بإظهارها لاحقاً عند حاجتنا لها, لهذا سنقوم الأن بتغيير خاصية العرض <code dir="ltr">display</code> من <code dir="ltr">none</code> الى <code dir="ltr">block</code> حتى تظهر النافذة وللقيام بذلك:</p>
@@ -706,7 +707,7 @@
             <hr>
             <h4 dir="rtl">العمل على الملاحظة الأولى:</h4>
             <p dir="rtl">سنقوم بإستخدام الشرط if / else لعمل تنسيقات خاصة بكل حالة للعناصر التالية:<br></p>
-            <img class="image" src="../../images/javascript/9/30.png">
+            <img class="image" src="{% static 'images/javascript/9/30.png'%}">
             <p></p>
             <p dir="rtl">العناصر التي نحتاج تعديلها هي صورة الخلفية + النص + لون النص</p>
             <p dir="rtl">اذا سنحتاج لتحديد تلك العناصر حتى نستطيع التلاعب بها بالجافاسكربت وسأقوم بإسنادها إلى متغيرات, <strong dir="rtl">لنبدأ بالصورة ولون الخط:</strong></p>
@@ -938,6 +939,6 @@
             <p dir="rtl">العملية بسيطة وستقوم بها في سطر واحد على الاقل او اكثر من سطر حسب طريقتك</p>
          </div>
       </div>
-      <script src="../../js/main.js"></script>
+      <script src="{% static 'js/main.js' %}"></script>
    </body>
 </html>

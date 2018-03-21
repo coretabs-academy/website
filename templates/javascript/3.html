@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static%}
 <html>
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>[الدرس الثاني]: constants & variables</title>
-      <link rel="stylesheet" href="../../css/style.css">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
       <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
    </head>
@@ -45,34 +46,34 @@
             <p dir="rtl">3- أضف على الناتج الرقم 8</p>
             <p dir="rtl">4- إقسم الناتج على 2</p>
             <p dir="rtl">5-  إطرح اول رقم وضعته في عقلك من الناتج</p>
-            <p dir="rtl">يطلع الناتج 4 <img src="../../images/javascript/3/0.png" title=":sunglasses:" class="emoji" alt=":sunglasses:" style="width:30px;"></p>
+            <p dir="rtl">يطلع الناتج 4 <img src="{% static 'images/javascript/3/0.png'%}" title=":sunglasses:" class="emoji" alt=":sunglasses:" style="width:30px;"></p>
             <hr>
             <h4 dir="rtl"><strong dir="rtl">الذي قمت بعملة قبل قليل خلال مرورك بهذه اللعبة البسيطة هو انك قمت بإستخدام المتغيرات (variables) و الثوابت (constants) كما كانت لتستخدمها الـ Javascript, لنحلل كيف قمت بذلك.</strong></h4>
             <hr>
             <p dir="rtl"><strong dir="rtl">1- عندما قلت لك إختار رقم في عقلك لنفترض أنك إخترت الرقم كالتالي:</strong><br>
-               <img src="../../images/javascript/3/1.png" alt="image" width="262" height="185">
+               <img src="{% static 'images/javascript/3/1.png'%}" alt="image" width="262" height="185">
             </p>
             <hr>
             <p dir="rtl"><strong dir="rtl">2- اضرب الرقم الذي في عقلك بـ 2:</strong><br>
-               <img src="../../images/javascript/3/2.png" alt="image" width="262" height="194">
+               <img src="{% static 'images/javascript/3/2.png'%}" alt="image" width="262" height="194">
             </p>
             <hr>
             <p dir="rtl"><strong dir="rtl">3- أضف على الناتج الرقم 8:</strong><br>
-               <img src="../../images/javascript/3/3.png" alt="image" width="262" height="190">
+               <img src="{% static 'images/javascript/3/3.png'%}" alt="image" width="262" height="190">
             </p>
             <hr>
             <p dir="rtl"><strong dir="rtl">4- إقسم الناتج على 2</strong><br>
-               <img src="../../images/javascript/3/4.png" alt="image" width="262" height="207">
+               <img src="{% static 'images/javascript/3/4.png'%}" alt="image" width="262" height="207">
             </p>
             <hr>
             <p dir="rtl"><strong dir="rtl">5- إطرح اول رقم وضعته في عقلك من الناتج:</strong><br>
-               <img src="../../images/javascript/3/5.png" alt="image" width="262" height="187">
+               <img src="{% static 'images/javascript/3/5.png'%}" alt="image" width="262" height="187">
             </p>
             <hr>
             <h2 dir="rtl">ما قام به عقلك كان كالتالي:</h2>
             <p dir="rtl">1- قام عقلك بحفظ الرقم الذي أنت قمت بإختيارة بجزء من ذاكرتك لنفترض تحت مسمى <strong dir="rtl">الرقم</strong><br>
                2- قام عقلك بالقيام بالعمليات الحسابية وحفظها بجزء أخر من ذاكرتك لنفترض بأنه تحت مسمى <strong dir="rtl">الناتج</strong><br>
-               <img class="image" src="../../images/javascript/3/6.png">
+               <img class="image" src="{% static 'images/javascript/3/6.png'%}">
             </p>
             <h2 dir="rtl">الملاحظ:</h2>
             <p dir="rtl">هل لاحظت بأنك منذ بدأية اللعبة وحتى نهايتها لم تقم بتغيير <strong dir="rtl">الرقم</strong> وذلك لانك تعرف بأن إتفاقنا الا تقوم بذلك وأنك اذا قمت بذلك في أي مرحلة من مراحل اللعبة فهذا يعني أنه سيكون هناك خطأ في الناتج؟</p>
@@ -174,7 +175,7 @@
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
                ستظهر نافذة منبثقة مكتوب عليها الناتج <code dir="ltr">result</code>  <strong dir="ltr">4</strong><br>
             </p>
-            <img class="image" src="../../images/javascript/3/7.png">
+            <img class="image" src="{% static 'images/javascript/3/7.png'%}">
             <p></p>
             <details dir="rtl" open="">
                <summary dir="rtl">
@@ -211,6 +212,6 @@
             <hr>
          </div>
       </div>
-      <script src="../../js/main.js"></script>
+      <script src="{% static 'js/main.js' %}"></script>
    </body>
 </html>

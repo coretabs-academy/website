@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static%}
 <html>
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>[الجزء الثاني: اليوم الأول]: تحدي اليوم الثاني</title>
-      <link rel="stylesheet" href="../../../css/style.css">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
       <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
    </head>
@@ -40,7 +41,7 @@
             <h1 dir="rtl">تحدي اليوم الثاني: ورشة العمل الأولى</h1>
             <hr>
             <p></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="Untitled-6.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/3/1.png" alt="Untitled-6" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="Untitled-6.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/3/1.png'%}" alt="Untitled-6" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">في البدأية أشكركم جميعاً على تفاعلكم الرائع ومجهوداتكم الطيبة في تحدي اليوم الأول من ورشة العمل هذه.</strong></p>
             <p dir="rtl">قمنا في <a href="https://macdiscussions.udacity.com/t/topic/88483" dir="rtl">تحدي اليوم الأول</a> بعمل الجزء التالي:</p>
@@ -58,6 +59,6 @@
             <hr>
          </div>
       </div>
-      <script src="../../../js/main.js"></script>
+      <script src="{% static 'js/main.js' %}"></script>
    </body>
 </html>

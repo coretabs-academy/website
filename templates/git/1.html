@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static%}
 <html>
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>[الدرس الأول : المهمة الأولى] مدخل Git & GitHub</title>
-      <link rel="stylesheet" href="../../css/style.css">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
       <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
    </head>
@@ -44,15 +45,15 @@
                   <h2>ماهو GitHub ؟</h2>
                   <p>هو موقع يستعمل (من قبل المطورين غالباً) لنشر المشاريع والعمل عليها بشكل تعاوني, وأيضاً يسهل عليك الحفاظ على النسخ من مشروعك بحيث إذا كان لديك النسخة 1.0 والنسخة 2.0 من مشروعك, بإمكانك أن ترى الفروق بينهم بسهولة كبيرة.</p>
                   <p></p>
-                  <div class="lightbox-wrapper"><a class="lightbox" title="image.png" rel="nofollow noopener"><img src="../../images/git/1/1.png" alt="image" class="image"></a></div>
+                  <div class="lightbox-wrapper"><a class="lightbox" title="image.png" rel="nofollow noopener"><img src="{% static 'images/git/1/1.png' %}" alt="image" class="image"></a></div>
                   <p></p>
                   <p>بالأعلى صورة من GitHub في طريقة عرضه للفروق بين الكود القديم والجديد.</p>
-                  <p>بالنسبة لنا سنستعمله لمشاركة المهام المطلوبة بشكل متواصل وسلس باستعمال Git Client  <img src="../../images/git/1/2.png" title=":wink:" class="emoji" alt=":wink:"></p>
+                  <p>بالنسبة لنا سنستعمله لمشاركة المهام المطلوبة بشكل متواصل وسلس باستعمال Git Client  <img src="{% static 'images/git/1/2.png' %}" title=":wink:" class="emoji" alt=":wink:"></p>
                </li>
                <hr>
                <li>
                   <h2>كيفية التسجيل على GitHub ؟</h2>
-                  <p>طريقة التسجيل سهلة جداً… شاهد الخطوات في 4 دقائق <img src="../../images/git/1/3.png" title=":smile:" class="emoji" alt=":smile:"></p>
+                  <p>طريقة التسجيل سهلة جداً… شاهد الخطوات في 4 دقائق <img src="{% static 'images/git/1/3.png' %}" title=":smile:" class="emoji" alt=":smile:"></p>
                   <iframe class="image" src="https://www.youtube.com/embed/7Qo-weIAL3o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
                </li>
                <hr>
@@ -63,7 +64,7 @@
                <hr>
                <li>
                   <h2>ماهو Git Client ؟</h2>
-                  <p>ببساطة هو <strong>البرنامج الوسيط بينك وبين GitHub</strong>, يوجد الكثير من الـ Git Clients ونحن <strong>سنستعمل GitKraken</strong> (برنامج بسيط وجميل) <img src="../../images/git/1/4.png" title=":smile:" class="emoji" alt=":smile:"></p>
+                  <p>ببساطة هو <strong>البرنامج الوسيط بينك وبين GitHub</strong>, يوجد الكثير من الـ Git Clients ونحن <strong>سنستعمل GitKraken</strong> (برنامج بسيط وجميل) <img src="{% static 'images/git/1/4.png' %}" title=":smile:" class="emoji" alt=":smile:"></p>
                   <p>يحتوي الـ Git Client على واجهة رسومية جميلة تقوم فيها بأوامر Git بدون أن تكتب الأوامر بالطريقة التقليدية. بمعنى بدلاً أن تكتب على سطر الأوامر:</p>
                   <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
                      <pre style="margin: 0; line-height: 125%">git commit
@@ -90,7 +91,7 @@
                         <h3>كيف سأقوم بإنشاءها ؟</h3>
                         <p>الأمر سهل جداً, إما من GitHub مباشرة بهذا الشكل:</p>
                         <p></p>
-                        <div class="lightbox-wrapper"><a class="lightbox" title="Untitled.png" rel="nofollow noopener"><img src="../../images/git/1/6.png" alt="Untitled" class="image"></a></div>
+                        <div class="lightbox-wrapper"><a class="lightbox" title="Untitled.png" rel="nofollow noopener"><img src="{% static 'images/git/1/6.png' %}" alt="Untitled" class="image"></a></div>
                         <p></p>
                      </li>
                   </ul>
@@ -111,7 +112,7 @@
             <ul>
                <li>
                   <h3>هل تجد هذه المفاهيم صعبة ؟</h3>
-                  <p>لا مشكلة يا صديقي, بإمكانك مراجعة الدروس على الكورس وفهمها بسرعة والعودة لتطبيق ما تعلمته بشكل واقعي… فمدير عملك في المستقبل سيطلب منك أن تنشر المشروع بأسرع وقت ممكن <img src="../../images/git/1/7.png" title=":grin:" class="emoji" alt=":grin:"></p>
+                  <p>لا مشكلة يا صديقي, بإمكانك مراجعة الدروس على الكورس وفهمها بسرعة والعودة لتطبيق ما تعلمته بشكل واقعي… فمدير عملك في المستقبل سيطلب منك أن تنشر المشروع بأسرع وقت ممكن <img src="{% static 'images/git/1/7.png' %}" title=":grin:" class="emoji" alt=":grin:"></p>
                </li>
                <hr>
                <li>
@@ -601,7 +602,7 @@
                <li>
                   <h2>كيف أقوم بإنشاء الملف ؟</h2>
                   <p>شاهد الصورة المتحركة:<br></p>
-                  <div class="lightbox-wrapper"><a class="lightbox" title="create-index.gif" rel="nofollow noopener"><img src="../../images/git/1/8.gif" alt="create-index" class="image"></a></div>
+                  <div class="lightbox-wrapper"><a class="lightbox" title="create-index.gif" rel="nofollow noopener"><img src="{% static 'images/git/1/8.gif' %}" alt="create-index" class="image"></a></div>
                   <p></p>
                </li>
                <hr>
@@ -619,7 +620,7 @@
                <li>
                   <h2>النتيجة المطلوبة:</h2>
                   <p>شيء مثل هذا سيفي بالغرض:<br></p>
-                  <div class="lightbox-wrapper"><a class="lightbox" title="image.png" rel="nofollow noopener"><img src="../../images/git/1/9.png" alt="image" width="342" height="91"></a></div>
+                  <div class="lightbox-wrapper"><a class="lightbox" title="image.png" rel="nofollow noopener"><img src="{% static 'images/git/1/9.png' %}" alt="image" width="342" height="91"></a></div>
                   <p></p>
                   <p>رابط المستودع الذي أنشأته في الفيديو:</p>
                   <p><a href="https://github.com/0xRumple/git-workshop" rel="nofollow noopener">https://github.com/0xRumple/git-workshop</a></p>
@@ -628,6 +629,6 @@
             </ul>
          </div>
       </div>
-      <script src="../../js/main.js"></script>
+      <script src="{% static 'js/main.js' %}"></script>
    </body>
 </html>

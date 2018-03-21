@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static%}
 <html>
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>[الدرس الأول] البدأية ومتطلبات المشروع</title>
-      <link rel="stylesheet" href="../../../css/style.css">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
       <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
    </head>
@@ -40,7 +41,7 @@
             <h1 dir="rtl">عن ورشة العمل</h1>
             <hr>
             <p dir="rtl">سنقوم بتطوير واجهة موقع الفيس بوك من الصفر لنتمرن على لغتي الـ HTML و الـ CSS ونتدرب على طريقة توظيف العناصر بالشكل المطلوب.<br></p>
-            <img class="image" src="../../../images/projects/facebook_project/1/1.png">
+            <img class="image" src="{% static 'images/projects/facebook_project/1/1.png'%}">
             <p></p>
             <h2 dir="rtl">ماهي متطلبات ورشة العمل هذه</h2>
             <p dir="rtl">1- يكفي أن تقوم بمراجعة الدروس التي قمت بوضعها في  لتكون مستعد للبدء بالعمل على هذا المشروع.<br>
@@ -55,6 +56,6 @@
             <hr>
          </div>
       </div>
-      <script src="../../../js/main.js"></script>
+      <script src="{% static 'js/main.js' %}"></script>
    </body>
 </html>

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static%}
 <html>
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>[الدرس الأول]: ماهو الـ DOM وماهي الـ Javascript وما العلاقة بينهما</title>
-      <link rel="stylesheet" href="../../css/style.css">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
       <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
    </head>
@@ -41,7 +42,7 @@
             <hr>
             <p dir="rtl">سأقوم بشرح هذا الدرس بأبسط قدر ممكن وبشكل عملي حتى تفهموا الفكرة العامة  و سأتجنب شرح المصطلحات و الكلام النظري الذي قد يشتتكم لكن أرجوا البحث والقرأة عن الموضوع أكثر بعد أن تفهموا الفكرة العامة حتى تكونوا ملمين بالموضوع بشكل كامل</p>
             <p dir="rtl"><strong dir="rtl">ماهو ال(DOM) ؟</strong><br></p>
-            <img class="image" src="../../images/javascript/2/1.png">
+            <img class="image" src="{% static 'images/javascript/2/1.png'%}">
             <p></p>
             <p dir="rtl">عند فتحك للمتصفح يكون امامك كائنين (Two Objects) الاول هو BOM والثاني هو ال DOM اعتقد ان الصورة واضحة لا اريد ان اقوم بعمل ترجمة حرفية للمصطلحات حتى لا يكون الموضوع مربك لكم.</p>
             <p dir="rtl">ال DOM هو واجهة برمجية خاصة بـ HTML و  XML. هذه الواجهة البرمجية تسمح لك بإستخدام بعض اللغات كـ Javascript لعمل تلاعب بالمحتوى والهيكلة كـ (جلب, تعديل, إضافة, حذف) للعناصر عن طريق التعامل معها ك Nodes.</p>
@@ -68,7 +69,7 @@
             </div>
             <p dir="rtl">عند حفظ هذا الكود وعرضة يقوم المتصفح بإنشاء DOM Tree كالتالي:</p>
             <p></p>
-            <img class="image" src="../../images/javascript/2/2.png">
+            <img class="image" src="{% static 'images/javascript/2/2.png'%}">
             <p></p>
             <p dir="rtl">نلاحظ من الصورة أعلاة كيف تم إنشاء الشجرة بحيث<br>
                <code dir="ltr">&lt;Html&gt;</code> هي الجذر (root)<br>
@@ -80,7 +81,7 @@
             <p dir="rtl">الان بإمكانك إعتبار كل عنصر بداخل هذه الشجرة Node</p>
             <p dir="rtl">الصورة التالية وضحت فيها بعض الـ Nodes</p>
             <p></p>
-            <img class="image" src="../../images/javascript/2/3.png">
+            <img class="image" src="{% static 'images/javascript/2/3.png'%}">
             <p></p>
             <p dir="rtl">في الوقت الحالي لا تهتم للمسميات فقط أفهمها ولاحقاً عندما تبدأ في التعمق ستعرف ماذا تستفيد منها</p>
             <hr>
@@ -89,12 +90,12 @@
                <li dir="rtl">قم بحفظ الكود أعلاة وفتحة في المتصفح ثم إضغط بزر الماوس الأيمن على الصفحة وقم بأختيار Inspect Element</li>
             </ul>
             <p></p>
-            <img class="image" src="../../images/javascript/2/4.png">
+            <img class="image" src="{% static 'images/javascript/2/4.png'%}">
             <p></p>
             <ul dir="rtl">
                <li dir="rtl">
                   <p dir="rtl">ستظهر لك النوافذ التالية<br></p>
-                  <img class="image" src="../../images/javascript/2/5.png">
+                  <img class="image" src="{% static 'images/javascript/2/5.png'%}">
                   <p></p>
                </li>
                <li dir="rtl">
@@ -102,7 +103,7 @@
                </li>
             </ul>
             <p></p>
-            <img class="image" src="../../images/javascript/2/6.png">
+            <img class="image" src="{% static 'images/javascript/2/6.png'%}">
             <p></p>
             <p dir="rtl">ما تشاهدة حالياً هي الواجهة التي ستعامل معها للتلاعب بالعناصر بإستخدام الـDOM</p>
             <ul dir="rtl">
@@ -124,7 +125,7 @@
                   فعندما تقوم بعمل تلاعب على الكود بإستخدام الـDOM فلا يتم المساس بمصدر الكود وإنما تتم التعديلات على الكود الذي قام المتصفح بإنشائة بإستخدام المصدر وعند عمل تحديث للصفحة يتم إستدعاء مصدر الكود و إعادة إنشاء نسخة جديدة للـDOM يتم فيها إلغاء جميع التعديلات
                </p>
                <p></p>
-               <img class="image" src="../../images/javascript/2/7.png">
+               <img class="image" src="{% static 'images/javascript/2/7.png'%}">
                <p></p>
                <p dir="rtl">ما أردت توضيحة فيه هذه الصورة</p>
                <ul dir="rtl">
@@ -181,12 +182,12 @@
             </div>
             <p dir="rtl">الان قم بحفظه الملف وفتحة بالمتصفح</p>
             <p></p>
-            <img class="image" src="../../images/javascript/2/8.png">
+            <img class="image" src="{% static 'images/javascript/2/8.png'%}">
             <p></p>
             <p dir="rtl">لدينا صفحة بيضاء خالية من أي محتوى</p>
             <p dir="rtl">سنقوم الأن بإستخدام نافذة Console لكتابة كود Javascript يقوم بإضافة تنسيق لوسم <code dir="ltr">&lt;body&gt;</code> وسنغير لون الخلفية إلى أي لون وليكن الأسود</p>
             <p></p>
-            <img class="image" src="../../images/javascript/2/9.png">
+            <img class="image" src="{% static 'images/javascript/2/9.png'%}">
             <p></p>
             <p dir="rtl">قمت بكتابة الكود التالي في الـConsole وضغطت على Enter:</p>
             <div class="code">
@@ -198,7 +199,7 @@
                <pre style="margin: 0; line-height: 125%"><span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">body</span>
 </pre>
             </div>
-            <p><img class="image" src="../../images/javascript/2/10.png"></p>
+            <p><img class="image" src="{% static 'images/javascript/2/10.png'%}"></p>
             <p dir="rtl">ثم يقوم بإضافة Style نوع backgroundColor والتي تقوم بتغيير لون الخلفية للون المحدد black</p>
             <div class="code">
                <pre style="margin: 0; line-height: 125%"><span style="color: #000000">style</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">backgroundColor</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"black"</span><span style="color: #000000; font-weight: bold">;</span>
@@ -208,7 +209,7 @@
                لنعود لنقارن كود الـHTML قبل كتابتنا لكود الJavascript وبعد كتابتنا له
             </p>
             <p></p>
-            <img class="image" src="../../images/javascript/2/11.png">
+            <img class="image" src="{% static 'images/javascript/2/11.png'%}">
             <p></p>
             <p dir="rtl">هلا لاحظت الفرق وكيف قام الـ DOM بالتلاعب بكود الـHTML فقد أضاف كود لعمل تنسيق لوسم <code dir="ltr">&lt;body&gt;</code> كالتالي:</p>
             <div class="code">
@@ -247,6 +248,6 @@
             <hr>
          </div>
       </div>
-      <script src="../../js/main.js"></script>
+      <script src="{% static 'js/main.js' %}"></script>
    </body>
 </html>

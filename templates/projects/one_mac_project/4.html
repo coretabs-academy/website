@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static%}
 <html>
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>[الجزء الثاني: اليوم الثاني]: درس اليوم الثاني: الجزء الأول</title>
-      <link rel="stylesheet" href="../../../css/style.css">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
       <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
    </head>
@@ -47,7 +48,7 @@
                <p></p>
                <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="fixed.gif" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/4/1.gif" alt="fixed" class="image"></a></div>
                <p></p>
-               <p dir="rtl"><strong dir="rtl">كما أجاب العديد منكم <img src="../../../images/projects/one_mac_project/4/2.png" title=":clap:" style="width:30px;" alt=":clap:"> للقيام بذلك يجب علينا تغيير إتجاة الصفحة من اليمين الى اليسار ليتوافق مع اللغة العربية ويمكننا ذلك عبر إضافة الخاصية <code dir="ltr">direction</code> لعنصر الـ body بشكل عام</strong></p>
+               <p dir="rtl"><strong dir="rtl">كما أجاب العديد منكم <img src="{% static 'images/projects/one_mac_project/4/2.png'%}" title=":clap:" style="width:30px;" alt=":clap:"> للقيام بذلك يجب علينا تغيير إتجاة الصفحة من اليمين الى اليسار ليتوافق مع اللغة العربية ويمكننا ذلك عبر إضافة الخاصية <code dir="ltr">direction</code> لعنصر الـ body بشكل عام</strong></p>
                <div class="code">
                   <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">body</span> <span style="color: #000000; font-weight: bold">{</span>
 <span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
@@ -70,9 +71,9 @@
             </details>
             <hr>
             <p dir="rtl">في التحدي والدرس السابق إنتهينا من عمل الـ header والـ navbar اليوم سنبدأ في درس التحدي الثاني وشرح عمل الأقسام التي تم طلب عملها.</p>
-            <p dir="rtl"><strong dir="rtl">قبل أن نبدأ أشكر كل من شارك جميعكم قمتم بعمل رائع <img src="../../../images/projects/one_mac_project/4/4.png" title=":tada:" style="width:30px;" alt=":tada:"></strong></p>
+            <p dir="rtl"><strong dir="rtl">قبل أن نبدأ أشكر كل من شارك جميعكم قمتم بعمل رائع <img src="{% static 'images/projects/one_mac_project/4/4.png'%}" title=":tada:" style="width:30px;" alt=":tada:"></strong></p>
             <p></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/4/5.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/4/5.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <ul dir="rtl">
                <li dir="rtl">
@@ -106,7 +107,7 @@
             </div>
             <p dir="rtl">لاحظ قمت بحفظ الصورة لداخل مجلد  images وقمت بإعادة تسميتها لـ banner</p>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/4/6.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/4/6.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">ما الذي ينقصنا ؟</strong></p>
             <ul dir="rtl">
@@ -124,7 +125,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/4/7.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/4/7.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">كما تلاحظ في الصورة أعلاة تكررت الصورة بشكل أفقي ونحن لا نريد ذلك لهذا سنستخدم خاصية <code dir="ltr">background-repeat</code> ونعطيها قيمة <code dir="ltr">no-repeat</code> لتمنع تكرار الصورة.</p>
             <div class="code">
@@ -138,7 +139,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/4/8.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/4/8.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">لاحظ تظهر الصورة في الوسط ولكننا نريد حجمها ان يتمدد ليغطي كل القسم لهذا سنستخدم خاصية <code dir="ltr">background-size</code> ونعطيها قيمة <code dir="ltr">cover</code></p>
             <div class="code">
@@ -153,7 +154,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/4/9.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/4/9.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">رائع أصبحت كما هو مطلوب وتبقى لها شي أخير وهو عمل طبقة غامقة على الصورة من أجل أن تكون النصوص عليها واضحة, بإمكاننا عمل هذه الطبقة بأكثر من طريقة لكنني سأختار طريقة بسيطة ستعطينا النتيجة بتعديل بسيط على خاصية <code dir="ltr">background-image</code></p>
             <p dir="rtl">نستطيع إضافة أكثر من صورة للخلفية وذلك بعمل فاصلة بين مسار كل صورة كالتالي:</p>
@@ -179,7 +180,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/4/10.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/4/10.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">إنتهينا من القسم الرئيسي <code dir="ltr">banner</code> الأن سنبدأ بالعمل داخلة.</p>
             <hr>
@@ -216,12 +217,12 @@
             </div>
             <p dir="rtl">لاحظ قمت بوضع نص تجريبي بدأخلة حتى أتأكد من أننا في الطريق الصحيح</p>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/4/11.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/4/11.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">لاحظ لم يظهر النص التجريبي يا ترى ما المشكلة ؟</strong><br>
                اها تذكروا الـ header كيف أعطيناة خاصية تجعلة fixed بمعنى ثابت في رأس الصفحة لنقوم بإزالة الـ header ونشاهد النتيجة<br>
             </p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/4/12.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/4/12.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">وجدنا النص الخاص بنا اذا فالـ <code dir="ltr">container</code> يعمل بالشكل المطلوب ولكن الـ <code dir="ltr">header</code> يقوم بتغطية جزء من الـ <code dir="ltr">banner</code> اذا لا مشكلة لنعيد الـ header ولنكم العمل</p>
             <hr>
@@ -256,7 +257,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/4/13.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/4/13.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">نريد توسيط النص, بإمكانك توسيطة بإستخدام الهوامش من اليمين واليسار بقيمة <code dir="ltr">auto</code> ولكني سأقوم بإعطاء العنصر banner خاصية توسيط النصوص, اذا لنعود لكود banner ونضيف المطلوب:</p>
             <div class="code">
@@ -298,7 +299,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">لاحظ الفرق:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/4/14.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/4/14.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">هناك مسافة كبيرة بسبب الـ margin-bottom الخاصة بالعنوان <code dir="ltr">h1</code> لنقوم بتعديلها إلى 5px:</p>
             <div class="code">
@@ -353,7 +354,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/4/15.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/4/15.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">كما هو مطلوب ولكن نريد أن نقوم بتعديل بسيط قبل أن ننتقل للقسم الأخر, هل تلاحظوا الظل الذي وضعناه للـ Header كيف ان لونة رمادي ويظهر متوهج بينما يفترض أن يكون أسود لهذا سنعود لنعمل تعديل على هذا الكود:</p>
             <div class="code">
@@ -381,7 +382,7 @@
 <span style="color: #000000; font-weight: bold">}</span>
 </pre>
             </div>
-            <p dir="rtl">ولا ننسى عمل هذا التعديل على ظل قائمة الـ dropdown بالشكل الذي يجعلها مطابق لما في الموقع الأصلي (إذا كنت تتسأل كيف حصلت على هذه الأرقام الدقيقة الخاصة بظل القائمة فقد غشيتها من خلال الـ inspect element <img src="../../../images/projects/one_mac_project/4/16.png" title=":smirk:" style="width:30px;" alt=":smirk:">)</p>
+            <p dir="rtl">ولا ننسى عمل هذا التعديل على ظل قائمة الـ dropdown بالشكل الذي يجعلها مطابق لما في الموقع الأصلي (إذا كنت تتسأل كيف حصلت على هذه الأرقام الدقيقة الخاصة بظل القائمة فقد غشيتها من خلال الـ inspect element <img src="{% static 'images/projects/one_mac_project/4/16.png'%}" title=":smirk:" style="width:30px;" alt=":smirk:">)</p>
             <div class="code">
                <pre style="margin: 0; line-height: 125%"><span style="color: #000000">#navbar</span> <span style="color: #000000">.dropdown-content</span> <span style="color: #000000; font-weight: bold">{</span>
 <span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">none</span><span style="color: #000000; font-weight: bold">;</span>
@@ -393,7 +394,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/4/17.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/4/17.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <hr>
             <p dir="rtl">كما تشاهدوا أحرص على أن نمر بعملية تطوير الواجهة بشكل عفوي حتى تدركوا مدى سهولة الأمر وكيف أنك تحتاج أن في كثير من الأحيان إلى أن تعود لعمل تعديلات على عناصر سبق وإنتهيت منها فلا تجعل النتيجة النهائية تخيفك وتوحي إليك بإنك لن تستطيع عمل ذلك فقط إبداء بالعمل وحبة حبة ستجد بأنك تقوم بتشكيل الموقع بالشكل المطلوب.</p>
@@ -449,6 +450,6 @@
             <hr>
          </div>
       </div>
-      <script src="../../../js/main.js"></script>
+      <script src="{% static 'js/main.js' %}"></script>
    </body>
 </html>

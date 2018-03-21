@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static%}
 <html>
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>[الجزء الثالث: اليوم الثاني]: درس اليوم الثالث: الجزء الثاني والأخير</title>
-      <link rel="stylesheet" href="../../../css/style.css">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
       <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
    </head>
@@ -40,7 +41,7 @@
             <h1>إكمال عمل اقسام المسارات الأخرى</h1>
             <hr>
             <p></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/8/1.png"  alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/8/1.png'%}"  alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">أريد منكم التركيز على طريقة إستفادتنا من العناصر التي سبق وقمنا بعملها حيث لن نحتاج لإعادة تكرار كتابة تنسيقات او حتى بناء هيكلة جديدة للقسم في مستند الـ HTML</p>
             <p dir="rtl">الكود الذي قمنا بكتابته في الدرس السابق في ملف الـ HTML</p>
@@ -114,11 +115,11 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/8/2.png"  alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/8/2.png'%}"  alt="image" class="image"></a></div>
             <p></p>
             <h2 dir="rtl">قبل أن نبدأ بعمل التنسيقات لنتعلم selector جديد (()nth-of-type:)</h2>
             <p dir="rtl">ركز على الصورة التالية<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/8/3.png"  alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/8/3.png'%}"  alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">نلاحظ انه لدينا قسم <strong dir="rtl">أب (Father)</strong> وبداخلة عناصر من نفس النوع <strong dir="ltr">div</strong> وهما المسؤولان عن عرض الأقسام الخاصة بالمسارات<br>
                نستطيع ان نقوم بإستهداف أي عنصر من هذه العناصر حسب ترتيبها بإستخدام الكود التالي:
@@ -130,7 +131,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">لاحظ النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/8/4.png"  alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/8/4.png'%}"  alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">تم تغيير لون خلفية العنصر الأول فقط, <strong dir="rtl">كيف تم ذلك؟</strong><br>
                قمت بإستهداف أول عنصر من نوع <code dir="ltr">div</code> بالكود التالي <code dir="ltr">div:nth-of-type(1)</code> بدأخل الأب <code dir="ltr">.section</code> وعلامة <code dir="ltr">&lt;</code> تعني بأننا نريد فقط تحديد الـ <code dir="ltr">div</code> الذي لدية علاقة مباشرة مع <code dir="ltr">.section</code> كأب وإبن كما بالكود اعلاة وثم قمت بتغيير لون خلفيتة.
@@ -145,10 +146,10 @@
             <p dir="rtl">الكود اعلاة سيقوم بتغيير لون الخلفية لجميع العناصر التي ترتيبها زوجي من نفس نوع div بداخل الأب section ما يعني انه القسم 2 و 4 و 6 … الخ ستتأثر بهذا التنسيق.</p>
             <h2 dir="rtl">لنقم بتطبيق هذه الفكرة على موقعنا</h2>
             <p dir="rtl">ارجع للموقع الأصلي وستلاحظ ان الأقسام التي ترتيبها فردي لديها صورة في الخلفية والفيديو على اليسار والوصف باليمين كالتالي:<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/8/5.png"  alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/8/5.png'%}"  alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">بينما العناصر التي ترتيبها زوجي لديها خلفية بيضاء والفيديو باليمين والنص باليسار كالتالي:<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/8/6.png"  alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/8/6.png'%}"  alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">اذا لنقوم بإستهداف العناصر ذات الترتيب الزوجي وإعطائها التنسيق المطلوب كالتالي:</strong></p>
             <ul dir="rtl">
@@ -161,7 +162,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/8/7.png"  alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/8/7.png'%}"  alt="image" class="image"></a></div>
             <p></p>
             <ul dir="rtl">
                <li dir="rtl">2- لنقوم بإستهداف العنصر h2 والعنصر p بداخل هذا العنصر الذي ترتيبة زوجي ونغير لون الخط</li>
@@ -175,7 +176,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/8/8.png"  alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/8/8.png'%}"  alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">تبقى لنا أخر شي وهو جعل الفيديو في اليمين والنص باليسار وسنعود لنستفيد من خواص الـ Flexbox كالتالي:</p>
             <p dir="rtl"><strong dir="rtl">- هل تذكروا العنصر الذي قمنا بتحديدة كـ Flex container ?</strong></p>
@@ -196,7 +197,7 @@
             </div>
             <p dir="rtl">لاحظوا قمت بإستهداف العنصر الـ <code dir="ltr">container</code> الذي بداخل العناصر ذات الترتيب الزوجي فقط</p>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/one_mac_project/8/9.png"  alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/one_mac_project/8/9.png'%}"  alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">رائع حصلنا على النتيجة التي نريدها بإضافة 4 خصائص على ملف الـ css الان لنعود لملف الـ HTML ونقوم بعملية نسخ للاكواد وتغيير المحتوى وسيتم تطبيق التنسيق بشكل ديناميكي</p>
             <details dir="rtl" open="open">
@@ -365,6 +366,6 @@
             <hr>
          </div>
       </div>
-      <script src="../../../js/main.js"></script>
+      <script src="{% static 'js/main.js' %}"></script>
    </body>
 </html>

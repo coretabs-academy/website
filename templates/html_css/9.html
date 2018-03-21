@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static%}
 <html>
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>[الدرس التاسع]: CSS margin Property</title>
-      <link rel="stylesheet" href="../../css/style.css">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
       <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
    </head>
@@ -42,7 +43,7 @@
             <ul dir="rtl">
                <li dir="rtl">
                   تذكر دائماً أن خاصية <code dir="ltr">margin</code> هي المسؤولة عن تحديد الهوامش الخارجية للعنصر كما هو موضح بالصورة.<br>
-                  <img class="image" src="../../images/html_css/9/1.png">
+                  <img class="image" src="{% static 'images/html_css/9/1.png'%}">
                   <br>
                   نلاحظ في الصورة أن هذه الخاصية تتجزأ إلى 4 أجزاء
                </li>
@@ -66,7 +67,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة :</strong><br></p>
-            <img class="image" src="../../images/html_css/9/2.png">
+            <img class="image" src="{% static 'images/html_css/9/2.png'%}">
             <p dir="rtl">شاهد كيف قمت بإعطاء الصندوق هامش من اليسار ب 80 بيكسل ومن الأعلى 60 بيكسل.</p>
             <hr>
             <h2 dir="rtl">كيف أستفيد من هذه الخاصية لتوسيط أي عنصر</h2>
@@ -100,8 +101,8 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">بما أننا حددنا للمتصفح بإعطاء العنصر هامش من اليمين (<code dir="ltr">margin-right</code> ) بقيمة 0 اذا سيقوم بإعطاء الأولوية لتطبيق هذا الأمر ولن يكون لـ auto نتيجة ملحوظة كالتالي:</strong></p>
-            <img class="image" src="../../images/html_css/9/3.png">
-            <p dir="rtl"><strong dir="rtl">لكن ما الذي سيحصل اذا ما قمنا بإعطاء العنصر هامش من اليمين واليسار بنفس القيمة وهي <code dir="ltr">auto</code> <img class="image" src="../../images/html_css/9/4.png" title=":thinking:" alt=":thinking:" style="width:30px;"> ؟</strong></p>
+            <img class="image" src="{% static 'images/html_css/9/3.png'%}">
+            <p dir="rtl"><strong dir="rtl">لكن ما الذي سيحصل اذا ما قمنا بإعطاء العنصر هامش من اليمين واليسار بنفس القيمة وهي <code dir="ltr">auto</code> <img class="image" src="{% static 'images/html_css/9/4.png'%}" title=":thinking:" alt=":thinking:" style="width:30px;"> ؟</strong></p>
             <div class="code">
                <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.margin-test</span><span style="color: #000000; font-weight: bold">{</span>
     <span style="color: #204a87; font-weight: bold">margin-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">60px</span><span style="color: #000000; font-weight: bold">;</span>
@@ -111,19 +112,19 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">شاهد النتيجة :</strong><br></p>
-            <img class="image" src="../../images/html_css/9/5.png">
+            <img class="image" src="{% static 'images/html_css/9/5.png'%}">
             <p dir="rtl">قام المتصفح بإحتساب الهوامش من اليمين واليسار بشكل تلقائي مما جعل العنصر في وسط الصفحة.</p>
             <p dir="rtl"><strong dir="rtl">هل الموضوع مربك لك ؟</strong><br>
                بإمكانك تخيل الذي يحصل كشد الحبل, شاهد الصور التالية
             </p>
-            <img class="image" src="../../images/html_css/9/6.png">
-            <img class="image" src="../../images/html_css/9/7.png">
+            <img class="image" src="{% static 'images/html_css/9/6.png'%}">
+            <img class="image" src="{% static 'images/html_css/9/7.png'%}">
             <hr>
             <p dir="rtl"><strong dir="rtl">يفترض بأنك الأن فهمت الفكرة, لنتقدم خطوة للأمام ونقوم بكتابة الكود بطريقة أكثر إحترافاً.</strong></p>
             <p dir="rtl">لماذا لا نقوم بدمج كل تلك الأكواد التي نحتاج لكتابتها لعمل margin في سطر واحد؟</p>
             <h2 dir="rtl">سنقوم بذلك عبر تعميم إسم الخاصية على الجميع تحت مسمى <code dir="ltr">margin</code></h2>
             <p dir="rtl">ركز على الصور التالية حتى تعرف كيف ستقوم بتحديد أي قيمة هي التي تخص الهامش الأعلى او الأسفل وغيرة</p>
-            <img class="image" src="../../images/html_css/9/8.png">
+            <img class="image" src="{% static 'images/html_css/9/8.png'%}">
             <p dir="rtl">لاحظ قمت بكتابة كل القيم كالتالي :</p>
             <div class="code">
                <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">margin</span><span style="color: #5c35cc; font-weight: bold">:100px</span> <span style="color: #204a87; font-weight: bold">auto</span> <span style="color: #204a87; font-weight: bold">100px</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #ce5c00; font-weight: bold">;</span>
@@ -135,7 +136,7 @@
             <p dir="rtl"><strong dir="rtl">هل تذكر اننا سبق وقلنا بأننا يجب أن نحرص على عدم تكرار أكوادنا؟</strong></p>
             <p dir="rtl">هل تلاحظ اننا قمنا بتكرار القيم للإتجاهات المتضادة مثلا أعلى واسفل أعطيناها نفس القيمة 100 بيكسل بينما يمين ويسار أعطيناهما نفس القيمة.</p>
             <p dir="rtl">اذا هناك شي يربط بين هذه الاتجاهات فهناك الإتجاة وضدة فلنقوم بدمجهما مع بعض.</p>
-            <img class="image" src="../../images/html_css/9/9.png">
+            <img class="image" src="{% static 'images/html_css/9/9.png'%}">
             <p dir="rtl">ليصبح لدينا الكود كالتالي</p>
             <div class="code">
                <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">margin</span><span style="color: #5c35cc; font-weight: bold">:100px</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #ce5c00; font-weight: bold">;</span>
@@ -143,7 +144,7 @@
             </div>
             <hr>
             <p dir="rtl">وهنا طريقة أخرى بنفس الفكرة لكن هذه المرة قمنا بدمج هامش اليمين واليسار في قيمة واحدة</p>
-            <img class="image" src="../../images/html_css/9/10.png">
+            <img class="image" src="{% static 'images/html_css/9/10.png'%}">
             <pre dir="ltr"><code class="hljs cpp" dir="ltr">margin:<span class="hljs-number">100</span>px <span class="hljs-keyword">auto</span> <span class="hljs-number">50</span>px;
 </code></pre>
             <hr>
@@ -187,6 +188,6 @@
             <hr>
          </div>
       </div>
-      <script src="../../js/main.js"></script>
+      <script src="{% static 'js/main.js' %}"></script>
    </body>
 </html>

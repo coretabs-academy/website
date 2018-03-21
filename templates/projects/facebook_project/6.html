@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static%}
 <html>
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>[الدرس الخامس:الجزء الثاني] تكويد الـ container</title>
-      <link rel="stylesheet" href="../../../css/style.css">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
       <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
    </head>
@@ -91,7 +92,7 @@
                <p dir="rtl">1- سنجعل قسم الـ header الذي سبق وانشأناه هو الصندوق الأب الذي سيأخذ عرض الشاشة كاملاً وسنقوم بإستخدامة لعمل لون الخلفية</p>
             </blockquote>
             <p></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/6/1.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/6/1.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">الأن سنبدأ بتطبيق المرحلة التالي وهي كما وضحنا بالدرس السابق:</p>
             <blockquote dir="rtl">
@@ -122,7 +123,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/6/2.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/6/2.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">لاحظ أن الـ <code dir="ltr">container</code> يظهر باليسار بينما أريدة أن يكون في وسط الصفحة <strong dir="rtl">فكيف سنقوم بذلك ؟</strong></p>
             <p dir="rtl">سنحتاج إلى أن نتحكم بموقعه بإستخدام خاصية <code dir="ltr">margin</code> والتي سبق وشرحتها في درس سابق يجب عليك الرجوع إلية لتفهمها <strong dir="rtl"><a href="https://macdiscussions.udacity.com/t/css-margin-property/85103" dir="rtl">من هنا</a></strong>.</p>
@@ -132,7 +133,7 @@
 </pre>
             </div>
             <p></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/6/3.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/6/3.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">رائع الأن أصبحت متأكد من أن الـ <code dir="ltr">container</code> بالشكل المطلوب لهذا سأقوم بإزلة خاصية تغيير اللون.</p>
             <div class="code">
@@ -147,6 +148,6 @@
             <hr>
          </div>
       </div>
-      <script src="../../../js/main.js"></script>
+      <script src="{% static 'js/main.js' %}"></script>
    </body>
 </html>

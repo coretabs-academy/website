@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static%}
 <html>
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>[الدرس الخامس]: Class vs ID</title>
-      <link rel="stylesheet" href="../../css/style.css">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
       <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
    </head>
@@ -87,7 +88,7 @@
             </div>
             <p dir="rtl">لاحظ عند تعريف الـ <code dir="ltr">id</code> في الـ <code dir="ltr">CSS</code> نقوم بوضع <code dir="ltr">#</code> قبل إسم الـ <code dir="ltr">id</code></p>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/html_css/5/2.png">
+            <img class="image" src="{% static 'images/html_css/5/2.png'%}">
             <details dir="rtl" open="">
                <summary dir="rtl">
                   الكود كاملاً
@@ -155,7 +156,7 @@
             </div>
             <p dir="rtl">لاحظ عند تعريف الـ <code dir="ltr">class</code> في الـ <code dir="ltr">CSS</code> نقوم بوضع <code dir="ltr">.</code> قبل إسم الـ <code dir="ltr">class</code></p>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/html_css/5/3.png">
+            <img class="image" src="{% static 'images/html_css/5/3.png'%}">
             <details dir="rtl" open="">
                <summary dir="rtl">
                   الكود كاملاً
@@ -198,9 +199,9 @@
                <p dir="rtl">الـ id تقوم بإستخدامه مع العناصر التي لا تتكرر في الصفحة لنأخذ على سبيل المثال الشعار في هذا المنتدى
                   بإمكاننا إعطائه <code dir="ltr">id</code>
                </p>
-               <img class="image" src="../../images/html_css/5/4.png">
+               <img class="image" src="{% static 'images/html_css/5/4.png'%}">
                <p dir="rtl">اما الـ class تقوم بإستخدامة مع العناصر التي تتكرر في الصفحة لنأخذ على سبيل المثال هذا الجزء في المنتدى حيث يتكرر نفس التنسيق.</p>
-               <img class="image" src="../../images/html_css/5/5.png">
+               <img class="image" src="{% static 'images/html_css/5/5.png'%}">
                <p dir="rtl">لكن هذا لا يعني أنه لا يمكنك إعطاء الشعار class بدلاً من id فالأمر راجع إليك.</p>
             </details>
             <hr>
@@ -216,6 +217,6 @@
             <p dir="rtl">في الختام أحرص على أن تفهم الفكرة الرئيسية ولا تقلق من أكواد التنسيقات حيث أننا سنفصلها لاحقاً وستصبح مألوفة لديك مع الممارسة</p>
          </div>
       </div>
-      <script src="../../js/main.js"></script>
+      <script src="{% static 'js/main.js' %}"></script>
    </body>
 </html>

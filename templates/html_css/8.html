@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static%}
 <html>
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>[الدرس الثامن]: CSS Basics</title>
-      <link rel="stylesheet" href="../../css/style.css">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
       <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
    </head>
@@ -40,11 +41,11 @@
             <h1>أساسيات CSS</h1>
             <hr>
             <p dir="rtl">في الدرس السابق تعرفنا على طرق إضافة أكواد الـ CSS إلى مستند الـ HTML, في هذا الدرس سنتكلم عن أهم الأساسيات لكتابة أكواد الـCSS.</p>
-            <img class="image" src="../../images/html_css/8/1.png">
+            <img class="image" src="{% static 'images/html_css/8/1.png'%}">
             <p dir="rtl">الكود في الصورة أعلاة هو مثال لأبسط المكونات الأساسية لعمل تنسيق <code dir="ltr">CSS</code> لعناصر الـ <code dir="ltr">HTML</code> وسنفصلها كالتالي:</p>
             <h2 dir="rtl">1- الـ Selector او ما يمكننا تسميته العنصر المستهدف:</h2>
             <p dir="rtl">كما قمنا بالتوضيح سابقاً تحتاج الـ <code dir="ltr">CSS</code> لمعرفة من هو العنصر المستهدف الذي ستقوم بتطبيق التنسيقات المرغوبة عليه وسنذكر أبرز ثلاث طرق لعمل ذلك:<br></p>
-            <img class="image" src="../../images/html_css/8/2.png">
+            <img class="image" src="{% static 'images/html_css/8/2.png'%}">
             <ul dir="rtl">
                <li dir="rtl">
                   <strong dir="rtl">الطريقة الأولى: Element Selector</strong><br>
@@ -206,7 +207,7 @@
             <hr>
             <h2 dir="rtl">2- الـ Porperty او الخاصية:</h2>
             <p dir="rtl">الخطوة التالية بعد أن تقوم بتحديد العنصر المستهدف بإستخدام أحد الطرق أعلاة هو أن تبدأ بإضافة التنسيقات له, وللقيام بذلك يجب أن تقوم بتحديد نوع الخاصية المراد تطبيقها.<br></p>
-            <img class="image" src="../../images/html_css/8/6.png">
+            <img class="image" src="{% static 'images/html_css/8/6.png'%}">
             <p dir="rtl">الخاصية في الصورة أعلاة <code dir="ltr">color</code> هي الخاصية المسؤولة عن تغيير لون الخط.<br>
                أنت غير ملزم بحفظ هذه الخصائص فسوف تنساها وإنما مع الوقت والممارسة ستحفظها ودائماً بإمكانك الرجوع للمرجع الخاص بها لتعلمها ومعرفة فائدتها وطريقة إستخدامها<br>
                <a href="https://www.w3schools.com/cssref/default.asp" rel="nofollow noopener" dir="rtl">إضغط هنا للذهاب لمرجع خصائص الـ CSS</a>
@@ -215,7 +216,7 @@
             <hr>
             <h2 dir="rtl">2- الـ  Property Value أو قيمة الخاصية :</h2>
             <p dir="rtl">الخطوة التالية بعد أن تقوم بتحديد العنصر المستهدف والخاصية المطلوب تنفيذها هي أن تقوم بتحديد قيمة هذه الخاصية.<br></p>
-            <img class="image" src="../../images/html_css/8/7.png">
+            <img class="image" src="{% static 'images/html_css/8/7.png'%}">
             <p dir="rtl">الصورة أعلاة توضح قيمة خاصية تغيير لون الخط حيث قمت بطلب تغيير لونة إلى اللون الأحمر <code dir="ltr">red</code></p>
             <p dir="rtl"><strong dir="rtl">- لاحظ</strong> هناك عدة طرق لتحديد اللون المطلوب بإمكانك تعلمها من <a href="https://www.w3schools.com/cssref/pr_text_color.asp" rel="nofollow noopener" dir="rtl">خلال هذا المرجع</a> وسنتطرق لها لاحقاً.</p>
             <hr>
@@ -223,7 +224,7 @@
             <ul dir="rtl">
                <li dir="rtl">
                   لاتنسى إغلاق كل خاصية بعد كتابة قيمتها بالفاصلة المنقوطة <code dir="ltr">;</code> حتى وإن كانت الخاصية الأخيرة حتى تعتاد على ذلك وتتجنب الأخطاء.<br>
-                  <img class="image" src="../../images/html_css/8/8.png">
+                  <img class="image" src="{% static 'images/html_css/8/8.png'%}">
                </li>
             </ul>
             <h2 dir="rtl">هناك معايير محددة لعمل تسميات لأسماء الـ id و الـ class لجعل كودك مرتب ونظيف أحرص على التالي:</h2>
@@ -279,6 +280,6 @@
             <hr>
          </div>
       </div>
-      <script src="../../js/main.js"></script>
+      <script src="{% static 'js/main.js' %}"></script>
    </body>
 </html>

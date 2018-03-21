@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static%}
 <html>
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>[الدرس الثالث: الجزء الثاني]: Data Types</title>
-      <link rel="stylesheet" href="../../css/style.css">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
       <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
    </head>
@@ -55,7 +56,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/5/1.png">
+            <img class="image" src="{% static 'images/javascript/5/1.png'%}">
             <p></p>
             <p dir="rtl">اذا كانت لا تعرف كيف تستخدم الـ console راجع <a href="2.html" dir="rtl">الدرس الأول</a>.</p>
             <hr>
@@ -67,7 +68,7 @@
 </pre>
             </div>
             <p dir="rtl">لنقوم بطباعة قيمة المتغير x على الـ console ونشاهد القيمة التي تم تخزينها في x<br></p>
-            <img class="image" src="../../images/javascript/5/2.png">
+            <img class="image" src="{% static 'images/javascript/5/2.png'%}">
             <p></p>
             <hr>
             <h4 dir="rtl">ربما تتسأل ما الفرق بين undefined و null ؟</h4>
@@ -96,7 +97,7 @@
                <img src="../../images/javascript/5/3.gif" alt="Untitled-25" width="222" height="112">
             </p>
             <p dir="rtl">هل سبق لك وأن شاهدت مثل هذا المفتاح ؟<br>
-               <img src="../../images/javascript/5/4.png" alt="image" width="189" height="164">
+               <img src="{% static 'images/javascript/5/4.png'%}" alt="image" width="189" height="164">
             </p>
             <p dir="rtl"><strong dir="rtl">اذا سألتك وقلت لك هل المفتاح هذا الأن في وضع الـ ON ام OFF؟</strong><br>
                انا متأكد بأنك ستقول بأنه في وضع ON
@@ -127,7 +128,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/5/5.png">
+            <img class="image" src="{% static 'images/javascript/5/5.png'%}">
             <p></p>
             <p dir="rtl">الان لنقوم بتعديل الكود السابق بإضافة <strong dir="rtl">علامة تعجب</strong> <strong dir="ltr">!</strong> قبل اسم المتغير بداخل دالة <strong dir="ltr">alert</strong>:</p>
             <div class="code">
@@ -139,7 +140,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/5/6.png">
+            <img class="image" src="{% static 'images/javascript/5/6.png'%}">
             <p></p>
             <p dir="rtl">هل لاحظت كيف تغيرت قيمة المتغير من false الى true  وكانه كان هناك مفتاح في حالة flase و من ثم قمت لاحقاً بتفعيلة true.</p>
             <p dir="rtl"><strong dir="rtl">بإمكانك اعتبار بأن ما قمنا به بشكل مشابة لما يحصل في الصورة التالية:</strong><br>
@@ -156,6 +157,6 @@
             <hr>
          </div>
       </div>
-      <script src="../../js/main.js"></script>
+      <script src="{% static 'js/main.js' %}"></script>
    </body>
 </html>

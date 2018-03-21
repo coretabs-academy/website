@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static%}
 <html>
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>[الدرس الخامس]: Javascript Coding Convention + Rules</title>
-      <link rel="stylesheet" href="../../css/style.css">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
       <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
    </head>
@@ -93,7 +94,7 @@
             <hr>
             <h2 dir="rtl">ـ Javascript Coding Convention</h2>
             <p dir="rtl">تذكرون إتفاقنا على اسلوب كتابة أسماء الـ class و الـ id في الـ css حيث إتفقنا أن نقوم بكتابتها بأحرف صغيرة وعند كتابتنا لكلمتين نفصلهما بشرطة <code dir="ltr">-</code> هذا كان بالنسبة للـ CSS وتم مناقشة ذلك .</p>
-            <h5 dir="rtl">نريد الأن ان نتفق على إسلوب كتابة أسماء المتغيرات في الجافاسكربت حيث تم إعتماد ما يسمى إسلوب الـ camelCase <img src="../../images/javascript/7/1.png" title=":dromedary_camel:" class="emoji" alt=":dromedary_camel:" style="width:30px;"> لكتابة المتغيرات كالتالي:</h5>
+            <h5 dir="rtl">نريد الأن ان نتفق على إسلوب كتابة أسماء المتغيرات في الجافاسكربت حيث تم إعتماد ما يسمى إسلوب الـ camelCase <img src="{% static 'images/javascript/7/1.png'%}" title=":dromedary_camel:" class="emoji" alt=":dromedary_camel:" style="width:30px;"> لكتابة المتغيرات كالتالي:</h5>
             <ul dir="rtl">
                <li dir="rtl">في حال لديك اسم متغير يتكون من كلمة واحدة قم بتكتابتها بأحرف صغيرة</li>
             </ul>
@@ -122,6 +123,6 @@
             <hr>
          </div>
       </div>
-      <script src="../../js/main.js"></script>
+      <script src="{% static 'js/main.js' %}"></script>
    </body>
 </html>

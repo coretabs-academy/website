@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static%}
 <html>
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>[الدرس الثالث] تنزيل وتجهيز الصور المستخدمة بالمشروع</title>
-      <link rel="stylesheet" href="../../../css/style.css">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
       <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
    </head>
@@ -42,19 +43,19 @@
             <p dir="rtl">قمنا في الدرس السابق بتجهيز ملفات المشروع و تبقت خطوة أخيرة قبل أن نبدأ بالتكويد الا وهي تنزيل الصور التي سنستخدمها أثناء عملنا على إستنساخ واجهة الفيس بوك.</p>
             <h2 dir="rtl">في البدأية يجب أن تعرف أنك ستواجة نوعين من الصور في أغلب المواقع</h2>
             <p dir="rtl"><strong dir="rtl">النوع الأول:</strong> هي صور يتم إدراجها للصفحة مباشرة بإستخدام وسم <code dir="ltr">&lt;img&gt;</code> في هذه الحالة لن تواجة صعوبة في تنزيلها حيث كل ما بإمكانك فعلة هو الضغط على الصورة بإستخدام زو الماوس الأيمن وإختيار <strong dir="rtl">حفظ الصورة أو  sava image as</strong><br></p>
-            <img class="image" src="../../../images/projects/facebook_project/3/1.png">
+            <img class="image" src="{% static 'images/projects/facebook_project/3/1.png'%}">
             <p></p>
             <p dir="rtl"><strong dir="rtl">النوع الثاني</strong> هي تلك الصور التي يتم إدراجها للموقع كخلفية لعنصر معين في هذه الحالة لن تستطيع تحميلها مباشرة ويلزمك الوصول لمسار الصورة حتى تقوم بذلك.</p>
             <p dir="rtl">على سبيل المثال قم بالضغط على صورة شعار الفيس بوك بالزر الأيمن للماوس وستلاحظ عدم وجود خيار حفظ الصورة.<br></p>
-            <img class="image" src="../../../images/projects/facebook_project/3/2.png">
+            <img class="image" src="{% static 'images/projects/facebook_project/3/2.png'%}">
             <p></p>
             <p dir="rtl"><strong dir="rtl">بالتالي هدفنا في هذا الدرس هو أن نكون قادرين على الحصول على أي صورة من أي موقع بإستخدام أداة Inspect element</strong></p>
             <hr>
             <p dir="rtl">للقيام بذلك قم بالضغط على صورة شعار الفيس بوك بالزر الأيمن للماوس ثم قم بإختيار <strong dir="ltr">inspect element</strong><br></p>
-            <img class="image" src="../../../images/projects/facebook_project/3/3.png">
+            <img class="image" src="{% static 'images/projects/facebook_project/3/3.png'%}">
             <p></p>
             <p dir="rtl">ستظهر لك الواجهة التالية والتي تحتوي على أكود الـ HTML و الـ CSS وتسمى بالـ DOM سنتطرق لها لاحقاً حالياً الذي يهمنا هو الوصول إلى مسار الصورة لنستطيع تحميلها.<br></p>
-            <img class="image" src="../../../images/projects/facebook_project/3/4.png">
+            <img class="image" src="{% static 'images/projects/facebook_project/3/4.png'%}">
             <p></p>
             <p dir="rtl">كما ذكرت سابقاً بأن هذا النوع من الصور يتم عملها كخلفية لعنصر من العناصر ولا يتم إدراجها بشكل مباشر بإستخدام وسم <code dir="ltr">&lt;img&gt;</code> بدأخل مستند الـ HTML مما يعني انه لا يتبقى لنا سوى مكان واحد للبحث عنها فيه وهو كود الـ css.</p>
             <h2 dir="rtl"><strong dir="rtl">فكيف يمكننا ذلك عبر هذه الواجهة ؟</strong></h2>
@@ -64,7 +65,7 @@
 </pre>
             </div>
             <p></p>
-            <img class="image" src="../../../images/projects/facebook_project/3/5.png">
+            <img class="image" src="{% static 'images/projects/facebook_project/3/5.png'%}">
             <p></p>
             <p dir="rtl">كما تلاحظ في الصورة أعلاة وجدنا مسار الصورة الخاصة بشعار الفيس بوك  في الكود التالي بنافذة الـ style</p>
             <div class="code">
@@ -72,10 +73,10 @@
 </pre>
             </div>
             <p dir="rtl">الأن بإمكانك الضغط بزر الماوس الأيمن على مسار الصورة والضغط على <strong dir="rtl">فتح بنافذة جديدة أو open in new tab</strong><br></p>
-            <img class="image" src="../../../images/projects/facebook_project/3/6.png">
+            <img class="image" src="{% static 'images/projects/facebook_project/3/6.png'%}">
             <p></p>
             <p dir="rtl">ستفتح لك الصورة في نافذة جديدة بإمكانك الأن حفظها لداخل مجلد الصور<br></p>
-            <img class="image" src="../../../images/projects/facebook_project/3/7.png">
+            <img class="image" src="{% static 'images/projects/facebook_project/3/7.png'%}">
             <p></p>
             <details dir="rtl" open="open">
                <summary dir="rtl">
@@ -90,11 +91,11 @@
             <p dir="rtl">1- صورة لشعار الفيس بوك</p>
             <p dir="rtl">2- صورة الخريطة</p>
             <p></p>
-            <img class="image" src="../../../images/projects/facebook_project/3/9.png">
+            <img class="image" src="{% static 'images/projects/facebook_project/3/9.png'%}">
             <p></p>
             <hr>
          </div>
       </div>
-      <script src="../../../js/main.js"></script>
+      <script src="{% static 'js/main.js' %}"></script>
    </body>
 </html>
