@@ -6,4 +6,4 @@ def book_list(request):
     context = {
         'books': Book.objects.all()
     }
-    return render(request, 'book_list.html', context)
+    return render(request, 'library/book_list.html', context)
