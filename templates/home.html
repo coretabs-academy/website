@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-{% load static%}
+{% load static %}
 <html lang="ar" dir="rtl">
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Coretabs Academy</title>
-      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
       <style class="connectorStyle"></style>
    </head>
@@ -102,6 +102,6 @@
       </footer>
 	  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
       <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-      <script src="js/main.js"></script>
+      <script src="{% static 'js/main.js' %}"></script>
    </body>
 </html>

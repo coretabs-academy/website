@@ -15,8 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from . import views
+from django.views.generic import TemplateView
+
 urlpatterns = [
-    path('', views.home()),
+    path('', TemplateView.as_view(template_name='home.html')),
     path('admin/', admin.site.urls),
+    path('fullstack/', TemplateView.as_view(template_name='fullstack/index.html')),
+    path('git/', TemplateView.as_view(template_name='git/git.html')),
+    path('html_css/', TemplateView.as_view(template_name='html_css/html_css.html')),
+    path('javascript/', TemplateView.as_view(template_name='javascript/javascript.html')),
+    path('projects/', TemplateView.as_view(template_name='projects/projects.html')),
+    path('projects/facebook_project/', TemplateView.as_view(template_name='projects/facebook_project/facebook-project.html')),
+    path('projects/one_mac_project/', TemplateView.as_view(template_name='projects/one_mac_project/one-mac-project.html')),
 ]
