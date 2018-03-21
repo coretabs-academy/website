@@ -28,3 +28,5 @@ urlpatterns = [
     path('projects/facebook_project/', TemplateView.as_view(template_name='projects/facebook_project/facebook-project.html')),
     path('projects/one_mac_project/', TemplateView.as_view(template_name='projects/one_mac_project/one-mac-project.html')),
 ]
+
+    path('account/', include('account.urls')),

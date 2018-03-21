@@ -10,6 +10,50 @@
       <style class="connectorStyle"></style>
    </head>
    <body class="home">
+     
+         {% if request.user.is_authenticated %}
+
+        <p><a href="{% url "account_logout" %}">
+            Logout
+        </a></p>
+
+        <p><a href="{% url "account_settings" %}">
+            Account
+        </a></p>
+
+        <p><a href="{% url "account_password" %}">
+            Change password
+        </a></p>
+
+        <p><a href="">
+            Delete account
+        </a></p>
+
+    {% else %}
+        <form action="{% url 'set_language' %}" method="post">
+            {% csrf_token %}
+            <input name="next" type="hidden" value="{{ redirect_to }}" />
+            <select name="language">
+                {% get_current_language as LANGUAGE_CODE %}
+                {% get_available_languages as LANGUAGES %}
+                {% for lang in LANGUAGES %}
+                    <option value="{{ lang.0 }}" {% if lang.0 == LANGUAGE_CODE %} selected="selected"{% endif %}>
+                        {{ lang.1 }} ({{ lang.0 }})
+                    </option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="Go" />
+        </form>
+
+        <p><a href="{% url "account_login" %}">
+            Login
+        </a></p>
+
+        <p><a href="{% url "account_signup" %}">
+            Signup
+        </a></p>
+    {% endif %}
+     
       <div class="navbar-brand">
          <div>
              Academy

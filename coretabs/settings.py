@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '12zk%k+*p%i&#ke(gs7ua_p8(2#2)l#_m+rt7$a29q#)fnfv0f'
+SECRET_KEY = 'ep16=7=^98#8(z$=d#6tk4yavf3s-prng^4@yxux7(1s+_6=b#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'account',
+    'library',
 ]
 
 MIDDLEWARE = [
@@ -47,6 +50,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "account.middleware.LocaleMiddleware",
+    "account.middleware.TimezoneMiddleware",
+    "library.middleware.SetLangCookie"
 ]
 
 ROOT_URLCONF = 'coretabs.urls'
@@ -54,9 +60,8 @@ ROOT_URLCONF = 'coretabs.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            os.path.join(BASE_DIR, 'templates')
-        ],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')]
+        ,
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -64,6 +69,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'account.context_processors.account',
             ],
         },
     },
@@ -120,7 +126,18 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+
+
+# Account Settings
+ACCOUNT_EMAIL_CONFIRMATION_REQUIRED = True
+
+# Email Server Settings
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
