@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+{% load static%}
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>[الدرس الخامس:الجزء الثالث] تقسيم الـ container</title>
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+   </head>
+   <body>
+      <div class="navbar">
+         <div class="navbar-brand">
+            <div class="">
+               Academy
+            </div>
+         </div>
+         <div class="icon-container">
+            <div class="humberger-icon">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+         </div>
+         <div class="navbar-nav">
+            <nav>
+               <div class="close">
+                  أغلق <i class="fas fa-times"></i>
+               </div>
+               <a href="../../../index.html">الرئيسية</a>
+               <a href="../../html_css/html-css.html">HTML & CSS</a>
+               <a href="../../javascript/javascript.html">JavaScript</a>
+               <a href="../../git/git.html">Git</a>
+               <a href="../../projects/projects.html">المشاريع</a>
+            </nav>
+         </div>
+      </div>
+      <div class="container">
+         <div class="cooked">
+            <h1>تكويد الصناديق التي ستحدد موقع العناصر</h1>
+            <hr>
+            <p dir="rtl">شرحنا في الدرس السابق عمل الـ container الذي سيضم عناصر الـ header, في هذا الدرس سنبدأ بتكويد الصناديق التي ستحدد موقع العناصر في منطقة الـ header.</p>
+            <details dir="rtl" open="open">
+               <summary dir="rtl">
+                  قبل بدأية هذا الدرس يجب أن يكون لديك التالي
+               </summary>
+               <p dir="rtl">1- ملف <code dir="ltr">index.html</code> بهذا المحتوى</p>
+               <div class="code">
+                  <pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!doctype html&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;html&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;head&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">charset=</span><span style="color: #4e9a06">"utf-8"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;title&gt;</span>Facebook<span style="color: #204a87; font-weight: bold">&lt;/title&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;link</span> <span style="color: #c4a000">rel=</span><span style="color: #4e9a06">"stylesheet"</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"text/css"</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"css/style.css"</span> <span style="color: #204a87; font-weight: bold">/&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/head&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;body&gt;</span>
+
+<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"header"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+ <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+
+ <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"main"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"footer"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+
+<span style="color: #204a87; font-weight: bold">&lt;/body&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/html&gt;</span>
+</pre>
+               </div>
+               <p dir="rtl">2- ملف <code dir="ltr">style.css</code> بهذا المحتوى</p>
+               <div class="code">
+                  <pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">/***removing body margin***/</span>
+<span style="color: #204a87; font-weight: bold">body</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #8f5902; font-style: italic">/***header***/</span>
+<span style="color: #000000">#header</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100</span><span style="color: #ce5c00; font-weight: bold">%</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">82px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background-color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#3b5998</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">linear</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">gradient</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">#4e69a2</span><span style="color: #ce5c00; font-weight: bold">,</span><span style="color: #0000cf; font-weight: bold">#3b5998</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #204a87; font-weight: bold">border-bottom</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #204a87; font-weight: bold">solid</span> <span style="color: #0000cf; font-weight: bold">#133783</span><span style="color: #000000; font-weight: bold">;</span>
+
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #8f5902; font-style: italic">/***general***/</span>
+<span style="color: #000000">.container</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">980px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">82px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+               </div>
+               <p dir="rtl">3- صورتين في مجلد الصور : الاولى خاصة بالخريطة, الثانية بشعار الفيس بوك</p>
+               <p dir="rtl"><strong dir="rtl">اذا لم يكن لديك الترتيبات أعلاة أرجوا مراجعة الدروس السابقة</strong></p>
+            </details>
+            <hr>
+            <p dir="rtl">الصورة التالي نشاهد فيها التركيز على الـ container الذ قمنا بعملة في الدرس السابق</p>
+            <p></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/7/1.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl"><strong dir="rtl">كما تلاحظ في الصورة اعلاة نحتاح إلى صندوقين</strong><br>
+               <strong dir="rtl">الأول</strong> يطفو نحو اليسار والذي بداخلة الشعار.<br>
+               <strong dir="rtl">الثاني</strong> يطفو نحو اليمين والذي يحتوي على منطقة تسجيل الدخول.
+            </p>
+            <h2 dir="rtl">طريقة إنشاء الصندوقين</h2>
+            <p dir="rtl">في هذه المرحلة سيبدأ عملنا كم إتفقنا من قبل بدأخل هذا العنصر <code dir="ltr">container</code>  سنقوم بعمل الصندوقين اعلاة بإستخدام عنصر div كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"header"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+ <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+        <span style="color: #204a87; font-weight: bold">&lt;div&gt;&lt;/div&gt;</span> <span style="color: #8f5902; font-style: italic">&lt;!--الصندوق الأول--&gt;</span>
+        <span style="color: #204a87; font-weight: bold">&lt;div&gt;&lt;/div&gt;</span> <span style="color: #8f5902; font-style: italic">&lt;!--الصندوق الثاني--&gt;</span>
+ <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl">الأن سنحتاج إلى أن نقوم بإضافة class لكل من الصندوق الأول والثاني حتى نستطيع عمل تنسيقات معينه لهما بحيث أن الصندوق الأول يطفو بإتجاة اليسار والصندوق الثاني بإتجاة اليمين:</p>
+            <p dir="rtl">1- سأختار إسم <code dir="ltr">float-left</code> للصندوق الذي باليسار وإسم <code dir="ltr">float-right</code> للصندوق الذي باليمين كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"header"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+ <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+        <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"float-left"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+        <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"float-right"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+ <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">حتى الأن لم نضف إي تنسيق للعناصر لهذا لن تشاهد أي تغيير, دعونا نبدأ بعمل تنسيقات بسيطة لنتأكد بأن عملنا يسير حسب المخطط له :</strong></p>
+            <p dir="rtl">سأبداء بإضافة عرض وطول للعناصر وكذلك لون للخلفية حتى تكون مرئية لنا ثم سنقوم بتنسيقها بالشكل المطلوب</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-left</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">background-color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#132c5f</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">82px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+<span style="color: #000000">.float-right</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">background-color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#166226</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">82px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/7/2.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">بالفعل كما توقعنا النتيجة.</p>
+            <hr>
+            <p dir="rtl"><strong dir="rtl">الأن نريد أن نضيف خاصية جديدة تقوم بالتالي:</strong><br>
+               تعويم العنصر صاحب الكلاس <code dir="ltr">float-left</code> نحو اليسار<br>
+               تعويم العنصر صاحب الكلاس <code dir="ltr">float-right</code> نحو اليمين
+            </p>
+            <p dir="rtl"><strong dir="rtl">ما سنحتاج إلية هو خاصية تسمى <code dir="ltr">float</code> إحدى خواص لغة التنسيقات <code dir="ltr">CSS</code></strong></p>
+            <p dir="rtl">سنقوم بإضافتها للعنصر المراد تعويمة نحو اليسار كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">float</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">left</span><span style="color: #ce5c00; font-weight: bold">;</span>
+</pre>
+            </div>
+            <p dir="rtl">وسنقوم بإضافتها للعنصر المراد تعويمة نحو اليمين كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">float</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">right</span><span style="color: #ce5c00; font-weight: bold">;</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">الكود النهائي:</strong></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-left</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">float</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">left</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background-color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#132c5f</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">82px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+<span style="color: #000000">.float-right</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">float</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">right</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background-color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#166226</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">82px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">هذه هي النتيجة:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/7/3.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <hr>
+            <p dir="rtl"><strong dir="rtl">رائع الان الصناديق في المكان المناسب وبعد أن تأكدت من ذلك سأقوم بإزلة التنسيقات التي وضعتها من أجل التحقق من النتيجة</strong></p>
+            <p dir="rtl">الكود النهائي كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.float-left</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">float</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">left</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+<span style="color: #000000">.float-right</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">float</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">right</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">سأتوقف هنا في الدرس القادم سنبدأ بعمل شعار الموقع</strong></p>
+            <p dir="rtl"><strong dir="rtl"><a href="https://www.w3schools.com/css/css_float.asp" rel="nofollow noopener" dir="rtl">قم بدراسة خاصية float من خلال هذا المرجع</a></strong></p>
+            <hr>
+         </div>
+      </div>
+      <script src="{% static 'js/main.js' %}"></script>
+   </body>
+</html>

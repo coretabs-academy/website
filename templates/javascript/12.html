@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+{% load static%}
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>[الدرس التاسع:الجزء الثاني والأخير]: تطبيق عملي | عمل تطبيق To Do List</title>
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+   </head>
+   <body>
+      <div class="navbar">
+         <div class="navbar-brand">
+            <div class="">
+               Academy
+            </div>
+         </div>
+         <div class="icon-container">
+            <div class="humberger-icon">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+         </div>
+         <div class="navbar-nav">
+            <nav>
+               <div class="close">
+                  أغلق <i class="fas fa-times"></i>
+               </div>
+               <a href="../../index.html">الرئيسية</a>
+               <a href="../html_css/html-css.html">HTML & CSS</a>
+               <a href="../javascript/javascript.html">JavaScript</a>
+               <a href="../git/git.html">Git</a>
+               <a href="../projects/projects.html">المشاريع</a>
+            </nav>
+         </div>
+      </div>
+      <div class="container">
+         <div class="cooked">
+            <h1>تطبيق قائمة المهام (تابع)</h1>
+            <hr>
+            <p dir="rtl">في الدرس السابق بدأنا بالعمل على تطبيق To Do List فاذا لم تقم بمتابعته قم بالرجوع الية قبل البدء بهذا الدرس </p>
+            <hr>
+            <h3 dir="rtl">الخطوة العاشرة</h3>
+            <p dir="rtl">نريد أن نجعل قائمة المهام الخاصة بنا تفاعليه حيث أنه يتم شطب المهام التي تم الإنتهاء منها بالضغط عليها سأحاول القيام بعمل ذلك بأبسط طريقة وسنبدأ خطوة بخطوة فالأمر سهل</p>
+            <p dir="rtl"><strong dir="rtl">1- أريد أن أقوم بإضافة class لعناصر القائمة li</strong> التي نقوم بإضافتها بإستخدام الجافاسكربت وسأعطي الكلاس إسم index, لذا لنعود للكود ونقوم بالتعديل التالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">toDoList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span>  <span style="color: #ce5c00; font-weight: bold">+=</span> <span style="color: #4e9a06">'&lt;li class="index"&gt;'</span><span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">"&lt;/li&gt;"</span><span style="color: #000000; font-weight: bold">;</span>
+</pre>
+            </div>
+            <p dir="rtl">لاحظ قمت بجعل علامة التنصيص الخارجية فردية وعلامة التنصيص الداخلية مزدوجة وذلك لأنني اريد ان يتم إضافة خاصية الكلاس بالعلامة المزدوجة في كود الـ HTML.</p>
+            <p dir="rtl"><strong dir="rtl">كالتالي:</strong><br></p>
+            <img class="image" src="../../images/javascript/12/1.png">
+            <p></p>
+            <p dir="rtl"><strong dir="rtl">2- سأقوم بإضافة تنسيق</strong> للعناصر التي تحمل الكلاس <code dir="ltr">index</code> بحيث يظهر بجوارها ما يشابة الـ checkbox كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.index</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #5c35cc; font-weight: bold">:before</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">content</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">" "</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">inline</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">20px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">20px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#fff</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">position</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">absolute</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">left</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">8px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">16px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">radius</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">4px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #000000">box</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">shadow</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">inset</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #0000cf; font-weight: bold">3px</span> <span style="color: #000000">rgba</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #0000cf; font-weight: bold">4</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <img class="image" src="../../images/javascript/12/2.png">
+            <p></p>
+            <p dir="rtl">قمت بإضافة التنسيق بإستخدام الـ CSS pseudo-element.</p>
+            <hr>
+            <h3 dir="rtl">الخطوة الحادية عشر</h3>
+            <p dir="rtl">الأن عندما يقوم المستخدم بالضغط على مهمة من المهام نريد أن نحصل على رقم (ترتيب) هذه المهمة بين قائمة المهام حتى نعرف اي عنصر سنقوم بالتلاعب به.</p>
+            <p dir="rtl"><strong dir="rtl">بدأية لنستذكر هذه الصورة:</strong><br>
+               <img src="../../images/javascript/12/3.png" class="image">
+            </p>
+            <p dir="rtl">نعرف أنه في كل مرة يتم إضافة عنصر جديد يكون ترتيبة يساوي <code dir="ltr">(list.length-1)</code> فلماذا لا نقوم بتخزين الـ index الخاص بهذا العنصر عند إدراجة للقائمة بدأخل id حتى سنستطيع من خلالة معرفة أي عنصر من القائمة تم الضغط عليه فنستطيع الوصول إلية والتلاعب به.</p>
+            <p dir="rtl">سأقوم بإضافة القيمة <code dir="ltr">(list.length-1)</code> الى الـ id كالتالي:<br></p>
+            <img class="image" src="../../images/javascript/12/4.gif">
+            <p></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">toDoList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span>  <span style="color: #ce5c00; font-weight: bold">+=</span> <span style="color: #4e9a06">'&lt;li class="index" id="'</span><span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">)</span><span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">'"&gt;'</span><span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">"&lt;/li&gt;"</span><span style="color: #000000; font-weight: bold">;</span>
+</pre>
+            </div>
+            <p dir="rtl">لنقوم الأن بمشاهدة الكود الخاص بعناصر القائمة بعد إضافة عدد منها:<br></p>
+            <img class="image" src="../../images/javascript/12/5.png">
+            <p></p>
+            <p dir="rtl">لاحظ كيف تم إعطاء كل عنصر id برقم ترتيبة في القائمة بشكل ديناميكي.</p>
+            <hr>
+            <h3 dir="rtl">الخطوة الثانية عشر</h3>
+            <p dir="rtl">سنقوم هذه المرة بتجربة طريقة جديدة لإدراج أكواد الـ Javascript بطريقة inline بمعنى انه سنقوم بوضع كود الجافاسكربت ضمن الـ attributes الخاصة بالعنصر, بنفس فكرة إضافة تنسيقات الـ CSS بطريقة inline كما بالمثال التالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;li</span> <span style="color: #c4a000">style=</span><span style="color: #4e9a06">"color:red"</span> <span style="color: #204a87; font-weight: bold">&gt;&lt;/li&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl">نستطيع إضافة الجافاسكربت بما يسمى بـ <a href="https://www.w3schools.com/js/js_events.asp" rel="nofollow noopener" dir="ltr">JavaScript event Handeler</a> كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;li</span> <span style="color: #c4a000">onclick=</span><span style="color: #4e9a06">"alert('hi!')"</span> <span style="color: #204a87; font-weight: bold">&gt;&lt;/li&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl">طبعاً هذه الطريقة غير رائعة للإستخدام وتعتبر تقليدية ولأسباب أخرى كثيرة أشجعكم بالبحث والقرأة عنها ربما القيام عن بحث عن التالي سيكون كافي لتعرفوا الأسباب بالتفصيل:<br>
+               <em dir="ltr">Why Inline JavaScript is a Bad practice</em>
+            </p>
+            <p dir="rtl">في حالتنا هذه سأقوم بإدراج الكود عبر الجافاسكربت نفسها ما يعني بأنه نوعاً ما مقبول بعكس ادراج اكواد الجافاسكربت بشكل مباشر بين اكواد الـ HTML بحيث انه في حالتنا يضل لدينا تحكم بعملية ادراج هذه الاكواد ستتضح لكم الصورة اذا ما قرأتم عن الموضوع.</p>
+            <p dir="rtl">لنبدأ بالعمل على الـ onclick event</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">onclick</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #4e9a06">" "</span>
+</pre>
+            </div>
+            <p dir="rtl">ما نريد القيام به عند الضغط على احد عناصر القائمة <code dir="ltr">li</code> هو أن نقوم بإرسال الـ id الخاص به لدالة (function) تقوم بإستقبال هذا الـ id وتحدد العنصر الذي تم الضغط عليه حتى نستطيع التلاعب به.</p>
+            <hr>
+            <details dir="rtl">
+               <summary dir="rtl">
+                  ماهي الدالة او function
+               </summary>
+               <p dir="rtl">سنتطرق لها في هذا الدرس بشكل بسيط ولكن سنفصلها بالدروس القادمة, حيث أن الدالة هي عبارة عملية تقوم بتعريفها ومن ثم تقوم هذه العملية بإنتظار استدعائك لها للقيام بالوظيفة التي قمت بإسنادها لها. بإمكانك النظر اليها كساعي البريد الذي ينتظر لتصله الطرود حتى يقوم بالتعامل معها او توصليها كونها هذه هي الوظيفة التي اسندت إلية.</p>
+            </details>
+            <hr>
+            <p dir="rtl">سأقوم بإختيار أي إسم للدالة وليكن done قمت بإختيار هذا الإسم ليرمز بأن المهمة التي تم الضغط عليها تم الإنتهاء منها.</p>
+            <p dir="rtl"><strong dir="rtl">لنقوم بوضع الـ function بداخل الـ onclick event كالتالي:</strong></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">onclick</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #4e9a06">" done() "</span>
+</pre>
+            </div>
+            <p dir="rtl">سنحتاج الأن لأن نقوم بتمرير الـ id الخاص بالعنصر للدالة بإستخدام <code dir="ltr">this.id</code></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">onclick</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #4e9a06">" done(this.id) "</span>
+</pre>
+            </div>
+            <p dir="rtl">ما يعنية الكود اعلاة هو انه عند الضغط على هذا العنصر قم بإرسال الـ id الخاص به للدالة done لتقوم بالتعامل معه حسب الإجراءات الموضحة بداخل هذه الدالة.</p>
+            <p dir="rtl"><strong dir="rtl">لنقوم بإضافة الكود للعنصر li</strong></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">toDoList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span>  <span style="color: #ce5c00; font-weight: bold">+=</span> <span style="color: #4e9a06">'&lt;li class="index"  onclick="done(this.id)" id="'</span><span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">)</span><span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">'"&gt;'</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">"&lt;/li&gt;"</span><span style="color: #000000; font-weight: bold">;</span>
+</pre>
+            </div>
+            <hr>
+            <details dir="rtl" open="">
+               <summary dir="rtl">
+                  الكود كاملاً حتى اللحظة
+               </summary>
+               <div class="code">
+                  <pre style="margin: 0; line-height: 125%"> <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">input</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"input"</span><span style="color: #000000; font-weight: bold">);</span>
+ <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">btn</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"btn"</span><span style="color: #000000; font-weight: bold">);</span>
+ <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">toDoList</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"todo-list"</span><span style="color: #000000; font-weight: bold">);</span>
+ <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">itemIndex</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementsByClassName</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"index"</span><span style="color: #000000; font-weight: bold">);</span>
+ <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">list</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">[];</span>
+
+
+ <span style="color: #000000">btn</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"click"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span><span style="color: #000000; font-weight: bold">(){</span>
+
+   <span style="color: #204a87; font-weight: bold">if</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">value</span> <span style="color: #ce5c00; font-weight: bold">!=</span> <span style="color: #4e9a06">""</span><span style="color: #000000; font-weight: bold">){</span>
+
+     <span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">push</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">value</span><span style="color: #000000; font-weight: bold">);</span>
+
+     <span style="color: #000000">toDoList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span>  <span style="color: #ce5c00; font-weight: bold">+=</span> <span style="color: #4e9a06">'&lt;li class="index"  onclick="done(this.id)" id="'</span><span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">)</span><span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">'"&gt;'</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">"&lt;/li&gt;"</span><span style="color: #000000; font-weight: bold">;</span>
+
+     <span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">value</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">""</span><span style="color: #000000; font-weight: bold">;</span>
+
+   <span style="color: #000000; font-weight: bold">}</span>
+ <span style="color: #000000; font-weight: bold">});</span>
+
+
+ <span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"keydown"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span><span style="color: #000000; font-weight: bold">()</span> <span style="color: #000000; font-weight: bold">{</span>
+   <span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">event</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">keyCode</span> <span style="color: #ce5c00; font-weight: bold">===</span> <span style="color: #0000cf; font-weight: bold">13</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
+     <span style="color: #000000">btn</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">click</span><span style="color: #000000; font-weight: bold">();</span>
+     <span style="color: #000000; font-weight: bold">}</span>
+ <span style="color: #000000; font-weight: bold">});</span>
+</pre>
+               </div>
+            </details>
+            <hr>
+            <p dir="rtl">سنحتاج الأن بأن نقوم بتحديد عناصر الـ li والتي تحمل الكلاس بإسم index حتى نستطيع التلاعب بها بالجافاسكربت وسنقوم بذلك كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">index</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementsByClassName</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"index"</span><span style="color: #000000; font-weight: bold">);</span>
+</pre>
+            </div>
+            <p dir="rtl">الطريقة <code dir="ltr">getElementsByClassName</code> تقوم بتحديد جميع العناصر التي تحمل الكلاس index ونستطيع الوصول لأول عنصر بإسم المتغير الذي قمنا بتعريفة بالإسم index ايضاً كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">index</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">];</span>
+</pre>
+            </div>
+            <hr>
+            <p dir="rtl">لنقوم الأن بتعريف الدالة done والتي سيتم إستدعائها بمجرد الضغط على أي عنصر من عناصر قائمة المهام وستستقبل الـ id الذي قمنا بإرسالة كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">done</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">id</span><span style="color: #000000; font-weight: bold">){</span>
+
+<span style="color: #8f5902; font-style: italic">// سيتم تنفيذ الأوامر التي هنا بمجرد إستدعاء هذه الدالة ولا يتم إستدعائها الإ بالضغط على احد العناصر</span>
+
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl">عند إستدعاء هذه الدالة نريد أن نقوم بعمل تنسيق جديد للعنصر الذي تم الضغط علية بالشكل التالي:<br></p>
+            <img class="image" src="../../images/javascript/12/6.png">
+            <p></p>
+            <p dir="rtl"><strong dir="rtl">سنقوم بعمل كلاس جديد بإسم checked ونضيف عليه التنسيقات المطلوبة بالشكل التالي:</strong></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.checked</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">text-decoration</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">line-through</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#ccc</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#fefefe</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.checked</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #5c35cc; font-weight: bold">:before</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">content</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">"\2713"</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">inline</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">text-align</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">center</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">line-height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">20px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #000000">box</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">shadow</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">inset</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #0000cf; font-weight: bold">3px</span> <span style="color: #000000">rgba</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #0000cf; font-weight: bold">4</span><span style="color: #000000; font-weight: bold">);</span>
+	<span style="color: #204a87; font-weight: bold">font-weight</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">600</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">16px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl">الان سأقوم بإضافة هذه التنسيق للعناصر التي سيتم الضغط عليها بإستخدام الدالة done</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">function</span> <span style="color: #204a87; font-weight: bold">done</span><span style="color: #ce5c00; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">id</span><span style="color: #ce5c00; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #000000">index</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">id</span><span style="color: #000000; font-weight: bold">]</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">classList</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #000000">toggle</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"checked"</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">شرح لطريقة إستدعاء الـ function</strong></p>
+            <p dir="rtl">1- في البدأية تكون الـ function غير فعالة لنفترض بأنها نائمة وتنتظر أن يتم إستدعائها من خلال الأمر onclick وبمجرد الضغط على أي عنصر تستيقظ <strong dir="rtl">كالتالي:</strong><br>
+               .<br>
+            </p>
+            <img class="image" src="../../images/javascript/12/7.gif">
+            <p></p>
+            <p dir="rtl">2- بمجرد الضغط على أي عنصر يتم تمرير الـ id الخاص به للدالة done <strong dir="rtl">كالتالي:</strong><br>
+               .<br>
+            </p>
+            <img class="image" src="../../images/javascript/12/8.gif">
+            <p></p>
+            <p dir="rtl">هذه هي فكرة الـ functions ببساطة لنعتبر هذه مقدمة للدرس القادم.</p>
+            <hr>
+            <p dir="rtl">تلاحظ أنني قمت بإستخدام الخاصية <code dir="ltr">classList.toggle</code> والتي ستقوم بتبديل الكلاس في كل مرة نقوم بها بالضغط على العنصر.<br>
+               ما يعني انه اذا كان الكلاس موجود فسيتم ازالته واذا لم يكن موجود فسيتم إضافتة كما في الصورة التالية:
+            </p>
+            <p></p>
+            <img class="image" src="../../images/javascript/12/9.gif">
+            <p></p>
+            <p dir="rtl">لاحظ في الصورة كيف يتم اضافة وازالة الكلاس checked من العنصر مع كل ضغطة</p>
+            <hr>
+            <details dir="rtl" open="">
+               <summary dir="rtl">
+                  فقط اذا اردت معرفة طريقة عمل ما سبق وقمنا به دون إستخدام الـ inline events
+               </summary>
+               <p dir="rtl">في حال لديك فضول للإطلاع على طريقة القيام بذلك فسنقوم بعمل for loop عبرها نحدد أي عنصر تم الضغط عليه</p>
+               <div class="code">
+                  <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">for</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">&lt;</span> <span style="color: #000000">index</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span> <span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">++</span><span style="color: #000000; font-weight: bold">){</span>
+
+<span style="color: #000000">index</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">i</span><span style="color: #000000; font-weight: bold">].</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"click"</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #204a87; font-weight: bold">function</span><span style="color: #000000; font-weight: bold">(){</span>
+
+ <span style="color: #000000">index</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #204a87; font-weight: bold">this</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">id</span><span style="color: #000000; font-weight: bold">].</span><span style="color: #000000">classList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">toggle</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"checked"</span><span style="color: #000000; font-weight: bold">);</span>
+
+<span style="color: #000000; font-weight: bold">});</span>
+
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+               </div>
+            </details>
+            <hr>
+            <details dir="rtl" open="">
+               <summary dir="rtl">
+                  الكود حتى هذه اللحظة
+               </summary>
+               <p dir="rtl"><strong dir="rtl">1- كود الـ HTML</strong></p>
+               <div class="code">
+                  <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+   <span style="color: #204a87; font-weight: bold">&lt;h2&gt;</span>To Do List:<span style="color: #204a87; font-weight: bold">&lt;/h2&gt;</span>
+   <span style="color: #204a87; font-weight: bold">&lt;div&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"text"</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"input"</span> <span style="color: #c4a000">autofocus</span> <span style="color: #204a87; font-weight: bold">&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;button</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"btn"</span><span style="color: #204a87; font-weight: bold">&gt;</span><span style="color: #ce5c00">&amp;#43;</span><span style="color: #204a87; font-weight: bold">&lt;/button&gt;</span>
+   <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+   <span style="color: #204a87; font-weight: bold">&lt;div&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;ul</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"todo-list"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;/ul&gt;</span>
+   <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+</pre>
+               </div>
+               <p dir="rtl"><strong dir="rtl">2- كود الـ CSS</strong></p>
+               <div class="code">
+                  <pre style="margin: 0; line-height: 125%"><span style="color: #ce5c00; font-weight: bold">*</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #000000">box</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">sizing</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">box</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">outline</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">none</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">vertical-align</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">middle</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #204a87; font-weight: bold">body</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">font-family</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">'Nanum Pen Script'</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">cursive</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.container</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">max-width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">450px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">30px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">min-height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">300px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">text-align</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">center</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #204a87; font-weight: bold">h2</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">font-family</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">arial</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">text-align</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">left</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">5px</span> <span style="color: #0000cf; font-weight: bold">10px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#999</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #204a87; font-weight: bold">input</span><span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #204a87; font-weight: bold">type</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #204a87; font-weight: bold">text</span><span style="color: #ce5c00; font-weight: bold">]</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">80</span><span style="color: #ce5c00; font-weight: bold">%</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">15px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">50px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #204a87; font-weight: bold">solid</span> <span style="color: #0000cf; font-weight: bold">#ccc</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#999</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">18px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">border-top</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #204a87; font-weight: bold">left</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">radius</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">5px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">border-bottom</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #204a87; font-weight: bold">left</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">radius</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">5px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">line-height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">50px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #204a87; font-weight: bold">button</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">15</span><span style="color: #ce5c00; font-weight: bold">%</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">50px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">none</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#e84118</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#fff</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">border-top</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #204a87; font-weight: bold">right</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">radius</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">5px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">border-bottom</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #204a87; font-weight: bold">right</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">radius</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">5px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">cursor</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">pointer</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">margin-left</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">-6px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">25px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #000000">transition</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">background</span> <span style="color: #0000cf; font-weight: bold">0.3s</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #204a87; font-weight: bold">ul</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">10px</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">text-align</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">left</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">list-style</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">none</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #204a87; font-weight: bold">li</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">95</span><span style="color: #ce5c00; font-weight: bold">%</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">10px</span> <span style="color: #0000cf; font-weight: bold">10px</span> <span style="color: #0000cf; font-weight: bold">10px</span> <span style="color: #0000cf; font-weight: bold">40px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#fffde9</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">cursor</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">pointer</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">border-bottom</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #204a87; font-weight: bold">dashed</span> <span style="color: #0000cf; font-weight: bold">#e3d3a9</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">22px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">position</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">relative</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.index</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #5c35cc; font-weight: bold">:before</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">content</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">" "</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">inline</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">20px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">20px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#fff</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">position</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">absolute</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">left</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">8px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">16px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">radius</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">4px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #000000">box</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">shadow</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">inset</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #0000cf; font-weight: bold">3px</span> <span style="color: #000000">rgba</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #0000cf; font-weight: bold">4</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.checked</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">text-decoration</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">line-through</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#ccc</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#fefefe</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.checked</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #5c35cc; font-weight: bold">:before</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">content</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">"\2713"</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">inline</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">text-align</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">center</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">line-height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">20px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #000000">box</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">shadow</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">inset</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #0000cf; font-weight: bold">3px</span> <span style="color: #000000">rgba</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #ce5c00; font-weight: bold">.</span><span style="color: #0000cf; font-weight: bold">4</span><span style="color: #000000; font-weight: bold">);</span>
+	<span style="color: #204a87; font-weight: bold">font-weight</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">600</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">16px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+               </div>
+               <p dir="rtl">3- كود الـ JavaScript</p>
+               <div class="code">
+                  <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">input</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"input"</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">btn</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"btn"</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">toDoList</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"todo-list"</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">index</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementsByClassName</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"index"</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">list</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">[];</span>
+
+<span style="color: #000000">btn</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"click"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000; font-weight: bold">()</span> <span style="color: #000000; font-weight: bold">{</span>
+
+	<span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">value</span> <span style="color: #ce5c00; font-weight: bold">!=</span> <span style="color: #4e9a06">""</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
+
+		<span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">push</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">value</span><span style="color: #000000; font-weight: bold">);</span>
+
+		<span style="color: #000000">toDoList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span> <span style="color: #ce5c00; font-weight: bold">+=</span> <span style="color: #4e9a06">'&lt;li class="index"  onclick="done(this.id)" id="'</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span> <span style="color: #ce5c00; font-weight: bold">-</span> <span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #4e9a06">'"&gt;'</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span> <span style="color: #ce5c00; font-weight: bold">-</span> <span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #4e9a06">"&lt;/li&gt;"</span><span style="color: #000000; font-weight: bold">;</span>
+
+		<span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">value</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">""</span><span style="color: #000000; font-weight: bold">;</span>
+
+	<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000; font-weight: bold">});</span>
+
+<span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">done</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">id</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
+
+	<span style="color: #000000">index</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">id</span><span style="color: #000000; font-weight: bold">].</span><span style="color: #000000">classList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">toggle</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"checked"</span><span style="color: #000000; font-weight: bold">);</span>
+
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"keydown"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000; font-weight: bold">()</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">event</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">keyCode</span> <span style="color: #ce5c00; font-weight: bold">===</span> <span style="color: #0000cf; font-weight: bold">13</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
+		<span style="color: #000000">btn</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">click</span><span style="color: #000000; font-weight: bold">();</span>
+	<span style="color: #000000; font-weight: bold">}</span>
+<span style="color: #000000; font-weight: bold">});</span>
+</pre>
+               </div>
+            </details>
+            <hr>
+            <h2 dir="rtl">تخزين البيانات بإستخدام الـ LocalStorage</h2>
+            <p dir="rtl">لنشاهد ما اذا كان موقع المنتدى يستخدم الـ localstorage لتخزين البيانات<br></p>
+            <img class="image" src="../../images/javascript/12/10.png">
+            <p></p>
+            <p dir="rtl">لاحظ هناك عدد من البيانات يتم تخزينها ومانشاهدة في الصورة هو مصفوفة تم تخزين فيها عدد من الـ emojis التي تم إستخدامها من قبلي.</p>
+            <hr>
+            <p dir="rtl">كما نعلم من الدروس السابقة وخاصة من درس الـ DOM بأن التلاعبات التي تقوم بها الجافاسكربت هي مؤقته لحين عمل تحديث للصفحة. لهذا في هذا الدرس سنقوم بأخذ تطبيقنا إلى level اخر وسنقوم بحفظ المهام التي تم إضافتها للمصفوفة بإستخدام الـ Localstorage حتى تضل موجودة ولو تم عمل تحديث للصفحة او حتى بعد إغلافها وفتحها من جديد.</p>
+            <hr>
+            <p dir="rtl">سنتطرق للـ LocalStorage بشكل سطحي وفي دروس متقدمة سنقوم بتفصيلها في الوقت الحالي أرجوا البحث عنها والإطلاع على فكرتها و<a href="https://medium.com/@ramsunvtech/onfocus-html5-storage-apis-b45d92aa424b" rel="nofollow noopener" dir="rtl">هنا مصدر مفيد ويحتوي على مصادر</a>.</p>
+            <h3 dir="rtl">البدء بالعمل على ذلك</h3>
+            <p dir="rtl">يتم تخزين البيانات في الـ localstorage كـ strings فاذا لدينا مصفوفة ونريد أن نقوم بتخزينها يجب علينا أولاً ان نقوم بتحويلها إلى نصوص وللقيام بذلك سنقوم بتحويل المصفوفة إلى ملف JSON ولكن ماهي الـ JSON ؟</p>
+            <p dir="rtl">هي إختصار لـ JavaScript Object Notation وهي تقنية مشتقة من الجافاسكربت تقوم بتمثيل البيانات بطريقة مرتبة كنصوص بحيث نستطيع تبادل هذه البيانات مع السيرفر او مع لغات أخرى فالـ JSON نستطيع القول بأنها وسيط بين اللغات وتستطيع اللغات الأخرى فهمها وإستخلاص البيانات منها.</p>
+            <p dir="rtl">على سبيل المثال لنفترض أنك قمت بعمل موقع وكذلك تطبيق جوال وتريد أن يتم نقل بيانات بين التطبيقين وقتها ستحتاج لإستخدام تقنية تستطيع اللغات المستخدمة في عمل الموقع وفي عمل التطبيق فهمها كلغة مشتركة بينهما لهذا ستقوم بنقل البيانات بطريقة JSON.</p>
+            <p dir="rtl">قم بالبحث عنها وفهمها فهي شي أساسي يجب عليك أن تكون ملم عنه كمطور واجهات ويب. <a href="https://www.w3schools.com/js/js_json_intro.asp" rel="nofollow noopener" dir="rtl">هنا مصدر</a>.</p>
+            <hr>
+            <p dir="rtl">حتى نقوم بتخزين بيانات في الـLocalStorage يجب أن نقوم بتعريف key و value كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">localStorage</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #4e9a06">"key"</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">value</span><span style="color: #000000; font-weight: bold">;</span>
+</pre>
+            </div>
+            <p dir="rtl">حيث أن الـ key نستطيع القول بأنه الإسم الذي يشير للبيانات بينما الـ value هي القيمة المخزنة فيه لنقوم بتجربة <strong dir="rtl">التالي:</strong></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">btn</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"click"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span><span style="color: #000000; font-weight: bold">(){</span>
+
+<span style="color: #204a87; font-weight: bold">if</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">value</span> <span style="color: #ce5c00; font-weight: bold">!=</span> <span style="color: #4e9a06">""</span><span style="color: #000000; font-weight: bold">){</span>
+
+   <span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">push</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">value</span><span style="color: #000000; font-weight: bold">);</span>
+
+ <span style="color: #000000">toDoList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span>  <span style="color: #ce5c00; font-weight: bold">+=</span> <span style="color: #4e9a06">'&lt;li class="index"  onclick="done(this.id)" id="'</span><span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">)</span><span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">'"&gt;'</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">"&lt;/li&gt;"</span><span style="color: #000000; font-weight: bold">;</span>
+
+ <span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">value</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">""</span><span style="color: #000000; font-weight: bold">;</span>
+
+<span style="color: #000000; font-weight: bold">}</span>
+
+
+   <span style="color: #000000">localStorage</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #4e9a06">"task"</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"mow the lawn"</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">// أضفت هذا الكود</span>
+
+<span style="color: #000000; font-weight: bold">});</span>
+</pre>
+            </div>
+            <p dir="rtl">في الكود اعلاة قمت بطلب تخزين الجملة mow the lawn بداخل الـ LocalStorage تحت key بإسم task عند إضافة عنصر لقائمة المهام.</p>
+            <p dir="rtl">لنقوم بفتح نافذة الـ storage ونرى اذا ما تم تخزين هذه البيانات:<br></p>
+            <img class="image" src="../../images/javascript/12/11.gif">
+            <p></p>
+            <p dir="rtl">رائع! تعمل كما هو مطلوب.</p>
+            <hr>
+            <h3 dir="rtl">تخزين المصفوفة في الـ localStorage</h3>
+            <p dir="rtl">لنقوم الأن بتخزن المصفوفة الخاصة بنا بإستخدام الكود التالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">localStorage</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #4e9a06">"tasks"</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">JSON</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">stringify</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">);</span>
+</pre>
+            </div>
+            <p dir="rtl">قمت بالكود اعلاة بتسمية الـ key بـ tasks وقمت بإسناد المصفوفة list الية بعد تحويلها إلى string بإستخدام الدالة <code dir="ltr">JSON.stringify()</code> فكما سبق وشرحنا بأننا لا يمكننا تخزين المصفوفة مباشرة بل يجب تحويلها الى string.</p>
+            <p dir="rtl">لنقوم بتجربة التطبيق اذا ماكان يقوم بتخزين عناصر المصفوفة في الـ Local Storage:<br></p>
+            <img class="image" src="../../images/javascript/12/12.gif">
+            <p></p>
+            <p dir="rtl">رائع الأن أصبحت قائمة المهام الخاصة بنا مخزنة في الـ Local Storage.</p>
+            <hr>
+            <details dir="rtl" open="">
+               <summary dir="rtl">
+                  لمراجعة الكود يفترض بأن يكون في المرحلة هذه كالتالي:
+               </summary>
+               <div class="code">
+                  <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">input</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"input"</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">btn</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"btn"</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">toDoList</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"todo-list"</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">index</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementsByClassName</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"index"</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">list</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">[];</span>
+
+<span style="color: #000000">btn</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"click"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span><span style="color: #000000; font-weight: bold">(){</span>
+
+<span style="color: #204a87; font-weight: bold">if</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">value</span> <span style="color: #ce5c00; font-weight: bold">!=</span> <span style="color: #4e9a06">""</span><span style="color: #000000; font-weight: bold">){</span>
+
+   <span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">push</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">value</span><span style="color: #000000; font-weight: bold">);</span>
+
+   <span style="color: #000000">toDoList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span>  <span style="color: #ce5c00; font-weight: bold">+=</span> <span style="color: #4e9a06">'&lt;li class="index"  onclick="done(this.id)" id="'</span><span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">)</span><span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">'"&gt;'</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">"&lt;/li&gt;"</span><span style="color: #000000; font-weight: bold">;</span>
+
+   <span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">value</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">""</span><span style="color: #000000; font-weight: bold">;</span>
+
+   <span style="color: #000000">localStorage</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #4e9a06">"tasks"</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">JSON</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">stringify</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">);</span>
+
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000; font-weight: bold">});</span>
+
+
+<span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">done</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">id</span><span style="color: #000000; font-weight: bold">){</span>
+
+<span style="color: #000000">index</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">id</span><span style="color: #000000; font-weight: bold">].</span><span style="color: #000000">classList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">toggle</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"checked"</span><span style="color: #000000; font-weight: bold">);</span>
+
+<span style="color: #000000; font-weight: bold">}</span>
+
+
+<span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"keydown"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span><span style="color: #000000; font-weight: bold">()</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">event</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">keyCode</span> <span style="color: #ce5c00; font-weight: bold">===</span> <span style="color: #0000cf; font-weight: bold">13</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
+ <span style="color: #000000">btn</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">click</span><span style="color: #000000; font-weight: bold">();</span>
+ <span style="color: #000000; font-weight: bold">}</span>
+<span style="color: #000000; font-weight: bold">});</span>
+</pre>
+               </div>
+            </details>
+            <hr>
+            <h3 dir="rtl">إسترجاع البيانات من الـ localStorage</h3>
+            <p dir="rtl">حتى نستطيع إسترجاع أي بيانات من الـ LocalStorage سنقوم بعمل ذلك بإستخدام الكود التالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">retrievedTasks</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">localStorage</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getItem</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"list"</span><span style="color: #000000; font-weight: bold">);</span>
+</pre>
+            </div>
+            <p dir="rtl">في الكود اعلاة قمت بتعريف متغير حتى نخزن فية البيانات المسترجعة وإسندت الية <code dir="ltr">localStorage.getItem("tasks")</code> والتي تقوم بعملية إسترجاع البيانات المخزنة بدأخل الـ key المسمى بـ tasks.</p>
+            <p dir="rtl">لنقم بتجربة طباعة القيمة التي سيتم إسترجاعها وتخزينها بدأخل المتغير <code dir="ltr">retrievedTasks</code></p>
+            <hr>
+            <details dir="rtl" open="">
+               <summary dir="rtl">
+                  الكود كاملاً لمراجعتة
+               </summary>
+               <div class="code">
+                  <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">input</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"input"</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">btn</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"btn"</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">toDoList</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"todo-list"</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">index</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementsByClassName</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"index"</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">list</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">[];</span>
+
+<span style="color: #000000">btn</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"click"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span><span style="color: #000000; font-weight: bold">(){</span>
+<span style="color: #204a87; font-weight: bold">if</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">value</span> <span style="color: #ce5c00; font-weight: bold">!=</span> <span style="color: #4e9a06">""</span><span style="color: #000000; font-weight: bold">){</span>
+
+ <span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">push</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">value</span><span style="color: #000000; font-weight: bold">);</span>
+
+ <span style="color: #000000">toDoList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span>  <span style="color: #ce5c00; font-weight: bold">+=</span> <span style="color: #4e9a06">'&lt;li class="index"  onclick="done(this.id)" id="'</span><span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">)</span><span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">'"&gt;'</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">"&lt;/li&gt;"</span><span style="color: #000000; font-weight: bold">;</span>
+
+ <span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">value</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">""</span><span style="color: #000000; font-weight: bold">;</span>
+
+ <span style="color: #000000">localStorage</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #4e9a06">"tasks"</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">JSON</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">stringify</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">);</span>
+
+<span style="color: #000000; font-weight: bold">}</span>
+<span style="color: #000000; font-weight: bold">});</span>
+
+<span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">done</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">id</span><span style="color: #000000; font-weight: bold">){</span>
+<span style="color: #000000">index</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">id</span><span style="color: #000000; font-weight: bold">].</span><span style="color: #000000">classList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">toggle</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"checked"</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"keydown"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span><span style="color: #000000; font-weight: bold">()</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">event</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">keyCode</span> <span style="color: #ce5c00; font-weight: bold">===</span> <span style="color: #0000cf; font-weight: bold">13</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
+ <span style="color: #000000">btn</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">click</span><span style="color: #000000; font-weight: bold">();</span>
+ <span style="color: #000000; font-weight: bold">}</span>
+<span style="color: #000000; font-weight: bold">});</span>
+
+<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">retrievedTasks</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">localStorage</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getItem</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"tasks"</span><span style="color: #000000; font-weight: bold">);</span> <span style="color: #8f5902; font-style: italic">/* اضفت هذا الكود*/</span>
+</pre>
+               </div>
+               <p dir="rtl">قمت بإضافة كود القائمة المسترجعة من الـ Local Storage في اخر الكود وليس بدأخل أي دالة أخرى وذلك لانني اريد أن اقوم دائماً بطباعته محتوياتها بغض النظر عن أي عملية أخرى فليست مرتبطة بعملية الضغط على الزر او غيره.</p>
+            </details>
+            <hr>
+            <p dir="rtl"><strong dir="rtl">التجربة:</strong><br></p>
+            <img class="image" src="../../images/javascript/12/13.gif">
+            <p></p>
+            <p dir="rtl">تم طباعة المهام التي تم تخزينها ولكن لحظة هل يبدوا بأنه تم طباعتها كـ array ؟ الم نقل بأنه سيتم تخزينها كنص لنقوم بالتأكد من ذلك بطباعة اول عنصر مخزن بدأخل المتغير <code dir="ltr">retrievedTasks</code></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">retrievedTasks</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">];</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">التجربة:</strong><br></p>
+            <img class="image" src="../../images/javascript/12/14.gif">
+            <p></p>
+            <p dir="rtl">هل تلاحظوا كيف يتم طباعة العناصر على حرف حرف ما يعني ان البيانات المخزنة في الـ Local Storage من النوع string كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">retrievedTasks</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">'["Task 1", "Task 2", "Task 3"]'</span><span style="color: #000000; font-weight: bold">;</span>
+</pre>
+            </div>
+            <p dir="rtl">لاحظ تم كتابة النص الذي يشبة تعريف المصفوفة بين علامتي تنصيص مفردة <code dir="ltr">' '</code> ما يعني انه لم يعد مصفوفة وسيتم التعامل معه كأي نص عادي<br>
+               <em dir="rtl">راجع درس الـ strings لتعرف كيف تم طباعة كل حرف  بشكل مفصل.</em>
+            </p>
+            <hr>
+            <p dir="rtl"><strong dir="rtl">اذاً ما قمنا به سابقاً هو بتحويل المصفوفة إلى نص بإستخدام الدالة <code dir="ltr">JSON.stringify()</code></strong> والأن نريد أن نقوم بعملية عكسية ونقوم بتحويل هذا النص المخزن بداخل المتغير <code dir="ltr">retrievedTasks</code> الى مصفوفة وسوف نقوم بذلك بإستخدام الدالة <code dir="ltr">JSON.parse()</code> كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">if</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"tasks"</span> <span style="color: #204a87; font-weight: bold">in</span> <span style="color: #000000">localStorage</span><span style="color: #000000; font-weight: bold">){</span>
+
+<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">retrievedTasks</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">localStorage</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getItem</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"tasks"</span><span style="color: #000000; font-weight: bold">);</span>
+
+<span style="color: #000000">list</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">JSON</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">parse</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">retrievedTasks</span><span style="color: #000000; font-weight: bold">);</span>
+
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl">قمنا بعمل شرط للتأكد من وجود key بإسم tasks في الـ Localstorage فاذا لم يكن هناك أي بيانات مخزنة فلا نريد أن نقوم بإسترجاع شي غير موجود أصلاً</p>
+            <p dir="rtl">اما اذا كان هناك بيانات مخزنة في key بإسم tasks  فسيتم تمرير المتغير retrievedTasks الذي يحمل البيانات المخزنة لداخل الدالة <code dir="ltr">JSON.parse</code> والتي ستقوم بتحويل تلك البيانات الى مصفوفة ومن ثم ستقوم بإسناد هذه المصفوفة للمتغير <code dir="ltr">list</code> والذي هو نفس المصفوفة الخاصة بنا التي قمنا بتعريفها في بدأية حتى تقوم بحفظ المهام.</p>
+            <hr>
+            <p dir="rtl">بعد كتابتنا للكود السابق يتم الأن تخزين كل مهمة جديدة في الـ Localstorage ومن ثم يتم إسناد كل المهام المحفوظة للمصفوفة list.</p>
+            <hr>
+            <details dir="rtl" open="">
+               <summary dir="rtl">
+                  لمراجعة الكود حتى هذه المرحلة
+               </summary>
+               <div class="code">
+                  <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">input</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"input"</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">btn</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"btn"</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">toDoList</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"todo-list"</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">index</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementsByClassName</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"index"</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">list</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">[];</span>
+
+<span style="color: #000000">btn</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"click"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span><span style="color: #000000; font-weight: bold">(){</span>
+<span style="color: #204a87; font-weight: bold">if</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">value</span> <span style="color: #ce5c00; font-weight: bold">!=</span> <span style="color: #4e9a06">""</span><span style="color: #000000; font-weight: bold">){</span>
+   <span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">push</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">value</span><span style="color: #000000; font-weight: bold">);</span>
+   <span style="color: #000000">toDoList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span>  <span style="color: #ce5c00; font-weight: bold">+=</span> <span style="color: #4e9a06">'&lt;li class="index"  onclick="done(this.id)" id="'</span><span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">)</span><span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">'"&gt;'</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">"&lt;/li&gt;"</span><span style="color: #000000; font-weight: bold">;</span>
+   <span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">value</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">""</span><span style="color: #000000; font-weight: bold">;</span>
+   <span style="color: #000000">localStorage</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #4e9a06">"tasks"</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">JSON</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">stringify</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #000000; font-weight: bold">}</span>
+<span style="color: #000000; font-weight: bold">});</span>
+
+<span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">done</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">id</span><span style="color: #000000; font-weight: bold">){</span>
+<span style="color: #000000">index</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">id</span><span style="color: #000000; font-weight: bold">].</span><span style="color: #000000">classList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">toggle</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"checked"</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"keydown"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span><span style="color: #000000; font-weight: bold">()</span> <span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">event</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">keyCode</span> <span style="color: #ce5c00; font-weight: bold">===</span> <span style="color: #0000cf; font-weight: bold">13</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
+ <span style="color: #000000">btn</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">click</span><span style="color: #000000; font-weight: bold">();</span>
+ <span style="color: #000000; font-weight: bold">}</span>
+<span style="color: #000000; font-weight: bold">});</span>
+
+<span style="color: #204a87; font-weight: bold">if</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"tasks"</span> <span style="color: #204a87; font-weight: bold">in</span> <span style="color: #000000">localStorage</span><span style="color: #000000; font-weight: bold">){</span>
+
+<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">retrievedTasks</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">localStorage</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getItem</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"tasks"</span><span style="color: #000000; font-weight: bold">);</span>
+
+<span style="color: #000000">list</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">JSON</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">parse</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">retrievedTasks</span><span style="color: #000000; font-weight: bold">);</span>
+
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+               </div>
+            </details>
+            <hr>
+            <h3 dir="rtl">طباعة المهام عند تحديث الصفحة</h3>
+            <p dir="rtl">نلاحظ أنه عند قيامنا بتحديث الصفحة تختفي التعديلات التي تمت بإستخدام الجافاسكربت على الـ DOM وتختفي معها قائمة المهام كالتالي:<br>
+               .<br>
+            </p>
+            <img class="image" src="../../images/javascript/12/15.gif">
+            <p></p>
+            <p dir="rtl">لكن لا داعي للقلق فالبيانات التي تختفي أصبحت مخزنة بدأخل المصفوفة list من خلال الـ Local storage فما علينا القيام به هو طباعة تلك البيانات من خلال المصفوفة بإستخدام الحلقة for كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"tasks"</span> <span style="color: #204a87; font-weight: bold">in</span> <span style="color: #000000">localStorage</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
+
+	<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">retrievedTasks</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">localStorage</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getItem</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"tasks"</span><span style="color: #000000; font-weight: bold">);</span>
+
+	<span style="color: #000000">list</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">JSON</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">parse</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">retrievedTasks</span><span style="color: #000000; font-weight: bold">);</span>
+
+	<span style="color: #204a87; font-weight: bold">for</span> <span style="color: #000000; font-weight: bold">(</span> <span style="color: #8f5902; font-style: italic">/*start from*/</span> <span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*condition*/</span> <span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*increment*/</span> <span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
+
+	<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl">يفترض أن يكون في هذه المرحلة لديكم تجربة مع الحلقات من خلال دروس المسار وتعرفوا كيف يتم إستخدامها ولكن لا تقلق اذا مازلت تواجه مشاكل في فهمها فسوف نقوم بشرحها بالدرس التالي.</p>
+            <p dir="rtl"><strong dir="rtl">ما سنقوم بعملة في حلفة for كالتالي:</strong></p>
+            <p dir="rtl"><strong dir="rtl">ـ start from</strong><br>
+               نحتاج لتعريف الحلقة من الرقم كم تبدأ العد وفي حالتنا سنحتاج أن تبدأ من الرقم 0 وذلك لأن الرقم التسلسلي لأول عنصر في المصفوفة هو 0 لذلك سأقوم بتعرف متغير بإسم <code dir="ltr">i</code> وأقوم بإسناد القيمة 0 الية كالتالي
+            </p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">for</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #0000cf; font-weight: bold">0</span>   <span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*condition*/</span>  <span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*increment*/</span> <span style="color: #000000; font-weight: bold">){</span>
+<span style="color: #8f5902; font-style: italic">// الأمر الذي سيتم تنفيذة طالما الشرط متحقق	</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">ـ condition</strong><br>
+               نحتاج لتحديد شرط حتى يتوقف العداد عن العمل كي لا ندخل في حلقة لا نهائية وفي حالتنا هذه نريد أن يتوقف العداد بعد طباعة أخر عنصر في المصفوفة لهذا سنطلب من العداد ان يستمر بالعد طالما وهو أصغر من طول المصفوفة كالتالي:
+            </p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">for</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #0000cf; font-weight: bold">0</span>   <span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">&lt;</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span> <span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*increment*/</span> <span style="color: #000000; font-weight: bold">){</span>
+<span style="color: #8f5902; font-style: italic">// الأمر الذي سيتم تنفيذة طالما الشرط متحقق	</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">ـ increment</strong><br>
+               في كل مرة نقوم بطباعة عنصر من عناصر المصفوفة نريد أن نقوم بطباعة العنصر التالي والذي سيكون الرقم التسلسلي الخاص به أكبر من الرقم التسلسلي الخاص بالعنصر السابق بـ 1 لهذا سنقوم بإضافة 1 للعداد في كل مرة كالتالي <code dir="ltr">i = i + 1</code> او نستطيع كتابه هذه العملية بشكل مختصر كالتالي <code dir="ltr">i++</code>
+            </p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">for</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #0000cf; font-weight: bold">0</span>   <span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">&lt;</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span> <span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">++</span> <span style="color: #000000; font-weight: bold">){</span>
+
+<span style="color: #8f5902; font-style: italic">// الأمر الذي سيتم تنفيذة طالما الشرط متحقق</span>
+
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl">الان سنقوم بنسخ نفس الكود الذي إستخدمناه لطباعة عناصر قائمة المهام عند الضغط على الزر btn وسنقوم بتغيير بسيط في الكود كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">for</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">&lt;</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span> <span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">++</span> <span style="color: #000000; font-weight: bold">){</span>
+    <span style="color: #000000">toDoList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span>  <span style="color: #ce5c00; font-weight: bold">+=</span> <span style="color: #4e9a06">'&lt;li class="index"  onclick="done(this.id)" id="'</span><span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">'"&gt;'</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">i</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">"&lt;/li&gt;"</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl">التغيير في الكود هو أنني قمت بإستبدال <code dir="ltr">list.length-1</code> بالعداد <code dir="ltr">i</code> حيث سنحصل عبرة على الرقم التسلسلي الخاص بكل عنصر في المصفوفة كونة يبدأ بالعد من 0 الى الرقم الأصغر من list.length اي الى الرقم list.length-1</p>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <img class="image" src="../../images/javascript/12/16.gif">
+            <p></p>
+            <p dir="rtl">لاحظوا بعد قيامي بإضافة المهام وعمل تحديث للصفحة لا تختفي المهام وذلك لأننا نقوم بإستدعائها من خلال الـ Local Storage</p>
+            <p dir="rtl">لنجرب مسح الـ key الخاص بتخزين المهام في الـ Local Storage ونقوم بتحديث الصفحة:<br></p>
+            <img class="image" src="../../images/javascript/12/17.gif">
+            <p></p>
+            <p dir="rtl">لاحظوا كيف أن المهام تم مسحها بعد أن قمنا بإزالة البيانات من الـ Local Storage وقمنا بتحديث الصفحة.</p>
+            <hr>
+            <details dir="rtl" open="">
+               <summary dir="rtl">
+                  الكود حتى هذه المرحلة
+               </summary>
+               <div class="code">
+                  <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">input</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"input"</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">btn</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"btn"</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">toDoList</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"todo-list"</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">index</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementsByClassName</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"index"</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">list</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">[];</span>
+
+<span style="color: #000000">btn</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"click"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000; font-weight: bold">()</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">value</span> <span style="color: #ce5c00; font-weight: bold">!=</span> <span style="color: #4e9a06">""</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
+
+		<span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">push</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">value</span><span style="color: #000000; font-weight: bold">);</span>
+
+		<span style="color: #000000">toDoList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span> <span style="color: #ce5c00; font-weight: bold">+=</span> <span style="color: #4e9a06">'&lt;li class="index"  onclick="done(this.id)" id="'</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span> <span style="color: #ce5c00; font-weight: bold">-</span> <span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #4e9a06">'"&gt;'</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span> <span style="color: #ce5c00; font-weight: bold">-</span> <span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #4e9a06">"&lt;/li&gt;"</span><span style="color: #000000; font-weight: bold">;</span>
+
+		<span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">value</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">""</span><span style="color: #000000; font-weight: bold">;</span>
+
+		<span style="color: #000000">localStorage</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #4e9a06">"tasks"</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">JSON</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">stringify</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">);</span>
+
+	<span style="color: #000000; font-weight: bold">}</span>
+<span style="color: #000000; font-weight: bold">});</span>
+
+<span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000">done</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">id</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #000000">index</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">id</span><span style="color: #000000; font-weight: bold">].</span><span style="color: #000000">classList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">toggle</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"checked"</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"keydown"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000; font-weight: bold">()</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">event</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">keyCode</span> <span style="color: #ce5c00; font-weight: bold">===</span> <span style="color: #0000cf; font-weight: bold">13</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
+		<span style="color: #000000">btn</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">click</span><span style="color: #000000; font-weight: bold">();</span>
+	<span style="color: #000000; font-weight: bold">}</span>
+<span style="color: #000000; font-weight: bold">});</span>
+
+<span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"tasks"</span> <span style="color: #204a87; font-weight: bold">in</span> <span style="color: #000000">localStorage</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">retrievedTasks</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">localStorage</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getItem</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"tasks"</span><span style="color: #000000; font-weight: bold">);</span>
+
+	<span style="color: #000000">list</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">JSON</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">parse</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">retrievedTasks</span><span style="color: #000000; font-weight: bold">);</span>
+
+	<span style="color: #204a87; font-weight: bold">for</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">&lt;</span> <span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">++</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
+		<span style="color: #000000">toDoList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span> <span style="color: #ce5c00; font-weight: bold">+=</span> <span style="color: #4e9a06">'&lt;li class="index"  onclick="done(this.id)" id="'</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #4e9a06">'"&gt;'</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">i</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #4e9a06">"&lt;/li&gt;"</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #000000; font-weight: bold">}</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+               </div>
+            </details>
+            <hr>
+            <h2 dir="rtl">تحدي اليوم</h2>
+            <p dir="rtl">أريد منكم إضافة زر يقوم بعمل rest للقائمة حيث أنه بالضغط على هذا الزر يستطيع المستخدم البدء بعمل قائمة مهام جديدة كما موضح بالصورة التالية:<br></p>
+            <img class="image" src="../../images/javascript/12/18.gif">
+            <p></p>
+            <p dir="rtl">تلميح لا تقوم بفتحة الا بعد المحاولة:</p>
+            <div class="spoiled" dir="rtl">
+               <p dir="rtl">نريد أن يتم الاستماع لعملية ضغط على الزر ومن ثم نقوم بمسح البيانات التي قمنا بتخزينها في الـ localstorage وبعد ذلك يتم تحديث الصفحة</p>
+            </div>
+            <hr>
+            <p dir="rtl"><strong dir="rtl"><a href="https://codepen.io/AlHakem/pen/LQaKpN" rel="nofollow noopener" dir="rtl">العمل النهائي على codepen</a></strong></p>
+            <hr>
+            <p dir="rtl">سيتبقى لنا معرفة أي العناصر تم الانتهاء منها وتحديدها عند اعادة تحميل الصفحة تستطيع تجربة عملها  ولكن سنتركها في الوقت الحالي حتى لا نعقد الأمور أكثر وحيث أنه سيكون لدينا قدرة تحكم أكبر بماذا نريد القيام به بأكواد نظيفة وبأقل عدد ممكن من الأسطر بالإستفادة من الـ functions و الـ objects في دروس متقدمة.</p>
+         </div>
+      </div>
+      <script src="{% static 'js/main.js' %}"></script>
+   </body>
+</html>

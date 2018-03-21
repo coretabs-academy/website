@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+{% load static%}
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>[الدرس الخامس:الجزء الرابع] العمل على شعار الموقع</title>
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+   </head>
+   <body>
+      <div class="navbar">
+         <div class="navbar-brand">
+            <div class="">
+               Academy
+            </div>
+         </div>
+         <div class="icon-container">
+            <div class="humberger-icon">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+         </div>
+         <div class="navbar-nav">
+            <nav>
+               <div class="close">
+                  أغلق <i class="fas fa-times"></i>
+               </div>
+               <a href="../../../index.html">الرئيسية</a>
+               <a href="../../html_css/html-css.html">HTML & CSS</a>
+               <a href="../../javascript/javascript.html">JavaScript</a>
+               <a href="../../git/git.html">Git</a>
+               <a href="../../projects/projects.html">المشاريع</a>
+            </nav>
+         </div>
+      </div>
+      <div class="container">
+         <div class="cooked">
+            <h1>بدأ العمل على إدراج شعار الفيس بوك للصفحة</h1>
+            <hr>
+            <details dir="rtl" open="open">
+               <summary dir="rtl">
+                  قبل بدأية هذا الدرس يجب أن يكون لديك التالي
+               </summary>
+               <p dir="rtl">1- ملف <code dir="ltr">index.html</code> بهذا المحتوى</p>
+               <div class="code">
+                  <pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!doctype html&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;html&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;head&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">charset=</span><span style="color: #4e9a06">"utf-8"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;title&gt;</span>Facebook<span style="color: #204a87; font-weight: bold">&lt;/title&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;link</span> <span style="color: #c4a000">rel=</span><span style="color: #4e9a06">"stylesheet"</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"text/css"</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"css/style.css"</span> <span style="color: #204a87; font-weight: bold">/&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/head&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;body&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"header"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+  <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+    <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"float-left"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+    <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"float-right"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+  <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"main"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"footer"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/body&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/html&gt;</span>
+</pre>
+               </div>
+               <p dir="rtl">2- ملف <code dir="ltr">style.css</code> بهذا المحتوى</p>
+               <div class="code">
+                  <pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">/***removing body margin***/</span>
+<span style="color: #204a87; font-weight: bold">body</span><span style="color: #000000; font-weight: bold">{</span>
+ <span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #8f5902; font-style: italic">/***header***/</span>
+<span style="color: #000000">#header</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100</span><span style="color: #ce5c00; font-weight: bold">%</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">82px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background-color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#3b5998</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">linear</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">gradient</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">#4e69a2</span><span style="color: #ce5c00; font-weight: bold">,</span><span style="color: #0000cf; font-weight: bold">#3b5998</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #204a87; font-weight: bold">border-bottom</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #204a87; font-weight: bold">solid</span> <span style="color: #0000cf; font-weight: bold">#133783</span><span style="color: #000000; font-weight: bold">;</span>
+
+<span style="color: #000000; font-weight: bold">}</span>
+<span style="color: #000000">.float-left</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">float</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">left</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+<span style="color: #000000">.float-right</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">float</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">right</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+<span style="color: #8f5902; font-style: italic">/***general***/</span>
+<span style="color: #000000">.container</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">980px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">82px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+               </div>
+               <p dir="rtl">3- صورتين في مجلد الصور : الاولى خاصة بالخريطة, الثانية بشعار الفيس بوك</p>
+               <p dir="rtl"><strong dir="rtl">اذا لم يكن لديك الترتيبات أعلاة أرجوا مراجعة الدروس السابقة</strong></p>
+            </details>
+            <hr>
+            <h2 dir="rtl">سنبدأ بالعمل على إدراج شعار الفيس بوك للصفحة.</h2>
+            <p dir="rtl"><strong dir="rtl">كما لاحظ الجميع أن الصورة التي قمنا بتحميلها من موقع الفيس بوك تحتوي على عدد من الصور الأخرى فماذا يعني ذلك ؟</strong></p>
+            <p dir="rtl">يجب أن تضع في بالك أنك الأن أصبحت مطور واجهات ويب لذا من مسؤوليتك أن تقوم دائماً بحساب تكلفة كل خطوة ستقدم عليها من ناحية أداء و سرعة<br>
+               موقعك ومن ناحية إستهلاكة لمعدل نقل البيانات.
+            </p>
+            <p dir="rtl"><strong dir="rtl">تقنية <a href="https://www.w3schools.com/css/css_image_sprites.asp" rel="nofollow noopener" dir="ltr">CSS Image Sprites</a> هي إحدى الطرق لتحسين أدى موقعك كما تشاهدها في الصورة أدناه.</strong><br>
+               <img src="{% static 'images/projects/facebook_project/8/1.png'%}" alt="image" class="image">
+            </p>
+            <p dir="rtl">كما تشاهد في الصورة أعلاة هذه الصورة تم تجميع فيها الشعار واكثر من أيقونة بحيث أنه سيقوم المتصفح بتحميل هذه الصورة مرة وأحدة فقط ومن ثم سنقوم بإختيار الصور التي نريد عرضها بإستخدام الـ css.</p>
+            <p dir="rtl"><strong dir="rtl">لنفترض أنك لم تعتمد هذه التقنية في موقعك لمثل هذه الصورة فماذا يعني ذلك؟</strong></p>
+            <p dir="rtl">لنقوم بعد الايقونات في الصورة أعلاة …</p>
+            <p dir="rtl">ستجد 25 أيقونة, تخيل بأنك قمت بحفظ كل صورة في ملف خاص بها مما يعني بأنك اذا احتجت لجميع هذه الصور في صفحة فستقوم بعملية طلب لـ25 صورة بينما اذا قمت بجمعها في صورة واحدة فستحتاج لإرسال طلب واحد لإحضار كل هذه الصور وثم بإستخدام الـ CSS ستحدد أي صورة تريد عرضها كما سنشاهد لاحقاً.</p>
+            <details dir="rtl" open="open">
+               <summary dir="rtl">
+                  ملاحظة
+               </summary>
+               <p dir="rtl">هذه هي نفس الصورة التي أنت قمت بتحميلها انا فقط قمت بتغيير لون الخلفية الخاص بها حتى نشرحها</p>
+            </details>
+            <hr>
+            <h2 dir="rtl">لنبدأ بالعمل</h2>
+            <p dir="rtl">سنحتاج لوضع الشعار بطريقة تجعلة رابط بمعنى أنه عند ضغطك علية سيقوم بتوجيهك للصفحة الرئيسية <code dir="ltr">index.html</code> سنستخدم تقنية بسيطة حتى نسهل  الأمور في هذه المرحلة ولاحقاً سنقوم بشرح طريقة قيام موقع الفيس بوك بإدراج الشعار ولماذا عليك القيام بمثل ذلك.</p>
+            <p dir="rtl"><strong dir="rtl">سأقوم بوضع رابط مثل أي رابط عادي بداخل منطقة الشعار:</strong></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"float-left"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"index.html"</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"logo"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Facebook<span style="color: #204a87; font-weight: bold">&lt;/a&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl">لاحظ بأنني قمت بكتابة الرابط الخاص بالصفحة الرئيسية والتي هي صفحة الـ <code dir="ltr">index.html</code> وقمت بإعطاء الرابط <code dir="ltr">id</code> بإسم <code dir="ltr">logo</code>.</p>
+            <p></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/8/2.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl"><strong dir="rtl">الأن سنقوم بتنسيق الرابط التالي بإستخدام الـ CSS لجعلة صورة وإخفاء النص المكتوب بداخلة.</strong></p>
+            <p dir="rtl">في البدأية جميعنا نعرف أن وسم <code dir="ltr">&lt;a&gt;</code> من نوع inline لهذا سأقوم بتحويلة إلى block بإستخدام خاصية display حتى نستطيع إعطائة عرض و إرتفاع</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">#logo</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl">قم بإستخدام أداة inspect element لتحديد عرض وإرتفاع الشعار كما قمنا في الدروس السابقة:</p>
+            <details dir="rtl" open="open">
+               <summary dir="rtl">
+                  طريقة الحصول على المقاسات
+               </summary>
+               <p></p>
+               <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/8/3.png'%}" alt="image" class="image"></a></div>
+               <p></p>
+            </details>
+            <p dir="rtl">نريد العرض أن يكون <code dir="ltr">170px</code> و الارتفاع <code dir="ltr">34px</code> كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">#logo</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">170px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">34px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">الان نريد إضافة الصورة الخاصة بالشعار كخلفية لهذا العنصر:</strong></p>
+            <p dir="rtl">سنستخدم خواص الـ CSS اللازمة لتحديد موقع الصورة التي نرغب بعرضها ونجعل بقية الصور مخفية في الكواليس وفي هذه الحالة نريد ان نجلب إحداثيات الشعار من بين كل تلك الصور وعرضة في الصندوق الذي قمنا بتحديد عرضة وإرتفاعة.</p>
+            <p dir="rtl">شاهد هذه الصورة ستوضح لك ما الذي سنقوم بعملة.<br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/8/4.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl"><strong dir="rtl">1- في البدأية سأقوم بإدراج الصورة كاملة كخلفية للعنصر بإستخدام خاصية <code dir="ltr">background-image</code></strong></p>
+            <p dir="rtl">كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">#logo</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">170px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">34px</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #204a87; font-weight: bold">background-image</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">url(../images/logo.png)</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <details dir="rtl" open="open">
+               <summary dir="rtl">
+                  ركز بأنني قمت بتغيير إسم الصورة في جهازي الى اسم `logo`
+               </summary>
+               <p></p>
+               <div class="lightbox-wrapper" dir="ltr">
+                  <a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr">
+                     <img src="{% static 'images/projects/facebook_project/8/5.png'%}" alt="image" class="image">
+                     <div class="meta" dir="ltr">
+                        <span class="filename" dir="ltr">image.jpg</span><span class="informations" dir="ltr">1093x716 57.8 KB</span><span class="expand"></span>
+                     </div>
+                  </a>
+               </div>
+               <p></p>
+            </details>
+            <hr>
+            <p dir="rtl"><strong dir="rtl">2- سأقوم بتحديد إحداثيات نقطة البدء للصورة التي نريد عرضها بداخل الصندوق بإستخدام خاصية <code dir="ltr">background-position</code></strong></p>
+            <p dir="rtl">هذه الخاصية تحتاج أن تعطيها إحداثيات الصورة التي تريد عرضها وحتى تعرف إحداثيات نقطة البدء بالنسبة لأعلى ولليسار تحتاج إلى استخدام بعض<br>
+               الادوات مثل الفوتوشوب او غيرة للحصول على هذه الإحداثيات.
+            </p>
+            <p dir="rtl">في حالتنا هذه إحداثيات شعار الفيس بوك هي 0 من اليسار و 0 من الأعلى كما تشاهد في الصورة فالشعار لا تفصلة مسافات من اليسار من اعلى عن حدود الصورة, دعني اغير لون الخلفية لتشاهد ذلك<br>
+               <img src="{% static 'images/projects/facebook_project/8/6.png'%}" alt="image" class="image">
+            </p>
+            <p dir="rtl">اذا سنضيف الكود التالي  <code dir="ltr">background-position: 0 0</code> كما يلي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">#logo</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
+      <span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">170px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">34px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background-image</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">url(../images/logo.png)</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background-position</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <details dir="rtl" open="open">
+               <summary dir="rtl">
+                  مثال اذا لم تتضح لديك الصورة بعد
+               </summary>
+               <p dir="rtl"><strong dir="rtl">لنفترض أنني اريد ان اعرض الصورة التالية في موقعي:</strong><br>
+                  <img src="{% static 'images/projects/facebook_project/8/7.png'%}" alt="image" class="image">
+               </p>
+               <p dir="rtl">1- سأقوم بتحديد عرضها وطولها وعمل صندوق بهذه الابعاد 25px عرض و 25px ارتفاع.<br>
+                  2- سأقوم بإستخدام برنامج الفوتوشوب لقياس بعد هذه الايقونة من اعلى ويسار الصورة كاملة كالتالي:<br>
+                  <img src="{% static 'images/projects/facebook_project/8/8.png'%}" alt="image" class="image">
+               </p>
+               <p dir="rtl">مما يعني أنها تبعد عن اليسار بـ 147px وعن الاعلى بـ 36px</p>
+               <div class="code">
+                  <pre style="margin: 0; line-height: 125%"><span style="color: #000000">#logo</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">25px</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">25px</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #204a87; font-weight: bold">background-image</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">url(../images/logo.png)</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #204a87; font-weight: bold">background-position</span><span style="color: #ce5c00; font-weight: bold">:-</span><span style="color: #0000cf; font-weight: bold">147px</span> <span style="color: #0000cf; font-weight: bold">-36px</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*نكتب القيم بالسالب*/</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+               </div>
+            </details>
+            <hr>
+            <details dir="rtl" open="open">
+               <summary dir="rtl">
+                  هناك أداة ستساعدك بالحصول على احداثيات الصور شاهدها من هنا
+               </summary>
+               <p dir="rtl"><a href="http://www.spritecow.com" rel="nofollow noopener" dir="rtl">للذهاب للموقع من هنا</a><br></p>
+               <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="ezgif.com-optimize.gif" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/8/9.gif" alt="com-optimize" class="image"></a></div>
+               <p></p>
+            </details>
+            <hr>
+            <p dir="rtl"><strong dir="rtl">اصبح لدينا الشكل التالي:</strong></p>
+            <p></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/8/10.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <hr>
+            <p dir="rtl">سأقوم بإعطاء الشعار هامش (margin) من اعلى بقيمة 30px:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">#logo</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">170px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">34px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background-image</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">url(../images/logo.png)</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background-position</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">margin-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">30px</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*اضافة هامش من اعلى*/</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/8/11.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">تبقى أن نقوم بإخفاء النص الخاص بالرابط وسنقوم بذلك بإستخدام خاصية تسمى <code dir="ltr">text-indent</code> والتي عملها عمل بادئة للنص حيث سأقوم بإعطائها قيمة سالبة مما سيجعلها تنزاح إلى اليسار:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">#logo</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">170px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">34px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background-image</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">url(../images/logo.png)</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background-position</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">margin-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">30px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">text-indent</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">-100px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl">ستلاحظ بانه تم سحب النص لليسار بحيث انه الان اصبح بخارج الصندوق الخاص بالشعار</p>
+            <p></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/8/12.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">سنقوم بإضافة خاصية تقوم بإخفاء كل شي غير موجود بداخل حدود الشعار كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">#logo</span><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">170px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">34px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background-image</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">url(../images/logo.png)</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">background-position</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">margin-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">30px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #204a87; font-weight: bold">text-indent</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">-100px</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #204a87; font-weight: bold">overflow</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">hidden</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*إخفاء اي عنصر يخرج عن حدود الحجم المحدد*/</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <hr>
+            <h2 dir="rtl">الشكل النهائي</h2>
+            <p></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/8/13.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">حاولت أن ابسط الشرح والأكواد بأكبر قدر ممكن أرجوا ان تتضح لكم الفكرة. بالنسبة لتقنية دمج الصور في صورة واحدة ستعتاد عليها لاحقاً وستصبح قادر على دمج الصور وتحديد موقعها بسهولة فلا تقلق إن شعرت بأنها مربكة بعض الشي.</p>
+            <hr>
+         </div>
+      </div>
+      <script src="{% static 'js/main.js' %}"></script>
+   </body>
+</html>

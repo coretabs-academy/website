@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+{% load static%}
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>[الدرس الخامس:الجزء الخامس] الإنتهاء من تكويد قسم الـ header</title>
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+   </head>
+   <body>
+      <div class="navbar">
+         <div class="navbar-brand">
+            <div class="">
+               Academy
+            </div>
+         </div>
+         <div class="icon-container">
+            <div class="humberger-icon">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+         </div>
+         <div class="navbar-nav">
+            <nav>
+               <div class="close">
+                  أغلق <i class="fas fa-times"></i>
+               </div>
+               <a href="../../../index.html">الرئيسية</a>
+               <a href="../../html_css/html-css.html">HTML & CSS</a>
+               <a href="../../javascript/javascript.html">JavaScript</a>
+               <a href="../../git/git.html">Git</a>
+               <a href="../../projects/projects.html">المشاريع</a>
+            </nav>
+         </div>
+      </div>
+      <div class="container">
+         <div class="cooked">
+            <h1>بدأ العمل على منطقة تسجيل الدخول</h1>
+            <hr>
+            <details dir="rtl" open="open">
+               <summary dir="rtl">
+                  قبل بدأية هذا الدرس يجب أن يكون لديك التالي
+               </summary>
+               <p dir="rtl">1- ملف <code dir="ltr">index.html</code> بهذا المحتوى</p>
+               <div class="code">
+                  <pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!doctype html&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;html&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;head&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">charset=</span><span style="color: #4e9a06">"utf-8"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;title&gt;</span>Facebook<span style="color: #204a87; font-weight: bold">&lt;/title&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;link</span> <span style="color: #c4a000">rel=</span><span style="color: #4e9a06">"stylesheet"</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"text/css"</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"css/style.css"</span> <span style="color: #204a87; font-weight: bold">/&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/head&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;body&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"header"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+  <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+    <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"float-left"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+		<span style="color: #204a87; font-weight: bold">&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"logo"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Facebook<span style="color: #204a87; font-weight: bold">&lt;/a&gt;</span>
+	<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+
+ 	<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"float-right"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+
+	<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+
+
+  <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"main"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"footer"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/body&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/html&gt;</span>
+</pre>
+               </div>
+               <p dir="rtl">2- ملف <code dir="ltr">style.css</code> بهذا المحتوى</p>
+               <div class="code">
+                  <pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">/***removing body margin***/</span>
+<span style="color: #204a87; font-weight: bold">body</span><span style="color: #000000; font-weight: bold">{</span>
+   <span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #8f5902; font-style: italic">/***header***/</span>
+<span style="color: #000000">#header</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100</span><span style="color: #ce5c00; font-weight: bold">%</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">82px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">background-color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#3b5998</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">linear</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">gradient</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">#4e69a2</span><span style="color: #ce5c00; font-weight: bold">,</span><span style="color: #0000cf; font-weight: bold">#3b5998</span><span style="color: #000000; font-weight: bold">);</span>
+	<span style="color: #204a87; font-weight: bold">border-bottom</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #204a87; font-weight: bold">solid</span> <span style="color: #0000cf; font-weight: bold">#133783</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.float-left</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">float</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">left</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+<span style="color: #000000">.float-right</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">float</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">right</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">#logo</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">170px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">34px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">background-image</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">url(../images/logo.png)</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">background-position</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">margin-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">30px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">overflow</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">hidden</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">text-indent</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">-100px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+
+
+<span style="color: #8f5902; font-style: italic">/***general***/</span>
+<span style="color: #000000">.container</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">980px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">82px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
+
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+               </div>
+               <p dir="rtl">3- صورتين في مجلد الصور : الاولى خاصة بالخريطة, الثانية بشعار الفيس بوك</p>
+               <p dir="rtl"><strong dir="rtl">اذا لم يكن لديك الترتيبات أعلاة أرجوا مراجعة الدروس السابقة</strong></p>
+            </details>
+            <p dir="rtl">في الدرس السابق أنهينا عمل الشعار, في هذا الدرس سنبدأ بالعمل على منطقة تسجيل الدخول وأريد إلى أن أنوة بأننا نهتم في هذا المرحلة بتطبيق عمل تقسيم للعناصر بإستخدام الـ div قبل أن نبدأ في تطبيق semantic HTML لهذا يجب عليك أن تعرف أن هذه المنطقة ستحتوي على <code dir="ltr">form</code> أحد عناصر الـ <code dir="ltr">HTML</code> فقم بدراسته <a href="https://www.w3schools.com/html/html_forms.asp" rel="nofollow noopener" dir="rtl">من هنا</a> وسنتطرق الية لاحقاً.</p>
+            <hr>
+            <h2 dir="rtl"><strong dir="rtl">في الصورة التالية خطة العمل:</strong></h2>
+            <p dir="rtl">أعتقد أن في هذه المرحلة لن أحتاج إلى تفسير خطتنا لهذا المنطقة بعد إطلاعي على تطبيقاتكم في الدروس السابقة أعرف بانكم ستفهموا الفكرة من مجرد النظر للصورة التالية.<br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/9/1.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <h2 dir="rtl">لنبدأ العمل</h2>
+            <p dir="rtl">عملنا هذه المرة سيكون بداخل العنصر الذي يحمل <code dir="ltr">class</code> بإسم <code dir="ltr">float-right</code>:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"float-right"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+   <span style="color: #8f5902; font-style: italic">&lt;!--هنا--&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">سنبدأ بتكويد القسم الذي سيقوم بضم مجموعة العناصر في الاقسام الثلاثة وسأعطية class بإسم <code dir="ltr">login-box</code></strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/9/2.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"float-right"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"login-box"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+
+      <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl">سأبداء بإعطاء العنصر <code dir="ltr">login-box</code> بعض التنسيقات حتى نتأكد من أننا نقوم بالعمل الصحيح واننا بالمكان الصحيح:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.login-box</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">82px</span><span style="color: #000000; font-weight: bold">;</span>
+    <span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#000</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/9/3.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">رائع حيث أريد, الان سنبدأ بإنشاء العناصر بداخلة. بإمكاننا الأن إزالة لون الخلفية وجعل عرض العنصر <code dir="ltr">auto</code> حتى يكبر عرضة بمقدار عرض العناصر التي بداخلة بشكل اوتوماتيكي</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.login-box</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">82px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl">1- سأحتاج لعمل div الذي سيحتوي النص أعلى حقل الإدخال وسأكتب فية النص الأول</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"float-right"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"login-box"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+
+        <span style="color: #204a87; font-weight: bold">&lt;div&gt;</span>Email or Phone<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+
+      <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl">2- سنقوم بإضافة div أخر والذي سيحوي حقل الإدخال كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"float-right"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+     <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"login-box"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+
+       <span style="color: #204a87; font-weight: bold">&lt;div&gt;</span>Email or Phone<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+
+       <span style="color: #204a87; font-weight: bold">&lt;div&gt;&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"email"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+
+     <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl">أضفنا في الكود أعلاة حقل إدخال نصي من نوع Email بداخل عنصر <code dir="ltr">div</code> الذي أنشأناة مؤخراُ, بإستخدام الوسم التالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"email"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl">إقراء المزيد عن هذا الوسم <a href="https://www.w3schools.com/tags/tag_input.asp" rel="nofollow noopener" dir="rtl">من هنا</a></p>
+            <hr>
+            <p dir="rtl">الكود الأن سيكون كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"float-right"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+     <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"login-box"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+
+       <span style="color: #204a87; font-weight: bold">&lt;div&gt;</span>Email or Phone<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+
+       <span style="color: #204a87; font-weight: bold">&lt;div&gt;&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"email"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+
+     <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">لنشاهد النتيجة:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/9/4.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">جيد لنقوم ببعض التنسيقات ولكن قبل ذلك سنحتاج إلى ان نضع النص الذي يصف حقل الإدخال بداخل عنصر يسمى label ليكون الكود كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"float-right"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+     <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"login-box"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+
+       <span style="color: #204a87; font-weight: bold">&lt;div&gt;&lt;label&gt;</span>Email or Phone<span style="color: #204a87; font-weight: bold">&lt;/label&gt;&lt;/div&gt;</span>
+
+       <span style="color: #204a87; font-weight: bold">&lt;div&gt;&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"email"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+
+     <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+</pre>
+            </div>
+            <h2 dir="rtl">لنبدأ ببعض التنسيقات</h2>
+            <p dir="rtl">سنبدأ بالعمل على نص وصف الحقل, تستطيع إعطائة إسم class ومن ثم إستهدافة من خلال ذلك الكلاس ولكني سأقوم بإستهدافة كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.login-box</span> <span style="color: #204a87; font-weight: bold">label</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #0000cf; font-weight: bold">#fff</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*تغيير اللون للأبيض*/</span>
+	<span style="color: #204a87; font-weight: bold">font-family</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">Arial</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*تغيير نوع الخط*/</span>
+	<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">12px</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*تغيير حجم الخط*/</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">بالنظر للكود أعلاة  بإمكاننا القول بأنني اخبرت CSS التالي:</strong><br>
+               قم بالبحث عن كلاس بإسم <code dir="ltr">login-box</code> ستجد بداخلة عنصر <code dir="ltr">label</code> قم بتطبيق التنسيقات المطلوبة علية.
+            </p>
+            <p dir="rtl">لنشاهد التصميم الأصلي لموقع فيس بوك وتصميمنا ونحدد ماهو المطلوب عملة</p>
+            <p></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/9/5.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">1- سنحتاج إلى تغيير لون الخط إلى الأبيض.<br>
+               2- سنقوم بتغيير نوع الخط.<br>
+               3- سنقوم بتصغير حجم الخط الى 12px
+            </p>
+            <p dir="rtl"><strong dir="rtl">لنطبق ذلك بالكود التالي:</strong></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.login-box</span> <span style="color: #204a87; font-weight: bold">label</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #0000cf; font-weight: bold">#fff</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*تغيير اللون للأبيض*/</span>
+	<span style="color: #204a87; font-weight: bold">font-family</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">Arial</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*تغيير نوع الخط*/</span>
+	<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">12px</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*تغيير حجم الخط*/</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/9/6.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <hr>
+            <p dir="rtl">لنعود للكود الخاص بتنسيق العنصر الذي يحمل كلاس <code dir="ltr">login-box</code> حتى نعطي الصندوق هامش من أعلى ليطابق الموقع الأصلي ولنفترض 14px</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.login-box</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">82px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">margin-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">14px</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*أضفنا كود لعمل الهامش من أعلى*/</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/9/7.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">كما تلاحظوا نمر على التنسيقات واحد واحد وقد نحتاج أن نعود لعنصر مرة أخرى حتى نقوم بالتعديلات اللازمة للخروج بالشكل المطلوب فلا تفكر بأن الموضوع صعب ويحتاج  أن تكون ملم بجميع التنسيقات لكل عنصر من اول مرة…</p>
+            <h2 dir="rtl">لنستمر</h2>
+            <p dir="rtl">سنبدأ الأن بتنسيق حقل الإدخال<br>
+               تستطيع إستهدافة بإستخدام class ولكن لنتعلم طرق أخرى, سأستخدم الطريقة التالية
+            </p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.login-box</span> <span style="color: #204a87; font-weight: bold">input</span><span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #204a87; font-weight: bold">type</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #204a87; font-weight: bold">email</span><span style="color: #ce5c00; font-weight: bold">]</span><span style="color: #000000; font-weight: bold">{</span>
+
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl">لاحظ طريقة تحديد عناصر الـ <code dir="ltr">input</code> في الـ <code dir="ltr">CSS</code> نقوم بكتابة نوع العنصر الذي استخدمناة بداخل الاقواس وفي حالتنا إستخدمنا عنصر <code dir="ltr">input</code> من نوع <code dir="ltr">email</code>, سنفصل الأنواع لاحقاً ونعرف ما الفرق بين كل نوع فلا تشتت بالك في الوقت الحالي.</p>
+            <p dir="rtl"><strong dir="rtl">اذا ماذا سنحتاج من تنسيقات لإضافتها على حقل الإدخال؟</strong></p>
+            <p dir="rtl">1- نريد تحديد عرضة بـ 142px<br>
+               2- نريد تحديد إرتفاعة بـ 17px<br>
+               3- نريد جعل حجم الخط 12px<br>
+               4- نريد إضافة border لون أزرق غامق بحجم 1px<br>
+               5- نريد إضافة margin من الأعلى بمقدار 4px<br>
+               6- نريد أن نقوم بإضافة padding بمقدار 2px من جميع الجوانب
+            </p>
+            <hr>
+            <details dir="rtl" open="open">
+               <summary dir="rtl">
+                  ما الفرق بين الـ padding وبين الـ margin؟
+               </summary>
+               <p dir="rtl">لا يوجد أي فرق في طريقة كتابة الأكواد وإنما الفرق هو ان الـ margin تقوم بعمل هوامش من <strong dir="rtl">خارجية</strong> بينما الـ padding تقوم بعمل الهوامش <strong dir="rtl">داخلية</strong></p>
+               <p dir="rtl">راجع درس الـ margin حتى تفهم طريقة كتابة الاكواد <a href="https://macdiscussions.udacity.com/t/css-margin-property/85103" dir="rtl">من هنا<span class="badge badge-notification clicks" title="2 clicks" dir="ltr">2</span></a></p>
+               <p></p>
+               <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/9/8.png'%}" alt="image" class="image"></a></div>
+               <p></p>
+            </details>
+            <hr>
+            <p dir="rtl"><strong dir="rtl">اذا حسب متطلباتنا سيكون الكود كالتالي:</strong></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.login-box</span> <span style="color: #204a87; font-weight: bold">input</span><span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #204a87; font-weight: bold">type</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #204a87; font-weight: bold">email</span><span style="color: #ce5c00; font-weight: bold">]</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">142px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">17px</span><span style="color: #000000; font-weight: bold">;</span>
+    <span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">12px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #204a87; font-weight: bold">solid</span> <span style="color: #0000cf; font-weight: bold">#1d2a5b</span><span style="color: #000000; font-weight: bold">;</span>
+    <span style="color: #204a87; font-weight: bold">margin-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">4px</span><span style="color: #000000; font-weight: bold">;</span>
+    <span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">2px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">:النتيجة</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/9/9.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <hr>
+            <p dir="rtl">هذا الكود الذي وصلنا إلية حتى الان:</p>
+            <p dir="ltr"><code dir="ltr">index.html</code></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"float-right"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+
+      <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"login-box"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+        <span style="color: #204a87; font-weight: bold">&lt;div&gt;&lt;label&gt;</span>Email or Phone<span style="color: #204a87; font-weight: bold">&lt;/label&gt;&lt;/div&gt;</span>
+        <span style="color: #204a87; font-weight: bold">&lt;div&gt;&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"email"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+</pre>
+            </div>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">/***removing body margin***/</span>
+<span style="color: #204a87; font-weight: bold">body</span><span style="color: #000000; font-weight: bold">{</span>
+   <span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #8f5902; font-style: italic">/***header***/</span>
+<span style="color: #000000">#header</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100</span><span style="color: #ce5c00; font-weight: bold">%</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">82px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">background-color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#3b5998</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">linear</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">gradient</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">#4e69a2</span><span style="color: #ce5c00; font-weight: bold">,</span><span style="color: #0000cf; font-weight: bold">#3b5998</span><span style="color: #000000; font-weight: bold">);</span>
+	<span style="color: #204a87; font-weight: bold">border-bottom</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #204a87; font-weight: bold">solid</span> <span style="color: #0000cf; font-weight: bold">#133783</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.float-left</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">float</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">left</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+<span style="color: #000000">.float-right</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">float</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">right</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">#logo</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">display</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">block</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">170px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">34px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">background-image</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">url(../images/logo.png)</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">background-position</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">margin-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">30px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">overflow</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">hidden</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">text-indent</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">-100px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+
+<span style="color: #000000">.login-box</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">82px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">margin-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">14px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.login-box</span> <span style="color: #204a87; font-weight: bold">label</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#fff</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">font-family</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">Arial</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">12px</span><span style="color: #000000; font-weight: bold">;</span>
+
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #000000">.login-box</span> <span style="color: #204a87; font-weight: bold">input</span><span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #204a87; font-weight: bold">type</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #204a87; font-weight: bold">email</span><span style="color: #ce5c00; font-weight: bold">]</span><span style="color: #000000; font-weight: bold">{</span>
+		<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">142px</span><span style="color: #000000; font-weight: bold">;</span>
+		<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">17px</span><span style="color: #000000; font-weight: bold">;</span>
+		<span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #204a87; font-weight: bold">solid</span> <span style="color: #0000cf; font-weight: bold">#1d2a5b</span><span style="color: #000000; font-weight: bold">;</span>
+		<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">12px</span><span style="color: #000000; font-weight: bold">;</span>
+		<span style="color: #204a87; font-weight: bold">margin-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">4px</span><span style="color: #000000; font-weight: bold">;</span>
+		<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">2px</span><span style="color: #000000; font-weight: bold">;</span>
+
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #8f5902; font-style: italic">/***general***/</span>
+<span style="color: #000000">.container</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">980px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">82px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
+
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <h2 dir="rtl">لنقم بعمل القسم الثاني</h2>
+            <p dir="rtl">سنحتاج الأن لإضافة صندوق جديد من أجل منطقة حقل إدخال الباسورد و قبل أن نقوم بإنشاء هذا الصندوق الجديد ربما لاحظتم انه عندما قمت بإعطاء العنصر <code dir="ltr">.login-box</code> بعض التنسيقات لم أجعلها تنسيقات مخصصة بحيث انه لا يمكن إستخدامة إلا في مكان واحد والتنسيق الحالي يوحي بأننا سنستطيع  إستخدامة من اجل حقل إدخال الباسورد مما سيجنبنا إضافة عناصر أخرى وكتابة المزيد من التنسيقات, <strong dir="rtl">لنجرب ذلك:</strong></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"> <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"float-right"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+
+      <span style="color: #8f5902; font-style: italic">&lt;!--منطقة حقل الإيميل---&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"login-box"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+        <span style="color: #204a87; font-weight: bold">&lt;div&gt;&lt;label&gt;</span>Email or Phone<span style="color: #204a87; font-weight: bold">&lt;/label&gt;&lt;/div&gt;</span>
+        <span style="color: #204a87; font-weight: bold">&lt;div&gt;&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"email"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+
+		 <span style="color: #8f5902; font-style: italic">&lt;!--منطقة حقل الباسورد---&gt;</span>
+        <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"login-box"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+           <span style="color: #204a87; font-weight: bold">&lt;div&gt;&lt;label&gt;</span>Email or Phone<span style="color: #204a87; font-weight: bold">&lt;/label&gt;&lt;/div&gt;</span>
+           <span style="color: #204a87; font-weight: bold">&lt;div&gt;&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"email"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+        <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl">لاحظ بأنني قمت بنسخ نفس الأكواد بالضبط وسأقوم الأن بعمل التغيرات اللازمة مثل تغيير نص وصف الحقل بالإضافة إلى تغيير نوع حق الإدخال الى نوع <code dir="ltr">password</code> وسأقوم بإضافة عنصر <code dir="ltr">div</code> جديد حتى نضيف رابط <code dir="ltr">forgot account ?</code> الذي تحت حقل إدخال الباسورد كما بالموقع الأصلي</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"> <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"float-right"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+
+       <span style="color: #8f5902; font-style: italic">&lt;!--منطقة حقل الإيميل---&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"login-box"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+        <span style="color: #204a87; font-weight: bold">&lt;div&gt;&lt;label&gt;</span>Email or Phone<span style="color: #204a87; font-weight: bold">&lt;/label&gt;&lt;/div&gt;</span>
+        <span style="color: #204a87; font-weight: bold">&lt;div&gt;&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"email"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+
+	 <span style="color: #8f5902; font-style: italic">&lt;!--منطقة حقل الباسورد---&gt;</span>
+        <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"login-box"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+           <span style="color: #204a87; font-weight: bold">&lt;div&gt;&lt;label&gt;</span>Password<span style="color: #204a87; font-weight: bold">&lt;/label&gt;&lt;/div&gt;</span>
+           <span style="color: #204a87; font-weight: bold">&lt;div&gt;&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"password"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+          <span style="color: #204a87; font-weight: bold">&lt;div&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Forgot account?<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/div&gt;</span>
+        <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl">ربما تتسأل لماذا وضعت <code dir="ltr">#</code> بداخل منطقة كتابة الرابط وذلك لانه ليس لدي رابط لوضعه لذلك العنصر في الوقت الحالي</p>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/9/10.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">لاحظ أن الصندوق <code dir="ltr">.login-box</code> أتى في سطر جديد لانه <code dir="ltr">div</code> ومن نوع <code dir="ltr">block</code> لذا سأعطية خاصية التعويم حتى أجعل الصناديق تطفو نحو اليسار بجانب بعضها البعض</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.login-box</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">82px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">margin-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">14px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">float</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #204a87; font-weight: bold">left</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*تعويم الصندوق نحو اليسار*/</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/9/11.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">الأن نفس التنسيقات التي أضفناها لحقل الإيميل سنقوم بإضافتها لحقل الباسورد ولكن لن نكررها من جديد بل سنضيف الكود الذي من خلالة سنستهدف حقل الباسورد بجوار كود استهداف حقل الإيميل ونضع بينهما فاصلة.</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.login-box</span> <span style="color: #204a87; font-weight: bold">input</span><span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #204a87; font-weight: bold">type</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #204a87; font-weight: bold">email</span><span style="color: #ce5c00; font-weight: bold">],</span> <span style="color: #000000">.login-box</span> <span style="color: #204a87; font-weight: bold">input</span><span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #204a87; font-weight: bold">type</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #204a87; font-weight: bold">password</span><span style="color: #ce5c00; font-weight: bold">]</span><span style="color: #000000; font-weight: bold">{</span>
+		<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">142px</span><span style="color: #000000; font-weight: bold">;</span>
+		<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">17px</span><span style="color: #000000; font-weight: bold">;</span>
+		<span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #204a87; font-weight: bold">solid</span> <span style="color: #0000cf; font-weight: bold">#1d2a5b</span><span style="color: #000000; font-weight: bold">;</span>
+		<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">12px</span><span style="color: #000000; font-weight: bold">;</span>
+		<span style="color: #204a87; font-weight: bold">margin-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">4px</span><span style="color: #000000; font-weight: bold">;</span>
+		<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">2px</span><span style="color: #000000; font-weight: bold">;</span>
+
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl">بإمكانك مشاهدة النتيجة وقبل أن اعرضها لكم سأقوم بعمل هامش للصندوق <code dir="ltr">.login-box</code> من جهة اليسار بقيمة 15px</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.login-box</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">82px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">margin-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">14px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">float</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #204a87; font-weight: bold">left</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">margin-left</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">15px</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*هنا هامش من اليسار*/</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/9/12.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">لنقوم بعمل تنسيقات لرابط <code dir="ltr">forgot account?</code></p>
+            <p dir="rtl">1- سنحتاج لتغيير لونة للأزرق الفاتح<br>
+               2- سنحتاج لإزالة الخط الذي تحتة<br>
+               3- سنحتاج لتغيير حجم الخط الى 12px<br>
+               4- سنحتاج إلى تغيير نوع الخط
+            </p>
+            <p dir="rtl"><strong dir="rtl">لاحظ ان هناك تنسيقات قمنا بعملها سابقاً لنص وصف الحقل مطابقة لبعض الخصائص التي نريد اضافتها لهذا سنعيد إستخدامها لهذا العنصر حتى لانقوم بتكرر اي اكواد تنسيقات مرة أخرى كالتالي:</strong></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.login-box</span> <span style="color: #204a87; font-weight: bold">label</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #000000">.login-box</span> <span style="color: #204a87; font-weight: bold">a</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#fff</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">font-family</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">Arial</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">12px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl">لاحظ إستهدفت الرابط بإستخدام <code dir="ltr">.login-box a</code> وقمت بكتابته بجوار العنصر الأخر و ضعت بينهم فاصلة.</p>
+            <p dir="rtl">الأن قمنا بتغيير حجم الخط وتغيير نوع الخط وكذلك تغيير لون الخط ولكن للابيض ونحن نريد أن يكون لون ازرق فاتح لهذا سنقوم بفصل تنسيق اللون واسنادة لـ <code dir="ltr">.login-box label</code> وحدة وابقي فقط على الخائص المشتركة بينهما ومن ثم سأضيف بقية التنسيقات التي تنقصنا للرابط ليصبح الكود كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.login-box</span> <span style="color: #204a87; font-weight: bold">label</span><span style="color: #ce5c00; font-weight: bold">,</span><span style="color: #000000">.login-box</span> <span style="color: #204a87; font-weight: bold">a</span><span style="color: #000000; font-weight: bold">{</span>
+    <span style="color: #8f5902; font-style: italic">/*التنسيقات المشتركة*/</span>
+	<span style="color: #204a87; font-weight: bold">font-family</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">Arial</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">12px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #8f5902; font-style: italic">/*التنسيقات الخاصة بنص وصف الحقل*/</span>
+<span style="color: #000000">.login-box</span> <span style="color: #204a87; font-weight: bold">label</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#fff</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+
+<span style="color: #8f5902; font-style: italic">/*التنسيقات الخاصة بالرابط*/</span>
+<span style="color: #000000">.login-box</span> <span style="color: #204a87; font-weight: bold">a</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#9cb4d8</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">text-decoration</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">none</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/9/13.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">اريد عمل بعض التنسيقات قبل أن ننتقل لعمل زر <code dir="ltr">login</code></p>
+            <p dir="rtl">1- اضافة هامش داخلي <code dir="ltr">padding</code> لنصوص وصف الحقل وللرابط اسفل الحقل من جهة اليسار بقيمة 1px</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.login-box</span> <span style="color: #204a87; font-weight: bold">label</span><span style="color: #ce5c00; font-weight: bold">,</span><span style="color: #000000">.login-box</span> <span style="color: #204a87; font-weight: bold">a</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">font-family</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">Arial</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">12px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">padding-left</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1px</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*هنا أضفته*/</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl">2- إضافة هامش سفلي لحقل الإدخال حتى تكون المسافة بينة وبين <code dir="ltr">forgot account?</code> مطابقة للموقع الأصلي بقيمة 2px</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.login-box</span> <span style="color: #204a87; font-weight: bold">input</span><span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #204a87; font-weight: bold">type</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #204a87; font-weight: bold">email</span><span style="color: #ce5c00; font-weight: bold">],</span> <span style="color: #000000">.login-box</span> <span style="color: #204a87; font-weight: bold">input</span><span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #204a87; font-weight: bold">type</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #204a87; font-weight: bold">password</span><span style="color: #ce5c00; font-weight: bold">]</span><span style="color: #000000; font-weight: bold">{</span>
+		<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">142px</span><span style="color: #000000; font-weight: bold">;</span>
+		<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">17px</span><span style="color: #000000; font-weight: bold">;</span>
+		<span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #204a87; font-weight: bold">solid</span> <span style="color: #0000cf; font-weight: bold">#1d2a5b</span><span style="color: #000000; font-weight: bold">;</span>
+		<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">12px</span><span style="color: #000000; font-weight: bold">;</span>
+		<span style="color: #204a87; font-weight: bold">margin-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">4px</span><span style="color: #000000; font-weight: bold">;</span>
+		<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">2px</span><span style="color: #000000; font-weight: bold">;</span>
+		<span style="color: #204a87; font-weight: bold">margin-bottom</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">2px</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*هنا أضفته*/</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl">3- سأقوم بتعديل الهامش العلوي للعنصر <code dir="ltr">.login-box</code> إلى 13px بدلاً من 14px</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.login-box</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">82px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">margin-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">13px</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*هنا التعديل*/</span>
+	<span style="color: #204a87; font-weight: bold">float</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #204a87; font-weight: bold">left</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">margin-left</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">15px</span><span style="color: #000000; font-weight: bold">;</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/9/14.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <h2 dir="rtl">لنقوم بإضافة زر الـ login</h2>
+            <p dir="rtl">سنستخدم نفس العنصر <code dir="ltr">.login-box</code>  كالعمل منطقة رز تسجيل الدخول:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"float-right"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+
+      <span style="color: #8f5902; font-style: italic">&lt;!--منطقة حقل الإيميل---&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"login-box"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+        <span style="color: #204a87; font-weight: bold">&lt;div&gt;&lt;label&gt;</span>Email or Phone<span style="color: #204a87; font-weight: bold">&lt;/label&gt;&lt;/div&gt;</span>
+        <span style="color: #204a87; font-weight: bold">&lt;div&gt;&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"email"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+
+	  <span style="color: #8f5902; font-style: italic">&lt;!--منطقة حقل الباسورد---&gt;</span>
+        <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"login-box"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+           <span style="color: #204a87; font-weight: bold">&lt;div&gt;&lt;label&gt;</span>Password<span style="color: #204a87; font-weight: bold">&lt;/label&gt;&lt;/div&gt;</span>
+           <span style="color: #204a87; font-weight: bold">&lt;div&gt;&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"password"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+          <span style="color: #204a87; font-weight: bold">&lt;div&gt;&lt;a</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"#"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Forgot account?<span style="color: #204a87; font-weight: bold">&lt;/a&gt;&lt;/div&gt;</span>
+        <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+
+	 <span style="color: #8f5902; font-style: italic">&lt;!--منطقة زر تسجيل الدخول---&gt;</span>
+        <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"login-box"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+
+        <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+
+
+<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl">سأقوم بإضافة الزر بإستخدام نفس كود الحقول ولكن هذه المرة سيكون من نوع <code dir="ltr">submit</code> وسأقوم بإعطاءة قيمة log in بالكود التالي <code dir="ltr">value="Log In"</code></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"> <span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"login-box"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+      <span style="color: #204a87; font-weight: bold">&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"submit"</span> <span style="color: #c4a000">value=</span><span style="color: #4e9a06">"Log In"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+ <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/9/15.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl"><strong dir="rtl">الأن سأقوم بإضافة التنسيقات التالية:</strong><br>
+               1- تغيير لون الخلفية<br>
+               2- عمل حدود border للعنصر<br>
+               3- تغيير لون النص إلى الأبيض<br>
+               4- تحديد إرتفاع الزر إلى 24px<br>
+               5- عمل هوامش داخلية padding من اعلى واسفل بقيمة 2px ومن اليمين واليسار بقيمة 6px<br>
+               6- تغيير جحم الخط إلى 12 px
+            </p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.login-box</span> <span style="color: #204a87; font-weight: bold">input</span><span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #204a87; font-weight: bold">type</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #204a87; font-weight: bold">submit</span><span style="color: #ce5c00; font-weight: bold">]</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">background-color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#4267b2</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*تغيير لون الخلفية*/</span>
+	<span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #204a87; font-weight: bold">solid</span> <span style="color: #0000cf; font-weight: bold">#29487d</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*عمل حدود للزر*/</span>
+	<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#fff</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*تغيير لون الخط للابيض*/</span>
+	<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">24px</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*نحديد إرتفاع الزر*/</span>
+	<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">2px</span> <span style="color: #0000cf; font-weight: bold">6px</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*هوامش داخلية*/</span>
+	<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">12px</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*تغيير حجم الخط*/</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/9/16.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl"><strong dir="rtl">مالذي نريد عملة الأن حتى يصبح الزر مطابق للموقع الأصلي؟</strong><br>
+               1- اعطاء الزر هامش من اعلى بقيمة 22px<br>
+               2- جعل زوايا حدود الرز دائرية بقيمة 2px<br>
+               3- جعل حجم الخط غليظ<br>
+               4- تحديد إرتفاع الخط بقيمة 18px بالنسبة لإرتفاع الزر
+            </p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.login-box</span> <span style="color: #204a87; font-weight: bold">input</span><span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #204a87; font-weight: bold">type</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #204a87; font-weight: bold">submit</span><span style="color: #ce5c00; font-weight: bold">]</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">background-color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#4267b2</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #204a87; font-weight: bold">solid</span> <span style="color: #0000cf; font-weight: bold">#29487d</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#fff</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">24px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">2px</span> <span style="color: #0000cf; font-weight: bold">6px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">12px</span><span style="color: #000000; font-weight: bold">;</span>
+    <span style="color: #8f5902; font-style: italic">/*التنسيقات الجديدة*/</span>
+    <span style="color: #204a87; font-weight: bold">margin-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">22px</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*هامش من اعلى*/</span>
+    <span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">radius</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">2px</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*جعل زوايا الزر دائرية*/</span>
+    <span style="color: #204a87; font-weight: bold">font-weight</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">bold</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*جعل الخط عليظ*/</span>
+    <span style="color: #204a87; font-weight: bold">line-height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">18px</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*تحديد موقع الخط بشكل عمودي*/</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/9/17.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">تبقى لنا شي واحد. قم بوضع الماوس على الرز في موقعنا ثم قم بوضعة على زر تسجيل الدخول في الموقع الأصلي, <strong dir="rtl">ماذا تلاحظ؟</strong></p>
+            <p dir="rtl">هل تلاحظ تحول شكل مؤشر الماوس إلى شكل يد مما يوحي بأن هذا الزر قابل للضغط ؟</p>
+            <p dir="rtl">سنقوم بإضافة ذلك لموقعنا بإستخدام خاصية <code dir="ltr">cursor</code> والتي تقوم بتحديد شكل مؤشر المأوس عند دخولة منطقة عنصر ما</p>
+            <p dir="rtl"><strong dir="rtl">كالتالي:</strong></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.login-box</span> <span style="color: #204a87; font-weight: bold">input</span><span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #204a87; font-weight: bold">type</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #204a87; font-weight: bold">submit</span><span style="color: #ce5c00; font-weight: bold">]</span><span style="color: #000000; font-weight: bold">{</span>
+	<span style="color: #204a87; font-weight: bold">background-color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#4267b2</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #204a87; font-weight: bold">solid</span> <span style="color: #0000cf; font-weight: bold">#29487d</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#fff</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">24px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">2px</span> <span style="color: #0000cf; font-weight: bold">6px</span><span style="color: #000000; font-weight: bold">;</span>
+	<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">12px</span><span style="color: #000000; font-weight: bold">;</span>
+    <span style="color: #204a87; font-weight: bold">margin-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">22px</span><span style="color: #000000; font-weight: bold">;</span>
+    <span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">radius</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">2px</span><span style="color: #000000; font-weight: bold">;</span>
+    <span style="color: #204a87; font-weight: bold">font-weight</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">bold</span><span style="color: #000000; font-weight: bold">;</span>
+    <span style="color: #204a87; font-weight: bold">line-height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">18px</span><span style="color: #000000; font-weight: bold">;</span>
+    <span style="color: #204a87; font-weight: bold">cursor</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">pointer</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">/*تغيير شكل مؤشر المأوس */</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre>
+            </div>
+            <hr>
+            <h2 dir="rtl">الدرس القادم سنقوم بعمل اللمسات الأخيرة للـ header</h2>
+            <p dir="rtl">ملاحظة: حرصت على ان نمر بعملية التصميم كاملة حتى تعرفوا كيف انك لا تحتاج ان تكون تعرف كيف تقوم بالعمل من البدأية بل يجب عليك أن تبدأ بالعمل وعندما تحتاج لعمل اضافة او تعديلات ستعود اليها لاحقاً.</p>
+            <hr>
+         </div>
+      </div>
+      <script src="{% static 'js/main.js' %}"></script>
+   </body>
+</html>

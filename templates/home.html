@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ar" dir="rtl">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Coretabs Academy</title>
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+      <style class="connectorStyle"></style>
+   </head>
+   <body class="home">
+      <div class="navbar-brand">
+         <div>
+             Academy
+         </div>
+      </div>
+      <div class="background-image">
+         <h1>تطوير صفحات المواقع الإلكترونية</h1>
+         <p>
+		  إن الإلمام بمجال البرمجة، أمرٌ لا غنى عنه في أيامنا هذه. وإن تعلُّم البرمجة هو من أكثر الأمور الغنية والمفيدة التي يمكنك القيام بها.
+
+		  </p>
+         <a class="link" href="#main">الدروس</a>
+         <div class="course animated infinite bounce">
+            <i class="fas fa-chevron-down"></i>
+            <a href="#main"></a>
+         </div>
+      </div>
+      <main id="main" class="beauty-box">
+         <h1 class="title">دروس المسار</h1>
+         <div class="courses_container">
+            <div class="html_css box">
+               <div class="courses_image">
+                  <img src="{% static 'images/html_css.png'%}" alt="">
+               </div>
+               <div class="text">
+                  <h2>دروس HTML و CSS</h2>
+                  <p>لا تحتاج لأي معرفة مسبقة في لغة ترميز النص الفائق للبدئ في هذه الوحدة، ولكن يجب على الأقل أن تملك معرفة مبدئية حول استخدام الحواسيب، واستخدام متصفح الويب.</p>
+                  <a class="button-link" href="templates/html_css/html-css.html">إبدأ</a>
+               </div>
+               <a class="box-link" href="templates/html_css/html-css.html"></a>
+            </div>
+            <div class="javascript box">
+               <div class="courses_image">
+                  <img src="{% static 'images/js.png'%}" alt="">
+               </div>
+               <div class="text">
+                  <h2>دروس JavaScript</h2>
+                  <p>الجافاسكريبت هي لغة برمجة كائنية التوجة ومتعددة المنصات. هي لغة صغيرة وخفيفة الوزن. داخل بيئة المضيف (على سبيل المثال، متصفح ويب)، بإستخدام الجافاسكربت تستطيع جعل تطبيقك تفاعلي.</p>
+
+                  <a class="button-link" href="templates/javascript/javascript.html">إبدأ</a>
+
+               </div>
+               <a class="box-link" href="templates/javascript/javascript.html"></a>
+            </div>
+            <div class="git box">
+               <div class="courses_image">
+                  <img src="{% static 'images/git.png'%}" alt="">
+               </div>
+               <div class="text">
+                  <h2>دروس Git</h2>
+                  <p>Git هو برنامج لإدارة النسخ أو كما يطلق عليه حرفياً (نظام إدارة الإصدارات), بإستخدام الـ Git تستطيع تسجيل التغييرات التي تقوم بها على تطبيقك ومن ثم الرجوع إليها في أي وقت وكذلك يساعدك على التعاون مع مبرمجين أخرين في العمل على المشاريع.</p>
+                  <a class="button-link" href="templates/git/git.html">إبدأ</a>
+
+               </div>
+               <a class="box-link" href="templates/git/git.html"></a>
+            </div>
+            <div class="project box">
+               <div class="courses_image">
+                  <img src="{% static 'images/project.png'%}" alt="">
+               </div>
+               <div class="text">
+                  <h2>المشاريع</h2>
+                  <p>كلنا نعلم أن المشاريع هي من أهم الأشياء التي تمكننا من تطوير خبراتنا في شتى المجالات فلنقم بتطبيق ما تعلمناه من خلال العمل على مشاريع حقيقة.</p>
+                  <a class="button-link" href="templates/projects/projects.html">إبدأ</a>
+
+               </div>
+               <a class="box-link" href="templates/projects/projects.html"></a>
+            </div>
+         </div>
+      </main>
+      <div class="about">
+         <h1>عن الموقع</h1>
+         <p>
+				هذا الموقع تم وضعة كمرجع لدروس و ورش العمل التي تم وضعها في مبادرة المليون مبرمج عربي, حرصت على أن تكون الدروس مبسطة وتستهدف بشكل رئيسي من لديهم خبرة صفر في هذا المجال لهذا إن لم تكن جزء من برنامج المليون مبرمج عربي فبإمكانك الإستفادة من هذه الدروس ولوضع أسئلتك أو إستفساراتك قم بالإنضمام لقروب الفيس بوك الخاص بنا
+         </p>
+		  <a href="http://www.facebook.com/groups/ProgrammersUnion" class="facebook"></a>
+      </div>
+      <footer>
+           <div class="text">
+             Made with <img src="{% static 'images/heart.png'%}" alt="heart" width="20"> by
+           </div>
+           <div class="text">
+             <a href="http://alhakem.me/" target="_blank">Mohammed Al-Hakem
+               <span class="profile"><img src="{% static 'images/mohammed.png'%}" alt="Mohammed Al-Hakem's photo"></span>
+             </a>&nbsp; &amp; &nbsp;
+             <a href="https://www.behance.net/SalahGFX" target="_blank">Salah Eddine Lachkar
+               <span class="profile"><img src="{% static 'images/salah-eddine.png'%}" alt="Salah Eddine Lachkar's photo"></span>
+             </a>
+           </div>
+      </footer>
+	  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+      <script src="{% static 'js/main.js' %}"></script>
+   </body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+{% load static%}
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>[الدرس الثالث] First & Second Lessons Recap</title>
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+   </head>
+   <body>
+      <div class="navbar">
+         <div class="navbar-brand">
+            <div class="">
+               Academy
+            </div>
+         </div>
+         <div class="icon-container">
+            <div class="humberger-icon">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+         </div>
+         <div class="navbar-nav">
+            <nav>
+               <div class="close">
+                  أغلق <i class="fas fa-times"></i>
+               </div>
+               <a href="../../index.html">الرئيسية</a>
+               <a href="../html_css/html-css.html">HTML & CSS</a>
+               <a href="../javascript/javascript.html">JavaScript</a>
+               <a href="../git/git.html">Git</a>
+               <a href="../projects/projects.html">المشاريع</a>
+            </nav>
+         </div>
+      </div>
+      <div class="container">
+         <div class="cooked">
+            <h1>إستنساخ cloning</h1>
+            <hr>
+            <p dir="rtl">عملية إستنساخ مشروع يوجد على أي سيرفر أخر أو على جهازك تسمى بالـ cloning. وتحتاج للقيام بهذه العملية للحصول على نسخة مطابقة من المشروع حتى نبدأ بالعمل علية.</p>
+            <h2 dir="rtl">العمل على واجهة الأوامر CLI:</h2>
+            <p dir="rtl">للقيام بذلك كل ماعليك فعلة هو كتابة الأمر التالي:</p>
+
+            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+               <pre style="margin: 0; line-height: 125%">git clone &lt;url&gt; &lt;name&gt;
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">حيث أن:</strong></p>
+            <p dir="rtl">الـ <code dir="ltr">&lt;url&gt;</code> موقع المستودع سوى كان على سيرفر أو على جهازك</p>
+            <p dir="rtl">الـ <code dir="ltr">&lt;name&gt;</code> إسم المجلد الذي سيتم عمل الإستنساخ إلية. في حال تم كتابة إسم مجلد غير موجود سيتم إنشاء ذلك المجلد ومن ثم القيام بعملية الإستنساخ</p>
+            <p dir="rtl"><strong dir="rtl">ملاحظة:</strong> تحديد إسم المجلد إختياري وبإمكانك عمل الإستنساخ بالأمر التالي فقط</p>
+
+            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+               <pre style="margin: 0; line-height: 125%">git clone &lt;url&gt;
+</pre>
+            </div>
+            <hr>
+            <h3 dir="rtl">إستنساخ مستودع محلي (Local) يتم كالتالي:</h3>
+            <p dir="rtl">سأقوم بكتابة أمر الإستنساخ متبوع بمسار المجلد الخاص بالمستودع ومن ثم متبوع بإسم المجلد الذي أريد أن يتم عمل الإستنساخ إلية.</p>
+
+            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+               <pre style="margin: 0; line-height: 125%">git clone webpage <span style="color: #204a87">test</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">شاهد الخطوات:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="1-1.gif" rel="nofollow noopener" dir="ltr"><img src="../../images/git/4/1.gif" alt="1-1" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">لاحظ أن webpage ليس إسم المجلد فقط بل هو مسار المجلد وقمت بكتابة إسمة فقط لأنني قمت بفتح نافذة الـ CLI في نفس موقع المستودع, لنفترض بأنني أريد أن أقوم بعمل إستنساخ للمشروع وانا في مسار مختلف حينها سأقوم بكتابة مسار ملف المستودع على جهازي.</p>
+            <hr>
+            <h3 dir="rtl">إستنساخ مستودع من على سيرفر (Remote) يتم كالتالي:</h3>
+            <p dir="rtl">سأقوم بكتابة أمر الإستنساخ متبوع بعنوان المستودع على السيرفر</p>
+
+            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+               <pre style="margin: 0; line-height: 125%">git clone https://github.com/FortAwesome/Font-Awesome
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">شاهد الخطوات:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="2-2.gif" rel="nofollow noopener" dir="ltr"><img src="../../images/git/4/2.gif"  alt="2-2" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">لاحظ أنني هذه المرة لم أقم بتحديد إسم الملف الذي سيتم عمل الإستنساخ بداخله لهذا سيتم إنشاء ملف بشكل تلقائي يحمل نفس إسم المشروع على الـ GitHub. ولهذا تم إنشاء المجلد بإسم Font-Awesome.</p>
+            <hr>
+            <h2 dir="rtl">العمل على الواجهة الرسومية GUI:</h2>
+            <p dir="rtl">الأمر بسيط تابع الشرح التالي:<br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="3-3.gif" rel="nofollow noopener" dir="ltr"><img src="../../images/git/4/3.gif" alt="3-3" class="image"></a></div>
+            <p></p>
+            <hr>
+            <h2 dir="rtl">مهمة اليوم</h2>
+            <p dir="rtl">سنقوم بعمل تطبيق على بعض الأوامر ونعمل كفريق عن طريق القيام بلعبة سؤال وجواب <img src="{% static 'images/git/4/4.png'%}" title=":question:" class="emoji" alt=":question:">.<br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/4/5.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl"><strong dir="rtl">قمت بعمل الصفحة أعلاة ورفعتها على مستودع, المهمة المطلوبة منك في هذا الدرس كالتالي:</strong></p>
+            <p dir="rtl">1- عمل clone للمشروع على جهازك <a href="https://github.com/Alhakem/1mac-lesson4" rel="nofollow noopener" dir="rtl"><strong dir="rtl">من هنا رابط المستودع</strong></a>.</p>
+            <p dir="rtl">2- بعد قيامك بذلك قم بمشاركة حسابك على موقع GitHub حتى يتم إضافتك كمساهم في المشروع.</p>
+            <h2 dir="rtl">أين يتم مشاركة حسابك بعد إكمالك مهمة الإستنساخ؟</h2>
+            <p dir="rtl">في الموضوع المخصص من هنا:<br></p>
+            <p></p>
+            <hr>
+            <p dir="rtl"><em dir="rtl">قم بعمل ما تم أيضاحة أعلاة فقط وبقية التفاصيل وكيف سنقوم بالعمل سيتم إضاحها في الدرس القادم</em></p>
+            <hr>
+         </div>
+      </div>
+      <script src="{% static 'js/main.js' %}"></script>
+   </body>
+</html>

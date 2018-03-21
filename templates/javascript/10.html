@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+{% load static%}
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>[الدرس الثامن]: Arrays</title>
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+   </head>
+   <body>
+      <div class="navbar">
+         <div class="navbar-brand">
+            <div class="">
+               Academy
+            </div>
+         </div>
+         <div class="icon-container">
+            <div class="humberger-icon">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+         </div>
+         <div class="navbar-nav">
+            <nav>
+               <div class="close">
+                  أغلق <i class="fas fa-times"></i>
+               </div>
+               <a href="../../index.html">الرئيسية</a>
+               <a href="../html_css/html-css.html">HTML & CSS</a>
+               <a href="../javascript/javascript.html">JavaScript</a>
+               <a href="../git/git.html">Git</a>
+               <a href="../projects/projects.html">المشاريع</a>
+            </nav>
+         </div>
+      </div>
+      <div class="container">
+         <div class="cooked">
+            <h1 dir="rtl">المصفوفة Array</h1>
+            <hr>
+            <p dir="rtl">في الدرس السابق تكلمنا عن الشروط (Conditionals) في درس اليوم سنتكلم عن المصفوفات أو ما يسمى بالـ Arrays.</p>
+            <hr>
+            <p dir="rtl">المصفوفة هي عبارة عن طريقة لتخزين وترتيب البيانات وهي تعتبر كالمتغير الذي نستطيع أن نستخدمة لتخزين عدد من القيم تحت إسم واحد.</p>
+            <p dir="rtl"><strong dir="rtl">ما الفرق بين المتغير العادي وبين المصفوفة؟</strong><br>
+               المتغير يستخدم لتخزين قيمة واحدة بينما المصفوفة تستخدم لتخزين عدد من القيم بحيث نستطيع تتبع هذه القيم كونها مترابطة.
+            </p>
+            <p dir="rtl">لنفترض بأنك تقوم ببرمجة سلة مشتريات لمتجر إلكتروني وتريد تخزين وتتبع كل منتج يقوم العميل بإختيارة وإضافته لسلة مشترياته فهل تعرف كم منتج سيقوم العميل بإختيارة حتى تحدد كم عدد المتغيرات التي ستقوم بتعريفها لتخزين تلك المنتجات؟</p>
+            <p dir="rtl">لنفترض بأنك قمت بتحديد 10 متغيرات لتخزين المنتجات <strong dir="rtl">كالتالي:</strong></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">productOne</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">productTwo</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">productThree</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">porductFour</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">productFive</span> <span style="color: #000000; font-weight: bold">......</span> <span style="color: #000000">productTen</span><span style="color: #000000; font-weight: bold">;</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">لنفترض</strong> أن العميل قام بإضافة منتج واحد فهذا يعني انه لديك 9 متغيرات عاملة زحمة و غير مستغلة<br>
+               <strong dir="rtl">لنفترض</strong> أن العميل قام بإضافة 10 منتجات ويريد إضافة منتج اخر فهل ترفض طلب العميل لسبب عدم وجود متغير اخر ليخزن هذه المنتج؟
+            </p>
+            <p dir="rtl">الحل في هذه الحالة هو إستخدام المصفوفات التي تعطيك المرونة في تحديد عدد البيانات التي ترغب بتخزينها حسب الحاجة فيستطيع العميل إضافة منتج واحد او الف منتج فلن تكون هناك أي مشكلة</p>
+            <p dir="rtl">تعريف المصفوفة التي ستحل لنا هذه المشكلة يتم <strong dir="rtl">كالتالي:</strong></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">shoppingCart</span><span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">[</span> <span style="color: #4e9a06">"Headphones"</span> <span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">"Camera"</span> <span style="color: #000000; font-weight: bold">];</span>
+</pre>
+            </div>
+            <p dir="rtl">قمت بعمل مصفوفة تحتوي على منتجين تحت إسم متغير واحد وهو shoppingCart بحيث أستطيع الأن الوصول لكل هذه المنتجات بإستخدام هذا المتغير عبر الرقم التسلسلي (index) الخاص بكل عنصر في هذه المصفوفة حيث ان اول عنصر يبدأ رقمة التسلسلي من الرقم 0 كما سبق وناقشنا ذلك في درس النصوص (strings):<br>
+               <img src="../../images/javascript/10/1.png" alt="image" width="590" height="170">
+            </p>
+            <p dir="rtl">لاحظ انه اذا اردت الوصول للمنتج الأول في سلة المشتريات سأكتب الكود التالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">shoppingCart</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">];</span>
+</pre>
+            </div>
+            <p dir="rtl">واذا اردت الوصول للمنتج الثاني في سلة المشتريات سأكتب التالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">shoppingCart</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">];</span>
+</pre>
+            </div>
+            <p dir="rtl">جميل, لنفترض أن العميل يريد أن يقوم بإضافة منتج جديد ما يعني بأننا سنحتاج إلى خانة جديدة في هذه المصفوفة <strong dir="rtl">كالتالي:</strong><br></p>
+            <img class="image" src="../../images/javascript/10/2.png">
+            <p></p>
+            <p dir="rtl">حتى نقوم بتخزين المنتج الثالث في سلة المشتريات سنقوم بوضعة في الخانة ذات الرقم التسلسلي 2 كالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">shoppingCart</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #0000cf; font-weight: bold">2</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"memory card"</span><span style="color: #000000; font-weight: bold">;</span>
+</pre>
+            </div>
+            <p dir="rtl">النتيجة:<br></p>
+            <img class="image" src="../../images/javascript/10/3.png">
+            <p></p>
+            <hr>
+            <ul dir="rtl">
+               <li dir="rtl">
+                  <h3 dir="rtl">طرق إضافة العناصر للمصفوفة</h3>
+               </li>
+            </ul>
+            <p dir="rtl">كما ذكرنا اعلاة ان من مميزات المصفوفة انها مرنة وتتيح لك إضافة كم ما تريد من بيانات بشكل ديناميكي و هناك ثلاث طريق يتم إستخدامها لإضافة العناصر للمصفوفات:</p>
+            <p dir="rtl">1-  <strong dir="rtl">هناك خاصية</strong> تسمى lenght ما يعني الطول حيث انه عند اضافة هذه الخاصية للمصفوفة تقوم بإرجاع طول المصفوفة أي عدد العناصر الموجودة لدينا في المصفوفة, لنقم بتطبيق ذلك على المصفوفة الخاصة بسلة المشتريات التي عرفناها اعلاة <strong dir="rtl">كالتالي:</strong></p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">shoppingCart</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span>
+</pre>
+            </div>
+            <p dir="rtl">تم إرجاع القيمة 3 كعدد المنتجات التي تم إضافتها للمصفوفة<br></p>
+            <img class="image" src="../../images/javascript/10/4.png">
+            <p></p>
+            <p dir="rtl">اذا طلبت منك أن تقوم بعد أي شي بالتأكيد ستبدأ من الرقم واحد فلا يمكنك ان تبدأ بعد أي عناصر من الرقم 0 فهذا يعني بأنك تجاهلت احد العناصر لهذا ركز على التفريق بين عدد العناصر في المصفوفة وبين ارقامها التسلسلية كما هو موضح بالصورة أدناة:<br>
+               <img src="../../images/javascript/10/5.png" alt="image" width="625" height="314">
+            </p>
+            <p dir="rtl">لنعود للقيمة التي أرجعتها لنا الخاصية <strong dir="ltr">length</strong> والذي هو رقم <strong dir="ltr">3</strong>, هل تلاحظوا أن هذا الرقم هو رقم الخانة الجديدة للعنصر الجديد في هذه المصفوفة؟<br></p>
+            <img class="image" src="../../images/javascript/10/6.png">
+            <p></p>
+            <p dir="rtl">ما يعني انه اذا اردنا أن نقوم بإضافة عنصر جديد لهذه المصفوفة فسنقوم بالتالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">shoppingCart</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #0000cf; font-weight: bold">3</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"monitor"</span><span style="color: #000000; font-weight: bold">;</span>
+</pre>
+            </div>
+            <p dir="rtl">او سنقوم بالتعويض عن رقم 3 بالخاصية <code dir="ltr">shoppingCart.length</code> والتي ستحمل دائماً عدد العناصر والذي يصدف بأنه هو نفسة رقم الخانة الأخيرة التي نريد أن نقوم بإضافة العنصر الجديدة اليها بما يعني بأن العملية ستكون ديناميكية وسيتم جلب الرقم التسلسلي بشكل اوتوماتيكي كالتالي:</p>
+            <pre dir="ltr"><code class="hljs apache" dir="ltr"><span class="hljs-attribute">shoppingCart</span>[shoppingCart.length] = <span class="hljs-string">"monitor"</span>;
+</code></pre>
+            <hr>
+            <p dir="rtl">2- <strong dir="rtl">الطريقة الثانية</strong> بإستخدام <code dir="ltr">push()</code> هذه الطريقة أسهل من التي شرحناها أعلاة حتى تضيف عنصر جديد في نهاية المصفوفة كل ما عليك القيام به هو التالي:</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">shoppingCart</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">push</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"USB"</span><span style="color: #000000; font-weight: bold">);</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">كالتالي:</strong><br></p>
+            <img class="image" src="../../images/javascript/10/7.gif">
+            <p></p>
+            <hr>
+            <p dir="rtl">2- <strong dir="rtl">الطريقة الثالثة</strong> بإستخدام <code dir="ltr">unshift()</code> بنفس فكرة push ولكن هذه الطريقة تقوم بإضافة العنصر في بدأية المصفوفة وليس في نهايتها</p>
+            <div class="code">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">shoppingCart</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">unshift</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"laptop"</span><span style="color: #000000; font-weight: bold">);</span>
+</pre>
+            </div>
+            <hr>
+            <p dir="rtl">هذه كانت الفكرة الرئيسية للمصفوفات (Arrays) وشرح لأهم النقاط التي سنحتاج لفهمها من أجل الدرس القادم وقد تم شرح كل تفاصيل الـ Arrays في دروس الـ classroom الخاصة بالمسار فلا أريد أن نعيد ما تم شرحة بطريقة ممتازة حتى نركز في التطبيقات العملية.</p>
+            <p dir="rtl">المطلوب منك في الوقت الحالي أن تقوم بمراجعة الدروس الخاصة بالـ Arrays في دروس المسار وفي حال لديك أي سؤال أو تحتاج لتوضيح أي نقطة معينة قم بإضاح ذلك في التعليقات وسأقوم بتفصيلها لكم.</p>
+            <hr>
+            <p dir="rtl"><strong dir="rtl">الدرس القادم سيكون عمل تطبيق بإستخدام الـ Arrays لعمل To Do List كما بالصورة التالية:</strong><br>
+               اريد منكم المحاولة في عمل مثل هذا التطبيق حيث أننا سنقوم بعملة بأسهل طريقة ممكنه فلا نريد تعقيد الأمور في هذه المرحلة فإذا استطعت أن تكمل هذا التطبيق قبل انتهائي من تجهيز الدرس قم بمشاركته معنا.<br>
+            </p>
+            <img class="image" src="../../images/javascript/10/8.gif">
+         </div>
+      </div>
+      <script src="{% static 'js/main.js' %}"></script>
+   </body>
+</html>

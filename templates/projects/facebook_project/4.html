@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+{% load static%}
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>[الدرس الرابع] تقسيم الصفحة</title>
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+   </head>
+   <body>
+      <div class="navbar">
+         <div class="navbar-brand">
+            <div class="">
+               Academy
+            </div>
+         </div>
+         <div class="icon-container">
+            <div class="humberger-icon">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+         </div>
+         <div class="navbar-nav">
+            <nav>
+               <div class="close">
+                  أغلق <i class="fas fa-times"></i>
+               </div>
+               <a href="../../../index.html">الرئيسية</a>
+               <a href="../../html_css/html-css.html">HTML & CSS</a>
+               <a href="../../javascript/javascript.html">JavaScript</a>
+               <a href="../../git/git.html">Git</a>
+               <a href="../../projects/projects.html">المشاريع</a>
+            </nav>
+         </div>
+      </div>
+      <div class="container">
+         <div class="cooked">
+            <h1>بدأ العمل على تقسيم صفحة موقع الفيس بوك</h1>
+            <hr>
+            <p dir="rtl">قمنا في الدروس السابقة بتجهيز ملف المشروع في هذا الدرس سنبدأ بالعمل على تقسيم صفحة موقع الفيس بوك حتى تكون لدينا رؤية واضحة عن خطة العمل قبل البدء بكتابة أي كود.</p>
+            <p dir="rtl"><strong dir="rtl">نحتاج إلى أن نقوم بعمل تقسيم للموقع مما يسهل عملنا بتوزيع عناصر الصفحة بحيث تظهر بالشكل المطلوب وتؤدي غرضها بأكمل وجه.</strong></p>
+            <p dir="rtl">هذا الدرس سيعتمد على مخيلتك بتخيل الصناديق الوهمية التي سبق ولنا أن تحدثنا عنها في <a href="https://macdiscussions.udacity.com/t/div-p-and-span/78012" dir="rtl">درس سابق<span class="badge badge-notification clicks" title="11 clicks" dir="ltr">11</span></a>, فاذا كنت تواجه صعوبة في هذا الموضوع فلا تقلق مع الممارسة ستستطيع تقسيم الموقع من أول نظرة.</p>
+            <h2 dir="rtl">أقسام الموقع الرئيسية</h2>
+            <p dir="rtl">نحتاج إلى أن نقوم بتقسيم الصفحة إلى ثلاثة أقسام رئيسية تقوم بضم الأقسام الفرعية لنأخذ على سبيل المثال التقسيم التالي:</p>
+            <p dir="rtl"><strong dir="rtl">1- قسم الرأس (header#):</strong> أغلب المواقع التي تشاهدها تجد في أعلاها بعض العناصر كشعار الشركة و منطقة تسجيل الدخول كما هو الحال في فيس بوك لهذا على الأرجح ستعتقد أنها فكرة جيدة بأن تقوم بضم هذه العناصر تحت قسم رئيسي بمسمى header بمعنى الرأس.</p>
+            <p dir="rtl"><strong dir="rtl">2- القسم الأساسي (main#):</strong> بنفس الفكرة تجد في المواقع قسم يأتي بعد الـ header ويتم فيه وضع البيانات الأساسية والتي هي جوهر الموقع لهذا ستكون فكرة جيدة بأن نقوم بضم جميع المحتويات في هذا القسم تحت قسم رئيسي بمسمى main بمعنى الأساسي.</p>
+            <p dir="rtl"><strong dir="rtl">3- قسم التذييل (footer#):</strong> أعتقد أنه وسبق لك أن شاهدت ورقة رسمية لشركة حيث يتم تذييلها بعض البيانات كعنوان الشركة وطرق التواصل معها … الخ. وفي مشروعنا هذا لدينا تذييل للصفحة يحتوي عدد من الروابط وحقوق الموقع و سنقوم بضم جميع هذه المحتويات تحت قسم رئيسي بمسمى footer بمعنى تذييل الصفحة.<br></p>
+            <img class="image" src="{% static 'images/projects/facebook_project/4/1.png'%}">
+            <p></p>
+            <div data-poll-type="regular" data-poll-name="poll" data-poll-status="open" class="poll">
+               <div>
+                  <div class="poll-container">
+                  </div>
+                  <div class="poll-info">
+                  </div>
+               </div>
+            </div>
+            <hr>
+            <h2 dir="rtl">كود الـ HTML</h2>
+            <p dir="rtl">قم بكتابة الأكواد الخاصة بالثلاثة الأقسام الرئيسية بدأخل ملف الـ<code dir="ltr">index.html</code>  تذكر التالي:</p>
+            <p dir="rtl">1- أن تستخدم العنصر div الخاص بعمل التقسيمات وإعطاء كل عنصر الـ id المحدد حسب تقسيمنا أعلاة<br>
+               <strong dir="rtl">تلميح:</strong> لا تقم بفتحة إلا بعد مراجعتك لهذا الدرس <a href="https://macdiscussions.udacity.com/t/class-vs-id/79063" dir="rtl">من هنا<span class="badge badge-notification clicks" title="49 clicks" dir="ltr">49</span></a>
+            </p>
+            <div class="spoiled" dir="ltr" style="background-color: rgba(0, 0, 0, 0); color: rgba(0, 0, 0, 0); text-shadow: gray 0px 0px 10px; user-select: none;">
+               <pre dir="ltr" style="filter: blur(10px);"><code class="hljs xml" dir="ltr"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"header"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+            </div>
+            <p dir="rtl">2- أن تضع الأكواد في الجزء المناسب بدأخل مستند الـ HTML<br>
+               <strong dir="rtl">تلميح:</strong> لا تقم بفتحة إلا بعد مراجعتك لهذا الدرس <a href="https://macdiscussions.udacity.com/t/basic-structure-of-an-html-document/79125" dir="rtl">من هنا<span class="badge badge-notification clicks" title="15 clicks" dir="ltr">15</span></a>
+            </p>
+            <div class="spoiled" dir="ltr">
+               <div class="code">
+                  <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;head&gt;</span>
+ <span style="color: #8f5902; font-style: italic">&lt;!-- هنا --&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/head&gt;</span>
+
+<span style="color: #204a87; font-weight: bold">&lt;body&gt;</span>
+ <span style="color: #8f5902; font-style: italic">&lt;!-- ام هنا --&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/body&gt;</span>
+</pre>
+               </div>
+            </div>
+            <p dir="rtl"><strong dir="rtl">قم بمشاركتنا بالشكل النهائي لمستند index.html الخاص بك بعد إضافتك للأكواد بالتعليقات</strong></p>
+            <p dir="rtl">شاهد ملف الـ index.html الخاص بي لتقارنة مع ملفك</p>
+            <div class="spoiled" dir="ltr">
+               <div class="code">
+                  <pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!doctype html&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;html&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;head&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">charset=</span><span style="color: #4e9a06">"utf-8"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;title&gt;</span>Facebook<span style="color: #204a87; font-weight: bold">&lt;/title&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;link</span> <span style="color: #c4a000">rel=</span><span style="color: #4e9a06">"stylesheet"</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"text/css"</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"css/style.css"</span> <span style="color: #204a87; font-weight: bold">/&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/head&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;body&gt;</span>
+
+<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"header"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"main"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"footer"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
+
+<span style="color: #204a87; font-weight: bold">&lt;/body&gt;</span>
+<span style="color: #204a87; font-weight: bold">&lt;/html&gt;</span>
+</pre>
+               </div>
+            </div>
+            <hr>
+            <p dir="rtl">سأترك لكم تقسيم الـ header كتمرين وفي الدرس التالي خلال الساعات القادمة سنتكلم عن تقسيمة ومن ثم البدء بتكويدة</p>
+            <p dir="rtl"><strong dir="rtl">بإمكانك القيام بذلك بمساعدة هذه الصورة</strong></p>
+            <p></p>
+            <img class="image" src="../../../images/projects/facebook_project/4/2.gif">
+            <p></p>
+            <p dir="rtl">ملاحظة بإمكانك إستخدام جدول table او div لتقسيم منطقة تسجيل الدخول, في الصورة أعلاة إعتمدت الـ div</p>
+            <hr>
+            <h2 dir="rtl">هل مظهر صفحة الفيس بوك لديك مختلف ؟</h2>
+            <p dir="rtl">هذه احد الحلول حتى تحصل على نفس التصميم الذي سنعمل عليه</p>
+            <p dir="rtl">1- قم بفتح موقع الفيس بوك عبر نافذة التصفح المخفي (ctrl+shift+n)<br>
+               2- قم بتغيير اللغة إلى لغة أخرى كالتركية مثلاً
+            </p>
+            <hr>
+         </div>
+      </div>
+      <script src="{% static 'js/main.js' %}"></script>
+   </body>
+</html>
