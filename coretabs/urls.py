@@ -21,6 +21,7 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name='home.html')),
     path('admin/', admin.site.urls),
     path('account/', include('account.urls')),
+    path('lang/set/', include('django.conf.urls.i18n'), name='set_language'),
     path('fullstack/', TemplateView.as_view(template_name='fullstack/index.html')),
     path('git/', TemplateView.as_view(template_name='git/git.html')),
     path('html_css/', TemplateView.as_view(template_name='html_css/html_css.html')),
