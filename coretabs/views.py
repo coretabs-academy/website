@@ -7,7 +7,12 @@ def home(request):
 
 
 def category_view(request, category=None):
-    return render(request, f'{category}/{category}.html')
+    template = f'{category}.html'
+
+    if category == 'fullstack':
+        template = 'index.html'
+
+    return render(request, f'{category}/{template}')
 
 
 def tutorial_view(request, category=None, id=None):
