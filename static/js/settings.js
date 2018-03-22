@@ -8,7 +8,7 @@ $(function() {
     if (lang === undefined) { lang = "ar"; }
     if (lang == "ar") { $(".lang").html("EN"); } else { $(".lang").html("عربي"); }
     $(".navbar-brand").on("click", ".lang", function(event){
-        if (lang == "ar") { Cookies.set('lang', 'en', { expires: 365 }); } else { Cookies.set('lang', 'ar', { expires: 365 }); }
+        if (lang == "ar") { Cookies.set('lang', 'en-us', { expires: 365 }); } else { Cookies.set('lang', 'ar', { expires: 365 }); }
         location.reload();
     });
     
