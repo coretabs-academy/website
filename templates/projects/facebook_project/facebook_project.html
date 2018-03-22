@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static%}
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>دروس HTML و CSS</title>
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+   </head>
+   <body>
+      <div class="navbar">
+         <div class="navbar-brand">
+            <div class="">
+               Academy
+            </div>
+         </div>
+         <div class="icon-container">
+            <div class="humberger-icon">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+         </div>
+         <div class="navbar-nav">
+            <nav>
+               <div class="close">
+                  أغلق <i class="fas fa-times"></i>
+               </div>
+               <a href="{% url 'home' %}">الرئيسية</a>
+               <a href="{% url 'category' category='html_css' %}">HTML & CSS</a>
+               <a href="{% url 'category' category='javascript' %}">JavaScript</a>
+               <a href="{% url 'category' category='git' %}">Git</a>
+               <a href="{% url 'category' category='projects' %}">المشاريع</a>
+            </nav>
+         </div>
+      </div>
+      <div class="container links">
+         <h1>دروس صناعة موقع فايسبوك</h1>
+         <p><a href="{% url 'project' category='projects' projects='facebook_project' id=1 %}">[الدرس الأول] البدأية ومتطلبات المشروع</a></p>
+         <p><a href="{% url 'project' category='projects' projects='facebook_project' id=2 %}">[الدرس الثاني] تجهيز ملف المشروع</a></p>
+         <p><a href="{% url 'project' category='projects' projects='facebook_project' id=3 %}">[الدرس الثالث] تنزيل وتجهيز الصور المستخدمة بالمشروع</a></p>
+         <p><a href="{% url 'project' category='projects' projects='facebook_project' id=4 %}">[الدرس الرابع] تقسيم الصفحة</a></p>
+         <p><a href="{% url 'project' category='projects' projects='facebook_project' id=5 %}">[الدرس الخامس:الجزء الأول] تقسيم و تكويد قسم الـ header</a></p>
+         <p><a href="{% url 'project' category='projects' projects='facebook_project' id=6 %}">[الدرس الخامس:الجزء الثاني] تكويد الـ container</a></p>
+         <p><a href="{% url 'project' category='projects' projects='facebook_project' id=7 %}">[الدرس الخامس:الجزء الثالث] تقسيم الـ container</a></p>
+         <p><a href="{% url 'project' category='projects' projects='facebook_project' id=8 %}">[الدرس الخامس:الجزء الرابع] العمل على شعار الموقع</a></p>
+         <p><a href="{% url 'project' category='projects' projects='facebook_project' id=9 %}">[الدرس الخامس:الجزء الخامس] الإنتهاء من تكويد قسم الـ header</a></p>
+         <p><a href="{% url 'project' category='projects' projects='facebook_project' id=10 %}">[الدرس الخامس:الجزء الأخير] اللمسات الأخيرة على قسم الـ header</a></p>
+         <p><a href="{% url 'project' category='projects' projects='facebook_project' id=11 %}">[الدرس السادس:الجزء الأول] تقسيم قسم الـ main</a></p>
+         <p><a href="{% url 'project' category='projects' projects='facebook_project' id=12 %}">[الدرس السادس:الجزء الثاني] تكويد قسم الـ main</a></p>
+         <p><a href="{% url 'project' category='projects' projects='facebook_project' id=13 %}">[الدرس السادس:الجزء الأخير] تكويد قسم الـ main</a></p>
+         <p><a href="{% url 'project' category='projects' projects='facebook_project' id=14 %}">[الدرس السابع] تقسيم وتكويد الـ footer</a></p>
+         <p><a href="{% url 'project' category='projects' projects='facebook_project' id=15 %}">[الدرس الثامن] اللمسات الأخيرة على الموقع</a></p>
+      </div>
+      <script src="{% static 'js/main.js' %}"></script>
+   </body>
+</html>

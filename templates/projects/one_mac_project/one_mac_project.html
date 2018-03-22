@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load static%}
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>دروس HTML و CSS</title>
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+   </head>
+   <body>
+      <div class="navbar">
+         <div class="navbar-brand">
+            <div class="">
+               Academy
+            </div>
+         </div>
+         <div class="icon-container">
+            <div class="humberger-icon">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+         </div>
+         <div class="navbar-nav">
+            <nav>
+               <div class="close">
+                  أغلق <i class="fas fa-times"></i>
+               </div>
+               <a href="{% url 'home' %}">الرئيسية</a>
+               <a href="{% url 'category' category='html_css' %}">HTML & CSS</a>
+               <a href="{% url 'category' category='javascript' %}">JavaScript</a>
+               <a href="{% url 'category' category='git' %}">Git</a>
+               <a href="{% url 'category' category='projects' %}">المشاريع</a>
+            </nav>
+         </div>
+      </div>
+      <div class="container links">
+         <h1>دروس صناعة موقع المبادرة</h1>
+         <p><a href="{% url 'project' category='projects' projects='one_mac_project' id=1 %}">[الجزء الأول: اليوم الأول]: تحدي اليوم الأول</a></p>
+         <p><a href="{% url 'project' category='projects' projects='one_mac_project' id=2 %}">[الجزء الأول: اليوم الثاني]: درس اليوم الأول الـ header + navbar</a></p>
+         <p><a href="{% url 'project' category='projects' projects='one_mac_project' id=3 %}">[الجزء الثاني: اليوم الأول]: تحدي اليوم الثاني</a></p>
+         <p><a href="{% url 'project' category='projects' projects='one_mac_project' id=4 %}">[الجزء الثاني: اليوم الثاني]: درس اليوم الثاني: الجزء الأول</a></p>
+         <p><a href="{% url 'project' category='projects' projects='one_mac_project' id=5 %}">[الجزء الثاني: اليوم الثاني]: درس اليوم الثاني: الجزء الثاني والأخير</a></p>
+         <p><a href="{% url 'project' category='projects' projects='one_mac_project' id=6 %}">[الجزء الثالث: اليوم الأول]: تحدي اليوم الثالث</a></p>
+         <p><a href="{% url 'project' category='projects' projects='one_mac_project' id=7 %}">[الجزء الثالث: اليوم الثاني]: درس اليوم الثالث: الجزء الأول</a></p>
+         <p><a href="{% url 'project' category='projects' projects='one_mac_project' id=8 %}">[الجزء الثالث: اليوم الثاني]: درس اليوم الثالث: الجزء الثاني والأخير</a></p>
+         <p><a href="{% url 'project' category='projects' projects='one_mac_project' id=9 %}">[الجزء الرابع: اليوم الأول]: تحدي اليوم الرابع والأخير</a></p>
+         <p><a href="{% url 'project' category='projects' projects='one_mac_project' id=10 %}">[الجزء الرابع: اليوم الثاني]: درس اليوم الرابع</a></p>
+         <p><a href="{% url 'project' category='projects' projects='one_mac_project' id=11 %}">[الختام]: اللمسات الأخيرة على المشروع</a></p>
+      </div>
+      <script src="{% static 'js/main.js' %}"></script>
+   </body>
+</html>

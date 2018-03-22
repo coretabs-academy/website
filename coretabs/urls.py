@@ -19,12 +19,13 @@ from django.views.generic import TemplateView
 from . import views
 
 urlpatterns = [
-    path('', TemplateView.as_view(template_name='home.html')),
+    path('', TemplateView.as_view(template_name='home.html'), name='home'),
     path('admin/', admin.site.urls),
     path('account/', include('account.urls')),
     path('lang/set/', include('django.conf.urls.i18n'), name='set_language'),
-    path('<category>/', views.tutorial_view, name='category'),
-    path('<category>/<id>/', views.tutorial_view, name='tutorial'),
-    path('<category/<project>/<id>/',views.tutorial_view, name='project')
+    path('<category>/', views.category_view, name='category'),
+    path('<category>/<int:id>/', views.tutorial_view, name='tutorial'),
+    path('<category>/<projects>/',views.project_view, name='projects'),
+    path('<category>/<projects>/<int:id>/',views.project_tutorial_view, name='project')
 ]
 
