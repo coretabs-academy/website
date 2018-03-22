@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static%}
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>دروس HTML و CSS</title>
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+   </head>
+   <body>
+      <div class="navbar">
+         <div class="navbar-brand">
+            <div>
+               Academy
+            </div>
+         </div>
+         <div class="icon-container">
+            <div class="humberger-icon">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+         </div>
+         <div class="navbar-nav">
+            <nav>
+               <div class="close">
+                  أغلق <i class="fas fa-times"></i>
+               </div>
+               <a href="{% url 'home' %}">الرئيسية</a>
+               <a href="{% url 'category' category='html_css' %}">HTML & CSS</a>
+               <a href="{% url 'category' category='javascript' %}">JavaScript</a>
+               <a href="{% url 'category' category='git' %}">Git</a>
+               <a href="{% url 'category' category='projects' %}">المشاريع</a>
+            </nav>
+         </div>
+      </div>
+      <div id="html_css" class="container links">
+         <h1>دروس HTML و CSS</h1>
+         <p><a href="{% url 'tutorial' category='html_css' id=1 %}">[الدرس الأول]: البدأية مع html و css ماهي وما وظيفة كل منهما</a></p>
+         <p><a href="{% url 'tutorial' category='html_css' id=2 %}">[الدرس الثاني]: HTML Tags</a></p>
+         <p><a href="{% url 'tutorial' category='html_css' id=3 %}">[الدرس الثالث]: Block and Inline Elements</a></p>
+         <p><a href="{% url 'tutorial' category='html_css' id=4 %}">[الدرس الرابع]: عناصر div, p and span والفرق بينهم</a></p>
+         <p><a href="{% url 'tutorial' category='html_css' id=5 %}">[الدرس الخامس]: Class vs ID</a></p>
+         <p><a href="{% url 'tutorial' category='html_css' id=6 %}">[الدرس السادس]: Basic Structure of an HTML Document</a></p>
+         <p><a href="{% url 'tutorial' category='html_css' id=7 %}">[الدرس السابع]: CSS Implementation</a></p>
+         <p><a href="{% url 'tutorial' category='html_css' id=8 %}">[الدرس الثامن]: CSS Basics</a></p>
+         <p><a href="{% url 'tutorial' category='html_css' id=9 %}">[الدرس التاسع]: CSS margin Property</a></p>
+         <p><a href="{% url 'tutorial' category='html_css' id=10 %}">[الدرس العاشر]: HTML table</a></p>
+         <p><a href="{% url 'tutorial' category='html_css' id=11 %}">[الدرس الحادي عشر]: Semantic HTML</a></p>
+         <p><a href="{% url 'tutorial' category='html_css' id=12 %}">[الدرس الثاني عشر] CSS Position Property: relative vs absolute</a></p>
+         <p><a href="{% url 'tutorial' category='html_css' id=13 %}">[الدرس الثالث عشر]: CSS Flexbox*</a></p>
+         <p><a href="{% url 'tutorial' category='html_css' id=14 %}">[الدرس الرابع عشر]: Responsive Web Design*</a></p>
+         <p><a href="{% url 'tutorial' category='html_css' id=15 %}">[الدرس الخامس عشر]: Media Queries*</a></p>
+      </div>
+      <script src="{% static 'js/main.js' %}"></script>
+   </body>
+</html>

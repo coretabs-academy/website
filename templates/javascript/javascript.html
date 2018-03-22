@@ -28,32 +28,32 @@
                <div class="close">
                   أغلق <i class="fas fa-times"></i>
                </div>
-               <a href="../../index.html">الرئيسية</a>
-               <a href="../html_css/html-css.html">HTML & CSS</a>
-               <a href="../javascript/javascript.html">JavaScript</a>
-               <a href="../git/git.html">Git</a>
-               <a href="../projects/projects.html">المشاريع</a>
+               <a href="{% url 'home' %}">الرئيسية</a>
+               <a href="{% url 'category' category='html_css' %}">HTML & CSS</a>
+               <a href="{% url 'category' category='javascript' %}">JavaScript</a>
+               <a href="{% url 'category' category='git' %}">Git</a>
+               <a href="{% url 'category' category='projects' %}">المشاريع</a>
             </nav>
          </div>
       </div>
       <div id="javascript" class="container links">
          <h1>دروس JavaScript</h1>
-         <p><a href="1.html">[البدأية]: خطة البدء في دروس الـ Javascript</a></p>
-         <p><a href="2.html">[الدرس الأول]: ماهو الـ DOM وماهي الـ Javascript وما العلاقة بينهما</a></p>
-         <p><a href="3.html">[الدرس الثاني]: constants & variables</a></p>
-         <p><a href="4.html">[الدرس الثالث: الجزء الأول]: Data Types</a></p>
-         <p><a href="5.html">[الدرس الثالث: الجزء الثاني]: Data Types</a></p>
-         <p><a href="6.html">[الدرس الرابع]: Comparison Operators</a></p>
-         <p><a href="7.html">[الدرس الخامس]: Javascript Coding Convention + Rules</a></p>
-         <p><a href="8.html">[الدرس السادس]: Conditionals</a></p>
-         <p><a href="9.html">[الدرس السابع]: تطبيق عملي</a></p>
-         <p><a href="10.html">[الدرس الثامن]: Arrays</a></p>
-         <p><a href="11.html">[الدرس التاسع:الجزء الأول]: عمل تطبيق To Do List</a></p>
-         <p><a href="12.html">[الدرس التاسع:الجزء الثاني والأخير]: تطبيق عملي | عمل تطبيق To Do List</a></p>
-         <p><a href="13.html">[الدرس العاشر]: Loops</a></p>
-         <p><a href="14.html">[الدرس الحادي عشر] Functions</a></p>
-         <p><a href="15.html">[الدرس الثاني عشر و الأخير] Objects</a></p>
-         <p><a href="16.html">[المهمة الأخير] تطبيق خلاصة كل ما تعلمتة في دروس الجافاسكربت</a></p>
+         <p><a href="{% url 'tutorial' category='javascript' id=1 %}">[البدأية]: خطة البدء في دروس الـ Javascript</a></p>
+         <p><a href="{% url 'tutorial' category='javascript' id=2 %}">[الدرس الأول]: ماهو الـ DOM وماهي الـ Javascript وما العلاقة بينهما</a></p>
+         <p><a href="{% url 'tutorial' category='javascript' id=3 %}">[الدرس الثاني]: constants & variables</a></p>
+         <p><a href="{% url 'tutorial' category='javascript' id=4 %}">[الدرس الثالث: الجزء الأول]: Data Types</a></p>
+         <p><a href="{% url 'tutorial' category='javascript' id=5 %}">[الدرس الثالث: الجزء الثاني]: Data Types</a></p>
+         <p><a href="{% url 'tutorial' category='javascript' id=6 %}">[الدرس الرابع]: Comparison Operators</a></p>
+         <p><a href="{% url 'tutorial' category='javascript' id=7 %}">[الدرس الخامس]: Javascript Coding Convention + Rules</a></p>
+         <p><a href="{% url 'tutorial' category='javascript' id=8 %}">[الدرس السادس]: Conditionals</a></p>
+         <p><a href="{% url 'tutorial' category='javascript' id=9 %}">[الدرس السابع]: تطبيق عملي</a></p>
+         <p><a href="{% url 'tutorial' category='javascript' id=10 %}">[الدرس الثامن]: Arrays</a></p>
+         <p><a href="{% url 'tutorial' category='javascript' id=11 %}">[الدرس التاسع:الجزء الأول]: عمل تطبيق To Do List</a></p>
+         <p><a href="{% url 'tutorial' category='javascript' id=12 %}">[الدرس التاسع:الجزء الثاني والأخير]: تطبيق عملي | عمل تطبيق To Do List</a></p>
+         <p><a href="{% url 'tutorial' category='javascript' id=13 %}">[الدرس العاشر]: Loops</a></p>
+         <p><a href="{% url 'tutorial' category='javascript' id=14 %}">[الدرس الحادي عشر] Functions</a></p>
+         <p><a href="{% url 'tutorial' category='javascript' id=15 %}">[الدرس الثاني عشر و الأخير] Objects</a></p>
+         <p><a href="{% url 'tutorial' category='javascript' id=16 %}">[المهمة الأخير] تطبيق خلاصة كل ما تعلمتة في دروس الجافاسكربت</a></p>
       </div>
       <script src="{% static 'js/main.js' %}"></script>
    </body>

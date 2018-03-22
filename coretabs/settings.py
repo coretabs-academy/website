@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+from django.utils.translation import ugettext_lazy as _
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -39,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'account',
-    'library',
 ]
 
 MIDDLEWARE = [
@@ -113,6 +113,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
+LANGUAGES = [
+    ('ar', _('Arabic')),
+    ('en-us', _('English'))
+]
+
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
@@ -134,6 +139,8 @@ STATICFILES_DIRS = [
 
 # Account Settings
 ACCOUNT_EMAIL_CONFIRMATION_REQUIRED = True
+
+ACCOUNT_LANGUAGES = LANGUAGES
 
 # Email Server Settings
 EMAIL_HOST = 'smtp.gmail.com'

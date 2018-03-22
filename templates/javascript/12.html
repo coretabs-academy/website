@@ -28,11 +28,11 @@
                <div class="close">
                   أغلق <i class="fas fa-times"></i>
                </div>
-               <a href="../../index.html">الرئيسية</a>
-               <a href="../html_css/html-css.html">HTML & CSS</a>
-               <a href="../javascript/javascript.html">JavaScript</a>
-               <a href="../git/git.html">Git</a>
-               <a href="../projects/projects.html">المشاريع</a>
+               <a href="{% url 'home' %}">الرئيسية</a>
+               <a href="{% url 'category' category='html_css' %}">HTML & CSS</a>
+               <a href="{% url 'category' category='javascript' %}">JavaScript</a>
+               <a href="{% url 'category' category='git' %}">Git</a>
+               <a href="{% url 'category' category='projects' %}">المشاريع</a>
             </nav>
          </div>
       </div>
