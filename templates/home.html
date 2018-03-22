@@ -63,28 +63,33 @@
          </div>
       </div>
       <div class="background-image">
-         <h1>تطوير صفحات المواقع الإلكترونية</h1>
+         <h1>{% trans 'Web Design & Development' %}</h1>
          <p>
-		  إن الإلمام بمجال البرمجة، أمرٌ لا غنى عنه في أيامنا هذه. وإن تعلُّم البرمجة هو من أكثر الأمور الغنية والمفيدة التي يمكنك القيام بها.
-
+             {% blocktrans %}
+                Familiarity with programming is indispensable today. Learning programming is one of the most rich and useful things you can do.
+             {% endblocktrans %}
 		  </p>
-         <a class="link" href="#main">الدروس</a>
+         <a class="link" href="#main">{% trans 'Lessons' %}</a>
          <div class="course animated infinite bounce">
             <i class="fas fa-chevron-down"></i>
             <a href="#main"></a>
          </div>
       </div>
       <main id="main" class="beauty-box">
-         <h1 class="title">دروس المسار</h1>
+         <h1 class="title">{% trans 'Track Lessons' %}</h1>
          <div class="courses_container">
             <div class="html_css box">
                <div class="courses_image">
                   <img src="{% static 'images/html_css.png'%}" alt="">
                </div>
                <div class="text">
-                  <h2>دروس HTML و CSS</h2>
-                  <p>لا تحتاج لأي معرفة مسبقة في لغة ترميز النص الفائق للبدئ في هذه الوحدة، ولكن يجب على الأقل أن تملك معرفة مبدئية حول استخدام الحواسيب، واستخدام متصفح الويب.</p>
-                  <a class="button-link" href="{% url 'category' category='html_css' %}">إبدأ</a>
+                  <h2>{% trans 'HTML & CSS Lessons' %}</h2>
+                  <p> 
+                      {% blocktrans %}
+                        you don't need any prior knowledge of HTML to start this unit, but you need at least some basic knowledge of how to use computer and web browser
+                      {% endblocktrans %}
+                  </p>
+                  <a class="button-link" href="{% url 'category' category='html_css' %}">{% trans 'Start' %}</a>
                </div>
                <a class="box-link" href="{% url 'category' category='html_css' %}"></a>
             </div>
@@ -93,10 +98,14 @@
                   <img src="{% static 'images/js.png'%}" alt="">
                </div>
                <div class="text">
-                  <h2>دروس JavaScript</h2>
-                  <p>الجافاسكريبت هي لغة برمجة كائنية التوجة ومتعددة المنصات. هي لغة صغيرة وخفيفة الوزن. داخل بيئة المضيف (على سبيل المثال، متصفح ويب)، بإستخدام الجافاسكربت تستطيع جعل تطبيقك تفاعلي.</p>
+                  <h2>{% trans 'JavaScript Lessons' %}</h2>
+                  <p>
+                      {% blocktrans %}
+                        Javascript is an object oriented and multi-platform programming language. Is a small and lightweight language. Within the host environment (for example, a web browser), using Javascript you can make your application interactive.
+                      {% endblocktrans%}
+                  </p>
 
-                  <a class="button-link" href="{% url 'category' category='javascript' %}">إبدأ</a>
+                  <a class="button-link" href="{% url 'category' category='javascript' %}">{% trans 'Start' %}</a>
 
                </div>
                <a class="box-link" href="{% url 'category' category='javascript' %}"></a>
@@ -106,9 +115,13 @@
                   <img src="{% static 'images/git.png'%}" alt="">
                </div>
                <div class="text">
-                  <h2>دروس Git</h2>
-                  <p>Git هو برنامج لإدارة النسخ أو كما يطلق عليه حرفياً (نظام إدارة الإصدارات), بإستخدام الـ Git تستطيع تسجيل التغييرات التي تقوم بها على تطبيقك ومن ثم الرجوع إليها في أي وقت وكذلك يساعدك على التعاون مع مبرمجين أخرين في العمل على المشاريع.</p>
-                  <a class="button-link" href="{% url 'category' category='git' %}">إبدأ</a>
+                  <h2>{% trans 'Git Lessons' %}</h2>
+                  <p>
+                      {% blocktrans %}
+                        Git is a copy management software, or as it is literally called (version management system), using Git you can record changes to your application and then refer to it at any time and also helps you to cooperate with other programmers to work on projects.
+                      {% endblocktrans %}
+                  </p>
+                  <a class="button-link" href="{% url 'category' category='git' %}">{% trans 'Start' %}</a>
 
                </div>
                <a class="box-link" href="{% url 'category' category='git' %}"></a>
@@ -118,9 +131,13 @@
                   <img src="{% static 'images/project.png'%}" alt="">
                </div>
                <div class="text">
-                  <h2>المشاريع</h2>
-                  <p>كلنا نعلم أن المشاريع هي من أهم الأشياء التي تمكننا من تطوير خبراتنا في شتى المجالات فلنقم بتطبيق ما تعلمناه من خلال العمل على مشاريع حقيقة.</p>
-                  <a class="button-link" href="{% url 'category' category='projects' %}">إبدأ</a>
+                  <h2>{% trans 'Projects' %}</h2>
+                  <p>
+                      {% blocktrans %}
+                        We all know that projects are one of the most important things that enable us to develop our expertise in various fields so let us apply what we learned through working on real projects.
+                      {% endblocktrans %}
+                  </p>
+                  <a class="button-link" href="{% url 'category' category='projects' %}">{% trans 'Start' %}</a>
 
                </div>
                <a class="box-link" href="{% url 'category' category='projects' %}"></a>
@@ -128,9 +145,11 @@
          </div>
       </main>
       <div class="about">
-         <h1>عن الموقع</h1>
+         <h1>{% trans 'About website' %}</h1>
          <p>
-				هذا الموقع تم وضعة كمرجع لدروس و ورش العمل التي تم وضعها في مبادرة المليون مبرمج عربي, حرصت على أن تكون الدروس مبسطة وتستهدف بشكل رئيسي من لديهم خبرة صفر في هذا المجال لهذا إن لم تكن جزء من برنامج المليون مبرمج عربي فبإمكانك الإستفادة من هذه الدروس ولوضع أسئلتك أو إستفساراتك قم بالإنضمام لقروب الفيس بوك الخاص بنا
+             {% blocktrans %}
+                This site has been placed as a reference to the lessons and workshops that were developed in the initiative of the million arabic coders , made sure that the lessons are simplified and targeted mainly those who have zero experience in this area if you not part of the program million arabic coders  You can take advantage of these lessons and to put Your Questions or Inquiries Join our Facebook page.
+             {% endblocktrans %}
          </p>
 		  <a href="http://www.facebook.com/groups/ProgrammersUnion" class="facebook"></a>
       </div>
