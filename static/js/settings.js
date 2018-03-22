@@ -6,11 +6,6 @@ $(function() {
     
     var lang = Cookies.get('lang');
     if (lang === undefined) { lang = "ar"; }
-    if (lang == "ar") { $(".lang").html("EN"); } else { $(".lang").html("عربي"); }
-    $(".navbar-brand").on("click", ".lang", function(event){
-        if (lang == "ar") { Cookies.set('lang', 'en-us', { expires: 365 }); } else { Cookies.set('lang', 'ar', { expires: 365 }); }
-        location.reload();
-    });
     
     $(".container aside").html("<p>loading ...</p>");
     $(".navigate").hide();
