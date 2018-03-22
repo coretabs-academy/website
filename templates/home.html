@@ -28,7 +28,7 @@
             Change password
         </a></p>
 
-        <p><a href="">
+        <p><a href="{% url "account_delete" %}">
             Delete account
         </a></p>
 
@@ -49,7 +49,7 @@
         </form>
 
         <p><a href="{% url "account_login" %}">
-            Login
+            {% trans "Login" %}
         </a></p>
 
         <p><a href="{% url "account_signup" %}">
