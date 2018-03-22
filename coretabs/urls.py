@@ -16,18 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
+from . import views
 
 urlpatterns = [
     path('', TemplateView.as_view(template_name='home.html')),
     path('admin/', admin.site.urls),
     path('account/', include('account.urls')),
     path('lang/set/', include('django.conf.urls.i18n'), name='set_language'),
-    path('fullstack/', TemplateView.as_view(template_name='fullstack/index.html')),
-    path('git/', TemplateView.as_view(template_name='git/git.html')),
-    path('html_css/', TemplateView.as_view(template_name='html_css/html_css.html')),
-    path('javascript/', TemplateView.as_view(template_name='javascript/javascript.html')),
-    path('projects/', TemplateView.as_view(template_name='projects/projects.html')),
-    path('projects/facebook_project/', TemplateView.as_view(template_name='projects/facebook_project/facebook-project.html')),
-    path('projects/one_mac_project/', TemplateView.as_view(template_name='projects/one_mac_project/one-mac-project.html')),
+    path('<category>/', views.tutorial_view, name='category'),
+    path('<category>/<id>/', views.tutorial_view, name='tutorial'),
+    path('<category/<project>/<id>/',views.tutorial_view, name='project')
 ]
 
