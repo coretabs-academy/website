@@ -40,7 +40,8 @@
             <a id="login-options">
                 {% trans "Login" %}
             </a>
-            <form id="login-panel">
+            <form id="login-panel" method="post" action="/account/login/">
+                {% csrf_token %}
                 <div>
                     <input type="email" name="email" placeholder="Enter Your Email" />
                 </div>
@@ -51,7 +52,7 @@
                     <button type="submit">Login</button>
                 </div>
                 <div>
-                    <a href="#">Forgot Your Password?</a>
+                    <a href="/account/password/reset/">Forgot Your Password?</a>
                 </div>
             </form>
         {% endif %}
