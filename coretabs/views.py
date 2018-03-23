@@ -1,9 +1,14 @@
 from django.http import Http404
 from django.shortcuts import render
 
+from account.views import LoginView
 
-def home(request):
-    return render(request,'home.html')
+
+class HomeView(LoginView):
+    template_name='home.html'
+
+    def get(self, *args, **kwargs):
+        return super(LoginView, self).get(*args, **kwargs)
 
 
 def category_view(request, category=None):
