@@ -1,16 +1,273 @@
-a { cursor: pointer; }
-ul  { list-style: none; }
-ul ul { list-style: disc; }
-nav a { width: auto; padding: 0 10px; }
-.navbar-brand div.lang { margin-left: 10px; padding: 5px 10px; }
-iframe.youtube { width: 420px; }
-@media screen and (max-width: 1080px) {
-    img { width: 100%; }
+    a { cursor: pointer; }
+    ul  { list-style: none; }
+    ul ul { list-style: disc; }
+    nav a { width: auto; padding: 0 10px; }
+    iframe.youtube { width: 420px; }
+
+    .login-brand {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 5;
+    }
+    .login-brand > form, .login-brand > a {
+        display: block;
+        float: left;
+        margin: 0 5px;
+    }
+    .login-brand > a {
+        text-transform: uppercase;
+		font-weight: bold;
+		font-size: 1.2em;
+		color: #fff;
+        text-align: center;
+        text-decoration: none;
+        width: 120px;
+        height: 46px;
+        padding: 5px 0;
+		-moz-transition: all 0.2s ease-in;
+		-o-transition: all 0.2s ease-in;
+		-webkit-transition: all 0.2s ease-in;
+		transition: all 0.2s ease-in;
+    }
+
+    .select-hidden {
+		display: none;
+		visibility: hidden;
+		padding-right: 10px;
+	}
+
+	.select {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		font-size: 16px;
+		color: #fff;
+		width: 150px;
+		height: 46px;
+
+		text-transform: uppercase;
+		font-weight: bold;
+		font-family: 'Cairo', sans-serif;
+		font-size: 1.2em;
+		color: #fff;
+        text-align: left;
+        padding: 5px 0;
+	}
+
+	.select-styled {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		padding: 5px 15px;
+		-moz-transition: all 0.2s ease-in;
+		-o-transition: all 0.2s ease-in;
+		-webkit-transition: all 0.2s ease-in;
+		transition: all 0.2s ease-in;
+	}
+	.select-styled:after, .select-styled:active:after, .select-styled.active:after {
+		content: "";
+		width: 36px;
+		height: 36px;
+		position: absolute;
+		top: 4px;
+		right: 15px;
+		background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36" width="36" height="36"><defs><path d="M4.48 12.84L20.49 22.75L17.99 25.84L1.98 15.93L4.48 12.84Z" id="c5ofi2YJAe"></path><path d="M18.01 25.84L34.02 15.93L31.52 12.84L15.51 22.75L18.01 25.84Z" id="aqerFI0xg"></path></defs><g><g><g><use xlink:href="#c5ofi2YJAe" opacity="1" fill="#ffffff" fill-opacity="1"></use></g><g><use xlink:href="#aqerFI0xg" opacity="1" fill="#ffffff" fill-opacity="1"></use></g></g></g></svg>');
+		background-repeat: no-repeat;
+		background-position: right center;
+	}
+	.select-styled:hover, .select-styled:active, .select-styled.active, .login-brand > a:hover, .login-brand > a.active {
+		background-color: rgba(0,0,0,.25);
+	}
+
+	form#login-panel, .select-options {
+        display: none;
+		position: absolute;
+		top: 100%;
+		right: 0;
+		left: 0;
+		z-index: 999;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		background-color: rgba(0,0,0,.25);
+		text-align: center;
+	}
+    form#login-panel {
+        padding: 20px 10px;
+        top: 46px;
+        direction: ltr;
+    }
+    form#login-panel input {
+        background: transparent;
+        margin-bottom: 10px;
+        border: 0;
+        border-bottom: 1px solid #4B7BEC;
+        width: 75%;
+        height: 30px;
+        color: #fff;
+    }
+
+    form#login-panel input::placeholder {
+        color: #fff;
+        opacity: 1;
+    }
+    form#login-panel input:-ms-input-placeholder {
+        color: fff;
+    }
+    form#login-panel input::-ms-input-placeholder {
+        color: fff;
+    }
+
+    form#login-panel button {
+        margin-bottom: 10px;
+        width: 75%;
+        height: 30px;
+        padding: 5px 45px;
+        background: #4b7bec;
+        color: #fff;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-decoration: none;
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        transition: all .3s;
+        font-weight: 600;
+    }
+    form#login-panel button:hover {
+        background: #5e8bf4;
+        -webkit-box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, .1);
+        box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, .1);
+    }
+    form#login-panel a {
+        text-decoration: none;
+        color: #fff;
+    }
+	.select-options li {
+		height: 40px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0 0 10px;
+		-moz-transition: all 0.15s ease-in;
+		-o-transition: all 0.15s ease-in;
+		-webkit-transition: all 0.15s ease-in;
+		transition: all 0.15s ease-in;
+	}
+	.select-options li:hover {
+		color: #7F2C84;
+		background: #fff;
+	}
+	.select-options li[rel="hide"] {
+		display: none;
+	}
+
+    #main-video {
+        width: 768px;
+        height: 384px;
+    }
+
+    .tracks {
+        width: 920px;
+    }
+
+    .track {
+        float: left;
+        width: 45%;
+        margin: 0 2.5%;
+    }
+
+    .track:last-of-type {
+        float: right;
+    }
+
+    .track a, .track img {
+        display: block;
+        width: 100%;
+        color: #000;
+        text-decoration: none;
+    }
+
+    .track h2 {
+        background: #fff;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+@media screen and (max-width: 920px) {
+    .cooked img { width: 100%; }
+    form#login-panel, .select-options {
+		background-color: rgba(0,0,0,.5);
+    }
+    #main-video {
+        width: 600px;
+        height: 300px;
+    }
+    .tracks {
+        width: 768px;
+    }
 }
-@media screen and (max-width: 420px) {
-    iframe.youtube { width: 100%; }
+@media screen and (max-width: 768px) {
+    .home .navbar-brand {
+        width: 100%;
+    }
+    .login-brand {
+        top: 80px;
+        right: calc(50% - 210px);
+        width: 420px;
+    }
+    #main-video {
+        width: 480px;
+        height: 240px;
+    }
+    .tracks {
+        width: 100%;
+    }
 }
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 480px) {
     .navbar-brand { background: none; }
-    .navbar-brand div.lang { margin-left: 10px; padding: 3px 10px; }
+    iframe.youtube { width: 100%; }
+
+    .login-brand {
+        right: calc(50% - 160px);
+        width: 320px;
+    }
+
+    .login-brand > form, .login-brand > a {
+        margin: 0px;
+    }
+
+    .login-brand > a {
+        width: 100px;
+        font-size: 1em;
+    }
+
+    .select {
+        width: 120px;
+        font-size: 1em;
+    }
+
+    .select-styled {
+        padding: 5px;
+    }
+
+    .select-styled:after, .select-styled:active:after, .select-styled.active:after {
+        right: 5px;
+    }
+
+    #main-video {
+        width: 300px;
+        height: 250px;
+    }
+
+    .track {
+        width: 90%;
+        margin: 2.5% 5%;
+    }
 }
