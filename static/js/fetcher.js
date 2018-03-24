@@ -29,7 +29,7 @@ $(function() {
     $("#main .courses_container").on("click", "a", function(event) {
         var idx = $(this).attr("data-idx");
         $("body").removeClass("home");
-        $(".background-image, #main, footer").remove();
+        $("#animate, .background-image, #main, footer").remove();
         $("#navebar").addClass("navbar");
         $(".navbar-nav, .container").show();
 
