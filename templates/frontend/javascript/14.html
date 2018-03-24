@@ -46,7 +46,7 @@
             <p dir="rtl">الـ functions نعامل معها بشكل دوري في حياتنا اليومية فعلى سبيل المثال أنت بذاتك تعمل كـ function عند ذهابك للدوام وقيامك بالأعمال التي اسندت اليك. كذلك أعضاء جسمك تقوم بعمل كالـ functions.</p>
             <h4 dir="rtl">لنأخذ عضو اليد على سبيل المثال:</h4>
             <p dir="rtl">تخيل أنك في كل مرة تريد أن تقوم بإستخدام يدك تحتاج إلى يد جديدة ولا يمكنك إستخدام اليد السابقة.<br>
-               <img class="image" src="../../images/javascript/14/1.png">
+               <img class="image" src="{% static 'images/javascript/14/1.png'%}">
             </p>
             <p dir="rtl"><strong dir="rtl">الأمر جنوني اليس كذلك؟</strong><br>
                ستحتاج إلى مئات الأيدي في اليوم للقيام بمهامك. وربما خلال فترة زمنية ستصبح غارق بين هذه الأيدي ولن تستطيع القيام بأي مهمة جديدة.
@@ -67,12 +67,12 @@
             <ul dir="rtl">
                <li dir="rtl">
                   <p dir="rtl">عندما تريد أن تقوم بصفع أحد فأنت تقوم <strong dir="rtl">بإستدعاء يدك</strong> وإرسال الأمر <strong dir="rtl">صفع</strong><br>
-                     <img class="image" src="../../images/javascript/14/2.gif" style="max-width:300px;">
+                     <img class="image" src="{% static 'images/javascript/14/2.gif'%}" style="max-width:300px;">
                   </p>
                </li>
                <li dir="rtl">
                   <p dir="rtl">عندما تريد أن إلقاء التحية فأنت تقوم <strong dir="rtl">بإستدعاء يدك</strong> وإرسال الأمر <strong dir="rtl">تحية</strong><br>
-                     <img class="image" src="../../images/javascript/14/3.gif" style="max-width:300px;">
+                     <img class="image" src="{% static 'images/javascript/14/3.gif'%}" style="max-width:300px;">
                   </p>
                </li>
             </ul>
@@ -151,9 +151,9 @@
 </pre>
             </div>
             <p dir="rtl">الأن قم بفتح الصفحة ومن ثم فتح نافذة الـ console لنشاهد <strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/14/4.png">
+            <img class="image" src="{% static 'images/javascript/14/4.png'%}">
             <p></p>
-            <p dir="rtl">لا يوجد شئ <img src="../../images/javascript/14/5.png" title=":thinking:" class="emoji" alt=":thinking:" style="width:30px;"> <strong dir="rtl">لماذا؟</strong></p>
+            <p dir="rtl">لا يوجد شئ <img src="{% static 'images/javascript/14/5.png'%}" title=":thinking:" class="emoji" alt=":thinking:" style="width:30px;"> <strong dir="rtl">لماذا؟</strong></p>
             <p dir="rtl">صحيح سبق وذكرنا بأن الـ function لا تقوم بأي عمل حتى يتم إستدعائها.</p>
             <p dir="rtl"><strong dir="rtl">كيف يتم إستدعاء الـ function ؟</strong><br>
                بنفس طريقة إستدعائك للدوال الجافاسكربت كدالة console.log لذا حتى نقوم بإستدعاء الدالة الخاصة بنا سنكتب إسمها ونتبعها بأقواس كالتالي:
@@ -176,7 +176,7 @@
             <p dir="rtl">في الكود أعلاة عرفنا الدالة ومن ثم قمنا بإستدعائها فالمتوقع ان تقوم بتنفيذ الأوامر التي بداخلها والتي هي طباعة الجملة المحددة<br>
                <strong dir="rtl">النتيجة</strong><br>
             </p>
-            <img class="image" src="../../images/javascript/14/6.png">
+            <img class="image" src="{% static 'images/javascript/14/6.png'%}">
             <p></p>
             <p dir="rtl"><strong dir="rtl">رائع!</strong> تم إستدعاء الدالة.</p>
             <hr>
@@ -199,7 +199,7 @@
             <p dir="rtl">في الكود اعلاة عرفت اليد ومن ثم قمت بالتفكير بأخذ كوب من الماء فإستدعيت اليد ومن ثم أردت مصافحة أحد ما فقمت بإستدعاء اليد<br>
                <strong dir="rtl">النتيجة:</strong><br>
             </p>
-            <img class="image" src="../../images/javascript/14/7.png">
+            <img class="image" src="{% static 'images/javascript/14/7.png'%}">
             <p></p>
             <p dir="rtl">لاحظت كيف أنني الأن لا أحتاج لأن أقوم بتكرير تعريف اليد وانما أقوم كل مرة بإستدعاء اليد التي تم تعريفها بكتابة<code dir="ltr">hand();</code> فقط.</p>
             <hr>
@@ -276,7 +276,7 @@
             <p dir="rtl">قمت بإستدعاء اليد اليمين.<br>
                <strong dir="rtl">النتيجة:</strong><br>
             </p>
-            <img class="image" src="../../images/javascript/14/8.png">
+            <img class="image" src="{% static 'images/javascript/14/8.png'%}">
             <p></p>
             <p dir="rtl"><strong dir="rtl">لنجرب الكود التالي:</strong></p>
             <div class="code">
@@ -303,7 +303,7 @@
             <p dir="rtl">في الكود اعلاة لنفترض بأنني قمت بإستدعاء اليد اليمنى ومن ثم بعد عدد من الأسطر البرمجية اردت إستدعاء اليد اليسرى<br>
                <strong dir="rtl">النتيجة:</strong><br>
             </p>
-            <img class="image" src="../../images/javascript/14/9.png">
+            <img class="image" src="{% static 'images/javascript/14/9.png'%}">
             <p></p>
             <hr>
             <p dir="rtl">قم بتجربة إستدعاء الدالة بدون تمرير إي قيمة كالتالي:</p>

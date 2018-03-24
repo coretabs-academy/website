@@ -43,7 +43,7 @@
             <p dir="rtl">في الدرس السابق تكلمنا عن المصفوفات (Arrays) وكيف أنها تستخدم لتخزين عدد من البيانات تحت مسمى متغير واحد مما يسهل علينا تتبع تلك البيانات وكيف أنها تعطينا ميزة المرونة في تخزين أي عدد من البيانات في أي وقت حيث يتمدد حجمها حسب الحاجة.</p>
             <hr>
             <p dir="rtl">في درس اليوم سنقوم بالإستفادة من فكرة المصفوفة في عمل تطبيق قائمة المهام حيث سنسمح للمستخدم بإدخال المهام التي يرغب بالقيام بها ونقوم بتخزينها في مصفوفة. <strong dir="rtl">النتيجة النهائية للتطبيق:</strong><br></p>
-            <img class="image" src="../../images/javascript/11/1.gif">
+            <img class="image" src="{% static 'images/javascript/11/1.gif'%}">
             <p></p>
             <hr>
             <h2 dir="rtl">البدء بالعمل</h2>
@@ -81,7 +81,7 @@
             </p>
             <h3 dir="rtl"><strong dir="rtl">النتيجة:</strong></h3>
             <p></p>
-            <img class="image" src="../../images/javascript/11/2.png">
+            <img class="image" src="{% static 'images/javascript/11/2.png'%}">
             <p></p>
             <hr>
             <h2 dir="rtl">لنبدأ بالعمل على الـ Javascript</h2>
@@ -89,7 +89,7 @@
             <p dir="rtl">كما تعلمنا في التطبيق السابق أنه نحتاج دائماً إلى أن نبدأ بتحديد عناصر الـ HTML التي نريد أن نستخدمها بالجافاسكربت ونقوم بذلك بعدة طرق إما عبر الـ id او الـ class او الـ tag name وغيرها قمت بإلاطلاع على هذه الطرق <a href="https://www.w3schools.com/js/js_htmldom_elements.asp" rel="nofollow noopener" dir="rtl"><strong dir="rtl">من هنا</strong>
                </a> في وقتنا الحالي سنحتاج إلى أن نقوم بعمل select لثلاثة عناصر <strong dir="rtl">كالتالي:</strong><br>
             </p>
-            <img class="image" src="../../images/javascript/11/3.png">
+            <img class="image" src="{% static 'images/javascript/11/3.png'%}">
             <p></p>
             <p dir="rtl">1- سنقوم بتحديد حقل الإدخال حتى نستطيع تخزين القيمة <code dir="ltr">value</code> التي سيتم إدخالها الية وسأسند ذلك الى متغير بإسم <code dir="ltr">input</code>:</p>
             <div class="code">
@@ -165,15 +165,15 @@
             </details>
             <hr>
             <p dir="rtl">سأقوم في البدأية بفتح الـ console وطباعة قيم المصفوفة بكتابة إسمها <code dir="ltr">list</code> كالتالي:<br></p>
-            <img class="image" src="../../images/javascript/11/4.png">
+            <img class="image" src="{% static 'images/javascript/11/4.png'%}">
             <p></p>
             <p dir="rtl">نلاحظ بأنها فارغة ولاتحتوي أي عنصر حتى اللحظة.</p>
             <hr>
             <p dir="rtl">لنقوم بإضافة عنصر عبر كتابته في الحقل النصي والضغط على زر إضافة ومن ثم نقوم بطباعة المصفوفة كالتالي:<br></p>
-            <img class="image" src="../../images/javascript/11/5.png">
+            <img class="image" src="{% static 'images/javascript/11/5.png'%}">
             <p></p>
             <p dir="rtl">لاحظ كيف تم إضافة عنصر جديد للمصفوفة بالقيمة التي أضفناها بإستخدام الحقل input, لنقم بإضافة قيمة أخرى لنتأكد من أنه يتم إضافتها للمصفوفة وان الطريقة push تعمل كما هو متوقع:<br></p>
-            <img class="image" src="../../images/javascript/11/6.png">
+            <img class="image" src="{% static 'images/javascript/11/6.png'%}">
             <p></p>
             <p dir="rtl">رائع حصلنا على العنصر الأخر بدأخل المصفوفة ما يعني أننا في الطريق الصحيح.</p>
             <hr>
@@ -196,7 +196,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/11/7.png">
+            <img class="image" src="{% static 'images/javascript/11/7.png'%}">
             <p></p>
             <p dir="rtl">هل لاحظتم كيف أنه بمجرد الضغط على الزر كيف تم تغيير كل المحتوى الذي بين وسمي <code dir="ltr">&lt;ul&gt;</code> الى المحتوى الجديد الذي قمنا بتحديدة في الكود أعلاة وكيف أنه تم مسح كل المحتوى السابق, لنفترض بأننا لا نريد مسح المحتوى السابق واستبدالة وإنما نريد إضافة المحتوى الجديد عليه في هذه الحالة لنجرب كتابة الكود بالشكل التالي:</p>
             <div class="code">
@@ -226,7 +226,7 @@
             </details>
             <hr>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/11/8.png">
+            <img class="image" src="{% static 'images/javascript/11/8.png'%}">
             <p></p>
             <p dir="rtl">لاحظ هذه المرة لم يتم مسح المحتوى السابق وانما تم إضافة المحتوى الجديد بجوارة, وهذا ما نريدة في حالتنا فنحن نريد أن يتم طباعة كل مهمة جديدة بجوار المهام الأخرى.</p>
             <hr>
@@ -236,7 +236,7 @@
                عند إضافتنا لعنصر جديد في قائمة المهام يتم إضافته في نهاية المصفوفة بإستخدام الطريقة push لهذا نريد أن نستفيد من هذه الخاصية للوصول لقيمة أخر عنصر في المصفوفة من أجل طباعته في كل مرة يتم إضافة عنصر جديد.
             </p>
             <p dir="rtl">لنشاهد الصورة التالية<br>
-               <img src="../../images/javascript/11/9.png" alt="image" width="562" height="365">
+               <img src="{% static 'images/javascript/11/9.png'%}" alt="image" width="562" height="365">
             </p>
             <p dir="rtl">نلاحظ ان طول المصفوفة بالصورة أعلاة هو 2<br>
                نلاحظ ان الرقم التسلسلي index للعنصر الأخير في هذه المصفوفة هو 1

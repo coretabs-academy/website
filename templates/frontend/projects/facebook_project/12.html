@@ -245,7 +245,7 @@
             </div>
             <p dir="rtl">لنشاهد التغييرات التي حصلت للـ header بعد تطبيق هذا التعديل:</p>
             <p></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/12/1.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/12/1.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">لن تلاحظ أي تغيير ولكن استخدم أداة الـ inspect element وقم بالتحديد على عنصر <code dir="ltr">container</code> ستجد وكانة لا وجود له لهذا من أجل ان نحل هذه المشكلة سنقوم بإعطائة خاصية تجعلة يقوم بالإلتفاف حول العناصر التي بدأخلة ويحصل على إرتفاع بقدر ارتفاع محتوياته بإستخدام الخاصية <code dir="ltr">overflew</code> والقيمة <code dir="ltr">auto</code> كالتالي:</p>
             <div class="code">
@@ -257,7 +257,7 @@
 </pre>
             </div>
             <p></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/12/2.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/12/2.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">لاحظ الأن عند إستخدامك للـ inspect element سيظهر كالصندوق. الأن أصبح العنصر <code dir="ltr">container</code> جاهز للإستخدام في أي مكان على الصفحة والتأقلم مع أي محتوى بهذه التنسيقات العامة.</p>
             <h2 dir="rtl">البدء بالعمل على قسم main</h2>
@@ -281,14 +281,14 @@
             </div>
             <p dir="rtl">هنا شرح كيف حصلت على الألوان الخاصة بالتدرج</p>
             <p></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="main_bg.gif" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/12/3.gif" alt="main_bg" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="main_bg.gif" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/12/3.gif'%}" alt="main_bg" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/12/4.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/12/4.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <h2 dir="rtl">إضافة الـ container:</h2>
             <p></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="continer-explaination.gif" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/12/5.gif" alt="continer-explaination" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="continer-explaination.gif" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/12/5.gif'%}" alt="continer-explaination" class="image"></a></div>
             <p></p>
             <div class="code">
                <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"main"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
@@ -302,7 +302,7 @@
             </div>
             <p dir="rtl">حتى نتأكد من أننا نقوم بالعمل الصحيح سأقوم بتغيير لون خلفية الـ container للأسود واعطية ارتفاع بقيمة 80px واشاهد اذا كان في المكان المطلوب ام لا قبل البدء بإضافة أي عناصر أخرى.</p>
             <p></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/12/6.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/12/6.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">كما اريد بالضبط, لاحظ وجود الـ container في منطقة الـ header وكذلك في منطقة الـ main يؤدوا نفس الغرض.</p>
             <p dir="rtl">الأن ساقوم بأزالة تلك التنسيقات المؤقته وأقوم بإضافة القسمين الذان سيحتويان على العناصر بداخل هذا الجزء كما خططنا في الدرس السابق.</p>
@@ -313,7 +313,7 @@
                <p></p>
                <div class="lightbox-wrapper" dir="ltr">
                   <a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr">
-                     <img src="../../../images/projects/facebook_project/12/7.png" alt="image" class="image">
+                     <img src="{% static 'images/projects/facebook_project/12/7.png'%}" alt="image" class="image">
                      <div class="meta" dir="ltr">
                         <span class="filename" dir="ltr">image.png</span><span class="informations" dir="ltr">1500x1000 185 KB</span><span class="expand"></span>
                      </div>
@@ -337,7 +337,7 @@
             <p dir="rtl">قم بعمل تجربة التأكد من أنهما في المكان المناسب.</p>
             <h2 dir="rtl">البدء بالعمل على منطقة float-left</h2>
             <p dir="rtl">سنقوم بتقسيمها كالتالي:<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="../../../images/projects/facebook_project/12/8.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/projects/facebook_project/12/8.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <ul dir="rtl">
                <li dir="rtl">
@@ -394,7 +394,7 @@
                <p></p>
                <div class="lightbox-wrapper" dir="ltr">
                   <a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr">
-                     <img src="../../../images/projects/facebook_project/12/9.png" alt="image" class="image">
+                     <img src="{% static 'images/projects/facebook_project/12/9.png'%}" alt="image" class="image">
                      <div class="meta" dir="ltr">
                         <span class="filename" dir="ltr">image.jpg</span><span class="informations" dir="ltr">980x576 36.3 KB</span><span class="expand"></span>
                      </div>

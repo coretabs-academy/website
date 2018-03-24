@@ -62,7 +62,7 @@
 </pre>
             </div>
             <p dir="rtl">قمت بعمل مصفوفة تحتوي على منتجين تحت إسم متغير واحد وهو shoppingCart بحيث أستطيع الأن الوصول لكل هذه المنتجات بإستخدام هذا المتغير عبر الرقم التسلسلي (index) الخاص بكل عنصر في هذه المصفوفة حيث ان اول عنصر يبدأ رقمة التسلسلي من الرقم 0 كما سبق وناقشنا ذلك في درس النصوص (strings):<br>
-               <img src="../../images/javascript/10/1.png" alt="image" width="590" height="170">
+               <img src="{% static 'images/javascript/10/1.png'%}" alt="image" width="590" height="170">
             </p>
             <p dir="rtl">لاحظ انه اذا اردت الوصول للمنتج الأول في سلة المشتريات سأكتب الكود التالي:</p>
             <div class="code">
@@ -75,7 +75,7 @@
 </pre>
             </div>
             <p dir="rtl">جميل, لنفترض أن العميل يريد أن يقوم بإضافة منتج جديد ما يعني بأننا سنحتاج إلى خانة جديدة في هذه المصفوفة <strong dir="rtl">كالتالي:</strong><br></p>
-            <img class="image" src="../../images/javascript/10/2.png">
+            <img class="image" src="{% static 'images/javascript/10/2.png'%}">
             <p></p>
             <p dir="rtl">حتى نقوم بتخزين المنتج الثالث في سلة المشتريات سنقوم بوضعة في الخانة ذات الرقم التسلسلي 2 كالتالي:</p>
             <div class="code">
@@ -83,7 +83,7 @@
 </pre>
             </div>
             <p dir="rtl">النتيجة:<br></p>
-            <img class="image" src="../../images/javascript/10/3.png">
+            <img class="image" src="{% static 'images/javascript/10/3.png'%}">
             <p></p>
             <hr>
             <ul dir="rtl">
@@ -98,13 +98,13 @@
 </pre>
             </div>
             <p dir="rtl">تم إرجاع القيمة 3 كعدد المنتجات التي تم إضافتها للمصفوفة<br></p>
-            <img class="image" src="../../images/javascript/10/4.png">
+            <img class="image" src="{% static 'images/javascript/10/4.png'%}">
             <p></p>
             <p dir="rtl">اذا طلبت منك أن تقوم بعد أي شي بالتأكيد ستبدأ من الرقم واحد فلا يمكنك ان تبدأ بعد أي عناصر من الرقم 0 فهذا يعني بأنك تجاهلت احد العناصر لهذا ركز على التفريق بين عدد العناصر في المصفوفة وبين ارقامها التسلسلية كما هو موضح بالصورة أدناة:<br>
-               <img src="../../images/javascript/10/5.png" alt="image" width="625" height="314">
+               <img src="{% static 'images/javascript/10/5.png'%}" alt="image" width="625" height="314">
             </p>
             <p dir="rtl">لنعود للقيمة التي أرجعتها لنا الخاصية <strong dir="ltr">length</strong> والذي هو رقم <strong dir="ltr">3</strong>, هل تلاحظوا أن هذا الرقم هو رقم الخانة الجديدة للعنصر الجديد في هذه المصفوفة؟<br></p>
-            <img class="image" src="../../images/javascript/10/6.png">
+            <img class="image" src="{% static 'images/javascript/10/6.png'%}">
             <p></p>
             <p dir="rtl">ما يعني انه اذا اردنا أن نقوم بإضافة عنصر جديد لهذه المصفوفة فسنقوم بالتالي:</p>
             <div class="code">
@@ -121,7 +121,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">كالتالي:</strong><br></p>
-            <img class="image" src="../../images/javascript/10/7.gif">
+            <img class="image" src="{% static 'images/javascript/10/7.gif'%}">
             <p></p>
             <hr>
             <p dir="rtl">2- <strong dir="rtl">الطريقة الثالثة</strong> بإستخدام <code dir="ltr">unshift()</code> بنفس فكرة push ولكن هذه الطريقة تقوم بإضافة العنصر في بدأية المصفوفة وليس في نهايتها</p>
@@ -136,7 +136,7 @@
             <p dir="rtl"><strong dir="rtl">الدرس القادم سيكون عمل تطبيق بإستخدام الـ Arrays لعمل To Do List كما بالصورة التالية:</strong><br>
                اريد منكم المحاولة في عمل مثل هذا التطبيق حيث أننا سنقوم بعملة بأسهل طريقة ممكنه فلا نريد تعقيد الأمور في هذه المرحلة فإذا استطعت أن تكمل هذا التطبيق قبل انتهائي من تجهيز الدرس قم بمشاركته معنا.<br>
             </p>
-            <img class="image" src="../../images/javascript/10/8.gif">
+            <img class="image" src="{% static 'images/javascript/10/8.gif'%}">
          </div>
       </div>
       <script src="{% static 'js/main.js' %}"></script>

@@ -42,7 +42,7 @@
             <hr>
             <h3 dir="rtl">ماهي الحلقات (Loops)؟</h3>
             <p dir="rtl">الحلقات هي وسيلة لتكرار حدث لعدد من المرات وفق شروط معينة.<br>
-               <img src="../../images/javascript/13/1.png" alt="image" width="234" height="91">
+               <img src="{% static 'images/javascript/13/1.png'%}" alt="image" width="234" height="91">
             </p>
             <p dir="rtl"><strong dir="rtl">المثال:</strong><br> لنفترض أنني سأقول لك قم بعمل حلقة بحيث أنك تعد الارقام من 0 إلى 10 بإضافة 1 على العدد السابق في كل مرة.
             </p>
@@ -52,7 +52,7 @@
             <hr>
             <h3 dir="rtl">لماذا نحتاج لتحديد شرط للحلقات؟</h3>
             <p dir="rtl">وذلك حتى لا ندخل في حلقة لا نهائية<br>
-               <img src="../../images/javascript/13/2.png" alt="image" width="220" height="119">
+               <img src="{% static 'images/javascript/13/2.png'%}" alt="image" width="220" height="119">
             </p>
             <p dir="rtl"><strong dir="rtl">المثال:</strong><br> لنفترض أنني سأقول لك قم بعمل حلقة بحيث أنك تعد الارقام من 0 بإضافة 1 على العدد السابق في كل مرة.
             </p>
@@ -81,7 +81,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">شكراً لك</strong>, أرجوك قم الأن بطباعة الأعداد من 1 إلى 100.</p>
-            <p dir="rtl"><strong dir="rtl">كثير اليس كذلك كم ستحتاج أسطر وكم ستحتاج وقت <img src="../../images/javascript/13/3.png" title=":thinking:" class="emoji" alt=":thinking:" style="width:30px;">؟</strong><br>                اذا ما رأيك أن نستخدم طريقة أكثر ذكاء فبدلاً من تكرير كتابة الأكواد في كل مرة لنقوم بكتابة كود مرة واحدة ونجعلة يقوم بتكرار نفسة كم ما نريد من المرات بإستخدام الحلقات <img src="../../images/javascript/13/4.png" title=":smirk:" class="emoji" alt=":smirk:" style="width:30px;">.
+            <p dir="rtl"><strong dir="rtl">كثير اليس كذلك كم ستحتاج أسطر وكم ستحتاج وقت <img src="{% static 'images/javascript/13/3.png'%}" title=":thinking:" class="emoji" alt=":thinking:" style="width:30px;">؟</strong><br>                اذا ما رأيك أن نستخدم طريقة أكثر ذكاء فبدلاً من تكرير كتابة الأكواد في كل مرة لنقوم بكتابة كود مرة واحدة ونجعلة يقوم بتكرار نفسة كم ما نريد من المرات بإستخدام الحلقات <img src="{% static 'images/javascript/13/4.png'%}" title=":smirk:" class="emoji" alt=":smirk:" style="width:30px;">.
             </p>
             <p dir="rtl">لكن قبل أن نقوم بهذه العملية لنتعلم طرق عمل الحلقات.</p>
             <hr>
@@ -102,7 +102,7 @@
                <hr>
             </details>
             <p dir="rtl">بنفس الفكرة سنحتاج لتحديد ثلاثة أشياء رئيسية لعمل الحلقة while كما بالصورة التالية:<br></p>
-            <img class="image" src="../../images/javascript/13/5.png">
+            <img class="image" src="{% static 'images/javascript/13/5.png'%}">
             <p></p>
             <p dir="rtl"><strong dir="rtl">قم بتجربة الكود التالي:</strong></p>
             <div class="code">
@@ -116,7 +116,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/13/6.png">
+            <img class="image" src="{% static 'images/javascript/13/6.png'%}">
             <p></p>
             <p dir="rtl">شاهد كيف تم طباعة الأرقام من 1 الى 10 في اسطر قليلة.</p>
             <p dir="rtl"><strong dir="rtl">لنقوم بطباعة الارقام من 1 إلى 100 كالتالي:</strong></p>
@@ -131,7 +131,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/13/7.png">
+            <img class="image" src="{% static 'images/javascript/13/7.png'%}">
             <p></p>
             <p dir="rtl">في ثواني حصلنا على عمل كان سيأخذ مننا 100 سطر و نصف ساعة على الأقل للقيام به يدوياً</p>
             <hr>
@@ -149,7 +149,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/13/8.png">
+            <img class="image" src="{% static 'images/javascript/13/8.png'%}">
             <p></p>
             <details dir="rtl" open="">
                <summary dir="rtl">
@@ -171,7 +171,7 @@
             </p>
             <p dir="rtl">الصورة ادناة متحركة قم بالضغط عليها حتى تشاهدها من بدأية العملية وقم بالتركيز على كيفية مرور السهم بالأوامر عندما يتعرف على وجود حلقة loop.</p>
             <p dir="rtl">كذلك ركز على أن عملية المقارنه تتم بإستخدام قيمة المتغير <code dir="ltr">i</code> المخزنة في الذاكرة (memory):<br></p>
-            <img class="image" src="../../images/javascript/13/9.gif">
+            <img class="image" src="{% static 'images/javascript/13/9.gif'%}">
             <p></p>
             <hr>
             <h3 dir="rtl">حلقة for</h3>

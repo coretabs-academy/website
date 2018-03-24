@@ -69,7 +69,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/html_css/12/1.png"  alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/html_css/12/1.png'%}"  alt="image" class="image"></a></div>
             <p></p>
             <h3 dir="rtl">القيمة static:</h3>
             <p dir="rtl">لنقوم بإعطاء النحلة الخاصية position  بقيمة static ومن ثم نقوم بإزاحتها بقيمة 50px من أعلى و 100px من اليسار كالتالي:</p>
@@ -85,7 +85,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/html_css/12/2.png"  alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/html_css/12/2.png'%}"  alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">لا يوجد أي تغيير !</strong><br>
                لاحظ اننا أعطينا العنصر الخاصية position  بقيمة static فهذه الخاصية تعتبر القيمة الإفتراضية وتقوم بتحديد موقع العنصر في الصفحة حسب ترتيبة بين الأكواد لهذا لن تؤثر عليه خصائص تحديد الموقع من أعلى ومن اليسار.
@@ -106,13 +106,13 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/html_css/12/3.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/html_css/12/3.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">هذه المرة تغير موقع النحلة ولكن كيف تم ذلك؟</strong><br>
                عند إعطائنا للنحلة الخاصية position  بقيمة relative وقتها نستطيع التحكم بموقعها إعتماداً على موقعها الأصلي فعند إضافتنا لخاصية top بقيمة 50px تمت إزاحتها من أعلى بهذه القيمة وكذلك بالنسبة للإزاحة التي حصلت من اليسار ولكن نلاحظ كأن موقع النحلة السابق مازال محجوز.
             </p>
             <p dir="rtl"><strong dir="rtl">شاهد الصورة التالية لتفهم قصدي:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/html_css/12/4.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/html_css/12/4.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <hr>
             <h3 dir="rtl">القيمة absolute:</h3>
@@ -129,7 +129,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/html_css/12/5.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/html_css/12/5.png'%}" alt="image" class="image"></a></div>
             <br>
             <strong dir="rtl">هذه المرة كذلك تم تغير موقع النحلة ولكن كيف تم ذلك؟</strong><br>
             نلاحظ في هذه المرة عند إستخدامنا للقيمة absolute تم تغيير موقع العنصر وفي نفس الوقت تم إعتبارة كأنه أصبح غير موجود أي لن يتم حجز موقعة السابق بين العناصر حيث لاحظنا صعود الصندوق الأصفر لموقع النحلة السابق بعكس ما حصل مع القيمة relative والتي تعتبر العنصر لازال موجود بين بقية العناصر.
@@ -163,7 +163,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/html_css/12/6.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/html_css/12/6.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">نلاحظ انه لدينا عنصر container يعتبر <strong dir="rtl">الأب</strong> للنحلة وللصندوق الأصفر.</p>
             <p dir="rtl">لنقم الأن بإعطاء النحلة خاصية position بقيمة absolute كالتالي:</p>
@@ -179,12 +179,12 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/html_css/12/7.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/html_css/12/7.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">مالذي حصل؟</strong><br>
                الذي حصل هو أنه تم إعطاء النحلة موقع absolute وإزاحتها من اليسار واليمين نسبياً للـ body  كالتالي:<br>
             </p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/html_css/12/8.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/html_css/12/8.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">ماذا لو أردت أن اقوم بتحديد موقع النحلة كـ absolute نسبياً لعنصر الـ container حيث تظل النحلة بدأخلة وليس للـ body حيث يسبب ذلك خروج النحلة عن العنصر الذي يحويها ؟</strong></p>
             <blockquote dir="rtl">
@@ -205,7 +205,7 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/html_css/12/9.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/html_css/12/9.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">لاحظ الأن يتم عمل ازاحة للعنصر نسبياً لحدود الأب container وذلك لأننا قمنا بإضافة الخاصية position  بقيمة relative له.<br></p>
             <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/html_css/12/10.png" alt="image" class="image"></a></div>

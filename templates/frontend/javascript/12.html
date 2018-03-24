@@ -51,7 +51,7 @@
             </div>
             <p dir="rtl">لاحظ قمت بجعل علامة التنصيص الخارجية فردية وعلامة التنصيص الداخلية مزدوجة وذلك لأنني اريد ان يتم إضافة خاصية الكلاس بالعلامة المزدوجة في كود الـ HTML.</p>
             <p dir="rtl"><strong dir="rtl">كالتالي:</strong><br></p>
-            <img class="image" src="../../images/javascript/12/1.png">
+            <img class="image" src="{% static 'images/javascript/12/1.png'%}">
             <p></p>
             <p dir="rtl"><strong dir="rtl">2- سأقوم بإضافة تنسيق</strong> للعناصر التي تحمل الكلاس <code dir="ltr">index</code> بحيث يظهر بجوارها ما يشابة الـ checkbox كالتالي:</p>
             <div class="code">
@@ -70,25 +70,25 @@
 </pre>
             </div>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/12/2.png">
+            <img class="image" src="{% static 'images/javascript/12/2.png'%}">
             <p></p>
             <p dir="rtl">قمت بإضافة التنسيق بإستخدام الـ CSS pseudo-element.</p>
             <hr>
             <h3 dir="rtl">الخطوة الحادية عشر</h3>
             <p dir="rtl">الأن عندما يقوم المستخدم بالضغط على مهمة من المهام نريد أن نحصل على رقم (ترتيب) هذه المهمة بين قائمة المهام حتى نعرف اي عنصر سنقوم بالتلاعب به.</p>
             <p dir="rtl"><strong dir="rtl">بدأية لنستذكر هذه الصورة:</strong><br>
-               <img src="../../images/javascript/12/3.png" class="image">
+               <img src="{% static 'images/javascript/12/3.png'%}" class="image">
             </p>
             <p dir="rtl">نعرف أنه في كل مرة يتم إضافة عنصر جديد يكون ترتيبة يساوي <code dir="ltr">(list.length-1)</code> فلماذا لا نقوم بتخزين الـ index الخاص بهذا العنصر عند إدراجة للقائمة بدأخل id حتى سنستطيع من خلالة معرفة أي عنصر من القائمة تم الضغط عليه فنستطيع الوصول إلية والتلاعب به.</p>
             <p dir="rtl">سأقوم بإضافة القيمة <code dir="ltr">(list.length-1)</code> الى الـ id كالتالي:<br></p>
-            <img class="image" src="../../images/javascript/12/4.gif">
+            <img class="image" src="{% static 'images/javascript/12/4.gif'%}">
             <p></p>
             <div class="code">
                <pre style="margin: 0; line-height: 125%"><span style="color: #000000">toDoList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span>  <span style="color: #ce5c00; font-weight: bold">+=</span> <span style="color: #4e9a06">'&lt;li class="index" id="'</span><span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">)</span><span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">'"&gt;'</span><span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">"&lt;/li&gt;"</span><span style="color: #000000; font-weight: bold">;</span>
 </pre>
             </div>
             <p dir="rtl">لنقوم الأن بمشاهدة الكود الخاص بعناصر القائمة بعد إضافة عدد منها:<br></p>
-            <img class="image" src="../../images/javascript/12/5.png">
+            <img class="image" src="{% static 'images/javascript/12/5.png'%}">
             <p></p>
             <p dir="rtl">لاحظ كيف تم إعطاء كل عنصر id برقم ترتيبة في القائمة بشكل ديناميكي.</p>
             <hr>
@@ -195,7 +195,7 @@
 </pre>
             </div>
             <p dir="rtl">عند إستدعاء هذه الدالة نريد أن نقوم بعمل تنسيق جديد للعنصر الذي تم الضغط علية بالشكل التالي:<br></p>
-            <img class="image" src="../../images/javascript/12/6.png">
+            <img class="image" src="{% static 'images/javascript/12/6.png'%}">
             <p></p>
             <p dir="rtl"><strong dir="rtl">سنقوم بعمل كلاس جديد بإسم checked ونضيف عليه التنسيقات المطلوبة بالشكل التالي:</strong></p>
             <div class="code">
@@ -227,12 +227,12 @@
             <p dir="rtl">1- في البدأية تكون الـ function غير فعالة لنفترض بأنها نائمة وتنتظر أن يتم إستدعائها من خلال الأمر onclick وبمجرد الضغط على أي عنصر تستيقظ <strong dir="rtl">كالتالي:</strong><br>
                .<br>
             </p>
-            <img class="image" src="../../images/javascript/12/7.gif">
+            <img class="image" src="{% static 'images/javascript/12/7.gif'%}">
             <p></p>
             <p dir="rtl">2- بمجرد الضغط على أي عنصر يتم تمرير الـ id الخاص به للدالة done <strong dir="rtl">كالتالي:</strong><br>
                .<br>
             </p>
-            <img class="image" src="../../images/javascript/12/8.gif">
+            <img class="image" src="{% static 'images/javascript/12/8.gif'%}">
             <p></p>
             <p dir="rtl">هذه هي فكرة الـ functions ببساطة لنعتبر هذه مقدمة للدرس القادم.</p>
             <hr>
@@ -240,7 +240,7 @@
                ما يعني انه اذا كان الكلاس موجود فسيتم ازالته واذا لم يكن موجود فسيتم إضافتة كما في الصورة التالية:
             </p>
             <p></p>
-            <img class="image" src="../../images/javascript/12/9.gif">
+            <img class="image" src="{% static 'images/javascript/12/9.gif'%}">
             <p></p>
             <p dir="rtl">لاحظ في الصورة كيف يتم اضافة وازالة الكلاس checked من العنصر مع كل ضغطة</p>
             <hr>
