@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-{% load static%}
+{% load static i18n %}
 <html>
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>دروس Full Stack</title>
 		<link rel="stylesheet" href="{% static 'css/style.css' %}">
-		<link rel="stylesheet" href="{% static 'css/custom.css' %}">
+		<link rel="stylesheet" href="{% static 'css/fetcher.css' %}">
 	</head>
-	<body>
-		<div class="navbar">
+	<body class="home">
+		<div id="navebar">
 			<div class="navbar-brand">
 				<div>
 					Academy
@@ -30,21 +30,53 @@
 				</nav>
 			</div>
 		</div>
-		<div class="container">
+        <div class="background-image">
+            <h1>{% trans 'Fall Stack Web Development' %}</h1>
+            <p>
+            {% blocktrans %}
+                Familiarity with programming is indispensable today. Learning programming is one of the most rich and useful things you can do.
+            {% endblocktrans %}
+            </p>
+            <a class="link" href="#main">{% trans 'Lessons' %}</a>
+            <div class="course animated infinite bounce">
+                <i class="fas fa-chevron-down"></i>
+                <a href="#main"></a>
+            </div>
+        </div>
+        <main id="main" class="beauty-box">
+            <h1 class="title">{% trans 'Track Lessons' %}</h1>
+            <div class="courses_container">
+
+            </div>
+        </main>
+        <div class="container">
 			<div class="cooked">
 			</div>
 			<aside>
 
 			</aside>
 		</div>
-		
+        <footer>
+            <div class="text">
+                Made with <img src="{% static 'images/heart.png'%}" alt="heart" width="20"> by
+            </div>
+            <div class="text">
+                <a href="http://alhakem.me/" target="_blank">Mohammed Al-Hakem
+                    <span class="profile"><img src="{% static 'images/mohammed.png'%}" alt="Mohammed Al-Hakem's photo"></span>
+                </a>&nbsp; &amp; &nbsp;
+                <a href="https://www.behance.net/SalahGFX" target="_blank">Salah Eddine Lachkar
+                    <span class="profile"><img src="{% static 'images/salah-eddine.png'%}" alt="Salah Eddine Lachkar's photo"></span>
+                </a>
+            </div>
+        </footer>
 		<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 			crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.min.js"></script>
+        {% load static%}
 		<script src="{% static 'js/main.js' %}"></script>
-        <script src="{% static 'js/settings.js' %}"></script>
+        <script src="{% static 'js/fetcher.js' %}"></script>
 	</body>
 </html>

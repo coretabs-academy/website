@@ -1,0 +1,24 @@
+a { cursor: pointer; word-wrap: break-word; }
+ul  { list-style: none; }
+ul ul { list-style: disc; }
+nav a { width: auto; padding: 0 10px; }
+.navbar-nav, .container {
+    display: none;
+}
+.cooked iframe.youtube { width: 420px; }
+
+@media screen and (max-width: 920px) {
+    .cooked img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar-brand {
+        background: none;
+    }
+
+    iframe.youtube {
+        width: 100%;
+    }
+}

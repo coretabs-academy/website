@@ -1,11 +1,12 @@
 var converter = new showdown.Converter();
 
 $(function() {
-    var topicsJSON, quizJSON, categoryTitle, topicTitle, autoId;
+    var topicsJSON, quizJSON, start, categoryTitle, categoryDesc, topicTitle, autoId;
     var navigationScope = [];
     
-    var lang = Cookies.get('lang');
-    if (lang === undefined) { lang = "ar"; }
+    //var lang = Cookies.get('lang');
+    //if (lang === undefined) { lang = "ar"; }
+    var lang = "ar";
     
     $(".container aside").html("<p>loading ...</p>");
     $(".navigate").hide();
@@ -18,33 +19,27 @@ $(function() {
             topicsJSON = response;
             $(".container aside").empty();
             $.each(topicsJSON.categories, function(cIndex, category) {
-                if (lang == "ar") { categoryTitle = category["title-ar"]; } else { categoryTitle = category["title-en"]; }
-                
+                if (lang == "ar") { categoryTitle = category["title-ar"]; categoryDesc = category["desc-ar"]; start = "إبدأ"; } else { categoryTitle = category["title-en"]; categoryDesc = category["desc-en"]; start = "Start"; }
                 $(".navbar-nav nav").append("<a data-idx='" + cIndex + "'>" + categoryTitle + "</a>");
-                if (cIndex == 0) {
-                    navigationScope = [];
-                    $.each(category.topics, function(tIndex, topic) {
-                        navigationScope.push([topic.id, "topic"]);
-                        if (tIndex == 0) { autoId = topic.id; }
-                        if (lang == "ar") { topicTitle = topic["title-ar"]; quizTitle="اختبار"; } else { topicTitle = topic["title-en"]; quizTitle="َQuiz"; }
-                        $(".container aside").append("<p><a class='topic' data-id='" + topic.id + "'>" + topicTitle + "</a></p>");
-                        if (topic.quiz == "true") {
-                            navigationScope.push([topic.id, "quiz"]);
-                            $(".container aside").append("<p><a class='quiz' data-id='" + topic.id + "'>" + quizTitle + ": " + topicTitle + "</a></p>");
-                        }
-                    });
-
-                    $("a.topic[data-id='" + autoId + "']").trigger("click");
-                }
+                $("#main .courses_container").append("<div class='box'><div class='courses_image'><img src='" + topicsJSON.host + "/images/" + category.image + "' alt=''></div><div class='text'><h2>" + categoryTitle + "</h2><p>" + categoryDesc + "</p><a class='button-link' data-idx='" + cIndex + "'>" + start + "</a></div></div>");
             });
         }
     });
-    
+
+    $("#main .courses_container").on("click", "a", function(event) {
+        var idx = $(this).attr("data-idx");
+        $("body").removeClass("home");
+        $(".background-image, #main, footer").remove();
+        $("#navebar").addClass("navbar");
+        $(".navbar-nav, .container").show();
+
+        $(".navbar-nav nav a[data-idx='" + idx + "']").trigger("click");
+    });
+
     $(".navbar-nav nav").on("click", "a", function(event){
         $(".container aside, .cooked").empty();
 
         var idx = $(this).attr("data-idx");
-
         $.each(topicsJSON.categories, function(index, category) {
             if (lang == "ar") { categoryTitle = category["title-ar"]; } else { categoryTitle = category["title-en"]; }
 
