@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 from account.forms import SettingsForm
+from django.views.generic import TemplateView
 from . import views
 
 urlpatterns = [
@@ -24,9 +25,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('account/', include('account.urls')),
     path('lang/set/', include('django.conf.urls.i18n'), name='set_language'),
-    path('<category>/', views.category_view, name='category'),
-    path('<category>/<int:id>/', views.tutorial_view, name='tutorial'),
-    path('<category>/<projects>/',views.project_view, name='projects'),
-    path('<category>/<projects>/<int:id>/',views.project_tutorial_view, name='project')
+    path('fullstack/', TemplateView.as_view(template_name='fullstack/index.html'), name='fullstack'),
+    path('frontend/', TemplateView.as_view(template_name='frontend/index.html'), name='frontend'),
+    path('frontend/<category>/', views.category_view, name='category'),
+    path('frontend/<category>/<int:id>/', views.tutorial_view, name='tutorial'),
+    path('frontend/<category>/<projects>/',views.project_view, name='projects'),
+    path('frontend/<category>/<projects>/<int:id>/',views.project_tutorial_view, name='project')
 ]
 

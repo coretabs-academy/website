@@ -12,12 +12,7 @@ class HomeView(LoginView):
 
 
 def category_view(request, category=None):
-    template = f'{category}.html'
-
-    if category == 'fullstack' or category == 'frontend':
-        return render(request, f'{category}/index.html')
-
-    return render(request, f'frontend/{category}/{template}')
+    return render(request, f'frontend/{category}/{category}.html')
 
 
 def tutorial_view(request, category=None, id=None):
