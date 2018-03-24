@@ -14,22 +14,22 @@ class HomeView(LoginView):
 def category_view(request, category=None):
     template = f'{category}.html'
 
-    if category == 'fullstack':
-        template = 'index.html'
+    if category == 'fullstack' or category == 'frontend':
+        return render(request, f'{category}/index.html')
 
-    return render(request, f'{category}/{template}')
+    return render(request, f'frontend/{category}/{template}')
 
 
 def tutorial_view(request, category=None, id=None):
-    return render(request, f'{category}/{id}.html')
+    return render(request, f'frontend/{category}/{id}.html')
 
 
 def project_view(request, category=None, projects=None):
-    return render(request, f'{category}/{projects}/{projects}.html')
+    return render(request, f'frontend/{category}/{projects}/{projects}.html')
 
 
 def project_tutorial_view(request, category=None, projects=None, id=None):
-    return render(request, f'{category}/{projects}/{id}.html')
+    return render(request, f'frontend/{category}/{projects}/{id}.html')
 
 
 

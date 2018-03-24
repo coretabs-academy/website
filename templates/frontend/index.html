@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+{% load static i18n %}
+
+
+<html lang="ar" dir="rtl">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Coretabs Academy</title>
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+      <style class="connectorStyle"></style>
+   </head>
+   <body class="home">
+
+    <div class="navbar-brand">
+         <div>
+             Academy
+         </div>
+      </div>
+      <div class="background-image">
+         <h1>{% trans 'Front End Web Development' %}</h1>
+         <p>
+             {% blocktrans %}
+                Familiarity with programming is indispensable today. Learning programming is one of the most rich and useful things you can do.
+             {% endblocktrans %}
+		  </p>
+         <a class="link" href="#main">{% trans 'Lessons' %}</a>
+         <div class="course animated infinite bounce">
+            <i class="fas fa-chevron-down"></i>
+            <a href="#main"></a>
+         </div>
+      </div>
+      <main id="main" class="beauty-box">
+         <h1 class="title">{% trans 'Track Lessons' %}</h1>
+         <div class="courses_container">
+            <div class="html_css box">
+               <div class="courses_image">
+                  <img src="{% static 'images/html_css.png'%}" alt="">
+               </div>
+               <div class="text">
+                  <h2>{% trans 'HTML & CSS Lessons' %}</h2>
+                  <p>
+                      {% blocktrans %}
+                        you don't need any prior knowledge of HTML to start this unit, but you need at least some basic knowledge of how to use computer and web browser
+                      {% endblocktrans %}
+                  </p>
+                  <a class="button-link" href="{% url 'category' category='html_css' %}">{% trans 'Start' %}</a>
+               </div>
+               <a class="box-link" href="{% url 'category' category='html_css' %}"></a>
+            </div>
+            <div class="javascript box">
+               <div class="courses_image">
+                  <img src="{% static 'images/js.png'%}" alt="">
+               </div>
+               <div class="text">
+                  <h2>{% trans 'JavaScript Lessons' %}</h2>
+                  <p>
+                      {% blocktrans %}
+                        Javascript is an object oriented and multi-platform programming language. Is a small and lightweight language. Within the host environment (for example, a web browser), using Javascript you can make your application interactive.
+                      {% endblocktrans%}
+                  </p>
+
+                  <a class="button-link" href="{% url 'category' category='javascript' %}">{% trans 'Start' %}</a>
+
+               </div>
+               <a class="box-link" href="{% url 'category' category='javascript' %}"></a>
+            </div>
+            <div class="git box">
+               <div class="courses_image">
+                  <img src="{% static 'images/git.png'%}" alt="">
+               </div>
+               <div class="text">
+                  <h2>{% trans 'Git Lessons' %}</h2>
+                  <p>
+                      {% blocktrans %}
+                        Git is a copy management software, or as it is literally called (version management system), using Git you can record changes to your application and then refer to it at any time and also helps you to cooperate with other programmers to work on projects.
+                      {% endblocktrans %}
+                  </p>
+                  <a class="button-link" href="{% url 'category' category='git' %}">{% trans 'Start' %}</a>
+
+               </div>
+               <a class="box-link" href="{% url 'category' category='git' %}"></a>
+            </div>
+            <div class="project box">
+               <div class="courses_image">
+                  <img src="{% static 'images/project.png'%}" alt="">
+               </div>
+               <div class="text">
+                  <h2>{% trans 'Projects' %}</h2>
+                  <p>
+                      {% blocktrans %}
+                        We all know that projects are one of the most important things that enable us to develop our expertise in various fields so let us apply what we learned through working on real projects.
+                      {% endblocktrans %}
+                  </p>
+                  <a class="button-link" href="{% url 'category' category='projects' %}">{% trans 'Start' %}</a>
+
+               </div>
+               <a class="box-link" href="{% url 'category' category='projects' %}"></a>
+            </div>
+         </div>
+      </main>
+      <div class="about">
+         <h1>{% trans 'About website' %}</h1>
+         <p>
+             {% blocktrans %}
+                This site has been placed as a reference to the lessons and workshops that were developed in the initiative of the million arabic coders , made sure that the lessons are simplified and targeted mainly those who have zero experience in this area if you not part of the program million arabic coders  You can take advantage of these lessons and to put Your Questions or Inquiries Join our Facebook page.
+             {% endblocktrans %}
+         </p>
+		  <a href="http://www.facebook.com/groups/ProgrammersUnion" class="facebook"></a>
+      </div>
+      <footer>
+           <div class="text">
+             Made with <img src="{% static 'images/heart.png'%}" alt="heart" width="20"> by
+           </div>
+           <div class="text">
+             <a href="http://alhakem.me/" target="_blank">Mohammed Al-Hakem
+               <span class="profile"><img src="{% static 'images/mohammed.png'%}" alt="Mohammed Al-Hakem's photo"></span>
+             </a>&nbsp; &amp; &nbsp;
+             <a href="https://www.behance.net/SalahGFX" target="_blank">Salah Eddine Lachkar
+               <span class="profile"><img src="{% static 'images/salah-eddine.png'%}" alt="Salah Eddine Lachkar's photo"></span>
+             </a>
+           </div>
+      </footer>
+	  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+      <script src="{% static 'js/main.js' %}"></script>
+   </body>
+</html>
