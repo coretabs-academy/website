@@ -22,9 +22,8 @@
 		color: #fff;
         text-align: center;
         text-decoration: none;
-        width: 120px;
         height: 46px;
-        padding: 5px 0;
+        padding: 5px;
 		-moz-transition: all 0.2s ease-in;
 		-o-transition: all 0.2s ease-in;
 		-webkit-transition: all 0.2s ease-in;
@@ -79,7 +78,7 @@
 		background-position: right center;
 	}
 	.select-styled:hover, .select-styled:active, .select-styled.active, .login-brand > a:hover, .login-brand > a.active, #logout:hover {
-		background-color: rgba(0,0,0,.25);
+		background-color: rgba(0,0,0,.75);
 	}
 
 	form#login-panel, .select-options {
@@ -92,7 +91,7 @@
 		margin: 0;
 		padding: 0;
 		list-style: none;
-		background-color: rgba(0,0,0,.25);
+		background-color: rgba(0,0,0,.75);
 		text-align: center;
 	}
     form#login-panel {
@@ -100,13 +99,21 @@
         top: 46px;
         direction: ltr;
     }
-    form#login-panel input {
+
+    form#login-panel .errors {
+        color: #e74c3c;
+    }
+    form#login-panel label {
+        color: #fff;
+    }
+    form#login-panel input[type="text"], form#login-panel input[type="password"] {
         background: transparent;
         margin-bottom: 10px;
         border: 0;
         border-bottom: 1px solid #4B7BEC;
         width: 75%;
         height: 30px;
+		font-family: 'Cairo', sans-serif;
         color: #fff;
     }
 
@@ -119,6 +126,18 @@
     }
     form#login-panel input::-ms-input-placeholder {
         color: fff;
+    }
+
+    form#login-panel #remember {
+        width: 75%;
+        height: 36px;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    form#login-panel input[type="checkbox"] {
+        position: relative;
+        top: 1px;
     }
 
     form#login-panel button {
@@ -202,9 +221,6 @@
 
 @media screen and (max-width: 920px) {
     .cooked img { width: 100%; }
-    form#login-panel, .select-options {
-		background-color: rgba(0,0,0,.5);
-    }
     #main-video {
         width: 600px;
         height: 300px;
@@ -219,8 +235,8 @@
     }
     .login-brand {
         top: 80px;
-        right: calc(50% - 210px);
-        width: 420px;
+        right: calc(50% - 160px);
+        width: 320px;
     }
     #main-video {
         width: 480px;
@@ -235,22 +251,11 @@
     iframe.youtube { width: 100%; }
 
     .login-brand {
-        right: calc(50% - 160px);
-        width: 320px;
+        right: calc(50% - 150px);
+        width: 300px;
     }
-
-    .login-brand > form, .login-brand > a {
-        margin: 0px;
-    }
-
-    .login-brand > a {
-        width: 100px;
-        font-size: 1em;
-    }
-
     .select {
-        width: 120px;
-        font-size: 1em;
+        width: 130px;
     }
 
     .select-styled {

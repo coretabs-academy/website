@@ -42,7 +42,7 @@
 
                 {% csrf_token %}
 
-                <div style="color: red"> {{ form.non_field_errors }} </div>
+                <div class="errors"> {{ form.non_field_errors }} </div>
 
                 <div>
                     {{ form.username }}
@@ -52,11 +52,10 @@
                     {{ form.password }}
                 </div>
 
-        <!--    <div>
-                    {{ form.remember.label_tag }}
+                <div id="remember">
                     {{ form.remember }}
+                    {{ form.remember.label_tag }}
                 </div>
-        -->
                 <div>
                     <button type="submit">{% trans "Login" %}</button>
                 </div>
