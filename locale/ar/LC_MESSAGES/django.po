@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-24 15:15+0200\n"
+"POT-Creation-Date: 2018-03-24 22:26+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -86,35 +86,41 @@ msgstr ""
 msgid "Email confirmed"
 msgstr ""
 
-#: templates/frontend/index.html:23
+#: templates/frontend/index.html:18 templates/fullstack/index.html:15
+#: templates/home.html:19
+msgid "Academy"
+msgstr "الأكاديمية"
+
+#: templates/frontend/index.html:22
 msgid "Front End Web Development"
 msgstr "تطوير صفحات المواقع الإلكترونية"
 
-#: templates/frontend/index.html:25
+#: templates/frontend/index.html:24 templates/fullstack/index.html:36
 msgid ""
 "\n"
-"                Familiarity with programming is indispensable today. "
-"Learning programming is one of the most rich and useful things you can do.\n"
-"             "
+"\t\t\tFamiliarity with programming is indispensable today. Learning "
+"programming is one of the most rich and useful things you can do.\n"
+"\t\t\t"
 msgstr ""
 "\n"
-"                إن الإلمام بمجال البرمجة، أمرٌ لا غنى عنه في أيامنا هذه. وإن "
+"\t\t\tإن الإلمام بمجال البرمجة، أمرٌ لا غنى عنه في أيامنا هذه. وإن "
 "تعلُّم البرمجة هو من أكثر الأمور الغنية والمفيدة التي يمكنك القيام بها.\n"
-"             "
+"\t\t\t"
 
-#: templates/frontend/index.html:29
+
+#: templates/frontend/index.html:28 templates/fullstack/index.html:40
 msgid "Lessons"
 msgstr "الدروس"
 
-#: templates/frontend/index.html:36
+#: templates/frontend/index.html:35 templates/fullstack/index.html:47
 msgid "Track Lessons"
 msgstr "دروس المسار"
 
-#: templates/frontend/index.html:43
+#: templates/frontend/index.html:42
 msgid "HTML & CSS Lessons"
 msgstr "دروس HTML و CSS"
 
-#: templates/frontend/index.html:45
+#: templates/frontend/index.html:44
 msgid ""
 "\n"
 "                        you don't need any prior knowledge of HTML to start "
@@ -128,16 +134,16 @@ msgstr ""
 "الحواسيب،  واستخدام متصفح الويب\n"
 "                      "
 
-#: templates/frontend/index.html:49 templates/frontend/index.html:65
-#: templates/frontend/index.html:81 templates/frontend/index.html:97
+#: templates/frontend/index.html:48 templates/frontend/index.html:64
+#: templates/frontend/index.html:80 templates/frontend/index.html:96
 msgid "Start"
 msgstr "إبدأ"
 
-#: templates/frontend/index.html:58
+#: templates/frontend/index.html:57
 msgid "JavaScript Lessons"
 msgstr "دروس JavaScript"
 
-#: templates/frontend/index.html:60
+#: templates/frontend/index.html:59
 msgid ""
 "\n"
 "                        Javascript is an object oriented and multi-platform "
@@ -152,11 +158,11 @@ msgstr ""
 "ويب), بإستخدام الجافاسكربت تستطيع جعل تطبيقك تفاعلي.\n"
 "                      "
 
-#: templates/frontend/index.html:75
+#: templates/frontend/index.html:74
 msgid "Git Lessons"
 msgstr "دروس Git"
 
-#: templates/frontend/index.html:77
+#: templates/frontend/index.html:76
 msgid ""
 "\n"
 "                        Git is a copy management software, or as it is "
@@ -172,11 +178,11 @@ msgstr ""
 "مبرمجين أخرين في العمل على المشاريع.\n"
 "                      "
 
-#: templates/frontend/index.html:91
+#: templates/frontend/index.html:90
 msgid "Projects"
 msgstr "المشاريع"
 
-#: templates/frontend/index.html:93
+#: templates/frontend/index.html:92
 msgid ""
 "\n"
 "                        We all know that projects are one of the most "
@@ -190,11 +196,11 @@ msgstr ""
 "مشاريع حقيقة.\n"
 "                      "
 
-#: templates/frontend/index.html:105 templates/home.html:109
+#: templates/frontend/index.html:104 templates/home.html:108
 msgid "About website"
 msgstr "عن الموقع"
 
-#: templates/frontend/index.html:107 templates/home.html:111
+#: templates/frontend/index.html:106 templates/home.html:110
 msgid ""
 "\n"
 "                This site has been placed as a reference to the lessons and "
@@ -212,9 +218,9 @@ msgstr ""
 "الإستفادة من هذه الدروس ولوضع أسئلتك أو إستفساراتك قم بالإنضمام لقروب الفيس "
 "بوك الخاص بنا"
 
-#: templates/home.html:19
-msgid "Academy"
-msgstr "الأكاديمية"
+#: templates/fullstack/index.html:34
+msgid "Full Stack Web Development"
+msgstr "تطوير صفحات الويب الشامل"
 
 #: templates/home.html:28
 msgid "Logout"
@@ -228,22 +234,22 @@ msgstr "الحساب"
 msgid "Signup"
 msgstr "تسجيل"
 
-#: templates/home.html:39 templates/home.html:61
+#: templates/home.html:39 templates/home.html:60
 msgid "Login"
 msgstr "دخول"
 
-#: templates/home.html:64
+#: templates/home.html:63
 msgid "Forgot Your Password?"
 msgstr "نسيت كلمة المرور؟"
 
-#: templates/home.html:92
+#: templates/home.html:91
 msgid "Courses"
 msgstr "الدروس"
 
-#: templates/home.html:97
+#: templates/home.html:96
 msgid "Front End"
 msgstr "تطوير واجهات المواقع"
 
-#: templates/home.html:103
+#: templates/home.html:102
 msgid "Full Stack"
 msgstr "تطوير الويب الشامل"
