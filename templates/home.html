@@ -16,46 +16,57 @@
    <body class="home">
       <div class="navbar-brand">
          <div>
-             Academy
+             {% trans "Academy" %}
          </div>
       </div>
      <div class="login-brand">
          {% if request.user.is_authenticated %}
-            <a href="{% url "account_logout" %}">
-                Logout
-            </a>
+
+             <form action="{% url "account_logout" %}" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="logout" value="value" />
+                <a id="logout" href="#" onclick="this.parentNode.submit()">{% trans "Logout" %}</a>
+             </form>
+
             <a href="{% url "account_settings" %}">
-                Account
-            </a>
-            <a href="{% url "account_password" %}">
-                Change password
-            </a>
-            <a href="{% url "account_delete" %}">
-                Delete account
+                {% trans "Account" %}
             </a>
         {% else %}
             <a href="{% url "account_signup" %}">
-                Signup
+                {% trans "Signup" %}
             </a>
-            <a id="login-options">
+            <a id="login-options" {% if form.non_field_errors  %} class="active" {% endif %}>
                 {% trans "Login" %}
             </a>
-            <form id="login-panel" method="post" action="/account/login/">
+            <form id="login-panel" method="post" action="{% url 'home' %}" {% if form.non_field_errors  %} style="display: block" {% endif %}>
+
                 {% csrf_token %}
+
+                <div style="color: red"> {{ form.non_field_errors }} </div>
+
                 <div>
-                    <input type="email" name="email" placeholder="Enter Your Email" />
+                    {{ form.username }}
+                </div>
+
+                <div>
+                    {{ form.password }}
+                </div>
+
+        <!--    <div>
+                    {{ form.remember.label_tag }}
+                    {{ form.remember }}
+                </div>
+        -->
+                <div>
+                    <button type="submit">{% trans "Login" %}</button>
                 </div>
                 <div>
-                    <input type="password" name="password" placeholder="Enter Your Password" />
-                </div>
-                <div>
-                    <button type="submit">Login</button>
-                </div>
-                <div>
-                    <a href="/account/password/reset/">Forgot Your Password?</a>
+                    <a href="{% url 'account_password_reset' %}">{% trans "Forgot Your Password?" %}</a>
                 </div>
             </form>
         {% endif %}
+
+
         <form id="language-selector" action="{% url 'set_language' %}" method="post">
             {% csrf_token %}
             <input name="next" type="hidden" value="{{ redirect_to }}" />

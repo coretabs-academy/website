@@ -36,12 +36,6 @@ class LocaleMiddleware(BaseMiddleware):
     """
 
     def get_language_for_user(self, request):
-        if is_authenticated(request.user):
-            try:
-                account = Account.objects.get(user=request.user)
-                return account.language
-            except Account.DoesNotExist:
-                pass
         return translation.get_language_from_request(request)
 
     def process_request(self, request):

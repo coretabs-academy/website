@@ -33,12 +33,6 @@ class Account(models.Model):
 
     user = models.OneToOneField(settings.AUTH_USER_MODEL, related_name="account", verbose_name=_("user"), on_delete=models.CASCADE)
     timezone = TimeZoneField(_("timezone"))
-    language = models.CharField(
-        _("language"),
-        max_length=10,
-        choices=settings.ACCOUNT_LANGUAGES,
-        default=settings.LANGUAGE_CODE
-    )
 
     @classmethod
     def for_request(cls, request):

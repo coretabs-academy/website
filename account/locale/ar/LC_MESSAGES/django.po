@@ -17,6 +17,9 @@ msgstr ""
 "Language: ar\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
+msgid "Enter your"
+msgstr "أدخل"
+
 #: forms.py:27 forms.py:107
 msgid "Username"
 msgstr "اسم المستخدم"
@@ -58,7 +61,7 @@ msgid "This account is inactive."
 msgstr "الحساب غير مفعل"
 
 #: forms.py:108
-msgid "The username and/or password you specified are not correct."
+msgid "The username and/or password are not correct."
 msgstr "اسم المستخدم أو كلمة السر غير صحيحة"
 
 #: forms.py:123

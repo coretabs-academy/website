@@ -122,7 +122,7 @@ class LoginForm(forms.Form):
 class LoginUsernameForm(LoginForm):
 
     username = forms.CharField(label=_("Username"), max_length=30)
-    authentication_fail_message = _("The username and/or password you specified are not correct.")
+    authentication_fail_message = _("The username and/or password are not correct.")
     identifier_field = "username"
 
     def __init__(self, *args, **kwargs):
@@ -132,6 +132,9 @@ class LoginUsernameForm(LoginForm):
             self.fields.keyOrder = field_order
         else:
             self.fields = OrderedDict((k, self.fields[k]) for k in field_order)
+
+        for field in self.fields:
+            self.fields[field].widget.attrs['placeholder'] = _('Enter your') + ' {}'.format(self.fields[field].label)
 
 
 class LoginEmailForm(LoginForm):
@@ -217,12 +220,6 @@ class SettingsForm(forms.Form):
         choices=[("", "---------")] + settings.ACCOUNT_TIMEZONES,
         required=False
     )
-    if settings.USE_I18N:
-        language = forms.ChoiceField(
-            label=_("Language"),
-            choices=settings.ACCOUNT_LANGUAGES,
-            required=False
-        )
 
     def clean_email(self):
         value = self.cleaned_data["email"]
