@@ -4,12 +4,13 @@
         right: 20px;
         z-index: 5;
     }
-    .login-brand > form, .login-brand > a, #logout {
+    .login-brand > form, .login-brand > a {
         display: block;
         float: left;
         margin: 0 5px;
     }
-    .login-brand > a, #logout {
+    .login-brand > a {
+        cursor: pointer;
         text-transform: uppercase;
 		font-weight: bold;
 		font-size: 1.2em;
@@ -17,11 +18,95 @@
         text-align: center;
         text-decoration: none;
         height: 46px;
-        padding: 5px;
+        padding: 5px 15px;
 		-moz-transition: all 0.2s ease-in;
 		-o-transition: all 0.2s ease-in;
 		-webkit-transition: all 0.2s ease-in;
 		transition: all 0.2s ease-in;
+    }
+
+	form#signup-panel, form#login-panel, .select-options {
+        display: none;
+		position: absolute;
+		top: 100%;
+		right: 0;
+		left: 0;
+		z-index: 999;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		background-color: rgba(0,0,0,.75);
+		text-align: center;
+	}
+    form#signup-panel, form#login-panel {
+        padding: 20px 10px;
+        top: 46px;
+        direction: ltr;
+    }
+    form#signup-panel .errors, form#login-panel .errors {
+        color: #e74c3c;
+    }
+    form#login-panel label {
+        color: #fff;
+    }
+    form#signup-panel input, form#login-panel input[type="text"], form#login-panel input[type="password"] {
+        background: transparent;
+        margin-bottom: 10px;
+        border: 0;
+        border-bottom: 1px solid #4B7BEC;
+        width: 90%;
+        height: 30px;
+		font-family: 'Cairo', sans-serif;
+        color: #fff;
+    }
+    form#signup-panel input::placeholder, form#login-panel input::placeholder {
+        color: #fff;
+        opacity: 1;
+    }
+    form#signup-panel input::placeholder, form#login-panel input:-ms-input-placeholder {
+        color: fff;
+    }
+    form#signup-panel input::placeholder, form#login-panel input::-ms-input-placeholder {
+        color: fff;
+    }
+    form#login-panel #remember {
+        width: 90%;
+        height: 36px;
+        margin: 0 auto;
+        text-align: left;
+    }
+    form#login-panel input[type="checkbox"] {
+        position: relative;
+        top: 1px;
+    }
+    form#signup-panel button, form#login-panel button {
+        margin-bottom: 10px;
+        width: 90%;
+        height: 30px;
+        padding: 5px 45px;
+        background: #4b7bec;
+        color: #fff;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-decoration: none;
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        transition: all .3s;
+        font-weight: 600;
+    }
+    form#signup-panel button:hover, form#login-panel button:hover {
+        background: #5e8bf4;
+        -webkit-box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, .1);
+        box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, .1);
+    }
+    form#login-panel a {
+        text-decoration: none;
+        color: #fff;
     }
 
     .select-hidden {
@@ -29,7 +114,6 @@
 		visibility: hidden;
 		padding-right: 10px;
 	}
-
 	.select {
 		cursor: pointer;
 		display: inline-block;
@@ -47,7 +131,6 @@
         text-align: left;
         padding: 5px 0;
 	}
-
 	.select-styled {
 		position: absolute;
 		top: 0;
@@ -74,95 +157,6 @@
 	.select-styled:hover, .select-styled:active, .select-styled.active, .login-brand > a:hover, .login-brand > a.active, #logout:hover {
 		background-color: rgba(0,0,0,.75);
 	}
-
-	form#login-panel, .select-options {
-        display: none;
-		position: absolute;
-		top: 100%;
-		right: 0;
-		left: 0;
-		z-index: 999;
-		margin: 0;
-		padding: 0;
-		list-style: none;
-		background-color: rgba(0,0,0,.75);
-		text-align: center;
-	}
-    form#login-panel {
-        padding: 20px 10px;
-        top: 46px;
-        direction: ltr;
-    }
-
-    form#login-panel .errors {
-        color: #e74c3c;
-    }
-    form#login-panel label {
-        color: #fff;
-    }
-    form#login-panel input[type="text"], form#login-panel input[type="password"] {
-        background: transparent;
-        margin-bottom: 10px;
-        border: 0;
-        border-bottom: 1px solid #4B7BEC;
-        width: 75%;
-        height: 30px;
-		font-family: 'Cairo', sans-serif;
-        color: #fff;
-    }
-
-    form#login-panel input::placeholder {
-        color: #fff;
-        opacity: 1;
-    }
-    form#login-panel input:-ms-input-placeholder {
-        color: fff;
-    }
-    form#login-panel input::-ms-input-placeholder {
-        color: fff;
-    }
-
-    form#login-panel #remember {
-        width: 75%;
-        height: 36px;
-        margin: 0 auto;
-        text-align: left;
-    }
-
-    form#login-panel input[type="checkbox"] {
-        position: relative;
-        top: 1px;
-    }
-
-    form#login-panel button {
-        margin-bottom: 10px;
-        width: 75%;
-        height: 30px;
-        padding: 5px 45px;
-        background: #4b7bec;
-        color: #fff;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        text-decoration: none;
-        border: 0;
-        -webkit-box-shadow: none;
-        box-shadow: none;
-        transition: all .3s;
-        font-weight: 600;
-    }
-    form#login-panel button:hover {
-        background: #5e8bf4;
-        -webkit-box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, .1);
-        box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, .1);
-    }
-    form#login-panel a {
-        text-decoration: none;
-        color: #fff;
-    }
 	.select-options li {
 		height: 40px;
 		box-sizing: border-box;
@@ -228,8 +222,8 @@
     }
     .login-brand {
         top: 80px;
-        right: calc(50% - 160px);
-        width: 320px;
+        right: calc(50% - 135px);
+        width: 270px;
     }
     #main-video {
         width: 480px;
@@ -242,10 +236,6 @@
 @media screen and (max-width: 480px) {
     .navbar-brand { background: none; }
 
-    .login-brand {
-        right: calc(50% - 150px);
-        width: 300px;
-    }
     .select {
         width: 130px;
     }
