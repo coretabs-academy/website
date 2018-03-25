@@ -20,8 +20,8 @@ $(function () {
 
 
 	var path = window.location.pathname;
-	var currentPageNumber = Number(path.split('/')[path.split('/').length - 1].split(".")[0]);
-	var currentPage = path.split('/')[path.split('/').length - 2];
+	var currentPageNumber = Number(path.split('/')[path.split('/').length - 2]);
+    var currentPage = path.split('/')[path.split('/').length - 3];
 	if (currentPage === "html_css" && Number.isInteger(currentPageNumber)) {
 		$(".container").append('<aside> <p><a href="/frontend/html_css/1">البداية مع html و css ماهي وما وظيفة كل منهما</a></p><p><a href="/frontend/html_css/2">الوسوم Tags</a></p><p><a href="/frontend/html_css/3">عناصر Block و Inline</a></p><p><a href="/frontend/html_css/4">عناصر div و p و span والفرق بينهم</a></p><p><a href="/frontend/html_css/5">مقارنة بين Class و ID</a></p><p><a href="/frontend/html_css/6">الهيكل الأساسي لصفحة الويب</a></p><p><a href="/frontend/html_css/7">طرق إستخدام أكواد CSS في صفحات </a></p><p><a href="/frontend/html_css/8">أساسيات CSS</a></p><p><a href="/frontend/html_css/9">خاصية margin</a></p><p><a href="/frontend/html_css/10">الجداول Table</a></p><p><a href="/frontend/html_css/11">Semantic HTML</a></p><p><a href="/frontend/html_css/12">خاصية position: relative vs absolute</a></p><p><a href="/frontend/html_css/13">CSS Flexbox</a></p><p><a href="/frontend/html_css/14">Responsive Web Design</a></p><p><a href="/frontend/html_css/15">Media Queries</a></p></aside>');
 	} else if (currentPage === "javascript" && Number.isInteger(currentPageNumber)) {
