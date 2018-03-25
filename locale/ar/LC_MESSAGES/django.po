@@ -243,7 +243,7 @@ msgstr "نسيت كلمة المرور؟"
 
 #: templates/home.html:99
 msgid "Web Development"
-msgstr "تطوير المواقع الإلكترونية"
+msgstr "تطوير الويب"
 
 #: templates/home.html:105 templates/home.html:112
 msgid "Courses"
