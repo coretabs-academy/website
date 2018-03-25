@@ -32,10 +32,24 @@
                 {% trans "Account" %}
             </a>
         {% else %}
-            <a href="{% url "account_signup" %}">
+            <a id="signup" {% if form.non_field_errors  %} class="active" {% endif %}>
                 {% trans "Signup" %}
             </a>
-            <a id="login-options" {% if form.non_field_errors  %} class="active" {% endif %}>
+            <form id="signup-panel" method="post" action="{% url 'home' %}" {% if form.non_field_errors  %} style="display: block" {% endif %}>
+
+                {% csrf_token %}
+
+                <div class="errors"> {{ form.non_field_errors }} </div>
+
+                <div>
+                    {{ form.username }}
+                </div>
+                <div>
+                    <button type="submit">{% trans "Signup" %}</button>
+                </div>
+            </form>
+            <!--
+            <a id="login" {% if form.non_field_errors  %} class="active" {% endif %}>
                 {% trans "Login" %}
             </a>
             <form id="login-panel" method="post" action="{% url 'home' %}" {% if form.non_field_errors  %} style="display: block" {% endif %}>
@@ -63,6 +77,7 @@
                     <a href="{% url 'account_password_reset' %}">{% trans "Forgot Your Password?" %}</a>
                 </div>
             </form>
+            -->
         {% endif %}
 
 
@@ -81,7 +96,13 @@
         </form>
      </div>
       <div class="background-image">
-         <iframe id="main-video" src="https://www.youtube.com/embed/0c9OC9NBsro" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <h1>{% trans 'Web Development' %}</h1>
+        <p>
+        {% blocktrans %}
+        Familiarity with programming is indispensable today. Learning programming is one of the most rich and useful things you can do.
+        {% endblocktrans %}
+        </p>
+        <a class="link" href="#main">{% trans 'Courses' %}</a>
          <div class="course animated infinite bounce">
             <i class="fas fa-chevron-down"></i>
             <a href="#main"></a>

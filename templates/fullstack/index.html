@@ -6,29 +6,27 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>دروس Full Stack</title>
 		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" id="animate" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
 		<link rel="stylesheet" href="{% static 'css/fetcher.css' %}">
 	</head>
 	<body class="home">
-		<div id="navebar">
+		<div id="navbar">
 			<div class="navbar-brand">
-				<div>
-					{% trans 'Academy' %}
-				</div>
+                <a href="/">
+                    <div>
+                        {% trans 'Academy' %}
+                    </div>
+                </a>
 			</div>
-			<div class="icon-container">
+			<div class="icon-container hidden">
 				<div class="humberger-icon">
 					<span></span>
 					<span></span>
 					<span></span>
 				</div>
 			</div>
-			<div class="navbar-nav">
-				<nav>
-					<div class="close">
-					   أغلق <i class="fas fa-times"></i>
-					</div>
-				</nav>
-			</div>
+            <div class="navbar-nav">
+            </div>
 		</div>
         <div class="background-image">
             <h1>{% trans 'Full Stack Web Development' %}</h1>
@@ -39,14 +37,13 @@
             </p>
             <a class="link" href="#main">{% trans 'Lessons' %}</a>
             <div class="course animated infinite bounce">
-                <i class="fas fa-chevron-down"></i>
                 <a href="#main"></a>
             </div>
         </div>
         <main id="main" class="beauty-box">
             <h1 class="title">{% trans 'Track Lessons' %}</h1>
             <div class="courses_container">
-
+                Loading... Please Wait
             </div>
         </main>
         <div class="container">
@@ -69,14 +66,11 @@
                 </a>
             </div>
         </footer>
-		<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 			crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.min.js"></script>
         {% load static%}
-		<script src="{% static 'js/main.js' %}"></script>
         <script src="{% static 'js/fetcher.js' %}"></script>
 	</body>
 </html>

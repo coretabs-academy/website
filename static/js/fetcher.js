@@ -3,76 +3,66 @@ var converter = new showdown.Converter();
 $(function() {
     var topicsJSON, quizJSON, start, categoryTitle, categoryDesc, topicTitle, autoId;
     var navigationScope = [];
-    
+
+    //<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
     //var lang = Cookies.get('lang');
     //if (lang === undefined) { lang = "ar"; }
     var lang = "ar";
     
-    $(".container aside").html("<p>loading ...</p>");
-    $(".navigate").hide();
-    $(".navigate a").removeAttr("href");
+    $(".container aside").html("<p>Loading... Please Wait</p>");
 
     $.ajax({
         type: "GET",
         url: "https://rawgit.com/coretabs-academy/fullstack-tutorials/master/topics.json",
         success: function(response) {
             topicsJSON = response;
-            $(".container aside").empty();
+            $("#main .courses_container, .container aside").empty();
             $.each(topicsJSON.categories, function(cIndex, category) {
                 if (lang == "ar") { categoryTitle = category["title-ar"]; categoryDesc = category["desc-ar"]; start = "إبدأ"; } else { categoryTitle = category["title-en"]; categoryDesc = category["desc-en"]; start = "Start"; }
-                $(".navbar-nav nav").append("<a data-idx='" + cIndex + "'>" + categoryTitle + "</a>");
-                $("#main .courses_container").append("<div class='box'><div class='courses_image'><img src='" + topicsJSON.host + "/images/" + category.image + "' alt=''></div><div class='text'><h2>" + categoryTitle + "</h2><p>" + categoryDesc + "</p><a class='button-link' data-idx='" + cIndex + "'>" + start + "</a></div></div>");
+                $(".container aside").append("<a class='category' data-idx='" + cIndex + "'>" + categoryTitle + "</a>");
+                $.each(category.topics, function(tIndex, topic) {
+                    navigationScope.push([topic.id, "topic"]);
+                    if (tIndex == 0) { autoId = topic.id; }
+                    if (lang == "ar") { topicTitle = topic["title-ar"]; quizTitle="اختبار"; } else { topicTitle = topic["title-en"]; quizTitle="َQuiz"; }
+                    $(".container aside").append("<p><a class='topic' data-id='" + topic.id + "'>" + topicTitle + "</a></p>");
+                    /*
+                    if (topic.quiz == "true") {
+                        navigationScope.push([topic.id, "quiz"]);
+                        $(".container aside").append("<p><a class='quiz' data-id='" + topic.id + "'>" + quizTitle + ": " + topicTitle + "</a></p>");
+                    }
+                    */
+                });
+
+                $("#main .courses_container").append("<div class='box'><div class='courses_image'><img src='" + topicsJSON.host + "/images/" + category.image + "' alt=''></div><div class='text'><h2>" + categoryTitle + "</h2><p>" + categoryDesc + "</p><a class='button-link' data-id='" + autoId + "'>" + start + "</a></div><a class='box-link' data-id='" + autoId + "'></a></div>");
             });
         }
     });
 
     $("#main .courses_container").on("click", "a", function(event) {
-        var idx = $(this).attr("data-idx");
+        var id = $(this).attr("data-id");
         $("body").removeClass("home");
-        $(".background-image, #main, footer").remove();
-        $("#navebar").addClass("navbar");
+        $("#animate, .background-image, #main, footer").remove();
+        $("#navbar").addClass("navbar");
+        $(".icon-container").removeClass("hidden");
         $(".navbar-nav, .container").show();
 
-        $(".navbar-nav nav a[data-idx='" + idx + "']").trigger("click");
+        $(".container a.topic[data-id='" + id + "']").trigger("click");
     });
 
-    $(".navbar-nav nav").on("click", "a", function(event){
-        $(".container aside, .cooked").empty();
-
-        var idx = $(this).attr("data-idx");
-        $.each(topicsJSON.categories, function(index, category) {
-            if (lang == "ar") { categoryTitle = category["title-ar"]; } else { categoryTitle = category["title-en"]; }
-
-            if (index == idx) {
-                navigationScope = [];
-                $.each(category.topics, function(index, topic) {
-                    navigationScope.push([topic.id, "topic"]);
-                    if (index == 0) { autoId = topic.id; }
-                    if (lang == "ar") { topicTitle = topic["title-ar"]; quizTitle="اختبار"; } else { topicTitle = topic["title-en"]; quizTitle="َQuiz"; }
-                    $(".container aside").append("<p><a class='topic' data-id='" + topic.id + "'>" + topicTitle + "</a></p>");
-                    if (topic.quiz == "true") {
-                        navigationScope.push([topic.id, "quiz"]);
-                        $(".container aside").append("<p><a class='quiz' data-id='" + topic.id + "'>" + quizTitle + ": " + topicTitle + "</a></p>");
-                    }
-                });
-
-                $("a.topic[data-id='" + autoId + "']").trigger("click");
-                
-            }
-        });
-    });
-
-    $("aside, .navigate").on("click", "a.topic", function(event) {
+    $(".container").on("click", "a.topic", function(event) {
+        $(".navigate").remove();
         var id = $(this).attr("data-id");
         var navigationIndex = isItemInArray([Number(id), "topic"], navigationScope);
 
+        if ($(window).width() < 1080) { $("aside").hide(); }
         $("aside a, a.topic").removeClass("active");
         $("a.topic[data-id='" + id + "']").addClass("active");
-        $(".cooked").html("<p>loading ...</p>");
+        $("aside").animate({ scrollTop: id * 50}, 500);
+        $(".cooked").html("<p>Loading... Please Wait</p>");
 
         var youtube = /(?:http?s?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=)?(.+)/g;
         var link = /(?!\S+youtube\.com|youtu\.be)(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
-        
+
         $.get(topicsJSON.host + id + "/topic-" + lang + ".txt", function(markdown) {
             markdown = markdown.replace(youtube, "<iframe class='youtube' height='345' src='http://www.youtube.com/embed/$1' frameborder='0' allowfullscreen></iframe>");
             markdown = markdown.replace(link, "<a href='$1' target='_blank'>$1</a>");
@@ -86,15 +76,18 @@ $(function() {
             viewNavigation(navigationIndex);
         }, 'text');
     });
-    
-    $("aside, .navigate").on("click", "a.quiz", function(event){
+
+    $(".container").on("click", "a.quiz", function(event){
+        $(".navigate").remove();
         var id = $(this).attr("data-id");
         var navigationIndex = isItemInArray([Number(id), "quiz"], navigationScope);
 
+        if ($(window).width() < 1080) { $("aside").hide(); }
         $("aside a, a.quiz").removeClass("active");
         $("a.quiz[data-id='" + id + "']").addClass("active");
-        $(".cooked").html("<p>loading ...</p>");
-        
+        $("aside").animate({ scrollTop: (Number(id) + 1) * 50}, 500);
+        $(".cooked").html("<p>Loading... Please Wait</p>");
+
         $.ajax({
             type: "GET",
             url: topicsJSON.host + id + "/quiz.json",
@@ -120,7 +113,7 @@ $(function() {
         });
     });
 
-    $(document).on('submit', '.quiz-form', function(event) {
+    $(document).on("submit", ".quiz-form", function(event) {
         event.preventDefault();
         var form = $(this);
         var id = $(this).attr("id").replace("quiz-form-", "");
@@ -154,10 +147,8 @@ $(function() {
     }
 
     function viewNavigation(navigationIndex) {
-        $(".navigate").show();
-        $(".navigate a").removeAttr("data-id");
-        $(".navigate a").removeClass();
-    
+        $(".container").append("<div class='navigate'><a>السابق</a><a>التالي</a></div>");
+
         if (navigationIndex == 0) {
             $(".navigate a").first().addClass("disabled");
         } else {
@@ -172,6 +163,16 @@ $(function() {
             $(".navigate a").last().addClass(navigationScope[navigationIndex + 1][1]);
         }
     }
+
+    $(document).on("click", ".icon-container", function(event) {
+        if ($("aside").css("display") == "none") {
+            $("aside").show();
+        } else { $("aside").hide(); }
+    });
+
+    $(window).resize(function() {
+        if ($(window).width() >= 1080 && $("aside").css("display") == "none") { $("aside").show(); }
+    });
 });
 
 

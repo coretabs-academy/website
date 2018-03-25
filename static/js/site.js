@@ -1,14 +1,20 @@
 $(function() {
-    $('#login-options').click(function() {
+    $('#login').click(function() {
         $('#login-panel').show();
-        $('#login-options').addClass('active');
+        $('#login').addClass('active');
+    });
+
+
+    $('#signup').click(function() {
+        $('#signup-panel').show();
+        $('#signup').addClass('active');
     });
 
     $(document).mouseup(function(e) {
-        var container = $("#login-panel");
+        var container = $("#signup-panel, #login-panel");
         if (!container.is(e.target) && container.has(e.target).length === 0) {
             container.hide();
-            $('#login-options').removeClass('active');
+            $('#signup, #login').removeClass('active');
         }
     });
 
