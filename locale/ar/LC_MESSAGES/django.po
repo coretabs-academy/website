@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-24 22:26+0200\n"
+"POT-Creation-Date: 2018-03-25 23:21+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -86,7 +86,7 @@ msgstr ""
 msgid "Email confirmed"
 msgstr ""
 
-#: templates/frontend/index.html:18 templates/fullstack/index.html:15
+#: templates/frontend/index.html:18 templates/fullstack/index.html:17
 #: templates/home.html:19
 msgid "Academy"
 msgstr "الأكاديمية"
@@ -95,7 +95,7 @@ msgstr "الأكاديمية"
 msgid "Front End Web Development"
 msgstr "تطوير صفحات المواقع الإلكترونية"
 
-#: templates/frontend/index.html:24 templates/fullstack/index.html:36
+#: templates/frontend/index.html:24 templates/fullstack/index.html:34
 msgid ""
 "\n"
 "\t\t\tFamiliarity with programming is indispensable today. Learning "
@@ -103,16 +103,15 @@ msgid ""
 "\t\t\t"
 msgstr ""
 "\n"
-"\t\t\tإن الإلمام بمجال البرمجة، أمرٌ لا غنى عنه في أيامنا هذه. وإن "
-"تعلُّم البرمجة هو من أكثر الأمور الغنية والمفيدة التي يمكنك القيام بها.\n"
+"\t\t\tإن الإلمام بمجال البرمجة، أمرٌ لا غنى عنه في أيامنا هذه. وإن تعلُّم "
+"البرمجة هو من أكثر الأمور الغنية والمفيدة التي يمكنك القيام بها.\n"
 "\t\t\t"
 
-
-#: templates/frontend/index.html:28 templates/fullstack/index.html:40
+#: templates/frontend/index.html:28 templates/fullstack/index.html:38
 msgid "Lessons"
 msgstr "الدروس"
 
-#: templates/frontend/index.html:35 templates/fullstack/index.html:47
+#: templates/frontend/index.html:35 templates/fullstack/index.html:44
 msgid "Track Lessons"
 msgstr "دروس المسار"
 
@@ -196,11 +195,11 @@ msgstr ""
 "مشاريع حقيقة.\n"
 "                      "
 
-#: templates/frontend/index.html:104 templates/home.html:108
+#: templates/frontend/index.html:104 templates/home.html:129
 msgid "About website"
 msgstr "عن الموقع"
 
-#: templates/frontend/index.html:106 templates/home.html:110
+#: templates/frontend/index.html:106 templates/home.html:131
 msgid ""
 "\n"
 "                This site has been placed as a reference to the lessons and "
@@ -218,7 +217,7 @@ msgstr ""
 "الإستفادة من هذه الدروس ولوضع أسئلتك أو إستفساراتك قم بالإنضمام لقروب الفيس "
 "بوك الخاص بنا"
 
-#: templates/fullstack/index.html:34
+#: templates/fullstack/index.html:32
 msgid "Full Stack Web Development"
 msgstr "تطوير صفحات الويب الشامل"
 
@@ -230,26 +229,30 @@ msgstr "خروج"
 msgid "Account"
 msgstr "الحساب"
 
-#: templates/home.html:36
+#: templates/home.html:36 templates/home.html:48
 msgid "Signup"
 msgstr "تسجيل"
 
-#: templates/home.html:39 templates/home.html:60
+#: templates/home.html:53 templates/home.html:74
 msgid "Login"
 msgstr "دخول"
 
-#: templates/home.html:63
+#: templates/home.html:77
 msgid "Forgot Your Password?"
 msgstr "نسيت كلمة المرور؟"
 
-#: templates/home.html:91
+#: templates/home.html:99
+msgid "Web Development"
+msgstr "تطوير المواقع الإلكترونية"
+
+#: templates/home.html:105 templates/home.html:112
 msgid "Courses"
 msgstr "الدروس"
 
-#: templates/home.html:96
+#: templates/home.html:117
 msgid "Front End"
 msgstr "تطوير واجهات المواقع"
 
-#: templates/home.html:102
+#: templates/home.html:123
 msgid "Full Stack"
 msgstr "تطوير الويب الشامل"
