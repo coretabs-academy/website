@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+{% load static%}
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>[الدرس السابع] Rewriting History</title>
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+   </head>
+   <body>
+      <div class="navbar">
+         <div class="navbar-brand">
+            <div class="">
+               Academy
+            </div>
+         </div>
+         <div class="icon-container">
+            <div class="humberger-icon">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+         </div>
+         <div class="navbar-nav">
+            <nav>
+               <div class="close">
+                  أغلق <i class="fas fa-times"></i>
+               </div>
+               <a href="{% url 'home' %}">الرئيسية</a>
+               <a href="{% url 'category' category='html_css' %}">HTML & CSS</a>
+               <a href="{% url 'category' category='javascript' %}">JavaScript</a>
+               <a href="{% url 'category' category='git' %}">Git</a>
+               <a href="{% url 'category' category='projects' %}">المشاريع</a>
+            </nav>
+         </div>
+      </div>
+      <div class="container">
+         <div class="cooked">
+            <h1>Rewriting History</h1>
+            <hr>
+            <ul dir="rtl">
+               <li dir="rtl">
+                  <h3 dir="rtl">مالذي قمنا به في المهمة السابقة ؟</h3>
+                  <p dir="rtl">قمنا بعمل <code dir="ltr">git reset --hard HEAD^</code> للعودة إلى الماضي (الـ commit السابقة).<br>
+                     ولكن يجب الإنتباه من هذا الأمر فهو يعتبر destrcutive.
+                  </p>
+               </li>
+               <li dir="rtl">
+                  <h3 dir="rtl">مالذي يجب الحذر منه عند القيام بعمليات تغيير الماضي destructive operations ؟</h3>
+                  <p dir="rtl">يجب عليك تذكر <strong dir="rtl">القاعدة الذهبية</strong> عند التغيير على الماضي… <strong dir="rtl">لا تلمس أي تاريخ مشترك</strong> !</p>
+                  <blockquote dir="ltr">
+                     <p dir="ltr">NEVER ever touch a SHARED history !</p>
+                  </blockquote>
+                  <ul dir="rtl">
+                     <li dir="rtl">
+                        <h4 dir="rtl">مالذي أقصده بتاريخ مشترك ؟</h4>
+                        <p dir="rtl">هل تتذكر لعبة سؤال وجواب التي قامنا بها في الدرس السابق:</p>
+                        <p dir="rtl"><a href="4.html" dir="rtl">[ورشة عمل Git: الدرس الخامس] Pull &amp; Conflicts </a></p>
+                        <p dir="rtl">هذه الـ commits تعتبر تاريخ مشترك, لأن الجميع قام بعمل pull لها… أي أنك إذا قمت بتعديلها سنحصل على تاريخ مختلف عن البقية !</p>
+                        <p dir="rtl">تخيل أنك قمت بعمل الأمر <code dir="ltr">git reset --hard HEAD~10</code> في المستودع… سنحصل على هذه النتيجة</p>
+                        <p></p>
+                        <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/7/1.png'%}" alt="image" class="image"></a></div>
+                        <p></p>
+                        <p dir="rtl">أي أنني قمت بحذف جزء من التاريخ وهو موجود عند محمد (وعند الآخرين), وهذا سيفسد الأمور كثيراً !</p>
+                        <p dir="rtl">لهذا نعتبر هذه الأمر destructive operation.</p>
+                     </li>
+                  </ul>
+               </li>
+               <li dir="rtl">
+                  <h3 dir="rtl">هل يوجد طريقة أخرى بدلاً من التعديل على التاريخ لإصلاح الأمور ؟</h3>
+                  <p dir="rtl">تخيل أنك تريد إصلاح اللون السيء ولكن بدون حذف الـ commit لأنها مشتركة مع بقية أعضاء الفريق الذي تعمل معه…</p>
+                  <p dir="rtl">الأمر سهل جداً, سنستعمل الامر revert والذي يقوم بعمل commit جديدة عكس التي نقوم بتحديدها, بهذا الشكل:</p>
+                  <pre dir="ltr"><code dir="ltr" class="hljs nginx"><span class="hljs-attribute">git</span> revert HEAD^
+</code></pre>
+                  <p dir="rtl">لاحظ أنه تم عكس التعديلات… افتح ملف style.css وسترى ذلك.</p>
+                  <p dir="rtl">بقي أن تقوم بعمل <code dir="ltr">git commit</code> لتحفظ التعديلات الجديدة.</p>
+                  <p dir="rtl">صورة متحركة لكيفية القيام بالأمر:</p>
+                  <p></p>
+                  <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="git-revert.gif" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/7/2.gif'%}" alt="git-revert" class="image"></a></div>
+                  <p></p>
+               </li>
+               <li dir="rtl">
+                  <h3 dir="rtl">مالذي سنتعلمه هذه المرة ؟</h3>
+                  <p dir="rtl">سنتعلم جراحة git</p>
+                  <p></p>
+                  <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="doctor-161345_960_720.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/7/3.png'%}" alt="doctor-161345_960_720" width="80" height="90"></a></div>
+                  <p></p>
+                  <p dir="rtl">سنقوم بتعديل التاريخ, أقصد الـ commits السابقة بالشكل الذي نريده… نعم إنه ممكن, ولكن destructive (<strong dir="rtl">تذكر القاعدة الذهبية</strong> بعدم لمس تاريخ مشترك shared history).</p>
+               </li>
+               <li dir="rtl">
+                  <h3 dir="rtl">بداية لنقم بمراجعة بعض الأساسيات بشكل سريع:</h3>
+                  <p dir="rtl">قم بإنشاء مجلد, بإمكانك تسميته test.</p>
+                  <p dir="rtl">قم بتشغيل الأمر <code dir="ltr">git init</code> لإنشاء مستودع.</p>
+                  <p dir="rtl">أضف الملف README.md, اجعله فارغ (للقيام بأول commit).</p>
+                  <p dir="rtl">قم بعمل <code dir="ltr">git commit</code> بدون <code dir="ltr">-m</code> لأننا نريده بدون parameters لنتعرف على المحرر.</p>
+                  <p dir="rtl">ستشاهد أننا نستعمل vim editor الذي يأتي بشكل افتراضي مع git, ويطلب منك كتابة الرسالة لأننا لم نستعمل <code dir="ltr">-m</code>.</p>
+                  <p dir="rtl">صورة متحركة للعملية:</p>
+                  <p></p>
+                  <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="git-vim.gif" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/7/4.gif'%}" alt="git-vim" class="image"></a></div>
+                  <p></p>
+                  <ul dir="rtl">
+                     <li dir="rtl">
+                        <h4 dir="rtl">ولكن محرر vim ممل, كيف أستعمل محرر آخر (أنا أفضل notepad++) ؟</h4>
+                        <p dir="rtl">ببساطة أكتب الأمر:</p>
+                        <pre dir="ltr"><code dir="ltr" class="hljs coffeescript">git config --<span class="hljs-built_in">global</span> core.editor <span class="hljs-string">"'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"</span>
+</code></pre>
+                        <p dir="rtl">صورة متحركة:</p>
+                        <p></p>
+                        <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="git-integration.gif" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/7/5.gif'%}" alt="git-integration" class="image"></a></div>
+                        <p></p>
+                     </li>
+                     <li dir="rtl">
+                        <h4 dir="rtl">لا أريد notepad++, أريد شيء آخر:</h4>
+                        <p dir="rtl">شاهد هذه الصفحة:</p>
+                        <p dir="ltr"><a href="https://help.github.com/articles/associating-text-editors-with-git/" rel="nofollow noopener" dir="ltr">https://help.github.com/articles/associating-text-editors-with-git/ </a></p>
+                     </li>
+                  </ul>
+               </li>
+               <li dir="rtl">
+                  <h3 dir="rtl">لنبدأ العمل على تعديل التاريخ !</h3>
+                  <ul dir="rtl">
+                     <li dir="rtl">
+                        <h4 dir="rtl">ولكن على ماذا سنقوم بالتعديل ؟</h4>
+                        <p dir="rtl">ستقوم بعمل <code dir="ltr">git clone</code> لهذا المستودع, ثم التعديل عليه:</p>
+                        <p dir="ltr"><a href="https://github.com/0xRumple/git-surgery" rel="nofollow noopener" dir="ltr">https://github.com/0xRumple/git-surgery </a></p>
+                     </li>
+                     <li dir="rtl">
+                        <h4 dir="rtl">ماهي الـ commits التي على المستودع ؟</h4>
+                        <p dir="rtl">الـ commit التي رسالتهال <strong dir="ltr">Add basic style.css</strong> محتواها فقط:</p>
+                        <p><img src="{% static 'images/git/7/6.png'%}" alt="git-first-commit" class="image"></p>
+                        <p dir="rtl">بالنسبة للبقية بإمكانك فتح الـ commits من github (حينما تضغط على أي commit, سيظهر لك محتواها):</p>
+                        <p dir="ltr"><a href="https://github.com/0xRumple/git-surgery/commits/master" rel="nofollow noopener" dir="ltr">https://github.com/0xRumple/git-surgery/commits/master </a></p>
+                     </li>
+                  </ul>
+               </li>
+               <li dir="rtl">
+                  <h4 dir="rtl">أريد إضافة commit جديدة:</h4>
+                  <p dir="rtl">نفترض أنه تريد التعديل على لون الهيدر إلى الأخضر, بهذا الشكل</p>
+                  <p></p>
+                  <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/7/7.png'%}" alt="image" width="690" height="55"></a></div>
+                  <p></p>
+                  <p dir="rtl">أعرف أنه قبيح ولكننا نجرب git هنا <img src="{% static 'images/git/7/8.png'%}" title=":sweat_smile:" class="emoji" alt=":sweat_smile:"></p>
+                  <p dir="rtl">السطر الذي سنعدله هو:</p>
+                  <pre dir="ltr"><code dir="ltr" class="hljs css"><span class="hljs-selector-tag">background</span>: <span class="hljs-selector-tag">linear-gradient</span>(<span class="hljs-selector-id">#59cca0</span>, <span class="hljs-selector-id">#59cc00</span>);
+</code></pre>
+                  <p dir="rtl">ولكن هل تلاحظ المشكلة ؟</p>
+                  <p dir="rtl">المشكلة أننا لا نريد أن تصبح النتيجة:</p>
+                  <p><img src="{% static 'images/git/7/9.png'%}" alt="image" class="image"></p>
+                  <p dir="rtl">أي أنها نفس الشيء… ولا نريد commit جديدة فقط لتعديل سطر واحد في الـ commit السابقة <img src="{% static 'images/git/7/10.png'%}" title=":thinking:" class="emoji" alt=":thinking:"></p>
+                  <ul dir="rtl">
+                     <li dir="rtl">
+                        <h4 dir="rtl">مالحل ؟ أريد إضافة تعديل على الـ commit السابقة مباشرة, هل ممكن هذا ؟</h4>
+                        <p dir="rtl">نعم بالتأكيد ممكن, فقط قم بعمل التعديل الذي تريده (تعديل السطر السابق), ثم اكتب:</p>
+                        <p dir="ltr">git commit --amend -m “Add header style with green color”</p>
+                        <p dir="rtl">بإمكانك استعمال نفس الرسالة السابقة <strong dir="ltr">Add header style</strong> ولكن فقط للتوضيح !</p>
+                        <p dir="rtl">صورة للعملية (لاحظ أنه تم إضافة الـ commit على الـ commit الأخيرة بدون عمل واحدة جديدة):</p>
+                        <p></p>
+                        <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="git-ammend.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/7/11.png'%}" alt="git-ammend" class="image"></a></div>
+                        <p></p>
+                     </li>
+                     <li dir="rtl">
+                        <h4 dir="rtl">تذكر القاعدة الذهبية !</h4>
+                        <p dir="rtl">نعم, لا تنسى أنك تقوم بتعديل التاريخ بهذا الشكل (أضفت على التاريخ شيء جديد, وهو لون النص), ويجب أن لا تقوم بهذا الشيء على تاريخ مشترك.</p>
+                        <p dir="rtl">وإنما <strong dir="rtl">بإمكانك عمل commit جديدة في حال كنت تعمل أنت وفريق</strong> على git.</p>
+                     </li>
+                  </ul>
+               </li>
+               <li dir="rtl">
+                  <h3 dir="rtl">توجد مشكلة أخرى, ماهي يا ترى ؟</h3>
+                  <p dir="rtl">هل تلاحظ آخر مجموعة من الـ commits:</p>
+               </li>
+            </ul>
+            <pre dir="ltr"><code class="hljs css" dir="ltr">1<span class="hljs-selector-tag"><span class="hljs-selector-tag">ee649e</span></span> <span class="hljs-selector-tag"><span class="hljs-selector-tag">Add</span></span> <span class="hljs-selector-tag"><span class="hljs-selector-tag">header</span></span> <span class="hljs-selector-tag"><span class="hljs-selector-tag">style</span></span>
+8<span class="hljs-selector-tag"><span class="hljs-selector-tag">d78787</span></span> <span class="hljs-selector-tag"><span class="hljs-selector-tag">Add</span></span> <span class="hljs-selector-tag"><span class="hljs-selector-tag">body</span></span> <span class="hljs-selector-tag"><span class="hljs-selector-tag">style</span></span>
+6<span class="hljs-selector-tag"><span class="hljs-selector-tag">d4c462</span></span> <span class="hljs-selector-tag"><span class="hljs-selector-tag">Add</span></span> <span class="hljs-selector-tag"><span class="hljs-selector-tag">footer</span></span> <span class="hljs-selector-tag"><span class="hljs-selector-tag">style</span></span>
+68217<span class="hljs-selector-tag"><span class="hljs-selector-tag">f0</span></span> <span class="hljs-selector-tag"><span class="hljs-selector-tag">Add</span></span> <span class="hljs-selector-tag"><span class="hljs-selector-tag">basic</span></span> <span class="hljs-selector-tag"><span class="hljs-selector-tag">style</span></span><span class="hljs-selector-class"><span class="hljs-selector-class">.css</span></span>
+</code></pre>
+            <p dir="rtl">جميعها تهدف إلى شيء واحد, وهو <strong dir="ltr">Add style.css</strong>, يعني ممكن ندمجها ونجعل الخط الزمني timeline أكثر وضوحاً !</p>
+            <p dir="rtl">ويصبح الناتج بهذا الشكل:</p>
+            <p></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="git-rebase-log-result.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/7/12.png'%}" alt="git-rebase-log-result" width="690" height="72"></a></div>
+            <p></p>
+            <ul dir="rtl">
+               <li dir="rtl">
+                  <h4 dir="rtl">ولكن كيف ندمجها جميعاً في commit واحدة ؟</h4>
+                  <p dir="rtl">الإجابة هي squashing commits.</p>
+               </li>
+               <li dir="rtl">
+                  <h4 dir="rtl">كيف تقوم بعمل squash للـ commits ؟</h4>
+                  <p dir="rtl">فقط تكتب الأمر:</p>
+                  <pre dir="ltr"><code dir="ltr" class="hljs nginx"><span class="hljs-attribute">git</span> rebase -i commit
+</code></pre>
+                  <p dir="rtl">بحيث بدلاً من commit تكتب الـ SHA أو تستعمل HEAD.</p>
+                  <ul dir="rtl">
+                     <li dir="rtl">
+                        <h4 dir="rtl">ولكن أي SHA أختار ؟</h4>
+                        <p dir="rtl">تقوم باختيار الـ SHA الذي قبل الـ commit الذي تريد دمجها, مثلاً في حالتنا لدينا هذه الـ commits:</p>
+                     </li>
+                  </ul>
+               </li>
+            </ul>
+            <pre dir="ltr"><code class="hljs css" dir="ltr">1<span class="hljs-selector-tag"><span class="hljs-selector-tag">ee649e</span></span> <span class="hljs-selector-tag"><span class="hljs-selector-tag">Add</span></span> <span class="hljs-selector-tag"><span class="hljs-selector-tag">header</span></span> <span class="hljs-selector-tag"><span class="hljs-selector-tag">style</span></span>
+8<span class="hljs-selector-tag"><span class="hljs-selector-tag">d78787</span></span> <span class="hljs-selector-tag"><span class="hljs-selector-tag">Add</span></span> <span class="hljs-selector-tag"><span class="hljs-selector-tag">body</span></span> <span class="hljs-selector-tag"><span class="hljs-selector-tag">style</span></span>
+6<span class="hljs-selector-tag"><span class="hljs-selector-tag">d4c462</span></span> <span class="hljs-selector-tag"><span class="hljs-selector-tag">Add</span></span> <span class="hljs-selector-tag"><span class="hljs-selector-tag">footer</span></span> <span class="hljs-selector-tag"><span class="hljs-selector-tag">style</span></span>
+68217<span class="hljs-selector-tag"><span class="hljs-selector-tag">f0</span></span> <span class="hljs-selector-tag"><span class="hljs-selector-tag">Add</span></span> <span class="hljs-selector-tag"><span class="hljs-selector-tag">basic</span></span> <span class="hljs-selector-tag"><span class="hljs-selector-tag">style</span></span><span class="hljs-selector-class"><span class="hljs-selector-class">.css</span></span>
+1175<span class="hljs-selector-tag"><span class="hljs-selector-tag">fc6</span></span> <span class="hljs-selector-tag"><span class="hljs-selector-tag">Add</span></span> <span class="hljs-selector-tag"><span class="hljs-selector-tag">index</span></span><span class="hljs-selector-class"><span class="hljs-selector-class">.html</span></span>
+</code></pre>
+            <p dir="rtl">ونريد دمج من عند <strong dir="ltr">Add basic style.css</strong> إلى <strong dir="ltr">Add header style</strong>…</p>
+            <p dir="rtl">يعني سنختار التي قبلها وهي <strong dir="ltr">1175fc6 Add index.html</strong>.</p>
+            <p dir="rtl">سنكتب الامر:</p>
+            <pre dir="ltr"><code dir="ltr" class="hljs nginx"> <span class="hljs-attribute">git</span> rebase -i 1175fc6
+</code></pre>
+            <p dir="rtl">الـ switch المستعمل <code dir="ltr">-i</code> معناه interactive يعني أننا سنقوم بعمل rebase تفاعلي <img src="{% static 'images/git/7/13.png'%}" title=":smile:" class="emoji" alt=":smile:"></p>
+            <ul dir="rtl">
+               <li dir="rtl">
+                  <h4 dir="rtl">مالذي سيظهر بعد كتابة هذا الأمر ؟</h4>
+                  <p dir="rtl">سيظهر لنا التالي:</p>
+                  <p><img src="{% static 'images/git/7/14.png'%}" alt="git-rebase-notepad" class="image"></p>
+                  <p dir="rtl">هنا يحق لك <strong dir="rtl">التعديل على كلمة pick</strong> أو تغيير ترتيب الـ commits فقط.</p>
+                  <p dir="rtl">يعني لو تعدل على أي شيء آخر (مثل commit messages), لن يراه git… سنقوم بذلك في الخطوات التالية !</p>
+                  <p dir="rtl">يعني أن الجزء هذا هو ما سنقوم بتعديله هو فقط:</p>
+                  <p><img src="{% static 'images/git/7/15.png'%}" alt="image" class="image"></p>
+               </li>
+               <li dir="rtl">
+                  <h4 dir="rtl">ماذا سنغير بدل pick ؟</h4>
+                  <p dir="rtl">أعتقد أنك تعرف مسبقاً… سنكتب squash <img src="{% static 'images/git/7/16.png'%}" title=":smile:" class="emoji" alt=":smile:"></p>
+                  <p dir="rtl">بهذا الشكل:</p>
+                  <p><img src="{% static 'images/git/7/17.png'%}" alt="image" class="image"></p>
+               </li>
+               <li dir="rtl">
+                  <h4 dir="rtl">كيف تعمل squash ؟</h4>
+                  <p dir="rtl">تقوم squash بالدمج مع الـ commit التي قبلها, يعني في المثال بالأعلى سندمج الثلاث الـ commits بالأسفل مع التي بالأعلى.</p>
+                  <p dir="rtl">لهذا لم نكتب squash على الـ commit الأولى (لأنه لا يوجد واحدة قبلها).</p>
+               </li>
+               <li dir="rtl">
+                  <h4 dir="rtl">كيف نقوم بتسمية الـ commit المدمجة ؟</h4>
+                  <p dir="rtl">بعد إغلاق notepad++ سيطلب منك اسم الـ commit المدمجة, قم بكتابة اسم مناسب.</p>
+               </li>
+               <li dir="rtl">
+                  <h4 dir="rtl">كيف نقوم بالعملية ؟</h4>
+                  <p dir="rtl">هنا صورة متحركة:</p>
+                  <p></p>
+                  <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="git-squash.gif" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/7/18.gif'%}" alt="git-squash" class="image"></a></div>
+                  <p></p>
+               </li>
+            </ul>
+            <ul dir="rtl">
+               <li dir="rtl">
+                  <h4 dir="rtl">ماهي المهمة المطلوبة ؟</h4>
+                  <ul dir="rtl">
+                     <li dir="rtl">
+                        <p dir="rtl">قم بعمل clone للـ repository على الرابط:</p>
+                        <p dir="ltr"><a href="https://github.com/0xRumple/git-surgery" rel="nofollow noopener" dir="ltr">https://github.com/0xRumple/git-surgery </a></p>
+                     </li>
+                     <li dir="rtl">
+                        <p dir="rtl">قم بعمل التعديلات المطلوبة, لتحصل على النتيجة هذه في <code dir="ltr">git log</code></p>
+                        <p></p>
+                        <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="git-rebase-log-result.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/7/19.png'%}" alt="git-rebase-log-result" width="690" height="72"></a></div>
+                        <p></p>
+                     </li>
+                     <li dir="rtl">
+                        <p dir="rtl">قم بعمل مستودع فارغ على github (من الموقع), وهو سيعطيك البيانات التالية (لاحظ الرابط باللون الأحمر):</p>
+                        <p></p>
+                        <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/7/20.png'%}" alt="image" class="image"></a></div>
+                        <p></p>
+                     </li>
+                     <li dir="rtl">
+                        <p dir="rtl">قم بربط المستودع الذي قمت بالتعديل عليه في جهازك بالرابط الذي تحصل عليه في github بهذا الأمر:</p>
+                        <pre dir="ltr"><code dir="ltr" class="hljs sql">git remote <span class="hljs-keyword">set</span>-<span class="hljs-keyword">url</span> origin <span class="hljs-keyword">URL</span>
+</code></pre>
+                        <p dir="rtl">لا تنسى تعديل URL إلى الرابط الذي حصلت عليه بالأعلى (باللون الأحمر في الصورة), مثلاً عندي سأقوم بالآتي (صورة متحركة):</p>
+                        <p></p>
+                        <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="git-mission.gif" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/7/21.gif'%}" alt="git-mission" class="image"></a></div>
+                        <p></p>
+                     </li>
+                     <li dir="rtl">
+                        <p dir="rtl">قم برفع المشروع باستعمال push.</p>
+                     </li>
+                  </ul>
+               </li>
+               <li dir="rtl">
+                  <h3 dir="rtl">ملحق:</h3>
+               </li>
+               <li dir="rtl">
+                  <h4 dir="rtl">التلاعب بالتاريخ باستعمال amend:</h4>
+                  <p dir="ltr"><a href="https://www.atlassian.com/git/tutorials/rewriting-history#git-commit--amend" rel="nofollow noopener" dir="ltr">https://www.atlassian.com/git/tutorials/rewriting-history#git-commit--amend <span class="badge badge-notification clicks" title="1 click" dir="ltr">1</span></a></p>
+               </li>
+               <li dir="rtl">
+                  <h4 dir="rtl">التلاعب بالتاريخ بالأمر rebase:</h4>
+                  <p dir="ltr"><a href="https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase" rel="nofollow noopener" dir="ltr">https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase</a></p>
+               </li>
+               <li dir="rtl">
+                  <h4 dir="rtl">شرح git squash:</h4>
+                  <p dir="ltr"><a href="https://stackoverflow.com/questions/5189560/squash-my-last-x-commits-together-using-git" rel="nofollow noopener" dir="ltr">https://stackoverflow.com/questions/5189560/squash-my-last-x-commits-together-using-git <span class="badge badge-notification clicks" title="1 click" dir="ltr">1</span></a></p>
+               </li>
+            </ul>
+            <hr>
+         </div>
+      </div>
+      <script src="{% static 'js/main.js' %}"></script>
+   </body>
+</html>

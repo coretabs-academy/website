@@ -65,10 +65,10 @@ $(function () {
 		$(".container").append(
 			'<aside>'+
 				'<p><a href="/frontend/git/1">مدخل إلى Git و GitHub</a></p>'+
-				'<p><a href="/frontend/git/2">ورشة عمل git commit و git push</a></p>'+
-				'<p><a href="/frontend/git/3">خلاصة الدرس الأول و الثاني GIT</a></p>'+
-				'<p><a href="/frontend/git/4">إستنساخ cloning</a></p>'+
-				'<p><a href="/frontend/git/5">Pull & Conflicts</a></p>'+
+				'<p><a href="/frontend/git/2">خلاصة الدرس الأول و الثاني GIT</a></p>'+
+				'<p><a href="/frontend/git/3">إستنساخ cloning</a></p>'+
+				'<p><a href="/frontend/git/4">Pull & Conflicts</a></p>'+
+				'<p><a href="/frontend/git/5">Flags & Ignoring Files</a></p>'+
 				'<p><a href="/frontend/git/6">Undoing Changes</a></p>'+
 				'<p><a href="/frontend/git/7">Rewriting History</a></p>'+
 			'</aside>');

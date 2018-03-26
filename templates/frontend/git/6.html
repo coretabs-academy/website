@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+{% load static%}
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>[الدرس السادس] Undoing Changes</title>
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+   </head>
+   <body>
+      <div class="navbar">
+         <div class="navbar-brand">
+            <div class="">
+               Academy
+            </div>
+         </div>
+         <div class="icon-container">
+            <div class="humberger-icon">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+         </div>
+         <div class="navbar-nav">
+            <nav>
+               <div class="close">
+                  أغلق <i class="fas fa-times"></i>
+               </div>
+               <a href="{% url 'home' %}">الرئيسية</a>
+               <a href="{% url 'category' category='html_css' %}">HTML & CSS</a>
+               <a href="{% url 'category' category='javascript' %}">JavaScript</a>
+               <a href="{% url 'category' category='git' %}">Git</a>
+               <a href="{% url 'category' category='projects' %}">المشاريع</a>
+            </nav>
+         </div>
+      </div>
+      <div class="container">
+         <div class="cooked">
+            <h1>Undoing Changes</h1>
+            <hr>
+            <ul dir="rtl">
+               <li dir="rtl">
+                  <h3 dir="rtl">مالذي قمنا به في آخر مهمة ؟</h3>
+                  <p dir="rtl">قمنا بعمل ignore للملف password.txt, وتعديل لون الهيدر في موقع facebook.</p>
+                  <p dir="rtl">ولكن التعديل الأخير لم يعجبني, وأريد التراجع عنه, كيف أقوم بذلك ؟</p>
+                  <p dir="rtl">يجب علينا أولاً تذكر الثلاث المناطق الرئيسية داخل git.</p>
+               </li>
+               <li dir="rtl">
+                  <h4 dir="rtl">ماهي الثلاث المناطق الرئيسية Three main areas in Git ؟</h4>
+                  <p dir="rtl">لاحظ أننا كنا نقوم بعمل بالترتيب:</p>
+                  <pre dir="ltr"><code dir="ltr">Staging &gt;&gt; Committing &gt;&gt; Pushing
+</code></pre>
+                  <ul dir="rtl">
+                     <li dir="rtl">
+                        <h4 dir="rtl">ولكن أين تحصل هذه العمليات ؟</h4>
+                        <p dir="rtl">تحصل هذه العمليات في الثلاث الأماكن الرئيسية في git وهي:</p>
+                        <p></p>
+                        <div class="lightbox-wrapper" dir="ltr">
+                           <a class="lightbox" title="Untitled.png" rel="nofollow noopener" dir="ltr">
+                           <img src="{% static 'images/git/6/1.png'%}" alt="Untitled" class="image">
+                           </a>
+                        </div>
+                        <p></p>
+                        <ul dir="rtl">
+                           <li dir="rtl">
+                              <h4 dir="rtl">ماهي Working Area ؟</h4>
+                              <p dir="rtl">ببساطة هي المجلد الذي تعمل عليه بشكل مستمر, وتقوم فيه بإضافة وحذف وتعديل الملفات.</p>
+                           </li>
+                           <li dir="rtl">
+                              <h4 dir="rtl">ماهي Staging Area ؟</h4>
+                              <p dir="rtl">هي المكان الذي يراقب فيه git أسماء الملفات, وتواقيع الملفات… بإمكانك أن تقول, نسخة من محتوى Working Area.</p>
+                              <p dir="rtl">يسمى أيضاً Staging Area بـ Index.</p>
+                           </li>
+                           <li dir="rtl">
+                              <h4 dir="rtl">ماهو المستودع Repository ؟</h4>
+                              <p dir="rtl">هو ببساطة مجلد <code dir="ltr">.git</code> الموجود داخل المشروع خاصتك:</p>
+                              <p><img src="{% static 'images/git/6/2.png'%}" alt="image" class="image"></p>
+                              <p dir="rtl">وداخله يتم تخزين قائمة الـ commits, كما بالصورة التي في الأعلى !</p>
+                           </li>
+                        </ul>
+                     </li>
+                  </ul>
+               </li>
+               <li dir="rtl">
+                  <h3 dir="rtl">حسنا لنقم بكتابة الأمر <code dir="ltr">git status</code> ونرى النتيجة:</h3>
+                  <p><img src="{% static 'images/git/6/3.png'%}" alt="image" width="576" height="80"></p>
+                  <p dir="rtl">يقول أنه لا يوجد أي تعديلات لعمل commit لها… أي أنه يعرف إذا قمنا بتعديلات أو لا يوجد أي تعديلات في لحظات !</p>
+                  <p dir="rtl">يبدو الأمر سحري <img src="{% static 'images/git/6/4.png'%}" title=":smile:" class="emoji" alt=":smile:"></p>
+                  <ul dir="rtl">
+                     <li dir="rtl">
+                        <h4 dir="rtl">ولكن السؤال هو, كيف يعرف git هذا الأمر ؟</h4>
+                        <p dir="rtl">لا يوجد أي شيء سحري… فقط git يقوم بالمقارنة بين محتوى Working Area و Staging Area.</p>
+                        <p dir="rtl">إذا كانوا متساويين, فهو سيعرف أنه لا يوجد أي تعديلات, هذا هو الأمر بكل بساطة !</p>
+                     </li>
+                  </ul>
+               </li>
+               <li dir="rtl">
+                  <h3 dir="rtl">كيف نقوم بنقل الملفات بين الثلاث الأماكن الرئيسية ؟</h3>
+                  <ul dir="rtl">
+                     <li dir="rtl">
+                        <h4 dir="rtl">بداية من Working إلى Staging:</h4>
+                        <p dir="rtl">الأمر <code dir="ltr">git add</code> هو المسؤول عن هذا !</p>
+                        <p dir="rtl">كما قلنا أن add معناه أن يقوم بنقل الملف إلى خشبة المسرح Staging Area <img src="{% static 'images/git/6/5.png'%}" title=":wink:" class="emoji" alt=":wink:"></p>
+                        <p></p>
+                        <div class="lightbox-wrapper" dir="ltr">
+                           <a class="lightbox" title="image.jpg" rel="nofollow noopener" dir="ltr">
+                           <img src="{% static 'images/git/6/6.png'%}" alt="image" class="image">
+                           </a>
+                        </div>
+                        <p></p>
+                     </li>
+                     <li dir="rtl">
+                        <h4 dir="rtl">كيفية نقل الملفات إلى الـ repository ؟</h4>
+                        <p dir="rtl">أعتقد أنك تعرف الأمر مسبقاً… نعم إنه <code dir="ltr">git commit</code>  !</p>
+                        <p></p>
+                        <div class="lightbox-wrapper" dir="ltr">
+                           <a class="lightbox" title="image.jpg" rel="nofollow noopener" dir="ltr">
+                           <img src="{% static 'images/git/6/7.png'%}" alt="image" class="image">
+                           </a>
+                        </div>
+                        <p></p>
+                     </li>
+                  </ul>
+               </li>
+               <li dir="rtl">
+                  <h3 dir="rtl">قمنا بتغيير لون الخلفية مؤخراً… لنرى التاريخ على git:</h3>
+                  <p dir="rtl">سنكتب الامر:</p>
+                  <pre dir="ltr"><code dir="ltr">git log --oneline --graph --decorate
+</code></pre>
+                  <p dir="rtl">يظهر لنا:</p>
+                  <p></p>
+                  <div class="lightbox-wrapper" dir="ltr">
+                     <a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr">
+                     <img src="{% static 'images/git/6/8.png'%}" alt="image" class="image">
+                     </a>
+                  </div>
+                  <p></p>
+                  <p dir="rtl">أعتقد أنك فهمت ما يقوم به… نحن نظهر التاريخ.</p>
+                  <ul dir="rtl">
+                     <li dir="rtl">
+                        <h4 dir="rtl">ولكن ما معنى الـ oneline و graph و decorate ؟</h4>
+                        <p dir="rtl">يسمى هذا النوع من الـ parameters بالـ switches, أي أنها مثل:</p>
+                        <p><img src="{% static 'images/git/6/9.png'%}" alt="image" class="image"></p>
+                        <p dir="rtl">أي أنك حينما تكتبه معناه تفعيل الخيار, يعني جعله On بدلاً مما كان Off.</p>
+                        <p dir="rtl">هذا النوع من الـ parameter لا يحتاج أي argument بعده, لأنه وظيفته On و Off فقط.</p>
+                        <ul dir="rtl">
+                           <li dir="rtl">
+                              <h4 dir="rtl">مالذي يقوم به الـ oneline ؟</h4>
+                              <p dir="rtl">معناه أننا نخبر git بعرض التاريخ log, كل commit في سطر واحد… من اسمه one line.</p>
+                           </li>
+                           <li dir="rtl">
+                              <h4 dir="rtl">ماذا عن graph ؟</h4>
+                              <p dir="rtl">هي تقوم بعرض الـ log على شكل مخطط graph… في حال كان معقد أكثر ستلاحظ النتيجة بشكل أجمل.</p>
+                           </li>
+                           <li dir="rtl">
+                              <h4 dir="rtl">بالنسبة لـ decorate:</h4>
+                              <p dir="rtl">فهي فقط تقوم بعمل ألوان على النقاط الأمور المهمة.</p>
+                           </li>
+                           <li dir="rtl">
+                              <h4 dir="rtl">أعتقد أنك لاحظت HEAD في الـ log… ماهو وما فائدته ؟</h4>
+                              <p><img src="{% static 'images/git/6/10.png'%}" alt="image" width="466" height="19"></p>
+                              <p dir="rtl">هو فقط مؤشر (سهم), ولكن إلى أين يؤشر ؟</p>
+                              <p dir="rtl">هو ببساطة يؤشر على الفرع branch الحالي… في حالتنا master (الـ branch الإفتراضي), بهذا الشكل:</p>
+                              <p></p>
+                              <div class="lightbox-wrapper" dir="ltr">
+                                 <a class="lightbox" title="image.jpg" rel="nofollow noopener" dir="ltr">
+                                 <img src="{% static 'images/git/6/11.png'%}" alt="image" class="image">
+                                 </a>
+                              </div>
+                              <p></p>
+                           </li>
+                           <li dir="rtl">
+                              <h4 dir="rtl">ماذا عن origin/master… ماهو ؟</h4>
+                              <p><img src="{% static 'images/git/6/12.png'%}" alt="image" width="466" height="39"></p>
+                              <p dir="rtl">هذا هو الفرع على المستودع البعيد remote repository… يعني على GitHub.</p>
+                              <p dir="rtl">معنى هذا أنني على github, لم أقم بعمل push لآخر commit وهي Change header color, أي أنها لن تظهر هناك:</p>
+                              <p></p>
+                              <div class="lightbox-wrapper" dir="ltr">
+                                 <a class="lightbox" title="github-commits-log.png" rel="nofollow noopener" dir="ltr">
+                                 <img src="{% static 'images/git/6/13.png'%}" alt="github-commits-log" class="image">
+                                 </a>
+                              </div>
+                              <p></p>
+                           </li>
+                        </ul>
+                     </li>
+                     <li dir="rtl">
+                        <h4 dir="rtl">معنى هذا أنني بالأعلى لم أكتب النتيجة الفعلية من <code dir="ltr">git status</code>, صحيح ؟</h4>
+                        <p dir="rtl">نعم, هذه هي النتيجة كاملة:</p>
+                        <p><img src="{% static 'images/git/6/14.png'%}" alt="image" class="image"></p>
+                        <p dir="rtl">لاحظ أن git قام بالمقارنة بين origin/master و master… واكتشف أنه يوجد commit آخر وهو تغيير الألوان Change Color Header, وهو يخبرنا بعمل push لإرسال التعديلات.</p>
+                     </li>
+                     <li dir="rtl">
+                        <h4 dir="rtl">ولكن إذا لم أرد أن أرسل هذه التعديلات, أي أنها لم تعجبني أصلاً… كيف أقوم بالعودة كما كان المشروع قبل الـ commit الأخيرة ؟</h4>
+                        <p dir="rtl">الإجابة بسيطة, وهي لب هذا الدرس… <strong dir="ltr"><code dir="ltr">git reset</code></strong>.</p>
+                     </li>
+                     <li dir="rtl">
+                        <h4 dir="rtl">مالذي يقوم به الأمر <code dir="ltr">git reset</code> ؟</h4>
+                        <p dir="rtl">فقط تختار فيه الـ commit الذي تريد العودة إليها (إما بالـ sha1 خاصتها), أو باستعمال HEAD.</p>
+                        <p dir="rtl">وهو سيقوم بالعودة سابقاً باستعمال الـ Repository وادخالها إلى Working &amp; Staging Area… الصورة توضح الأمر:</p>
+                        <p></p>
+                        <div class="lightbox-wrapper" dir="ltr">
+                           <a class="lightbox" title="image.jpg" rel="nofollow noopener" dir="ltr">
+                           <img src="{% static 'images/git/6/15.png'%}" alt="image" class="image">
+                           </a>
+                        </div>
+                        <p></p>
+                     </li>
+                     <li dir="rtl">
+                        <h4 dir="rtl">مالفائدة ؟</h4>
+                        <p dir="rtl">كما نعرف Working Area هي مجلد المشروع الذي تعمل عليه… أي أنه سيرجع التعديلات عليه <img src="{% static 'images/git/6/16.png'%}" title=":wink:" class="emoji" alt=":wink:"></p>
+                     </li>
+                     <li dir="rtl">
+                        <h4 dir="rtl">قلنا أنه بإمكاننا اختيار الـ commit باستعمال HEAD, ولكن كيف ؟</h4>
+                        <p dir="rtl">كما نعرف أن HEAD يشير إلى الـ branch الذي نعمل عليه, والـ branch بدوره يشير إلى الـ commit.</p>
+                        <p></p>
+                        <div class="lightbox-wrapper" dir="ltr">
+                           <a class="lightbox" title="image.jpg" rel="nofollow noopener" dir="ltr">
+                           <img src="{% static 'images/git/6/17.png'%}" alt="image" class="image">
+                           </a>
+                        </div>
+                        <p></p>
+                     </li>
+                     <li dir="rtl">
+                        <h4 dir="rtl">كيف نظهر الـ commit التي يشير إليها HEAD ؟</h4>
+                        <p dir="rtl">نكتب الأمر:</p>
+                        <pre dir="ltr"><code dir="ltr"> git show HEAD
+</code></pre>
+                     </li>
+                     <li dir="rtl">
+                        <h4 dir="rtl">طيب, كيف نرجع للـ commit التي قبلها ؟</h4>
+                        <p dir="rtl">الأمر بسيط جداً… نستعمل <code dir="ltr">HEAD^</code></p>
+                        <p dir="rtl">بهذا الشكل:</p>
+                        <pre dir="ltr"><code dir="ltr">git show HEAD^
+</code></pre>
+                     </li>
+                     <li dir="rtl">
+                        <h4 dir="rtl">كيف نرجع للـ commit التي قبلها مرتين ؟</h4>
+                        <p dir="rtl">أيضاً سهل جداً:</p>
+                        <pre dir="ltr"><code dir="ltr">git show HEAD^^
+</code></pre>
+                        <p dir="rtl">أعتقد أنك فهمت الأمر… كل مرة نريد العودة نضيف ^</p>
+                     </li>
+                     <li dir="rtl">
+                        <h4 dir="rtl">لا تعجبني الطريقة, إذا أريد العودة عشر commits, هل سأكتب ^ عشر مرات <img src="{% static 'images/git/6/18.png'%}" title=":roll_eyes:" class="emoji" alt=":roll_eyes:"> ؟</h4>
+                        <p dir="rtl">لا أبداً, لدينا طريقة جميلة جداً وهي استعمال ~ بهذا الشكل:</p>
+                        <pre dir="ltr"><code dir="ltr">git show HEAD~10
+</code></pre>
+                        <p dir="rtl">معناه أعرض الـ commit التي قبلها بعشر مرات.</p>
+                     </li>
+                     <li dir="rtl">
+                        <h4 dir="rtl">قمت بتجربة <code dir="ltr">HEAD^</code> وهو لا يعمل… مالمشكلة ؟</h4>
+                        <p><img src="{% static 'images/git/6/19.png'%}" alt="git-show-head-fail" class="image"></p>
+                        <p dir="rtl">أعتقد أنك تستخدم cmd, وليس git bash… في git bash, سيعمل بدون مشاكل.</p>
+                        <p dir="rtl">لكن في cmd يجب أن تستعمل <code dir="ltr">HEAD^^</code> بدلاً من <code dir="ltr">HEAD^</code>.</p>
+                        <p dir="rtl">وأيضاً <code dir="ltr">HEAD^^^^</code> بدلاً من <code dir="ltr">HEAD^^</code>… يعني لو تريد الرجوع commit واحدة تعمل اثنان ^ لكل واحدة, تسمى هذه الطريقة escaping character لأن ^ حرف غير مقبول ويجب حل المشكلة بإضافته مرة أخرى.</p>
+                        <pre dir="ltr"><code dir="ltr">HEAD^ in git bash = HEAD^^ in cmd
+</code></pre>
+                     </li>
+                  </ul>
+               </li>
+               <li dir="rtl">
+                  <h3 dir="rtl">يبدو أنني تحدثت كثيراً <img src="{% static 'images/git/6/20.png'%}" title=":smile:" class="emoji" alt=":smile:">… كيف سنقوم بالعودة للـ commit السابقة ؟</h3>
+                  <p dir="rtl">سنستعمل الأمر:</p>
+                  <pre dir="ltr"><code dir="ltr">git reset --hard HEAD^
+</code></pre>
+                  <p dir="rtl">بهذا الشكل سيعود إلى commit قبل الأخيرة !</p>
+                  <p dir="rtl">وسنحذف اللون القبيح الذي استعملناه مؤخراً على الـ header… هذا ما سيحصل, سننزل إلى الـ commit السابقة:</p>
+                  <p></p>
+                  <div class="lightbox-wrapper" dir="ltr">
+                     <a class="lightbox" title="image.jpg" rel="nofollow noopener" dir="ltr">
+                     <img src="{% static 'images/git/6/21.png'%}" alt="image" class="image">
+                     </a>
+                  </div>
+                  <p></p>
+                  <ul dir="rtl">
+                     <li dir="rtl">
+                        <h4 dir="rtl">ولكن ماهو <code dir="ltr">--hard</code> ؟</h4>
+                        <p dir="rtl">هذا معناه أن ينقل الـ commit من الـ Repository إلى كلاً من Working &amp; Staging Area.</p>
+                        <p dir="rtl">كما في الصورة:</p>
+                        <p></p>
+                        <div class="lightbox-wrapper" dir="ltr">
+                           <a class="lightbox" title="image.jpg" rel="nofollow noopener" dir="ltr">
+                           <img src="{% static 'images/git/6/22.png'%}" alt="image" class="image">
+                           </a>
+                        </div>
+                        <p></p>
+                        <p dir="rtl">لأننا نريد أن يقوم بهذا فعلاً… يزيل التعديل كأنه لم يكن موجود.</p>
+                     </li>
+                     <li dir="rtl">
+                        <h4 dir="rtl">ماذا لو لم نكتب الـ switch بالأعلى <code dir="ltr">--hard</code> ؟</h4>
+                        <p dir="rtl">سيقوم git فقط بنقل التعديلات من Repository إلى Staging Area فقط !</p>
+                        <p dir="rtl">بهذا الشكل</p>
+                        <p></p>
+                        <div class="lightbox-wrapper" dir="ltr">
+                           <a class="lightbox" title="image.jpg" rel="nofollow noopener" dir="ltr">
+                           <img src="{% static 'images/git/6/23.png'%}" alt="image" class="image">
+                           </a>
+                        </div>
+                        <p></p>
+                     </li>
+                     <li dir="rtl">
+                        <h4 dir="rtl">ماهو الخيار الإفتراضي بدون <code dir="ltr">--hard</code> ؟</h4>
+                        <p dir="rtl">الخيار الإفتراضي هو <code dir="ltr">git reset --mixed</code>, يعني لو كتبت <code dir="ltr">git reset</code> بدون أي switch… سيعطيك نفس النتيجة <img src="{% static 'images/git/6/24.png'%}" title=":smile:" class="emoji" alt=":smile:"></p>
+                     </li>
+                  </ul>
+               </li>
+               <li dir="rtl">
+                  <h3 dir="rtl">همم… عرفنا كيف نرجع للـ commit السابقة, ولكن أين ذهبت الـ commit ؟</h3>
+                  <p dir="rtl">هي ما زالت موجودة, ولكن بعد فترة سيقوم garbage collector (جامع القمامة) بحذفها مستقبلاً… ولكن ما زال بإمكاننا العودة عليها فقط باستعمال sha1, إذا كنت تعرفه !</p>
+                  <p></p>
+                  <div class="lightbox-wrapper" dir="ltr">
+                     <a class="lightbox" title="image.jpg" rel="nofollow noopener" dir="ltr">
+                     <img src="{% static 'images/git/6/25.png'%}" alt="image" class="image">
+                     </a>
+                  </div>
+                  <p></p>
+                  <p dir="rtl">كما ترى الهاش بالأعلى (ربما عندك hash مختلف)… للعودة إلى اللون القبيح مجدداً:</p>
+                  <pre dir="ltr"><code dir="ltr">git reset --hard 6a3caef
+</code></pre>
+                  <p dir="rtl">وهو سيقوم بتحريك المؤشر الخاص بالـ master إلى الـ commit التي بالأعلى مجدداً,</p>
+                  <p dir="rtl">و HEAD يذهب أين ما ذهب master , مثل الشنطة <img src="{% static 'images/git/6/26.png'%}" title=":joy:" class="emoji" alt=":joy:"></p>
+               </li>
+            </ul>
+            <ul dir="rtl">
+               <li dir="rtl">
+                  <h3 dir="rtl">ماهي المهمة المطلوبة ؟</h3>
+                  <p dir="rtl">قم بحذف التعديل الأخير من الـ repository خاصتك.</p>
+                  <p dir="rtl">عندما تقوم بعمل push إلى github سيطلب منك أن تستعمل force… لأنك قمت بحذف commit, ستقوم بها بهذا الشكل:</p>
+                  <pre dir="ltr"><code dir="ltr">git push --force origin master
+</code></pre>
+               </li>
+               <li dir="rtl">
+                  <h3 dir="rtl">ملحق:</h3>
+                  <ul dir="rtl">
+                     <li dir="rtl">
+                        <h4 dir="rtl">شرح مفصل للـ git reset:</h4>
+                        <p dir="ltr"><a href="https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified" rel="nofollow noopener" dir="ltr">https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified<span class="badge badge-notification clicks" title="2 clicks" dir="ltr">2</span></a></p>
+                     </li>
+                     <li dir="rtl">
+                        <h4 dir="rtl">توثيق الأمر reset documentation:</h4>
+                        <p dir="ltr"><a href="https://git-scm.com/docs/git-reset" rel="nofollow noopener" dir="ltr">https://git-scm.com/docs/git-reset<span class="badge badge-notification clicks" title="3 clicks" dir="ltr">3</span></a></p>
+                     </li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <script src="{% static 'js/main.js' %}"></script>
+   </body>
+</html>

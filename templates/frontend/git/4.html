@@ -38,67 +38,231 @@
       </div>
       <div class="container">
          <div class="cooked">
-            <h1>إستنساخ cloning</h1>
+            <h1>Pull & Conflicts</h1>
             <hr>
-            <p dir="rtl">عملية إستنساخ مشروع يوجد على أي سيرفر أخر أو على جهازك تسمى بالـ cloning. وتحتاج للقيام بهذه العملية للحصول على نسخة مطابقة من المشروع حتى نبدأ بالعمل علية.</p>
-            <h2 dir="rtl">العمل على واجهة الأوامر CLI:</h2>
-            <p dir="rtl">للقيام بذلك كل ماعليك فعلة هو كتابة الأمر التالي:</p>
-
-            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
-               <pre style="margin: 0; line-height: 125%">git clone &lt;url&gt; &lt;name&gt;
-</pre>
-            </div>
-            <p dir="rtl"><strong dir="rtl">حيث أن:</strong></p>
-            <p dir="rtl">الـ <code dir="ltr">&lt;url&gt;</code> موقع المستودع سوى كان على سيرفر أو على جهازك</p>
-            <p dir="rtl">الـ <code dir="ltr">&lt;name&gt;</code> إسم المجلد الذي سيتم عمل الإستنساخ إلية. في حال تم كتابة إسم مجلد غير موجود سيتم إنشاء ذلك المجلد ومن ثم القيام بعملية الإستنساخ</p>
-            <p dir="rtl"><strong dir="rtl">ملاحظة:</strong> تحديد إسم المجلد إختياري وبإمكانك عمل الإستنساخ بالأمر التالي فقط</p>
-
-            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
-               <pre style="margin: 0; line-height: 125%">git clone &lt;url&gt;
-</pre>
-            </div>
+            <h2 dir="rtl">ما الذي قمنا به في الدرس السابق؟</h2>
+            <p dir="rtl">في الدرس السابق قمنا بعمل إستنساخ (Clone) لمشروع من مستودع على موقع الـ GitHub.</p>
+            <h2 dir="rtl">ما الذي سنستفيدة من هذا الدرس؟</h2>
+            <p dir="rtl">إن إختيار طريقة العمل بأن نكون جميعنا (contributors) سيساعدك على تجربة العمل كفريق وحل التعارضات (conflicts) عند مواجهتها.</p>
             <hr>
-            <h3 dir="rtl">إستنساخ مستودع محلي (Local) يتم كالتالي:</h3>
-            <p dir="rtl">سأقوم بكتابة أمر الإستنساخ متبوع بمسار المجلد الخاص بالمستودع ومن ثم متبوع بإسم المجلد الذي أريد أن يتم عمل الإستنساخ إلية.</p>
-
+            <h2 dir="rtl">سحب التعديلات التي قام بها المطورين الأخرين</h2>
+            <p dir="rtl">تذكر في كل مرة قبل أن تقوم بالبدء بالعمل على تعديلاتك يجب أن تقوم بتحديث النسخة التي لديك بالقيام بسحب الملفات من المستودع الذي على GitHub فهناك أشخاص أخرون يعملون معك وربما قاموا برفع تعديلات جديدة على المشروع.</p>
+            <p dir="rtl"><strong dir="rtl">وللقيام بذلك سيتطلب منك عمل جلب للملفات ومن ثم دمجها مع الملفات الموجودة على مستودعك المحلي ويمكنك القيام بذلك بطريقتين:</strong></p>
+            <h1 dir="rtl">الطريقة الأولى:</h1>
+            <p dir="rtl">جلب التعديلات عبر الأمر <code dir="ltr">git fetch</code> ومن ثم دمجها بإستخدام الأمر <code dir="ltr">git merge</code></p>
+            <h3 dir="rtl">الأمر git fetch</h3>
             <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
-               <pre style="margin: 0; line-height: 125%">git clone webpage <span style="color: #204a87">test</span>
+               <pre style="margin: 0; line-height: 125%">git fetch
 </pre>
             </div>
-            <p dir="rtl"><strong dir="rtl">شاهد الخطوات:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="1-1.gif" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/4/1.gif'%}" alt="1-1" class="image"></a></div>
+            <p dir="rtl">أو الأمر التالي فلن يختلف ذلك في درسنا الحالي</p>
+            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+               <pre style="margin: 0; line-height: 125%">git fetch origin master
+</pre>
+            </div>
+            <p dir="rtl">هذا الأمر يقوم بتنزيل وجلب التعديلات من على المستودع البعيد إلى المستودع المحلي فقط.<br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/4/1.png'%}" alt="image" class="image"></a></div>
             <p></p>
-            <p dir="rtl">لاحظ أن webpage ليس إسم المجلد فقط بل هو مسار المجلد وقمت بكتابة إسمة فقط لأنني قمت بفتح نافذة الـ CLI في نفس موقع المستودع, لنفترض بأنني أريد أن أقوم بعمل إستنساخ للمشروع وانا في مسار مختلف حينها سأقوم بكتابة مسار ملف المستودع على جهازي.</p>
-            <hr>
-            <h3 dir="rtl">إستنساخ مستودع من على سيرفر (Remote) يتم كالتالي:</h3>
-            <p dir="rtl">سأقوم بكتابة أمر الإستنساخ متبوع بعنوان المستودع على السيرفر</p>
-
+            <p dir="rtl"><strong dir="rtl">تم تنزيل التحديثات والأن لنقم بتشييك حالة المستودع الخاص بنا بعد قيامنا بذلك:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/4/2.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">لاحظ أن المستودع المحلي متاخر عن المستودع البعيد بـ commit واحدة. ما يعني بأنه أحد أعضاء الفريق قام بعمل commit جديدة وقام برفعها للمستودع.</p>
+            <p dir="rtl">أيضاً بعد قيامك بتطبيق الأمر git fetch ستلاحظ بأنه لم يتم إحداث أي تغيير على الملفات التي تعمل عليها ولكن أصبح لديك في مستودعك المحلي أخر تحديث للملفات بينما انت ما تزال تعمل على الفرع الخاص بك.</p>
+            <p dir="rtl"><strong dir="rtl">راجع الفيديو التالي حتى الدقيقة 0:32 فقط:</strong><br></p>
+            <iframe class="image" src="https://www.youtube.com/embed/kxXdk2HcOBo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+            <p dir="rtl">كما شاهدت في الفيديو أعلاة فالأمر git fetch قام بتنزيل التحديثات من المستودع البعيد ولكن مازلنا نعمل على الفرع الخاص بنا بالمستودع المحلي master كما بالصورة التالية:<br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/4/3.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <h4 dir="rtl">الأن سأقوم بإستخدام الأمر git diff لمشاهدة الفرق بين ملفاتي وبين التحديثات الجديدة:</h4>
+            <p dir="rtl">لاحظ في الصورة أعلاة أن الفرع الذي أعمل عليه بإسم master وأن الفرع الخاص بتتبع التعديلات على المستودع البعيد هو origin/master وأريد ان أعرف الفرق بينهما لهذا سأقوم بكتابتهما كالتالي:</p>
             <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
-               <pre style="margin: 0; line-height: 125%">git clone https://github.com/FortAwesome/Font-Awesome
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">git</span> <span style="color: #000000">diff</span> <span style="color: #000000">master</span> <span style="color: #000000">origin</span><span style="color: #ce5c00; font-weight: bold">/</span><span style="color: #000000">master</span>
 </pre>
             </div>
-            <p dir="rtl"><strong dir="rtl">شاهد الخطوات:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="2-2.gif" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/4/2.gif'%}"  alt="2-2" class="image"></a></div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/4/4.png'%}" alt="image" class="image"></a></div>
             <p></p>
-            <p dir="rtl">لاحظ أنني هذه المرة لم أقم بتحديد إسم الملف الذي سيتم عمل الإستنساخ بداخله لهذا سيتم إنشاء ملف بشكل تلقائي يحمل نفس إسم المشروع على الـ GitHub. ولهذا تم إنشاء المجلد بإسم Font-Awesome.</p>
+            <p dir="rtl">من النتيجة أعلاة أستطيع أن أعرف بأن الـ commit التي مستودعي المحلي متاخر بها عن المستودع البعيد هي في ملف الـ index.html حيث أنه يتم الإشارة إليها بعلامة + على اليسار ولون الكود الخاص بالتعديل بالون الأخضر.</p>
+            <p dir="rtl">بإمكانك ايضاً مشاهد الإختلافات في الملف كامل بإستخدام الأمر التالي:</p>
+            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">git</span> <span style="color: #000000">diff</span> <span style="color: #000000">origin</span><span style="color: #ce5c00; font-weight: bold">/</span><span style="color: #000000">master</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">لنلقي نظرة على ملف الـ index.html على مستودعي المحلي:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/4/5.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">من خلال المقارنة الأن أصبحت أعرف أنه اذا ما سأقوم بدمج الملف الخاص مع التعديلات الجديدة فإنه سيتم إضافتها مكان السهم الأخضر في الصورة أعلاة ولا يوجد أي تعارض لدي حيث أن الدمج لن يسبب أي مشاكل بالكود الخاص بي. لذا سأنتقل لأمر الدمج.</p>
+            <h3 dir="rtl">الأمر git merge</h3>
+            <p dir="rtl">كما سبق وقلنا أن الأمر git fetch يقوم بجلب التعديلات ولكن لا يقوم بعمل أي تغيير على العمل الخاص بك وحتى يتم دمج التعديلات تحتاج لإستخدام الأمر merge إرجع للفيديو السابق وشاهد بقيتة.</p>
+            <p dir="rtl">سأقوم بتطبيق الأمر كالتالي:</p>
+            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">git</span> <span style="color: #000000">merge</span> <span style="color: #000000">origin</span><span style="color: #ce5c00; font-weight: bold">/</span><span style="color: #000000">master</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/4/6.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">لاحظ أنه تم القيام بعملية الدمج وإضافة 7 أسطر جديدة في ملف index.html كما هو موضع في واجهة الأوامر.</p>
+            <p dir="rtl"><strong dir="rtl">لنلقي نظرة على الملف الخاص بي:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/4/7.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">تم إضافة الأسطر الجديدة دون حصول أي تعارض.</p>
             <hr>
-            <h2 dir="rtl">العمل على الواجهة الرسومية GUI:</h2>
-            <p dir="rtl">الأمر بسيط تابع الشرح التالي:<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="3-3.gif" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/4/3.gif'%}" alt="3-3" class="image"></a></div>
+            <h1 dir="rtl">الطريقة الثانية:</h1>
+            <p dir="rtl">نستطيع القيام بما سبق بطريقة أخرى عن طريق جلب التعديلات من المستودع البعيد ودمجها في نفس الوقت بإستخدام الأمر pull.</p>
+            <h3 dir="rtl">الأمر git pull</h3>
+            <p dir="rtl">هذا الأمر يقوم بسحب التعديلات ودمجها في نفس الوقت أي انه يقوم بعمل الأمر git fetch ومن ثم يتبعة بعمل الأمر git merge.</p>
+            <p dir="rtl">شاهد الصورة التالية لتعرف الفرق بين الطريقة الأولى والطريقة الثانية:<br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/4/8.png'%}" alt="image" class="image"></a></div>
             <p></p>
+            <h4 dir="rtl">لنقم بتطبيق الأمر git pull:</h4>
+            <p dir="rtl">لنفترض أن أحد المطورين قام بعمل تعديل للمستودع وأريد أن أقوم بجلب هذه التعديلات ودمجها مع ملفات مستودعي المحلي, سأقوم بكتابة الكود كالتالي:</p>
+            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+               <pre style="margin: 0; line-height: 125%">git pull origin master
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/4/9.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">لاحظ في واجهة الأوامر تم إخباري بأنه تم جلب التعديلات ودمجها عبر إضافة 6 أسطر جديدة في ملف الـ index.html</p>
+            <hr>
+            <h2 dir="rtl">متى تستخدم git fetch ومتى تستخدم git pull ؟</h2>
+            <p dir="rtl"><strong dir="rtl">الأمر fetch:</strong> يقوم بجلب التعديلات من المستودع البعيد و من الفرع المستهدف وتخزينها في المستودع المحلي تحديداً في ما يسمى <a href="https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches" rel="nofollow noopener" dir="ltr">Remote Tracking Branches</a> دون دمج تلك التعديلات بالفرع الذي يتم العمل علية مما يسمح لك بمراجعة الإختلافات قبل القيام بعملية الدمج.</p>
+            <p dir="rtl"><strong dir="rtl">الأمر pull:</strong> يقوم بجلب التعديلات من المستودع البعيد ومن ثم يقوم بدمج التعديلات بشكل مباشر مع الفرع الذي جاري العمل علية في المستودع المحلي بدون السماح لك بمراجعة الإختلافات مما قد يسبب حصول تعارض في الأكواد.</p>
+            <p dir="rtl">يعتبر إستخدام الأمر git fetch أكثر أمان لتجنب حصول تعارض في الأكود مما يسمح لك بمراجعة التعديلات والفرق بين ملفاتك والملفات التي تم جلبها من المستودع البعيد لتتجتب حصول فوضى عند القيام بعملية الدمج.</p>
+            <p dir="rtl">غالباً يتم إستخدام الأمر git fetch عندما يكون لديك على مستودعك المحلي commits غير موجودة في المستودع البعيد وكذلك يوجد commits في المستودع البعيد وغير موجودة على المستودع المحلي.</p>
+            <hr>
+            <h2 dir="rtl">مثال:</h2>
+            <p dir="rtl">لنفترض أنني بدأت العمل على المشروع وقمت بعمل جلب التعديلات الأخيرة قبل أن أبداء عبر الأمر git pull.<br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/4/10.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">ومن ثم بدأت بالعمل وقمت بعمل commit وفي نفس الوقت يوجد مساهم أخر في المشروع يقوم بعمل تعديلات وقام بعمل commit للمستودع البعيد حيث أنه الأن أصبح لدي على مستودعي المحلي commit لم أقم برفعة للمستودع البعيد بعد وكذلك يوجد commit في المستودع البعيد لم أقم بجلبة بعد.</p>
+            <p dir="rtl">لنفترض أنني أريد أن أقوم برفع تعديلاتي للمستودع البعيد دون أن أقوم بالتأكد من وجود أي تعديلات سبقني أحد المطورين بوضعها كالتالي:<br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/4/11.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl"><strong dir="rtl">نلاحظ انه تم رفض رفع عملية الرفع بسبب وجود تعديلات على المستودع البعيد ليست على مستودعي المحلي.</strong></p>
+            <p dir="rtl">في هذه الحالة يجب علي أن أقوم بجلب تلك التعديلات للمستودع المحلي وهناك إحتمالية أنني سأواجة تعارض في الأكواد إذا ما قام ذلك المساهم بعمل تعديلات في نفس الأسطر التي قمت أنا بالعمل عليها وحينها سيكون علي أن اقوم بحل هذا التعارض بشكل يدوي.</p>
+            <p dir="rtl"><strong dir="rtl">لنقم بتجربة الأمر git pull كالتالي:</strong></p>
+            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+               <pre style="margin: 0; line-height: 125%">git pull origin master
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/4/12.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">تم جلب التعديلات ولكن لم يعمل الأمر pull كما يجب فقد فشلت عملية الدمج بسبب وجود تعارض بين تعديلاتي وبين تعديلات المساهم الذي قام بعمل commit قبلي.</p>
+            <p dir="rtl"><strong dir="rtl">سأقوم الأن بفتح ملف الـ index.html حتى أقوم بحل التعارض بين الأكواد :</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/4/13.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">تلاحظ في الصورة أعلاة انه تم وضع فواصل والتي قمت بتظليلها باللون الأصفر</p>
+            <p dir="rtl"><strong dir="rtl">الفاصل التالي يحدد مكان بدء التعارض:</strong></p>
+            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #ce5c00; font-weight: bold">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span> <span style="color: #000000">HEAD</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">الفاصل التالي يفصل بين التعديل الخاص بي والتعديل الذي قام المطور الأخر بعملة:</strong></p>
+            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #ce5c00; font-weight: bold">========</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">الفاصل التالي يحدد نهاية التعارض و الـ SHA الخاصة بالـ commit الذي تعارض مع الـ commit الخاص بي:</strong></p>
+            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #ce5c00; font-weight: bold">&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span> <span style="color: #000000">8abf81e315bd6d411b309f3970556a3b5db44950</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">الأن سأحتاج لأن أقوم بإصلاح التعارض بشكل يدوي ومن ثم مسح الفواصل حيث سيصبح الكود الخاص بي كالتالي:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/4/14.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">بعد أن قمت بترتيب الكود وإصلاح التعارض سأقوم بحفظ الملف index.html ومن ثم سأقوم بعمل staging و commit للتعديل كما سبق وشرحنا في الدروس السابقة كالتالي:</p>
+            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+               <pre style="margin: 0; line-height: 125%">git add index.html
+</pre>
+            </div>
+            <p dir="rtl">ثم أتبعة بالأمر التالي:</p>
+            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">git</span> <span style="color: #000000">commit</span> <span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">m</span> <span style="color: #4e9a06">"Fix fourth question conflict"</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/4/15.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">الأن سأقوم برفع التعديلات للمستودع البعيد بالأمر التالي:</p>
+            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+               <pre style="margin: 0; line-height: 125%">git push origin master
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/4/16.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">تم الرفع بنجاح بعد أن تعاملنا مع التعارض الذي حصل لنا.</p>
             <hr>
             <h2 dir="rtl">مهمة اليوم</h2>
-            <p dir="rtl">سنقوم بعمل تطبيق على بعض الأوامر ونعمل كفريق عن طريق القيام بلعبة سؤال وجواب <img src="{% static 'images/git/4/4.png'%}" title=":question:" class="emoji" alt=":question:">.<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/4/5.png'%}" alt="image" class="image"></a></div>
+            <p dir="rtl">في الدرس السابق قمنا بعمل clone لمشروع من مستودع على موقع الـ GitHub حيث يفترض أن يكون لديك الملفات كالتالي:<br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/4/17.png'%}" alt="image" class="image"></a></div>
             <p></p>
-            <p dir="rtl"><strong dir="rtl">قمت بعمل الصفحة أعلاة ورفعتها على مستودع, المهمة المطلوبة منك في هذا الدرس كالتالي:</strong></p>
-            <p dir="rtl">1- عمل clone للمشروع على جهازك <a href="https://github.com/Alhakem/1mac-lesson4" rel="nofollow noopener" dir="rtl"><strong dir="rtl">من هنا رابط المستودع</strong></a>.</p>
-            <p dir="rtl">2- بعد قيامك بذلك قم بمشاركة حسابك على موقع GitHub حتى يتم إضافتك كمساهم في المشروع.</p>
-            <h2 dir="rtl">أين يتم مشاركة حسابك بعد إكمالك مهمة الإستنساخ؟</h2>
-            <p dir="rtl">في الموضوع المخصص من هنا:<br></p>
+            <p dir="rtl">بعد أن قمت بعمل إستنساخ للمشروع وبعد أن تم إضافتك كمساهم فية (contributor) أصبح لديك إمكانية القيام بعمل التعديلات على المشروع وحفظها ومن ثم عمل push للملفات من المستودع الذي على جهازك لمستودع الـ GitHub بشكل مباشر.</p>
+            <h2 dir="rtl">المهمة كالتالي:</h2>
+            <p dir="rtl">1- قم قبل كل شي بعمل تحديث للنسخة التي لديك بإستخدام الأمر الخاص بذلك كما شرحنا في الدرس أعلاة.</p>
+            <p dir="rtl">سحب الملفات من المستودع البعيد قبل البدء بالعمل يضمن لك حصولك على أحدث نسخة من الموقع بعد قيام أعضاء الفريق بالتعديل عليها فلا تنسى أن تبدأ بهذا الأمر دائماً.</p>
+            <p dir="rtl">2- قم بفتح ملف index.html ستجد التالي:<br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/4/18.png'%}" alt="image" class="image"></a></div>
             <p></p>
-            <hr>
-            <p dir="rtl"><em dir="rtl">قم بعمل ما تم أيضاحة أعلاة فقط وبقية التفاصيل وكيف سنقوم بالعمل سيتم إضاحها في الدرس القادم</em></p>
+            <p dir="rtl">سيقوم كل واحد مننا بالإجابة على السؤال السابق ومن ثم يقوم بوضع سؤال جديد للشخص الذي يلية <strong dir="rtl">فكيف سنقوم بذلك؟</strong></p>
+            <p dir="rtl"><strong dir="rtl">قم بفتح ملف الـ index.html بإستخدام محرر الأكواد وإتبع الخطوات التالية:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/4/19.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl"><strong dir="rtl">ستجد الـ Object التالي:</strong></p>
+            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000; font-weight: bold">{</span>
+<span style="color: #000000">number</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">"1"</span><span style="color: #000000; font-weight: bold">,</span>
+<span style="color: #000000">lang</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">"en"</span><span style="color: #000000; font-weight: bold">,</span>
+<span style="color: #000000">answer</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">"Hey there, Let's start with the first question."</span><span style="color: #000000; font-weight: bold">,</span>
+<span style="color: #000000">question</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">"If you had one wish, what would you wish for?"</span><span style="color: #000000; font-weight: bold">,</span>
+<span style="color: #000000">image</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">"robot.gif"</span>
+<span style="color: #000000; font-weight: bold">},</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">قم بنسخة و لصقة ومن ثم قم بالتالي:</strong><br>
+               1- <strong dir="ltr">number</strong> رقم السؤال<br>
+               2- <strong dir="ltr">lang</strong> إستخدم en اذا كنت ستكتب بالإنجليزية او ar اذا كنت ستكتب بالعربية<br>
+               3- <strong dir="ltr">answer</strong> أكتب إجابتك عن السؤال السابق<br>
+               4- <strong dir="ltr">question</strong> أكتب سؤالك للشخص التالي<br>
+               5- <strong dir="ltr">image</strong> قم بوضع صورتك في مجلد images ومن ثم أكتب إسمها وصيغتها في حال لا تريد وضع صورة اترك منطقة إسم الصورة فارغ وسيتم إضافة الصورة الإفتراضية
+            </p>
+            <p dir="rtl"><strong dir="rtl">حيث يفترض أن يكون شكل الكود السابق كالتالي بعد تعديلك:</strong></p>
+            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">data</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">[</span>
+
+ <span style="color: #000000; font-weight: bold">{</span>
+   <span style="color: #000000">number</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">"1"</span><span style="color: #000000; font-weight: bold">,</span>
+   <span style="color: #000000">lang</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">"en"</span><span style="color: #000000; font-weight: bold">,</span>
+   <span style="color: #000000">answer</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">"Hey there, Let's start with the first question."</span><span style="color: #000000; font-weight: bold">,</span>
+   <span style="color: #000000">question</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">"If you had one wish, what would you wish for?"</span><span style="color: #000000; font-weight: bold">,</span>
+   <span style="color: #000000">image</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">"robot.gif"</span>
+ <span style="color: #000000; font-weight: bold">},</span>
+
+ <span style="color: #000000; font-weight: bold">{</span>
+   <span style="color: #000000">number</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">"2"</span><span style="color: #000000; font-weight: bold">,</span>
+   <span style="color: #000000">lang</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">"ar"</span><span style="color: #000000; font-weight: bold">,</span>
+   <span style="color: #000000">answer</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">"هنا جوابي عن السؤال السابق"</span><span style="color: #000000; font-weight: bold">,</span>
+   <span style="color: #000000">question</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">"هنا سؤالي للشخص التالي"</span><span style="color: #000000; font-weight: bold">,</span>
+   <span style="color: #000000">image</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">""</span>
+ <span style="color: #000000; font-weight: bold">},</span>
+
+<span style="color: #000000; font-weight: bold">];</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox" title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/4/20.png'%}" alt="image" class="image"></a></div>
+            <p></p>
+            <p dir="rtl">3- ستقوم بحفظ تعديلك على المستودع المحلي وستكتب رسالة الـ commit بإستخدام رقم السؤال الذي قمت بالإجابة عليه كالتالي:</p>
+            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">git</span> <span style="color: #000000">commit</span> <span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">m</span> <span style="color: #4e9a06">"Answer question 1"</span>
+</pre>
+            </div>
+            <p dir="rtl">4- قم برفع التعديل للمستودع البعيد على GitHub</p>
+            <p dir="rtl">5- في حال سبقك شخص أخر برفع الإجابة الخاصة بنفس السؤال عليك أن تقوم بتحديث ملفاتك والإجابة على السؤال الجديد وكذلك التعامل مع التعارض في الأكواد إن وجد ومن ثم إعادة رفع التعديل.</p>
+            <p dir="rtl">6- بإمكانك إعادة التطبيق أكثر من مرة بنفس الطريقة فالمرجوا هو أن تواجهك المشاكل وتعارض الأكواد حتى تستطيع تقوم بالتعامل معها ويتحقق الهدف من هذا الدرس.</p>
             <hr>
          </div>
       </div>
