@@ -39,18 +39,18 @@ $(function () {
 	var prev = $(".navigate").children().eq(0);
 	if (currentPageNumber === 1) {
 		prev.addClass('disabled');
-		next.attr('href', (currentPageNumber + 1) + '.html');
+		next.attr('href', '/frontend/' + currentPage + '/' + (currentPageNumber + 1) + '/');
 	} else if ((currentPageNumber === 15 && currentPage === "html_css") || (currentPageNumber === 16 && currentPage === "javascript") || (currentPageNumber === 5 && currentPage === "git") || (currentPageNumber === 11 && currentPage === "one_mac_project") || (currentPageNumber === 15 && currentPage === "facebook_project")) {
 		next.addClass('disabled');
 		prev.removeClass('disabled');
-		prev.attr('href', (currentPageNumber - 1) + '.html');
+		prev.attr('href', '/frontend/' + currentPage + '/' + (currentPageNumber - 1) + '/');
 	} else {
 		next.removeClass('disabled');
 		prev.removeClass('disabled');
-		next.attr('href', (currentPageNumber + 1) + '.html');
-		prev.attr('href', (currentPageNumber - 1) + '.html');
+		next.attr('href', '/frontend/' + currentPage + '/' + (currentPageNumber + 1) + '/');
+		prev.attr('href', '/frontend/' + currentPage + '/' + (currentPageNumber - 1) + '/');
 	}
-	if (!Number.isInteger(Number(path.split('/')[path.split('/').length - 1].split('.')[0]))) {
+	if (!Number.isInteger(Number(path.split('/')[path.split('/').length - 1]))) {
 		$(".container").addClass('fix');
 	}
 	//change the courses connector height dynamically
