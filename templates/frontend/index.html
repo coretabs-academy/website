@@ -7,6 +7,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Coretabs Academy</title>
+       <link rel="stylesheet" href="{% static 'css/contributors.css' %}">
       <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
       <style class="connectorStyle"></style>
@@ -112,17 +113,7 @@
 		  <a href="http://www.facebook.com/groups/ProgrammersUnion" class="facebook"></a>
       </div>
       <footer>
-           <div class="text">
-             Made with <img src="{% static 'images/heart.png'%}" alt="heart" width="20"> by
-           </div>
-           <div class="text">
-             <a href="http://alhakem.me/" target="_blank">Mohammed Al-Hakem
-               <span class="profile"><img src="{% static 'images/mohammed.png'%}" alt="Mohammed Al-Hakem's photo"></span>
-             </a>&nbsp; &amp; &nbsp;
-             <a href="https://www.behance.net/SalahGFX" target="_blank">Salah Eddine Lachkar
-               <span class="profile"><img src="{% static 'images/salah-eddine.png'%}" alt="Salah Eddine Lachkar's photo"></span>
-             </a>
-           </div>
+          <div class="text"> Made with <img src="{% static 'images/heart.png' %}" alt="heart"> by <a href="{% url 'contributors' %}" target="_blank"> Our Contributors</a> </div>
       </footer>
 	  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
       <script src="https://code.jquery.com/jquery-3.1.1.js"></script>

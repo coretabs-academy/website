@@ -1,171 +1,135 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
-{% load static i18n %}
+{% load static %}
 
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contributors</title>
+<link rel="stylesheet" href="{% static 'css/contributors.css' %}">
+<link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+<link href="https://fonts.googleapis.com/css?family=Cairo|Open+Sans" rel="stylesheet">
+</head>
 
-<html lang="ar" dir="rtl">
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Coretabs Academy</title>
-      <link rel="stylesheet" href="{% static 'css/style.css' %}">
-      <link rel="stylesheet" href="{% static 'css/custom.css' %}">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
-      <style class="connectorStyle"></style>
-   </head>
-   <body class="home">
-      <div class="navbar-brand">
-         <div>
-             {% trans "Academy" %}
-         </div>
-      </div>
-     <div class="login-brand">
-{#         {% if request.user.is_authenticated %}#}
-{##}
-{#             <form action="{% url "account_logout" %}" method="POST">#}
-{#                {% csrf_token %}#}
-{#                <input type="hidden" name="logout" value="value" />#}
-{#                <a id="logout" href="#" onclick="this.parentNode.submit()">{% trans "Logout" %}</a>#}
-{#             </form>#}
-{##}
-{#            <a href="{% url "account_settings" %}">#}
-{#                {% trans "Account" %}#}
-{#            </a>#}
-{#        {% else %}#}
-            <a id="signup" {% if signupform.errors  %} class="active" {% endif %}>
-                {% trans "Signup" %}
-            </a>
-            <form id="signup-panel" method="post" action="{% url 'home' %}" {% if signupform.errors  %} style="display: block" {% endif %}>
+<body>
+<nav> <a href="{% url 'home' %}" class="go-back">&#10094;</a>
+  <div id="logo"> Coretabs</div>
+</nav>
+<section>
+  <div class="container">
+    <h1>Contributors</h1>
+    <p> Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero. </p>
+  </div>
+</section>
+<main id="contributers"> 
+  
+  <!-- Start contributer block-->
+  <div class="awesome-person">
+    <div class="front"> 
+	  <img src="{% static 'images/contributors/alhakem.jpg' %}" alt=""> 
+	</div>
+    <div class="back">
+      <h2>Mohammed Al-Hakem</h2>
+      <p>Front-end Tutor</p>
+    </div>
+  </div>
+  
+  <!-- Start contributer block-->
+  <div class="awesome-person">
+    <div class="front"> 
+	  <img src="{% static 'images/contributors/yaser.png' %}" alt=""> 
+	</div>
+    <div class="back">
+      <h2>Yaser Al-Najjar</h2>
+      <p>Full-stack Tutor</p>
+    </div>
+  </div>
+	
+  <!-- Start contributer block-->
+  <div class="awesome-person">
+    <div class="front"> 
+	  <img src="{% static 'images/contributors/ahmed.jpg' %}" alt="">
+	</div>
+    <div class="back">
+      <h2>Ahmed Alrifai</h2>
+      <p>Web Developer loves every thing about programming , network and security</p>
+    </div>
+  </div>
+  
+  <!-- Start contributer block-->
+  <div class="awesome-person">
+    <div class="front"> 
+	  <img src="{% static 'images/contributors/temp3.png' %}" alt=""> 
+	</div>
+    <div class="back">
+      <h2>Mohammed Al-Hakem</h2>
+      <p>Vestibulum tortor quam, feugiat vitae, ultricies eget</p>
+    </div>
+  </div>
+	
+  <!-- Start contributer block-->
+  <div class="awesome-person">
+    <div class="front"> 
+	  <img src="{% static 'images/contributors/temp4.png' %}" alt=""> 
+	</div>
+    <div class="back">
+      <h2>Mohammed Al-Hakem</h2>
+      <p>Vestibulum tortor quam, feugiat vitae, ultricies eget</p>
+    </div>
+  </div>
+  
+  <!-- Start contributer block-->
+  <div class="awesome-person">
+    <div class="front"> 
+	  <img src="{% static 'images/contributors/temp5.png' %}" alt=""> 
+	</div>
+    <div class="back">
+      <h2>Mohammed Al-Hakem</h2>
+      <p>Vestibulum tortor quam, feugiat vitae, ultricies eget</p>
+    </div>
+  </div>
+	
+  <!-- Start contributer block-->
+  <div class="awesome-person">
+    <div class="front"> 
+	  <img src="{% static 'images/contributors/temp3.png' %}" alt=""> 
+	</div>
+    <div class="back">
+      <h2>Mohammed Al-Hakem</h2>
+      <p>Vestibulum tortor quam, feugiat vitae, ultricies eget</p>
+    </div>
+  </div>
+  
+  <!-- Start contributer block-->
+  <div class="awesome-person">
+    <div class="front"> 
+	  <img src="{% static 'images/contributors/temp7.png' %}" alt=""> 
+	</div>
+    <div class="back">
+      <h2>Mohammed Al-Hakem</h2>
+      <p>Vestibulum tortor quam, feugiat vitae, ultricies eget</p>
+    </div>
+  </div>
 
-                {% csrf_token %}
+  <!-- Start contributer block-->
+  <div class="awesome-person">
+    <div class="front"> 
+	  <img src="{% static 'images/contributors/temp.png' %}" alt=""> 
+	</div>
+    <div class="back">
+      <h2>Mohammed Al-Hakem</h2>
+      <p>Vestibulum tortor quam, feugiat vitae, ultricies eget</p>
+    </div>
+  </div>
+	
+  <!-- Dummy-div to fix flexbox empty space -->
+  <div class="dummy-div"> </div>
+</main>
+	
+<footer>
+  <div class="text"> Made with <img src="{% static 'images/heart.png' %}" alt="heart"> by <a href="{% url 'contributors' %}" target="_blank"> Our Contributors</a> </div>
+</footer>
 
-                <div class="errors"> {{ signupform.non_field_errors }} </div>
-
-                <div class="errors"> {{ signupform.username.errors }} </div>
-                <div>
-                    {{ signupform.username }}
-                </div>
-                <div class="errors"> {{ signupform.email.errors }} </div>
-                <div>
-                    {{ signupform.email }}
-                </div>
-                <div>
-                    <button type="submit">{% trans "Signup" %}</button>
-                </div>
-            </form>
-
-{#            <a id="login" {% if form.non_field_errors  %} class="active" {% endif %}>#}
-{#                {% trans "Login" %}#}
-{#            </a>#}
-{#            <form id="login-panel" method="post" action="{% url 'home' %}" {% if form.non_field_errors  %} style="display: block" {% endif %}>#}
-{##}
-{#                {% csrf_token %}#}
-{##}
-{#                <div class="errors"> {{ form.non_field_errors }} </div>#}
-{##}
-{#                <div>#}
-{#                    {{ form.username }}#}
-{#                </div>#}
-{##}
-{#                <div>#}
-{#                    {{ form.password }}#}
-{#                </div>#}
-{##}
-{#                <div id="remember">#}
-{#                    {{ form.remember }}#}
-{#                    {{ form.remember.label_tag }}#}
-{#                </div>#}
-{#                <div>#}
-{#                    <button type="submit">{% trans "Login" %}</button>#}
-{#                </div>#}
-{#                <div>#}
-{#                    <a href="{% url 'account_password_reset' %}">{% trans "Forgot Your Password?" %}</a>#}
-{#                </div>#}
-{#            </form>#}
-
-{#        {% endif %}#}
-
-
-        <form id="language-selector" action="{% url 'set_language' %}" method="post">
-            {% csrf_token %}
-            <input name="next" type="hidden" value="{{ redirect_to }}" />
-            <select name="language" class="select select-hidden">
-                {% get_current_language as LANGUAGE_CODE %}
-                {% get_available_languages as LANGUAGES %}
-                {% for lang in LANGUAGES %}
-                    <option value="{{ lang.0 }}" {% if lang.0 == LANGUAGE_CODE %} selected="selected"{% endif %}>
-                        {{ lang.1 }}
-                    </option>
-                {% endfor %}
-            </select>
-        </form>
-
-     </div>
-
-      <div class="background-image">
-
-      {% if messages %}
-          <div style="width: 100%">
-             {% for message in messages %}
-                 <p style="width: 100%;  background-color: #4b7bec; color: white"> {{ message }}</p>
-             {% endfor %}
-         </div>
-      {% endif %}
-
-        <h1>{% trans 'Web Development' %}</h1>
-        <p>
-        {% blocktrans %}
-			Familiarity with programming is indispensable today. Learning programming is one of the most rich and useful things you can do.
-			{% endblocktrans %}
-        </p>
-        <a class="link" href="#main">{% trans 'Courses' %}</a>
-         <div class="course animated infinite bounce">
-            <i class="fas fa-chevron-down"></i>
-            <a href="#main"></a>
-         </div>
-      </div>
-      <main id="main" class="beauty-box">
-         <h1 class="title">{% trans 'Courses' %}</h1>
-         <div class="tracks">
-            <div class="track">
-                <a href="{% url 'frontend' %}">
-                    <img src="{% static 'images/frontend.jpg' %}" alt="Front End">
-                    <h2>{% trans 'Front End' %}</h2>
-                </a>
-            </div>
-            <div class="track">
-                <a href="{% url 'fullstack' %}">
-                    <img src="{% static 'images/fullstack.jpg' %}" alt="Full Stack">
-                    <h2>{% trans 'Full Stack' %}</h2>
-                </a>
-            </div>
-         </div>
-      </main>
-      <div class="about">
-         <h1>{% trans 'About website' %}</h1>
-         <p>
-             {% blocktrans %}
-                This site has been placed as a reference to the lessons and workshops that were developed in the initiative of the million arabic coders , made sure that the lessons are simplified and targeted mainly those who have zero experience in this area if you not part of the program million arabic coders  You can take advantage of these lessons and to put Your Questions or Inquiries Join our Facebook page.
-             {% endblocktrans %}
-         </p>
-		  <a href="http://www.facebook.com/groups/ProgrammersUnion" class="facebook"></a>
-      </div>
-      <footer>
-           <div class="text">
-             Made with <img src="{% static 'images/heart.png'%}" alt="heart" width="20"> by
-           </div>
-           <div class="text">
-             <a href="http://alhakem.me/" target="_blank">Mohammed Al-Hakem
-               <span class="profile"><img src="{% static 'images/mohammed.png'%}" alt="Mohammed Al-Hakem's photo"></span>
-             </a>&nbsp; &amp; &nbsp;
-             <a href="https://www.behance.net/SalahGFX" target="_blank">Salah Eddine Lachkar
-               <span class="profile"><img src="{% static 'images/salah-eddine.png'%}" alt="Salah Eddine Lachkar's photo"></span>
-             </a>
-           </div>
-      </footer>
-	  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-      <script src="{% static 'js/main.js' %}"></script>
-      <script src="{% static 'js/site.js' %}"></script>
-   </body>
+</body>
 </html>

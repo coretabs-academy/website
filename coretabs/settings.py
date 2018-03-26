@@ -113,7 +113,7 @@ LANGUAGE_CODE = 'ar'
 
 LANGUAGES = [
     ('ar', _('Arabic')),
-    ('en-us', _('English'))
+    # ('en-us', _('English'))
 ]
 
 TIME_ZONE = 'UTC'
