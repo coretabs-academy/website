@@ -30,6 +30,7 @@ urlpatterns = [
     path('frontend/<category>/', views.category_view, name='category'),
     path('frontend/<category>/<int:id>/', views.tutorial_view, name='tutorial'),
     path('frontend/<category>/<projects>/',views.project_view, name='projects'),
-    path('frontend/<category>/<projects>/<int:id>/',views.project_tutorial_view, name='project')
+    path('frontend/<category>/<projects>/<int:id>/',views.project_tutorial_view, name='project'),
+    path('contributors/', views.contributors, name='contributors'),
 ]
 
