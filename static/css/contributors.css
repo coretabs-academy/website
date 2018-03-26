@@ -122,9 +122,9 @@ Main Style
 .awesome-person h2::after{
 	content:"";
 	display: block;
-	width: 80px;
+	width: 70px;
 	height: 4px;
-	margin: 15px auto;
+	margin: 10px auto 15px;
 	background: #2bcbba;
 }
 
