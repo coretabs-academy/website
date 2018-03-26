@@ -127,7 +127,7 @@ msgstr "تم ارسال ايميل التأكيد الى {email}"
 
 #: account/views.py:59
 msgid "Thank you for registering"
-msgstr ""
+msgstr "شكرا على التسجيل"
 
 #~ msgid "Timezone"
 #~ msgstr "المنطقة الزمنية"
