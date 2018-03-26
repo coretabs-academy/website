@@ -201,6 +201,30 @@ Selection Style
 	color: #333;
 }
 
+
+/*=====================================
+Scrollbar Style
+=======================================*/
+
+::-webkit-scrollbar {
+	background: #ccc;
+	width: 8px;
+	height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #ccc;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #ccc;
+}
+
+::-webkit-scrollbar-thumb:active {
+	background: #ccc;
+}
+
+
 /*=====================================
 Media Style
 =======================================*/
