@@ -1,17 +1,19 @@
 ﻿<!DOCTYPE html>
 
+{% load static %}
+
 <html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contributors</title>
-<link rel="stylesheet" href="../static/css/contributors.css">
-<link rel="stylesheet" href="../static/css/normalize.css">
+<link rel="stylesheet" href="{% static 'css/contributors.css' %}">
+<link rel="stylesheet" href="{% static 'css/normalize.css' %}">
 <link href="https://fonts.googleapis.com/css?family=Cairo|Open+Sans" rel="stylesheet">
 </head>
 
 <body>
-<nav> <a href="index.html" class="go-back">&#10094;</a>
+<nav> <a href="{% url 'home' %}" class="go-back">&#10094;</a>
   <div id="logo"> Coretabs</div>
 </nav>
 <section id="intro">
@@ -25,7 +27,7 @@
   <!-- Start contributer block-->
   <div class="awesome-person">
     <div class="front"> 
-	  <img src="../static/images/contributors/alhakem.jpg" alt=""> 
+	  <img src="{% static 'images/contributors/alhakem.jpg' %}" alt=""> 
 	</div>
     <div class="back">
       <h2>Mohammed Al-Hakem</h2>
@@ -36,7 +38,7 @@
   <!-- Start contributer block-->
   <div class="awesome-person">
     <div class="front"> 
-	  <img src="../static/images/contributors/yaser.png" alt=""> 
+	  <img src="{% static 'images/contributors/yaser.png' %}" alt=""> 
 	</div>
     <div class="back">
       <h2>Mohammed Al-Hakem</h2>
@@ -47,18 +49,18 @@
   <!-- Start contributer block-->
   <div class="awesome-person">
     <div class="front"> 
-	  <img src="../static/images/contributors/temp2.png" alt=""> 
+	  <img src="{% static 'images/contributors/ahmed.jpg' %}" alt="">
 	</div>
     <div class="back">
-      <h2>Mohammed Al-Hakem</h2>
-      <p>Vestibulum tortor quam, feugiat vitae, ultricies eget</p>
+      <h2>Ahmed Alrifai</h2>
+      <p>Web Developer loves every thing about programming , network and security</p>
     </div>
   </div>
   
   <!-- Start contributer block-->
   <div class="awesome-person">
     <div class="front"> 
-	  <img src="../static/images/contributors/temp3.png" alt=""> 
+	  <img src="{% static 'images/contributors/temp3.png' %}" alt=""> 
 	</div>
     <div class="back">
       <h2>Mohammed Al-Hakem</h2>
@@ -69,7 +71,7 @@
   <!-- Start contributer block-->
   <div class="awesome-person">
     <div class="front"> 
-	  <img src="../static/images/contributors/temp4.png" alt=""> 
+	  <img src="{% static 'images/contributors/temp4.png' %}" alt=""> 
 	</div>
     <div class="back">
       <h2>Mohammed Al-Hakem</h2>
@@ -80,7 +82,7 @@
   <!-- Start contributer block-->
   <div class="awesome-person">
     <div class="front"> 
-	  <img src="../static/images/contributors/temp5.png" alt=""> 
+	  <img src="{% static 'images/contributors/temp5.png' %}" alt=""> 
 	</div>
     <div class="back">
       <h2>Mohammed Al-Hakem</h2>
@@ -91,7 +93,7 @@
   <!-- Start contributer block-->
   <div class="awesome-person">
     <div class="front"> 
-	  <img src="../static/images/contributors/temp3.png" alt=""> 
+	  <img src="{% static 'images/contributors/temp3.png' %}" alt=""> 
 	</div>
     <div class="back">
       <h2>Mohammed Al-Hakem</h2>
@@ -102,7 +104,7 @@
   <!-- Start contributer block-->
   <div class="awesome-person">
     <div class="front"> 
-	  <img src="../static/images/contributors/temp7.png" alt=""> 
+	  <img src="{% static 'images/contributors/temp7.png' %}" alt=""> 
 	</div>
     <div class="back">
       <h2>Mohammed Al-Hakem</h2>
@@ -113,7 +115,7 @@
   <!-- Start contributer block-->
   <div class="awesome-person">
     <div class="front"> 
-	  <img src="../static/images/contributors/temp.png" alt=""> 
+	  <img src="{% static 'images/contributors/temp.png' %}" alt=""> 
 	</div>
     <div class="back">
       <h2>Mohammed Al-Hakem</h2>
@@ -126,7 +128,7 @@
 </main>
 	
 <footer>
-  <div class="text"> Made with <img src="../static/images/heart.png" alt="heart"> by <a href="#" target="_blank"> Our Contributors</a> </div>
+  <div class="text"> Made with <img src="{% static 'images/heart.png' %}" alt="heart"> by <a href="{% url 'contributors' %}" target="_blank"> Our Contributors</a> </div>
 </footer>
 
 </body>
