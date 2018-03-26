@@ -30,6 +30,8 @@ def project_tutorial_view(request, category=None, projects=None, id=None):
     return render(request, f'frontend/{category}/{projects}/{id}.html')
 
 
+def contributors(request):
+    return render(request, "contributors.html")
 
 
 '''

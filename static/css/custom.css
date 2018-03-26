@@ -258,13 +258,3 @@
         margin: 2.5% 5%;
     }
 }
-
-@media screen and (max-width: 400px) {
-
-    .login-brand {
-
-        top: 50px;
-
-    }
-
-}
