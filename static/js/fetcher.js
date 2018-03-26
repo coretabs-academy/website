@@ -68,8 +68,14 @@ $(function() {
             markdown = markdown.replace(link, "<a href='$1' target='_blank'>$1</a>");
             var html = converter.makeHtml(markdown);
             $(".cooked").html(html);
+
+            $(".cooked iframe.youtube").each(function () {
+                var src = $(this).attr("src");
+                src = src.replace("http://", "//");
+                $(this).attr("src", src);
+            });
             $(".cooked img").each(function () {
-                var src = $(this).attr("src")
+                var src = $(this).attr("src");
                 $(this).attr("src", topicsJSON.host + id + "/" + src);
             });
 

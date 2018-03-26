@@ -1,23 +1,15 @@
-from __future__ import unicode_literals
-
 import re
 
 from django import forms
 from django.contrib import auth
 from django.contrib.auth import get_user_model
-from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
-from account.conf import settings
-from account.hooks import hookset
-from account.models import EmailAddress
-from account.utils import get_user_lookup_kwargs
+from account.hooks import get_user_credentials
 
-try:
-    from collections import OrderedDict
-except ImportError:
-    OrderedDict = None
+from collections import OrderedDict
 
+User = get_user_model()
 
 alnum_re = re.compile(r"^\w+$")
 
@@ -26,16 +18,7 @@ class PasswordField(forms.CharField):
 
     def __init__(self, *args, **kwargs):
         kwargs.setdefault("widget", forms.PasswordInput(render_value=False))
-        self.strip = kwargs.pop("strip", True)
         super(PasswordField, self).__init__(*args, **kwargs)
-
-    def to_python(self, value):
-        if value in self.empty_values:
-            return ""
-        value = force_text(value)
-        if self.strip:
-            value = value.strip()
-        return value
 
 
 class SignupForm(forms.Form):
@@ -48,53 +31,53 @@ class SignupForm(forms.Form):
     )
     email = forms.EmailField(
         label=_("Email"),
-        widget=forms.TextInput(), required=True
+        widget=forms.TextInput(),
+        required=True
     )
+    #TODO: change required later
     password = PasswordField(
         label=_("Password"),
-        strip=settings.ACCOUNT_PASSWORD_STRIP,
+        required=False,
     )
     password_confirm = PasswordField(
         label=_("Password (again)"),
-        strip=settings.ACCOUNT_PASSWORD_STRIP,
-    )
-    code = forms.CharField(
-        max_length=64,
         required=False,
-        widget=forms.HiddenInput()
     )
 
     def clean_username(self):
         if not alnum_re.search(self.cleaned_data["username"]):
             raise forms.ValidationError(_("Usernames can only contain letters, numbers and underscores."))
-        User = get_user_model()
-        lookup_kwargs = get_user_lookup_kwargs({
-            "{username}__iexact": self.cleaned_data["username"]
-        })
-        qs = User.objects.filter(**lookup_kwargs)
-        if not qs.exists():
-            return self.cleaned_data["username"]
+
+        username = self.cleaned_data["username"]
+        is_taken = User.objects.filter(username=username).exists()
+
+        if not is_taken:
+            return username
         raise forms.ValidationError(_("This username is already taken. Please choose another."))
 
     def clean_email(self):
-        value = self.cleaned_data["email"]
-        qs = EmailAddress.objects.filter(email__iexact=value)
-        if not qs.exists() or not settings.ACCOUNT_EMAIL_UNIQUE:
-            return value
+        email = self.cleaned_data["email"]
+        is_taken = User.objects.filter(email=email).exists()
+        if not is_taken:
+            return email
         raise forms.ValidationError(_("A user is registered with this email address."))
 
-    def clean(self):
-        if "password" in self.cleaned_data and "password_confirm" in self.cleaned_data:
-            if self.cleaned_data["password"] != self.cleaned_data["password_confirm"]:
-                raise forms.ValidationError(_("You must type the same password each time."))
-        return self.cleaned_data
-
+    # TODO: change this too
+    # def clean(self):
+    #     if "password" in self.cleaned_data and "password_confirm" in self.cleaned_data:
+    #         if self.cleaned_data["password"] != self.cleaned_data["password_confirm"]:
+    #             raise forms.ValidationError(_("You must type the same password each time."))
+    #     return self.cleaned_data
+    def __init__(self, *args, **kwargs):
+        super(SignupForm, self).__init__(*args, **kwargs)
+        for field in self.fields:
+            self.fields[field].widget.attrs['placeholder'] = _('Enter your') + ' {}'.format(self.fields[field].label)
 
 class LoginForm(forms.Form):
 
     password = PasswordField(
         label=_("Password"),
-        strip=settings.ACCOUNT_PASSWORD_STRIP,
+        required=True,
     )
     remember = forms.BooleanField(
         label=_("Remember Me"),
@@ -116,7 +99,7 @@ class LoginForm(forms.Form):
         return self.cleaned_data
 
     def user_credentials(self):
-        return hookset.get_user_credentials(self, self.identifier_field)
+        return get_user_credentials(self, self.identifier_field)
 
 
 class LoginUsernameForm(LoginForm):
@@ -188,10 +171,11 @@ class PasswordResetForm(forms.Form):
     email = forms.EmailField(label=_("Email"), required=True)
 
     def clean_email(self):
-        value = self.cleaned_data["email"]
-        if not EmailAddress.objects.filter(email__iexact=value).exists():
-            raise forms.ValidationError(_("Email address can not be found."))
-        return value
+        email = self.cleaned_data["email"]
+        exists = User.objects.filter(email=email).exists
+        if not exists:
+                raise forms.ValidationError(_("Email address can not be found."))
+        return email
 
 
 class PasswordResetTokenForm(forms.Form):
@@ -215,17 +199,14 @@ class PasswordResetTokenForm(forms.Form):
 class SettingsForm(forms.Form):
 
     email = forms.EmailField(label=_("Email"), required=True)
-    timezone = forms.ChoiceField(
-        label=_("Timezone"),
-        choices=[("", "---------")] + settings.ACCOUNT_TIMEZONES,
-        required=False
-    )
 
     def clean_email(self):
         value = self.cleaned_data["email"]
         if self.initial.get("email") == value:
             return value
-        qs = EmailAddress.objects.filter(email__iexact=value)
-        if not qs.exists() or not settings.ACCOUNT_EMAIL_UNIQUE:
-            return value
+
+        email = self.cleaned_data["email"]
+        is_taken = User.objects.filter(email=email).exists
+        if not is_taken:
+            return email
         raise forms.ValidationError(_("A user is registered with this email address."))

@@ -1,0 +1,7 @@
+{% load i18n %}{% blocktrans %}Dear {{ user }}
+Thank you for registering.
+
+We are HEAVILY developing Coretabs Academy.
+Next release is coming soon and will have AWESOME features... stay tuned !
+
+Coretabs Team.{% endblocktrans %}

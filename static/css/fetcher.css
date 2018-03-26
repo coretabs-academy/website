@@ -41,7 +41,7 @@ aside a.category:hover {
         background: none;
     }
 
-    iframe.youtube {
+    .cooked iframe.youtube {
         width: 100%;
     }
 }

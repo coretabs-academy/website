@@ -1,14 +1,17 @@
 from django.http import Http404
 from django.shortcuts import render
 
-from account.views import LoginView
+from account.views import SignupView
 
 
-class HomeView(LoginView):
+class HomeView(SignupView):
     template_name='home.html'
 
     def get(self, *args, **kwargs):
-        return super(LoginView, self).get(*args, **kwargs)
+        return super(SignupView, self).get(*args, **kwargs)
+
+    def post(self, *args, **kwargs):
+        return super(SignupView, self).post(*args, **kwargs)
 
 
 def category_view(request, category=None):
@@ -27,6 +30,8 @@ def project_tutorial_view(request, category=None, projects=None, id=None):
     return render(request, f'frontend/{category}/{projects}/{id}.html')
 
 
+def contributors(request):
+    return render(request, "contributors.html")
 
 
 '''
