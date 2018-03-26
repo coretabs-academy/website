@@ -20,65 +20,70 @@
          </div>
       </div>
      <div class="login-brand">
-         {% if request.user.is_authenticated %}
-
-             <form action="{% url "account_logout" %}" method="POST">
-                {% csrf_token %}
-                <input type="hidden" name="logout" value="value" />
-                <a id="logout" href="#" onclick="this.parentNode.submit()">{% trans "Logout" %}</a>
-             </form>
-
-            <a href="{% url "account_settings" %}">
-                {% trans "Account" %}
-            </a>
-        {% else %}
-            <a id="signup" {% if form.non_field_errors  %} class="active" {% endif %}>
+{#         {% if request.user.is_authenticated %}#}
+{##}
+{#             <form action="{% url "account_logout" %}" method="POST">#}
+{#                {% csrf_token %}#}
+{#                <input type="hidden" name="logout" value="value" />#}
+{#                <a id="logout" href="#" onclick="this.parentNode.submit()">{% trans "Logout" %}</a>#}
+{#             </form>#}
+{##}
+{#            <a href="{% url "account_settings" %}">#}
+{#                {% trans "Account" %}#}
+{#            </a>#}
+{#        {% else %}#}
+            <a id="signup" {% if signupform.errors  %} class="active" {% endif %}>
                 {% trans "Signup" %}
             </a>
-            <form id="signup-panel" method="post" action="{% url 'home' %}" {% if form.non_field_errors  %} style="display: block" {% endif %}>
+            <form id="signup-panel" method="post" action="{% url 'home' %}" {% if signupform.errors  %} style="display: block" {% endif %}>
 
                 {% csrf_token %}
 
-                <div class="errors"> {{ form.non_field_errors }} </div>
+                <div class="errors"> {{ signupform.non_field_errors }} </div>
 
+                <div class="errors"> {{ signupform.username.errors }} </div>
                 <div>
-                    {{ form.username }}
+                    {{ signupform.username }}
+                </div>
+                <div class="errors"> {{ signupform.email.errors }} </div>
+                <div>
+                    {{ signupform.email }}
                 </div>
                 <div>
                     <button type="submit">{% trans "Signup" %}</button>
                 </div>
             </form>
-            <!--
-            <a id="login" {% if form.non_field_errors  %} class="active" {% endif %}>
-                {% trans "Login" %}
-            </a>
-            <form id="login-panel" method="post" action="{% url 'home' %}" {% if form.non_field_errors  %} style="display: block" {% endif %}>
 
-                {% csrf_token %}
+{#            <a id="login" {% if form.non_field_errors  %} class="active" {% endif %}>#}
+{#                {% trans "Login" %}#}
+{#            </a>#}
+{#            <form id="login-panel" method="post" action="{% url 'home' %}" {% if form.non_field_errors  %} style="display: block" {% endif %}>#}
+{##}
+{#                {% csrf_token %}#}
+{##}
+{#                <div class="errors"> {{ form.non_field_errors }} </div>#}
+{##}
+{#                <div>#}
+{#                    {{ form.username }}#}
+{#                </div>#}
+{##}
+{#                <div>#}
+{#                    {{ form.password }}#}
+{#                </div>#}
+{##}
+{#                <div id="remember">#}
+{#                    {{ form.remember }}#}
+{#                    {{ form.remember.label_tag }}#}
+{#                </div>#}
+{#                <div>#}
+{#                    <button type="submit">{% trans "Login" %}</button>#}
+{#                </div>#}
+{#                <div>#}
+{#                    <a href="{% url 'account_password_reset' %}">{% trans "Forgot Your Password?" %}</a>#}
+{#                </div>#}
+{#            </form>#}
 
-                <div class="errors"> {{ form.non_field_errors }} </div>
-
-                <div>
-                    {{ form.username }}
-                </div>
-
-                <div>
-                    {{ form.password }}
-                </div>
-
-                <div id="remember">
-                    {{ form.remember }}
-                    {{ form.remember.label_tag }}
-                </div>
-                <div>
-                    <button type="submit">{% trans "Login" %}</button>
-                </div>
-                <div>
-                    <a href="{% url 'account_password_reset' %}">{% trans "Forgot Your Password?" %}</a>
-                </div>
-            </form>
-            -->
-        {% endif %}
+{#        {% endif %}#}
 
 
         <form id="language-selector" action="{% url 'set_language' %}" method="post">
@@ -94,8 +99,19 @@
                 {% endfor %}
             </select>
         </form>
+
      </div>
+
       <div class="background-image">
+
+      {% if messages %}
+          <div style="width: 100%">
+             {% for message in messages %}
+                 <p style="width: 100%;  background-color: #4b7bec; color: white"> {{ message }}</p>
+             {% endfor %}
+         </div>
+      {% endif %}
+
         <h1>{% trans 'Web Development' %}</h1>
         <p>
         {% blocktrans %}
