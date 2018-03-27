@@ -9,7 +9,9 @@
 		<link rel="stylesheet" href="{% static 'css/style.css' %}">
         <link rel="stylesheet" id="animate" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
 		<link rel="stylesheet" href="{% static 'css/fetcher.css' %}">
-		<style class="connectorStyle"></style>
+        <script src="{% static 'js/jquery-3.3.1.min.js'%}"></script>
+        <link rel="stylesheet" href="{% static 'css/github.min.css'%}">
+        <script src="{% static 'js/highlight.pack.js'%}"></script>
 	</head>
 	<body class="home">
 		<div id="navbar">
@@ -56,9 +58,8 @@
 			</aside>
 		</div>
         <footer>
-          <div class="text"> Made with <img src="{% static 'images/heart.png' %}" alt="heart"> by <a href="{% url 'contributors' %}" target="_blank"> Our Contributors</a> </div>
-      </footer>
-        <script src="{% static 'js/jquery-3.3.1.min.js'%}"></script>
+		    <div class="text"> Made with <span class="heart">&#10084;</span> by <a href="{% url 'contributors' %}"> Our Contributors</a>  </div>
+        </footer>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.min.js"></script>
         {% load static%}
         <script src="{% static 'js/fetcher.js' %}"></script>
