@@ -1,5 +1,5 @@
 from django.http import Http404
-from django.shortoccurmport render, redirect
+from django.shortcuts import render, redirect
 from django.template import TemplateDoesNotExist
 
 from account.views import SignupView
