@@ -11,11 +11,12 @@
         <script src="{% static 'js/jquery-3.3.1.min.js'%}"></script>
         <link rel="stylesheet" href="{% static 'css/github.min.css'%}">
         <script src="{% static 'js/highlight.pack.js'%}"></script>
+				<style class="connectorStyle"></style>
 	</head>
 	<body id="fetcher" class="home upper-badding">
-		
-			
-		<div class="inner-nav"> 
+
+
+		<div class="inner-nav">
 		<a href="{% url 'fullstack' %}" class="go-back">&#10094;</a>
             <div id="logo"><a href="{% url 'home' %}">{% trans "Academy" %}</a></div>
 			<div class="icon-container hidden">
@@ -28,18 +29,18 @@
             <div class="navbar-nav">
             </div>
 		</div>
-			
+
 
 	   <div class="about">
          <h1>{% trans 'Full Stack' %}</h1>
          <p>
              {% blocktrans %}english fullstack description{% endblocktrans %}
          </p>
-		 
+
       </div>
-		
-		
-		
+
+
+
         <main id="main" class="beauty-box fix-upper-padding">
             <div class="courses_container">
                 Loading... Please Wait
@@ -52,7 +53,7 @@
 
 			</aside>
 		</div>
-        
+
         <footer>
 		    <div class="text"> Made with <span class="heart">&#10084;</span> by <a href="{% url 'contributors' %}"> Our Contributors</a>  </div>
         </footer>
