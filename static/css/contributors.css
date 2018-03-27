@@ -27,9 +27,6 @@ nav{
 	height: 60px;
 	display: flex;
 	align-items: center;
-  	position: fixed;
-	top: 0;
-	z-index: 99999;
 }
 #logo{
 	width: auto;
@@ -69,8 +66,8 @@ section{
 	width: 100%;
 	margin: 0 auto;
 	text-align: center;
-	padding-top: 60px;
 } 
+
 section h1{
 	margin: 0;
 	color: #333;
@@ -97,7 +94,7 @@ Main Style
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
- 	margin-bottom: 60px;
+
 }
 .awesome-person{
 	min-width: 250px;
@@ -181,13 +178,22 @@ Main Style
 
 .join-team{
 	margin-bottom: 20px;
+	padding-top: 0px;
 }
-.join-team a{
-	padding: 10px 35px;
+
+.cont-container a{
+	display: block;
+	max-width: 180px;
+	height: 55px;
+	margin: 25px auto 0;
+	line-height: 55px;
 	background: #77239b;
 	color: #fff;
 	text-decoration: none;
 	font-size: 1.3em;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
 }
 
 
