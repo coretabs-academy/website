@@ -54,33 +54,30 @@
             <img class="image" src="{% static 'images/html_css/10/2.png'%}">
             <p></p>
             <p dir="rtl">لاحظ قمنا بتعريف الجدول بوسم <code dir="ltr">table</code> كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;table&gt;</span>
-    <span style="color: #8f5902; font-style: italic">&lt;!--تعريف الجدول--&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;/table&gt;</span>
-</pre>
-            </div>
+            <pre>
+<code>&lt;table&gt;
+  &lt;!--تعريف الجدول--&gt;
+&lt;/table&gt;</code>
+            </pre>
             <p dir="rtl">ثم قمت بعمل الصف الأول بوسم <code dir="ltr">tr</code> كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;table&gt;</span>
-    <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
-        <span style="color: #8f5902; font-style: italic">&lt;!--تعريف صف--&gt;</span>
-    <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;/table&gt;</span>
-</pre>
-            </div>
+            <pre>
+<code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;!--تعريف صف--&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code>
+            </pre>
             <p dir="rtl">ثم قمت بعمل كل خلية بداخل الجدول بالوسم <code dir="ltr">td</code> كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;table</span> <span style="color: #c4a000">border=</span><span style="color: #4e9a06">“1”</span><span style="color: #204a87; font-weight: bold">&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>Cell 1<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-      <span style="color: #8f5902; font-style: italic">&lt;!--الخلية الأولى في الصف--&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>Cell 2<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-      <span style="color: #8f5902; font-style: italic">&lt;!--الخلية الثانية في الصف--&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;/table&gt;</span>
-</pre>
-            </div>
+            <pre>
+<code>&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Cell 1&lt;/td&gt;
+    &lt;!--الخلية الأولى في الصف--&gt;
+    &lt;td&gt;Cell 2&lt;/td&gt;
+    &lt;!--الخلية الثانية في الصف--&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code>
+            </pre>
             <p dir="rtl">اذا ما قمنا به في الكود أعلاة هو تعريف جدول يحتوي على صف واحد وبداخل هذا الصف يوجد خليتين كما هو موضح في الصورة أعلاة.</p>
             <hr>
             <h4 dir="rtl">لنقوم بعمل الجدول التالي:</h4>
@@ -88,80 +85,77 @@
             <img class="image" src="{% static 'images/html_css/10/3.png'%}">
             <p></p>
             <p dir="rtl">نحتاج إلى أن نقوم بتعريف الجدول ومن ثم تعريف ثلاثة صفوف كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;table</span> <span style="color: #c4a000">border=</span><span style="color: #4e9a06">“1”</span><span style="color: #204a87; font-weight: bold">&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
-      <span style="color: #8f5902; font-style: italic">&lt;!--الصف الأول--&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
-      <span style="color: #8f5902; font-style: italic">&lt;!--الصف الثاني--&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
-      <span style="color: #8f5902; font-style: italic">&lt;!--الصف الثالث--&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;/table&gt;</span>
-</pre>
-            </div>
+            <pre>
+<code>&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;!--الصف الأول--&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;!--الصف الثاني--&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;!--الصف الثالث--&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code>
+            </pre>
             <p dir="rtl">كما نلاحظ لدينا في كل صف ثلاث خلايا اذا لنقوم بإضافتها كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;table</span> <span style="color: #c4a000">border=</span><span style="color: #4e9a06">“1”</span><span style="color: #204a87; font-weight: bold">&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>
-         <span style="color: #8f5902; font-style: italic">&lt;!--الخلية الأولى بالصف الأول--&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>
-         <span style="color: #8f5902; font-style: italic">&lt;!--الخلية الثانية بالصف الأول--&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>
-         <span style="color: #8f5902; font-style: italic">&lt;!--الخلية الثالثة بالصف الأول--&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>
-         <span style="color: #8f5902; font-style: italic">&lt;!--الخلية الأولى بالصف الثاني--&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>
-         <span style="color: #8f5902; font-style: italic">&lt;!--الخلية الثانية بالصف الثاني--&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>
-         <span style="color: #8f5902; font-style: italic">&lt;!--الخلية الثالثة بالصف الثاني--&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>
-         <span style="color: #8f5902; font-style: italic">&lt;!--الخلية الأولى بالصف الثالث--&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>
-         <span style="color: #8f5902; font-style: italic">&lt;!--الخلية الثانية بالصف الثالث--&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>
-         <span style="color: #8f5902; font-style: italic">&lt;!--الخلية الثالثة بالصف الثالث--&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;/table&gt;</span>
-</pre>
-            </div>
+            <pre>
+<code>&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;!--الخلية الأولى بالصف الأول--&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;!--الخلية الثانية بالصف الأول--&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;!--الخلية الثالثة بالصف الأول--&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;!--الخلية الأولى بالصف الثاني--&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;!--الخلية الثانية بالصف الثاني--&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;!--الخلية الثالثة بالصف الثاني--&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;!--الخلية الأولى بالصف الثالث--&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;!--الخلية الثانية بالصف الثالث--&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;!--الخلية الثالثة بالصف الثالث--&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code>
+            </pre>
             <p dir="rtl">لنقم الأن بإضافة المحتوى الخاص بكل خلية كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;table</span> <span style="color: #c4a000">border=</span><span style="color: #4e9a06">“1”</span><span style="color: #204a87; font-weight: bold">&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>Time<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>Sunday<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>Monday<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>12:00 pm<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>class 1<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>class 2<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>14:00 pm<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>class 3<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>class 4<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;/table&gt;</span>
-</pre>
-            </div>
+            <pre>
+<code>&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Time&lt;/td&gt;
+    &lt;td&gt;Sunday&lt;/td&gt;
+    &lt;td&gt;Monday&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;12:00 pm&lt;/td&gt;
+    &lt;td&gt;class 1&lt;/td&gt;
+    &lt;td&gt;class 2&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;14:00 pm&lt;/td&gt;
+    &lt;td&gt;class 3&lt;/td&gt;
+    &lt;td&gt;class 4&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
             <img class="image" src="{% static 'images/html_css/10/4.png'%}">
             <p></p>
@@ -174,25 +168,24 @@
                <img src="{% static 'images/html_css/10/6.png'%}" alt="image" width="257" height="153">
             </p>
             <p dir="rtl">لنقم بعمل الجدول كما قمنا سابقاً ولكن هذه المرة الصف الثالث سيحتوي على خليتين فقط كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;table</span> <span style="color: #c4a000">border=</span><span style="color: #4e9a06">“1”</span><span style="color: #204a87; font-weight: bold">&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>Time<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>Sunday<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>Monday<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>12:00 pm<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>class 1<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>class 2<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>14:00 pm<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>Lunch time<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;/table&gt;</span>
-</pre>
-            </div>
+            <pre>
+<code>&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Time&lt;/td&gt;
+    &lt;td&gt;Sunday&lt;/td&gt;
+    &lt;td&gt;Monday&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;12:00 pm&lt;/td&gt;
+    &lt;td&gt;class 1&lt;/td&gt;
+    &lt;td&gt;class 2&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;14:00 pm&lt;/td&gt;
+    &lt;td&gt;Lunch time&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
             <img class="image" src="{% static 'images/html_css/10/7.png'%}">
             <p></p>
@@ -207,81 +200,78 @@
             </p>
             <p dir="rtl">للقيام بهذا نستخدم <code dir="ltr">colspan attribute</code> لنقم بتجربة ذلك على مثالنا السابق ولنرى اذا ما كنا سنحصل على النتيجة التي أردناها.</p>
             <p dir="rtl">للقيام بذلك سنحتاج إلى أن نقوم بطلب دمج خليتين بإستخدام <code dir="ltr">colspan="2"</code> في وسم الخلية التي نرغب بتطبيق ذلك عليها وفي حالتنا نريد تطبيق ذلك على الخلية الثانية في الصف الثالث كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;table</span> <span style="color: #c4a000">border=</span><span style="color: #4e9a06">"1"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>Time<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>Sunday<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>Monday<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>12:00 pm<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>class 1<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>class 2<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>14:00 pm<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td</span> <span style="color: #c4a000">colspan=</span><span style="color: #4e9a06">"2"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Lunch time<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;/table&gt;</span>
-</pre>
-            </div>
+            <pre>
+<code>&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Time&lt;/td&gt;
+    &lt;td&gt;Sunday&lt;/td&gt;
+    &lt;td&gt;Monday&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;12:00 pm&lt;/td&gt;
+    &lt;td&gt;class 1&lt;/td&gt;
+    &lt;td&gt;class 2&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;14:00 pm&lt;/td&gt;
+    &lt;td colspan="2"&gt;Lunch time&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/html_css/10/10.png">
+            <img class="image" src="{% static 'images/html_css/10/10.png'%}">
             <br>
             رائع! حصلنا على الشكل المطلوب.
             <p></p>
             <hr>
             <h4 dir="rtl">1- دمج الخلايا عمودياً rowspan:</h4>
             <p dir="rtl">حيث يتم دمج خلية مع العدد المطلوب من الخلايا التي تقع أسفلها كالتالي:<br>
-               <img src="../../images/html_css/10/11.gif" alt="rowspan" width="267" height="138">
+               <img src="{% static 'images/html_css/10/11.gif'%}" alt="rowspan" width="267" height="138">
             </p>
             <p dir="rtl">لنقوم بعمل الجدول التالي:<br></p>
-            <img class="image" src="../../images/html_css/10/12.png">
+            <img class="image" src="{% static 'images/html_css/10/12.png'%}">
             <p></p>
             <p dir="rtl">في البدأية لنقم بحذف الخلية التي تحتوي على 14:00pm ونشاهد النتيجة</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;table</span> <span style="color: #c4a000">border=</span><span style="color: #4e9a06">"1"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>Time<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>Sunday<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>Monday<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>12:00 pm<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>class 1<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>class 2<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td</span> <span style="color: #c4a000">colspan=</span><span style="color: #4e9a06">"2"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Lunch time<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;/table&gt;</span>
-</pre>
-            </div>
+            <pre>
+<code>&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Time&lt;/td&gt;
+    &lt;td&gt;Sunday&lt;/td&gt;
+    &lt;td&gt;Monday&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;12:00 pm&lt;/td&gt;
+    &lt;td&gt;class 1&lt;/td&gt;
+    &lt;td&gt;class 2&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td colspan="2"&gt;Lunch time&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/html_css/10/13.png">
+            <img class="image" src="{% static 'images/html_css/10/13.png'%}">
             <p></p>
             <p dir="rtl">الأن لنقم بإضافة <code dir="ltr">rowspan="2"</code> لوسم الخلية التي تحتوي على 12:00pm ليتم دمجها كخليتين عمودياً</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;table</span> <span style="color: #c4a000">border=</span><span style="color: #4e9a06">"1"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>Time<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>Sunday<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>Monday<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td</span> <span style="color: #c4a000">rowspan=</span><span style="color: #4e9a06">"2"</span><span style="color: #204a87; font-weight: bold">&gt;</span>12:00 pm<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>class 1<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td&gt;</span>class 2<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;tr&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;td</span> <span style="color: #c4a000">colspan=</span><span style="color: #4e9a06">"2"</span><span style="color: #204a87; font-weight: bold">&gt;</span>Lunch time<span style="color: #204a87; font-weight: bold">&lt;/td&gt;</span>
-   <span style="color: #204a87; font-weight: bold">&lt;/tr&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;/table&gt;</span>
-</pre>
-            </div>
+            <pre>
+<code>&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Time&lt;/td&gt;
+    &lt;td&gt;Sunday&lt;/td&gt;
+    &lt;td&gt;Monday&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td rowspan="2"&gt;12:00 pm&lt;/td&gt;
+    &lt;td&gt;class 1&lt;/td&gt;
+    &lt;td&gt;class 2&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td colspan="2"&gt;Lunch time&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/html_css/10/14.png">
+            <img class="image" src="{% static 'images/html_css/10/14.png'%}">
             <p></p>
             <p dir="rtl">رائع! حصلنا على الشكل المطلوب.</p>
             <hr>

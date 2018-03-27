@@ -54,41 +54,37 @@
             <p></p>
             <p dir="rtl">إستخدمنا الكود التالي للتقسيمات الرئيسية:</p>
 
-            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"header"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"main"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"footer"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
-</pre>
-            </div>
+            <pre>
+<code>&lt;div id="header"&gt;&lt;/div&gt;
+&lt;div id="main"&gt;&lt;/div&gt;
+&lt;div id="footer"&gt;&lt;/div&gt;</code>
+            </pre>
             <p dir="rtl">نستطيع الأن جعل تلك الأقسام أكثر معنى للالات بإستخدام عناصر الـ Semantic كالتالي:</p>
 
-            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;header&gt;&lt;/header&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;main&gt;&lt;/main&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;footer&gt;&lt;/footer&gt;</span>
-</pre>
-            </div>
+            <pre>
+<code>&lt;header&gt;&lt;/header&gt;
+&lt;main&gt;&lt;/main&gt;
+&lt;footer&gt;&lt;/footer&gt;</code>
+            </pre>
             <p dir="rtl">ونستطيع أن تقوم بعمل التنسيقات لها بشكل مباشر هكذا:</p>
 
-            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">header</span> <span style="color: #000000; font-weight: bold">{</span>
-<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100</span><span style="color: #ce5c00; font-weight: bold">%</span><span style="color: #000000; font-weight: bold">;</span>
-<span style="color: #204a87; font-weight: bold">min-width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">980px</span><span style="color: #000000; font-weight: bold">;</span>
-<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">82px</span><span style="color: #000000; font-weight: bold">;</span>
-<span style="color: #204a87; font-weight: bold">background-color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#3b5998</span><span style="color: #000000; font-weight: bold">;</span>
-<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">linear</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">gradient</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">#4e69a2</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #0000cf; font-weight: bold">#3b5998</span><span style="color: #000000; font-weight: bold">);</span>
-<span style="color: #204a87; font-weight: bold">border-bottom</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #204a87; font-weight: bold">solid</span> <span style="color: #0000cf; font-weight: bold">#133783</span><span style="color: #000000; font-weight: bold">;</span>
-<span style="color: #000000; font-weight: bold">}</span>
-</pre>
-            </div>
+            <pre>
+<code>header {
+  width: 100%;
+  min-width: 980px;
+  height: 82px;
+  background-color: #3b5998;
+  background: linear-gradient(#4e69a2, #3b5998);
+  border-bottom: 1px solid #133783;
+}</code>
+            </pre>
             <p dir="rtl">او بالإستمرار بإستخدام id او class يتم إعطائه للعنصر كالتالي:</p>
 
-            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;header</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"header"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/header&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;main</span>  <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"main"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/main&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;footer</span>  <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"footer"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/footer&gt;</span>
-</pre>
-            </div>
+            <pre>
+<code>&lt;header id="header"&gt;&lt;/header&gt;
+&lt;main id="main"&gt;&lt;/main&gt;
+&lt;footer id="footer"&gt;&lt;/footer&gt;</code>
+            </pre>
             <p dir="rtl">ما يعني أنه بإمكانك إعتبار هذه العناصر كغيرها من عناصر الـ div التي قمنا بالعمل عليها سابقاً ولكن تختلف عنها بأن لها دلالة ومعنى.</p>
             <h3 dir="rtl">لنلقي نظرة على الصورة التالية:</h3>
             <p></p>
@@ -108,20 +104,19 @@
             <p dir="rtl">البعض يسئ إستخدام العناوين h1 … h6 فهي ليست هنا حتى تعطيك خط بتنسيق <strong dir="ltr">bold</strong> وأحجام مختلفة فعند إستخدامك للعناوين يجب أن تستخدمها بالشكل الصحيح فعلى أساس هذه العناوين أنت تحدد هيكلة وأهمية كل جزئية في الموقع لمحركات البحث.</p>
             <p dir="rtl"><strong dir="rtl">لنأخذ المثال التالي:</strong></p>
 
-            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;h1&gt;</span>Websites Developments<span style="color: #204a87; font-weight: bold">&lt;/h1&gt;</span>
+            <pre>
+<code>&lt;h1&gt;Websites Developments&lt;/h1&gt;
 
-<span style="color: #204a87; font-weight: bold">&lt;h2&gt;</span>Front-end Web Development<span style="color: #204a87; font-weight: bold">&lt;/h2&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;h3&gt;</span>HTML<span style="color: #204a87; font-weight: bold">&lt;/h3&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;h3&gt;</span>CSS<span style="color: #204a87; font-weight: bold">&lt;/h3&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;h3&gt;</span>JS<span style="color: #204a87; font-weight: bold">&lt;/h3&gt;</span>
+&lt;h2&gt;Front-end Web Development&lt;/h2&gt;
+&lt;h3&gt;HTML&lt;/h3&gt;
+&lt;h3&gt;CSS&lt;/h3&gt;
+&lt;h3&gt;JS&lt;/h3&gt;
 
-<span style="color: #204a87; font-weight: bold">&lt;h2&gt;</span>Back-end Web Development<span style="color: #204a87; font-weight: bold">&lt;/h2&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;h3&gt;</span>C#<span style="color: #204a87; font-weight: bold">&lt;/h3&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;h3&gt;</span>Python<span style="color: #204a87; font-weight: bold">&lt;/h3&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;h3&gt;</span>SQL<span style="color: #204a87; font-weight: bold">&lt;/h3&gt;</span>
-</pre>
-            </div>
+&lt;h2&gt;Back-end Web Development&lt;/h2&gt;
+&lt;h3&gt;C#&lt;/h3&gt;
+&lt;h3&gt;Python&lt;/h3&gt;
+&lt;h3&gt;SQL&lt;/h3&gt;</code>
+            </pre>
             <p dir="rtl">قم بتجربة الكود بإستخدام أداة HTML Outliner التالية <a href="https://gsnedders.html5.org/outliner/" rel="nofollow noopener" dir="rtl"><strong dir="rtl">من هنا</strong></a></p>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
             <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/html_css/11/3.png'%}"  alt="image" class="image"></a></div>
@@ -131,41 +126,39 @@
             <p dir="rtl">في السابق كان أحد أهم قواعد إستخدام العناوين في الصفحات هو أن تضع h1 واحدة فقط بالصفحة وذلك حتى يشير للموضوع الرئيسية والمهم في هذه الصفحة فتستطيع محركات البحث أرشفتها تحت ذلك العنوان ولكن في الوقت الحالي أصبح بإمكاننا وضع أقسام منفصلة بداخل الصفحة نفسها بحيث يكون لكل قسم العنوان الخاص به.</p>
             <p dir="rtl"><strong dir="rtl">على سبيل المثال لنقم بوضع الهيكلة التالية في أداة الـ HTML Outliner  <a href="https://gsnedders.html5.org/outliner/" rel="nofollow noopener" dir="rtl">من هنا</a>:</strong></p>
 
-            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;section&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;h1&gt;</span>About 1MAC<span style="color: #204a87; font-weight: bold">&lt;/h1&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;p&gt;</span>Mohammed bin Rashid al Maktoum's initiative to empower Arabs with the language of the future<span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;/section&gt;</span>
+            <pre>
+<code>&lt;section&gt;
+  &lt;h1&gt;About 1MAC&lt;/h1&gt;
+  &lt;p&gt;Mohammed bin Rashid al Maktoum's initiative to empower Arabs with the language of the future&lt;/p&gt;
+&lt;/section&gt;
 
-<span style="color: #204a87; font-weight: bold">&lt;section&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;h1&gt;</span>Discover the 4 different tracks available<span style="color: #204a87; font-weight: bold">&lt;/h1&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;h2&gt;</span>BECOME A FULL-STACK WEB DEVELOPER<span style="color: #204a87; font-weight: bold">&lt;/h2&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;h2&gt;</span>BECOME AN ANDROID APP GURU<span style="color: #204a87; font-weight: bold">&lt;/h2&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;h2&gt;</span>BECOME A FRONT-END WEB EXPERT<span style="color: #204a87; font-weight: bold">&lt;/h2&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;/section&gt;</span>
-</pre>
-            </div>
+&lt;section&gt;
+  &lt;h1&gt;Discover the 4 different tracks available&lt;/h1&gt;
+  &lt;h2&gt;BECOME A FULL-STACK WEB DEVELOPER&lt;/h2&gt;
+  &lt;h2&gt;BECOME AN ANDROID APP GURU&lt;/h2&gt;
+  &lt;h2&gt;BECOME A FRONT-END WEB EXPERT&lt;/h2&gt;
+&lt;/section&gt;</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
             <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/html_css/11/4.png'%}"  alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">لاحظ أنه تم التعرف على h1 واحد خاص بكل قسم section ماعدا الـ h1 الرئيسي الخاص بالصفحة وتم كتابة Untitled section وبالفعل لم نقم بإعطاء عنوان رئيسي للصفحة لهذا سنقوم به كالتالي:</p>
 
-            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;h1&gt;</span>Hello, One Million Arab Coders!<span style="color: #204a87; font-weight: bold">&lt;/h1&gt;</span>
+            <pre>
+<code>&lt;h1&gt;Hello, One Million Arab Coders!&lt;/h1&gt;
 
-<span style="color: #204a87; font-weight: bold">&lt;section&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;h1&gt;</span>About 1MAC<span style="color: #204a87; font-weight: bold">&lt;/h1&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;p&gt;</span>Mohammed bin Rashid al Maktoum's initiative to empower Arabs with the language of the future<span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;/section&gt;</span>
+&lt;section&gt;
+  &lt;h1&gt;About 1MAC&lt;/h1&gt;
+  &lt;p&gt;Mohammed bin Rashid al Maktoum's initiative to empower Arabs with the language of the future&lt;/p&gt;
+&lt;/section&gt;
 
-<span style="color: #204a87; font-weight: bold">&lt;section&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;h1&gt;</span>Discover the 4 different tracks available<span style="color: #204a87; font-weight: bold">&lt;/h1&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;h2&gt;</span>BECOME A FULL-STACK WEB DEVELOPER<span style="color: #204a87; font-weight: bold">&lt;/h2&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;h2&gt;</span>BECOME AN ANDROID APP GURU<span style="color: #204a87; font-weight: bold">&lt;/h2&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;h2&gt;</span>BECOME A FRONT-END WEB EXPERT<span style="color: #204a87; font-weight: bold">&lt;/h2&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;/section&gt;</span>
-</pre>
-            </div>
+&lt;section&gt;
+  &lt;h1&gt;Discover the 4 different tracks available&lt;/h1&gt;
+  &lt;h2&gt;BECOME A FULL-STACK WEB DEVELOPER&lt;/h2&gt;
+  &lt;h2&gt;BECOME AN ANDROID APP GURU&lt;/h2&gt;
+  &lt;h2&gt;BECOME A FRONT-END WEB EXPERT&lt;/h2&gt;
+&lt;/section&gt;</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
             <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/html_css/11/5.png'%}" alt="image" class="image"></a></div>
             <p></p>
@@ -173,18 +166,17 @@
             <p dir="rtl">هل تلاحظ أنه بالرغم بأنه لدينا ثلاثة عناوين من نوع h1 فلماذا تم إعتبار أول عنوان هو الأب لهم ولم يتم إعتبار تلك العناوين كإخوة له؟</p>
             <p dir="rtl">لنجرب إزالة وسوم الأقسام section لنشاهد النتيجة:</p>
 
-            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;h1&gt;</span>Hello, One Million Arab Coders!<span style="color: #204a87; font-weight: bold">&lt;/h1&gt;</span>
+            <pre>
+<code>&lt;h1&gt;Hello, One Million Arab Coders!&lt;/h1&gt;
 
-<span style="color: #204a87; font-weight: bold">&lt;h1&gt;</span>About 1MAC<span style="color: #204a87; font-weight: bold">&lt;/h1&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;p&gt;</span>Mohammed bin Rashid al Maktoum's initiative to empower Arabs with the language of the future<span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
+&lt;h1&gt;About 1MAC&lt;/h1&gt;
+&lt;p&gt;Mohammed bin Rashid al Maktoum's initiative to empower Arabs with the language of the future&lt;/p&gt;
 
-<span style="color: #204a87; font-weight: bold">&lt;h1&gt;</span>Discover the 4 different tracks available<span style="color: #204a87; font-weight: bold">&lt;/h1&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;h2&gt;</span>BECOME A FULL-STACK WEB DEVELOPER<span style="color: #204a87; font-weight: bold">&lt;/h2&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;h2&gt;</span>BECOME AN ANDROID APP GURU<span style="color: #204a87; font-weight: bold">&lt;/h2&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;h2&gt;</span>BECOME A FRONT-END WEB EXPERT<span style="color: #204a87; font-weight: bold">&lt;/h2&gt;</span>
-</pre>
-            </div>
+&lt;h1&gt;Discover the 4 different tracks available&lt;/h1&gt;
+&lt;h2&gt;BECOME A FULL-STACK WEB DEVELOPER&lt;/h2&gt;
+&lt;h2&gt;BECOME AN ANDROID APP GURU&lt;/h2&gt;
+&lt;h2&gt;BECOME A FRONT-END WEB EXPERT&lt;/h2&gt;</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
             <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/html_css/11/6.png'%}" alt="image" class="image"></a></div>
             <p></p>
@@ -209,14 +201,13 @@
             <h2 dir="rtl">تمرين اليوم</h2>
             <p dir="rtl">قم بجعل أكواد الـ HTML الخاصة بورشة إستنساخ المبادة أكثر ترتيباً وذا معنى بإستخدام الـ Semantic Elements</p>
 
-            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;header&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;nav&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;main&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;section&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;footer&gt;</span>
-</pre>
-            </div>
+            <pre>
+<code>&lt;header&gt;
+&lt;nav&gt;
+&lt;main&gt;
+&lt;section&gt;
+&lt;footer&gt;</code>
+            </pre>
             <p dir="rtl">وغيرها من الوسوم حسب الحاجة وستجدها <a href="https://www.w3schools.com/html/html5_semantic_elements.asp" rel="nofollow noopener" dir="rtl">جميعها هنا</a> بنفس الطريقة التي قمنا بها أعلاة مع أكواد موقع الفيسبوك</p>
             <p dir="rtl">أكواد المشروع من هنا<br></p>
             <p></p>
