@@ -12,15 +12,12 @@
         <link rel="stylesheet" href="{% static 'css/github.min.css'%}">
         <script src="{% static 'js/highlight.pack.js'%}"></script>
 	</head>
-	<body id="fetcher" class="home">
-		<div id="navbar">
-			<div class="navbar-brand">
-                <a href="/">
-                    <div>
-                        {% trans 'Academy' %}
-                    </div>
-                </a>
-			</div>
+	<body id="fetcher" class="home upper-badding">
+		
+			
+		<div class="inner-nav"> 
+		<a href="{% url 'home' %}" class="go-back">&#10094;</a>
+ 		<div id="logo">Coretabs</div>
 			<div class="icon-container hidden">
 				<div class="humberger-icon">
 					<span></span>
@@ -31,20 +28,21 @@
             <div class="navbar-nav">
             </div>
 		</div>
-        <div class="background-image">
-            <h1>{% trans 'Full Stack Web Development' %}</h1>
-            <p>
-            {% blocktrans %}
-			Familiarity with programming is indispensable today. Learning programming is one of the most rich and useful things you can do.
-			{% endblocktrans %}
-            </p>
-            <a class="link" href="#main">{% trans 'Lessons' %}</a>
-            <div class="course animated infinite bounce">
-                <a href="#main"></a>
-            </div>
-        </div>
-        <main id="main" class="beauty-box">
-            <h1 class="title">{% trans 'Track Lessons' %}</h1>
+			
+
+	   <div class="about">
+         <h1>{% trans 'About website' %}</h1>
+         <p>
+             {% blocktrans %}
+                This site has been placed as a reference to the lessons and workshops that were developed in the initiative of the million arabic coders , made sure that the lessons are simplified and targeted mainly those who have zero experience in this area if you not part of the program million arabic coders  You can take advantage of these lessons and to put Your Questions or Inquiries Join our Facebook page.
+             {% endblocktrans %}
+         </p>
+		 
+      </div>
+		
+		
+		
+        <main id="main" class="beauty-box fix-upper-padding">
             <div class="courses_container">
                 Loading... Please Wait
             </div>
@@ -56,15 +54,7 @@
 
 			</aside>
 		</div>
-        <div class="about">
-            <h1>{% trans 'About website' %}</h1>
-            <p>
-                {% blocktrans %}
-                This site has been placed as a reference to the lessons and workshops that were developed in the initiative of the million arabic coders , made sure that the lessons are simplified and targeted mainly those who have zero experience in this area if you not part of the program million arabic coders  You can take advantage of these lessons and to put Your Questions or Inquiries Join our Facebook page.
-                {% endblocktrans %}
-            </p>
-            <a href="http://www.facebook.com/groups/ProgrammersUnion" class="facebook"></a>
-            </div>
+        
         <footer>
             <div class="text"> Made with <img src="{% static 'images/heart.png' %}" alt="heart"> by &nbsp; <a href="{% url 'contributors' %}">Our Contributors</a> </div>
         </footer>
