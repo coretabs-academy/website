@@ -9,7 +9,6 @@
 		<link rel="stylesheet" href="{% static 'css/style.css' %}">
         <link rel="stylesheet" id="animate" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
 		<link rel="stylesheet" href="{% static 'css/fetcher.css' %}">
-		<style class="connectorStyle"></style>
 	</head>
 	<body class="home">
 		<div id="navbar">
@@ -58,7 +57,9 @@
         <footer>
           <div class="text"> Made with <img src="{% static 'images/heart.png' %}" alt="heart"> by <a href="{% url 'contributors' %}" target="_blank"> Our Contributors</a> </div>
       </footer>
-        <script src="{% static 'js/jquery-3.3.1.min.js'%}"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.min.js"></script>
         {% load static%}
         <script src="{% static 'js/fetcher.js' %}"></script>
