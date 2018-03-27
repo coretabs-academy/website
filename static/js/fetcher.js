@@ -8,7 +8,7 @@ $(function() {
     //var lang = Cookies.get('lang');
     //if (lang === undefined) { lang = "ar"; }
     var lang = "ar";
-    
+
     $(".container aside").html("<p>Loading... Please Wait</p>");
 
     $.ajax({
@@ -164,7 +164,7 @@ $(function() {
             $(".navigate a").first().attr("data-id", navigationScope[navigationIndex - 1][0]);
             $(".navigate a").first().addClass(navigationScope[navigationIndex - 1][1]);
         }
-    
+
         if (navigationIndex == navigationScope.length - 1) {
             $(".navigate a").last().addClass("disabled");
         } else {
@@ -182,7 +182,22 @@ $(function() {
     $(window).resize(function() {
         if ($(window).width() >= 1080 && $("aside").css("display") == "none") { $("aside").show(); }
     });
+
+
+    //change the courses connector height dynamically
+    var path = window.location.pathname;
+    var firstBoxTopOffset;
+    var lastBoxTopOffset;
+    var distanceBetween;
+    $(window).on("load resize", changeConnectorHeight);
+    function changeConnectorHeight(){
+      alert()
+      if (path.split('/')[path.split('/').length-2]==="fullstack") {
+        firstBoxTopOffset=$(".courses_image").eq(0).offset().top;
+        lastBoxTopOffset=$(".courses_image").eq($(".courses_image").length-1).offset().top;
+        distanceBetween=lastBoxTopOffset-firstBoxTopOffset;
+        $(".connectorStyle").text(".beauty-box .box:first-of-type::after{height:"+distanceBetween+"px}");
+      }
+    }
+    changeConnectorHeight();
 });
-
-
-
