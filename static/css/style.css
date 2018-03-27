@@ -94,12 +94,14 @@ Navbar Style
 =======================================*/
 
 .navbar {
-	background: #2bcbba;
+	background: -webkit-linear-gradient(left, #6017c2, #7f2a90);
+    background: -o-linear-gradient(left, #6017c2, #7f2a90);
+    background: linear-gradient(to right, #6017c2, #7f2a90);
 	width: 100%;
+	height: 60px;
 	-webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.11);
 	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.11);
-	padding: 0 0 0 45px;
-	height: 60px;
+	padding: 0 0 0 20px;
 	position: fixed;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -127,13 +129,9 @@ Navbar Style
 }
 
 .navbar-brand div {
-	background: #0c655b;
+	font-size: 1.2em;
 	color: white;
-	text-transform: uppercase;
 	font-weight: bold;
-	font-size: 1.2rem;
-	padding: 5px 50px;
-	border: 5px solid white;
 	border-width: 0 5px;
 }
 
@@ -190,7 +188,7 @@ Navbar Style
 }
 
 .humberger-icon span::before {
-	background: #0c655b;
+	background: #ffd3e0;
 	content: '';
 	width: 100%;
 	height: 100%;
@@ -254,9 +252,8 @@ nav a {
 	align-items: center;
 	text-decoration: none;
 	font-weight: bold;
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 	color: rgb(255, 244, 244);
-	text-transform: uppercase;
 	position: relative;
 	overflow: hidden;
 	-webkit-box-shadow: 0 0 #0c655b inset;
@@ -265,12 +262,12 @@ nav a {
 	transition: -webkit-box-shadow .3s ease;
 	-o-transition: box-shadow .3s ease;
 	transition: box-shadow .3s ease, -webkit-box-shadow .3s ease;
+	transition: all 0.5s;
 }
 
 nav a:hover {
-	background: #1fab9c;
-	-webkit-box-shadow: 0 -5px #0c655b inset;
-	box-shadow: 0 -5px #0c655b inset;
+	background: #5f167f;
+	-webkit-box-shadow: 0 -5px #5f167f inset;
 	-webkit-transition: -webkit-box-shadow .3s ease;
 	transition: -webkit-box-shadow .3s ease;
 	-o-transition: box-shadow .3s ease;
@@ -288,7 +285,7 @@ nav a:hover {
 		-ms-flex-direction: column;
 		flex-direction: column;
 		position: absolute;
-		background: #2bcbba;
+		background: #7f2a90;
 		width: 320px;
 		height: 100vh;
 		top: 0;
@@ -350,17 +347,20 @@ nav a:hover {
 }
 
 .home .navbar-brand {
-	width: 300px;
+	width: 250px;
 	position: absolute;
 	top: 20px;
-	left: 0;
+	left: 25px;
 	z-index: 5;
+	text-shadow: 1px 2px 0px #58156a;
 }
 
 .home .navbar-brand div {
-	background: rgba(142, 53, 105, 0.7490196078431373);
+    background: rgba(142, 53, 105, 0.7490196078431373);
+	padding: 5px 50px;
+    border: 5px solid white;
+	border-width: 0 5px;
 }
-
 @media screen and (max-width:380px) {
 	.home .navbar-brand {
 		background: transparent;
@@ -433,7 +433,7 @@ Button Style
 }
 
 .navigate a {
-	background: #2bcbba;
+	background: #5f167f;
 	border: 0;
 	width: 45%;
 	padding: 10px 0;
@@ -482,7 +482,7 @@ Button Style
 }
 
 .navigate a:active {
-	background: rgb(33, 161, 147);
+	background: #5f167f;
 }
 
 .navigate a.disabled {
@@ -554,7 +554,7 @@ background-image Style
 	font-size: 2rem;
 	padding: 10px 80px;
 	background: #4b7bec;
-	color: white;
+	color: #fff;
 	border: 0;
 	border-radius: 5px;
 	cursor: pointer;
@@ -621,6 +621,7 @@ Main Style
 .beauty-box {
 	background: rgb(239, 235, 233);
 	width: 100%;
+/*	padding: 150px 0 60px;*/
 	padding: 150px 0 60px;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -638,7 +639,9 @@ Main Style
 	-ms-user-select: none;
 	user-select: none;
 }
-
+.fix-upper-padding{
+	padding-top: 60px;
+}
 .title {
 	position: absolute;
 	height: 100px;
@@ -995,7 +998,7 @@ Container Links Style
 
 .container.links p a::before {
 	content: '';
-	background: #2bcbba;
+	background: #4b7bec;
 	width: 15px;
 	height: 15px;
 	position: absolute;
@@ -1027,141 +1030,20 @@ Footer Style
 footer {
 	background: #222;
 	width: 100%;
-	padding: 20px 0;
-	z-index: -1;
-	position: relative;
-	color: white;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	direction: ltr;
+	line-height: 50px;
+	color: #ddd;
+	text-align: center;
 }
 
-footer .text {
-	height: 100%;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	margin: 0 2px;
-}
-
-footer img {
-	margin: 4px;
-}
-
-@media screen and (max-width:450px) {
-	footer {
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: normal;
-		-ms-flex-direction: column;
-		flex-direction: column;
-	}
-	footer .text {
-		min-width: 321px;
-	}
-}
-
-footer a {
+footer .text a{
+	color: #999;
 	text-decoration: none;
-	font-weight: bold;
-	color: #a7a7a7;
+}
+footer img{
 	position: relative;
-	display: inline-block;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
+	width: 18px;
+	top: 4px;
 }
-
-footer a:hover {
-	color: white;
-}
-
-footer a::before {
-	content: '';
-	background: white;
-	width: 0;
-	height: 4px;
-	position: absolute;
-	bottom: 0;
-	-webkit-transition: width .5s ease;
-	-o-transition: width .5s ease;
-	transition: width .5s ease;
-}
-
-footer a:hover::before {
-	width: 100%;
-	-webkit-transition: width .5s ease;
-	-o-transition: width .5s ease;
-	transition: width .5s ease;
-}
-
-footer span {
-	position: absolute;
-	top: -80px;
-	left: 50%;
-	margin-left: -40px;
-	width: 80px;
-	height: 80px;
-	display: inline-block;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	visibility: hidden;
-	opacity: 0;
-	-webkit-transition: .5s ease;
-	-o-transition: .5s ease;
-	transition: .5s ease;
-	pointer-events: none;
-}
-
-footer span img {
-	border-radius: 20%;
-	border: 4px solid white;
-	-webkit-box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
-	box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
-	width: 100%;
-	height: 100%;
-	box-sizing: content-box;
-}
-
-footer span::before {
-	content: '';
-	position: absolute;
-	bottom: -20px;
-	border: 8px solid transparent;
-	border-top-color: white;
-}
-
-footer a:hover span {
-	top: -95px;
-	visibility: visible;
-	opacity: 1;
-	-webkit-transition: .5s ease;
-	-o-transition: .5s ease;
-	transition: .5s ease;
-}
-
 
 /*=====================================
 Projects Style
@@ -1296,7 +1178,7 @@ aside a:not(.active):hover {
 }
 
 aside .active {
-	color: #2bcbba;
+	color: #5f167f;
 	font-weight: bold;
 }
 
@@ -1332,4 +1214,54 @@ aside .active {
 /*Change codes line height*/
 pre{
 	line-height: 20px;
+}
+
+
+/*=====================================
+inner nav Style
+=======================================*/
+
+.upper-badding{
+	padding-top: 50px;
+}
+
+.inner-nav{
+    background: -webkit-linear-gradient(left, #6017c2, #7f2a90);
+    background: -o-linear-gradient(left, #6017c2, #7f2a90);
+    background: linear-gradient(to right, #6017c2, #7f2a90);
+	width: 100%;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	direction: ltr;
+	position: fixed;
+	top: 0;
+	z-index: 99999;
+  
+}
+.inner-nav #logo{
+	width: auto;
+	color: #fff;
+	text-align: left;
+	font-weight: 700;
+	font-size: 1.8em;
+	text-shadow: 1px 2px 0px #58156a;	
+} 
+.inner-nav #logo span{
+	color: #bbeee9;
+}
+
+.inner-nav .go-back{
+	color: #fff;
+	font-weight: 700;
+	font-size: 30px;
+	padding: 0 25px 0 20px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	background: #400f8f;
+	text-decoration: none;
+	margin-right: 20px;
+	text-shadow: 0px 2px 0px #2b0a65;
+	
 }

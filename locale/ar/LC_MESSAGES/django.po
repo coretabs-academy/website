@@ -89,7 +89,7 @@ msgstr ""
 #: templates/frontend/index.html:18 templates/fullstack/index.html:17
 #: templates/home.html:19
 msgid "Academy"
-msgstr "الأكاديمية"
+msgstr "Coretabs"
 
 #: templates/frontend/index.html:22
 msgid "Front End Web Development"
