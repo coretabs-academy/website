@@ -931,7 +931,7 @@ about_us Style
 	position: relative;
 	font-size: 2rem;
 	color: rgb(62, 39, 35);
-	width: 220px;
+	min-width: 220px;
 	text-align: center;
 	margin: auto;
 	margin-bottom: 30px;
