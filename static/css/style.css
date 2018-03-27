@@ -27,12 +27,12 @@ html {
 }
 
 ::-moz-selection {
-	background: #2bcbba;
+	background: #7f2a90;
 	color: rgb(255, 255, 255);
 }
 
 ::selection {
-	background: #2bcbba;
+	background: #7f2a90;
 	color: rgb(255, 255, 255);
 }
 
@@ -43,27 +43,27 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-	background: rgb(38, 180, 165);
+	background: #7f2a90;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: rgb(54, 221, 203);
+	background: #7f2a90;
 }
 
 ::-webkit-scrollbar-thumb:active {
-	background: rgb(22, 134, 122);
+	background: #7f2a90;
 }
 
 .home::-webkit-scrollbar-thumb {
-	background: rgb(75, 123, 236);
+	background: #7f2a90;
 }
 
 .home::-webkit-scrollbar-thumb:hover {
-	background: rgb(91, 140, 254);
+	background: #7f2a90;
 }
 
 .home::-webkit-scrollbar-thumb:active {
-	background: rgb(49, 93, 195);
+	background: #7f2a90;
 }
 
 body {
