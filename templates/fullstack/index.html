@@ -5,12 +5,14 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>دروس Full Stack</title>
-        <link rel="stylesheet" href="{% static 'css/contributors.css' %}">
 		<link rel="stylesheet" href="{% static 'css/style.css' %}">
         <link rel="stylesheet" id="animate" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
 		<link rel="stylesheet" href="{% static 'css/fetcher.css' %}">
+        <script src="{% static 'js/jquery-3.3.1.min.js'%}"></script>
+        <link rel="stylesheet" href="{% static 'css/github.min.css'%}">
+        <script src="{% static 'js/highlight.pack.js'%}"></script>
 	</head>
-	<body class="home">
+	<body id="fetcher" class="home">
 		<div id="navbar">
 			<div class="navbar-brand">
                 <a href="/">
@@ -54,12 +56,18 @@
 
 			</aside>
 		</div>
+        <div class="about">
+            <h1>{% trans 'About website' %}</h1>
+            <p>
+                {% blocktrans %}
+                This site has been placed as a reference to the lessons and workshops that were developed in the initiative of the million arabic coders , made sure that the lessons are simplified and targeted mainly those who have zero experience in this area if you not part of the program million arabic coders  You can take advantage of these lessons and to put Your Questions or Inquiries Join our Facebook page.
+                {% endblocktrans %}
+            </p>
+            <a href="http://www.facebook.com/groups/ProgrammersUnion" class="facebook"></a>
+            </div>
         <footer>
-          <div class="text"> Made with <img src="{% static 'images/heart.png' %}" alt="heart"> by <a href="{% url 'contributors' %}" > Our Contributors</a> </div>
-      </footer>
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-			crossorigin="anonymous"></script>
+            <div class="text"> Made with <img src="{% static 'images/heart.png' %}" alt="heart"> by &nbsp; <a href="{% url 'contributors' %}">Our Contributors</a> </div>
+        </footer>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.min.js"></script>
         {% load static%}
         <script src="{% static 'js/fetcher.js' %}"></script>

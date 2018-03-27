@@ -1,27 +1,27 @@
-a { cursor: pointer; word-wrap: break-word; }
-ul  { list-style: none; }
-ul ul { list-style: disc; }
-.navbar-brand a { color: #ffffff; text-decoration: none; }
-.icon-container.hidden {
+#fetcher a { cursor: pointer; word-wrap: break-word; }
+#fetcher ul  { list-style: none; }
+#fetcher ul ul { list-style: disc; }
+#fetcher .navbar-brand a { color: #ffffff; text-decoration: none; }
+#fetcher .icon-container.hidden {
     display: none;
 }
-.background-image .course a {
+#fetcher .background-image .course a {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#FFFFFF" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 20px;
 }
-.navbar-nav, .container {
+#fetcher .navbar-nav, .container {
     display: none;
 }
-aside {
+#fetcher aside {
     padding-right: 0px;
     padding-top: 60px;
 }
-aside a {
+#fetcher aside a {
     padding: 5px 10px;
 }
-aside a.category {
+#fetcher aside a.category {
     cursor: default;
     background-color: #e9e9e9;
     padding-right: 10px;
@@ -32,14 +32,14 @@ aside a.category {
 .cooked img {
     max-width: 100%;
 }
-.cooked iframe.youtube { width: 420px; }
+#fetcher .cooked iframe.youtube { width: 420px; }
 
 @media screen and (max-width: 480px) {
-    .navbar-brand {
+    #fetcher .navbar-brand {
         background: none;
     }
 
-    .cooked iframe.youtube {
+    #fetcher .cooked iframe.youtube {
         width: 100%;
     }
 }

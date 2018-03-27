@@ -1,49 +1,411 @@
 <!DOCTYPE html>
 {% load static%}
 <html>
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>[الدرس الثالث عشر]: Responsive Web Design</title>
-      <link rel="stylesheet" href="{% static 'css/style.css' %}">
-      <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-      <script src="{% static 'js/jquery-3.3.1.min.js'%}"></script>
-<link rel="stylesheet" href="{% static 'css/github.min.css'%}">
-<script src="{% static 'js/highlight.pack.js'%}"></script>
-   </head>
-   <body>
-      <div class="navbar">
-         <div class="navbar-brand">
-            <div class="">
-               Academy
-            </div>
-         </div>
-         <div class="icon-container">
-            <div class="humberger-icon">
-               <span></span>
-               <span></span>
-               <span></span>
-            </div>
-         </div>
-         <div class="navbar-nav">
-            <nav>
-               <div class="close">
-                  أغلق <i class="fas fa-times"></i>
-               </div>
-               <a href="{% url 'home' %}">الرئيسية</a>
-               <a href="{% url 'category' category='html_css' %}">HTML & CSS</a>
-               <a href="{% url 'category' category='javascript' %}">JavaScript</a>
-               <a href="{% url 'category' category='git' %}">Git</a>
-               <a href="{% url 'category' category='projects' %}">المشاريع</a>
-            </nav>
-         </div>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>[الدرس الثالث عشر]: Responsive Web Design</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="{% static 'js/jquery-3.3.1.min.js'%}"></script>
+    <link rel="stylesheet" href="{% static 'css/github.min.css'%}">
+    <script src="{% static 'js/highlight.pack.js'%}"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-brand">
+        <div class="">
+          Academy
+        </div>
       </div>
-      <div class="container">
-         <div class="cooked">
-            <h1>Responsive Web Design</h1>
-            <hr>
-         </div>
+      <div class="icon-container">
+        <div class="humberger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
-      <script src="{% static 'js/main.js' %}"></script>
-   </body>
+      <div class="navbar-nav">
+        <nav>
+          <div class="close">
+            أغلق <i class="fas fa-times"></i>
+          </div>
+          <a href="{% url 'home' %}">الرئيسية</a>
+          <a href="{% url 'category' category='html_css' %}">HTML & CSS</a>
+          <a href="{% url 'category' category='javascript' %}">JavaScript</a>
+          <a href="{% url 'category' category='git' %}">Git</a>
+          <a href="{% url 'category' category='projects' %}">المشاريع</a>
+        </nav>
+      </div>
+    </div>
+    <div class="container">
+      <div class="cooked">
+        <h1>Responsive Web Design</h1>
+        <hr>
+        <h2 dir="rtl">ما الذي تستخدمة غالباً لتصفح مواقع الإنترنت الجوال أم الكمبيوتر؟</h2>
+        <p dir="rtl">هذا السؤال طرحته سابقاً على أصدقائي في الفيسبوك و <strong dir="rtl">النتيجة</strong> كانت كالتالي:<br></p>
+        <div class="lightbox-wrapper" dir="ltr">
+          <a class="lightbox" title="poll2.jpg" rel="nofollow noopener" dir="ltr">
+          <img src="{% static 'images/html_css/13/1.png'%}" alt="poll2" class="image">
+          </a>
+        </div>
+        <p></p>
+        <p dir="rtl">لاحظوا النسبة بين عدد مستخدمي الكمبيوتر وبين عدد مستخدمي الهواتف الذكية في الإستطلاع أعلاة.</p>
+        <hr>
+        <p dir="rtl"><strong dir="rtl">الصورة التالية توضح نسبة الأشخاص الذي يتصفحون الـ web بإستخدام الهواتف الذكية خلال الأعوام السابقة</strong><br>
+          <img src="{% static 'images/html_css/13/2.png'%}" alt="image" class="image"><br>
+          مصدر الصورة <a href="https://demos.telerik.com/responsive-web-design-aspnet/default.aspx" rel="nofollow noopener" dir="rtl">من هنا</a>, مصدر الإحصائية <a href="https://www.emarketer.com/articles" rel="nofollow noopener" dir="rtl">من هنا</a>
+        </p>
+        <h3 dir="rtl">نسبة لا يستهان بها أليس كذلك؟</h3>
+        <p dir="rtl">أصبحت الهواتف الذكية بيد كل شخص ويتم إستخدمها بشكل يومي لهذا يجب علينا أن نتوقع أن أغلب الزيارات التي ستتم لموقعنا ستكون من خلال هذه الأجهزة ذات الشاشات الصغيرة.</p>
+        <h3 dir="rtl">هل سمعت من قبل عن الـ UX او مايسمى بتجربة المستخدم ؟</h3>
+        <p dir="rtl">تخيل أنك تقوم بفتح موقع على جوالك وتجد أنه عليك أن تقوم بعمل zoom في كل مرة تريد أن تقوم بقرأة شئ ما او من أجل الضغط على زر.<br>
+          تخيل كذلك انك تحتاج لأن تقوم بعمل scroll لليمين واليسار حتى تجد المعلومات!
+        </p>
+        <p dir="rtl">بالتأكيد تجربتك لن تكون رائعة وربما <strong dir="rtl">لن تعود إلية مرة أخرى اليس كذلك؟</strong><br></p>
+        <div class="lightbox-wrapper" dir="ltr">
+          <a class="lightbox" title="image.jpg" rel="nofollow noopener" dir="ltr">
+          <img src="{% static 'images/html_css/13/3.png'%}" alt="image" class="image">
+          </a>
+        </div>
+        <p></p>
+        <p dir="rtl">في الجانب الأخر تخيل أن الموقع ينسجم مع حجم الشاشة و كل ماعليك فعلة لقرأة المحتوى هو السحب لأعلى وأسفل فقط وكذلك القوائم مرتبة وبحجم كبير تسهل لك الوصول للمحتوى.</p>
+        <p dir="rtl"><strong dir="rtl">ستكون تجربة رائعة أليس كذلك؟</strong><br></p>
+        <div class="lightbox-wrapper" dir="ltr">
+          <a class="lightbox" title="image.jpg" rel="nofollow noopener" dir="ltr">
+          <img src="{% static 'images/html_css/13/4.png'%}" alt="image" class="image">
+          </a>
+        </div>
+        <p></p>
+        <p dir="rtl">هنا يكمن أهمية الإهتمام بالـ User Experience حيث يجب علينا أن نحرص على أن يحصل كل شخص يزور موقعنا على تجربة رائعة تعكس له مدى سهولة وكفاءة موقعنا سوا كان يستخدم الكمبيوتر او الجوال فانا لا اريد أن اجعل زيارتك الأولى لموقعي هي الأخيرة بسبب عدم إهتمامي بحصولك على تجربة رائعة.</p>
+        <hr>
+        <h1 dir="rtl">المواقع التجاوبية بين الأمس واليوم</h1>
+        <p dir="rtl">منذ سنوات كان الإهتمام بتجربة المستخدم محط إهتمام وكان يتم إستخدام بعض الطرق لجعل هذه التجربة رائعة منها:</p>
+        <h3 dir="rtl">الطريقة الأولى: كان يتم عمل تصميمين من الموقع وكل تصميم لدية إسم نطاق (Domain) خاص به.</h3>
+        <ul dir="rtl">
+          <li dir="rtl">
+            <p dir="rtl">التصميم الأول خاص بالشاشات الكبيرة</p>
+          </li>
+          <li dir="rtl">
+            <p dir="rtl">التصميم الثاني خاص بالشاشات الصغيرة</p>
+          </li>
+        </ul>
+        <p dir="rtl">بمجرد دخول الزائر للموقع يتم تحديد عرض الشاشة الخاصة بة من خلال كود جافاسكربت فإذا كان عرض الشاشة أقل من حجم محدد يتم تحويلة للنسخة الخاصة بالشاشات الصغيرة.<br></p>
+        <div class="lightbox-wrapper" dir="ltr">
+          <a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr">
+          <img src="{% static 'images/html_css/13/5.png'%}" alt="image" class="image">
+          </a>
+        </div>
+        <p></p>
+        <p dir="rtl">لا تزال بعض الشركات تعتمد هذه الطريقة فعلى سبيل المثال موقع فيسبوك وبإمكانك تجربة ذلك:</p>
+        <p dir="rtl"><strong dir="rtl">نسخة الجوالات:</strong><br>
+          <a href="https://m.facebook.com" rel="nofollow noopener" dir="ltr">m.facebook.com</a><br>
+          <strong dir="rtl">نسخة الكمبيوترات:</strong><br>
+          <a href="http://facebook.com" rel="nofollow noopener" dir="ltr">facebook.com</a>
+        </p>
+        <p dir="rtl"><strong dir="rtl">ماهي المشكلة هنا:</strong><br>
+          كما سلف وذكرنا إعتمادك لهذه الطريقة يعني أنة سيكون لديك موقعين منفصلين ما يعني بأنه مجهود مضاعف للقيام بصيانة الموقع.
+        </p>
+        <h3 dir="rtl">الطريقة الثانية: عمل موقع لأجهزة الكمبيوتر وتطبيقات (Native) للهواتف الذكية</h3>
+        <p dir="rtl">كان الخيار الثاني هو ان يتم عمل موقع للشاشات الكبيرة ومن ثم عمل تطبيقات لنقول أصلية ما يعني انه يتم تطويرها خصيصاً لنظام تشغيل معين على سبيل المثال Android و IOS وبهذا يستطيع أصحاب الهواتف الذكية الحصول على تجربة مستخدم رائعة</p>
+        <p dir="rtl"><strong dir="rtl">ماهي المشكلة هنا:</strong><br>
+          القيام بتطوير تطبيقات Native بجانب الموقع يعني تكاليف عالية.
+        </p>
+        <hr>
+        <h2 dir="rtl">التقنيات الحديثة</h2>
+        <p dir="rtl">اليوم أصبح هناك تقنيات عديدة الفكرة الرئيسية لها هي أن يتم عمل موقع واحد بمحتوى يتجاوب مع جميع الشاشات المختلفة بإمكانك تشبيهه بالماء حيث أنه يتشكل بشكل الوعاء الذي سيحتوية.<br></p>
+        <div class="lightbox-wrapper" dir="ltr">
+          <a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr">
+          <img src="{% static 'images/html_css/13/6.png'%}" alt="image" class="image">
+          </a>
+        </div>
+        <br>
+        مصدر الصورة <a href="https://demos.telerik.com/responsive-web-design-aspnet/default.aspx" rel="nofollow noopener" dir="rtl">من هنا</a>, حقوق الفكرة الأصلية تعود لـ <a href="https://www.stephaniewalter.fr" rel="nofollow noopener" dir="ltr">Stéphanie Walter</a>
+        <p></p>
+        <hr>
+        <h2 dir="rtl">إتجاهات المواقع التجاوبية Responsive web approaches</h2>
+        <p dir="rtl">سأتكلم عن الإتجاهين الرئيسيين:</p>
+        <p dir="rtl">1- <strong dir="rtl">التوجة الأول</strong> هو عمل موقع تجاوبي بحيث يتم البدء بالعمل على تصميم الموقع للشاشات الكبيرة ومن ثم يتم الإهتمام بتصميم وطريقة عرض الموقع في الشاشات الصغيرة ويسمى هذا التوجة بـ Desktop-first approach<br></p>
+        <div class="lightbox-wrapper" dir="ltr">
+          <a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr">
+          <img src="{% static 'images/html_css/13/7.png'%}" alt="image" class="image">
+          </a>
+        </div>
+        <p></p>
+        <p dir="rtl">2- <strong dir="rtl">التوجة الثاني</strong> وهو تصميم موقع تجاوبي ولكن هذه المرة يتم الإهتمام بعمل تصميم للموقع للشاشات الصغيرة ومن ثم يتم الإهتمام بتصميم وطريقة عرض الموقع في الشاشات الكبيرة ويسمى هذا التوجة بـ Mobile first approach<br></p>
+        <div class="lightbox-wrapper" dir="ltr">
+          <a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr">
+          <img src="{% static 'images/html_css/13/8.png'%}" alt="image" class="image">
+          </a>
+        </div>
+        <p></p>
+        <p dir="rtl">الفرق بين التوجهين هو انه في توجة الـ Mobile-first يتم التركيز فيه على المحتوى بالبدء بوضع أهم المعلومات في الموقع بعيداً عن المميزات والإضافات التي لن يستطيع الإستمتاع بها سوا مستخدموا الكمبيوتر والشاشات الكبيرة. ثم لاحقاً يتم عمل هذه الإضافات للشاشات الأكبر.</p>
+        <p dir="rtl">بإختصار إذا إستطعت أن تجعل المحتوى مدعوم للشاشات الصغيرة تستطيع لاحقاً جعلة مدعوم في أي شاشة مهما كان حجمها و بمميزات أكثر.</p>
+        <p dir="rtl">كذلك يتميز توجة الـ  Mobile-first بتفوقة بسرعة تحميل الموقع على الهواتف الذكية مقارنة بالتوجة الأخر.</p>
+        <hr>
+        <h2 dir="rtl">العمل بالنسب وليس بالقيم الثابتة</h2>
+        <p dir="rtl"><strong dir="rtl">ربما تتسأل كيف بإمكانك تبني هذه التوجهات لجعل موقعك متجاوب!</strong></p>
+        <p dir="rtl">حسناً للعمل على تقنيات المواقع التجاوبية يجب أن نبدأ بالتفكير بالعمل بإستخدام النسب بدلاً من القيم الثابتة.</p>
+        <p dir="rtl"><strong dir="rtl">هل سبق وان قمت بعمل موقع وقمت بتحديد عرض محدد له بشكل ثابت؟</strong></p>
+        <p dir="rtl">على سبيل المثال لنلقي نظرة على الـ layout التالية:<br></p>
+        <div class="lightbox-wrapper" dir="ltr">
+          <a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr">
+          <img src="{% static 'images/html_css/13/9.png'%}" alt="image" class="image">
+          </a>
+        </div>
+        <p></p>
+        <p dir="rtl">لاحظ تقسيمنا للموقع و إستخدامنا للـ px لتحديد عرض محدد للتصميم, فما الذي سيحصل؟</p>
+        <p dir="rtl"><strong dir="rtl">لنلقي نظرة على التصميم في المتصفح عند عمل تصغير لحجم الشاشة كالتالي:</strong><br></p>
+        <div class="lightbox-wrapper" dir="ltr">
+          <a class="lightbox" title="fixed1.gif" rel="nofollow noopener" dir="ltr">
+          <img src="{% static 'images/html_css/13/10.gif'%}" alt="fixed1" class="image">
+          </a>
+        </div>
+        <p></p>
+        <details dir="rtl">
+          <summary dir="rtl">
+            بإمكانك تجربة ذلك بالأكواد التالية:
+          </summary>
+          <pre>
+<code>.container{
+	width: 960px;
+	margin: 0 auto;
+}
+header{
+	width: 960px;
+	background: #98d6ce;
+	height: 100px;
+}
+section{
+	width: 700px;
+	height: 500px;
+	float: left;
+	background: #f0f0f0;
+	margin-top: 15px;
+}
+aside{
+	width: 250px;
+	height: 500px;
+	float: right;
+	background: #98aed6;
+	margin-top: 15px;
+}</code>
+          </pre>
+          <pre>
+<code>&lt;div class="container"&gt;
+  &lt;header&gt;&lt;/header&gt;
+  &lt;main&gt;
+    &lt;section&gt;&lt;/section&gt;
+    &lt;aside&gt;&lt;/aside&gt;
+  &lt;/main&gt;
+&lt;/div&gt;</code>
+          </pre>
+        </details>
+        <p dir="rtl">نلاحظ كيف أن الموقع بعرض ثابت فهما كان حجم نافذة المتصفح فسيظل بذلك الحجم وسنحتاج لإستخدام الـ scrollbar الأفقي لمشاهدة بقية المحتوى.</p>
+        <p dir="rtl"><strong dir="rtl">لنقم الأن بتجربة تغيير القيم الثابتة إلى النسب كالتالي:</strong><br></p>
+        <div class="lightbox-wrapper" dir="ltr">
+          <a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr">
+          <img src="{% static 'images/html_css/13/11.png'%}" alt="image" class="image">
+          </a>
+        </div>
+        <p></p>
+        <p dir="rtl"><strong dir="rtl">لنلقي نظرة على التصميم في المتصفح عند عمل تصغير لحجم الشاشة كالتالي:</strong><br></p>
+        <div class="lightbox-wrapper" dir="ltr">
+          <a class="lightbox" title="ratio1.gif" rel="nofollow noopener" dir="ltr">
+          <img src="{% static 'images/html_css/13/12.gif'%}" alt="ratio1" class="image">
+          </a>
+        </div>
+        <p></p>
+        <details dir="rtl">
+          <summary dir="rtl">
+            بإمكانك تجربة ذلك بالأكواد التالية:
+          </summary>
+          <pre>
+<code>.container{
+	width: 80%;
+	margin: 0 auto;
+}
+header{
+	width: 100%;
+	background: #98d6ce;
+	height: 100px;
+}
+section{
+	width: 70%;
+	height: 500px;
+	float: left;
+	background: #f0f0f0;
+	margin-top: 15px;
+}
+aside{
+	width: 28%;
+	height: 500px;
+	float: right;
+	background: #98aed6;
+	margin-top: 15px;
+}</code>
+          </pre>
+          <pre>
+<code>&lt;div class="container"&gt;
+  &lt;header&gt;&lt;/header&gt;
+  &lt;main&gt;
+    &lt;section&gt;&lt;/section&gt;
+    &lt;aside&gt;&lt;/aside&gt;
+  &lt;/main&gt;
+&lt;/div&gt;</code>
+          </pre>
+        </details>
+        <p dir="rtl">نلاحظ كيف أن عرض الموقع أصبح تجاوبي وانه يتم إحتساب عرض أقسام الموقع بالنسبة لعرض الشاشة عند كل نقطة تحول.</p>
+        <hr>
+        <h2 dir="rtl">الـ breakpoints</h2>
+        <p dir="rtl">هل لاحظت أنه في نقطة معينة ستصبح هذه النسب غير مقبولة حيث أنه لن يتم عرض الموقع بالشكل الذي سيسهل على المستخدم التعامل معة لنفترض بأنه لدينا محتوى في الـ layout التي قمنا بعملها اعلاة وعند فتح الموقع من شاشة صغيرة سيكون ترتيب المحتوى كالتالي:<br></p>
+        <div class="lightbox-wrapper" dir="ltr">
+          <a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr">
+          <img src="{% static 'images/html_css/13/13.png'%}" alt="image" class="image">
+          </a>
+        </div>
+        <p></p>
+        <p dir="rtl"><strong dir="rtl">بالتأكيد هذا شئ لانريد أن يحصل فعرض المعلومات بهذه الطريقة سيجعل تجربة المستخدم سيئة جداً.</strong></p>
+        <p dir="rtl">عندما تواجه نقطة تحول في عرض الشاشة يصبح فيها طريقة عرض المحتوى غير مقبول نسمي هذا النقطة بالـ breakpoint ونحتاج لأن نقوم بالتعامل مع التصميم عند هذا العرض المحدد حتى نعطي المستخدم التجربة المطلوبة.</p>
+        <p dir="rtl"><strong dir="rtl">فكيف سيتم ذلك؟</strong><br>
+          لننتقل للنقطة التالية حتى تعرف ذلك
+        </p>
+        <hr>
+        <h2 dir="rtl">الـ  Media Queries</h2>
+        <p dir="rtl">في التصميم أعلاة وصلنا إلى نقطة أصبح فيه عرض عمودين بجوار بعضهما مرفوض ونريد ان نقوم بتحويل طريقة العرض إلى عمود واحد في كل صف بمجرد وصولنا إلى نقطة الـ breakpoint وللقيام بذلك سنحتاج إلى تقنية نستطيع تغيير تنسيقات الصفحة عند ذلك العرض المحدد.</p>
+        <p dir="rtl">هنا سيأتي دور ما يسمى بالـ Media Queries حيث أنها ستساعدنا على إضافة وتعديل تنسيقات الـ CSS عندما يتحقق شرط معين وفي حالتنا شرطنا هو العرض المحدد width الذي تحصل عندة الـ breakpoint.</p>
+        <p dir="rtl"><strong dir="rtl">سنقوم بمناقشة الـ Media Queries بالتفصيل في الدرس القادم, في هذا الدرس سنأخذ مثال بسيط لتوضيح الفكرة.</strong></p>
+        <h3 dir="rtl">لنقم بإصلاح المشكلة بإستخدام  توجة الشاشات الأكبر أولاً Desktop-first approach</h3>
+        <p dir="rtl">كم إتفقنا سابقاً انه في هذا التوجة يتم أولاً تصميم الموقع ليبدوا جيداً على الشاشات الكبيرة وهذا ما قمنا نحن به في تصميمنا التالي:<br></p>
+        <div class="lightbox-wrapper" dir="ltr">
+          <a class="lightbox" title="image.png" rel="nofollow noopener" dir="ltr">
+          <img src="{% static 'images/html_css/13/14.png'%}" alt="image" class="image">
+          </a>
+        </div>
+        <p></p>
+        <p dir="rtl">الأن سنحتاج لأن نقوم بالإهتمام بالشاشات الأصغر لنفترض بأنني أريد أقوم بتغيير طريقة عرض الاعمدة التي واجهنا فيها مشاكل عندما يكون أكبر عرض لشاشة المستخدم هو 768px وما دون ذلك</p>
+        <p dir="rtl">بمعنى ان إستهدافنا سيكون على الشاشات كالتالي:</p>
+        <pre>
+<code>max-width: 768px</code>
+        </pre>
+        <p dir="rtl">لذا سأقوم بكتابة كود الـ Media Query في أخر ملف الـ CSS كالتالي:</p>
+        <pre>
+<code>@media (max-width: 768px) {
+    //التنسيقات التي ستطبق على الشاشات المحددة هنا
+}</code>
+        </pre>
+        <p dir="rtl">الان نستطيع كتابة تنسيقات جديدة او تعديل تنسيقات سابقة بداخل هذا الكود ولن يكون لها أي تأثير الا عند تحقق الشرط والذي هو ان تكون الشاشة التي يتم تصفح الموقع من خلالها عرضها اقل او يساوي 768px.</p>
+        <p dir="rtl">عند تلك الـ breakpoint أريد أن أجعل عرض كلاً من العمودين يساوي <code dir="ltr">100%</code> لذا سأكتوب التنسيقات كالتالي:</p>
+        <pre>
+<code>@media (max-width: 768px) {
+	section{
+		width: 100%;
+	}
+	aside{
+		width: 100%;
+	}
+}</code>
+        </pre>
+        <details dir="rtl">
+          <summary dir="rtl">
+            الكود كاملاً
+          </summary>
+          <pre>
+<code>.container{
+	width: 80%;
+	margin: 0 auto;
+}
+header{
+	width: 100%;
+	background: #98d6ce;
+	height: 100px;
+}
+section{
+	width: 70%;
+	height: 500px;
+	float: left;
+	background: #f0f0f0;
+	margin-top: 15px;
+}
+aside{
+	width: 28%;
+	height: 500px;
+	float: right;
+	background: #98aed6;
+	margin-top: 15px;
+}
+@media (max-width: 768px) {
+	section{
+		width: 100%;
+	}
+	aside{
+		width: 100%;
+	}
+}</code>
+          </pre>
+          <pre>
+<code>&lt;div class="container"&gt;
+   &lt;header&gt;&lt;/header&gt;
+   &lt;main&gt;
+      &lt;section&gt;&lt;/section&gt;
+      &lt;aside&gt;&lt;/aside&gt;
+   &lt;/main&gt;
+&lt;/div&gt;</code>
+          </pre>
+        </details>
+        <p dir="rtl"><strong dir="rtl">لنشاهد النتيجة:</strong><br></p>
+        <div class="lightbox-wrapper" dir="ltr">
+          <a class="lightbox" title="media.gif" rel="nofollow noopener" dir="ltr">
+          <img src="{% static 'images/html_css/13/15.gif'%}" alt="media" class="image">
+          </a>
+        </div>
+        <p></p>
+        <p dir="rtl"><strong dir="rtl">ما الذي حصل؟</strong><br>
+          بمجرد ما إن تحقق الشرط الذي وضعته في الـ Media Query حتى تم إستدعاء التنسيقات الجديدة والتي طغت على التنسيقات القديمة  مما جعل عرض العمودين 100% لهذا نزل العمود الجانبي لأسفل وترك العمود الأيسر يأخذ المساحة كاملة.
+        </p>
+        <p dir="rtl"><strong dir="rtl">الأن أصبح بإمكان المستخدم الحصول على تجربة رائعة سوا كان على جهاز كمبيوتر او على هاتف ذكي</strong></p>
+        <hr>
+        <h2 dir="rtl">متى تعرف أنه هناك breakpoint يجب التعامل معها؟</h2>
+        <p dir="rtl">هناك بعض المطورين يقوموا بعمل Media Query خاصة بكل شاشة فعندما تشاهد الكود الخاص به تجد بأنه يقوم بعمل تصميم خاص بأيفون 6 وأخر خاص بـ ايفون 6 بلس وأخر من أجل أيفون x وأخر من الأجل جلاكسي نوت واخر من أجل الأيباد … لن أتوقف من سرد الشاشات المختلفة.</p>
+        <p dir="rtl">هذا من أسوء الممارسات فما يجب عليك هو ان تجعل محتوى الموقع الذي تقوم بتصميمة يحدد لك متى يوجد لديك breakpoint يجب التعامل معها. فاذا بدأت على سبيل المثال بالتصميم بإستخدام توجة الـ Mobile-frist فأعمل بهذه النصيحة المقتبسة:</p>
+        <blockquote dir="ltr">
+          <p dir="ltr">Start with the small screen first, then expand until it looks like shit. TIME FOR A BREAKPOINT!<br>
+            <em dir="ltr">– Stephen Hay</em>
+          </p>
+        </blockquote>
+        <p dir="rtl">وبنفس الإسلوب إعمل مع توجة الـ Desktop-first</p>
+        <hr>
+        <h2 dir="rtl">كيف أستطيع إختيار أحد التوجهات في تطوير المواقع التجاوبية؟</h2>
+        <p dir="rtl">إختيارك لأي من التوجهات يعتمد على المشروع الذي تعمل علية و المستخدمين الذين يستهدفهم هذا المشروع  بالإضافة إلى أهمية المحتوى ونوعة.</p>
+        <hr>
+        <h2 dir="rtl">إستخدام الـ Frameworks</h2>
+        <p dir="rtl">يوجد العديد من الـ Frameworks التي تساعدك على عمل المواقع التجاوبية وأشهرها هو Bootstrap في الحقيقة لا يوجد مشكلة في إستخدامة أو غيرة وإنما المشكلة هي أن تكون معتمد عليه بشكل كامل للقيام بعملك ولا تستطيع القيام بنفس المهمة بدونه.</p>
+        <p dir="rtl">كذلك الملاحظ هو أن بعض المطورين يقوموا بإستدعاء جميع خصائص framework معين من أجل إستخدام خاصية واحدة على سبيل المثال إستدعاء جميع المكاتب وملفات الـ Bootstrap من أجل إستخدام الـ Grid system فقط بينما تستطيع عمل Customize لتحميل العناصر التي سوف تحتاج لإستخدامها في مشروعك.</p>
+        <p dir="rtl"><strong dir="rtl">هل سبق لك وأن سمعت عن الـ Hybrid Mobile Application Frameworks ؟</strong></p>
+        <p dir="rtl">أحببت الإشارة إلى هذه الـ frameworks فربما تثير فضولك حيث أنها تتيح لك إنشاء تطبيقات هجينة للجوالات بإستخدام تقنيات الـ Front-end قم بالبحث عن الموضوع وهنا أحد الأمثلة <a href="https://framework7.io" rel="nofollow noopener" dir="ltr">framework7</a></p>
+        <h2 dir="rtl">الـ Progressive Web Applications</h2>
+        <p dir="rtl">كذلك لا تنسى أن تقوم بالبحث والقرأة عن أحد أهم التقنيات الحديثة والتي لا تريد أن تفوتك ضعها في قائمتك لتحترفها في الوقت المناسب وتسمى بالـ <a href="https://developers.google.com/web/progressive-web-apps/" rel="nofollow noopener" dir="ltr">Progressive web apps</a></p>
+        <p dir="rtl"><a href="https://pwa.rocks" rel="nofollow noopener" dir="rtl"><strong dir="rtl">من هنا</strong></a> ستجد أمثلة عن الـ Progressive applications قم بفتحها بجوالك ومن ثم إتبع الخطوات التالية لتحصل على تطبيق<br></p>
+        <div class="lightbox-wrapper" dir="ltr">
+          <a class="lightbox" title="image.jpg" rel="nofollow noopener" dir="ltr">
+          <img src="{% static 'images/html_css/13/16.png'%}" alt="image" class="image">
+          </a>
+        </div>
+        <p></p>
+        <p dir="rtl">بنفس الفكرة تستطيع حفظ الموقع كتطبيق بإستخدام جهاز الـ Android قم بإكتشاف الطريقة وشرحها لنا في التعليقات</p>
+        <p dir="rtl"><strong dir="rtl">اليس ذلك رائع!</strong> فاليوم أصبح بإمكان مطوري الواجهات عمل مشروع واحد ليعمل كتطبيق على الـ IOS و الـ Android و الـ Web</p>
+        <hr>
+        <h1 dir="rtl">مهمة اليوم</h1>
+        <p dir="rtl">قمنا في الدرس بحل مشكلة تجاوبية الموقع بإستخدام توجة الـ Desktop-first أريد منك أن تقوم بعمل التعديلات بنفس الفكرة ولكن هذه المرة سيكون obile-first</p>
+        <p dir="rtl">قم بعمل ذلك بمساعدة المصادر أدناة ومن ثم شاركنا عملك عبر GitHub او Codepen أو أي طريقة أخرى مناسبة لك</p>
+        <p dir="rtl">إقراء هذه المصادر</p>
+        <p dir="rtl"><a href="https://zellwk.com/blog/how-to-write-mobile-first-css/" rel="nofollow noopener" dir="rtl">ـ How To Write Mobile-first CSS | Zell Liew</a></p>
+        <p dir="rtl">ـ <a href="https://developers.google.com/web/fundamentals/design-and-ux/responsive/" rel="nofollow noopener" dir="ltr">Responsive Web Design Basics</a></p>
+        <hr>
+        <p dir="rtl"><a href="https://mediaqueri.es" rel="nofollow noopener" dir="rtl">هنا موقع رائع يجمع المواقع الـ Responsive قم بالإطلاع عليها والإستلهام منه</a></p>
+        <hr>
+      </div>
+    </div>
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
 </html>

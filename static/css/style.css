@@ -85,7 +85,6 @@ a {
 
 pre {
 	direction: ltr;
-	overflow-x: auto;
 }
 
 
@@ -1135,7 +1134,6 @@ hr {
 
 pre {
 	text-align: left;
-	max-height: 600px;
 }
 
 .emoji {
@@ -1214,6 +1212,10 @@ aside .active {
 /*Change codes line height*/
 pre{
 	line-height: 20px;
+}
+pre>code{
+	overflow-x: auto;
+	max-height: 600px;
 }
 
 

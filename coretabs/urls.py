@@ -34,3 +34,5 @@ urlpatterns = [
     path('contributors/', views.contributors, name='contributors'),
 ]
 
+handler404 = 'coretabs.views.handler404'
+handler500 = 'coretabs.views.handler500'
