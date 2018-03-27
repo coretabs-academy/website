@@ -11,6 +11,10 @@ body{
 	font-family: 'Cairo', 'Open Sans', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /*=====================================
 Nav Style
 =======================================*/
@@ -26,13 +30,14 @@ nav{
   
 }
 #logo{
-	width: 200px;
+	width: auto;
 	height: 40px;
 	color: #fff;
 	text-align: left;
 	font-weight: 700;
 	font-size: 30px;
-	text-shadow: 0px 2px 0px #58156a;
+	text-shadow: 1px 2px 0px #58156a;
+	margin-top: 3px;
 	
 }
 #logo span{
@@ -49,7 +54,7 @@ nav{
 	align-items: center;
 	background: #400f8f;
 	text-decoration: none;
-	margin-right: 30px;
+	margin-right: 20px;
 	text-shadow: 0px 2px 0px #2b0a65;
 	
 }
@@ -62,7 +67,7 @@ section{
 	height: auto;
 	padding: 60px 0;
 }
-.container{
+.cont-container{
 	width: 100%;
 	margin: 0 auto;
 	text-align: center;
@@ -93,7 +98,7 @@ Main Style
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
-	margin-bottom: 60px;
+ 	margin-bottom: 60px;
 }
 .awesome-person{
 	min-width: 250px;
@@ -102,7 +107,6 @@ Main Style
 	text-align: center;
 	background-image: linear-gradient(rgba(84, 0, 255, 0.8), rgba(202, 62, 75, 0.8));
 	position: relative;
-	cursor: pointer;
 }
 .front img{
 	width: 100%;
@@ -159,6 +163,34 @@ Main Style
 	min-width: 250px;
 	margin: 10px;
 }
+.icons{
+	margin-top: 20px;
+}
+
+.icons a{
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+	transition: all 0.5s;
+	margin: 3px;
+	text-decoration: none;
+	position: relative;
+}
+.icons a:hover{
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+.join-team{
+	margin-bottom: 20px;
+}
+.join-team a{
+	padding: 10px 35px;
+	background: #77239b;
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.3em;
+}
+
 
 
 
@@ -167,10 +199,10 @@ Footer Style
 =======================================*/
 
 footer {
-	background: #222;
+	background: #f0f0f0;
 	width: 100%;
 	line-height: 50px;
-	color: #fff;
+	color: #666;
 	text-align: center;
 }
 
@@ -189,13 +221,11 @@ footer img{
 Selection Style
 =======================================*/
 
-::-moz-selection {
+::-moz-selection,
+::selection{
 	background: #e8e8e8;
 }
 
-::selection {
-	background: #e8e8e8;
-}
 ::selection,
 ::-moz-selection{
 	color: #333;
@@ -212,23 +242,16 @@ Scrollbar Style
 	height: 5px;
 }
 
-::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-thumb:active
+{
 	background: #ccc;
 }
-
-::-webkit-scrollbar-thumb:hover {
-	background: #ccc;
-}
-
-::-webkit-scrollbar-thumb:active {
-	background: #ccc;
-}
-
 
 /*=====================================
 Media Style
 =======================================*/
-
 @media only screen and (max-width: 769px){
 	section p{
 		width: 90%;
@@ -236,14 +259,15 @@ Media Style
 	#contributers{
 		width: 100%;
 	}
+	.dummy-div:nth-of-type(even){
+		display: none;
+	}
 }
-
 @media only screen and (max-width: 600px){
 	
 	.awesome-person,
 	.dummy-div{
 		min-width: 180px;
-		height: 250px;	
 	}
 
 	.awesome-person h2{
@@ -254,3 +278,4 @@ Media Style
 	}
 	
 }
+

@@ -7,7 +7,9 @@
       <title>[الدرس السادس]: Basic Structure of an HTML Document</title>
       <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+      <script src="{% static 'js/jquery-3.3.1.min.js'%}"></script>
+      <link rel="stylesheet" href="{% static 'css/github.min.css'%}">
+      <script src="{% static 'js/highlight.pack.js'%}"></script>
    </head>
    <body>
       <div class="navbar">
@@ -41,26 +43,23 @@
             <h1 dir="rtl">الهيكل الأساسي لصفحة الويب</h1>
             <hr>
             <p dir="rtl">في هذا الدرس سنتعرف على البنية الأساسية لأي مستند HTML</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!doctype html&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;html&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;head&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">charset=</span><span style="color: #4e9a06">"utf-8"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;title&gt;</span>Untitled Document<span style="color: #204a87; font-weight: bold">&lt;/title&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;/head&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;body&gt;</span>
-
-<span style="color: #204a87; font-weight: bold">&lt;/body&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;/html&gt;</span>
-</pre>
-            </div>
+            <pre>
+              <code>&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Untitled Document&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code>
+            </pre>
             <ul dir="rtl">
                <li dir="rtl">قم في بدأية الكود بتحديد نوع مستند الـ HTML الذي سنعمل علية في هذه الحالة سنستخدم HTML5 ولتحديد ذلك نستخدم الكود التالي:</li>
             </ul>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!doctype html&gt;</span>
-</pre>
-            </div>
+            <pre>
+              <code>&lt;!doctype html&gt;</code>
+            </pre>
             <p dir="rtl">لا تقوم بوضع أي كود قبل كود تعريف نوع المستند حتى وإن كان تعليق</p>
             <hr>
             <ul dir="rtl">

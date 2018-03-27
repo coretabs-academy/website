@@ -7,7 +7,9 @@
       <title>[الدرس الرابع]: عناصر div, p and span والفرق بينهم</title>
       <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+      <script src="{% static 'js/jquery-3.3.1.min.js'%}"></script>
+      <link rel="stylesheet" href="{% static 'css/github.min.css'%}">
+      <script src="{% static 'js/highlight.pack.js'%}"></script>
    </head>
    <body>
       <div class="navbar">
@@ -49,20 +51,18 @@
                <li dir="rtl">نستخدم وسم <code dir="ltr">&lt;div&gt;</code> لتقسيم الموقع لاجزء معينة حتى نستطيع تطبيق تصميم معين عليها بإستخدام لغة التنسيقات CSS</li>
                <li dir="rtl">جميع العناصر يمكن ضمها بداخل العنصر <code dir="ltr">div</code></li>
             </ul>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div&gt;</span>
-<span style="color: #8f5902; font-style: italic">&lt;!--other elements--&gt;</span>
-<span style="color: #8f5902; font-style: italic">&lt;!--هنا العناصر الأخرى--&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
-</pre>
-            </div>
+            <pre>
+              <code>&lt;div&gt;
+    &lt;!--other elements--&gt;
+    &lt;!--هنا العناصر الأخرى--&gt;
+&lt;/div&gt;</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">مثال</strong> :</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div&gt;</span>
- <span style="color: #204a87; font-weight: bold">&lt;h1&gt;</span>hello world!<span style="color: #204a87; font-weight: bold">&lt;/h1&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
-</pre>
-            </div>
+            <pre>
+              <code>&lt;div&gt;
+    &lt;h1&gt;hello world!&lt;/h1&gt;
+&lt;/div&gt;</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong></p>
             <h1 dir="ltr">hello world!</h1>
             <hr>
@@ -73,52 +73,47 @@
                <li dir="rtl">حيث نستخدم وسمَي <code dir="ltr">&lt;p&gt;</code> لكتابة الفقرات (paragraph) فقط وتطبيق تصميم معين عليها بإستخدام لغة التنسيقات CSS</li>
                <li dir="rtl">لا يمكنك ضم أي عنصر بداخل هذا الوسم الا اذا كان عنصر لعمل تنسيقات على النصوص مثل وسم <code dir="ltr">&lt;strong&gt;&lt;/strong&gt;</code></li>
             </ul>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;p&gt;</span>
- <span style="color: #8f5902; font-style: italic">&lt;!--only text and text formating tags--&gt;</span>
- <span style="color: #8f5902; font-style: italic">&lt;!--هنا فقط نصوص و وسوم تنسيق النصوص--&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
-</pre>
-            </div>
+            <pre>
+              <code>&lt;p&gt;
+ &lt;!--only text and text formating tags--&gt;
+ &lt;!--هنا فقط نصوص و وسوم تنسيق النصوص--&gt;
+&lt;/p&gt;</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">مثال</strong> :</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;p&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;strong&gt;</span>hello <span style="color: #204a87; font-weight: bold">&lt;em&gt;</span>world!<span style="color: #204a87; font-weight: bold">&lt;/em&gt;&lt;/strong&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
-</pre>
-            </div>
+            <pre>
+              <code>&lt;p&gt;
+  &lt;strong&gt;hello &lt;em&gt;world!&lt;/em&gt;&lt;/strong&gt;
+&lt;/p&gt;</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong></p>
             <p dir="ltr"><strong dir="ltr">hello <em dir="ltr"> world!</em></strong></p>
             <p dir="rtl">لا يمكنك وضع <code dir="ltr">div</code> بداخل <code dir="ltr">p</code> ولكن العكس صحيح.</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;p&gt;</span>
-  <span style="color: #204a87; font-weight: bold">&lt;div&gt;</span>هذا الكود غير صحيح<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
-</pre>
-            </div>
+            <pre>
+              <code>&lt;p&gt;
+  &lt;div&gt;هذا الكود غير صحيح&lt;/div&gt;
+&lt;/p&gt;</code>
+            </pre>
             <hr>
             <h2 dir="rtl">وسم span</h2>
             <p dir="rtl">هذا الوسم كذلك خاص بالنصوص فيتم إستخدامة لعمل تنسيق معين لجزء معين من النص</p>
             <img class="image" src="{% static 'images/html_css/4/3.jpg'%}">
             <p dir="rtl"><strong dir="rtl">مثال:</strong></p>
             <p dir="rtl">قمنا بعمل فقرة بإستخدام وسم <code dir="ltr">&lt;p&gt;</code> وعملنا لها استايل يغير لون الفقرة الى الأحمر</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;p</span> <span style="color: #c4a000">style=</span><span style="color: #4e9a06">"color:red;"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+            <pre>
+              <code>&lt;p style="color:red;"&gt;
    Hello World!
-<span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
-</pre>
-            </div>
+&lt;/p&gt;</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">هذه النتيجة:</strong><br></p>
             <img class="image" src="{% static 'images/html_css/4/4.jpg'%}">
             <p dir="rtl">لنفترض أننا نريد أن نغير لون كلمة <code dir="ltr">World!</code> وحدها للون الأزرق</p>
             <p dir="rtl">في هذه الحالة سنستخدم وسم <code dir="ltr">&lt;span&gt;</code> لان وجوده لا يؤثر على الجملة الا اذا تم تحديد تنسيق معين له.</p>
             <p dir="rtl">في الكود التالي تم تحويط كلمة <code dir="ltr">World!</code> بإستخدام وسم <code dir="ltr">span</code> وتم إضافة تنسيق تغيير اللون للازرق</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;p</span> <span style="color: #c4a000">style=</span><span style="color: #4e9a06">"color:red;"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
-  Hello <span style="color: #204a87; font-weight: bold">&lt;span</span> <span style="color: #c4a000">style=</span><span style="color: #4e9a06">"color:blue;"</span><span style="color: #204a87; font-weight: bold">&gt;</span>World!<span style="color: #204a87; font-weight: bold">&lt;/span&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
-</pre>
-            </div>
+            <pre>
+              <code>&lt;p style="color:red;"&gt;
+  Hello &lt;span style="color:blue;"&gt;World!&lt;/span&gt;
+&lt;/p&gt;</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
             <img class="image" src="{% static 'images/html_css/4/5.jpg'%}">
             <hr>

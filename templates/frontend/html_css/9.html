@@ -7,7 +7,9 @@
       <title>[الدرس التاسع]: CSS margin Property</title>
       <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+      <script src="{% static 'js/jquery-3.3.1.min.js'%}"></script>
+<link rel="stylesheet" href="{% static 'css/github.min.css'%}">
+<script src="{% static 'js/highlight.pack.js'%}"></script>
    </head>
    <body>
       <div class="navbar">
@@ -53,64 +55,57 @@
                <li dir="rtl">هامش من اليسار</li>
             </ul>
             <p dir="rtl"><strong dir="rtl">لنأخذ مثال:</strong></p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"margin-test"</span><span style="color: #204a87; font-weight: bold">&gt;&lt;/div&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;style&gt;</span>
-   <span style="color: #000000">.margin-test</span><span style="color: #000000; font-weight: bold">{</span>
-   <span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">980px</span><span style="color: #000000; font-weight: bold">;</span>
-   <span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">100px</span><span style="color: #000000; font-weight: bold">;</span>
-   <span style="color: #204a87; font-weight: bold">background-color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#0c214e</span><span style="color: #000000; font-weight: bold">;</span>
-   <span style="color: #204a87; font-weight: bold">margin-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">60px</span><span style="color: #000000; font-weight: bold">;</span>
-   <span style="color: #204a87; font-weight: bold">margin-left</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">80px</span><span style="color: #000000; font-weight: bold">;</span>
-   <span style="color: #000000; font-weight: bold">}</span>
-<span style="color: #204a87; font-weight: bold">&lt;/style&gt;</span>
-</pre>
-            </div>
+            <pre>
+<code>&lt;div class="margin-test"&gt;&lt;/div&gt;
+&lt;style&gt;
+   .margin-test{
+     width: 980px;
+     height: 100px;
+     background-color: #0c214e;
+     margin-top: 60px;
+     margin-left: 80px;
+   }
+&lt;/style&gt;</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">النتيجة :</strong><br></p>
             <img class="image" src="{% static 'images/html_css/9/2.png'%}">
             <p dir="rtl">شاهد كيف قمت بإعطاء الصندوق هامش من اليسار ب 80 بيكسل ومن الأعلى 60 بيكسل.</p>
             <hr>
             <h2 dir="rtl">كيف أستفيد من هذه الخاصية لتوسيط أي عنصر</h2>
             <p dir="rtl">خاصية <code dir="ltr">margin</code> تكون قيمتها الإفتراضية <code dir="ltr">0</code> في حال عدم تغييرك لها و بإمكانك إعطائها قيمة <code dir="ltr">auto</code> لنأخذ هذا المثال:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.margin-test</span> <span style="color: #000000; font-weight: bold">{</span>
-    <span style="color: #204a87; font-weight: bold">margin-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">60px</span><span style="color: #000000; font-weight: bold">;</span>
-    <span style="color: #204a87; font-weight: bold">margin-left</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
-<span style="color: #000000; font-weight: bold">}</span>
-</pre>
-            </div>
+            <pre>
+<code>.margin-test {
+  margin-top: 60px;
+  margin-left: auto;
+}</code>
+            </pre>
             <p dir="rtl">عندما يشاهد المتصفح الكود أعلاة فسيقوم بالتالي:</p>
             <p dir="rtl">1- إعطاء العنصر هامش من أعلى بمقدار 60 بيكسل</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">margin-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">60px</span><span style="color: #ce5c00; font-weight: bold">;</span>
-</pre>
-            </div>
+            <pre>
+<code>margin-top: 60px;</code>
+            </pre>
             <p dir="rtl">2- سيقوم بحساب الهامش تلقائياً إعتماداً على قيمة الهامش الذي قمنا بتحديدة للعنصر من جهة اليمين</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">margin-left</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #ce5c00; font-weight: bold">;</span>
-</pre>
-            </div>
+            <pre>
+<code>margin-left: auto;</code>
+            </pre>
             <p dir="rtl">3- سيقوم بإعطاء العنصر هامش من اليمين بقيمة 0 وذلك لانها القيمة الإفتراضية ولم نقم نحن بتغييرها</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">margin-right</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">0</span><span style="color: #ce5c00; font-weight: bold">;</span>
-</pre>
-            </div>
+            <pre>
+<code>margin-right: 0;</code>
+            </pre>
             <p dir="rtl">3- سيقوم بإعطاء العنصر هامش من الأسفل بقيمة 0 لنفس السبب</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">margin-bottom</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">0</span><span style="color: #ce5c00; font-weight: bold">;</span>
-</pre>
-            </div>
+            <pre>
+<code>margin-bottom: 0;</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">بما أننا حددنا للمتصفح بإعطاء العنصر هامش من اليمين (<code dir="ltr">margin-right</code> ) بقيمة 0 اذا سيقوم بإعطاء الأولوية لتطبيق هذا الأمر ولن يكون لـ auto نتيجة ملحوظة كالتالي:</strong></p>
             <img class="image" src="{% static 'images/html_css/9/3.png'%}">
             <p dir="rtl"><strong dir="rtl">لكن ما الذي سيحصل اذا ما قمنا بإعطاء العنصر هامش من اليمين واليسار بنفس القيمة وهي <code dir="ltr">auto</code> <img class="image" src="{% static 'images/html_css/9/4.png'%}" title=":thinking:" alt=":thinking:" style="width:30px;"> ؟</strong></p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">.margin-test</span><span style="color: #000000; font-weight: bold">{</span>
-    <span style="color: #204a87; font-weight: bold">margin-top</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">60px</span><span style="color: #000000; font-weight: bold">;</span>
-    <span style="color: #204a87; font-weight: bold">margin-left</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
-    <span style="color: #204a87; font-weight: bold">margin-right</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
-<span style="color: #000000; font-weight: bold">}</span>
-</pre>
-            </div>
+            <pre>
+<code>.margin-test{
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">شاهد النتيجة :</strong><br></p>
             <img class="image" src="{% static 'images/html_css/9/5.png'%}">
             <p dir="rtl">قام المتصفح بإحتساب الهوامش من اليمين واليسار بشكل تلقائي مما جعل العنصر في وسط الصفحة.</p>
@@ -126,10 +121,9 @@
             <p dir="rtl">ركز على الصور التالية حتى تعرف كيف ستقوم بتحديد أي قيمة هي التي تخص الهامش الأعلى او الأسفل وغيرة</p>
             <img class="image" src="{% static 'images/html_css/9/8.png'%}">
             <p dir="rtl">لاحظ قمت بكتابة كل القيم كالتالي :</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">margin</span><span style="color: #5c35cc; font-weight: bold">:100px</span> <span style="color: #204a87; font-weight: bold">auto</span> <span style="color: #204a87; font-weight: bold">100px</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #ce5c00; font-weight: bold">;</span>
-</pre>
-            </div>
+            <pre>
+<code>margin:100px auto 100px auto;</code>
+            </pre>
             <p dir="rtl">قمنا بوضع كل القيم بجوار بعضها وسيقوم المتصفح بالمرور عليها وتقسيمها على الاتجاهات حسب إتجاة عقارب الساعة هكذا</p>
             <p dir="rtl"><strong dir="rtl">أعلى</strong> يمين تحت يسار = <strong dir="ltr">100</strong> auto 100 auto</p>
             <hr>
@@ -138,10 +132,9 @@
             <p dir="rtl">اذا هناك شي يربط بين هذه الاتجاهات فهناك الإتجاة وضدة فلنقوم بدمجهما مع بعض.</p>
             <img class="image" src="{% static 'images/html_css/9/9.png'%}">
             <p dir="rtl">ليصبح لدينا الكود كالتالي</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">margin</span><span style="color: #5c35cc; font-weight: bold">:100px</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #ce5c00; font-weight: bold">;</span>
-</pre>
-            </div>
+            <pre>
+<code>margin:100px auto;</code>
+            </pre>
             <hr>
             <p dir="rtl">وهنا طريقة أخرى بنفس الفكرة لكن هذه المرة قمنا بدمج هامش اليمين واليسار في قيمة واحدة</p>
             <img class="image" src="{% static 'images/html_css/9/10.png'%}">
@@ -151,38 +144,32 @@
             <p dir="rtl">ماذا لو اردت إعطاء جميع الإتجاهات نفس القيمة ؟<br></p>
             <img class="image"
             <p dir="rtl">حينها سنضع قيمة واحد وستحسب للجميع</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">margin</span><span style="color: #5c35cc; font-weight: bold">:100px</span><span style="color: #ce5c00; font-weight: bold">;</span>
-</pre>
-            </div>
+            <pre>
+<code>margin:100px;</code>
+            </pre>
             <hr>
             <p dir="rtl"><strong dir="rtl">لتقوم بهذه التمارين حتى لا ترتبك</strong><br>
                1- لنعطي العنصر هامش من اعلى 20 بيكسل ومن اليمين 30 بيكسل ومن اسفل 50 بيكسل ومن اليسار 25 بيسكل
             </p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">margin</span><span style="color: #5c35cc; font-weight: bold">:20px</span> <span style="color: #204a87; font-weight: bold">30px</span> <span style="color: #204a87; font-weight: bold">50px</span> <span style="color: #204a87; font-weight: bold">25px</span><span style="color: #ce5c00; font-weight: bold">;</span>
-</pre>
-            </div>
+            <pre>
+<code>margin:20px 30px 50px 25px;</code>
+            </pre>
             <p dir="rtl">2- لنعطي العنصر من أعلى 0 بيكسل ومن اليمين 20 بيكسل ومن الأسفل 0 بيكسل ومن اليسار 10 بيكسل</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">margin</span><span style="color: #5c35cc; font-weight: bold">:0px</span> <span style="color: #204a87; font-weight: bold">20px</span> <span style="color: #204a87; font-weight: bold">0px</span> <span style="color: #204a87; font-weight: bold">10px</span><span style="color: #ce5c00; font-weight: bold">;</span>
-</pre>
-            </div>
+            <pre>
+<code>margin:0px 20px 0px 10px;</code>
+            </pre>
             <p dir="rtl">بإمكانك عدم كتابة <code dir="ltr">px</code> بعد القيمة <code dir="ltr">0</code></p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">margin</span><span style="color: #5c35cc; font-weight: bold">:0</span> <span style="color: #204a87; font-weight: bold">20px</span> <span style="color: #204a87; font-weight: bold">0</span> <span style="color: #204a87; font-weight: bold">10px</span><span style="color: #ce5c00; font-weight: bold">;</span>
-</pre>
-            </div>
+            <pre>
+<code>margin:0 20px 0 10px;</code>
+            </pre>
             <p dir="rtl">3- لنعطي العنصر من أعلى 0 بيكسل ومن اليمين واليسار 20 بيكسل ومن الأسفل 30 بيكسل</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">margin</span><span style="color: #5c35cc; font-weight: bold">:0px</span> <span style="color: #204a87; font-weight: bold">20px</span> <span style="color: #204a87; font-weight: bold">30px</span><span style="color: #ce5c00; font-weight: bold">;</span>
-</pre>
-            </div>
+            <pre>
+<code>margin:0px 20px 30px;</code>
+            </pre>
             <p dir="rtl">4- لنعطي العنصر هامش 10 بيكسل من جميع الإتجاهات</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">margin</span><span style="color: #5c35cc; font-weight: bold">:10px</span><span style="color: #ce5c00; font-weight: bold">;</span>
-</pre>
-            </div>
+            <pre>
+<code>margin:10px;</code>
+            </pre>
             <hr>
             <p dir="rtl"><strong dir="rtl">قم بكتابة الكود الذي سيعطي العنصر من أعلى 0 بيكسل ومن اليمين auto ومن الأسفل 0 بيكسل ومن اليسار auto</strong></p>
             <hr>

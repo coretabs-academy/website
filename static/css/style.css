@@ -85,7 +85,6 @@ a {
 
 pre {
 	direction: ltr;
-	overflow-x: auto;
 }
 
 
@@ -1203,16 +1202,6 @@ hr {
 	margin: 20px auto;
 }
 
-.code {
-	background: #f8f8f8;
-	overflow: auto;
-	width: auto;
-	border-radius: 0px;
-	margin: 15px 0;
-	border-width: 0em;
-	padding: 1em .8em;
-}
-
 .projects--title {
 	top: 0;
 	width: 100%;
@@ -1251,7 +1240,7 @@ hr {
 	transition: .5s ease-in-out;
 }
 
-code {
+:not(pre)>code {
 	background: #f8f8f8;
 	border: 1px solid #c4c4c4;
 	color: #D81B60;
@@ -1263,7 +1252,6 @@ code {
 
 pre {
 	text-align: left;
-	max-height: 600px;
 }
 
 .emoji {
@@ -1337,4 +1325,13 @@ aside .active {
 /*No Animation*/
 .no-an *{
 	transition-duration:0s;
+}
+
+/*Change codes line height*/
+pre{
+	line-height: 20px;
+}
+pre>code{
+	overflow-x: auto;
+	max-height: 600px;
 }

@@ -7,7 +7,9 @@
       <title>[الجزء الأول: اليوم الثاني]: درس اليوم الأول الـ header + navbar</title>
       <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+      <script src="{% static 'js/jquery-3.3.1.min.js'%}"></script>
+      <link rel="stylesheet" href="{% static 'css/github.min.css'%}">
+      <script src="{% static 'js/highlight.pack.js'%}"></script>
    </head>
    <body>
       <div class="navbar">
@@ -51,17 +53,15 @@
             <p></p>
             <p dir="rtl"><strong dir="rtl">على سبيل المثال وسم <code dir="ltr">&lt;strong&gt;&lt;/strong&gt;</code>:</strong></p>
             <p dir="rtl">هذا وسم يقوم بالتأكيد على نص معين وكتابته <strong dir="rtl">بالخط العريض</strong>. عندما تريد إستهداف نص معين بهذا الوسم يجب عليك كتابة هذا النص بين وسمَي الفتح والإغلاق كالتالي</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%">One million <span style="color: #204a87; font-weight: bold">&lt;strong&gt;</span>Arab<span style="color: #204a87; font-weight: bold">&lt;/strong&gt;</span> Coder
-</pre>
-            </div>
+            <pre>
+            <code>One million &lt;strong&gt;Arab&lt;/strong&gt; Coder</code>
+            </pre>
             <p dir="rtl">نتيجة الكود كالتالي</p>
             <p dir="ltr">One million <strong dir="ltr">Arab</strong> Coder</p>
             <p dir="rtl">لكن لنفترض بأنك نسيت كتابة وسم الإغلاق كالتالي :</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%">One million <span style="color: #204a87; font-weight: bold">&lt;strong&gt;</span> Arab Coder
-</pre>
-            </div>
+            <pre>
+            <code>One million &lt;strong&gt; Arab Coder</code>
+            </pre>
             <p dir="rtl">النتيجة ستكون كالتالي:</p>
             <p dir="ltr">One million <strong dir="ltr">Arab Coder</strong></p>
             <p dir="rtl">لاحظ كيف تم التأكيد على جميع النصوص بعد وسم الفتح وكتابتها <strong dir="rtl">بالخط العريض</strong> وذلك لأن مستند الـ HTML لم يقوم بتعريف حدود تأثير هذا الوسم بإستخدام وسم الإغلاق.</p>
@@ -71,15 +71,13 @@
             <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="3.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/html_css/2/3.jpg'%}" alt="3" class="image"></a></div>
             <p></p>
             <p dir="rtl">على سبيل المثال وسم <code dir="ltr">&lt;img&gt;</code> كل ما تحتاج إلية لإضافة صورة هو تحديد مكانها وكتابة النص البديل الذي سيتم عرضة في حال لم يتم العثور على الصورة بالمسار الذي قمت بتحديدة.</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;img</span> <span style="color: #c4a000">src=</span><span style="color: #4e9a06">"img.jpg"</span> <span style="color: #c4a000">alt=</span><span style="color: #4e9a06">"my image"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
-</pre>
-            </div>
+            <pre>
+            <code>&lt;img src=&quot;img.jpg&quot; alt=&quot;my image&quot;&gt;</code>
+            </pre>
             <p dir="rtl">لا تحتاج أن تقوم بكتابة الوسم كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;img</span> <span style="color: #c4a000">src=</span><span style="color: #4e9a06">" "</span> <span style="color: #c4a000">alt=</span><span style="color: #4e9a06">" "</span><span style="color: #204a87; font-weight: bold">&gt;</span>هنا محتوى<span style="color: #204a87; font-weight: bold">&lt;/img&gt;</span>
-</pre>
-            </div>
+            <pre>
+              <code>&lt;img src=&quot; &quot; alt=&quot; &quot;&gt;هنا محتوى&lt;/img&gt;</code>
+            </pre>
             <p dir="rtl">حيث أنه لا يقوم بإستهداف محتوى محدد إنما يقوم بإدراج صورة.</p>
             <hr>
          </div>
