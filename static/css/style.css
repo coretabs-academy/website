@@ -1328,3 +1328,8 @@ aside .active {
 .no-an *{
 	transition-duration:0s;
 }
+
+/*Change codes line height*/
+pre{
+	line-height: 20px;
+}

@@ -8,8 +8,8 @@
       <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
       <script src="{% static 'js/jquery-3.3.1.min.js'%}"></script>
-<link rel="stylesheet" href="{% static 'css/github.min.css'%}">
-<script src="{% static 'js/highlight.pack.js'%}"></script>
+      <link rel="stylesheet" href="{% static 'css/github.min.css'%}">
+      <script src="{% static 'js/highlight.pack.js'%}"></script>
    </head>
    <body>
       <div class="navbar">
@@ -66,28 +66,24 @@
                <li dir="rtl">تحتوي الصفحة الواحدة على عنصر وحيد يحمل Id فريد خاص به دون غيرة</li>
             </ul>
             <p dir="rtl"><strong dir="rtl">مثال:</strong></p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"header"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
-<span style="color: #8f5902; font-style: italic">&lt;!--Header content here--&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
-</pre>
-            </div>
+            <pre>
+              <code>&lt;div id="header"&gt;
+  &lt;!--Header content here--&gt;
+&lt;/div&gt;</code>
+            </pre>
             <ul dir="rtl">
                <li dir="rtl">لاحظ قمت بإعطاء هذا الـ <code dir="ltr">div</code> هوية تعريفية خاصة به وحدة <code dir="ltr">(id)</code> بمعنى أنه لا يمكنني أن أقوم بإنشاء عنصر أخر وأعطية نفس الـ <code dir="ltr">id</code>.</li>
                <li dir="rtl">أستطيع الأن أن اقوم بإضافة تنسيقات لهذا العنصر دون سواه بإستخدام الـ CSS عن طريق إستهدافه بإسم الـ id الذي منحناة كالتالي:</li>
             </ul>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;style&gt;</span>
-
-  <span style="color: #000000">#header</span><span style="color: #000000; font-weight: bold">{</span>
-       <span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #0000cf; font-weight: bold">100</span><span style="color: #ce5c00; font-weight: bold">%</span><span style="color: #000000; font-weight: bold">;</span>
-       <span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #0000cf; font-weight: bold">200px</span><span style="color: #000000; font-weight: bold">;</span>
-       <span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#4c7bed</span><span style="color: #000000; font-weight: bold">;</span>
-   <span style="color: #000000; font-weight: bold">}</span>
-
-<span style="color: #204a87; font-weight: bold">&lt;/style&gt;</span>
-</pre>
-            </div>
+            <pre>
+              <code>&lt;style&gt;
+  #header{
+    width:100%;
+    height:200px;
+    background: #4c7bed;
+  }
+&lt;/style&gt;</code>
+            </pre>
             <p dir="rtl">لاحظ عند تعريف الـ <code dir="ltr">id</code> في الـ <code dir="ltr">CSS</code> نقوم بوضع <code dir="ltr">#</code> قبل إسم الـ <code dir="ltr">id</code></p>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
             <img class="image" src="{% static 'images/html_css/5/2.png'%}">
@@ -95,30 +91,27 @@
                <summary dir="rtl">
                   الكود كاملاً
                </summary>
-               <div class="code">
-                  <pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!doctype html&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;html&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;head&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">charset=</span><span style="color: #4e9a06">"utf-8"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;title&gt;</span>One Million Arab Coder<span style="color: #204a87; font-weight: bold">&lt;/title&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;style&gt;</span>
-
-  <span style="color: #000000">#header</span><span style="color: #000000; font-weight: bold">{</span>
-       <span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #0000cf; font-weight: bold">100</span><span style="color: #ce5c00; font-weight: bold">%</span><span style="color: #000000; font-weight: bold">;</span>
-       <span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #0000cf; font-weight: bold">200px</span><span style="color: #000000; font-weight: bold">;</span>
-       <span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#4c7bed</span><span style="color: #000000; font-weight: bold">;</span>
-   <span style="color: #000000; font-weight: bold">}</span>
-
-  <span style="color: #204a87; font-weight: bold">&lt;/style&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;/head&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;body&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"header"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
-<span style="color: #8f5902; font-style: italic">&lt;!--Header content here--&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;/body&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;/html&gt;</span>
-</pre>
-               </div>
+               <pre>
+                 <code>&lt;!doctype html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+   &lt;meta charset="utf-8"&gt;
+   &lt;title&gt;One Million Arab Coder&lt;/title&gt;
+   &lt;style&gt;
+     #header{
+       width:100%;
+       height:200px;
+       background: #4c7bed;
+     }
+   &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+   &lt;div id="header"&gt;
+     &lt;!--Header content here--&gt;
+   &lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code>
+               </pre>
             </details>
             <hr>
             <h2 dir="rtl">الطريقة الثانية كانت بإختصار ما يسمى بالـ class</h2>
@@ -129,33 +122,28 @@
                <li dir="rtl">يمكن أن يُستخدم أكثر من class للعنصر الواحد.</li>
             </ul>
             <p dir="rtl"><strong dir="rtl">مثال:</strong></p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;p</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"paragraph"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+            <pre>
+              <code>&lt;p class="paragraph"&gt;
   Hello world!
-<span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
-
-<span style="color: #204a87; font-weight: bold">&lt;p</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"paragraph"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
+&lt;/p&gt;
+&lt;p class="paragraph"&gt;
   One Million Arab Coder
-<span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
-</pre>
-            </div>
+&lt;/p&gt;</code>
+            </pre>
             <ul dir="rtl">
                <li dir="rtl">لاحظ قمت بعمل عنصرين وإعطائهما نفس الـ <code dir="ltr">class</code> حيث اني الان أستطيع أن اضيف التنسيق مرة واحدة وسيتم تطبيقه على جميع العناصر التي تحمل نفس أسم الـ <code dir="ltr">class</code></li>
             </ul>
             <p dir="rtl"><strong dir="rtl">مثال:</strong></p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;style&gt;</span>
-
- <span style="color: #000000">.paragraph</span><span style="color: #000000; font-weight: bold">{</span>
-     <span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #0000cf; font-weight: bold">#fff</span><span style="color: #000000; font-weight: bold">;</span>
-     <span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#ed7474</span><span style="color: #000000; font-weight: bold">;</span>
-   <span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">20px</span><span style="color: #000000; font-weight: bold">;</span>
-   <span style="color: #204a87; font-weight: bold">font-weight</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">bold</span><span style="color: #000000; font-weight: bold">;</span>
-   <span style="color: #000000; font-weight: bold">}</span>
-
-<span style="color: #204a87; font-weight: bold">&lt;/style&gt;</span>
-</pre>
-            </div>
+            <pre>
+              <code>&lt;style&gt;
+  .paragraph{
+    color:#fff;
+    background: #ed7474;
+    padding: 20px;
+    font-weight: bold;
+  }
+&lt;/style&gt;</code>
+            </pre>
             <p dir="rtl">لاحظ عند تعريف الـ <code dir="ltr">class</code> في الـ <code dir="ltr">CSS</code> نقوم بوضع <code dir="ltr">.</code> قبل إسم الـ <code dir="ltr">class</code></p>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
             <img class="image" src="{% static 'images/html_css/5/3.png'%}">
@@ -163,35 +151,31 @@
                <summary dir="rtl">
                   الكود كاملاً
                </summary>
-               <div class="code">
-                  <pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!doctype html&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;html&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;head&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">charset=</span><span style="color: #4e9a06">"utf-8"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;title&gt;</span>One Million Arab Coder<span style="color: #204a87; font-weight: bold">&lt;/title&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;style&gt;</span>
-
-  <span style="color: #000000">.paragraph</span><span style="color: #000000; font-weight: bold">{</span>
-       <span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #0000cf; font-weight: bold">#fff</span><span style="color: #000000; font-weight: bold">;</span>
-       <span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#ed7474</span><span style="color: #000000; font-weight: bold">;</span>
-   <span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">20px</span><span style="color: #000000; font-weight: bold">;</span>
-   <span style="color: #204a87; font-weight: bold">font-weight</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">bold</span><span style="color: #000000; font-weight: bold">;</span>
-   <span style="color: #000000; font-weight: bold">}</span>
-
-<span style="color: #204a87; font-weight: bold">&lt;/style&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;/head&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;body&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;p</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"paragraph"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
-  Hello world!
-<span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
-
-<span style="color: #204a87; font-weight: bold">&lt;p</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"paragraph"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
-  One Million Arab Coder
-<span style="color: #204a87; font-weight: bold">&lt;/p&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;/body&gt;</span>
-<span style="color: #204a87; font-weight: bold">&lt;/html&gt;</span>
-</pre>
-               </div>
+               <pre>
+                 <code>&lt;!doctype html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+   &lt;meta charset="utf-8"&gt;
+   &lt;title&gt;One Million Arab Coder&lt;/title&gt;
+   &lt;style&gt;
+     .paragraph{
+       color:#fff;
+       background: #ed7474;
+       padding: 20px;
+       font-weight: bold;
+     }
+   &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+   &lt;p class="paragraph"&gt;
+     Hello world!
+   &lt;/p&gt;
+   &lt;p class="paragraph"&gt;
+     One Million Arab Coder
+   &lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code>
+               </pre>
             </details>
             <hr>
             <details dir="rtl" open="">

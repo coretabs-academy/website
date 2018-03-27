@@ -37,8 +37,8 @@ $(function () {
 				'<p><a href="/frontend/html_css/10">الجداول Table</a></p>'+
 				'<p><a href="/frontend/html_css/11">Semantic HTML</a></p>'+
 				'<p><a href="/frontend/html_css/12">خاصية position: relative vs absolute</a></p>'+
-				'<p><a href="/frontend/html_css/13">CSS Flexbox</a></p>'+
-				'<p><a href="/frontend/html_css/14">Responsive Web Design</a></p>'+
+				'<p><a href="/frontend/html_css/13">Responsive Web Design</a></p>'+
+				'<p><a href="/frontend/html_css/14">CSS Flexbox</a></p>'+
 				'<p><a href="/frontend/html_css/15">Media Queries</a></p>'+
 			'</aside>');
 	} else if (currentPage === "javascript" && Number.isInteger(currentPageNumber)) {
