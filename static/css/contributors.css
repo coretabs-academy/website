@@ -7,7 +7,7 @@
 }
 body{
 	margin: 0;
-	padding: 0;
+	padding: 60px 0 0;
 	font-family: 'Cairo', 'Open Sans', sans-serif;
 }
 
@@ -27,7 +27,9 @@ nav{
 	height: 60px;
 	display: flex;
 	align-items: center;
-  
+  	position: fixed;
+	top: 0;
+	z-index: 99999;
 }
 #logo{
 	width: auto;
