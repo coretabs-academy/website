@@ -13,7 +13,7 @@ $(function() {
 
     $.ajax({
         type: "GET",
-        url: "https://rawgit.com/coretabs-academy/fullstack-tutorials/master/topics.json",
+        url: "https://cdn.rawgit.com/coretabs-academy/fullstack-tutorials/master/topics.json",
         success: function(response) {
             topicsJSON = response;
             $("#main .courses_container, .container aside").empty();
