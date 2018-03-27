@@ -11,6 +11,10 @@ body{
 	font-family: 'Cairo', 'Open Sans', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /*=====================================
 Nav Style
 =======================================*/
@@ -26,7 +30,7 @@ nav{
   
 }
 #logo{
-	width: 200px;
+	width: auto;
 	height: 40px;
 	color: #fff;
 	text-align: left;
@@ -50,7 +54,7 @@ nav{
 	align-items: center;
 	background: #400f8f;
 	text-decoration: none;
-	margin-right: 30px;
+	margin-right: 20px;
 	text-shadow: 0px 2px 0px #2b0a65;
 	
 }
@@ -94,7 +98,7 @@ Main Style
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
-	margin-bottom: 60px;
+ 	margin-bottom: 60px;
 }
 .awesome-person{
 	min-width: 250px;
@@ -176,15 +180,29 @@ Main Style
 	filter: alpha(opacity=100);
 }
 
+.join-team{
+	margin-bottom: 20px;
+}
+.join-team a{
+	padding: 10px 35px;
+	background: #77239b;
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.3em;
+}
+
+
+
+
 /*=====================================
 Footer Style
 =======================================*/
 
 footer {
-	background: #222;
+	background: #f0f0f0;
 	width: 100%;
 	line-height: 50px;
-	color: #fff;
+	color: #666;
 	text-align: center;
 }
 
