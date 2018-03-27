@@ -5,6 +5,7 @@ DEBUG = False
 ALLOWED_HOSTS = [
     'localhost',
     '.herokuapp.com',
+	'www.coretabs.net',
     'coretabs.net',
 ]
 DATABASES = {
