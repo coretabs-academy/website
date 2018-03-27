@@ -5,19 +5,20 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>دروس Full Stack</title>
+        <link rel="stylesheet" href="{% static 'css/contributors.css' %}">
 		<link rel="stylesheet" href="{% static 'css/style.css' %}">
         <link rel="stylesheet" id="animate" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
 		<link rel="stylesheet" href="{% static 'css/fetcher.css' %}">
-        <script src="{% static 'js/jquery-3.3.1.min.js'%}"></script>
-        <link rel="stylesheet" href="{% static 'css/github.min.css'%}">
-        <script src="{% static 'js/highlight.pack.js'%}"></script>
 	</head>
-	<body id="fetcher" class="home upper-badding">
-		
-			
-		<div class="inner-nav"> 
-		<a href="{% url 'fullstack' %}" class="go-back">&#10094;</a>
-            <div id="logo"><a href="{% url 'home' %}">{% trans "Academy" %}</a></div>
+	<body class="home">
+		<div id="navbar">
+			<div class="navbar-brand">
+                <a href="/">
+                    <div>
+                        {% trans 'Academy' %}
+                    </div>
+                </a>
+			</div>
 			<div class="icon-container hidden">
 				<div class="humberger-icon">
 					<span></span>
@@ -28,19 +29,20 @@
             <div class="navbar-nav">
             </div>
 		</div>
-			
-
-	   <div class="about">
-         <h1>{% trans 'Full Stack' %}</h1>
-         <p>
-             {% blocktrans %}english fullstack description{% endblocktrans %}
-         </p>
-		 
-      </div>
-		
-		
-		
-        <main id="main" class="beauty-box fix-upper-padding">
+        <div class="background-image">
+            <h1>{% trans 'Full Stack Web Development' %}</h1>
+            <p>
+            {% blocktrans %}
+			Familiarity with programming is indispensable today. Learning programming is one of the most rich and useful things you can do.
+			{% endblocktrans %}
+            </p>
+            <a class="link" href="#main">{% trans 'Lessons' %}</a>
+            <div class="course animated infinite bounce">
+                <a href="#main"></a>
+            </div>
+        </div>
+        <main id="main" class="beauty-box">
+            <h1 class="title">{% trans 'Track Lessons' %}</h1>
             <div class="courses_container">
                 Loading... Please Wait
             </div>
@@ -52,10 +54,12 @@
 
 			</aside>
 		</div>
-        
         <footer>
-		    <div class="text"> Made with <span class="heart">&#10084;</span> by <a href="{% url 'contributors' %}"> Our Contributors</a>  </div>
-        </footer>
+          <div class="text"> Made with <img src="{% static 'images/heart.png' %}" alt="heart"> by <a href="{% url 'contributors' %}" target="_blank"> Our Contributors</a> </div>
+      </footer>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.min.js"></script>
         {% load static%}
         <script src="{% static 'js/fetcher.js' %}"></script>

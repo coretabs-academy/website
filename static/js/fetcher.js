@@ -8,12 +8,12 @@ $(function() {
     //var lang = Cookies.get('lang');
     //if (lang === undefined) { lang = "ar"; }
     var lang = "ar";
-    
+
     $(".container aside").html("<p>Loading... Please Wait</p>");
 
     $.ajax({
         type: "GET",
-        url: "https://cdn.rawgit.com/coretabs-academy/fullstack-tutorials/master/topics.json",
+        url: "https://rawgit.com/coretabs-academy/fullstack-tutorials/master/topics.json",
         success: function(response) {
             topicsJSON = response;
             $("#main .courses_container, .container aside").empty();
@@ -41,7 +41,7 @@ $(function() {
     $("#main .courses_container").on("click", "a", function(event) {
         var id = $(this).attr("data-id");
         $("body").removeClass("home");
-        $("#animate, .background-image, #main, .about, footer").remove();
+        $("#animate, .background-image, #main, footer").remove();
         $("#navbar").addClass("navbar");
         $(".icon-container").removeClass("hidden");
         $(".navbar-nav, .container").show();
@@ -77,9 +77,6 @@ $(function() {
             $(".cooked img").each(function () {
                 var src = $(this).attr("src");
                 $(this).attr("src", topicsJSON.host + id + "/" + src);
-            });
-            $('pre code').each(function(i, code) {
-                hljs.highlightBlock(code);
             });
 
             viewNavigation(navigationIndex);
@@ -164,7 +161,7 @@ $(function() {
             $(".navigate a").first().attr("data-id", navigationScope[navigationIndex - 1][0]);
             $(".navigate a").first().addClass(navigationScope[navigationIndex - 1][1]);
         }
-    
+
         if (navigationIndex == navigationScope.length - 1) {
             $(".navigate a").last().addClass("disabled");
         } else {
@@ -183,6 +180,3 @@ $(function() {
         if ($(window).width() >= 1080 && $("aside").css("display") == "none") { $("aside").show(); }
     });
 });
-
-
-
