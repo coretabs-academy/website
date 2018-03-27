@@ -7,7 +7,9 @@
       <title>[الدرس الثالث] First & Second Lessons Recap</title>
       <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+      <script src="{% static 'js/jquery-3.3.1.min.js'%}"></script>
+<link rel="stylesheet" href="{% static 'css/github.min.css'%}">
+<script src="{% static 'js/highlight.pack.js'%}"></script>
    </head>
    <body>
       <div class="navbar">
@@ -38,306 +40,67 @@
       </div>
       <div class="container">
          <div class="cooked">
-            <h1>خلاصة الدرس الأول و الثاني GIT</h1>
+            <h1>إستنساخ cloning</h1>
             <hr>
-            <p dir="rtl"><strong dir="rtl">في الدرس الأول:</strong></p>
-            <p dir="rtl">تعرفنا على ماهو الـ Git وتم شرح الموقع الذي سنقوم بإستخدامة في هذه الورشة وهو الـ GitHub ومن ثم بدأنا بالعمل على أول مستودع لنا بإستخدام الـ GUI أو ما يسمى بالواجهة الرسومية عبر برنامج GitKraken لعمل الأوامر الرئيسية:<br>
-               staging - commit - push على مشروعنا.<br>
-            </p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/1.png'%}" alt="image" class="image"></a></div>
-            <p></p>
-            <p dir="rtl"><strong dir="rtl">في الدرس الثاني:</strong></p>
-            <p dir="rtl">تعرفنا على لماذا نحتاج الـ Git وماهو الهدف منه ومن ثم قمنا بعمل أول مستودع لنا بإستخدام الـ CLI او ما يسمى بواجهة الأوامر لعمل الأوامر الرئيسية<br>
-               staging - commit - push على مشروعنا.<br>
-            </p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/2.png'%}" alt="image" class="image"></a></div>
-            <p></p>
+            <p dir="rtl">عملية إستنساخ مشروع يوجد على أي سيرفر أخر أو على جهازك تسمى بالـ cloning. وتحتاج للقيام بهذه العملية للحصول على نسخة مطابقة من المشروع حتى نبدأ بالعمل علية.</p>
+            <h2 dir="rtl">العمل على واجهة الأوامر CLI:</h2>
+            <p dir="rtl">للقيام بذلك كل ماعليك فعلة هو كتابة الأمر التالي:</p>
+
+            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+               <pre style="margin: 0; line-height: 125%">git clone &lt;url&gt; &lt;name&gt;
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">حيث أن:</strong></p>
+            <p dir="rtl">الـ <code dir="ltr">&lt;url&gt;</code> موقع المستودع سوى كان على سيرفر أو على جهازك</p>
+            <p dir="rtl">الـ <code dir="ltr">&lt;name&gt;</code> إسم المجلد الذي سيتم عمل الإستنساخ إلية. في حال تم كتابة إسم مجلد غير موجود سيتم إنشاء ذلك المجلد ومن ثم القيام بعملية الإستنساخ</p>
+            <p dir="rtl"><strong dir="rtl">ملاحظة:</strong> تحديد إسم المجلد إختياري وبإمكانك عمل الإستنساخ بالأمر التالي فقط</p>
+
+            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+               <pre style="margin: 0; line-height: 125%">git clone &lt;url&gt;
+</pre>
+            </div>
             <hr>
-            <h2 dir="rtl">درس اليوم سيكون ملخص لشرح لتلك الأوامر بعد أن ممرت بتجربة تطبيقية معها</h2>
-            <p dir="rtl">في هذه المرحلة يجب أن نكون قادرين على عمل المستودع (Repository) الخاص بمشروعنا بإستخدام واجهة الأوامر وكذلك بإستخدام الواجهة الرسومية بالإضافة القدرة على التعامل مع الأوامر الرئيسية لتسجيل التغييرات على ملفاتنا. اذا لم تكن لديك أي خلفية عن هذه الأمور قم بمراجعة الدروس  والمهام  السابقة.</p>
-            <h4 dir="rtl">الية تسجيل التغييرات على المشروع</h4>
-            <p dir="rtl">يجب أن تعرف أن كل مشروع لديك تحت نظام التحكم بالإصدارات له مستودع  (Repository)  خاص به, هذا المستودع هو عبارة عن مجموعة من الـ commits التي تصف التغييرات التي تمت على مشروعك خلال فترة عملك عليه.</p>
-            <h4 dir="rtl">ثلاث خطوات رئيسية لتسجيل التغييرات على مشروعك:</h4>
-            <p dir="rtl">نظام التحكم بالإصدارات (VCS) لا يتتبع ما تقوم به بشكل تلقائي بل يجب عليك إخبارة بما علية القيام به عند إنتهائك من كل مهمة بإستخدام بعض الأوامر, في هذا الجزء سنتحدث عن الثلاث الخطوات الرئيسية لتسجيل التغييرات على مشروعنا وهي <strong dir="rtl">كالتالي:</strong></p>
-            <h2 dir="rtl">1- الـ Staging:</h2>
-            <p dir="rtl">عندما تقوم بعمل تعديلات على ملفاتك ومن ثم تريد أن تقوم برفعها للمستودع ففي البدأية يجب عليك أن تقوم بتحديد الملفات التي سيتم رفعها وكأنك تقوم بتقديمها للمنصة.<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/3.png'%}" alt="image" class="image"></a></div>
+            <h3 dir="rtl">إستنساخ مستودع محلي (Local) يتم كالتالي:</h3>
+            <p dir="rtl">سأقوم بكتابة أمر الإستنساخ متبوع بمسار المجلد الخاص بالمستودع ومن ثم متبوع بإسم المجلد الذي أريد أن يتم عمل الإستنساخ إلية.</p>
+
+            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
+               <pre style="margin: 0; line-height: 125%">git clone webpage <span style="color: #204a87">test</span>
+</pre>
+            </div>
+            <p dir="rtl"><strong dir="rtl">شاهد الخطوات:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="1-1.gif" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/1.gif'%}" alt="1-1" class="image"></a></div>
             <p></p>
-            <p dir="rtl"><strong dir="rtl">لماذا يجب علي أن أقوم بذلك يدوياً ألا يفترض على نظام التحكم بالإصدارات أن يقوم بتحديد كل الملفات التي بدأخل المجلد الخاص بنا بشكل تلقائي؟</strong><br>
-               في الحقيقة عدم قيام النظام بذلك هو في صالحنا ويسمح لنا بإبقاء بعض الملفات في ملف مشروعنا بعيداً عن المستودع فليس كل ما بداخل مجلد مشروعك قد تحتاج رفعه للمستودع و مشاركته مع الأخرين فربما لديك ملف تحتفظ فيه على بيانات حساسة أو هناك ملفات لا تريد رفعها في الوقت الحالي.
-            </p>
-            <h4 dir="rtl">طريقة القيام بهذه العملية:</h4>
-            <h3 dir="rtl">1- بإستخدام الـ Command Line Interface واجهة الأوامر.</h3>
-            <p dir="rtl">بإستخدام الأمر</p>
+            <p dir="rtl">لاحظ أن webpage ليس إسم المجلد فقط بل هو مسار المجلد وقمت بكتابة إسمة فقط لأنني قمت بفتح نافذة الـ CLI في نفس موقع المستودع, لنفترض بأنني أريد أن أقوم بعمل إستنساخ للمشروع وانا في مسار مختلف حينها سأقوم بكتابة مسار ملف المستودع على جهازي.</p>
+            <hr>
+            <h3 dir="rtl">إستنساخ مستودع من على سيرفر (Remote) يتم كالتالي:</h3>
+            <p dir="rtl">سأقوم بكتابة أمر الإستنساخ متبوع بعنوان المستودع على السيرفر</p>
+
             <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
-               <pre style="margin: 0; line-height: 125%">git add index.html
+               <pre style="margin: 0; line-height: 125%">git clone https://github.com/FortAwesome/Font-Awesome
 </pre>
             </div>
-            <p dir="rtl">في الكود أعلاة قمت بعمل staging لصديقنا ملف الـ index.html, بإمكانك تخيل العملية كما بالصورة أعلاة.<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="staging1.gif" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/4.gif'%}" alt="staging1" class="image"></a></div>
+            <p dir="rtl"><strong dir="rtl">شاهد الخطوات:</strong><br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="2-2.gif" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/2.gif'%}"  alt="2-2" class="image"></a></div>
             <p></p>
-            <p dir="rtl"><strong dir="rtl">لكن ماذا إذا ما أردت أن تقوم بعمل staging لجميع الملفات التي بدأخل مجلد المشروع؟</strong><br>
-               ببساطة قم بوضع نقطة بدلاً من تحديد إسم معين
-            </p>
-            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
-               <pre style="margin: 0; line-height: 125%">git add .
-</pre>
-            </div>
-            <p dir="rtl">لنفترض أنك تريد رفع كل ملفات بإمتداد css بإمكانك عمل التالي:</p>
-            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
-               <pre style="margin: 0; line-height: 125%">git add *.css
-</pre>
-            </div>
-            <p dir="rtl">ماذا عن رفع عدد من الملفات؟ بإمكانك ذلك بالفصل بينها بمسافة</p>
-            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
-               <pre style="margin: 0; line-height: 125%">git add index.html style.css
-</pre>
-            </div>
-            <h3 dir="rtl">2- بإستخدام الـ Graphical User Interface الواجهة الرسومية عبر برنامج GitKraken.</h3>
-            <p dir="rtl">الأمر بسيط كل ما عليك فعلة هو تحديد الملفات التي تريد عمل staging لها او تحديد الكل كما بالصورة التالية<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="GUIinterface.gif" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/5.gif'%}" alt="GUIinterface" class="image"></a></div>
+            <p dir="rtl">لاحظ أنني هذه المرة لم أقم بتحديد إسم الملف الذي سيتم عمل الإستنساخ بداخله لهذا سيتم إنشاء ملف بشكل تلقائي يحمل نفس إسم المشروع على الـ GitHub. ولهذا تم إنشاء المجلد بإسم Font-Awesome.</p>
+            <hr>
+            <h2 dir="rtl">العمل على الواجهة الرسومية GUI:</h2>
+            <p dir="rtl">الأمر بسيط تابع الشرح التالي:<br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="3-3.gif" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/3.gif'%}" alt="3-3" class="image"></a></div>
             <p></p>
             <hr>
-            <h2 dir="rtl">2- الـ committing:</h2>
-            <p dir="rtl">بمجرد أن تقوم بعمل staging للملفات يتم وضعها في قائمة الإنتظار قبل أن يتم حفظ تلك التعديلات, وهنا يأتي دور الـ commit حيث تقوم بعمل حفظ للتعديلات التي تمت على الملفات التي قمنا بتقديمها للمنصة.<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/6.png'%}" alt="image" class="image"></a></div>
+            <h2 dir="rtl">مهمة اليوم</h2>
+            <p dir="rtl">سنقوم بعمل تطبيق على بعض الأوامر ونعمل كفريق عن طريق القيام بلعبة سؤال وجواب <img src="{% static 'images/git/3/4.png'%}" title=":question:" class="emoji" alt=":question:">.<br></p>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/5.png'%}" alt="image" class="image"></a></div>
             <p></p>
-            <h4 dir="rtl">طريقة القيام بهذه العملية:</h4>
-            <h3 dir="rtl">1- بإستخدام الـ Command Line Interface واجهة الأوامر.</h3>
-            <p dir="rtl">بإستخدام الأمر</p>
-            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
-               <pre style="margin: 0; line-height: 125%">git commit -m <span style="color: #4e9a06">"Adding the index file"</span>
-</pre>
-            </div>
-            <p dir="rtl">في الكود أعلاة قمت بعمل commit لملف الـ index.html الذي قمنا سابقاً بعمل staging له.<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="commiCLIt.gif" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/7.gif'%}" alt="commiCLIt" class="image"></a></div>
-            <p></p>
-            <p dir="rtl"><strong dir="rtl">ملاحظة:</strong> عند عمل commit أحرص على إضافة commit message والتي ستوضح سبب قيامك بهذا الـ commit فأحد أهم الأهداف لإستخدام الـ Git هو أن يكون لديك القدرة على التمييز بين الإصدارات وبين التغييرات التي قمت بها في حال أردت العودة إليها لاحقاً.</p>
-            <p dir="rtl"><strong dir="rtl">عند إضافتك للـ message ركز على التالي:</strong><br>
-               1- أن تكون جملة مختصرة لا داعي للتفاصيل<br>
-               2- أن تكون واضحة بمعنى أنك بمجرد أن تقرأها تعرف ماهي التغييرات التي قمت بها في هذا الـ commit
-            </p>
-            <p dir="rtl"><strong dir="rtl">لاحظ الـ commit message التي قمنا بكتابتها اعلاة:</strong></p>
-            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #4e9a06">"Adding the index file"</span>
-</pre>
-            </div>
-            <p dir="rtl">مختصرة وبمجرد ما أقرائها سأعرف مالذي قمت به في ذلك الـ commit</p>
-            <p dir="rtl"><strong dir="rtl">أحرص على التالي:</strong><br>
-               أن تجعل الـ commits مجزئة ولا تربط أكثر من تعديل في commit واحد حيث أنه اذا وجدت أنك على وشك إستخدام كلمة and في الـ message فهذا يعني أنك تحتاج إعادة النظر على طريقة قيامك بحفظ التعديلات في commit واحد.
-            </p>
-            <p dir="rtl">على سبيل المثال لنفترض أنك قمت بعمل تعديل على الـ header وعلى الـ footer وفي مرحلة الـ commit قمت بالتالي:</p>
-            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
-               <pre style="margin: 0; line-height: 125%">git commit -m <span style="color: #4e9a06">"Adding logo header and copyrights to the footer"</span>
-</pre>
-            </div>
-            <p dir="rtl">لاحظ أننا على وشك عمل commit لتعديلات تمت على قسمين مختلفين هذا ما يجب أن نتجنبة ونقوم بعمل كل تعديل في commit منفصل.</p>
-            <hr>
-            <h3 dir="rtl">2- بإستخدام الـ Graphical User Interface الواجهة الرسومية عبر برنامج GitKraken.</h3>
-            <p dir="rtl">بعد قيامك بعمل staging للملف قم بكتابة الـ message ومن ثم الضغط على commit changes كما بالصورة التالية:<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="commitGUI.gif" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/8.gif'%}" alt="commitGUI" class="image"></a></div>
+            <p dir="rtl"><strong dir="rtl">قمت بعمل الصفحة أعلاة ورفعتها على مستودع, المهمة المطلوبة منك في هذا الدرس كالتالي:</strong></p>
+            <p dir="rtl">1- عمل clone للمشروع على جهازك <a href="https://github.com/Alhakem/1mac-lesson4" rel="nofollow noopener" dir="rtl"><strong dir="rtl">من هنا رابط المستودع</strong></a>.</p>
+            <p dir="rtl">2- بعد قيامك بذلك قم بمشاركة حسابك على موقع GitHub حتى يتم إضافتك كمساهم في المشروع.</p>
+            <h2 dir="rtl">أين يتم مشاركة حسابك بعد إكمالك مهمة الإستنساخ؟</h2>
+            <p dir="rtl">في الموضوع المخصص من هنا:<br></p>
             <p></p>
             <hr>
-            <h2 dir="rtl">2- الـ Pushing:</h2>
-            <p dir="rtl">ما إن تقوم بعمل commit لتعديل حتى يتم حفظ ذلك التعديل على المشروع محلياً بجهازك وحتى يتم رفعة للمستودع الخاص بالمشروع يجب أن نقوم بتوجية ذلك الأمر بإستخدام push.<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.jpg" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/9.png'%}" alt="image" class="image"></a></div>
-            <p></p>
-            <h4 dir="rtl">طريقة القيام بهذه العملية:</h4>
-            <h3 dir="rtl">1- بإستخدام الـ Command Line Interface واجهة الأوامر.</h3>
-            <p dir="rtl">بإستخدام الأمر التالي:</p>
-            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
-               <pre style="margin: 0; line-height: 125%">git push origin master
-</pre>
-            </div>
-            <p dir="rtl">قمت بكتابة الأمر push ومن ثم تحديد الـ  remote server والذي تم تعيينة بشكل إفتراضي لـ origin ومن ثم قمت بكتابة إسم الفرع والذي هو في حالتنا مايزال الفرع الرئيسي master - سنخوض في هذه التفاصيل في دروس قادمة عندما نتحدث عن الفروع.</p>
-            <p dir="rtl"><strong dir="rtl">عند كتابتي للأمر السابق طُلب مني إدخال بيانات تسجيل الدخول في موقع GitHub شاهد الصورة التالية:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="pushorigin.gif" rel="nofollow noopener" dir="ltr"><img src="../../images/git/3/10.gif" alt="pushorigin" class="image"></a></div>
-            <p></p>
-            <h3 dir="rtl">2- بإستخدام الـ Graphical User Interface الواجهة الرسومية عبر برنامج GitKraken.</h3>
-            <p dir="rtl">لاحظ كيف أن البرنامج قام بتحديد الـ remote بـ origin و الفرع بـ master تلقائياً عندما قمنا بربطة بالمستودع في الـ GitHub:<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="pushGUI1.gif" rel="nofollow noopener" dir="ltr"><img src="../../images/git/3/11.gif" alt="pushGUI1" class="image"></a></div>
-            <p></p>
-            <hr>
-            <p dir="rtl">الأن لنذهب لموقع GitHub ونشاهد إذا ما كان قد تم رفع ملف index,html للمستودع الخاص بنا<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/12.png'%}" alt="image" class="image"></a></div>
-            <p></p>
-            <p dir="rtl"><strong dir="rtl">رائع!</strong> قمنا بالعمل كما يفترض به أن يتم.</p>
-            <hr>
-            <h2 dir="rtl">الخطوة التالية</h2>
-            <p dir="rtl">الأن انا بدأت بالعمل على مشروعي وقمت بعمل تعديلات على index.html ومن ثم حفظ التعديلات على الملف طبعاً ما أقصدة هو حفظ الملف بالطريقة العادية ctrl+s وأريد الأن أن اعرف حالة (status) نظام التحكم بالإصدارات و ان اعرف على أي فرع بالعمل و اذا ما كان هناك أي إضافات أو تعديلات قمت بها مؤخراً ولم أقم بحفظها للمستودع. <strong dir="rtl">فكيف سنقوم بذلك؟</strong></p>
-            <p dir="rtl"><strong dir="rtl">سأقوم بإستخدام الأمر التالي:</strong></p>
-            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
-               <pre style="margin: 0; line-height: 125%">git status
-</pre>
-            </div>
-            <p dir="rtl"><strong dir="rtl">شاهد العملية كالتالي:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="status.gif" rel="nofollow noopener" dir="ltr"><img src="../../images/git/3/13.gif" alt="status" class="image"></a></div>
-            <p></p>
-            <p dir="rtl"><strong dir="rtl">لنقوم بتفصيل ذلك:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/14.png'%}" alt="image" class="image"></a></div>
-            <p></p>
-            <p dir="rtl">1- تم تحديد أي فرع أعمل عليه وهو الـ master<br>
-               2- النسخة التي أعمل عليها محدتة بأخر تحديث للنسخة التي على المستودع الذي على موقع GitHub <code dir="ltr">(Remote Repositry)</code><br>
-               3- يتم إختباري بأنه هناك تعديل تم على ملف index.html ولم أقم بعمل staging و commit له
-            </p>
-            <p dir="rtl"><strong dir="rtl">دعوني أقوم بعمل تعديل على الملف ولكن من خلال موقع GitHub ومن ثم أقوم بالإطلاع على حالة النسخة التي أعمل عليها:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/15.png'%}" alt="image" class="image"></a></div>
-            <p></p>
-            <p dir="rtl">لاحظوا كيف تغيرت تلك الرسالة إلى أن الملفات التي أعمل عليها متأخرة بعملية commit واحدة عن التي في المستودع</p>
-            <hr>
-            <p dir="rtl"><strong dir="rtl">دائماً إحرص على تفقد حالة المشروع الذي تعمل عليه قبل قيامك بكتابة الأوامر وذلك حتى تتجنب الأخطاء والمشاكل التي قد تواجهك وكذلك حتى تكون مطلع على حالة ملفات المشروع.</strong></p>
-            <hr>
-            <p dir="rtl">سأقوم الأن بعمل بعض التعديلات على ملف الـ index.html وكذلك فصل ملف التنسيقات عنه و وضعه بجوار ملف الـ index كما قمتم في المهمة السابقة.</p>
-            <p dir="rtl"><strong dir="rtl">الأن سأقوم بالتأكد من حالة ملفات المشروع كالتالي:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/16.png'%}" alt="image" class="image"></a></div>
-            <p></p>
-            <p dir="rtl">نلاحظ أنه لدينا ملفين الأول تم التعديل عليه والثاني تم إضافته لمجلد مشروعنا.</p>
-            <p dir="rtl">سأقوم بتنفيذ الثلاثة الأوامر السابقة staging, committing, pushing حتى أقوم بحفظ التعديلات إلى المستودع الخاص بنا. ولكن تذكر ماسبق وقلت لك بخصوص تقسيم الـ commits إلى أجزاء لها علاقة ببعضها البعض.</p>
-            <p dir="rtl"><strong dir="rtl">ما الذي أقصدة؟</strong><br>
-               أنظر للصورة السابقة هل ستقوم بعمل commit وتعطيه message كالتالي:
-            </p>
-            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #4e9a06">"Updating html title tag and adding style file"</span>
-</pre>
-            </div>
-            <p dir="rtl">أمم إحتجت لأن أستخدم and ما يعني بأنني كنت سأقع في خطأ بعمل commit لتعديلين غير مرتبطين وساعدني على تذكر ذلك الأمر <code dir="ltr">git status</code> فاذا لم أقم بمتابعة حالة ملفات المشروع كنت لأستخدم الأمر التالي</p>
-            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
-               <pre style="margin: 0; line-height: 125%">git add .
-</pre>
-            </div>
-            <p dir="rtl">والذي سيقوم بعمل staging لجميع الملفات ومن ثم كنت سأقوم بعمل الـ commit لهم جميعاً.</p>
-            <h3 dir="rtl">الحل</h3>
-            <p dir="rtl">سأقوم بعمل staging, committing , pushing لكل ملف على حدة كالتالي:</p>
-            <p dir="rtl"><strong dir="rtl">ملف الـ index.html</strong></p>
-            <p dir="rtl">عمل الـ staging:</p>
-            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
-               <pre style="margin: 0; line-height: 125%">git add index.html
-</pre>
-            </div>
-            <p dir="rtl">عمل committing:</p>
-            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
-               <pre style="margin: 0; line-height: 125%">git commit -m <span style="color: #4e9a06">"Updating index title tag"</span>
-</pre>
-            </div>
-            <p dir="rtl"><strong dir="rtl">ملف الـ style.css</strong></p>
-            <p dir="rtl">بنفس الطريقة سأنفذ الأوامر التالية على التوالي:</p>
-            <p dir="rtl">عمل الـ staging:</p>
-            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
-               <pre style="margin: 0; line-height: 125%">git add style.css
-</pre>
-            </div>
-            <p dir="rtl">عمل committing:</p>
-            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
-               <pre style="margin: 0; line-height: 125%">git commit -m <span style="color: #4e9a06">"Adding style file"</span>
-</pre>
-            </div>
-            <p dir="rtl">ثم سأقوم بالتأكد من حالة ملفات المشروع بالأمر التالي:</p>
-            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
-               <pre style="margin: 0; line-height: 125%">git status
-</pre>
-            </div>
-            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/17.png'%}" alt="image" class="image"></a></div>
-            <p></p>
-            <p dir="rtl">شاهدوا في الصورة اعلاة يقول لي بأن ملفات المشروع التي لدي متقدمة عن ملفات المستودع بـ 2 commits وهذا بالفعل ما قمنا به قبل قليل مع ملفي الـ index و الـ style</p>
-            <p dir="rtl"><strong dir="rtl">لنقم بعمل الـ pushing:</strong></p>
-            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
-               <pre style="margin: 0; line-height: 125%">git push origin master
-</pre>
-            </div>
-            <p dir="rtl"><strong dir="rtl">النيتجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/18.png'%}" alt="image" class="image"></a></div>
-            <p></p>
-            <p dir="rtl">لاحظ قمت بعمل commits للملفين ومن ثم قمت بعمل push واحدة وبإمكانك كذلك عمل push لكل ملف على حدة.</p>
-            <hr>
-            <h3 dir="rtl">أمر وطريقة مفيدة لتسهيل عملك</h3>
-            <p dir="rtl">أحياناً تحتاج إلى أن تقوم بتنظيف واجهة الأوامر من الأوامر السابقة لذا بإمكانك إستعمال ctrl+l من لوحة التحكم او كتابة الأمر التالي:</p>
-            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
-               <pre style="margin: 0; line-height: 125%">clear
-</pre>
-            </div>
-            <p dir="rtl">وكذلك لا تحتاج أن تقوم بإعادة كتابة الأوامر الأخيرة في كل مرة فبإمكانك إستخدام الأسهم أعلى وأسفل من لوحة المفاتيح للتنقل بين أوامر كتبتها سابقاً ولكن في الوقت الحالي لا تستخدمها الا عند الضرورة فأريدك أن تتمرن على الأوامر وكتابتها بنفسك.<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="clearCLI.gif" rel="nofollow noopener" dir="ltr"><img src="../../images/git/3/19.gif" alt="clearCLI" class="image"></a></div>
-            <p></p>
-            <hr>
-            <p dir="rtl">لنلقي نظرة على المستودع الخاص بنا:<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/20.png'%}" alt="image" class="image"></a></div>
-            <p></p>
-            <p dir="rtl">نجد أنه تم رفع التعديلات التي قمنا بها للمستودع, وتم إضافة الـ commits الأخيرة التي قمنا بعملها.</p>
-            <hr>
-            <h2 dir="rtl">ما الذي يحصل في الكواليس</h2>
-            <p dir="rtl">عند قيامنا بعمل commits للتعديلات يتم في الواقع تخزين وترتيب هذه التعديلات كلقطات صور لملفاتك بداخل ملفات خاصة مخفية بجهازك ما يعني بأنه دائماً سيبدوا لك بأنك تعمل على الإصدار الذي تريدة بينما هناك في الواقع عشرات او مئات اللقطات التي قام النظام بأخذها وإخفائها حتى لا تصبح الأمور بالنسبة إليك فوضوية.</p>
-            <p dir="rtl"><strong dir="rtl">للإطلاع على الملف المخفي إتبع التعليمات التالية:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="hiddengit.gif" rel="nofollow noopener" dir="ltr"><img src="../../images/git/3/21.gif" alt="hiddengit" class="image"></a></div>
-            <p></p>
-            <p dir="rtl">الملف <code dir="ltr">.git</code> هو مستودع العمليات السحرية التي تتم وهو حساس فلا تقوم بالعبث بمحتوياته الا اذا كان لديك علم بالذي تقوم به.</p>
-            <p dir="rtl"><strong dir="rtl">ملاحظة:</strong> اذا كنت تعمل على ويندوز ستجد <strong dir="rtl"><a href="https://support.microsoft.com/en-us/help/14201/windows-show-hidden-files" rel="nofollow noopener" dir="rtl">من هنا</a></strong> تعليمات إظهار الملفات المخفية للإصدارات الأخرى.</p>
-            <p dir="rtl"><strong dir="rtl">لكن كيف سنتعامل مع هذه الإصدارات إذا كانت مخفية؟</strong><br>
-               لا تقلق فنظام التحكم بالإصدارات يمنحك أدوات وأوامر تساعدك على الوصول لتلك البيانات لمراجعة تاريخ مشروعك والإطلاع على تفاصيلها ومقارنة بعضها البعض.
-            </p>
-            <p dir="rtl">لنأخذ أحد الأوامر التي ستقوم بإظهار تفاصيل كل commit قمت بها خلال العمل على المشروع:</p>
-            <h2 dir="rtl">الأمر git log</h2>
-            <p dir="rtl">لنقم بكتابة هذا الأمر في واجهة الأوامر كالتالي:<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="gitlog.gif" rel="nofollow noopener" dir="ltr"><img src="../../images/git/3/22.gif" alt="gitlog" class="image"></a></div>
-            <p></p>
-            <p dir="rtl">لنقم بتفصيل الذي ظهر لنا في واجهة الأوامر:<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/23.png'%}" alt="image" class="image"></a></div>
-            <p></p>
-            <p dir="rtl">نلاحظ أنه ظهرت لنا قائمة بالـ commits التي قمنا بها خلال عملنا ويبدأ ترتيب هذه الـ commits من أخر واحدة قمنا بها ويتبعها التي قبلها وهكذا حتى نصل في أخر القائمة إلى أول commit قمنا بعملة.</p>
-            <p dir="rtl"><strong dir="rtl">التالي تفصيل لما في الصورة أعلاة:</strong></p>
-            <p dir="rtl">1- <strong dir="rtl">الـ SHA:</strong><br>
-               ما تشاهدة هو الرقم التعريفي الخاص (ID) بهذه الـ commit حيث أن كل commit يكون لدية ID يسمى بالـ <strong dir="ltr">SHA</strong> ويتم إنشاء هذه الرقم المميز عن طريق خوارزمية بناء على محتوى الملف في اللحظة التي تم فيها عمل الـ commit.
-            </p>
-            <p dir="rtl">وجود هذا الرقم المميز يجعلك تستطيع الوصول إلى أي commit بسهولة ويعتبر الوسيلة التي تسمح لنظام التحكم بالإصدارات بتتبع هذا الـ commit.</p>
-            <p dir="rtl">الـ SHA يتم توليدة كما ذكرنا عبر خوارزمية وتستطيع عمل تشفير لأي شي والحصول على شفرة مميزة على سبيل المثال الشفرة الخاصة بإسمي mohammed بإستخدام هذه الخوارزمية هي</p>
-            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
-               <pre style="margin: 0; line-height: 125%">e345ebb5fb15a590b29a075cdaf46eed42e192de
-</pre>
-            </div>
-            <p dir="rtl">بإمكانك تجربة عمل تشفير لأي نص من الموقع التالي <a href="http://www.sha1-online.com" rel="nofollow noopener" dir="rtl">من هنا</a>.</p>
-            <p dir="rtl"><strong dir="rtl">ملاحظة:</strong><br>
-               للوصول لأي commit لا تحتاج لكتابة الـ 40 حرف التي في الـ SHA وإنما يكفي كتابة اول 6 أحرف منها فإذا كانت الشفرة أعلاة خاصة بـ commit سأستطيع الوصول إليها بإستخدام الرمز التالي فقط. وسنتطرق لذلك في الدروس القادمة.
-            </p>
-            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
-               <pre style="margin: 0; line-height: 125%">e345eb
-</pre>
-            </div>
-            <p dir="rtl"><strong dir="rtl">2- الـ Author:</strong><br>
-               هنا يظهر إسم وإيميل الشخص الذي قام بعمل هذا الـ commit فعند العمل على مشروع يساهم فيه عدد من الأشخاص ستستطيع معرفة ما قام به كل شخص من تعديلات وكذلك تحصل على إيميلة لغرض التواصل معه على سبيل المثال.
-            </p>
-            <p dir="rtl"><strong dir="rtl">3- الـ Date</strong><br>
-               هنا يظهر تاريخ و وقت تلك الـ commit
-            </p>
-            <p dir="rtl"><strong dir="rtl">4- الـ Commit Message</strong><br>
-               هنا تجد الـ message الخاصة بذلك الـ commit والتي تصف التعديل الذي تم
-            </p>
-            <p dir="rtl"><strong dir="rtl">5- الرمز <code dir="ltr">:</code></strong><br>
-               هذا الرمز يعني بأنه هناك المزيد من الـ commits لتصفحها
-            </p>
-            <p dir="rtl"><strong dir="rtl">ملاحظة:</strong> للخروج من هذه القائمة بإمكانك الضغط على الحرف <code dir="ltr">q</code> من لوحة المفاتيح</p>
-            <h3 dir="rtl">الإطلاع على التفاصيل أعلاة من خلال الواجهة الرسومية:</h3>
-            <p></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/24.png'%}" alt="image" class="image"></a></div>
-            <p></p>
-            <hr>
-            <h2 dir="rtl">الأمر git log --oneline</h2>
-            <p dir="rtl">في حال أنك لا تريد أن يتم عرض كل تلك التفاصيل بإمكانك إستخدام الـ flag <code dir="ltr">(--oneline)</code> لعرض موجز للـ commits.<br>
-               <em dir="rtl">سنتطرق للـ flags في الدرس القادم.</em>
-            </p>
-            <p dir="rtl"><strong dir="rtl">لنكتب الأمر التالي:</strong></p>
-            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em .6em;">
-               <pre style="margin: 0; line-height: 125%">git log --oneline
-</pre>
-            </div>
-            <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/git/3/25.png'%}" alt="image" class="image"></a></div>
-            <p></p>
-            <p dir="rtl">نلاحظ أنه تم كتابة أول 6 أحرف من الـ SHA بلإضافة إلى الـ Commit Message فقط.</p>
-            <hr>
-            <p dir="rtl"><strong dir="rtl">بهذا نكون إنتهينا من درس اليوم و أريد أن أوضح نقطة وهي سبب شرحنا لطريقة العمل على Git بإستخدام الواجهة الرسومية وبإستخدام واجهة الأوامر بنفس الوقت؟</strong></p>
-            <p dir="rtl">وجهة نظر البعض أن إستخدام الواجهة الرسومية هي ممارسة سيئة للمبرمجين لا أختلف معكم ولكن في الواقع ليس السئ هو إستخدامك لهذه الواجهة الرسومية وإنما عدم معرفتك لطريقة القيام بذلك بدونها بإستخدام واجهة الأوامر.</p>
-            <p dir="rtl">فيجب عليك إعتبار الواجهة الرسومية مجرد أداة لترفع بها معدل الإنتاجية وليس أداة أساسية لا تستطيع إنجاز العمل بدونها ففي بعض الحالات ستضظر للرجوع لواجهة الأوامر للتعامل مع أمر ما.</p>
-            <p dir="rtl">فلا تعتمد على الواجهة الرسومية كمهرب من الأوامر في الوقت الحالي وإنما بإمكانك إعتبار ما نشرحة من خلالها هو bonus ومدخل لما يمكنك الإستفادة منه لاحقاً عندما تصبح قادر على التعامل مع الأوامر وفي الأخير هي تفضيلات شخصية طالما وأنت ستقوم بالعمل المطلوب على أكمل شكل فلا يهم إن كنت ستكتب عدد من الأسطر البرمجية أو ستضغط على زر لإنجاز المهمة بالشكل المطلوب.</p>
+            <p dir="rtl"><em dir="rtl">قم بعمل ما تم أيضاحة أعلاة فقط وبقية التفاصيل وكيف سنقوم بالعمل سيتم إضاحها في الدرس القادم</em></p>
             <hr>
          </div>
       </div>
