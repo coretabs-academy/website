@@ -21,7 +21,7 @@ $(function () {
 
 	var path = window.location.pathname;
 	var currentPageNumber = Number(path.split('/')[path.split('/').length - 2]);
-  var currentPage = path.split('/')[path.split('/').length - 3];
+    var currentPage = path.split('/')[path.split('/').length - 3];
 	if (currentPage === "html_css" && Number.isInteger(currentPageNumber)) {
 		$(".container").append(
 			'<aside>'+
@@ -131,6 +131,7 @@ $(function () {
 	$(window).on("resize", changeConnectorHeight);
 	function changeConnectorHeight(){
 		if ($("body").hasClass("home") || currentPage==="projects") {
+
 			firstBoxTopOffset=$(".courses_image").eq(0).offset().top;
 			lastBoxTopOffset=$(".courses_image").eq($(".courses_image").length-1).offset().top;
 			distanceBetween=lastBoxTopOffset-firstBoxTopOffset;
