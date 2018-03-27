@@ -161,7 +161,6 @@ Main Style
 }
 
 
-
 /*=====================================
 Footer Style
 =======================================*/
@@ -224,7 +223,6 @@ Scrollbar Style
 	background: #ccc;
 }
 
-
 /*=====================================
 Media Style
 =======================================*/
@@ -243,7 +241,6 @@ Media Style
 	.awesome-person,
 	.dummy-div{
 		min-width: 180px;
-		height: 250px;	
 	}
 
 	.awesome-person h2{
@@ -252,5 +249,6 @@ Media Style
 	.awesome-person P{
 		font-size: 15px;
 	}
+	
 	
 }
