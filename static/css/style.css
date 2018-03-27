@@ -43,27 +43,27 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-	background: #7f2a90;
+	background: #c1c1c1;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: #7f2a90;
+	background: #c1c1c1;
 }
 
 ::-webkit-scrollbar-thumb:active {
-	background: #7f2a90;
+	background: #c1c1c1;
 }
 
 .home::-webkit-scrollbar-thumb {
-	background: #7f2a90;
+	background: #4e0ed9;
 }
 
 .home::-webkit-scrollbar-thumb:hover {
-	background: #7f2a90;
+	background: #4e0ed9;
 }
 
 .home::-webkit-scrollbar-thumb:active {
-	background: #7f2a90;
+	background: #4e0ed9;
 }
 
 body {
