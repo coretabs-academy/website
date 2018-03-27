@@ -128,10 +128,11 @@ Navbar Style
 }
 
 .navbar-brand div {
-	font-size: 1.2em;
+	font-size: 1.8em;
 	color: white;
 	font-weight: bold;
 	border-width: 0 5px;
+	text-shadow: 1px 2px 0px #58156a;
 }
 
 @media screen and (max-width:380px) {
@@ -346,18 +347,15 @@ nav a:hover {
 }
 
 .home .navbar-brand {
-	width: 250px;
+	width: auto;
 	position: absolute;
-	top: 20px;
+	top: 10px;
 	left: 25px;
 	z-index: 5;
-	text-shadow: 1px 2px 0px #58156a;
 }
 
 .home .navbar-brand div {
-    background: rgba(142, 53, 105, 0.7490196078431373);
-	padding: 5px 50px;
-    border: 5px solid white;
+	padding: 5px 20px;
 	border-width: 0 5px;
 }
 @media screen and (max-width:380px) {
@@ -1065,7 +1063,6 @@ Projects Style
 
 .beauty-box.projects {
 	padding-top: 90px;
-}
 }
 
 

@@ -41,6 +41,7 @@
     form#signup-panel, form#login-panel {
         padding: 20px 10px;
         top: 46px;
+		left: 5px;
         direction: ltr;
     }
     form#signup-panel .errors, form#login-panel .errors {
