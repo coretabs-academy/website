@@ -161,7 +161,6 @@ Main Style
 }
 
 
-
 /*=====================================
 Footer Style
 =======================================*/
@@ -201,6 +200,29 @@ Selection Style
 	color: #333;
 }
 
+
+/*=====================================
+Scrollbar Style
+=======================================*/
+
+::-webkit-scrollbar {
+	background: #ccc;
+	width: 8px;
+	height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #ccc;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #ccc;
+}
+
+::-webkit-scrollbar-thumb:active {
+	background: #ccc;
+}
+
 /*=====================================
 Media Style
 =======================================*/
@@ -219,7 +241,6 @@ Media Style
 	.awesome-person,
 	.dummy-div{
 		min-width: 180px;
-		height: 250px;	
 	}
 
 	.awesome-person h2{
@@ -228,5 +249,6 @@ Media Style
 	.awesome-person P{
 		font-size: 15px;
 	}
+	
 	
 }
