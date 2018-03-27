@@ -107,7 +107,7 @@ $(function () {
 				'<p><a href="/frontend/projects/one_mac_project/11">اللمسات الأخيرة</a></p>'+
 			'</aside>');
 	}
-	$(".container:not(.links)").append('<div class="navigate"> <a href="#" class="disabled">السابق</a> <a href="#">التالي</a> </div>');
+	$(".container:not(.links)").append('<div class="navigate"> <a href="#" class="disabled">السابق</a> <a href="#">التالي</a> </div>')
 	$("aside a").eq(currentPageNumber - 1).addClass('active');
 	var next = $(".navigate").children().eq(1);
 	var prev = $(".navigate").children().eq(0);
