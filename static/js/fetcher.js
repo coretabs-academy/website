@@ -41,7 +41,7 @@ $(function() {
     $("#main .courses_container").on("click", "a", function(event) {
         var id = $(this).attr("data-id");
         $("body").removeClass("home");
-        $("#animate, .background-image, #main, footer").remove();
+        $("#animate, .background-image, #main, .about, footer").remove();
         $("#navbar").addClass("navbar");
         $(".icon-container").removeClass("hidden");
         $(".navbar-nav, .container").show();
@@ -77,6 +77,9 @@ $(function() {
             $(".cooked img").each(function () {
                 var src = $(this).attr("src");
                 $(this).attr("src", topicsJSON.host + id + "/" + src);
+            });
+            $('pre code').each(function(i, code) {
+                hljs.highlightBlock(code);
             });
 
             viewNavigation(navigationIndex);
