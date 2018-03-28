@@ -183,6 +183,11 @@ $(function() {
         if ($(window).width() >= 1080 && $("aside").css("display") == "none") { $("aside").show(); }
     });
 
+    //fix return to perevious page button
+    $(".go-back").on('click', function(){
+      if($("body").hasClass("home fullstack")) $(".go-back").attr('href', '/');
+      else if($("body").hasClass("fullstack")) $(".go-back").attr('href', '/fullstack/');
+    });
 
     //change the courses connector height dynamically
     var path = window.location.pathname;
