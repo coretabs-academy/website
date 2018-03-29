@@ -856,10 +856,9 @@ Main Style
 		height: 100%;
 		width: 100%;
 	}
-	.beauty-box .project .courses_image img {
+	.beauty-box .courses_image img {
 		border-radius: 50%;
-		width: 200px;
-		height: 200px;
+		height: 100%; 
 	}
 	.beauty-box .text {
 		padding-bottom: 50px;
@@ -911,6 +910,7 @@ Main Style
 		padding-right: 20px;
 	}
 }
+
 
 
 /*=====================================
@@ -1022,8 +1022,13 @@ Container Links Style
 	border-radius: 3px;
 }
 
+.links h1{
+	margin-bottom: 30px;
+}
 
-
+.catalog-page{
+	background: rgb(239, 235, 233);
+}
 /*=====================================
 Footer Style
 =======================================*/
