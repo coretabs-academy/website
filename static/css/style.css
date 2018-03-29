@@ -11,11 +11,9 @@ html {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	scroll-behavior: smooth;
-}
-
-html {
 	overflow-x: hidden;
 }
+
 
 *,
 *::before,
@@ -71,8 +69,7 @@ body {
 	font-family: 'Cairo', sans-serif;
 	color: rgb(34, 34, 34);
 	direction: rtl;
-	position: relative;
-	z-index: -100;
+
 }
 
 li {
@@ -106,6 +103,7 @@ Navbar Style
 	display: -ms-flexbox;
 	display: flex;
 	top: 0;
+	z-index: 999999;
 }
 
 .navbar-brand {
@@ -375,7 +373,7 @@ Container Style
 	margin: auto;
 	position: relative;
 	top: 90px;
-	z-index: -1;
+	z-index: 0;
 	padding-right: 300px;
 	min-width: 1000px;
 	line-height: 40px;
@@ -630,7 +628,7 @@ Main Style
 	-ms-flex-align: center;
 	align-items: center;
 	position: relative;
-	z-index: -50;
+	z-index: 0;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -822,7 +820,9 @@ Main Style
 .beauty-box .box-link {
 	width: 100%;
 	height: 100%;
+	display: block;
 	position: absolute;
+	z-index: 9999;
 }
 
 .beauty-box hr {
@@ -922,7 +922,7 @@ about_us Style
 	width: 100%;
 	padding: 60px 0;
 	position: relative;
-	z-index: -2;
+	z-index: 0;
 }
 
 .about h1 {
@@ -1271,5 +1271,138 @@ inner nav Style
 	text-decoration: none;
 	margin-right: 20px;
 	text-shadow: 0px 2px 0px #2b0a65;
+	
+}
+/*=====================================
+login-toggle Style
+=======================================*/
+
+.signup-toggle{
+	width: 100%;
+	height: auto;
+	background: #3d1292;
+	clear: both;
+	display: none;
+	padding: 30px 20px;
+	box-shadow: inset 0px -1px 5px rgba(0,0,0,0.3);
+	position: relative;
+}
+#signup{
+	display: block;
+	height: auto;
+	background: #f43b3b; 
+    background: -webkit-linear-gradient(left, #ec008c, #fc6767);
+    background: -o-linear-gradient(left, #ec008c, #fc6767);
+    background: linear-gradient(to right, #ec008c, #fc6767);
+	padding: 5px 15px;
+	min-width: 140px;
+	color: #fff;
+	border-radius: 100px;
+ 	text-align: center;
+  	transition: 0.3s;
+  	background-size: 150% auto;
+	margin-top: 10px;
+}
+#signup:hover {
+  background-position: right center;
+}
+
+#forum-button{
+	display: block;
+	height: auto;
+	border: 2px solid #fff;
+	padding: 1px 15px 3px;
+	min-width: 140px;
+	color: #fff;
+	border-radius: 100px;
+ 	text-align: center;
+  	transition: 0.3s;
+  	background-size: 150% auto;
+	margin: 10px 10px 0 0;
+	
+	
+}
+#forum-button:hover{
+	background: rgba(0,0,0,0.2);
+}
+.signup-form {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+.signup-form form{
+	display: flex !important;
+	flex-direction: row;
+}
+
+.signup-form input[type=text]{
+	padding: 5px 0px 10px 0px;
+	margin: 7px 10px;
+	font-size: 15px;
+	border: none;
+	font-family: Cairo;
+	background: none;
+	color: #fff;
+	border-bottom: 2px solid #fff;
+	transition: 0.3s;
+	min-width: 200px;
+}
+
+.signup-form input[type=text]:focus{
+	border-bottom: 2px solid #8fb0ff; 
+}
+
+.signup-form input[type=text]::placeholder{
+	transition: 0.4s;
+	color: #fff;
+	opacity: 0.8;
+}
+.signup-form input[type=text]:-ms-input-placeholder 
+{
+	color: #fff;
+	filter: alpha(opacity=80);
+}
+.signup-form input[type=text]::-ms-input-placeholder 
+{
+	color: #fff;
+	filter: alpha(opacity=80);
+}
+.signup-form input[type=text]:focus::placeholder{
+	opacity: 0.4;
+}
+
+.signup-form button{
+	padding: 6px 14px 10px 12px;
+	height: 80%;
+	background: #f43b3b; 
+    background: -webkit-linear-gradient(left, #ec008c, #fc6767);
+    background: -o-linear-gradient(left, #ec008c, #fc6767);
+    background: linear-gradient(to right, #ec008c, #fc6767);
+	color: #fff;
+	border-radius: 4px;
+	border: none;
+	font-size: 20px;
+	cursor: pointer;
+	margin: 6px 15px 0 0;
+	transition: 0.3s;
+	background-size: 120% auto;
+	
+}
+.signup-form button:hover{
+ 	background-position: right center;
+}
+.signup-toggle .errors ul{
+	text-align: center;
+	margin-top: 25px;
+}
+.signup-toggle .errors li{
+	width: 70%;
+	list-style: none;
+	color: #fff;
+	margin: 15px auto 0;
+	padding: 5px;
+	background: #5525b4;
+	border-radius: 4px;
 	
 }
