@@ -1,0 +1,28 @@
+<div class="signup-toggle"  {% if signupform.errors  %} style="display: block" {% endif %}>
+
+    <div class="signup-form">
+        <form action="{% url 'home' %}"  method="post">
+
+
+            {% csrf_token %}
+
+            <div class="input-dir">
+                {{ signupform.username }}
+            </div>
+
+            <div class="input-dir">
+                {{ signupform.email }}
+            </div>
+            <div>
+                <button type="submit">
+                    &#10095;
+                </button>
+            </div>
+
+        </form>
+    </div>
+
+    <div class="errors"> {{ signupform.non_field_errors }} </div>
+    <div class="errors"> {{ signupform.username.errors }} </div>
+    <div class="errors"> {{ signupform.email.errors }} </div>
+</div>

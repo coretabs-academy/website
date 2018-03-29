@@ -1,185 +1,50 @@
-<!DOCTYPE html>
-
+{% extends 'base.html' %}
 {% load static i18n %}
 
+{% block head_title %}{% trans "Coretabs Academy" %}{% endblock %}
 
-<html lang="ar" dir="rtl">
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Coretabs Academy</title>
-      <link rel="stylesheet" href="{% static 'css/style.css' %}">
-      <link rel="stylesheet" href="{% static 'css/custom.css' %}">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
-       <style class="connectorStyle"></style>
-       <!-- Global site tag (gtag.js) - Google Analytics -->
-       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116549606-3"></script>
-       <script>
-           window.dataLayer = window.dataLayer || [];
-           function gtag(){dataLayer.push(arguments);}
-           gtag('js', new Date());
-           gtag('config', 'UA-116549606-3');
-       </script>
-   </head>
-   <body class="home">
-	  
-	   <div class="signup-toggle"  {% if signupform.errors  %} style="display: block" {% endif %}>
-	   
-		   <div class="signup-form">
-			   <form action="{% url 'home' %}"  method="post">
+{% block links %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+{% endblock %}
 
 
-					{% csrf_token %}
 
-					
-					<div class="input-dir">
-						{{ signupform.username }}
-					</div>
-					
-					<div class="input-dir">
-						{{ signupform.email }}
-					</div>
-					<div>
-						<button type="submit">
-							&#10095;
-							<!--{% trans "Signup" %}--></button>
-					</div>
-					
-				   
-			   </form>
-		   </div>
-		  
-		   	<div class="errors"> {{ signupform.non_field_errors }} </div>
-			<div class="errors"> {{ signupform.username.errors }} </div>
-			<div class="errors"> {{ signupform.email.errors }} </div>
-	   </div>
+{% block body_attr %}class="home"{% endblock %}
 
-      <div class="background-image">
-		
-		   <div class="navbar-brand">
-         <div>
-             {% trans "Academy" %}
-         </div>
-      </div>
-     <div class="login-brand">
-{#         {% if request.user.is_authenticated %}#}
-{##}
-{#             <form action="{% url "account_logout" %}" method="POST">#}
-{#                {% csrf_token %}#}
-{#                <input type="hidden" name="logout" value="value" />#}
-{#                <a id="logout" href="#" onclick="this.parentNode.submit()">{% trans "Logout" %}</a>#}
-{#             </form>#}
-{##}
-{#            <a href="{% url "account_settings" %}">#}
-{#                {% trans "Account" %}#}
-{#            </a>#}
-{#        {% else %}#}
-			
-		 <div class="home-menu">
-            <a href="#top" id="signup" {% if signupform.errors  %} class="active" {% endif %}>
-                {% trans "Signup" %}
-            </a>
-			 
-			<a id="forum-button" href="http://forums.coretabs.net" target="_blank">
-                {% trans "Forums" %}
-            </a>
-		 </div>
-		 	
-<!--
+{% block signup %}{% include "_signup.html" %}{% endblock %}
 
-            <form id="signup-panel" method="post" action="{% url 'home' %}" {% if signupform.errors  %} style="display: block" {% endif %}>
+{% block header %}
+<div class="background-image">
+    {% include "_header.html" %}
+{% endblock %}
 
-                {% csrf_token %}
+{% block page_description %}
+    {% if messages %}
+        <div style="width: 100%">
+            {% for message in messages %}
+                <p style="width: 100%;  background-color: #4b7bec; color: white"> {{ message }}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
 
-                <div class="errors"> {{ signupform.non_field_errors }} </div>
-
-                <div class="errors"> {{ signupform.username.errors }} </div>
-                <div>
-                    {{ signupform.username }}
-                </div>
-                <div class="errors"> {{ signupform.email.errors }} </div>
-                <div>
-                    {{ signupform.email }}
-                </div>
-                <div>
-                    <button type="submit">{% trans "Signup" %}</button>
-                </div>
-            </form>
--->
-
-
-{#            <a id="login" {% if form.non_field_errors  %} class="active" {% endif %}>#}
-{#                {% trans "Login" %}#}
-{#            </a>#}
-{#            <form id="login-panel" method="post" action="{% url 'home' %}" {% if form.non_field_errors  %} style="display: block" {% endif %}>#}
-{##}
-{#                {% csrf_token %}#}
-{##}
-{#                <div class="errors"> {{ form.non_field_errors }} </div>#}
-{##}
-{#                <div>#}
-{#                    {{ form.username }}#}
-{#                </div>#}
-{##}
-{#                <div>#}
-{#                    {{ form.password }}#}
-{#                </div>#}
-{##}
-{#                <div id="remember">#}
-{#                    {{ form.remember }}#}
-{#                    {{ form.remember.label_tag }}#}
-{#                </div>#}
-{#                <div>#}
-{#                    <button type="submit">{% trans "Login" %}</button>#}
-{#                </div>#}
-{#                <div>#}
-{#                    <a href="{% url 'account_password_reset' %}">{% trans "Forgot Your Password?" %}</a>#}
-{#                </div>#}
-{#            </form>#}
-
-{#        {% endif %}#}
-
-
-<!--
-        <form id="language-selector" action="{% url 'set_language' %}" method="post">
-            {% csrf_token %}
-            <input name="next" type="hidden" value="{{ redirect_to }}" />
-             <select name="language" class="select select-hidden">
-                {% get_current_language as LANGUAGE_CODE %}
-                {% get_available_languages as LANGUAGES %}
-                {% for lang in LANGUAGES %}
-                    <option value="{{ lang.0 }}" {% if lang.0 == LANGUAGE_CODE %} selected="selected"{% endif %}>
-                       {{ lang.1 }}
-                    </option>
-                {% endfor %}
-            </select>
-			
-        </form>
--->
-
-     </div>
-		  
-      {% if messages %}
-          <div style="width: 100%">
-             {% for message in messages %}
-                 <p style="width: 100%;  background-color: #4b7bec; color: white"> {{ message }}</p>
-             {% endfor %}
-         </div>
-      {% endif %}
-
-        <h1>{% trans 'Web Development' %}</h1>
-        <p>
+    <h1>{% trans 'Web Development' %}</h1>
+    <p>
         {% blocktrans %}
-			Familiarity with programming is indispensable today. Learning programming is one of the most rich and useful things you can do.
-			{% endblocktrans %}
-        </p>
-        <a class="link" href="#main">{% trans 'Courses' %}</a>
-         <div class="course animated infinite bounce">
-            <i class="fas fa-chevron-down"></i>
-            <a href="#main"></a>
-         </div>
-      </div>
-      <main id="main" class="beauty-box">
+            Familiarity with programming is indispensable today. Learning programming is one of the most rich and useful things you can do.
+        {% endblocktrans %}
+    </p>
+    <a class="link" href="#main">{% trans 'Courses' %}</a>
+
+    <div class="course animated infinite bounce">
+        <i class="fas fa-chevron-down"></i>
+        <a href="#main"></a>
+    </div>
+</div>
+{% endblock %}
+
+{% block main %}
+    <main id="main" class="beauty-box">
          <h1 class="title">{% trans 'Courses' %}</h1>
          <div class="tracks">
             <div class="track">
@@ -195,8 +60,9 @@
                 </a>
             </div>
          </div>
-      </main>
-      <div class="about">
+    </main>
+
+    <div class="about">
          <h1>{% trans 'About website' %}</h1>
          <p>
              {% blocktrans %}
@@ -205,19 +71,13 @@
          </p>
 		  <a href="http://www.facebook.com/groups/ProgrammersUnion" class="facebook"></a>
       </div>
-      <footer>
-		    <div class="text"> Made with <span class="heart">&#10084;</span> by <a href="{% url 'contributors' %}"> Our Contributors</a>  </div>
-      </footer>
+{% endblock %}
 	   
-	   
-	  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-	   <script>
-	   		
-		   
-		   (function($) {
-		   
-		   
+{% block more_script %}
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        (function($) {
 		   $('#signup').click(function() {
 			   
 			   	var regText = "تسجيل";
@@ -238,8 +98,7 @@
 			   
 		 }(jQuery));
 		   
-	   </script>
-      <script src="{% static 'js/main.js' %}"></script>
-      <script src="{% static 'js/site.js' %}"></script>
-   </body>
-</html>
+    </script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/site.js' %}"></script>
+{% endblock %}
