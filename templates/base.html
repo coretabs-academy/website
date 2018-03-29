@@ -1,11 +1,47 @@
+{% load static i18n %}
+
 <!DOCTYPE html>
 <html>
     <head>
+
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <title>{% block head_title %}{% endblock %}</title>
+
+        {% block links %}
+            <link rel="stylesheet" href="{% static 'css/style.css' %}">
+            <link rel="stylesheet" id="animate" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+            <style class="connectorStyle"></style>
+        {% endblock %}
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+           <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116549606-3"></script>
+           <script>
+               window.dataLayer = window.dataLayer || [];
+               function gtag(){dataLayer.push(arguments);}
+               gtag('js', new Date());
+               gtag('config', 'UA-116549606-3');
+           </script>
+
     </head>
-    <body>
-        <p><a href="{% url 'home' %}">HOME</a></p>
-        {% block content %}{% endblock %}
+    <body {% block body_attr %}{% endblock %}>
+        {% block header %}
+            {% include '_header.html' %}
+        {% endblock %}
+
+        {% block page_description %}
+        {% endblock %}
+
+        {% block main %}
+        {% endblock %}
+
+        {% block footer %}
+            <footer>
+		        <div class="text"> Made with <span class="heart">&#10084;</span> by <a href="{% url 'contributors' %}"> Our Contributors</a>  </div>
+            </footer>
+        {% endblock %}
+
+        {% block more_script %}{% endblock %}
     </body>
 </html>

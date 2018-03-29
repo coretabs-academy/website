@@ -1,72 +1,58 @@
-﻿<!DOCTYPE html>
-{% load static i18n %}
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>دروس Full Stack</title>
-		<link rel="stylesheet" href="{% static 'css/style.css' %}">
-        <link rel="stylesheet" id="animate" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
-		<link rel="stylesheet" href="{% static 'css/fetcher.css' %}">
-        <script src="{% static 'js/jquery-3.3.1.min.js'%}"></script>
-        <link rel="stylesheet" href="{% static 'css/github.min.css'%}">
-	    <script src="{% static 'js/highlight.pack.js'%}"></script>
-				<style class="connectorStyle"></style>
-	    <!-- Global site tag (gtag.js) - Google Analytics -->
-	    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116549606-3"></script>
-	    <script>
-    	    window.dataLayer = window.dataLayer || [];
-    	    function gtag(){dataLayer.push(arguments);}
-    	    gtag('js', new Date());
-    	    gtag('config', 'UA-116549606-3');
-    	</script>
-	</head>
-	<body id="fetcher" class="home fullstack upper-badding">
+﻿{% extends 'base.html' %}
 
+{% block head_title %}{% trans "Full Stack Lessons" %}{% endblock %}
 
-		<div class="inner-nav">
-		<a href="{% url 'fullstack' %}" class="go-back">&#10094;</a>
-            <div id="logo"><a href="{% url 'home' %}">{% trans "Academy" %}</a></div>
-			<div class="icon-container hidden">
-				<div class="humberger-icon">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</div>
-            <div class="navbar-nav">
+{% block links %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/fetcher.css' %}">
+    <script src="{% static 'js/jquery-3.3.1.min.js'%}"></script>
+    <link rel="stylesheet" href="{% static 'css/github.min.css'%}">
+    <script src="{% static 'js/highlight.pack.js'%}"></script>
+{% endblock %}
+
+{% block body_attr %} id="fetcher" class="home fullstack upper-badding" {% endblock %}
+
+{% block header %}
+    <div class="inner-nav">
+        <a href="{% url 'fullstack' %}" class="go-back">&#10094;</a>
+        <div id="logo"><a href="{% url 'home' %}">{% trans "Academy" %}</a></div>
+        <div class="icon-container hidden">
+            <div class="humberger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-		</div>
+        </div>
+        <div class="navbar-nav">
+        </div>
+    </div>
+{% endblock %}
 
+{% block page_description %}
+    <div class="about">
+        <h1>{% trans 'Full Stack' %}</h1>
+        <p>
+            {% blocktrans %}english fullstack description{% endblocktrans %}
+        </p>
+    </div>
+{% endblock %}
 
-	   <div class="about">
-         <h1>{% trans 'Full Stack' %}</h1>
-         <p>
-             {% blocktrans %}english fullstack description{% endblocktrans %}
-         </p>
+{% block main %}
+    <main id="main" class="beauty-box fix-upper-padding">
+        <div class="courses_container">
+            Loading... Please Wait
+        </div>
+    </main>
+    <div class="container">
+        <div class="cooked">
+        </div>
+        <aside>
+        </aside>
+    </div>
+{% endblock %}
 
-      </div>
-
-
-
-        <main id="main" class="beauty-box fix-upper-padding">
-            <div class="courses_container">
-                Loading... Please Wait
-            </div>
-        </main>
-        <div class="container">
-			<div class="cooked">
-			</div>
-			<aside>
-
-			</aside>
-		</div>
-
-        <footer>
-		    <div class="text"> Made with <span class="heart">&#10084;</span> by <a href="{% url 'contributors' %}"> Our Contributors</a>  </div>
-        </footer>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.min.js"></script>
-        {% load static%}
-        <script src="{% static 'js/fetcher.js' %}"></script>
-	</body>
-</html>
+{% block more_script %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.min.js"></script>
+    {% load static %}
+    <script src="{% static 'js/fetcher.js' %}"></script>
+{% endblock %}
