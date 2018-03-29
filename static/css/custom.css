@@ -5,8 +5,7 @@
         z-index: 5;
     }
     .login-brand > form, .login-brand > a {
-        display: block;
-        float: left;
+        display: inline-block;
         margin: 0 5px;
     }
     .login-brand > a {
@@ -223,8 +222,12 @@
     }
     .login-brand {
         top: 80px;
-        right: calc(50% - 135px);
-        width: 270px;
+        width: 300px;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		
     }
     #main-video {
         width: 480px;
