@@ -49,101 +49,70 @@
             <p dir="rtl">نفس الفكرة تحصل في اللغات البرمجية فهل فكرت يوماً ما <strong dir="rtl">لماذا لا يمكنك خداع الصراف الألي (ATM) وسحب كما تريد من المال؟</strong><br>
                ذلك غير ممكن لان الصراف الألي يقوم بإتخاذ قرار اعطائك مبلغ من المال بعد التأكد من شروط عديدة سنأخذ منها أحد الشروط والتي هي التأكد من أن رصيدك يحتوي على مبلغ مالي أكبر أو يساوي المبلغ الذي تريد سحبة فاذا لم يكن لديك الرصيد الكافي سيقوم برفض إكمال العملية. <strong dir="rtl">لنكتب الكود الذي سيقوم بذلك:</strong>
             </p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">accountBalance</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">100</span><span style="color: #000000; font-weight: bold">;</span>
-<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">moneyRequest</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">99</span><span style="color: #000000; font-weight: bold">;</span>
-</pre>
-            </div>
+            <pre>
+<code>var accountBalance = 100;
+var moneyRequest = 99;</code>
+            </pre>
             <p dir="rtl">قمت بتعريف متغيرين:<br>
                <strong dir="rtl">الأول</strong> <code dir="ltr">accountBalance</code>  يحتوي الرصيد الحالي في الحساب<br>
                <strong dir="rtl">الثاني</strong> <code dir="ltr">moneyRequest</code> يحتوي المبلغ الذي سيتم طلب سحبة من الصراف الألي
             </p>
             <p dir="rtl"><strong dir="rtl">سيقوم الصراف الألي بالتالي بعد حصولة على هذه المعطيات:</strong></p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">accountBalance</span>  <span style="color: #ce5c00; font-weight: bold">&gt;=</span>  <span style="color: #000000">moneyRequest</span> <span style="color: #000000; font-weight: bold">){</span>
-
-  <span style="color: #8f5902; font-style: italic">//يتم تنفيذ الاكواد التي هنا في حال كان الشرط متحقق   </span>
-
-<span style="color: #000000; font-weight: bold">}</span>
-<span style="color: #204a87; font-weight: bold">else</span><span style="color: #000000; font-weight: bold">{</span>
-
-  <span style="color: #8f5902; font-style: italic">//يتم تنفيذ الاكواد التي هنا في حال كان الشرط غير متحقق</span>
-
-<span style="color: #000000; font-weight: bold">}</span>
-</pre>
-            </div>
+            <pre>
+<code>if ( accountBalance  >=  moneyRequest ){
+  //يتم تنفيذ الاكواد التي هنا في حال كان الشرط متحقق
+}
+else{
+  //يتم تنفيذ الاكواد التي هنا في حال كان الشرط غير متحقق
+}</code>
+            </pre>
             <p dir="rtl">لاحظوا وضع الشرط بين قوسين بعد كلمة <code dir="ltr">if</code> والتي تعني <code dir="rtl">اذا</code> كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">accountBalance</span>  <span style="color: #ce5c00; font-weight: bold">&gt;=</span>  <span style="color: #000000">moneyRequest</span>
-</pre>
-            </div>
+            <pre>
+<code>accountBalance  >=  moneyRequest</code>
+            </pre>
             <p dir="rtl">من الدرس الخاص بالمقارنات نعرف بأن هذه العملية سترجع لنا قيمة منطقية <code dir="ltr">true</code> وذلك لان رصيدي يحتوي على مبلغ <code dir="ltr">100</code> اكبر او يساوي المبلغ الذي طلبت سحبة <code dir="ltr">99</code> لهذا سيتم التعويض عن العملية اعلاة كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">){</span>
-
-  <span style="color: #8f5902; font-style: italic">//يتم تنفيذ الاكواد التي هنا في حال كان الشرط متحقق   </span>
-
-<span style="color: #000000; font-weight: bold">}</span>
-<span style="color: #204a87; font-weight: bold">else</span><span style="color: #000000; font-weight: bold">{</span>
-
-  <span style="color: #8f5902; font-style: italic">//يتم تنفيذ الاكواد التي هنا في حال كان الشرط غير متحقق</span>
-
-<span style="color: #000000; font-weight: bold">}</span>
-</pre>
-            </div>
+            <pre>
+<code>if (true){
+  //يتم تنفيذ الاكواد التي هنا في حال كان الشرط متحقق
+}
+else{
+  //يتم تنفيذ الاكواد التي هنا في حال كان الشرط غير متحقق
+}</code>
+            </pre>
             <p dir="rtl">طالما وقد تم التعويض عنها بـ true فذلك يعني أن الشرط متحقق وسيتم الدخول لتنفيذ الأوامر في تلك المنطقة, لهذا سيقوم الصراف الألي بالموفقة على العملية وسيقوم بخصم المبلغ الذي طلبته من رصيدك الحالي كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">){</span>
-
- <span style="color: #000000">accountBalance</span> <span style="color: #ce5c00; font-weight: bold">=</span>  <span style="color: #000000">accountBalance</span> <span style="color: #ce5c00; font-weight: bold">-</span> <span style="color: #000000">moneyRequest</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">// خصم المبلغ من رصيدك وتخزين المبلغ الحالي في متغير الرصيد</span>
-
- <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"تمت العملية بنجاح الرجاء أخذ المال"</span><span style="color: #000000; font-weight: bold">);</span>
-
-<span style="color: #000000; font-weight: bold">}</span>
-<span style="color: #204a87; font-weight: bold">else</span><span style="color: #000000; font-weight: bold">{</span>
-
-  <span style="color: #8f5902; font-style: italic">//يتم تنفيذ الاكواد التي هنا في حال كان الشرط غير متحقق</span>
-
-<span style="color: #000000; font-weight: bold">}</span>
-</pre>
-            </div>
+            <pre>
+<code>if (true){
+ accountBalance =  accountBalance - moneyRequest; // خصم المبلغ من رصيدك وتخزين المبلغ الحالي في متغير الرصيد
+ console.log("تمت العملية بنجاح الرجاء أخذ المال");
+}
+else{
+  //يتم تنفيذ الاكواد التي هنا في حال كان الشرط غير متحقق
+}</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">الأن لنفترض بأنك تريد سحب مبلغ 50 من رصيدك الذي تبقى فيه 1 من اخر عملية سحب قمت بها فسيتم التأكد من الشرط التالي:</strong></p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">accountBalance</span>  <span style="color: #ce5c00; font-weight: bold">&gt;=</span>  <span style="color: #000000">moneyRequest</span>
-</pre>
-            </div>
+            <pre>
+<code>accountBalance  >=  moneyRequest</code>
+            </pre>
             <p dir="rtl">نعرف ايضاً من الدرس السابق ان هذه العملية سترجع لنا قيمة false وذلك لان المبلغ الذي طلبت سحبة هو 50 بينما رصيدي يحتوي على 1 فقط لهذا فالرصيد الحالي ليس أكبر او يساوي المبلغ المطلوب فسيتم التعويض عن هذه العملية بالقيمة المنطقية <code dir="ltr">flase</code> <strong dir="rtl">كالتالي:</strong></p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">false</span><span style="color: #000000; font-weight: bold">){</span>
-
- <span style="color: #000000">accountBalance</span> <span style="color: #ce5c00; font-weight: bold">=</span>  <span style="color: #000000">accountBalance</span> <span style="color: #ce5c00; font-weight: bold">-</span> <span style="color: #000000">moneyRequest</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">// خصم المبلغ من رصيدك وتخزين المبلغ الحالي في متغير الرصيد</span>
-
- <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"تمت العملية بنجاح الرجاء أخذ المال"</span><span style="color: #000000; font-weight: bold">);</span>
-
-<span style="color: #000000; font-weight: bold">}</span>
-<span style="color: #204a87; font-weight: bold">else</span><span style="color: #000000; font-weight: bold">{</span>
-
-  <span style="color: #8f5902; font-style: italic">//يتم تنفيذ الاكواد التي هنا في حال كان الشرط غير متحقق</span>
-
-<span style="color: #000000; font-weight: bold">}</span>
-</pre>
-            </div>
+            <pre>
+<code>if (false){
+ accountBalance =  accountBalance - moneyRequest; // خصم المبلغ من رصيدك وتخزين المبلغ الحالي في متغير الرصيد
+ console.log("تمت العملية بنجاح الرجاء أخذ المال");
+}
+else{
+  //يتم تنفيذ الاكواد التي هنا في حال كان الشرط غير متحقق
+}</code>
+            </pre>
             <p dir="rtl">طالما والشرط غير متحقق فلن يقوم الصراف الألي بتنفيذ الأوامر التي بدأخل الشرط <code dir="ltr">if</code> ولكن سيقوم بتنفيذ الأوامر التي بدأخل الشرط <code dir="ltr">else</code> لهذا لنقوم بإخبار العميل بأن رصيدة غير كافي <strong dir="rtl">كالتالي:</strong></p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">false</span><span style="color: #000000; font-weight: bold">){</span>
-
- <span style="color: #000000">accountBalance</span> <span style="color: #ce5c00; font-weight: bold">=</span>  <span style="color: #000000">accountBalance</span> <span style="color: #ce5c00; font-weight: bold">-</span> <span style="color: #000000">moneyRequest</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">// خصم المبلغ من رصيدك وتخزين المبلغ الحالي في متغير الرصيد</span>
-
- <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"تمت العملية بنجاح الرجاء أخذ المال"</span><span style="color: #000000; font-weight: bold">);</span>
-
-<span style="color: #000000; font-weight: bold">}</span>
-<span style="color: #204a87; font-weight: bold">else</span><span style="color: #000000; font-weight: bold">{</span>
-
- <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"نعتذر لعدم إكمال العملية. رصيدك غير كافي"</span><span style="color: #000000; font-weight: bold">);</span>
-
-<span style="color: #000000; font-weight: bold">}</span>
-</pre>
-            </div>
+            <pre>
+<code>if (false){
+ accountBalance =  accountBalance - moneyRequest; // خصم المبلغ من رصيدك وتخزين المبلغ الحالي في متغير الرصيد
+ console.log("تمت العملية بنجاح الرجاء أخذ المال");
+}
+else{
+ console.log("نعتذر لعدم إكمال العملية. رصيدك غير كافي");
+}</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">اذا لنلخص ما قام به الصراف الألي:</strong></p>
             <ul dir="rtl">
                <li dir="rtl">اذا (if) كان الرصيد الحالي اكبر او يساوي المبلغ المطلوب قم بالموافقة على العملية وقم بخصم المبلغ الذي قام بسحبة من حسابة.</li>
@@ -162,43 +131,27 @@
             </ul>
             <p dir="rtl">نلاحظ انه لدينا <strong dir="ltr">6</strong> شروط يجب التأكد منها ما يعني أننا سنحتاج الى امر إضافي للتحقق من الشروط الاخرى, في هذه الحالة سنستخدم الحالة  <strong dir="ltr">else if</strong> سنقوم بعمل <strong dir="rtl">التالي:</strong></p>
             <p dir="rtl">سنقوم بعمل المتغير التالي grade لتخزين درجة الطالب</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">grade</span><span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">68</span><span style="color: #000000; font-weight: bold">;</span>
-</pre>
-            </div>
+            <pre>
+<code>var grade= 68;</code>
+            </pre>
             <p dir="rtl">الان سنقوم بمقارنة الدرجة بالشروط التي قمنا بتحديدها اعلاة كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">grade</span> <span style="color: #ce5c00; font-weight: bold">&gt;=</span> <span style="color: #0000cf; font-weight: bold">90</span>  <span style="color: #000000; font-weight: bold">){</span>
-
-  <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"ممتاز"</span><span style="color: #000000; font-weight: bold">);</span>
-
-<span style="color: #000000; font-weight: bold">}</span>
-
-<span style="color: #204a87; font-weight: bold">else</span> <span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">grade</span> <span style="color: #ce5c00; font-weight: bold">&gt;=</span> <span style="color: #0000cf; font-weight: bold">80</span>  <span style="color: #000000; font-weight: bold">){</span>
-
-  <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"جيد جداً"</span><span style="color: #000000; font-weight: bold">);</span>
-
-<span style="color: #000000; font-weight: bold">}</span>
-
-<span style="color: #204a87; font-weight: bold">else</span> <span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">grade</span> <span style="color: #ce5c00; font-weight: bold">&gt;=</span> <span style="color: #0000cf; font-weight: bold">70</span>  <span style="color: #000000; font-weight: bold">){</span>
-
-  <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"جيد"</span><span style="color: #000000; font-weight: bold">);</span>
-
-<span style="color: #000000; font-weight: bold">}</span>
-
-<span style="color: #204a87; font-weight: bold">else</span> <span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">grade</span> <span style="color: #ce5c00; font-weight: bold">&gt;=</span> <span style="color: #0000cf; font-weight: bold">60</span>  <span style="color: #000000; font-weight: bold">){</span>
-
-  <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"مقبول"</span><span style="color: #000000; font-weight: bold">);</span>
-
-<span style="color: #000000; font-weight: bold">}</span>
-
-<span style="color: #204a87; font-weight: bold">else</span><span style="color: #000000; font-weight: bold">{</span>
-
-  <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"راسب"</span><span style="color: #000000; font-weight: bold">);</span>
-
-<span style="color: #000000; font-weight: bold">}</span>
-</pre>
-            </div>
+            <pre>
+<code>if ( grade >= 90  ){
+  console.log("ممتاز");
+}
+else if ( grade >= 80  ){
+  console.log("جيد جداً");
+}
+else if ( grade >= 70  ){
+  console.log("جيد");
+}
+else if ( grade >= 60  ){
+  console.log("مقبول");
+}
+else{
+  console.log("راسب");
+}</code>
+            </pre>
             <p dir="rtl">سيتم طباعة <strong dir="rtl">مقبول</strong> كتقدير للطالب الذي قمنا بوضع درجته في المتغير grade, شاهد الصورة التالية لتعرف كيف تم المرور على الشروط حتى تم إجاد الشرط المتحقق فتم الدخول لتنفيذ الأوامر بداخلة<br></p>
             <img class="image" src="{% static 'images/javascript/8/1.gif'%}">
             <p></p>
@@ -206,19 +159,14 @@
             <h2 dir="rtl">ـ Logical AND</h2>
             <p dir="rtl">احياناً نريد التحقق من شرطين فإذا تحققا مع بعض نقوم بأمر ما واذا لم يتحققا مع بعضهما البعض نقوم بشي أخر فعلى سبيل المثال عند محاولتك تسجيل الدخول على المنتدى ماذا يطلب منك ؟</p>
             <p dir="rtl">يطلب منك كتابة إيميلك وكتابة الباسوورد وليس إحداهما وحتى يسمح لك بتسجيل الدخول يجب أن تكون هذه البيانات صحيحة ومتحقق وجودها في قاعدة البيانات</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">email</span> <span style="color: #ce5c00; font-weight: bold">===</span> <span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #ce5c00; font-weight: bold">&amp;&amp;</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">password</span> <span style="color: #ce5c00; font-weight: bold">===</span> <span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">){</span>
-
-   <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"اهلاً وسهلاً بك مرة أخرى"</span><span style="color: #000000; font-weight: bold">);</span>
-
-<span style="color: #000000; font-weight: bold">}</span>
-<span style="color: #204a87; font-weight: bold">else</span> <span style="color: #000000; font-weight: bold">{</span>
-
-  <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"يرجا التأكد من الإيميل أو الباسورد"</span><span style="color: #000000; font-weight: bold">);</span>
-
-<span style="color: #000000; font-weight: bold">}</span>
-</pre>
-            </div>
+            <pre>
+<code>if ( (email === true) && (password === true) ){
+   console.log("اهلاً وسهلاً بك مرة أخرى");
+}
+else {
+  console.log("يرجا التأكد من الإيميل أو الباسورد");
+}</code>
+            </pre>
             <p dir="rtl">لاحظ لا يتم تسجيل الدخول الا اذا كان الـ email يرجع قيمة true <strong dir="rtl">و</strong> الـ password يرجع قيمة true اما في أي حالة اخرى فسيتم التعويض عن العملية بـ false.</p>
             <ul dir="rtl">
                <li dir="rtl">رمز العملية <strong dir="ltr">and</strong> هو <strong dir="ltr">&amp;&amp;</strong></li>
@@ -238,22 +186,16 @@
                </li>
             </ul>
             <p dir="rtl">لاحظ أنه يكفينا ان يتحقق احد الثلاثة الشروط حتى نعرض هذه الرسالة وكذلك لا مشكلة اذا ما تحقق اكثر من شرط في نفس الوقت كان يكون نهاية الاسبوع وكذلك الساعة تعدت الخامسة مساء</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">time</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">12</span><span style="color: #000000; font-weight: bold">;</span>
-<span style="color: #000000">weekend</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">;</span>
-
-<span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">time</span> <span style="color: #ce5c00; font-weight: bold">&lt;</span> <span style="color: #0000cf; font-weight: bold">8</span> <span style="color: #ce5c00; font-weight: bold">||</span> <span style="color: #000000">time</span> <span style="color: #ce5c00; font-weight: bold">&gt;</span> <span style="color: #0000cf; font-weight: bold">17</span> <span style="color: #ce5c00; font-weight: bold">||</span> <span style="color: #000000">weekend</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
-
- <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"المكتب مغلق في الوقت الحالي"</span><span style="color: #000000; font-weight: bold">);</span>
-
-<span style="color: #000000; font-weight: bold">}</span>
-<span style="color: #204a87; font-weight: bold">else</span><span style="color: #000000; font-weight: bold">{</span>
-
- <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"المكتب مفتوح"</span><span style="color: #000000; font-weight: bold">);</span>
-
-<span style="color: #000000; font-weight: bold">}</span>
-</pre>
-            </div>
+            <pre>
+<code>var time = 12;
+weekend = true;
+if (time < 8 || time > 17 || weekend) {
+ console.log("المكتب مغلق في الوقت الحالي");
+}
+else{
+ console.log("المكتب مفتوح");
+}</code>
+            </pre>
             <p dir="rtl">في المثال اعلاة قمنا بإعطاء المتغير weekend القيمة true ما يعني انها عطلة نهاية الاسبوع اذا سيتم طباعة الرسالة التالية:</p>
             <p dir="rtl"><strong dir="rtl">المكتب مغلق في الوقت الحالي</strong></p>
             <p dir="rtl">بإمكانك تغيير الوقت في المتغير time الى وقت غير وقت الدوام وشاهد النتيجة لتستنتج أنه نحتاج الى احد الشروط لتتحقق كحد ادنى وايضاً لا مانع من تحقق كل الشروط</p>
@@ -267,79 +209,60 @@
             <p dir="rtl">أحياناً تحتاج كتابة شروط بدأخل الشروط فلا مشكلة بإمكانك ذلك.</p>
             <p dir="rtl">على سبيل المثال لنفترض أنك تريد شراء غلاف لجوال iphone x باللون الازرق اذا هو متوفر واذا لم يكن متوفر ستأخذ اللون الأحمر ولكن منطقياً لن تقوم بشراء اي من هذه الغلافات الا اذا كان لديك جوال لتضعة فيه واذا لم يكن لديك الجوال حينها يلزمك أن تشترية من وثم بإمكانك التفكير بالحصول على غلاف.</p>
             <p dir="rtl">كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">iphoneX</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">;</span>
-<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">blueCaseAvailable</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">false</span><span style="color: #000000; font-weight: bold">;</span>
-<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">redCaseAvailable</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">;</span>
-
-<span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">iphoneX</span> <span style="color: #ce5c00; font-weight: bold">===</span> <span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
-
-	<span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">blueCaseAvailable</span> <span style="color: #ce5c00; font-weight: bold">===</span> <span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
-		<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"شكراً لشرائك الغلاف الأزرق"</span><span style="color: #000000; font-weight: bold">);</span>
-	<span style="color: #000000; font-weight: bold">}</span> <span style="color: #204a87; font-weight: bold">else</span> <span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">redCaseAvailable</span> <span style="color: #ce5c00; font-weight: bold">===</span> <span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
-		<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"شكراً لشرائك الغلاف الأحمر"</span><span style="color: #000000; font-weight: bold">);</span>
-	<span style="color: #000000; font-weight: bold">}</span> <span style="color: #204a87; font-weight: bold">else</span> <span style="color: #000000; font-weight: bold">{</span>
-		<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"لا يوجد لدينا غلاف بألوانك المفضلة"</span><span style="color: #000000; font-weight: bold">);</span>
-	<span style="color: #000000; font-weight: bold">}</span>
-
-<span style="color: #000000; font-weight: bold">}</span> <span style="color: #204a87; font-weight: bold">else</span> <span style="color: #000000; font-weight: bold">{</span>
-
-	<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"قم بشراء الأيفون أولاً"</span><span style="color: #000000; font-weight: bold">);</span>
-
-<span style="color: #000000; font-weight: bold">}</span>
-</pre>
-            </div>
+            <pre>
+<code>var iphoneX = true;
+var blueCaseAvailable = false;
+var redCaseAvailable = true;
+if (iphoneX === true) {
+  if (blueCaseAvailable === true) {
+    console.log("شكراً لشرائك الغلاف الأزرق");
+  } else if (redCaseAvailable === true) {
+    console.log("شكراً لشرائك الغلاف الأحمر");
+  } else {
+    console.log("لا يوجد لدينا غلاف بألوانك المفضلة");
+  }
+} else {
+  console.log("قم بشراء الأيفون أولاً");
+}</code>
+            </pre>
             <hr>
             <h2 dir="rtl">ـ Ternary Operator</h2>
             <p dir="rtl">هناك طريقة مختصرة لـ if و else تتم عبر التالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">condition</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #ce5c00; font-weight: bold">?</span> <span style="color: #000000">expression</span> <span style="color: #000000">on</span> <span style="color: #204a87; font-weight: bold">true</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">expression</span> <span style="color: #000000">on</span> <span style="color: #204a87; font-weight: bold">false</span>
-</pre>
-            </div>
+            <pre>
+<code>(condition) ? expression on true : expression on false</code>
+            </pre>
             <p dir="rtl">بالعربي:<br></p>
             <img class="image" src="{% static 'images/javascript/8/2.png'%}">
             <p></p>
             <p dir="rtl">هذه الحالة نقوم بإسنادها إلى متغير.</p>
             <p dir="rtl">لنأخذ مثال ونفترض أننا نريد أن نقوم بتحديد سعر منتج بناء على نوع عضوية الزائر فاذا كان عضو vip بالموقع سيتم اسناد السعر 10 الى المتغير price واذا كان عضو عادي فسوف يكون السعر 20 كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">isVip</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">;</span>
-
-<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">price</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">isVip</span><span style="color: #ce5c00; font-weight: bold">?</span> <span style="color: #0000cf; font-weight: bold">10</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">20</span><span style="color: #000000; font-weight: bold">;</span>
-
-<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"The price is "</span> <span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #000000">price</span><span style="color: #000000; font-weight: bold">);</span>
-</pre>
-            </div>
+            <pre>
+<code>var isVip = true;
+var price = isVip? 10 : 20;
+console.log("The price is " +price);</code>
+            </pre>
             <p dir="rtl">ستتم عملية الإسناد بالشكل التالي:<br>
                <img src="{% static 'images/javascript/8/3.gif'%}" alt="c1" width="440" height="200"><br>
                اما الكود التالي:
             </p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">isVip</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">false</span><span style="color: #000000; font-weight: bold">;</span>
-
-<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">price</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">isVip</span><span style="color: #ce5c00; font-weight: bold">?</span> <span style="color: #0000cf; font-weight: bold">10</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">20</span><span style="color: #000000; font-weight: bold">;</span>
-
-<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"The price is "</span> <span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #000000">price</span><span style="color: #000000; font-weight: bold">);</span>
-</pre>
-            </div>
+            <pre>
+<code>var isVip = false;
+var price = isVip? 10 : 20;
+console.log("The price is " +price);</code>
+            </pre>
             <p dir="rtl">ستتم عملية الإسناد بالشكل التالي:<br>
                <img src="{% static 'images/javascript/8/4.gif'%}" alt="c2" width="440" height="200">
             </p>
             <p dir="rtl">لاحظ كيف قمنا بإختصار عملية التحقق في سطر واحد بدلاً من كتابتها بالشكل التالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">isVip</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">;</span>
-
-<span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">isVip</span> <span style="color: #ce5c00; font-weight: bold">===</span> <span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">){</span>
-
- <span style="color: #000000">price</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">10</span><span style="color: #000000; font-weight: bold">;</span>
-
-<span style="color: #000000; font-weight: bold">}</span>
-<span style="color: #204a87; font-weight: bold">else</span><span style="color: #000000; font-weight: bold">{</span>
-
-<span style="color: #000000">price</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">20</span><span style="color: #000000; font-weight: bold">;</span>
-
-<span style="color: #000000; font-weight: bold">}</span>
-</pre>
-            </div>
+            <pre>
+<code>var isVip = true;
+if (isVip === true){
+ price = 10;
+}
+else{
+price = 20;
+}</code>
+            </pre> 
             <hr>
             <p dir="rtl">تبقى الـ Switch Statement وهي لا تختلف عن فكرة ما تناولنا بشكل جوهري قم بمراجعتها من خلال دروس المسار ومن خلال المصدر <strong dir="rtl"><a href="https://www.w3schools.com/js/js_switch.asp" rel="nofollow noopener" dir="rtl">التالي</a></strong> و في حال واجهتك أي مشاكل في فهمها قم بتوضيح ذلك في التعليقات</p>
             <hr>

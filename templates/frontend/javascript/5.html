@@ -47,16 +47,14 @@
             <h2 dir="rtl">النوع الثالث: undefined</h2>
             <p dir="rtl">عند قيامك بتعريف متغير بدون إسناد أي قيمة إلية تقوم الجافاسكربت بإسناد القيمة undefined لذلك المتغير (ما يعني ان قيمته غير محددة).</p>
             <p dir="rtl"><strong dir="rtl">مثال:</strong></p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">x</span><span style="color: #000000; font-weight: bold">;</span>
-</pre>
-            </div>
+            <pre>
+<code>var x;</code>
+            </pre>
             <p dir="rtl">لنقوم بطباعة قيمة المتغير x على الـ console ونشاهد القيمة التي تشير اليها x</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">x</span><span style="color: #000000; font-weight: bold">;</span>
-<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"x value = "</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">x</span><span style="color: #000000; font-weight: bold">);</span>
-</pre>
-            </div>
+            <pre>
+<code>var x;
+console.log("x value = " + x);</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
             <img class="image" src="{% static 'images/javascript/5/1.png'%}">
             <p></p>
@@ -65,10 +63,9 @@
             <h2 dir="rtl">النوع الرابع: null</h2>
             <p dir="rtl">القيمة null تعني لا شئ وهي قيمة تسند للمتغير في حال أردت جعلة بدون أي قيمة</p>
             <p dir="rtl"><strong dir="rtl">مثال:</strong></p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">x</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">null</span><span style="color: #000000; font-weight: bold">;</span>
-</pre>
-            </div>
+            <pre>
+<code>var x = null;</code>
+            </pre>
             <p dir="rtl">لنقوم بطباعة قيمة المتغير x على الـ console ونشاهد القيمة التي تم تخزينها في x<br></p>
             <img class="image" src="{% static 'images/javascript/5/2.png'%}">
             <p></p>
@@ -78,19 +75,17 @@
             <ul dir="rtl">
                <li dir="rtl">نستطيع القول بأن null قيمة تقوم انت بإسنادها للمتغير لجعلة بدون قيمة بينما undefined تقوم الجافاسكربت بإسنادها للمتغير في حال انك قمت بتعريفة وتركته بدون أي قيمة.</li>
             </ul>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">x</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">null</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">// no value</span>
-<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">y</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">// undefined</span>
-</pre>
-            </div>
+            <pre>
+<code>var x = null; // no value
+var y; // undefined</code>
+            </pre>
             <ul dir="rtl">
                <li dir="rtl">نستخدم null لمسح قيمة المتغير لنفترض على سبيل المثال قمت بتعريف متغير x واسندت إلية قيمة وثم في وقت لاحق أردت أن تقوم بإسناد لا شئ للمتغير x</li>
             </ul>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">x</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">5</span><span style="color: #000000; font-weight: bold">;</span>
-<span style="color: #000000">x</span><span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">null</span><span style="color: #000000; font-weight: bold">;</span>
-</pre>
-            </div>
+            <pre>
+<code>var x = 5;
+x= null;</code>
+            </pre>
             <p dir="rtl">هذا ما يكفي لمعرفته بخصوص هذين النوعين في الوقت الحالي حتى لا ترتبك لذا ننتقل للنوع الأخر</p>
             <hr>
             <h2 dir="rtl">النوع الخامس: boolean</h2>
@@ -113,34 +108,29 @@
             <hr>
             <h3 dir="rtl">طريقة إسناد boolean data type للمتغيرات</h3>
             <p dir="rtl">تستطيع إسناد القيمة true او false للمتغير مباشرة كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">lightSwitch</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">false</span><span style="color: #000000; font-weight: bold">;</span>
-<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">lightSwitch</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">true</span><span style="color: #000000; font-weight: bold">;</span>
-</pre>
-            </div>
+            <pre>
+<code>var lightSwitch = false;
+var lightSwitch = true;</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">مثال:</strong><br>
                سأقوم بتعريف متغير واسناد القيمة false الية ومن ثم اظهر قيمته في نافذة منبثقة
             </p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;script&gt;</span>
-   <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">lightSwitch</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">false</span><span style="color: #000000; font-weight: bold">;</span>
-   <span style="color: #000000">alert</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">lightSwitch</span><span style="color: #000000; font-weight: bold">);</span>
-
-<span style="color: #204a87; font-weight: bold">&lt;/script&gt;</span>
-</pre>
-            </div>
+            <pre>
+<code>&lt;script&gt;
+   var lightSwitch = false;
+   alert (lightSwitch);
+&lt;/script&gt;</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
             <img class="image" src="{% static 'images/javascript/5/5.png'%}">
             <p></p>
             <p dir="rtl">الان لنقوم بتعديل الكود السابق بإضافة <strong dir="rtl">علامة تعجب</strong> <strong dir="ltr">!</strong> قبل اسم المتغير بداخل دالة <strong dir="ltr">alert</strong>:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;script&gt;</span>
-   <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">lightSwitch</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">false</span><span style="color: #000000; font-weight: bold">;</span>
-   <span style="color: #000000">alert</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #ce5c00; font-weight: bold">!</span><span style="color: #000000">lightSwitch</span><span style="color: #000000; font-weight: bold">);</span> <span style="color: #8f5902; font-style: italic">// اضفت هنا علامة التعجب ! قبل المتغير</span>
-
-<span style="color: #204a87; font-weight: bold">&lt;/script&gt;</span>
-</pre>
-            </div>
+            <pre>
+<code>&lt;script&gt;
+   var lightSwitch = false;
+   alert (!lightSwitch); // اضفت هنا علامة التعجب ! قبل المتغير
+&lt;/script&gt;</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
             <img class="image" src="{% static 'images/javascript/5/6.png'%}">
             <p></p>

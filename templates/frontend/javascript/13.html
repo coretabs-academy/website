@@ -69,19 +69,18 @@
             </p>
             <p dir="rtl"><strong dir="rtl">مثال:</strong><br> قم بطباعة الأعداد من 1 الى 10 في الـ consloe
             </p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">);</span>
-<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">2</span><span style="color: #000000; font-weight: bold">);</span>
-<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">3</span><span style="color: #000000; font-weight: bold">);</span>
-<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">4</span><span style="color: #000000; font-weight: bold">);</span>
-<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">5</span><span style="color: #000000; font-weight: bold">);</span>
-<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">6</span><span style="color: #000000; font-weight: bold">);</span>
-<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">7</span><span style="color: #000000; font-weight: bold">);</span>
-<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">8</span><span style="color: #000000; font-weight: bold">);</span>
-<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">9</span><span style="color: #000000; font-weight: bold">);</span>
-<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">10</span><span style="color: #000000; font-weight: bold">);</span>
-</pre>
-            </div>
+            <pre>
+<code>console.log(1);
+console.log(2);
+console.log(3);
+console.log(4);
+console.log(5);
+console.log(6);
+console.log(7);
+console.log(8);
+console.log(9);
+console.log(10);</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">شكراً لك</strong>, أرجوك قم الأن بطباعة الأعداد من 1 إلى 100.</p>
             <p dir="rtl"><strong dir="rtl">كثير اليس كذلك كم ستحتاج أسطر وكم ستحتاج وقت <img src="{% static 'images/javascript/13/3.png'%}" title=":thinking:" class="emoji" alt=":thinking:" style="width:30px;">؟</strong><br>                اذا ما رأيك أن نستخدم طريقة أكثر ذكاء فبدلاً من تكرير كتابة الأكواد في كل مرة لنقوم بكتابة كود مرة واحدة ونجعلة يقوم بتكرار نفسة كم ما نريد من المرات بإستخدام الحلقات <img src="{% static 'images/javascript/13/4.png'%}" title=":smirk:" class="emoji" alt=":smirk:" style="width:30px;">.
             </p>
@@ -107,49 +106,38 @@
             <img class="image" src="{% static 'images/javascript/13/5.png'%}">
             <p></p>
             <p dir="rtl"><strong dir="rtl">قم بتجربة الكود التالي:</strong></p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">;</span>
-<span style="color: #204a87; font-weight: bold">while</span> <span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">&lt;=</span> <span style="color: #0000cf; font-weight: bold">10</span> <span style="color: #000000; font-weight: bold">){</span>
-
- <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">i</span> <span style="color: #000000; font-weight: bold">);</span>
-
- <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">;</span>
-<span style="color: #000000; font-weight: bold">}</span>
-</pre>
-            </div>
+            <pre>
+<code>var i = 1;
+while ( i <= 10 ){
+ console.log( i );
+ i = i + 1;
+}</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
             <img class="image" src="{% static 'images/javascript/13/6.png'%}">
             <p></p>
             <p dir="rtl">شاهد كيف تم طباعة الأرقام من 1 الى 10 في اسطر قليلة.</p>
             <p dir="rtl"><strong dir="rtl">لنقوم بطباعة الارقام من 1 إلى 100 كالتالي:</strong></p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">;</span>
-<span style="color: #204a87; font-weight: bold">while</span> <span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">&lt;=</span> <span style="color: #0000cf; font-weight: bold">100</span> <span style="color: #000000; font-weight: bold">){</span>
-
- <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">i</span> <span style="color: #000000; font-weight: bold">);</span>
-
- <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">;</span>
-<span style="color: #000000; font-weight: bold">}</span>
-</pre>
-            </div>
+            <pre>
+<code>var i = 1;
+while ( i <= 100 ){
+ console.log( i );
+ i = i + 1;
+}</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
             <img class="image" src="{% static 'images/javascript/13/7.png'%}">
             <p></p>
             <p dir="rtl">في ثواني حصلنا على عمل كان سيأخذ مننا 100 سطر و نصف ساعة على الأقل للقيام به يدوياً</p>
             <hr>
             <p dir="rtl"><strong dir="rtl">مثال:</strong></p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">;</span>
-
-<span style="color: #204a87; font-weight: bold">while</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">&lt;</span> <span style="color: #0000cf; font-weight: bold">3</span> <span style="color: #000000; font-weight: bold">){</span>
-
-<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">i</span><span style="color: #000000; font-weight: bold">);</span>
-
-  <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">++</span><span style="color: #000000; font-weight: bold">;</span>
-
-<span style="color: #000000; font-weight: bold">}</span>
-</pre>
-            </div>
+            <pre>
+<code>var i = 1;
+while( i < 3 ){
+  console.log(i);
+  i++;
+}</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
             <img class="image" src="{% static 'images/javascript/13/8.png'%}">
             <p></p>
@@ -158,12 +146,11 @@
                   تذكر أن
                </summary>
                <h3 dir="rtl">الأكواد التالية ستقوم بنفس العملية في حالتنا هذه</h3>
-               <div class="code">
-                  <pre style="margin: 0; line-height: 125%"><span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">;</span>
-<span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">++</span><span style="color: #000000; font-weight: bold">;</span>
-<span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">+=</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">;</span>
-</pre>
-               </div>
+               <pre>
+<code>i = i + 1;
+i++;
+i += 1;</code>
+               </pre>
                <hr>
             </details>
             <p dir="rtl"><strong dir="rtl">حتى تفهم الحلقات loops يجب أن نكشف ما يحصل خلف الكواليس لذا سنقوم بتحليل الكود السابق وننظر لطريقة قيام المتصفح بالمرور على الحلقة خطوة بخطوة</strong></p>
@@ -178,7 +165,7 @@
             <hr>
             <h3 dir="rtl">حلقة for</h3>
             <p dir="rtl">تقوم بنفس عمل حلقة while الا ان طريقة ترتيبها مختلفة واكثر تنظيماً من الحلقة while كالتالي:<br></p>
-            <img class="image" src="../../images/javascript/13/10.png">
+            <img class="image" src="{% static '/images/javascript/13/10.png'%}">
             <p></p>
             <p dir="rtl"><strong dir="rtl">لنقم بتحليل طريقة عمل الـ for loop:</strong></p>
             <p dir="rtl">ركز على التالي:</p>
@@ -194,71 +181,58 @@
             <p dir="rtl">8- الخطوة الثامنة يتم التحقق من الشرط اذا مازال متحقق</p>
             <p dir="rtl">وهكذا حتى نصل لمرحلة عدم تحقق الشرط فيتم الخروج من الحلقة وعدم العودة لها مرة أخرى</p>
             <p dir="rtl">الصورة ادناة متحركة قم بالضغط عليها حتى تشاهدها من بدأية العملية<br></p>
-            <img class="image" src="../../images/javascript/13/11.gif">
+            <img class="image" src="{% static '/images/javascript/13/11.gif'%}">
             <p></p>
             <p dir="rtl"><strong dir="rtl">مثال:</strong><br> بإمكاننا أيضاً عمل حلقة تقوم بطباعة الأرقام من 10 إلى 1
             </p>
             <p dir="rtl">سنقوم بعمل بإعطاء المتغير <code dir="ltr">i</code> قيمة إبتدائية بـ 10 ونضع شرط بأن تكون القيمة أكبر او يساوي 1 ومن ثم نقوم في كل مرة بإنقاص رقم كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">for</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">10</span> <span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">&gt;=</span> <span style="color: #0000cf; font-weight: bold">1</span> <span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">--</span><span style="color: #000000; font-weight: bold">){</span>
-
- <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">i</span><span style="color: #000000; font-weight: bold">);</span>
-
-<span style="color: #000000; font-weight: bold">}</span>
-</pre>
-            </div>
+            <pre>
+<code>for (var i = 10 ; i >= 1 ; i--){
+ console.log(i);
+}</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/13/12.png">
+            <img class="image" src="{% static '/images/javascript/13/12.png'%}">
             <p></p>
             <hr>
             <h3 dir="rtl">حلقة do while</h3>
             <p dir="rtl">هذه الحلقة تقوم بتنفيذ الأوامر على الأقل مرة واحدة حتى وإن كان الشرط غير متحقق لانها تتحقق من الشرط بعد المرور بالأوامر.</p>
             <p dir="rtl">قبل أن نأخذ مثال عن الـ do while لنأخذ هذا <strong dir="rtl">المثال:</strong></p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
-
-<span style="color: #204a87; font-weight: bold">while</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">&gt;</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">){</span>
-
- <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">i</span><span style="color: #000000; font-weight: bold">);</span>
-
- <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">--</span><span style="color: #000000; font-weight: bold">;</span>
-<span style="color: #000000; font-weight: bold">}</span>
-</pre>
-            </div>
+            <pre>
+<code>var i = 0;
+while( i > 0){
+ console.log(i);
+ i--;
+}</code>
+            </pre>
             <p dir="rtl">لاحظ انني قمت بتعريف المتغير <code dir="ltr">i</code> واسندت الية القيمة <code dir="ltr">0</code> ومن ثم قمت بعمل حلقة شرطها أن يكون الرقم اكبر من <code dir="ltr">0</code> ما يعني ان الشرط غير متحقق في حالتنا فلن يتم الدخول للحلقة كالتالي:</p>
             <p dir="rtl">الصورة ادناة متحركة قم بالضغط عليها حتى تشاهدها من بدأية العملية<br></p>
-            <img class="image" src="../../images/javascript/13/13.gif">
+            <img class="image" src="{% static '/images/javascript/13/13.gif'%}">
             <p></p>
             <p dir="rtl">لاحظت كيف أن الشرط لم يكن متحقق لهذا لم يتم الدخول للحلقة while.</p>
             <p dir="rtl">لكن لنفترض أننا نريد لسبب من الأسباب أن يتم تنفيذ مابداخل الحلقة على الأقل مرة واحدة بغض النظر عن تحقق الشرط في المرة الأولى.</p>
             <p dir="rtl"><strong dir="rtl">في هذه الحالة سنستخدم do while</strong><br> سأقوم بصياغة نفس الحلقة السابقة ولكن هذه المرة بإستخدام do while
             </p>
             <p dir="rtl"><strong dir="rtl">مثال:</strong></p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
-
-<span style="color: #204a87; font-weight: bold">do</span><span style="color: #000000; font-weight: bold">{</span>
-
- <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">i</span><span style="color: #000000; font-weight: bold">);</span>
-
- <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">--</span><span style="color: #000000; font-weight: bold">;</span>
-
-<span style="color: #000000; font-weight: bold">}</span>
-<span style="color: #204a87; font-weight: bold">while</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">&gt;</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">);</span>
-</pre>
-            </div>
+            <pre>
+<code>var i = 0;
+do{
+ console.log(i);
+ i--;
+}while( i > 0);</code>
+            </pre>
             <p dir="rtl">هذه المرة سيتم طباعة قيمة المتغير <code dir="ltr">i</code> كالتالي:</p>
             <p dir="rtl">الصورة ادناة متحركة قم بالضغط عليها حتى تشاهدها من بدأية العملية<br></p>
-            <img class="image" src="../../images/javascript/13/14.gif">
+            <img class="image" src="{% static '/images/javascript/13/14.gif'%}">
             <p></p>
             <hr>
             <h2 dir="rtl">الـ nested loops</h2>
             <p dir="rtl">بإمكاننا وضع حلقة بداخل حلقة لنأخذ مثال على ذلك.</p>
             <p dir="rtl"><strong dir="rtl">لنقم بطباعة جدول الضرب ولنأخذ على سبيل المثال جدول ضرب الرقم 1 و الرقم 2 لنقوم بتحليلة:</strong><br>
-               <img src="../../images/javascript/13/15.png" alt="image" class="image">
+               <img src="{% static '/images/javascript/13/15.png'%}" alt="image" class="image">
             </p>
             <p dir="rtl">هل تلاحظ أن في جدول ضرب الأعداد الخاص بكل عدد أنه يوجد جزء ثابت لا يتغير الا بعد أن يتم ضربة بـ 12 رقم كالتالي:<br></p>
-            <img class="image" src="../../images/javascript/13/16.png">
+            <img class="image" src="{% static '/images/javascript/13/16.png'%}">
             <p></p>
             <p dir="rtl">نستنتج أنه لدينا في جدول الضرب حلقتين الأولى لا تتغير الإ بعد أن تكمل الحلقة الأخرى 12 دورة.</p>
             <p dir="rtl">أي انه من أجل جدول ضرب الرقم واحد بإمكاننا عمل حلقة خارجية لتقوم تقوم بإعطائنا الرقم الثابت 1 ومن ثم بدأخل هذه الحلقة حلقة أخرى تقوم بعمل 12 دورة وتضرب الرقم 1 بهذه الارقام وبعد إنتهاء الحلقة الداخلية من ذلك يتم إضافة واحد للحلقة الخارجية
@@ -266,95 +240,71 @@
             </p>
             <p dir="rtl"><strong dir="rtl">الكود كالتالي:</strong></p>
             <p dir="rtl">نريد حلقة خارجية تبدأ من الرقم 1 وتنتهي عند الرقم 12 ويتم إضافة 1 لكل عدد في كل دورة من هذه الحلقة:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">for</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #0000cf; font-weight: bold">1</span> <span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">&lt;=</span> <span style="color: #0000cf; font-weight: bold">12</span> <span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">++</span> <span style="color: #000000; font-weight: bold">){</span>
+            <pre>
+<code>for( var i=1 ; i <= 12 ; i++ ){
 
-<span style="color: #000000; font-weight: bold">}</span>
-</pre>
-            </div>
+}</code>
+            </pre>
             <p dir="rtl">الأن أريد حلقة داخلية تقوم كذلك بعمل 12 دورة تبدأ من الرقم 1 وتنتهي عند الرقم 12 ويتم إضافة 1 لكل عدد في كل دورة:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">for</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #0000cf; font-weight: bold">1</span> <span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">&lt;=</span> <span style="color: #0000cf; font-weight: bold">12</span> <span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">++</span> <span style="color: #000000; font-weight: bold">){</span>
+            <pre>
+<code>for( var i=1 ; i <= 12 ; i++ ){
+ for( var j=1 ;  j <= 12 ;  j++ ){
 
- <span style="color: #204a87; font-weight: bold">for</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">j</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #0000cf; font-weight: bold">1</span> <span style="color: #000000; font-weight: bold">;</span>  <span style="color: #000000">j</span> <span style="color: #ce5c00; font-weight: bold">&lt;=</span> <span style="color: #0000cf; font-weight: bold">12</span> <span style="color: #000000; font-weight: bold">;</span>  <span style="color: #000000">j</span><span style="color: #ce5c00; font-weight: bold">++</span> <span style="color: #000000; font-weight: bold">){</span>
-
-
-
- <span style="color: #000000; font-weight: bold">}</span>
-
-<span style="color: #000000; font-weight: bold">}</span>
-</pre>
-            </div>
+ }
+}</code>
+            </pre>
             <p dir="rtl">رائع إنتهينا من عمل جدول الضرب تبقى أن نقوم بطباعته كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">for</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #0000cf; font-weight: bold">1</span> <span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">&lt;=</span> <span style="color: #0000cf; font-weight: bold">12</span> <span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">++</span> <span style="color: #000000; font-weight: bold">){</span>
-
- <span style="color: #204a87; font-weight: bold">for</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">j</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #0000cf; font-weight: bold">1</span> <span style="color: #000000; font-weight: bold">;</span>  <span style="color: #000000">j</span> <span style="color: #ce5c00; font-weight: bold">&lt;=</span> <span style="color: #0000cf; font-weight: bold">12</span> <span style="color: #000000; font-weight: bold">;</span>  <span style="color: #000000">j</span><span style="color: #ce5c00; font-weight: bold">++</span> <span style="color: #000000; font-weight: bold">){</span>
-
-   <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">*</span> <span style="color: #000000">j</span> <span style="color: #000000; font-weight: bold">);</span>
-
- <span style="color: #000000; font-weight: bold">}</span>
-
-<span style="color: #000000; font-weight: bold">}</span>
-</pre>
-            </div>
+            <pre>
+<code>for( var i=1 ; i <= 12 ; i++ ){
+ for( var j=1 ;  j <= 12 ;  j++ ){
+   console.log( i * j );
+ }
+}</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong></p>
             <p dir="rtl">ستجد أنه تم طباعة مجموعة من الأرقام أول رقم هو <strong dir="ltr">1</strong> وأخر رقم هو <strong dir="ltr">144</strong></p>
             <p dir="rtl">نعم هذا هو جدول الضرب فاول عدد هو <code dir="ltr">1*1</code> = <strong dir="ltr">1</strong> واخر عدد هو <code dir="ltr">12*12</code> يساوي <strong dir="ltr">144</strong></p>
             <p dir="rtl"><strong dir="rtl">لنقم بتحسين جدول الضرب حتى نجعلة مرتب ومفهوم:</strong></p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">for</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #0000cf; font-weight: bold">1</span> <span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">&lt;=</span> <span style="color: #0000cf; font-weight: bold">12</span> <span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">++</span> <span style="color: #000000; font-weight: bold">){</span>
-
- <span style="color: #204a87; font-weight: bold">for</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">j</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #0000cf; font-weight: bold">1</span> <span style="color: #000000; font-weight: bold">;</span>  <span style="color: #000000">j</span> <span style="color: #ce5c00; font-weight: bold">&lt;=</span> <span style="color: #0000cf; font-weight: bold">12</span> <span style="color: #000000; font-weight: bold">;</span>  <span style="color: #000000">j</span><span style="color: #ce5c00; font-weight: bold">++</span> <span style="color: #000000; font-weight: bold">){</span>
-
-   <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #4e9a06">" X "</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">j</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #4e9a06">" = "</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">*</span> <span style="color: #000000">j</span> <span style="color: #000000; font-weight: bold">);</span>
-
- <span style="color: #000000; font-weight: bold">}</span>
-
-<span style="color: #000000; font-weight: bold">}</span>
-</pre>
-            </div>
+            <pre>
+<code>for( var i=1 ; i <= 12 ; i++ ){
+ for( var j=1 ;  j <= 12 ;  j++ ){
+   console.log( i + " X " + j + " = " + i * j );
+ }
+}</code>
+            </pre>
             <p dir="rtl">قمت بعمل التالي<code dir="ltr">i + "*" + j + "=" + i * j</code> حيث أنه سيتم كل مرة طباعة الرقم المخزن في المتغير <code dir="ltr">i</code> و <code dir="ltr">j</code> وبينهما علامة <code dir="ltr">X</code> ما يدل على علامة الضرب ثم علامة
                <code dir="ltr">=</code> ثم سيتم القيام بعملية ضرب المتغيرين <code dir="ltr">i*j</code> والتعويض بالناتج بدلهما.
             </p>
             <p dir="rtl">اذا لم تفهم عملية الربط بينهم راجع الدرس التالي  في جزئية الـ string concatenation</p>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/13/17.png">
+            <img class="image" src="{% static '/images/javascript/13/17.png'%}">
             <p></p>
             <p dir="rtl"><strong dir="rtl">وأخيراً</strong> لن أترككم بدون أن تفهموا المنطق خلف هذه العملية وسنقوم بتحليل بعض الخطوات لجزء من جدول ضرب 1 و 2 كالتالي:<br>
-               <img src="../../images/javascript/13/18.png" alt="image" width="164" height="172">
+               <img src="{% static '/images/javascript/13/18.png'%}" alt="image" width="164" height="172">
             </p>
             <hr>
             <p dir="rtl">نلاحظ ان الرقم الثابت طوال فترة الدورة الداخلية تبدأ من الرقم 1 وتنتهي عند الرقم 2 لهذا ستكون الحلقة الخارجية كالتالي:<br>
-               <img src="../../images/javascript/13/19.png" alt="image" width="221" height="201">
+               <img src="{% static '/images/javascript/13/19.png'%}" alt="image" width="221" height="201">
             </p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">for</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #0000cf; font-weight: bold">1</span> <span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">&lt;=</span> <span style="color: #0000cf; font-weight: bold">2</span> <span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">++</span> <span style="color: #000000; font-weight: bold">){</span>
+            <pre>
+<code>for( var i=1 ; i <= 2 ; i++ ){
 
-
-
-<span style="color: #000000; font-weight: bold">}</span>
-</pre>
-            </div>
+}</code>
+            </pre>
             <p dir="rtl">نلاحظ ان ارقام الدروة الداخلية كذلك تتم من 1 إلى 2 لذا ستكون الحلقة الداخلية كالتالي:<br>
-               <img src="../../images/javascript/13/20.png" alt="image" width="175" height="189">
+               <img src="{% static '/images/javascript/13/20.png'%}" alt="image" width="175" height="189">
             </p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">for</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #0000cf; font-weight: bold">1</span> <span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">&lt;=</span> <span style="color: #0000cf; font-weight: bold">2</span> <span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">++</span> <span style="color: #000000; font-weight: bold">){</span>
-
- <span style="color: #204a87; font-weight: bold">for</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">j</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #0000cf; font-weight: bold">1</span> <span style="color: #000000; font-weight: bold">;</span>  <span style="color: #000000">j</span> <span style="color: #ce5c00; font-weight: bold">&lt;=</span> <span style="color: #0000cf; font-weight: bold">2</span> <span style="color: #000000; font-weight: bold">;</span>  <span style="color: #000000">j</span><span style="color: #ce5c00; font-weight: bold">++</span> <span style="color: #000000; font-weight: bold">){</span>
-
-   <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #4e9a06">" X "</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">j</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #4e9a06">" = "</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">*</span> <span style="color: #000000">j</span> <span style="color: #000000; font-weight: bold">);</span>
-
- <span style="color: #000000; font-weight: bold">}</span>
-
-<span style="color: #000000; font-weight: bold">}</span>
-</pre>
-            </div>
+            <pre>
+<code>for( var i=1 ; i <= 2 ; i++ ){
+ for( var j=1 ;  j <= 2 ;  j++ ){
+   console.log( i + " X " + j + " = " + i * j );
+ }
+}</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">العملية التي تتم خلف كواليس المتصفح كالتالي:</strong><br> الصورة ادناة متحركة قم بالضغط عليها حتى تشاهدها من بدأية العملية<br> .
                <br>
             </p>
-            <img class="image" src="../../images/javascript/13/21.gif">
+            <img class="image" src="{% static '/images/javascript/13/21.gif'%}">
             <p></p>
             <h4 dir="rtl">لاحظ كيف يتم دائماً إعادة تعيين القيمة الإبتدائية للمتغير <code dir="ltr">j</code> عندما نعود الى الحلقة الخارجية ونأتي للحلقة الداخلية من السطر البرمجي السابق فالمتصفح يعتبر الحلقة وكأنها او مرة يراها فيعاملها معاملة أي حلقة جديدة فيبدأ اول
                خطوة بإسناد القيمة الإبتدائية.

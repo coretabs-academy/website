@@ -48,20 +48,17 @@
             <h2 dir="rtl">النوع الأول: number</h2>
             <p dir="rtl">الأرقام تنقسم الى قسمين الاول <strong dir="rtl">رقم صحيح</strong> والاخر <strong dir="rtl">رقم عشري</strong> وحتى يتم تخزينها في المتغيرات يتم ذلك بإسناد القيمة الرقمية للمتغير بعد علامة يساوي مباشرة.</p>
             <p dir="rtl"><strong dir="rtl">مثال: تخزين رقم صحيح في متغير</strong></p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">age</span><span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">25</span><span style="color: #000000; font-weight: bold">;</span>
-</pre>
-            </div>
+            <pre>
+<code>var age= 25;</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">مثال: تخزين رقم عشري في متغير</strong></p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">productPrice</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">99.9</span><span style="color: #000000; font-weight: bold">;</span>
-</pre>
-            </div>
+            <pre>
+<code>var productPrice = 99.9;</code>
+            </pre>
             <h5 dir="rtl">نستطيع كذلك إسناد عمليات حسابية للمتغير بحيث يقوم بإحتساب النتيجة وتخزينها.</h5>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">total</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">10</span> <span style="color: #ce5c00; font-weight: bold">*</span> <span style="color: #0000cf; font-weight: bold">2</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #0000cf; font-weight: bold">5</span><span style="color: #000000; font-weight: bold">;</span>
-</pre>
-            </div>
+            <pre>
+<code>var total = 10 * 2 + 5;</code>
+            </pre>
             <p dir="rtl">سيتم تخزين الرقم <code dir="ltr">25</code> بداخل المتغير <code dir="ltr">total</code></p>
             <hr>
             <details dir="rtl" open="">
@@ -69,33 +66,27 @@
                   مثال تطبيقي
                </summary>
                <p dir="rtl">قم بفتح محرر النصوص وقم بكتابة الكود التالي في منطقة الـ body:</p>
-               <div class="code">
-                  <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;script&gt;</span>
-   <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">total</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">5</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #0000cf; font-weight: bold">5</span> <span style="color: #ce5c00; font-weight: bold">*</span> <span style="color: #0000cf; font-weight: bold">2</span><span style="color: #000000; font-weight: bold">;</span>
-   <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">write</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">total</span><span style="color: #000000; font-weight: bold">);</span>
-
-<span style="color: #204a87; font-weight: bold">&lt;/script&gt;</span>
-</pre>
-               </div>
+               <pre>
+<code>&lt;script&gt;
+   var total = 5 + 5 * 2;
+   document.write(total);
+&lt;/script&gt;</code>
+               </pre>
                <p dir="rtl">سيقوم الأمر <code dir="ltr">document.write(total);</code> بطباعة محتوى المتغير <code dir="ltr">total</code> على الصفحة<br>
                   <strong dir="rtl">النتيجة:</strong><br>
                </p>
                <img class="image" src="{% static 'images/javascript/4/1.png'%}">
                <p></p>
                <p dir="rtl">لنقوم بكتابة الكود بطريقة أخرى:</p>
-               <div class="code">
-                  <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;script&gt;</span>
-   <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">x</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">5</span><span style="color: #000000; font-weight: bold">;</span>
-   <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">y</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">5</span><span style="color: #000000; font-weight: bold">;</span>
-   <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">z</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">2</span><span style="color: #000000; font-weight: bold">;</span>
-
-   <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">total</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">x</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">y</span> <span style="color: #ce5c00; font-weight: bold">*</span> <span style="color: #000000">z</span><span style="color: #000000; font-weight: bold">;</span>
-
-   <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">write</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">total</span><span style="color: #000000; font-weight: bold">);</span>
-
-<span style="color: #204a87; font-weight: bold">&lt;/script&gt;</span>
-</pre>
-               </div>
+               <pre>
+<code>&lt;script&gt;
+   var x = 5;
+   var y = 5;
+   var z = 2;
+   var total = x + y * z;
+   document.write(total);
+&lt;/script&gt;</code>
+               </pre>
                <p dir="rtl">قمت هذه المرة بإسناد الثلاث القيم إلى متغيرات ومن ثم وضعت المتغيرات في المعادلة الحسابية التي تم إسنادها للمتغير <code dir="ltr">total</code>.<br>
                   الذي سيحصل هو ان جافاسكربت ستقوم بالتعويض عن قيمة <code dir="ltr">x</code> بـ 5 وعن قيمة <code dir="ltr">y</code> بـ 5 وعن قيمة <code dir="ltr">z</code> بـ 2 تماماً كما كنت أنت لتقوم بحل أي معادلة في مادة الرياضيات (calculus)
                </p>
@@ -104,15 +95,13 @@
             <h2 dir="rtl">النوع الثاني: strings</h2>
             <p dir="rtl">يتم إسناد النصوص إلى المتغيرات بوضعها بداخل علامتي التنصيص سوا كانت <strong dir="rtl">علامتي تنصيص مفردة</strong> <code dir="ltr">' '</code> أو علامتي <strong dir="rtl">تنصيص مزدوجة</strong> <code dir="ltr">" "</code></p>
             <p dir="rtl"><strong dir="rtl">مثال: تخزين نص بدأخل علامتي تنصيص مفردة</strong></p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">firstName</span><span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">'Mohammed'</span><span style="color: #000000; font-weight: bold">;</span>
-</pre>
-            </div>
+            <pre>
+<code>var firstName= 'Mohammed';</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">مثال: تخزين نص بدأخل علامتي تنصيص مزدوجة</strong></p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">firstName</span><span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"Mohammed"</span><span style="color: #000000; font-weight: bold">;</span>
-</pre>
-            </div>
+            <pre>
+<code>var firstName= "Mohammed";</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">يتم تخزين النصوص كسلسلة من الأحرف يبدأ ترتيب أول حرف من الرقم 0 كما هو موضح في الصورة التالية:</strong><br></p>
             <img class="image" src="{% static 'images/javascript/4/2.png'%}">
             <p></p>
@@ -124,26 +113,22 @@
                   مثال تطبيقي
                </summary>
                <p dir="rtl">قم بفتح محرر النصوص وقم بكتابة الكود التالي في منطقة الـ body:</p>
-               <div class="code">
-                  <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;script&gt;</span>
-   <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">firstName</span><span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"Mohammed"</span><span style="color: #000000; font-weight: bold">;</span>
-   <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">write</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">firstName</span><span style="color: #000000; font-weight: bold">);</span>
-
-<span style="color: #204a87; font-weight: bold">&lt;/script&gt;</span>
-</pre>
-               </div>
+               <pre>
+<code>&lt;script&gt;
+   var firstName= "Mohammed";
+   document.write(firstName);
+&lt;/script&gt;</code>
+               </pre>
                <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
                <img class="image" src="{% static 'images/javascript/4/3.png'%}">
                <p></p>
                <p dir="rtl">الأن قم بطلب طباعة الحرف الأول فقط والذي يقع في الخانة <code dir="ltr">0</code> عبر كتابة هذا الكود:</p>
-               <div class="code">
-                  <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;script&gt;</span>
-   <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">firstName</span><span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"Mohammed"</span><span style="color: #000000; font-weight: bold">;</span>
-   <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">write</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">firstName</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">]);</span>
-
-<span style="color: #204a87; font-weight: bold">&lt;/script&gt;</span>
-</pre>
-               </div>
+               <pre>
+<code>&lt;script&gt;
+   var firstName= "Mohammed";
+   document.write(firstName[0]);
+&lt;/script&gt;</code>
+               </pre>
                <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
                <img class="image" src="{% static 'images/javascript/4/4.png'%}">
                <p></p>
@@ -152,21 +137,18 @@
             <hr>
             <h1 dir="rtl">وضع الأرقام بين علامتي تنصيص</h1>
             <p dir="rtl">لنلقي نظره على الكود التالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">number</span><span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"1"</span><span style="color: #000000; font-weight: bold">;</span>
-</pre>
-            </div>
+            <pre>
+<code>var number= "1";</code>
+            </pre>
             <p dir="rtl">مانوع القيمة التي تم إسنادها للمتغير <code dir="ltr">number</code> ؟ <strong dir="rtl">و هل تعتقد بأنه رقم ام قمنا بتحويل الرقم 1 الى نص ؟</strong></p>
             <p dir="rtl">لنقوم بعمل التطبيق التالي حتى نجيب على السؤال</p>
             <p dir="rtl">قم بفتح محرر النصوص وقم بكتابة الكود التالي في منطقة الـ body:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;script&gt;</span>
-   <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">number</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"1"</span><span style="color: #000000; font-weight: bold">;</span>
-   <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">write</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">number</span><span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #0000cf; font-weight: bold">5</span><span style="color: #000000; font-weight: bold">);</span>
-
-<span style="color: #204a87; font-weight: bold">&lt;/script&gt;</span>
-</pre>
-            </div>
+            <pre>
+<code>&lt;script&gt;
+   var number = "1";
+   document.write(number+5);
+&lt;/script&gt;</code>
+            </pre>
             <p dir="rtl">1- في الكود اعلاة عرفت المتغير number واسندت إلية الرقم 1 ولكن وضعته بين علامتي تنصيص بنفس طريقة النصوص.	<br>
                2- قمت بطلب جمع محتوى المتغير بالرقم خمسة <code dir="ltr">number+5</code> و كتابة النتيجة على الصفحة.
             </p>
@@ -179,14 +161,12 @@
                <img class="image" src="{% static 'images/javascript/4/6.png'%}">
             </p>
             <p dir="rtl">لكن لنجرب الأن بتغيير العملية الحسابية من الجمع إلى الطرح كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;script&gt;</span>
-   <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">number</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"1"</span><span style="color: #000000; font-weight: bold">;</span>
-   <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">write</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">number</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #0000cf; font-weight: bold">5</span><span style="color: #000000; font-weight: bold">);</span>
-
-<span style="color: #204a87; font-weight: bold">&lt;/script&gt;</span>
-</pre>
-            </div>
+            <pre>
+<code>&lt;script&gt;
+   var number = "1";
+   document.write(number-5);
+&lt;/script&gt;</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">ما الذي تتوقع رؤيته على المتصفح ؟</strong><br>
                كالعادة تقوم الجافاسكربت بالمرور على العمليات من اليسار الى اليمين وفي حالتنا هذه ستلاحظ وجود متغير من نوع string يتبعة عملية حسابية ولكن هذه المرة عملية طرح <code dir="ltr">-</code> وليست جمع <code dir="ltr">+</code> وبما أن الجافاسكربت تعتقد بأنها ذكية ستقوم بتحويل النص <code dir="ltr">"1"</code> الى رقم <code dir="ltr">1</code> ومن ثم تقوم بعملية الطرح <code dir="ltr">1-5</code> لنحصل على الناتج <code dir="ltr">-4</code><br>
                <img class="image" src="{% static 'images/javascript/4/7.png'%}">
@@ -199,35 +179,31 @@
             <hr>
             <h3 dir="rtl">الـ string concatenation</h3>
             <p dir="rtl">قمنا أعلاة بفهم طريقة عمل النصوص string وكيف انها مجرد أحرف مترابطة كالسلسلة تكون كلمة او جملة ما يعني أن هناك اَلية لربط النصوص مع بعضها البعض وللقيام بذلك سنستخدم علامة <code dir="ltr">+</code> على سبيل المثال الكود التالي :</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">write</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"welcome to "</span><span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">" 1000000 Arab Coder!"</span><span style="color: #000000; font-weight: bold">);</span>
-</pre>
-            </div>
+            <pre>
+<code>document.write("welcome to "+" 1000000 Arab Coder!");</code>
+            </pre>
             <p dir="rtl">اذا ما قمت بتطبيق هذا الكود ستجد النتيجة:<br></p>
             <img class="image" src="{% static 'images/javascript/4/9.png'%}">
             <p></p>
             <p dir="rtl"><strong dir="rtl">ربما تتسأل ما الفائدة من تقسيم النصوص هكذا لماذا لا اقوم بكتابتها بين علامتي تنصيص واحدة ؟</strong></p>
             <p dir="rtl">لنفترض أنك تقوم بتخزين عدد المبرمجين بداخل متغير كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">numberOfCoders</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">1000000</span><span style="color: #000000; font-weight: bold">;</span>
-</pre>
-            </div>
+            <pre>
+<code>var numberOfCoders = 1000000;</code>
+            </pre>
             <p dir="rtl">رائع الان تريد أن تقوم بطباعة الجملة السابقة ولكن هذه المرة ستستدعي القيمة 1000000 من المتغير ولن تكتبها مباشرة لنجرب القيام بذلك</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">numberOfCoders</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">1000000</span><span style="color: #000000; font-weight: bold">;</span>
-<span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">write</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"welcome to numberOfCoders Arab Coder!"</span><span style="color: #000000; font-weight: bold">);</span>
-</pre>
-            </div>
+            <pre>
+<code>var numberOfCoders = 1000000;
+document.write("welcome to numberOfCoders Arab Coder!");</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
             <img class="image" src="{% static 'images/javascript/4/10.png'%}">
             <p></p>
             <p dir="rtl">تم اعتبار اسم المتغير كنص ولم يتم التعويض عنه بالقيمة التي كنت أتوقع بأن يتم طباعتها وذلك بسبب وجود اسم المتغير بين علامات التنصيص التي تقوم بتعريف اي شي بداخلها كنص.</p>
             <p dir="rtl"><strong dir="rtl">اذا نحتاج ان نقوم بتقسيم النص بحيث يتاح لنا وضع اسم المتغير بخارج علامات التنصيص حتى يتم اعتبارة كمتغير.</strong></p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">numberOfCoders</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">1000000</span><span style="color: #000000; font-weight: bold">;</span>
-<span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">write</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"welcome to "</span><span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">numberOfCoders</span> <span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">" Arab Coder!"</span><span style="color: #000000; font-weight: bold">);</span>
-</pre>
-            </div>
+            <pre>
+<code>var numberOfCoders = 1000000;
+document.write("welcome to "+ numberOfCoders +" Arab Coder!");</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
             <img class="image" src="{% static 'images/javascript/4/11.png'%}">
             <br>
