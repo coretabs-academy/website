@@ -23,10 +23,10 @@
    </head>
    <body class="home">
 	  
-	   <div class="signup-toggle">
+	   <div class="signup-toggle"  {% if signupform.errors  %} style="display: block" {% endif %}>
 	   
 		   <div class="signup-form">
-			   <form action="{% url 'home' %}"  method="post" {% if signupform.errors  %} style="display: block" {% endif %}>
+			   <form action="{% url 'home' %}"  method="post">
 
 
 					{% csrf_token %}
@@ -81,7 +81,7 @@
             </a>
 			 
 			<a id="forum-button" href="http://forums.coretabs.net" target="_blank">
-                المنتدى
+                {% trans "Forums" %}
             </a>
 		 </div>
 		 	
