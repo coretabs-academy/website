@@ -145,7 +145,7 @@ Navbar Style
 		min-width: 100px;
 	}
 	.navbar-brand div {
-		font-size: 1rem;
+		
 		padding: 3px 30px;
 	}
 }
@@ -1439,5 +1439,36 @@ login-toggle Style
 	}
 	.home .navbar-brand{
 		left: 0;
+		font-size: 25px;
+		padding-top: 15px;
+	}
+	.background-image a.link{
+		display: none;
+	}
+}
+
+@media screen and (max-width:540px) {
+	
+	.home-menu{
+		flex-direction: column;
+	}
+	.home-menu a{
+		margin-bottom: 15px;
+		
+	}
+	.home .navbar-brand{
+		font-size: 25px;
+	}
+	#forum-button,
+	#signup
+	{
+		padding: 8px 5px;
+		font-size: 20px !important;
+	}
+	.background-image h1{
+		margin-top: calc(100vh - 400px);
+	}
+	.background-image p{
+		
 	}
 }
