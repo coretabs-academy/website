@@ -86,94 +86,77 @@
             <hr>
             <h2 dir="rtl">كيفية تعريف الثابت (constant) في الـ Javascript:</h2>
             <p dir="rtl">لتعريف ثابت يجب أن تعطية إسم وتسبق هذا الإسم بـ <code dir="ltr">const</code> والتي هي إختصار من constant ومن ثم تقوم بإعطائة قيمة بنفس السطر كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">const</span> <span style="color: #000000">number</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">5</span><span style="color: #000000; font-weight: bold">;</span>
- </pre>
-            </div>
+            <pre>
+<code>const number = 5;</code>
+            </pre>
             <p dir="rtl">ما قمت به في الكود أعلاة هو تعريف ثابت (constant) بإسم <code dir="ltr">number</code> وقمت بتخزين الرقم 5 بدأخلة.</p>
             <hr>
             <h2 dir="rtl">كيفية تعريف المتغير (variable) في الـ Javascript:</h2>
             <h4 dir="rtl">الطريقة الأولى:</h4>
             <p dir="rtl">لتعريف متغير يجب أن تعطية إسم وتسبق هذا الإسم بـ <code dir="ltr">var</code> والتي هي إختصار من variable ومن ثم تقوم بإعطاء المتغير قيمة بنفس السطر كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">result</span><span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
- </pre>
-            </div>
+            <pre>
+<code>var result= 0;</code>
+            </pre>
             <p dir="rtl">ما قمت به في الكود أعلاة هو تعريف متغير (variable) بإسم <code dir="ltr">result</code> واسندت الية قيمة إبتدأية تساوي 0</p>
             <h4 dir="rtl">الطريقة الثانية:</h4>
             <p dir="rtl">لتعريف متغير يجب أن تعطية إسم وتسبق هذا الإسم بـ <code dir="ltr">var</code> ثم تتركة بدون أي قيمة وفي وقت لاحق تقوم بإسناد قيمة لهذا المتغيرعند حاجتك له كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">result</span><span style="color: #000000; font-weight: bold">;</span>
- </pre>
-            </div>
+            <pre>
+<code>var result;</code>
+            </pre>
             <p dir="rtl">في الكود أعلاة قمت بتعريف متغير ولم أسند إلية أي قيمة ولنفترض أنني إحتجت لإستخدامه بعد الف سطر من الأكواد البرمجية حينها سأقوم بإعطائة القيمة في ذلك المكان بإستخدام الكود التالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">result</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
- </pre>
-            </div>
+            <pre>
+<code>result = 0;</code>
+            </pre>
             <p dir="rtl">لاحظ عندما أقوم بإسناد قيمة إلية لاحقاً أقوم بكتابة إسم المتغير فقط وإسند إلية القيمة مباشرة بعد علامة يساوي <code dir="ltr">=</code></p>
             <hr>
             <h2 dir="rtl">بعد أن عرفنا الفرق بينهما لنقوم بعمل كود اللعبة أعلاة</h2>
             <p dir="rtl">سنفترض بإنك إخترت الرقم 5 سيكون كود الـ Javascript كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;script&gt;</span>
-    <span style="color: #204a87; font-weight: bold">const</span> <span style="color: #000000">number</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">5</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">// إختر رقم في عقلك و لا تقوم بتغييرة</span>
-
-    <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">result</span>  <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">number</span> <span style="color: #ce5c00; font-weight: bold">*</span> <span style="color: #0000cf; font-weight: bold">2</span><span style="color: #000000; font-weight: bold">;</span>  <span style="color: #8f5902; font-style: italic">// اضرب الرقم الذي في عقلك بـ 2</span>
-
-    <span style="color: #000000">result</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">result</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #0000cf; font-weight: bold">8</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">// أضف للناتج الرقم 8</span>
-
-    <span style="color: #000000">result</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">result</span> <span style="color: #ce5c00; font-weight: bold">/</span> <span style="color: #0000cf; font-weight: bold">2</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">// إقسم الناتج على 2</span>
-
-    <span style="color: #000000">result</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">result</span> <span style="color: #ce5c00; font-weight: bold">-</span> <span style="color: #000000">number</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">// إطرح من الناتج أول رقم وضعته في عقلك</span>
-
-    <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">result</span><span style="color: #000000; font-weight: bold">);</span> <span style="color: #8f5902; font-style: italic">// هذا الكود سيقوم بإظهار الناتج في نافذة منبثقة</span>
-
- <span style="color: #204a87; font-weight: bold">&lt;/script&gt;</span>
- </pre>
-            </div>
+            <pre>
+<code>&lt;script&gt;
+    const number = 5; // إختر رقم في عقلك و لا تقوم بتغييرة
+    var result  = number * 2;  // اضرب الرقم الذي في عقلك بـ 2
+    result = result + 8; // أضف للناتج الرقم 8
+    result = result / 2; // إقسم الناتج على 2
+    result = result - number; // إطرح من الناتج أول رقم وضعته في عقلك
+    console.log(result); // هذا الكود سيقوم بإظهار الناتج في نافذة منبثقة
+ &lt;/script&gt;</code>
+            </pre>
             <ul dir="rtl">
                <li dir="rtl">قمنا بتعريف الرقم كثابت <code dir="ltr">const</code> وأسندنا إلية الرقم <code dir="ltr">5</code></li>
             </ul>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">const</span> <span style="color: #000000">number</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">5</span><span style="color: #000000; font-weight: bold">;</span>
- </pre>
-            </div>
+            <pre>
+<code>const number = 5;</code>
+            </pre>
             <ul dir="rtl">
                <li dir="rtl">قمنا بتعريف المتغير <code dir="ltr">result</code> وأسندنا إلية القيمة 10 من خلال العملية الحسابية <code dir="ltr">number*2</code> حيث أن <code dir="ltr">number</code> سيتم التعويض عنه بـ <code dir="ltr">5</code></li>
             </ul>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">result</span>  <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">number</span> <span style="color: #ce5c00; font-weight: bold">*</span> <span style="color: #0000cf; font-weight: bold">2</span><span style="color: #000000; font-weight: bold">;</span>
- </pre>
-            </div>
+            <pre>
+<code>var result  = number * 2;</code>
+            </pre>
             <ul dir="rtl">
                <li dir="rtl">قمنا بتحديث قيمة المتغير <code dir="ltr">result</code> إلى <code dir="ltr">18</code> من خلال العملية الحسابية <code dir="ltr">result+8</code> حيث سيتم التعويض عن  <code dir="ltr">result</code>  بالقيمة السابقة والتي هي <code dir="ltr">10</code> ليصبح لدينا <code dir="ltr">result=10+8</code>, ولاحظ لم نكتب قبلة <code dir="ltr">var</code> وذلك لانه لا يتطلب ذلك الا عند تعريفة أول مرة</li>
             </ul>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">result</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">result</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #0000cf; font-weight: bold">8</span><span style="color: #000000; font-weight: bold">;</span>
- </pre>
-            </div>
+            <pre>
+<code>result = result + 8;</code>
+            </pre>
             <ul dir="rtl">
                <li dir="rtl">قمنا بتحديث قيمة المتغير <code dir="ltr">result</code> إلى <code dir="ltr">9</code> من خلال العملية الحسابية <code dir="ltr">result/2</code>  ما يقابلها <code dir="ltr">18/2</code>:</li>
             </ul>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">result</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">result</span> <span style="color: #ce5c00; font-weight: bold">/</span> <span style="color: #0000cf; font-weight: bold">2</span><span style="color: #000000; font-weight: bold">;</span>
- </pre>
-            </div>
+            <pre>
+<code>result = result / 2;</code>
+            </pre>
             <ul dir="rtl">
                <li dir="rtl">قمنا بتحديث قيمة المتغير <code dir="ltr">result</code> إلى 4 من خلال العملية الحسابية <code dir="ltr">result-number</code> ما يقابلها <code dir="ltr">9-5</code> بعد التعويض بقيم كلاً من الثابت <code dir="ltr">number</code> و المتغير <code dir="ltr">result</code> في المعادلة.</li>
             </ul>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">result</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">result</span> <span style="color: #ce5c00; font-weight: bold">-</span> <span style="color: #000000">number</span><span style="color: #000000; font-weight: bold">;</span>
- </pre>
-            </div>
+            <pre>
+<code>result = result - number;</code>
+            </pre>
             <ul dir="rtl">
                <li dir="rtl">قمنا بطباعة النتيجة بإستخدام امر <code dir="ltr">alert</code> الذي يقوم بفتح نافذة منبثقة</li>
             </ul>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">alert</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">result</span><span style="color: #000000; font-weight: bold">);</span>
- </pre>
-            </div>
+            <pre>
+<code>alert(result);</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br>
                ستظهر نافذة منبثقة مكتوب عليها الناتج <code dir="ltr">result</code>  <strong dir="ltr">4</strong><br>
             </p>
@@ -183,31 +166,26 @@
                <summary dir="rtl">
                   الكود كاملاً
                </summary>
-               <div class="code">
-                  <pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic">&lt;!doctype html&gt;</span>
- <span style="color: #204a87; font-weight: bold">&lt;html&gt;</span>
-    <span style="color: #204a87; font-weight: bold">&lt;head&gt;</span>
-       <span style="color: #204a87; font-weight: bold">&lt;meta</span> <span style="color: #c4a000">charset=</span><span style="color: #4e9a06">"utf-8"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
-       <span style="color: #204a87; font-weight: bold">&lt;title&gt;</span>javascript<span style="color: #204a87; font-weight: bold">&lt;/title&gt;</span>
-    <span style="color: #204a87; font-weight: bold">&lt;/head&gt;</span>
-    <span style="color: #204a87; font-weight: bold">&lt;body&gt;</span>
-       <span style="color: #204a87; font-weight: bold">&lt;script&gt;</span>
-          <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">result</span><span style="color: #000000; font-weight: bold">;</span>
-          <span style="color: #204a87; font-weight: bold">const</span> <span style="color: #000000">number</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">5</span><span style="color: #000000; font-weight: bold">;</span>
-          <span style="color: #000000">result</span><span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">number</span> <span style="color: #ce5c00; font-weight: bold">*</span> <span style="color: #0000cf; font-weight: bold">2</span> <span style="color: #000000; font-weight: bold">;</span>
-
-          <span style="color: #000000">result</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">result</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #0000cf; font-weight: bold">8</span><span style="color: #000000; font-weight: bold">;</span>
-
-          <span style="color: #000000">result</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">result</span> <span style="color: #ce5c00; font-weight: bold">/</span> <span style="color: #0000cf; font-weight: bold">2</span><span style="color: #000000; font-weight: bold">;</span>
-
-          <span style="color: #000000">result</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">result</span> <span style="color: #ce5c00; font-weight: bold">-</span> <span style="color: #000000">number</span><span style="color: #000000; font-weight: bold">;</span>
-
-          <span style="color: #000000">alert</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">result</span><span style="color: #000000; font-weight: bold">);</span>
-       <span style="color: #204a87; font-weight: bold">&lt;/script&gt;</span>
-    <span style="color: #204a87; font-weight: bold">&lt;/body&gt;</span>
- <span style="color: #204a87; font-weight: bold">&lt;/html&gt;</span>
- </pre>
-               </div>
+               <pre>
+<code>&lt;!doctype html&gt;
+&lt;html&gt;
+   &lt;head&gt;
+      &lt;meta charset="utf-8"&gt;
+      &lt;title&gt;javascript&lt;/title&gt;
+   &lt;/head&gt;
+   &lt;body&gt;
+      &lt;script&gt;
+         var result;
+         const number = 5;
+         result= number * 2 ;
+         result = result + 8;
+         result = result / 2;
+         result = result - number;
+         alert(result);
+      &lt;/script&gt;
+   &lt;/body&gt;
+&lt;/html&gt;</code>
+               </pre>
             </details>
             <hr>
             <p dir="rtl">في هذه المرحلة ينبغي أن تكون قد عرفت ماهو المتغير (variables) وماهو الثابت (constants) وكيفية تعريف كلاً منهما, في الدرس القادم سنتكلم عن أنواع البيانات (data types) وعمليات المقارنة.</p>

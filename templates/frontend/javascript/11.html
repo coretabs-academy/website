@@ -50,26 +50,21 @@
             <hr>
             <h2 dir="rtl">البدء بالعمل</h2>
             <p dir="rtl">سأقوم بإنشاء هيكل التطبيق كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
-
-  <span style="color: #204a87; font-weight: bold">&lt;h2&gt;</span>To Do List:<span style="color: #204a87; font-weight: bold">&lt;/h2&gt;</span>
-
-  <span style="color: #204a87; font-weight: bold">&lt;div&gt;</span>
-     <span style="color: #204a87; font-weight: bold">&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"text"</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"input"</span> <span style="color: #c4a000">autofocus</span><span style="color: #204a87; font-weight: bold">&gt;</span>
-     <span style="color: #204a87; font-weight: bold">&lt;button</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"btn"</span><span style="color: #204a87; font-weight: bold">&gt;</span><span style="color: #ce5c00">&amp;#43;</span><span style="color: #204a87; font-weight: bold">&lt;/button&gt;</span>
-  <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
-
-  <span style="color: #204a87; font-weight: bold">&lt;div&gt;</span>
-    <span style="color: #204a87; font-weight: bold">&lt;ul</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"todo-list"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;li&gt;</span>First task<span style="color: #204a87; font-weight: bold">&lt;/li&gt;</span>
-      <span style="color: #204a87; font-weight: bold">&lt;li&gt;</span>Second task<span style="color: #204a87; font-weight: bold">&lt;/li&gt;</span>
-    <span style="color: #204a87; font-weight: bold">&lt;/ul&gt;</span>
-  <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
-
-<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
-</pre>
-            </div>
+            <pre>
+<code>&lt;div class="container"&gt;
+  &lt;h2&gt;To Do List:&lt;/h2&gt;
+  &lt;div&gt;
+     &lt;input type="text" id="input" autofocus&gt;
+     &lt;button id="btn"&gt;&amp;#43;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;ul id="todo-list"&gt;
+      &lt;li&gt;First task&lt;/li&gt;
+      &lt;li&gt;Second task&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code>
+            </pre>
             <p dir="rtl">في هذه المرحلة أصبحتم قادرين على فهم هذه الأكواد فلن نطيل في تفصيلها.</p>
             <p dir="rtl">قمت بعمل <code dir="ltr">container</code> سأستخدمة لاحقاً من أجل عمل التنسيقات وبداخل هذا القسم قمت بإضافة:</p>
             <ul dir="rtl">
@@ -94,76 +89,64 @@
             <img class="image" src="{% static 'images/javascript/11/3.png'%}">
             <p></p>
             <p dir="rtl">1- سنقوم بتحديد حقل الإدخال حتى نستطيع تخزين القيمة <code dir="ltr">value</code> التي سيتم إدخالها الية وسأسند ذلك الى متغير بإسم <code dir="ltr">input</code>:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">input</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"input"</span><span style="color: #000000; font-weight: bold">);</span>
-</pre>
-            </div>
+            <pre>
+<code>var input = document.getElementById("input");</code>
+            </pre>
             <p dir="rtl">2- سنقوم بتحديد الزر button وذلك لأننا سنقوم بالإنتظار الضغط عليه حتى نقوم بحدث معين وهو إضافة النص المدخل لحقل الإدخال لقائمتنا وسأسند ذلك لمتغير بإسم <code dir="ltr">btn</code>:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">btn</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"btn"</span><span style="color: #000000; font-weight: bold">);</span>
-</pre>
-            </div>
+            <pre>
+<code>var btn = document.getElementById("btn");</code>
+            </pre>
             <p dir="rtl">3- سنقوم بتحديد القائمة <code dir="ltr">ul</code> وذلك لأننا سنقوم بالتلاعب بعناصرها بإستخدام الجافاسكربت وسأسند ذلك لمغير بإسم<code dir="ltr">toDoList</code> :</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">toDoList</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"todo-list"</span><span style="color: #000000; font-weight: bold">);</span>
-</pre>
-            </div>
+            <pre>
+<code>var toDoList = document.getElementById("todo-list");</code>
+            </pre>
             <p dir="rtl">رائع!, الأن أصبح لدينا وصول لجميع العناصر المرتبطة بقائمة المهام الخاصة بنا</p>
             <hr>
             <h3 dir="rtl">الخطوة الثانية</h3>
             <p dir="rtl">نحتاج لعمل متغير يقوم بتخزين جميع عناصر قائمة المهام التي سنقوم بإضافتها.</p>
             <p dir="rtl">بما أننا لانعرف عدد المهام التي سنقوم بإضافتها وكذلك بما أن هذه العناصر مترابطة كقائمة واحدة ونريد أن نستطيع تتبع عناصرها بسهولة سنستخدم مصفوفة Array لتقوم بتخزين هذه العناصر.</p>
             <p dir="rtl">في البدأية نريد أن تكون المصفوفة فارغة لهذا سأقوم بتعريف مصفوفة فارغة بإسم <code dir="ltr">list</code> <strong dir="rtl">كالتالي:</strong></p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">list</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">[];</span>
-</pre>
-            </div>
+          <pre>
+<code>var list = [];</code>
+          </pre>
             <hr>
             <h3 dir="rtl">الخطوة الثالثة</h3>
             <p dir="rtl">أصبح لدينا وصول لكل العناصر التي سنحتاجها وأصبح لدينا مصفوفة فارغة للبدء بإضافة عناصر القائمة إليها لهذا سننتقل للخطوة التالية:</p>
             <p dir="rtl">الأن الإستماع لأي حدث من نوع click على الزر btn لأنه هو المسؤول عن عملية طلب إضافة عنصر جديد لقائمة المهام لهذا سنكتب الكود التالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">btn</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"click"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span><span style="color: #000000; font-weight: bold">(){</span>
-
-    <span style="color: #8f5902; font-style: italic">//الأحداث التي ستحصل عند الضغط على الزر </span>
-
-<span style="color: #000000; font-weight: bold">});</span>
-</pre>
-            </div>
+            <pre>
+<code>btn.addEventListener("click", function(){
+    //الأحداث التي ستحصل عند الضغط على الزر
+});</code>
+            </pre>
             <p dir="rtl">من الدرس العملي السابق أصبحنا نعرف بأن الكود أعلاة يقوم بإنتظار أي عملية ضغط على العنصر المحدد في حالتنا هو الـ btn ومن ثم يقوم بتنفيذ الأوامر التي بداخلة.</p>
             <hr>
             <h3 dir="rtl">الخطوة الرابعة</h3>
             <p dir="rtl">بمجرد الضغط على الزر btn نريد أن نقوم بإضافة القيمة <code dir="ltr">value</code> التي تم كتابتها بدأخل الحقل الذي قمنا بتحديدة بالمتغير <code dir="ltr">input</code> إلى المصفوفة.</p>
             <p dir="rtl">قمنا في الدرس السابق بمناقشة طرق إضافة العناصر لداخل المصفوفة وكان من ضمن الطرق التي قمنا بشرحها هي طريقة <code dir="ltr">push</code> والتي تقوم بإضافة العنصر الجديد لنهاية المصفوفة. قم بالرجوع للدرس ومراجعته اذا لم تتضح لك الصورة <a href="https://macdiscussions.udacity.com/t/arrays/117958/1" dir="rtl"></a>.</p>
             <p dir="rtl">اذا في حالتنا هذه اذا نريد أن نقوم بإضافة عنصر جديد للمصفوفة <code dir="ltr">list</code> سنقوم بذلك كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">push</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #8f5902; font-style: italic">/*هنا القيمة التي نريد أن نقوم بإضافتها*/</span><span style="color: #000000; font-weight: bold">);</span>
-</pre>
-            </div>
+            <pre>
+<code>list.push(/*هنا القيمة التي نريد أن نقوم بإضافتها*/);</code>
+            </pre>
             <p dir="rtl">نعرف أن القيمة التي نريد إضافتها هي الـ <code dir="ltr">value</code> التي سيتم إدخالها لحقل الإدخال <code dir="ltr">input</code> لذا نستطيع الوصول للقيمة المدخلة للحقل النصي بالكود <code dir="ltr">input.value</code> اذا لنقوم بإسناد هذه القيمة للعنصر الجديد الذي سيتم إضافته للمصفوفة كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">push</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #8f5902; font-style: italic">/*هنا القيمة التي نريد أن نقوم بإضافتها*/</span><span style="color: #000000; font-weight: bold">);</span>
-</pre>
-            </div>
+            <pre>
+<code>list.push(/*هنا القيمة التي نريد أن نقوم بإضافتها*/);</code>
+            </pre>
             <p dir="rtl">رائع! الكود اعلاة سيقوم بجلب القيمة التي تم إدخالها لحقل input ومن ثم سيقوم بإضافة تلك القيمة لنهاية المصفوفة. لنقم بتجربة ذلك بإستخدام الـ console:</p>
             <hr>
             <details dir="rtl">
                <summary dir="rtl">
                   قبل البدء اذا اردت مراجعة كودك فيجب أن يكون كالتالي:
                </summary>
-               <div class="code">
-                  <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">input</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"input"</span><span style="color: #000000; font-weight: bold">);</span>
-<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">btn</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"btn"</span><span style="color: #000000; font-weight: bold">);</span>
-<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">toDoList</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"todo-list"</span><span style="color: #000000; font-weight: bold">);</span>
-<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">list</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">[];</span>
+               <pre>
+<code>var input = document.getElementById("input");
+var btn = document.getElementById("btn");
+var toDoList = document.getElementById("todo-list");
+var list = [];
 
-<span style="color: #000000">btn</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"click"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span> <span style="color: #000000; font-weight: bold">()</span> <span style="color: #000000; font-weight: bold">{</span>
-
-	<span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">push</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">value</span><span style="color: #000000; font-weight: bold">);</span>
-
-<span style="color: #000000; font-weight: bold">});</span>
-</pre>
-               </div>
+btn.addEventListener("click", function () {
+	list.push(input.value);
+})</code>
+               </pre>
             </details>
             <hr>
             <p dir="rtl">سأقوم في البدأية بفتح الـ console وطباعة قيم المصفوفة بكتابة إسمها <code dir="ltr">list</code> كالتالي:<br></p>
@@ -182,48 +165,39 @@
             <h3 dir="rtl">الخطوة الخامسة</h3>
             <p dir="rtl">الأن أصبحنا نعرف كيف يتم إضافة العناصر بدأخل المصفوفة وفي هذه الخطوة نريد أن نقوم بطباعة العنصر الذي تم إضافته لقائمة المهام بالصفحة.</p>
             <p dir="rtl">للقيام بذلك سنقوم بإستخدام خاصية <code dir="ltr">innerHTML</code> والتي تسمح لك بالتعديل على المحتوى وإضافة أكواد الـ HTML بدأخل العنصر المستهدف لنقوم بعمل مثال حتى تتضح الصورة كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">toDoList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"&lt;li&gt; This is a new task &lt;/li&gt;"</span><span style="color: #000000; font-weight: bold">;</span>
-</pre>
-            </div>
+            <pre>
+<code>toDoList.innerHTML = "<li> This is a new task </li>";</code>
+            </pre>
             <p dir="rtl">تذكر أننا قمنا بتحديد العنصر ul بإسم المتغير <code dir="ltr">toDoList</code> ما يعني أنه بإمكاننا التعديل والتلاعب بالأكواد التي تقع بين الوسم ul بإستخدام هذا المتغير بالـ javascript</p>
             <p dir="rtl">لنقوم بتجربة هذا الكود لنشاهد النتيجة:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">btn</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"click"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span><span style="color: #000000; font-weight: bold">(){</span>
-
-    <span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">push</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">value</span><span style="color: #000000; font-weight: bold">);</span>
-    <span style="color: #000000">toDoList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">"&lt;li&gt; This is a new task &lt;/li&gt;"</span><span style="color: #000000; font-weight: bold">;</span>
-
-<span style="color: #000000; font-weight: bold">});</span>
-</pre>
-            </div>
+            <pre>
+<code>btn.addEventListener("click", function(){
+    list.push(input.value);
+    toDoList.innerHTML = "&lt;li&gt; This is a new task &lt;/li&gt;";
+});</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
             <img class="image" src="{% static 'images/javascript/11/7.png'%}">
             <p></p>
             <p dir="rtl">هل لاحظتم كيف أنه بمجرد الضغط على الزر كيف تم تغيير كل المحتوى الذي بين وسمي <code dir="ltr">&lt;ul&gt;</code> الى المحتوى الجديد الذي قمنا بتحديدة في الكود أعلاة وكيف أنه تم مسح كل المحتوى السابق, لنفترض بأننا لا نريد مسح المحتوى السابق واستبدالة وإنما نريد إضافة المحتوى الجديد عليه في هذه الحالة لنجرب كتابة الكود بالشكل التالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">btn</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"click"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span><span style="color: #000000; font-weight: bold">(){</span>
-
-    <span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">push</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">value</span><span style="color: #000000; font-weight: bold">);</span>
-    <span style="color: #000000">toDoList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span>  <span style="color: #ce5c00; font-weight: bold">+=</span> <span style="color: #4e9a06">"&lt;li&gt; This is a new task &lt;/li&gt;"</span><span style="color: #000000; font-weight: bold">;</span>
-
-<span style="color: #000000; font-weight: bold">});</span>
-</pre>
-            </div>
+            <pre>
+<code>btn.addEventListener("click", function(){
+    list.push(input.value);
+    toDoList.innerHTML  += "&lt;li&gt; This is a new task &lt;/li&gt;";
+});</code>
+            </pre>
             <hr>
             <details dir="rtl" open="">
                <summary dir="rtl">
                   تذكر التالي
                </summary>
-               <div class="code">
-                  <pre style="margin: 0; line-height: 125%"><span style="color: #000000">toDoList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span>  <span style="color: #ce5c00; font-weight: bold">+=</span> <span style="color: #4e9a06">"&lt;li&gt; This is a new task &lt;/li&gt;"</span><span style="color: #000000; font-weight: bold">;</span>
-</pre>
-               </div>
+               <pre>
+<code>toDoList.innerHTML  += "&lt;li&gt; This is a new task &lt;/li&gt;";</code>
+               </pre>
                <p dir="rtl">هي نفسها</p>
-               <div class="code">
-                  <pre style="margin: 0; line-height: 125%"><span style="color: #000000">toDoList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span>  <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">toDoList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #4e9a06">"&lt;li&gt; This is a new task &lt;/li&gt;"</span><span style="color: #000000; font-weight: bold">;</span>
-</pre>
-               </div>
+               <pre>
+<code>toDoList.innerHTML  = toDoList.innerHTML + "&lt;li&gt; This is a new task &lt;/li&gt;";</code>
+               </pre>
                <p dir="rtl">ولكن تم كتابتها بتلك الطريقة لإختصار الكود وتجنب تكرار اسم المتغير</p>
             </details>
             <hr>
@@ -247,46 +221,42 @@
                اذا <code dir="ltr">list.length-1</code> سيعطينا الـ index الخاص بالعنصر الأخير.
             </p>
             <p dir="rtl">اذاً اذا ما قمنا بكتابة الكود التالي:</p>
-            <pre dir="ltr"><code class="hljs cpp" dir="ltr"><span class="hljs-built_in">list</span>[<span class="hljs-built_in">list</span>.length<span class="hljs-number">-1</span>];
-</code></pre>
+            <pre>
+<code>list[list.length-1];</code>
+            </pre>
             <p dir="rtl">فسيتم طباعة العنصر الأخير في المصفوفة لنقم بتجربة ذلك:<br></p>
-            <img class="image" src="../../images/javascript/11/10.png">
+            <img class="image" src="{% static '/images/javascript/11/10.png'%}">
             <p></p>
             <p dir="rtl">لاحظ قمت بإضافة عنصر للمصفوفة بإستخدام حقل input ومن ثم قمت بكتابة الكود اعلاة, لنجرب اضافة عنصر أخر ونقوم بكتابة ذلك الكود مرة أخرى لنرى اذا ما سيتم تحديد الـ index الخاص بالعنصر الاخير وطباعتة بشكل ديناميكي:<br></p>
-            <img class="image" src="../../images/javascript/11/11.png">
+            <img class="image" src="{% static '/images/javascript/11/11.png'%}">
             <p></p>
             <p dir="rtl">رائع!</p>
             <p dir="rtl">لنقوم الأن بإضافة هذا الكود لبرنامجنا كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">toDoList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span>  <span style="color: #ce5c00; font-weight: bold">+=</span> <span style="color: #4e9a06">"&lt;li&gt;"</span><span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">"&lt;/li&gt;"</span><span style="color: #000000; font-weight: bold">;</span>
-</pre>
-            </div>
+            <pre>
+<code>toDoList.innerHTML  += "&lt;li&gt;"+ list[list.length-1] +"&lt;/li&gt;";</code>
+            </pre>
             <p dir="rtl">لاحظ حتى نستطيع طباعة قيمة العنصر الذي بالمصفوفة ولم نضعه بداخل علامتي التنصيص, قم بمراجعة الدرس التالي حيث تناولنا الـ string concatenation بالتفصيل <a href="https://macdiscussions.udacity.com/t/data-types/106684" dir="rtl"><strong dir="rtl">من هنا الدرس</strong></a>.</p>
             <hr>
             <details dir="rtl">
                <summary dir="rtl">
                   الكود يجب أن يكون هكذا
                </summary>
-               <div class="code">
-                  <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">input</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"input"</span><span style="color: #000000; font-weight: bold">);</span>
-<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">btn</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"btn"</span><span style="color: #000000; font-weight: bold">);</span>
-<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">toDoList</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"todo-list"</span><span style="color: #000000; font-weight: bold">);</span>
-<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">list</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">[];</span>
+               <pre>
+<code>var input = document.getElementById("input");
+var btn = document.getElementById("btn");
+var toDoList = document.getElementById("todo-list");
+var list = [];
 
-<span style="color: #000000">btn</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"click"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span><span style="color: #000000; font-weight: bold">(){</span>
-
-<span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">push</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">value</span><span style="color: #000000; font-weight: bold">);</span>
-
-<span style="color: #000000">toDoList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span>  <span style="color: #ce5c00; font-weight: bold">+=</span> <span style="color: #4e9a06">"&lt;li&gt;"</span><span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">"&lt;/li&gt;"</span><span style="color: #000000; font-weight: bold">;</span>
-
-<span style="color: #000000; font-weight: bold">});</span>
-</pre>
-               </div>
+btn.addEventListener("click", function(){
+  list.push(input.value);
+  toDoList.innerHTML  += "&lt;li&gt;"+ list[list.length-1] +"&lt;/li&gt;";
+});</code>
+               </pre>
                <p dir="rtl">ملاحظة انا اعطيك الكود حتى تقارن كودك وتتأكد بأنك تقوم بالعمل الصحيح وليس لتنسخة فانا أريدك ان تقوم بكتابته بنفسك من خلال فهمك ولا يمنع ان تقوم بكتابته بطريقتك او افكارك الخاصة.</p>
             </details>
             <hr>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/11/12.png">
+            <img class="image" src="{% static '/images/javascript/11/12.png'%}">
             <p></p>
             <p dir="rtl">لاحظ الأن بمجرد كتابتك لأي مهمة والضغط على الزر يتم اضافتها للقائمة وكذلك يتم تخزينها في المصفوفة.</p>
             <hr>
@@ -295,7 +265,7 @@
             <ul dir="rtl">
                <li dir="rtl">
                   <strong dir="rtl">الأول</strong> لنقوم بإزالة اول عنصرين في القائمة والذي قمنا بإضافتهم في كود الـ HTML<br>
-                  <img class="image" src="../../images/javascript/11/13.png">
+                  <img class="image" src="{% static '/images/javascript/11/13.png'%}">
                </li>
             </ul>
             <hr>
@@ -303,137 +273,107 @@
                <summary dir="rtl">
                   سيصبح كود الـ HTML كالتالي
                </summary>
-               <div class="code">
-                  <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;div</span> <span style="color: #c4a000">class=</span><span style="color: #4e9a06">"container"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
-
-  <span style="color: #204a87; font-weight: bold">&lt;h2&gt;</span>To Do List:<span style="color: #204a87; font-weight: bold">&lt;/h2&gt;</span>
-
-  <span style="color: #204a87; font-weight: bold">&lt;div&gt;</span>
-     <span style="color: #204a87; font-weight: bold">&lt;input</span> <span style="color: #c4a000">type=</span><span style="color: #4e9a06">"text"</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"input"</span> <span style="color: #c4a000">autofocus</span><span style="color: #204a87; font-weight: bold">&gt;</span>
-     <span style="color: #204a87; font-weight: bold">&lt;button</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"btn"</span><span style="color: #204a87; font-weight: bold">&gt;</span><span style="color: #ce5c00">&amp;#43;</span><span style="color: #204a87; font-weight: bold">&lt;/button&gt;</span>
-  <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
-
-  <span style="color: #204a87; font-weight: bold">&lt;div&gt;</span>
-    <span style="color: #204a87; font-weight: bold">&lt;ul</span> <span style="color: #c4a000">id=</span><span style="color: #4e9a06">"todo-list"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
-
-    <span style="color: #204a87; font-weight: bold">&lt;/ul&gt;</span>
-  <span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
-
-<span style="color: #204a87; font-weight: bold">&lt;/div&gt;</span>
-</pre>
-               </div>
+               <pre>
+<code>&lt;div class="container"&gt;
+  &lt;h2&gt;To Do List:&lt;/h2&gt;
+  &lt;div&gt;
+     &lt;input type="text" id="input" autofocus&gt;
+     &lt;button id="btn"&gt;&amp;#43;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;ul id="todo-list"&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code>
+               </pre>
             </details>
             <hr>
             <ul dir="rtl">
                <li dir="rtl">
                   <strong dir="rtl">الثاني</strong> هل تلاحظ بانه عند كتابتك لمهمة في حقل input كيف تضل القيمة فيه حتى بعد إضافتها للقائمة كالتالي:<br>
-                  <img class="image" src="../../images/javascript/11/14.png">
+                  <img class="image" src="{% static '/images/javascript/11/14.png'%}">
                </li>
             </ul>
             <p dir="rtl">حتى نقوم بإزلة القيمة بعد أن يتم طباعتها سنقول للمتصفح بأن يقوم بتفريغ قيمة الحقل كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">btn</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"click"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span><span style="color: #000000; font-weight: bold">(){</span>
-
-<span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">push</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">value</span><span style="color: #000000; font-weight: bold">);</span> <span style="color: #8f5902; font-style: italic">//قم بتخزين المهمة في المصفوفة</span>
-
-<span style="color: #000000">toDoList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span>  <span style="color: #ce5c00; font-weight: bold">+=</span> <span style="color: #4e9a06">"&lt;li&gt;"</span><span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">"&lt;/li&gt;"</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">// قم بإضافتها للقائمة </span>
-
-<span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">value</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">""</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #8f5902; font-style: italic">// قم بتفريغ حقل الإدخال</span>
-
-<span style="color: #000000; font-weight: bold">});</span>
-</pre>
-            </div>
+            <pre>
+<code>btn.addEventListener("click", function(){
+  list.push(input.value); //قم بتخزين المهمة في المصفوفة
+  toDoList.innerHTML  += "&lt;li&gt;"+ list[list.length-1] +"&lt;/li&gt;"; // قم بإضافتها للقائمة
+  input.value = ""; // قم بتفريغ حقل الإدخال
+});</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/11/15.png">
+            <img class="image" src="{% static '/images/javascript/11/15.png'%}">
             <p></p>
             <p dir="rtl">اليس ذلك رائع ؟</p>
             <hr>
             <ul dir="rtl">
                <li dir="rtl">
                   <strong dir="rtl">الثالث</strong> لدينا ثغرة في تطبيقنا, قم بتجربة اضافة عنصر فارغ بالضغط على الزر دون كتابة أي شي ستلاحظ أن القائمة تقبل إدخال مهام فارغة كالتالي:<br>
-                  <img class="image" src="../../images/javascript/11/16.png">
+                  <img class="image" src="{% static '/images/javascript/11/16.png'%}">
                </li>
             </ul>
             <p dir="rtl">حتى نحل هذه المشكلة سنستخدم الشروط كما يلي:</p>
             <p dir="rtl">اذا كان حقل الادخال input غير فارغ اذا قم بتخزين القيمة في المصفوفة ومن ثم اضافتها للقائمة واخيراً قم بتفريغ الحقل من اي قيمة كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">if</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">value</span> <span style="color: #ce5c00; font-weight: bold">!=</span> <span style="color: #4e9a06">""</span><span style="color: #000000; font-weight: bold">){</span>
-
-<span style="color: #8f5902; font-style: italic">// سيتم تنفيذ الاوامر التي هنا في حال كانت قيمة الحقل غير فارغة</span>
-
-<span style="color: #000000; font-weight: bold">}</span>
-<span style="color: #204a87; font-weight: bold">else</span><span style="color: #000000; font-weight: bold">{</span>
-
-<span style="color: #8f5902; font-style: italic">// سيتم تنفيذ الاوامر التي هنا في حال كان الحقل فارغ - بإمكانك عمل رسالة للمستخدم او ماشابة ذلك</span>
-
-<span style="color: #000000; font-weight: bold">}</span>
-</pre>
-            </div>
+            <pre>
+<code>if(input.value != ""){
+  // سيتم تنفيذ الاوامر التي هنا في حال كانت قيمة الحقل غير فارغة
+}
+else{
+  // سيتم تنفيذ الاوامر التي هنا في حال كان الحقل فارغ - بإمكانك عمل رسالة للمستخدم او ماشابة ذلك
+}</code>
+            </pre>
             <p dir="rtl">قم بإضافة الشرط لبرنامجك واذا تحتاج مراجعة الشروط قمنا بتفصيلها <a href="https://macdiscussions.udacity.com/t/conditionals/114025" dir="rtl"></a></p>
             <hr>
             <details dir="rtl" open="">
                <summary dir="rtl">
                   الكود سيكون كالتالي
                </summary>
-               <div class="code">
-                  <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">input</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"input"</span><span style="color: #000000; font-weight: bold">);</span>
-<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">btn</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"btn"</span><span style="color: #000000; font-weight: bold">);</span>
-<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">toDoList</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"todo-list"</span><span style="color: #000000; font-weight: bold">);</span>
-<span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">list</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">[];</span>
+               <pre>
+<code>var input = document.getElementById("input");
+var btn = document.getElementById("btn");
+var toDoList = document.getElementById("todo-list");
+var list = [];
 
-<span style="color: #000000">btn</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"click"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span><span style="color: #000000; font-weight: bold">(){</span>
-
-<span style="color: #204a87; font-weight: bold">if</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">value</span> <span style="color: #ce5c00; font-weight: bold">!=</span> <span style="color: #4e9a06">""</span><span style="color: #000000; font-weight: bold">){</span>
-
-  <span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">push</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">value</span><span style="color: #000000; font-weight: bold">);</span>
-
-  <span style="color: #000000">toDoList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span>  <span style="color: #ce5c00; font-weight: bold">+=</span> <span style="color: #4e9a06">"&lt;li&gt;"</span><span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">list</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">+</span><span style="color: #4e9a06">"&lt;/li&gt;"</span><span style="color: #000000; font-weight: bold">;</span>
-
-  <span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">value</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #4e9a06">""</span><span style="color: #000000; font-weight: bold">;</span>
-
-<span style="color: #000000; font-weight: bold">}</span>
-
-<span style="color: #000000; font-weight: bold">});</span>
-</pre>
-               </div>
+btn.addEventListener("click", function(){
+  if(input.value != ""){
+    list.push(input.value);
+    toDoList.innerHTML  += "&lt;li&gt;"+ list[list.length-1] +"&lt;/li&gt;";
+    input.value = "";
+  }
+});</code>
+               </pre>
             </details>
             <hr>
             <h3 dir="rtl">الخطوة الثامنة</h3>
             <p dir="rtl">نريد أن نقوم بعمل شي رائع ونتعلم طريقة توظيف أزرار الـ keyboard في تطبيقاتنا حيث أريد أن اجعل المستخدم قادر على إضافة العناصر بمجرد كتابتها والضغط على زر Enter من الكايبورد دون الحاجة له بأن يقوم كل مرة بإستخدام المأوس للضغط على زر btn <strong dir="rtl">فكيف سنقوم بذلك؟</strong></p>
             <p dir="rtl">سنقوم بإخبار المتصفح بأنه بمجرد ما أن يتم الكتابة على حقل input أن يقوم بالإستماع لعملية ضغط على مفتاح من الكايبورد <code dir="ltr">keydown</code> بإستخدام الكود التالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"keydown"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span><span style="color: #000000; font-weight: bold">()</span> <span style="color: #000000; font-weight: bold">{</span>
-
- <span style="color: #8f5902; font-style: italic">// سيتم تنفيذ هذه الأوامر في حال الضغط على أي مفتاح في لوحة المفاتيح</span>
-
-<span style="color: #000000; font-weight: bold">});</span>
-</pre>
-            </div>
+            <pre>
+<code>input.addEventListener("keydown", function() {
+ // سيتم تنفيذ هذه الأوامر في حال الضغط على أي مفتاح في لوحة المفاتيح
+});</code>
+            </pre>
             <p dir="rtl">الكود أعلاة عام ويقوم بتنفيذ الاوامر لأي مفتاح يتم ضغطة بالكايبورد لهذا نريد أن نقوم بتحديد شرط بأن يكون هذه المفتاح هو Enter وللقيام بذلك يجب أن نعرف ما هي القيمة التي تمثل المفتاح Enter, شاهد الصورة التالية:</p>
             <p></p>
-            <img class="image" src="../../images/javascript/11/17.png">
+            <img class="image" src="{% static '/images/javascript/11/17.png'%}">
             <br>
             <p></p>
             <p dir="rtl">من الصورة أعلاة ستجد أن قيمة المفتاح enter هي 13 لذا سنقوم بعمل شرط يتحقق من أن المفتاح الذي تم ضغطة هو المفتاح المطلوب كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"keydown"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span><span style="color: #000000; font-weight: bold">()</span> <span style="color: #000000; font-weight: bold">{</span>
-
-<span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">event</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">keyCode</span> <span style="color: #ce5c00; font-weight: bold">===</span> <span style="color: #0000cf; font-weight: bold">13</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
-  <span style="color: #8f5902; font-style: italic">//سيتم تنفيذ هذه الاوامر عند الضغط على المفتاح انتر من لوحة المفاتيح</span>
-  <span style="color: #000000; font-weight: bold">}</span>
-
-<span style="color: #000000; font-weight: bold">});</span>
-</pre>
-            </div>
+            <pre>
+<code>input.addEventListener("keydown", function() {
+  if (event.keyCode === 13) {
+    //سيتم تنفيذ هذه الاوامر عند الضغط على المفتاح انتر من لوحة المفاتيح
+  }
+});</code>
+            </pre>
             <p dir="rtl">الأمر الذي نريد حصولة عند الضغط على زر Enter هو أن يتم الضغط على الزر الخاص بنا btn بشكل اوتوماتيكي لذا سنقوم بتوجية الامر <code dir="ltr">btn.click();</code> كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">input</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">addEventListener</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"keydown"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">function</span><span style="color: #000000; font-weight: bold">()</span> <span style="color: #000000; font-weight: bold">{</span>
-<span style="color: #204a87; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">event</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">keyCode</span> <span style="color: #ce5c00; font-weight: bold">===</span> <span style="color: #0000cf; font-weight: bold">13</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
-  <span style="color: #000000">btn</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">click</span><span style="color: #000000; font-weight: bold">();</span>
-  <span style="color: #000000; font-weight: bold">}</span>
-<span style="color: #000000; font-weight: bold">});</span>
-</pre>
-            </div>
+            <pre>
+<code>input.addEventListener("keydown", function() {
+  if (event.keyCode === 13) {
+    btn.click();
+  }
+});</code>
+            </pre>
             <p dir="rtl">الأن قم بتجربة إضافة مهمة للقائمة بإستخدام لوحة المفاتيح دون الحاجة لإستخدام المأوس.</p>
             <hr>
             <h3 dir="rtl">الخطوة التاسعة</h3>
@@ -444,89 +384,88 @@
                <summary dir="rtl">
                   أكواد تنسيقات CSS
                </summary>
-               <div class="code">
-                  <pre style="margin: 0; line-height: 125%"><span style="color: #ce5c00; font-weight: bold">*</span> <span style="color: #000000; font-weight: bold">{</span>
-	<span style="color: #000000">box</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">sizing</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">box</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">outline</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">none</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">vertical-align</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">middle</span><span style="color: #000000; font-weight: bold">;</span>
-<span style="color: #000000; font-weight: bold">}</span>
+               <pre>
+<code>
+* {
+	box-sizing: border-box;
+	outline: none;
+	vertical-align: middle;
+}
 
-<span style="color: #204a87; font-weight: bold">body</span> <span style="color: #000000; font-weight: bold">{</span>
-	<span style="color: #204a87; font-weight: bold">font-family</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">'Nanum Pen Script'</span><span style="color: #ce5c00; font-weight: bold">,</span> <span style="color: #204a87; font-weight: bold">cursive</span><span style="color: #000000; font-weight: bold">;</span>
-<span style="color: #000000; font-weight: bold">}</span>
+body {
+	font-family: 'Nanum Pen Script', cursive;
+}
 
-<span style="color: #000000">.container</span> <span style="color: #000000; font-weight: bold">{</span>
-	<span style="color: #204a87; font-weight: bold">max-width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">450px</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">30px</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">min-height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">300px</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">text-align</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">center</span>
-<span style="color: #000000; font-weight: bold">}</span>
+.container {
+	max-width: 450px;
+	height: auto;
+	padding: 30px;
+	min-height: 300px;
+	margin: 0 auto;
+	text-align: center
+}
 
-<span style="color: #204a87; font-weight: bold">h2</span> <span style="color: #000000; font-weight: bold">{</span>
-	<span style="color: #204a87; font-weight: bold">font-family</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">arial</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">text-align</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">left</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">5px</span> <span style="color: #0000cf; font-weight: bold">10px</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#999</span><span style="color: #000000; font-weight: bold">;</span>
-<span style="color: #000000; font-weight: bold">}</span>
+h2 {
+	font-family: arial;
+	text-align: left;
+	padding: 5px 10px;
+	color: #999;
+}
 
-<span style="color: #204a87; font-weight: bold">input</span><span style="color: #ce5c00; font-weight: bold">[</span><span style="color: #204a87; font-weight: bold">type</span><span style="color: #ce5c00; font-weight: bold">=</span><span style="color: #204a87; font-weight: bold">text</span><span style="color: #ce5c00; font-weight: bold">]</span> <span style="color: #000000; font-weight: bold">{</span>
-	<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">80</span><span style="color: #ce5c00; font-weight: bold">%</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">15px</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">50px</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #204a87; font-weight: bold">solid</span> <span style="color: #0000cf; font-weight: bold">#ccc</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#999</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">18px</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">border-top</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #204a87; font-weight: bold">left</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">radius</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">5px</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">border-bottom</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #204a87; font-weight: bold">left</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">radius</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">5px</span><span style="color: #000000; font-weight: bold">;</span>
-<span style="color: #000000; font-weight: bold">}</span>
+input[type=text] {
+	width: 80%;
+	padding: 15px;
+	height: 50px;
+	border: 1px solid #ccc;
+	color: #999;
+	font-size: 18px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
 
-<span style="color: #204a87; font-weight: bold">button</span> <span style="color: #000000; font-weight: bold">{</span>
-	<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">15</span><span style="color: #ce5c00; font-weight: bold">%</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">height</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">50px</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">border</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">none</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#e84118</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#fff</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">border-top</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #204a87; font-weight: bold">right</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">radius</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">5px</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">border-bottom</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #204a87; font-weight: bold">right</span><span style="color: #ce5c00; font-weight: bold">-</span><span style="color: #000000">radius</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">5px</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">cursor</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">pointer</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">margin-left</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">-6px</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">25px</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #000000">transition</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">background</span> <span style="color: #0000cf; font-weight: bold">0.3s</span><span style="color: #000000; font-weight: bold">;</span>
-<span style="color: #000000; font-weight: bold">}</span>
+button {
+	width: 15%;
+	height: 50px;
+	border: none;
+	background: #e84118;
+	color: #fff;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	cursor: pointer;
+	margin-left: -6px;
+	font-size: 25px;
+	transition: background 0.3s;
+}
 
-<span style="color: #204a87; font-weight: bold">ul</span> <span style="color: #000000; font-weight: bold">{</span>
-	<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">10px</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">text-align</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">left</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">list-style</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">none</span><span style="color: #000000; font-weight: bold">;</span>
-<span style="color: #000000; font-weight: bold">}</span>
+ul {
+	padding: 0;
+	margin: 10px 0;
+	text-align: left;
+	list-style: none;
+}
 
-<span style="color: #204a87; font-weight: bold">li</span> <span style="color: #000000; font-weight: bold">{</span>
-	<span style="color: #204a87; font-weight: bold">width</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">95</span><span style="color: #ce5c00; font-weight: bold">%</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">margin</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #204a87; font-weight: bold">auto</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">padding</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">10px</span> <span style="color: #0000cf; font-weight: bold">10px</span> <span style="color: #0000cf; font-weight: bold">10px</span> <span style="color: #0000cf; font-weight: bold">40px</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">background</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">#fffde9</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">cursor</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">pointer</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">border-bottom</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1px</span> <span style="color: #204a87; font-weight: bold">dashed</span> <span style="color: #0000cf; font-weight: bold">#e3d3a9</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">font-size</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">22px</span><span style="color: #000000; font-weight: bold">;</span>
-	<span style="color: #204a87; font-weight: bold">position</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">relative</span><span style="color: #000000; font-weight: bold">;</span>
-<span style="color: #000000; font-weight: bold">}</span>
-</pre>
-               </div>
+li {
+	width: 95%;
+	margin: 0 auto;
+	padding: 10px 10px 10px 40px;
+	background: #fffde9;
+	cursor: pointer;
+	border-bottom: 1px dashed #e3d3a9;
+	font-size: 22px;
+	position: relative;
+}</code>
+               </pre>
             </details>
             <p dir="rtl">قم بالإطلاع على الكود أعلاة في حال لديك أي إستفسار عن أي خاصية قم بطرحة في التعليقات</p>
             <hr>
             <p dir="rtl">كذلك قمت بإضافة أحد خطوط قوقل حتى أجعل الخط يبدوا وكأنه خط يد كود إضافة الخط (قم بإضافته في منطقة الـ head):</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">&lt;link</span> <span style="color: #c4a000">href=</span><span style="color: #4e9a06">"https://fonts.googleapis.com/css?family=Nanum+Pen+Script"</span> <span style="color: #c4a000">rel=</span><span style="color: #4e9a06">"stylesheet"</span><span style="color: #204a87; font-weight: bold">&gt;</span>
-</pre>
-            </div>
+            <pre>
+<code>&lt;link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script" rel="stylesheet"&gt;</code>
+            </pre>
             <p dir="rtl">قمنا بالتطريق لطريقة إضافة خطوط قوقل للموقع في <a href="https://macdiscussions.udacity.com/t/header-navbar/90389" dir="rtl"><strong dir="rtl">هذا الدرس</strong></a> فاذا كنت تواجه صعوبة قم بمراجعته</p>
             <hr>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <img class="image" src="../../images/javascript/11/18.png">
+            <img class="image" src="{% static '/images/javascript/11/18.png'%}">
             <p></p>
             <hr>
             <p dir="rtl"><strong dir="rtl">سأتوقف هنا حتى تستطيعوا ترتيب أفكاركم وسأقوم بعمل جزء ثاني لإكمال التالي:</strong></p>
