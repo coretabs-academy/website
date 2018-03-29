@@ -1,0 +1,2 @@
+python compile_messages.py
+pause
