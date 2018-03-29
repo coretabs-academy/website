@@ -1276,7 +1276,14 @@ inner nav Style
 /*=====================================
 login-toggle Style
 =======================================*/
-
+.home-menu{
+	display: flex;
+	width: auto;
+}
+.home-menu a{
+	text-decoration:none; 
+	font-weight: bold;
+}
 .signup-toggle{
 	width: 100%;
 	height: auto;
@@ -1311,7 +1318,7 @@ login-toggle Style
 	display: block;
 	height: auto;
 	border: 2px solid #fff;
-	padding: 1px 15px 3px;
+	padding: 2px 15px;
 	min-width: 140px;
 	color: #fff;
 	border-radius: 100px;
@@ -1429,5 +1436,8 @@ login-toggle Style
 	}
 	.signup-toggle .errors ul{
 		margin-top: 15px;
+	}
+	.home .navbar-brand{
+		left: 0;
 	}
 }
