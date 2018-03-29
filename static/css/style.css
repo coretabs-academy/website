@@ -145,7 +145,7 @@ Navbar Style
 		min-width: 100px;
 	}
 	.navbar-brand div {
-		
+
 		padding: 3px 30px;
 	}
 }
@@ -836,6 +836,7 @@ Main Style
 	border-radius: 5px 0 0 5px;
 }
 
+
 @media screen and (max-width:850px) {
 	.beauty-box .box {
 		width: 80vw;
@@ -856,10 +857,9 @@ Main Style
 		height: 100%;
 		width: 100%;
 	}
-	.beauty-box .project .courses_image img {
+	.beauty-box .courses_image img {
 		border-radius: 50%;
-		width: 200px;
-		height: 200px;
+		height: 100%;
 	}
 	.beauty-box .text {
 		padding-bottom: 50px;
@@ -1239,7 +1239,7 @@ inner nav Style
 	position: fixed;
 	top: 0;
 	z-index: 99999;
-  
+
 }
 .inner-nav #logo{
 	width: auto;
@@ -1247,13 +1247,13 @@ inner nav Style
 	text-align: left;
 	font-weight: 700;
 	font-size: 1.8em;
-	text-shadow: 1px 2px 0px #58156a;	
-} 
+	text-shadow: 1px 2px 0px #58156a;
+}
 
 .inner-nav #logo a{
-	color: #fff; 
+	color: #fff;
 	text-decoration: none;
-} 
+}
 
 .inner-nav #logo span{
 	color: #bbeee9;
@@ -1271,7 +1271,7 @@ inner nav Style
 	text-decoration: none;
 	margin-right: 20px;
 	text-shadow: 0px 2px 0px #2b0a65;
-	
+
 }
 /*=====================================
 login-toggle Style
@@ -1281,7 +1281,7 @@ login-toggle Style
 	width: auto;
 }
 .home-menu a{
-	text-decoration:none; 
+	text-decoration:none;
 	font-weight: bold;
 }
 .signup-toggle{
@@ -1297,7 +1297,7 @@ login-toggle Style
 #signup{
 	display: block;
 	height: auto;
-	background: #f43b3b; 
+	background: #f43b3b;
     background: -webkit-linear-gradient(left, #ec008c, #fc6767);
     background: -o-linear-gradient(left, #ec008c, #fc6767);
     background: linear-gradient(to right, #ec008c, #fc6767);
@@ -1355,7 +1355,7 @@ login-toggle Style
 }
 
 .signup-form input[type=text]:focus{
-	border-bottom: 2px solid #8fb0ff; 
+	border-bottom: 2px solid #8fb0ff;
 }
 
 .signup-form input[type=text]::placeholder{
@@ -1363,12 +1363,12 @@ login-toggle Style
 	color: #fff;
 	opacity: 0.8;
 }
-.signup-form input[type=text]:-ms-input-placeholder 
+.signup-form input[type=text]:-ms-input-placeholder
 {
 	color: #fff;
 	filter: alpha(opacity=80);
 }
-.signup-form input[type=text]::-ms-input-placeholder 
+.signup-form input[type=text]::-ms-input-placeholder
 {
 	color: #fff;
 	filter: alpha(opacity=80);
@@ -1380,7 +1380,7 @@ login-toggle Style
 .signup-form button{
 	padding: 6px 14px 10px 12px;
 	height: 80%;
-	background: #f43b3b; 
+	background: #f43b3b;
     background: -webkit-linear-gradient(left, #ec008c, #fc6767);
     background: -o-linear-gradient(left, #ec008c, #fc6767);
     background: linear-gradient(to right, #ec008c, #fc6767);
@@ -1392,7 +1392,7 @@ login-toggle Style
 	margin: 6px 15px 0 0;
 	transition: 0.3s;
 	background-size: 120% auto;
-	
+
 }
 .signup-form button:hover{
  	background-position: right center;
@@ -1409,7 +1409,7 @@ login-toggle Style
 	padding: 5px;
 	background: #5525b4;
 	border-radius: 4px;
-	
+
 }
 
 @media screen and (max-width:768px) {
@@ -1448,13 +1448,13 @@ login-toggle Style
 }
 
 @media screen and (max-width:540px) {
-	
+
 	.home-menu{
 		flex-direction: column;
 	}
 	.home-menu a{
 		margin-bottom: 15px;
-		
+
 	}
 	.home .navbar-brand{
 		font-size: 25px;
@@ -1469,6 +1469,6 @@ login-toggle Style
 		margin-top: calc(100vh - 400px);
 	}
 	.background-image p{
-		
+
 	}
 }
