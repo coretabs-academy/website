@@ -135,7 +135,7 @@ Navbar Style
 
 @media screen and (max-width:380px) {
 	.navbar-brand {
-		background: red;
+		
 		position: absolute;
 		-ms-flex-item-align: center;
 		-ms-grid-row-align: center;
