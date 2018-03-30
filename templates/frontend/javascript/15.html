@@ -78,58 +78,48 @@
             <ul dir="rtl">
                <li dir="rtl">الخطوة الأولى سأقوم بتعريف الـ Object كالتالي:</li>
             </ul>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">phone</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">{</span> <span style="color: #000000; font-weight: bold">};</span>
-</pre>
-            </div>
+            <pre>
+<code>var phone = { };</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">الأن سأبدأ بكتابة الـ الخصائص (Properties)  كالتالي:</strong></p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">phone</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">{</span>
-
-    <span style="color: #000000">company</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">"Apple"</span>
-
-<span style="color: #000000; font-weight: bold">};</span>
-</pre>
-            </div>
+            <pre>
+<code>var phone = {
+  company : "Apple"
+};</code>
+            </pre>
             <p dir="rtl">لاحظ كيف قمت بكتابته كما موضح بالصورة التالية:<br>
                <img src="{% static 'images/javascript/15/3.png'%}" alt="image" class="image">
             </p>
             <p dir="rtl">لنكمل كتابة بقية الخصائص الأخرى ونضع بين كل خاصية واخرى <strong dir="rtl">فاصلة</strong> كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">phone</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">{</span>
-
-   <span style="color: #000000">company</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">"Apple"</span><span style="color: #000000; font-weight: bold">,</span>
-   <span style="color: #000000">name</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">"iphoneX"</span><span style="color: #000000; font-weight: bold">,</span>
-   <span style="color: #000000">price</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1200</span><span style="color: #000000; font-weight: bold">,</span>
-   <span style="color: #000000">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">"back"</span>
-
-<span style="color: #000000; font-weight: bold">};</span>
-</pre>
-            </div>
+            <pre>
+<code>var phone = {
+  company: "Apple",
+  name: "iphoneX",
+  price: 1200,
+  color: "back"
+};</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">رائع!</strong> إنتهينا من كتابة الـ Properties</p>
             <p dir="rtl"><strong dir="rtl">الأن لنقم بكتابة الـ Methods:</strong><br>
                كما ذكرنا أعلاة الـ methods هي عبارة عن دوال وكما قمنا بالشرح في الدرس السابق عن طرق تعريف الدوال وإستخدامها سنقوم بمثل ذلك في هذا الدرس كالتالي:
             </p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">phone</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">{</span>
+            <pre>
+<code>var phone = {
+  /*Properties*/
+  company: "Apple",
+  name: "iphoneX",
+  price: 1200,
+  color: "back", // لا تنسى أضافة الفاصلة بين كل عنصر
 
-    <span style="color: #8f5902; font-style: italic">/*Properties*/</span>
-    <span style="color: #000000">company</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">"Apple"</span><span style="color: #000000; font-weight: bold">,</span>
-    <span style="color: #000000">name</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">"iphoneX"</span><span style="color: #000000; font-weight: bold">,</span>
-    <span style="color: #000000">price</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1200</span><span style="color: #000000; font-weight: bold">,</span>
-    <span style="color: #000000">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">"back"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #8f5902; font-style: italic">// لا تنسى أضافة الفاصلة بين كل عنصر</span>
-
-    <span style="color: #8f5902; font-style: italic">/*Methods*/</span>
-    <span style="color: #000000">call</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">function</span><span style="color: #000000; font-weight: bold">(){</span>
-       <span style="color: #204a87; font-weight: bold">return</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"calling ..."</span><span style="color: #000000; font-weight: bold">);</span>
-    <span style="color: #000000; font-weight: bold">},</span>
-    <span style="color: #000000">sms</span> <span style="color: #ce5c00; font-weight: bold">:</span>  <span style="color: #204a87; font-weight: bold">function</span><span style="color: #000000; font-weight: bold">(){</span>
-        <span style="color: #204a87; font-weight: bold">return</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"sending sms ..."</span><span style="color: #000000; font-weight: bold">);</span>
-    <span style="color: #000000; font-weight: bold">}</span>
-
-<span style="color: #000000; font-weight: bold">};</span>
-</pre>
-            </div>
+  /*Methods*/
+  call: function () {
+    return ("calling ...");
+  },
+  sms: function () {
+    return ("sending sms ...");
+  }
+};</code>
+            </pre>
             <p dir="rtl">سنكتفي بإثنتين من الـ methods.</p>
             <hr>
             <h2 dir="rtl">الوصول لعناصر الـ Object</h2>
@@ -137,64 +127,58 @@
             <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/javascript/15/4.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">لنقم بتجربة الطريقة الأولى بكتابة إسم الـ object ومن ثم نقطة ومن ثم إسم الخاصية كالتالي:</strong></p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">phone</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">{</span>
+            <pre>
+<code>var phone = {
+    /*Properties*/
+    company : "Apple",
+    name : "iphoneX",
+    price : 1200,
+    color: "back", // لا تنسى أضافة الفاصلة بين كل عنصر
 
-    <span style="color: #8f5902; font-style: italic">/*Properties*/</span>
-    <span style="color: #000000">company</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">"Apple"</span><span style="color: #000000; font-weight: bold">,</span>
-    <span style="color: #000000">name</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">"iphoneX"</span><span style="color: #000000; font-weight: bold">,</span>
-    <span style="color: #000000">price</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1200</span><span style="color: #000000; font-weight: bold">,</span>
-    <span style="color: #000000">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">"back"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #8f5902; font-style: italic">// لا تنسى أضافة الفاصلة بين كل عنصر</span>
+    /*Methods*/
+    call : function(){
+       return ("calling ...");
+    },
+    sms :  function(){
+        return ("sending sms ...");
+    }
+};
 
-    <span style="color: #8f5902; font-style: italic">/*Methods*/</span>
-    <span style="color: #000000">call</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">function</span><span style="color: #000000; font-weight: bold">(){</span>
-       <span style="color: #204a87; font-weight: bold">return</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"calling ..."</span><span style="color: #000000; font-weight: bold">);</span>
-    <span style="color: #000000; font-weight: bold">},</span>
-    <span style="color: #000000">sms</span> <span style="color: #ce5c00; font-weight: bold">:</span>  <span style="color: #204a87; font-weight: bold">function</span><span style="color: #000000; font-weight: bold">(){</span>
-        <span style="color: #204a87; font-weight: bold">return</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"sending sms ..."</span><span style="color: #000000; font-weight: bold">);</span>
-    <span style="color: #000000; font-weight: bold">}</span>
+console.log( phone.company );
+console.log( phone.name );
+console.log( phone.price );
 
-<span style="color: #000000; font-weight: bold">};</span>
-
-
-<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">phone</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">company</span> <span style="color: #000000; font-weight: bold">);</span>
-<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">phone</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">name</span> <span style="color: #000000; font-weight: bold">);</span>
-<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">phone</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">price</span> <span style="color: #000000; font-weight: bold">);</span>
-
-<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">phone</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">call</span><span style="color: #000000; font-weight: bold">()</span> <span style="color: #000000; font-weight: bold">);</span>
-</pre>
-            </div>
+console.log( phone.call() );</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
             <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/javascript/15/5.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">لنقم بتجربة الطريقة الثاينة بكتابة إسم الـ object ومن ثم إسم الخاصية بين قوسين مربعين كالتالي:</strong></p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">phone</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">{</span>
+            <pre>
+<code>var phone = {
 
-    <span style="color: #8f5902; font-style: italic">/*Properties*/</span>
-    <span style="color: #000000">company</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">"Apple"</span><span style="color: #000000; font-weight: bold">,</span>
-    <span style="color: #000000">name</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">"iphoneX"</span><span style="color: #000000; font-weight: bold">,</span>
-    <span style="color: #000000">price</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1200</span><span style="color: #000000; font-weight: bold">,</span>
-    <span style="color: #000000">color</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">"back"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #8f5902; font-style: italic">// لا تنسى أضافة الفاصلة بين كل عنصر</span>
+  /*Properties*/
+  company: "Apple",
+  name: "iphoneX",
+  price: 1200,
+  color: "back", // لا تنسى أضافة الفاصلة بين كل عنصر
 
-    <span style="color: #8f5902; font-style: italic">/*Methods*/</span>
-    <span style="color: #000000">call</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">function</span><span style="color: #000000; font-weight: bold">(){</span>
-       <span style="color: #204a87; font-weight: bold">return</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"calling ..."</span><span style="color: #000000; font-weight: bold">);</span>
-    <span style="color: #000000; font-weight: bold">},</span>
-    <span style="color: #000000">sms</span> <span style="color: #ce5c00; font-weight: bold">:</span>  <span style="color: #204a87; font-weight: bold">function</span><span style="color: #000000; font-weight: bold">(){</span>
-        <span style="color: #204a87; font-weight: bold">return</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">"sending sms ..."</span><span style="color: #000000; font-weight: bold">);</span>
-    <span style="color: #000000; font-weight: bold">}</span>
+  /*Methods*/
+  call: function () {
+    return ("calling ...");
+  },
+  sms: function () {
+    return ("sending sms ...");
+  }
 
-<span style="color: #000000; font-weight: bold">};</span>
+};
 
+console.log(phone["company"]);
+console.log(phone["name"]);
+console.log(phone["price"]);
 
-<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">phone</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #4e9a06">"company"</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #000000; font-weight: bold">);</span>
-<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">phone</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #4e9a06">"name"</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #000000; font-weight: bold">);</span>
-<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">phone</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #4e9a06">"price"</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #000000; font-weight: bold">);</span>
-
-<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">phone</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #4e9a06">"call"</span><span style="color: #000000; font-weight: bold">]()</span> <span style="color: #000000; font-weight: bold">);</span>
-</pre>
-            </div>
+console.log(phone["call"]());</code>
+            </pre>
             <p dir="rtl">لاحظ كتابتنا للخصائص كنصوص بين علامتي تنصيص.<br>
                لاحظ كذلك كيف قمنا بإستدعاء الدالة <code dir="ltr">phone["call"]()</code>
             </p>
@@ -214,12 +198,10 @@
             <p dir="rtl"><strong dir="rtl">الـ Array نوع خاص من الـ object:</strong><br>
                لنأكد من ذلك قم بتعريف المصفوفة التالية وطباعة نوعها بإستخدام الدالة <code dir="ltr">typeof</code> كالتالي:
             </p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">array</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">[];</span>
-
-<span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">typeof</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">array</span><span style="color: #000000; font-weight: bold">));</span>
-</pre>
-            </div>
+            <pre>
+<code>var array = [];
+console.log(typeof (array));</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
             <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static 'images/javascript/15/8.png'%}" alt="image" class="image"></a></div>
             <p></p>
@@ -227,174 +209,152 @@
                <img src="{% static 'images/javascript/15/9.png'%}" alt="image" class="image">
             </p>
             <p dir="rtl">بمعنى أنك إذا اردت أن تصل لمحتوى الخزانة السادسة ستقوم بالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">locker</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #0000cf; font-weight: bold">5</span><span style="color: #000000; font-weight: bold">];</span>
-</pre>
-            </div>
+            <pre>
+<code>locker[5];</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">الـ Objects تستخدم الأسماء كـ Key إلقي نظرة على الصورة التالية:</strong><br>
-               <img src="../../images/javascript/15/10.png" alt="image" class="image">
+               <img src="{% static '/images/javascript/15/10.png'%}" alt="image" class="image">
             </p>
             <p dir="rtl">فإذا اردت الوصول للخزانة السادسة ستقوم بإستخدام إسمها كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">locker</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #4e9a06">"employees"</span><span style="color: #000000; font-weight: bold">];</span>
-</pre>
-            </div>
+            <pre>
+<code>locker["employees"];</code>
+            </pre>
             <p dir="rtl">او هكذا</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">locker</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">employees</span><span style="color: #000000; font-weight: bold">;</span>
-</pre>
-            </div>
+            <pre>
+<code>locker.employees;</code>
+            </pre>
             <h4 dir="rtl">متى تستخدم الـ arrays ومتى تستخدم الـ objects:</h4>
             <ul dir="rtl">
                <li dir="rtl">عندما تريد تخزين قائمة من البيانات التي هي من نفس النوع قم بإستخدام Array</li>
             </ul>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">colors</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">[</span><span style="color: #4e9a06">"red"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">"white"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">"black"</span><span style="color: #000000; font-weight: bold">];</span>
-</pre>
-            </div>
+            <pre>
+<code>var colors = ["red", "white", "black"];</code>
+            </pre>
             <ul dir="rtl">
                <li dir="rtl">عندما تريد تخزين بيانات كخصائص يجمعها عامل مشترك ولها انواع مختلفة قوم بإستخدام object</li>
             </ul>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">student</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">{</span>
-    <span style="color: #000000">id</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">12345</span><span style="color: #000000; font-weight: bold">,</span>
-    <span style="color: #000000">name</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">"Mohammed"</span><span style="color: #000000; font-weight: bold">,</span>
-    <span style="color: #000000">registered</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">true</span>
-<span style="color: #000000; font-weight: bold">};</span>
-</pre>
-            </div>
+            <pre>
+<code>var student = {
+  id: 12345,
+  name: "Mohammed",
+  registered: true
+};</code>
+            </pre>
             <p dir="rtl">لا نستطيع نقاش ماذا تختار بشكل مفصل فلن نتوقف في سرد التفضيلات ولكن النقطتين التي طرحتهم اعلاة بشكل عام وعند بحثك ودراستك للـ Objects ستعرف متى تستخدمها ومتى لا تستخدمها.</p>
             <hr>
             <h2 dir="rtl">طباعة عناصر الـ Object و الـ for-in-loop</h2>
             <h4 dir="rtl">طباعة الـ array</h4>
             <p dir="rtl">كما ذكرنا أعلاة فالمصفوفات عناصرها يتم إعطائها index رقمي يبدأ من صفر 0 وينتهي حسب طول المصفوفة فإذا كان لدينا المصفوفة التالية:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">colors</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">[</span><span style="color: #4e9a06">"red"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">"white"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">"black"</span><span style="color: #000000; font-weight: bold">];</span>
-</pre>
-            </div>
+            <pre>
+<code>var colors = ["red", "white", "black"];</code>
+            </pre>
             <p dir="rtl">ونريد طباعتها فسوف نستخدم الحلقات لنأخذ for كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">for</span> <span style="color: #000000; font-weight: bold">(</span> <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">0</span> <span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">&lt;</span> <span style="color: #000000">colors</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span> <span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">++</span><span style="color: #000000; font-weight: bold">){</span>
-
-    <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">colors</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">i</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #000000; font-weight: bold">);</span>
-
-<span style="color: #000000; font-weight: bold">}</span>
-</pre>
-            </div>
+            <pre>
+<code>for ( var i = 0 ; i < colors.length ; i++){
+  console.log( colors[i] );
+}</code>
+            </pre>
             <p dir="rtl">لاحظ كيف أننا نستطيع المرور على جميع عناصر المصفوفة وطباعتها بإستخدام العداد <code dir="ltr">i</code> الذي يبدأ بالعد من صفر. في حال تواجهك مصاعب في الحلقات قم بمراجعة الدرس الخاص بها .</p>
             <h1 dir="rtl">طباعة الـ object</h1>
             <p dir="rtl">كما ذكرنا الـ Object لا يعتمد على قيمة رقمية كـ index إنما يعتمد على قيمة نصية تسمى الـ Key او الـ Property.</p>
             <p dir="rtl"><strong dir="rtl">فكيف سنستطيع المرور على عناصر الـ object ؟</strong></p>
             <p dir="rtl">هناك حلقة loop تسمى for-in-loop تستخدم للقيام بذلك:</p>
             <p dir="rtl">لاحظ تركيب الحلقة حيث نقوم بتعريف متغير بإي إسم انا قمت بتسميته <code dir="ltr">key</code> تم نكتب <code dir="ltr">in</code> ونتبعها بإسم الـ object كما قمنا بتعريفة سابقاً <code dir="ltr">student</code> بعد ذلك نقوم بطباعته بإستخدام الكود <code dir="ltr">student[key]</code> حيث مررنا المتغير الخاص بنا <code dir="ltr">key</code> بداخل الأقواس المربعة للـ object كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">student</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">{</span>
-    <span style="color: #000000">id</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">12345</span><span style="color: #000000; font-weight: bold">,</span>
-    <span style="color: #000000">name</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">"Mohammed"</span><span style="color: #000000; font-weight: bold">,</span>
-    <span style="color: #000000">registered</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">true</span>
-<span style="color: #000000; font-weight: bold">};</span>
+            <pre>
+<code>var student = {
+  id: 12345,
+  name: "Mohammed",
+  registered: true
+};
 
-<span style="color: #204a87; font-weight: bold">for</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">key</span> <span style="color: #204a87; font-weight: bold">in</span> <span style="color: #000000">student</span> <span style="color: #000000; font-weight: bold">){</span>
-
-    <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span> <span style="color: #000000">student</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">key</span><span style="color: #000000; font-weight: bold">]);</span>
-
-<span style="color: #000000; font-weight: bold">}</span>
-</pre>
-            </div>
+for (var key in student) {
+  console.log(student[key]);
+}</code>
+            </pre>
             <p dir="rtl">لا يمكنك إستخدام الطريقة <code dir="ltr">student.key</code>  في هذه الحلقة فتذكر ذلك.</p>
             <p dir="rtl"><strong dir="rtl">النتيجة:</strong><br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/javascript/15/11.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static '/images/javascript/15/11.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl">لاحظ تم طباعة جميع عناصر الـ object.</p>
             <hr>
             <h2 dir="rtl">عمل Arrays of objects</h2>
             <p dir="rtl">نستطيع عمل أكثر من object بدأخل Array لنقوم بعمل تطبيق.</p>
             <p dir="rtl"><strong dir="rtl">سأقوم بعمل مصفوفة بإسم products كالتالي:</strong></p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">products</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">[];</span>
-</pre>
-            </div>
+            <pre>
+<code>var products = [];</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">الأن سأقوم بعمل منتجات بدأخل هذه المصفوفة بالشكل التالي:</strong></p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">products</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">[</span>
+            <pre>
+<code>var products = [
 
-    <span style="color: #000000; font-weight: bold">{</span>
-      <span style="color: #000000">name</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">"iphone"</span><span style="color: #000000; font-weight: bold">,</span>
-      <span style="color: #000000">price</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1200</span><span style="color: #000000; font-weight: bold">,</span>
-      <span style="color: #000000">colors</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000; font-weight: bold">[</span><span style="color: #4e9a06">"red"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">"black"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">"white"</span><span style="color: #000000; font-weight: bold">],</span>
-      <span style="color: #000000">available</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">true</span>
-    <span style="color: #000000; font-weight: bold">}</span>
+  {
+    name: "iphone",
+    price: 1200,
+    colors: ["red", "black", "white"],
+    available: true
+  }
 
-<span style="color: #000000; font-weight: bold">];</span>
-</pre>
-            </div>
+];</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">في الكود اعلاة قمت بعمل مصفوفة وبدأخلها object لنقوم الأن بإضافة object اخر:</strong></p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #204a87; font-weight: bold">var</span> <span style="color: #000000">products</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">[</span>
+            <pre>
+<code>var products = [
 
-    <span style="color: #000000; font-weight: bold">{</span>
-      <span style="color: #000000">name</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">"iphone"</span><span style="color: #000000; font-weight: bold">,</span>
-      <span style="color: #000000">price</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1200</span><span style="color: #000000; font-weight: bold">,</span>
-      <span style="color: #000000">colors</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000; font-weight: bold">[</span><span style="color: #4e9a06">"red"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">"black"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">"white"</span><span style="color: #000000; font-weight: bold">],</span>
-      <span style="color: #000000">available</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">true</span>
-    <span style="color: #000000; font-weight: bold">},</span>
+  {
+    name: "iphone",
+    price: 1200,
+    colors: ["red", "black", "white"],
+    available: true
+  },
 
-    <span style="color: #000000; font-weight: bold">{</span>
-      <span style="color: #000000">name</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #4e9a06">"canon camera"</span><span style="color: #000000; font-weight: bold">,</span>
-      <span style="color: #000000">price</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #0000cf; font-weight: bold">1000</span><span style="color: #000000; font-weight: bold">,</span>
-      <span style="color: #000000">colors</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000; font-weight: bold">[</span><span style="color: #4e9a06">"black"</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">"gray"</span><span style="color: #000000; font-weight: bold">],</span>
-      <span style="color: #000000">available</span> <span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #204a87; font-weight: bold">false</span>
-    <span style="color: #000000; font-weight: bold">}</span>
+  {
+    name: "canon camera",
+    price: 1000,
+    colors: ["black", "gray"],
+    available: false
+  }
 
-<span style="color: #000000; font-weight: bold">];</span>
-</pre>
-            </div>
+];</code>
+            </pre>
             <p dir="rtl">الأن بكل بساطة يمكنك الوصول لاي عنصر بدأخل أي object داخل هذه الـ array لنبدأ حبة حبة كالتالي:</p>
             <p dir="rtl"><strong dir="rtl">كأي مصفوفة عادية لدينا عنصرين objects بداخل هذه المصفوفة كالتالي:</strong><br>
-               <img src="../../images/javascript/15/12.png" alt="image" class="image">
+               <img src="{% static '/images/javascript/15/12.png'%}" alt="image" class="image">
             </p>
             <p dir="rtl">بما يعني أنه اذا اردنا الوصول للـ object الأول فنقوم بتحديد الـ Index الخاص بالمصفوفة كالتالي:</p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">products</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">];</span>
-</pre>
-            </div>
+            <pre>
+<code>products[0];</code>
+            </pre>
             <p dir="rtl">الأن لنفترض بأنني أريد أن أطبع إسم المنتج الذي في الـ object الأول, سنقوم كما شرحنا في السابق بإستخدام احد الطريقتين:<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="../../images/javascript/15/13.png" alt="image" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="image.png" rel="nofollow noopener" dir="ltr"><img src="{% static '/images/javascript/15/13.png'%}" alt="image" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">إما هكذا:</strong></p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">products</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">][</span><span style="color: #4e9a06">"name"</span><span style="color: #000000; font-weight: bold">];</span>
-</pre>
-            </div>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">products</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">].</span><span style="color: #000000">name</span><span style="color: #000000; font-weight: bold">;</span>
-</pre>
-            </div>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">products</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">].</span><span style="color: #000000">name</span><span style="color: #000000; font-weight: bold">;</span>
-</pre>
-            </div>
+            <pre>
+<code>products[0]["name"];</code>
+            </pre>
+            <p dir="rtl"><strong dir="rtl">أو:</strong></p>
+            <pre>
+<code>products[0].name;</code>
+            </pre>
             <p dir="rtl">الأمر بهذه البساطة. أريد منكم أن تقوموا بطباعه كل العناصر التي بدأخل المصفوفة بإستخدام حلقة for <strong dir="rtl">هل بإمكانكم القيام بذلك ؟</strong></p>
             <hr>
             <h2 dir="rtl">الـ JSON و الـ Ajax</h2>
             <p dir="rtl">بما أن الـ Objects تتيح لنا هذه الطريقة الرائعة لتخزين العديد من البيانات وتسمح لنا بالوصول إليها بهذه السهولة فقد تم إشتقاق منها صيغة كلغة لتبادل البيانات على الإنترنت بإسم (JSON) حيث تقوم بتمثيل البيانات بطريقة مرتبة كنصوص ومن ثم نستطيع تبادل هذه البيانات مع السيرفر او مع لغات أخرى فالـ JSON نستطيع القول بأنها وسيط بين اللغات وتستطيع اللغات الأخرى فهمها وإستخلاص البيانات منها.</p>
             <p dir="rtl">الـ JSON تستخدم بشكل كبير مع تقنية Ajax إن كان قد سبق وان سمعت بها حيث تقوم الـ Ajax بعمل تبادل للبيانات بين السيرفر والمتصفح ما يجعل الموقع لدية القدرة على جلب بيانات دون الحاجة لعمل تحديث للصفحة على سبيل المثال:</p>
             <p dir="rtl">هل لاحظت التقنية المستخدمة في الموقع عند كتابة أحدهم لتعليق يظهر بأنه يقوم بكتابة تعليق ومن ثم يتم إضافة التعليق للصفحة دون أن يطلب منكم ان تقوم بتحديث الصفحة او كيف أن التغييرات تتم مباشرة عند تعديلك لموضوع بمجرد ضغط حفظ دون إعادة تحميل الصفحة<br></p>
-            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="comment.gif" rel="nofollow noopener" dir="ltr"><img src="../../images/javascript/15/15.gif" alt="comment" class="image"></a></div>
+            <div class="lightbox-wrapper" dir="ltr"><a class="lightbox"   title="comment.gif" rel="nofollow noopener" dir="ltr"><img src="{% static '/images/javascript/15/15.gif'%}" alt="comment" class="image"></a></div>
             <p></p>
             <p dir="rtl"><strong dir="rtl">مثال لمستند JSON:</strong></p>
-            <div class="code">
-               <pre style="margin: 0; line-height: 125%"><span style="color: #000000">myObj</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">{</span>
-    <span style="color: #4e9a06">"name"</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #4e9a06">"John"</span><span style="color: #000000; font-weight: bold">,</span>
-    <span style="color: #4e9a06">"age"</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #0000cf; font-weight: bold">30</span><span style="color: #000000; font-weight: bold">,</span>
-    <span style="color: #4e9a06">"cars"</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000; font-weight: bold">[</span>
-        <span style="color: #4e9a06">"car1"</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #4e9a06">"Ford"</span><span style="color: #000000; font-weight: bold">,</span>
-        <span style="color: #4e9a06">"car2"</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #4e9a06">"BMW"</span><span style="color: #000000; font-weight: bold">,</span>
-        <span style="color: #4e9a06">"car3"</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #4e9a06">"Fiat"</span>
-     <span style="color: #000000; font-weight: bold">]</span>
- <span style="color: #000000; font-weight: bold">}</span>
-</pre>
-            </div>
+            <pre>
+<code>myObj = {
+  "name": "John",
+  "age": 30,
+  "cars": [
+    "car1": "Ford",
+    "car2": "BMW",
+    "car3": "Fiat"
+  ]
+}</code>
+            </pre>
             <p dir="rtl"><strong dir="rtl">قارن بين ما كتبناه سابقاً وبين هذه الكود</strong></p>
             <p dir="rtl">أريد منك فقط أن تعرف هذه التقنيات في الوقت الحالي فلا تقوم بتشتيت نفسك, أولاً إتقن الاساسيات ومن ثم تعمق في هذه التقنيات وإن شاء الله سنستمر في دروس و ورش عمل مستقبلية ونخوض في هذه التقنيات مع بعض.</p>
             <hr>

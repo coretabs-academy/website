@@ -61,4 +61,30 @@ $(function() {
             $list.hide();
         });
     });
+	
+	/*==========================
+	Home page
+	============================*/
+	
+	/*Signup button*/
+	$('#signup').click(function() {
+			   
+		var regText = "تسجيل";
+		var closeText = "إغلاق";
+		var text = $(".signup-toggle").is(':visible') ? regText : closeText;
+		$("#signup").text(text);
+		$('.signup-toggle').slideToggle(400);
+			   
+	});
+	
+	/*Inputs text direction depending on language*/
+	$('.input-dir input[type=text]').on('keyup',function (){
+		if($(this).val().charCodeAt(0) < 200){
+			$(this).css('direction','ltr');
+		}else{
+			$(this).css('direction','rtl');
+		}							   
+	});
+			   
+	
 });

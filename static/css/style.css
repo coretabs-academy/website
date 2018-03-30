@@ -11,11 +11,9 @@ html {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	scroll-behavior: smooth;
+
 }
 
-html {
-	overflow-x: hidden;
-}
 
 *,
 *::before,
@@ -71,8 +69,7 @@ body {
 	font-family: 'Cairo', sans-serif;
 	color: rgb(34, 34, 34);
 	direction: rtl;
-	position: relative;
-	z-index: -100;
+
 }
 
 li {
@@ -106,6 +103,7 @@ Navbar Style
 	display: -ms-flexbox;
 	display: flex;
 	top: 0;
+	z-index: 999999;
 }
 
 .navbar-brand {
@@ -137,7 +135,7 @@ Navbar Style
 
 @media screen and (max-width:380px) {
 	.navbar-brand {
-		background: red;
+		
 		position: absolute;
 		-ms-flex-item-align: center;
 		-ms-grid-row-align: center;
@@ -147,7 +145,7 @@ Navbar Style
 		min-width: 100px;
 	}
 	.navbar-brand div {
-		font-size: 1rem;
+		
 		padding: 3px 30px;
 	}
 }
@@ -375,7 +373,7 @@ Container Style
 	margin: auto;
 	position: relative;
 	top: 90px;
-	z-index: -1;
+	z-index: 0;
 	padding-right: 300px;
 	min-width: 1000px;
 	line-height: 40px;
@@ -516,7 +514,7 @@ background-image Style
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
-	width: 100vw;
+	width: 100%;
 	height: 100vh;
 	color: white;
 	display: -webkit-box;
@@ -630,7 +628,7 @@ Main Style
 	-ms-flex-align: center;
 	align-items: center;
 	position: relative;
-	z-index: -50;
+	z-index: 0;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -822,7 +820,9 @@ Main Style
 .beauty-box .box-link {
 	width: 100%;
 	height: 100%;
+	display: block;
 	position: absolute;
+	z-index: 9999;
 }
 
 .beauty-box hr {
@@ -856,10 +856,9 @@ Main Style
 		height: 100%;
 		width: 100%;
 	}
-	.beauty-box .project .courses_image img {
+	.beauty-box .courses_image img {
 		border-radius: 50%;
-		width: 200px;
-		height: 200px;
+		height: 100%; 
 	}
 	.beauty-box .text {
 		padding-bottom: 50px;
@@ -913,6 +912,7 @@ Main Style
 }
 
 
+
 /*=====================================
 about_us Style
 =======================================*/
@@ -922,7 +922,7 @@ about_us Style
 	width: 100%;
 	padding: 60px 0;
 	position: relative;
-	z-index: -2;
+	z-index: 0;
 }
 
 .about h1 {
@@ -981,12 +981,20 @@ Container Links Style
 	position: relative;
 	display: block;
 	width: 100%;
-	padding: 20px 30px 20px 0;
+	padding: 20px 50px 20px 0;
+	box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+	background: #fff;
+	margin: 20px 0;
+	border-radius: 5px;
+	transition: all 0.3s;
+}
 
+.container.links {
+	padding-right: 0px;
 }
 
 .container.links p a:hover {
-	text-decoration: underline;
+	box-shadow: 2px 3px 3px rgba(0,0,0,0.1);
 }
 
 .container.links p a:active {
@@ -1000,7 +1008,7 @@ Container Links Style
 	height: 15px;
 	position: absolute;
 	top: 34px;
-	right: 0px;
+	right: 20px;
 	border-radius: 50%;
 	-webkit-transition: .5s ease;
 	-o-transition: .5s ease;
@@ -1014,12 +1022,13 @@ Container Links Style
 	border-radius: 3px;
 }
 
-.container.links p {
-
-	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+.links h1{
+	margin-bottom: 30px;
 }
 
-
+.catalog-page{
+	background: rgb(239, 235, 233);
+}
 /*=====================================
 Footer Style
 =======================================*/
@@ -1272,4 +1281,203 @@ inner nav Style
 	margin-right: 20px;
 	text-shadow: 0px 2px 0px #2b0a65;
 	
+}
+/*=====================================
+login-toggle Style
+=======================================*/
+.home-menu{
+	display: flex;
+	width: auto;
+}
+.home-menu a{
+	text-decoration:none; 
+	font-weight: bold;
+}
+.signup-toggle{
+	width: 100%;
+	height: auto;
+	background: #3d1292;
+	clear: both;
+	display: none;
+	padding: 30px 20px;
+	box-shadow: inset 0px -1px 5px rgba(0,0,0,0.3);
+	position: relative;
+}
+#signup{
+	display: block;
+	height: auto;
+	background: #f43b3b; 
+    background: -webkit-linear-gradient(left, #ec008c, #fc6767);
+    background: -o-linear-gradient(left, #ec008c, #fc6767);
+    background: linear-gradient(to right, #ec008c, #fc6767);
+	padding: 5px 15px;
+	min-width: 140px;
+	color: #fff;
+	border-radius: 100px;
+ 	text-align: center;
+  	transition: 0.3s;
+  	background-size: 150% auto;
+	margin-top: 10px;
+}
+#signup:hover {
+  background-position: right center;
+}
+
+#forum-button{
+	display: block;
+	height: auto;
+	border: 2px solid #fff;
+	padding: 2px 15px;
+	min-width: 140px;
+	color: #fff;
+	border-radius: 100px;
+ 	text-align: center;
+  	transition: 0.3s;
+  	background-size: 150% auto;
+	margin: 10px 10px 0 0;
+}
+#forum-button:hover{
+	background: rgba(0,0,0,0.2);
+}
+.signup-form {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+.signup-form form{
+	display: flex !important;
+	flex-direction: row;
+}
+
+.signup-form input[type=text]{
+	padding: 5px 0px 10px 0px;
+	margin: 7px 10px;
+	font-size: 15px;
+	border: none;
+	font-family: Cairo;
+	background: none;
+	color: #fff;
+	border-bottom: 2px solid #fff;
+	transition: 0.3s;
+	min-width: 200px;
+}
+
+.signup-form input[type=text]:focus{
+	border-bottom: 2px solid #8fb0ff; 
+}
+
+.signup-form input[type=text]::placeholder{
+	transition: 0.4s;
+	color: #fff;
+	opacity: 0.8;
+}
+.signup-form input[type=text]:-ms-input-placeholder 
+{
+	color: #fff;
+	filter: alpha(opacity=80);
+}
+.signup-form input[type=text]::-ms-input-placeholder 
+{
+	color: #fff;
+	filter: alpha(opacity=80);
+}
+.signup-form input[type=text]:focus::placeholder{
+	opacity: 0.4;
+}
+
+.signup-form button{
+	padding: 6px 14px 10px 12px;
+	height: 80%;
+	background: #f43b3b; 
+    background: -webkit-linear-gradient(left, #ec008c, #fc6767);
+    background: -o-linear-gradient(left, #ec008c, #fc6767);
+    background: linear-gradient(to right, #ec008c, #fc6767);
+	color: #fff;
+	border-radius: 4px;
+	border: none;
+	font-size: 20px;
+	cursor: pointer;
+	margin: 6px 15px 0 0;
+	transition: 0.3s;
+	background-size: 120% auto;
+	
+}
+.signup-form button:hover{
+ 	background-position: right center;
+}
+.signup-toggle .errors ul{
+	text-align: center;
+	margin-top: 25px;
+}
+.signup-toggle .errors li{
+	width: 70%;
+	list-style: none;
+	color: #fff;
+	margin: 15px auto 0;
+	padding: 5px;
+	background: #5525b4;
+	border-radius: 4px;
+	
+}
+
+@media screen and (max-width:768px) {
+	.signup-toggle{
+		text-align: center;
+	}
+	.signup-form form{
+		flex-direction: column;
+		width: 100%;
+		justify-content: center;
+	}
+	.signup-form input[type=text]{
+		width: 90%;
+		margin: 10px 0;
+	}
+	.signup-form button{
+		padding: 12px 10px;
+		width: 90%;
+		margin: 15px 0;
+	}
+	.signup-toggle .errors li{
+		width: 90%;
+		margin: 10px auto 0;
+	}
+	.signup-toggle .errors ul{
+		margin-top: 15px;
+	}
+	.home .navbar-brand{
+		left: 0;
+		font-size: 25px;
+		padding-top: 15px;
+	}
+	.background-image a.link{
+		display: none;
+	}
+}
+
+@media screen and (max-width:540px) {
+	
+	.home-menu{
+		flex-direction: column;
+	}
+	.home-menu a{
+		margin-bottom: 15px;
+		
+	}
+	.home .navbar-brand{
+		font-size: 25px;
+	}
+	#forum-button,
+	#signup
+	{
+		padding: 8px 5px;
+		font-size: 20px !important;
+	}
+	.background-image h1{
+		margin-top: calc(100vh - 400px);
+	}
+	.background-image p{
+		
+	}
 }
