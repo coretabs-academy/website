@@ -29,7 +29,7 @@
                   أغلق <i class="fas fa-times"></i>
                </div>
                <a href="{% url 'home' %}">الرئيسية</a>
-               <a href="{% url 'category' category='html_css' %}">HTML & CSS</a>
+               <a href="{% url 'category' category='html_css' %}">HTML &amp; CSS</a>
                <a href="{% url 'category' category='javascript' %}">JavaScript</a>
                <a href="{% url 'category' category='git' %}">Git</a>
                <a href="{% url 'category' category='projects' %}">المشاريع</a>
@@ -38,13 +38,13 @@
       </div>
       <div id="git" class="container links">
          <h1>دروس GIT</h1>
-         <p><a href="{% url 'tutorial' category='git' id=1 %}">[الدرس الأول : المهمة الأولى] مدخل Git & GitHub</a></p>
-         <p><a href="{% url 'tutorial' category='git' id=2 %}">[الثاني] First & Second Lessons Recap</a></p>
-         <p><a href="{% url 'tutorial' category='git' id=3 %}">[الدرس الثالث] Cloning projects</a></p>
-         <p><a href="{% url 'tutorial' category='git' id=4 %}">[الدرس الرابع] Pull &amp; Conflicts</a></p>
-         <p><a href="{% url 'tutorial' category='git' id=5 %}">[الدرس الخامس] Flags &amp; Ignoring Files</a></p>
-         <p><a href="{% url 'tutorial' category='git' id=6 %}">[الدرس السادس] Undoing Changes</a></p>
-         <p><a href="{% url 'tutorial' category='git' id=7 %}">[الدرس السابع] Rewriting History</a></p>
+         <p><a href="{% url 'tutorial' category='git' id=1 %}">[1] مدخل Git &amp; GitHub</a></p>
+         <p><a href="{% url 'tutorial' category='git' id=2 %}">[2] First &amp; Second Lessons Recap</a></p>
+         <p><a href="{% url 'tutorial' category='git' id=3 %}">[3] Cloning projects</a></p>
+         <p><a href="{% url 'tutorial' category='git' id=4 %}">[4] Pull &amp; Conflicts</a></p>
+         <p><a href="{% url 'tutorial' category='git' id=5 %}">[5] Flags &amp; Ignoring Files</a></p>
+         <p><a href="{% url 'tutorial' category='git' id=6 %}">[6] Undoing Changes</a></p>
+         <p><a href="{% url 'tutorial' category='git' id=7 %}">[7] Rewriting History</a></p>
       </div>
       <script src="{% static 'js/main.js' %}"></script>
    </body>
