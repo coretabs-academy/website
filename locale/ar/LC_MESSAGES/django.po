@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-25 23:21+0200\n"
+"POT-Creation-Date: 2018-03-30 15:21+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,244 +19,25 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: coretabs/settings.py:117
+#: coretabs/settings.py:115
 msgid "Arabic"
 msgstr "العربية"
 
-#: coretabs/settings.py:118
-msgid "English"
-msgstr "الإنجليزية"
-
-#: templates/account/email/email_confirmation_message.txt:1
-#, python-format
-msgid ""
-"A user on %(site_name)s has created an account using this email address.\n"
-"\n"
-"To confirm this email address, go to %(activate_url)s\n"
-"\n"
-"If you did not sign up for this site, you can ignore this message.\n"
-msgstr ""
-
-#: templates/account/email/email_confirmation_subject.txt:1
-#, python-format
-msgid "Confirm email address for %(site_name)s"
-msgstr ""
-
-#: templates/account/email/invite_user.txt:1
-#, python-format
-msgid ""
-"You have been invited to sign up at %(name)s.\n"
-"\n"
-"%(signup_url)s\n"
-msgstr ""
-
-#: templates/account/email/invite_user_subject.txt:1
-#, python-format
-msgid "Create an account on %(name)s"
-msgstr ""
-
-#: templates/account/email/password_change.txt:1
-#, python-format
-msgid ""
-"This is the email notification to confirm your password has been changed on "
-"%(now)s."
-msgstr ""
-
-#: templates/account/email/password_change_subject.txt:1
-msgid "Change password email notification"
-msgstr ""
-
-#: templates/account/email/password_reset.txt:1
-#, python-format
-msgid ""
-"You're receiving this email because you or someone else has requested a "
-"password for your user account at %(site_name)s.\n"
-"It can be safely ignored if you did not request a password reset. Click the "
-"link below to reset your password.\n"
-"\n"
-"%(password_reset_url)s\n"
-msgstr ""
-
-#: templates/account/email/password_reset_subject.txt:1
-#, python-format
-msgid "[%(site_name)s] Password reset"
-msgstr ""
-
-#: templates/account/email_confirmed.html:6
-msgid "Email confirmed"
-msgstr ""
-
-#: templates/frontend/index.html:18 templates/fullstack/index.html:17
-#: templates/home.html:19
+#: templates/_header.html:4 templates/frontend/index.html:26
+#: templates/fullstack/index.html:19
 msgid "Academy"
 msgstr "Coretabs"
 
-#: templates/frontend/index.html:22
-msgid "Front End Web Development"
-msgstr "تطوير صفحات المواقع الإلكترونية"
-
-#: templates/frontend/index.html:24 templates/fullstack/index.html:34
-msgid ""
-"\n"
-"\t\t\tFamiliarity with programming is indispensable today. Learning "
-"programming is one of the most rich and useful things you can do.\n"
-"\t\t\t"
-msgstr ""
-"\n"
-"\t\t\tإن الإلمام بمجال البرمجة، أمرٌ لا غنى عنه في أيامنا هذه. وإن تعلُّم "
-"البرمجة هو من أكثر الأمور الغنية والمفيدة التي يمكنك القيام بها.\n"
-"\t\t\t"
-
-#: templates/frontend/index.html:28 templates/fullstack/index.html:38
-msgid "Lessons"
-msgstr "الدروس"
-
-#: templates/frontend/index.html:35 templates/fullstack/index.html:44
-msgid "Track Lessons"
-msgstr "دروس المسار"
-
-#: templates/frontend/index.html:42
-msgid "HTML & CSS Lessons"
-msgstr "دروس HTML و CSS"
-
-#: templates/frontend/index.html:44
-msgid ""
-"\n"
-"                        you don't need any prior knowledge of HTML to start "
-"this unit, but you need at least some basic knowledge of how to use computer "
-"and web browser\n"
-"                      "
-msgstr ""
-"\n"
-"                        لا تحتاج لأي معرفة مسبقة في لغة ترميز النص الفائق "
-"للبدئ في هذه الوحدة ولكن يجب على الأقل أن تملك معرفة مبدئية حول استخدام "
-"الحواسيب،  واستخدام متصفح الويب\n"
-"                      "
-
-#: templates/frontend/index.html:48 templates/frontend/index.html:64
-#: templates/frontend/index.html:80 templates/frontend/index.html:96
-msgid "Start"
-msgstr "إبدأ"
-
-#: templates/frontend/index.html:57
-msgid "JavaScript Lessons"
-msgstr "دروس JavaScript"
-
-#: templates/frontend/index.html:59
-msgid ""
-"\n"
-"                        Javascript is an object oriented and multi-platform "
-"programming language. Is a small and lightweight language. Within the host "
-"environment (for example, a web browser), using Javascript you can make your "
-"application interactive.\n"
-"                      "
-msgstr ""
-"\n"
-"                        الجافاسكريبت هي لغة برمجة كائنية التوجة ومتعددة "
-"المنصات. هي لغة صغيرة وخفيفة الوزن. داخل بيئة المضيف (على سبيل المثال، متصفح "
-"ويب), بإستخدام الجافاسكربت تستطيع جعل تطبيقك تفاعلي.\n"
-"                      "
-
-#: templates/frontend/index.html:74
-msgid "Git Lessons"
-msgstr "دروس Git"
-
-#: templates/frontend/index.html:76
-msgid ""
-"\n"
-"                        Git is a copy management software, or as it is "
-"literally called (version management system), using Git you can record "
-"changes to your application and then refer to it at any time and also helps "
-"you to cooperate with other programmers to work on projects.\n"
-"                      "
-msgstr ""
-"\n"
-" Git هو برنامج لإدارة النسخ أو كما                        يطلق عليه حرفياً "
-"(نظام إدارة الإصدارات), بإستخدام الـ Git تستطيع تسجيل التغييرات التي تقوم "
-"بها على تطبيقك ومن ثم الرجوع إليها في أي وقت وكذلك يساعدك على التعاون مع "
-"مبرمجين أخرين في العمل على المشاريع.\n"
-"                      "
-
-#: templates/frontend/index.html:90
-msgid "Projects"
-msgstr "المشاريع"
-
-#: templates/frontend/index.html:92
-msgid ""
-"\n"
-"                        We all know that projects are one of the most "
-"important things that enable us to develop our expertise in various fields "
-"so let us apply what we learned through working on real projects.\n"
-"                      "
-msgstr ""
-"\n"
-"                        كلنا نعلم أن المشاريع هي من أهم الأشياء التي تمكننا "
-"من تطوير خبراتنا في شتى المجالات فلنقم بتطبيق ما تعلمناه من خلال العمل على "
-"مشاريع حقيقة.\n"
-"                      "
-
-#: templates/frontend/index.html:104 templates/home.html:129
-msgid "About website"
-msgstr "عن الموقع"
-
-#: templates/frontend/index.html:106 templates/home.html:131
-msgid ""
-"\n"
-"                This site has been placed as a reference to the lessons and "
-"workshops that were developed in the initiative of the million arabic "
-"coders , made sure that the lessons are simplified and targeted mainly those "
-"who have zero experience in this area if you not part of the program million "
-"arabic coders  You can take advantage of these lessons and to put Your "
-"Questions or Inquiries Join our Facebook page.\n"
-"             "
-msgstr ""
-"\n"
-"هذا الموقع تم وضعة كمرجع لدروس و ورش العمل التي تم وضعها في مبادرة المليون "
-"مبرمج عربي, حرصت على أن تكون الدروس مبسطة وتستهدف بشكل رئيسي من لديهم خبرة "
-"صفر في هذا المجال لهذا إن لم تكن جزء من برنامج المليون مبرمج عربي فبإمكانك "
-"الإستفادة من هذه الدروس ولوضع أسئلتك أو إستفساراتك قم بالإنضمام لقروب الفيس "
-"بوك الخاص بنا"
-
-#: templates/fullstack/index.html:32
-msgid "Full Stack Web Development"
-msgstr "تطوير صفحات الويب الشامل"
-
-#: templates/home.html:28
-msgid "Logout"
-msgstr "خروج"
-
-#: templates/home.html:32
-msgid "Account"
-msgstr "الحساب"
-
-#: templates/home.html:36 templates/home.html:48
+#: templates/_header.html:12
 msgid "Signup"
 msgstr "تسجيل"
 
-#: templates/home.html:53 templates/home.html:74
-msgid "Login"
-msgstr "دخول"
+#: templates/_header.html:16
+msgid "Forums"
+msgstr "المنتدى"
 
-#: templates/home.html:77
-msgid "Forgot Your Password?"
-msgstr "نسيت كلمة المرور؟"
-
-#: templates/home.html:99
-msgid "Web Development"
-msgstr "تطوير الويب"
-
-#: templates/home.html:105 templates/home.html:112
-msgid "Courses"
-msgstr "الدروس"
-
-#: templates/home.html:117
-msgid "Front End"
-msgstr "تطوير واجهات المواقع"
-
-#: templates/home.html:123
-msgid "Full Stack"
-msgstr "تطوير الويب الشامل"
-
+#: templates/account/email/thanks_message.txt:1
+#, python-format
 msgid ""
 "Dear %(user)s\n"
 "Thank you for registering.\n"
@@ -274,17 +55,182 @@ msgstr ""
 "\n"
 "فريق Coretabs."
 
+#: templates/account/email/thanks_subject.txt:1 templates/home.html:4
 msgid "Coretabs Academy"
 msgstr "أكاديمية Coretabs"
 
-msgid "english fullstack description"
-msgstr "هذا الجزء مخصص لدروس تطوير الويب الشامل, باعتبارها من أكثر الوظائف طلباً في عالم النت !"
-"سنتعرف من خلاله على مختلف الأجزاء المتعلقة بالمجال ابتداءاً من أساسيات البرمجة باستعمال لغة بايثون, وصولاً إلى إنشاء موقعنا الخاص و مشاركته مع الآخرين. "
-"لإكتشاف المزيد انطلق فوراً مع الدروس."
+#: templates/frontend/index.html:30 templates/home.html:51
+msgid "Front End"
+msgstr "تطوير واجهات المواقع"
 
+#: templates/frontend/index.html:32
 msgid "english frontend description"
-msgstr "هذا الجزء مخصص لدروس تطوير واجهات المواقع, باعتبارها من أكثر الوظائف طلباً في عالم النت !"
-"خلال دروس هذا المسار ستتعلم بشكل سلس ومختصر العديد من المهارات التي ستصبح مستعد لتوظيفها على مشاريع حقيقة فما ستجدة في هذه القائمة هي دروس متعلقة بالمجال إبتداءاً من الأساسيات و وصولاً لورش عمل تطبيقية سنقوم خلالها بعمل مواقع وتطبيقات متقدمة بطريقة سهلة وممتعة."
+msgstr ""
+"هذا الجزء مخصص لدروس تطوير واجهات المواقع, باعتبارها من أكثر الوظائف طلباً في "
+"عالم النت !خلال دروس هذا المسار ستتعلم بشكل سلس ومختصر العديد من المهارات "
+"التي ستصبح مستعد لتوظيفها على مشاريع حقيقة فما ستجدة في هذه القائمة هي دروس "
+"متعلقة بالمجال إبتداءاً من الأساسيات و وصولاً لورش عمل تطبيقية سنقوم خلالها "
+"بعمل مواقع وتطبيقات متقدمة بطريقة سهلة وممتعة."
 
-msgid "Forums"
-msgstr "المنتدى"
+#: templates/frontend/index.html:46
+msgid "HTML & CSS Lessons"
+msgstr "دروس HTML و CSS"
+
+#: templates/frontend/index.html:48
+msgid ""
+"\n"
+"                        you don't need any prior knowledge of HTML to start "
+"this unit, but you need at least some basic knowledge of how to use computer "
+"and web browser\n"
+"                      "
+msgstr ""
+"\n"
+"                        لا تحتاج لأي معرفة مسبقة في لغة ترميز النص الفائق "
+"للبدئ في هذه الوحدة ولكن يجب على الأقل أن تملك معرفة مبدئية حول استخدام "
+"الحواسيب،  واستخدام متصفح الويب\n"
+"                      "
+
+#: templates/frontend/index.html:52 templates/frontend/index.html:68
+#: templates/frontend/index.html:84 templates/frontend/index.html:100
+msgid "Start"
+msgstr "إبدأ"
+
+#: templates/frontend/index.html:61
+msgid "JavaScript Lessons"
+msgstr "دروس JavaScript"
+
+#: templates/frontend/index.html:63
+msgid ""
+"\n"
+"                        Javascript is an object oriented and multi-platform "
+"programming language. Is a small and lightweight language. Within the host "
+"environment (for example, a web browser), using Javascript you can make your "
+"application interactive.\n"
+"                      "
+msgstr ""
+"\n"
+"                        الجافاسكريبت هي لغة برمجة كائنية التوجة ومتعددة "
+"المنصات. هي لغة صغيرة وخفيفة الوزن. داخل بيئة المضيف (على سبيل المثال، متصفح "
+"ويب), بإستخدام الجافاسكربت تستطيع جعل تطبيقك تفاعلي.\n"
+"                      "
+
+#: templates/frontend/index.html:78
+msgid "Git Lessons"
+msgstr "دروس Git"
+
+#: templates/frontend/index.html:80
+msgid ""
+"\n"
+"                        Git is a copy management software, or as it is "
+"literally called (version management system), using Git you can record "
+"changes to your application and then refer to it at any time and also helps "
+"you to cooperate with other programmers to work on projects.\n"
+"                      "
+msgstr ""
+"\n"
+" Git هو برنامج لإدارة النسخ أو كما                        يطلق عليه حرفياً "
+"(نظام إدارة الإصدارات), بإستخدام الـ Git تستطيع تسجيل التغييرات التي تقوم "
+"بها على تطبيقك ومن ثم الرجوع إليها في أي وقت وكذلك يساعدك على التعاون مع "
+"مبرمجين أخرين في العمل على المشاريع.\n"
+"                      "
+
+#: templates/frontend/index.html:94
+msgid "Projects"
+msgstr "المشاريع"
+
+#: templates/frontend/index.html:96
+msgid ""
+"\n"
+"                        We all know that projects are one of the most "
+"important things that enable us to develop our expertise in various fields "
+"so let us apply what we learned through working on real projects.\n"
+"                      "
+msgstr ""
+"\n"
+"                        كلنا نعلم أن المشاريع هي من أهم الأشياء التي تمكننا "
+"من تطوير خبراتنا في شتى المجالات فلنقم بتطبيق ما تعلمناه من خلال العمل على "
+"مشاريع حقيقة.\n"
+"                      "
+
+#: templates/fullstack/index.html:4
+#, fuzzy
+#| msgid "Full Stack"
+msgid "Full Stack Lessons"
+msgstr "تطوير الويب الشامل"
+
+#: templates/fullstack/index.html:34 templates/home.html:57
+msgid "Full Stack"
+msgstr "تطوير الويب الشامل"
+
+#: templates/fullstack/index.html:36
+msgid "english fullstack description"
+msgstr ""
+"هذا الجزء مخصص لدروس تطوير الويب الشامل, باعتبارها من أكثر الوظائف طلباً في "
+"عالم النت !سنتعرف من خلاله على مختلف الأجزاء المتعلقة بالمجال ابتداءاً من "
+"أساسيات البرمجة باستعمال لغة بايثون, وصولاً إلى إنشاء موقعنا الخاص و مشاركته "
+"مع الآخرين. لإكتشاف المزيد انطلق فوراً مع الدروس."
+
+#: templates/home.html:31
+msgid "Web Development"
+msgstr "تطوير الويب"
+
+#: templates/home.html:33
+msgid ""
+"Familiarity with programming is indispensable today. Learning programming is "
+"one of the most rich and useful things you can do."
+msgstr ""
+"إن الإلمام بمجال البرمجة، أمرٌ لا غنى عنه في أيامنا هذه. وإن تعلُّم "
+"البرمجة هو من أكثر الأمور الغنية والمفيدة التي يمكنك القيام بها."
+
+#: templates/home.html:35 templates/home.html:46
+msgid "Courses"
+msgstr "الدروس"
+
+#: templates/home.html:64
+msgid "About website"
+msgstr "عن الموقع"
+
+#: templates/home.html:66
+msgid ""
+"\n"
+"                This site has been placed as a reference to the lessons and "
+"workshops that were developed in the initiative of the million arabic "
+"coders , made sure that the lessons are simplified and targeted mainly those "
+"who have zero experience in this area if you not part of the program million "
+"arabic coders  You can take advantage of these lessons and to put Your "
+"Questions or Inquiries Join our Facebook page.\n"
+"             "
+msgstr ""
+"\n"
+"هذا الموقع تم وضعة كمرجع لدروس و ورش العمل التي تم وضعها في مبادرة المليون "
+"مبرمج عربي, حرصت على أن تكون الدروس مبسطة وتستهدف بشكل رئيسي من لديهم خبرة "
+"صفر في هذا المجال لهذا إن لم تكن جزء من برنامج المليون مبرمج عربي فبإمكانك "
+"الإستفادة من هذه الدروس ولوضع أسئلتك أو إستفساراتك قم بالإنضمام لقروب الفيس "
+"بوك الخاص بنا"
+
+#~ msgid "English"
+#~ msgstr "الإنجليزية"
+
+#~ msgid "Front End Web Development"
+#~ msgstr "تطوير صفحات المواقع الإلكترونية"
+
+#~ msgid "Lessons"
+#~ msgstr "الدروس"
+
+#~ msgid "Track Lessons"
+#~ msgstr "دروس المسار"
+
+#~ msgid "Full Stack Web Development"
+#~ msgstr "تطوير صفحات الويب الشامل"
+
+#~ msgid "Logout"
+#~ msgstr "خروج"
+
+#~ msgid "Account"
+#~ msgstr "الحساب"
+
+#~ msgid "Login"
+#~ msgstr "دخول"
+
+#~ msgid "Forgot Your Password?"
+#~ msgstr "نسيت كلمة المرور؟"
