@@ -76,29 +76,6 @@
 {% block more_script %}
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-    <script>
-        (function($) {
-		   $('#signup').click(function() {
-			   
-			   	var regText = "تسجيل";
-			   	var closeText = "إغلاق";
-			   	var text = $(".signup-toggle").is(':visible') ? regText : closeText;
-			   	$("#signup").text(text);
-			   	$('.signup-toggle').slideToggle(400);
-			   
-		   	});
-		   
-		   $('.input-dir input[type=text]').on('keyup',function (){
-				if($(this).val().charCodeAt(0) < 200){
-			   		$(this).css('direction','ltr');
-		   		}else{
-					$(this).css('direction','rtl');
-				}							   
-			});
-			   
-		 }(jQuery));
-		   
-    </script>
     <script src="{% static 'js/main.js' %}"></script>
     <script src="{% static 'js/site.js' %}"></script>
 {% endblock %}
