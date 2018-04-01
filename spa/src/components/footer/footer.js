@@ -1,4 +1,4 @@
 export default {
-   name: 'footer',
+   name: 'FooterComponent',
    components: {}
 }

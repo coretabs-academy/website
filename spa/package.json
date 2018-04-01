@@ -1,5 +1,5 @@
 {
-   "name": "academy1",
+   "name": "coretabs",
    "version": "0.1.0",
    "private": true,
    "scripts": {
@@ -8,6 +8,7 @@
       "lint": "vue-cli-service lint"
    },
    "dependencies": {
+      "jquery": "^3.3.1",
       "vue": "^2.5.13",
       "vue-router": "^3.0.1",
       "vuetify": "^1.0.11"

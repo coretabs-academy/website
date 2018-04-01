@@ -1,4 +1,4 @@
 export default {
-   name: 'header',
+   name: 'HeaderComponent',
    components: {}
 }

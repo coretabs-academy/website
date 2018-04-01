@@ -2,8 +2,8 @@
    font-family: 'Material Icons';
    font-style: normal;
    font-weight: 400;
-   src: url('#{$material_design_font}MaterialIcons-Regular.eot');
-   src: local('Material Icons'), local('MaterialIcons-Regular'), url('#{$material_design_font}MaterialIcons-Regular.woff2') format('woff2'), url('#{$material_design_font}MaterialIcons-Regular.woff') format('woff'), url('#{$material_design_font}MaterialIcons-Regular.ttf') format('truetype');
+   src: url('./MaterialIcons-Regular.eot');
+   src: local('Material Icons'), local('MaterialIcons-Regular'), url('./MaterialIcons-Regular.woff2') format('woff2'), url('./MaterialIcons-Regular.woff') format('woff'), url('./MaterialIcons-Regular.ttf') format('truetype');
 }
 
 .material-icons {

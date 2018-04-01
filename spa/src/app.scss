@@ -1,0 +1,26 @@
+@import 'assets/vendor/normalize.min.scss';
+@import 'assets/vendor/fonts/roboto/roboto.min.scss';
+@import 'assets/vendor/fonts/material-design-icons/material-icons.min.scss';
+@import 'assets/styles/scrollbar.scss';
+/*=====================================
+Global Style
+=======================================*/
+* {
+   outline: none;
+}
+
+html {
+   box-sizing: border-box;
+   scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+   box-sizing: inherit;
+}
+
+::selection {
+   color: #ffffff;
+   background: #7f2a90;
+}
