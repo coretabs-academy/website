@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.utils.translation import ugettext_lazy
 from library.utils import get_unique_slug
 
 
@@ -14,8 +14,8 @@ class Lesson(models.Model):
         (QUIZ, 'quiz'),
     )
 
-    title = models.CharField(max_length=60)
-    slug = models.SlugField(max_length=140, unique=True, blank=True)
+    title = models.CharField(max_length=60, )
+    slug = models.SlugField(max_length=140, unique=True, blank=True, allow_unicode=True)
     type = models.CharField(max_length=10, choices=TYPE_CHOICES, default=MARKDOWN)
     url = models.URLField()
 
@@ -30,7 +30,7 @@ class Lesson(models.Model):
 
 class Course(models.Model):
     title = models.CharField(max_length=60)
-    slug = models.SlugField(max_length=140, unique=True, blank=True)
+    slug = models.SlugField(max_length=140, unique=True, blank=True, allow_unicode=True)
     lessons = models.ManyToManyField(Lesson, through='CourseLesson', related_name='courses')
 
     def save(self, *args, **kwargs):
@@ -50,7 +50,7 @@ class CourseLesson(models.Model):
 
 class Track(models.Model):
     title = models.CharField(max_length=60)
-    slug = models.SlugField(max_length=140, unique=True, blank=True)
+    slug = models.SlugField(max_length=140, unique=True, blank=True, allow_unicode=True)
     courses = models.ManyToManyField(Course, through='TrackCourse', related_name='tracks')
 
     def save(self, *args, **kwargs):
