@@ -15,13 +15,13 @@ class Lesson(models.Model):
     )
 
     title = models.CharField(max_length=60)
-    slug = models.SlugField(max_length=140, unique=True)
+    slug = models.SlugField(max_length=140, unique=True, blank=True)
     type = models.CharField(max_length=10, choices=TYPE_CHOICES, default=MARKDOWN)
     url = models.URLField()
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug = get_unique_slug(self, 'name', 'slug')
+            self.slug = get_unique_slug(self, 'title', 'slug')
         super().save()
 
     def __str__(self):
@@ -30,12 +30,12 @@ class Lesson(models.Model):
 
 class Course(models.Model):
     title = models.CharField(max_length=60)
-    slug = models.SlugField(max_length=140, unique=True)
+    slug = models.SlugField(max_length=140, unique=True, blank=True)
     lessons = models.ManyToManyField(Lesson, through='CourseLesson', related_name='courses')
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug = get_unique_slug(self, 'name', 'slug')
+            self.slug = get_unique_slug(self, 'title', 'slug')
         super().save()
 
     def __str__(self):
@@ -50,12 +50,12 @@ class CourseLesson(models.Model):
 
 class Track(models.Model):
     title = models.CharField(max_length=60)
-    slug = models.SlugField(max_length=140, unique=True)
+    slug = models.SlugField(max_length=140, unique=True, blank=True)
     courses = models.ManyToManyField(Course, through='TrackCourse', related_name='tracks')
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug = get_unique_slug(self, 'name', 'slug')
+            self.slug = get_unique_slug(self, 'title', 'slug')
         super().save()
 
     def __str__(self):
