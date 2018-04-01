@@ -1,5 +1,5 @@
 from django.db import models
-from django.utils.translation import ugettext_lazy
+from django.utils.translation import ugettext_lazy as _
 from library.utils import get_unique_slug
 
 
@@ -14,10 +14,13 @@ class Lesson(models.Model):
         (QUIZ, 'quiz'),
     )
 
-    title = models.CharField(max_length=60, )
-    slug = models.SlugField(max_length=140, unique=True, blank=True, allow_unicode=True)
-    type = models.CharField(max_length=10, choices=TYPE_CHOICES, default=MARKDOWN)
-    url = models.URLField()
+    title = models.CharField(max_length=60, verbose_name=_('Title'))
+    slug = models.SlugField(max_length=140, unique=True, blank=True, allow_unicode=True, verbose_name=_('Slug'))
+    type = models.CharField(max_length=10, choices=TYPE_CHOICES, default=MARKDOWN, verbose_name=_('Type'))
+    url = models.URLField(verbose_name=_('URL'))
+
+    class Meta:
+        verbose_name = _('Lesson')
 
     def save(self, *args, **kwargs):
         if not self.slug:
@@ -29,9 +32,12 @@ class Lesson(models.Model):
 
 
 class Course(models.Model):
-    title = models.CharField(max_length=60)
-    slug = models.SlugField(max_length=140, unique=True, blank=True, allow_unicode=True)
-    lessons = models.ManyToManyField(Lesson, through='CourseLesson', related_name='courses')
+    title = models.CharField(max_length=60, verbose_name=_('Title'))
+    slug = models.SlugField(max_length=140, unique=True, blank=True, allow_unicode=True, verbose_name=_('Slug'))
+    lessons = models.ManyToManyField(Lesson, through='CourseLesson', related_name='courses', verbose_name=_('Lessons'))
+
+    class Meta:
+        verbose_name = _('Course')
 
     def save(self, *args, **kwargs):
         if not self.slug:
@@ -43,15 +49,21 @@ class Course(models.Model):
 
 
 class CourseLesson(models.Model):
-    lesson = models.ForeignKey(Lesson, on_delete=models.DO_NOTHING)
-    course = models.ForeignKey(Course, on_delete=models.DO_NOTHING)
-    order = models.IntegerField()
+    lesson = models.ForeignKey(Lesson, on_delete=models.DO_NOTHING, verbose_name=_('Lesson'))
+    course = models.ForeignKey(Course, on_delete=models.DO_NOTHING, verbose_name=_('Course'))
+    order = models.IntegerField(verbose_name=_('Order'))
+
+    class Meta:
+        verbose_name = _('Course and Lesson')
 
 
 class Track(models.Model):
-    title = models.CharField(max_length=60)
-    slug = models.SlugField(max_length=140, unique=True, blank=True, allow_unicode=True)
-    courses = models.ManyToManyField(Course, through='TrackCourse', related_name='tracks')
+    title = models.CharField(max_length=60, verbose_name=_('Title'))
+    slug = models.SlugField(max_length=140, unique=True, blank=True, allow_unicode=True, verbose_name=_('Slug'))
+    courses = models.ManyToManyField(Course, through='TrackCourse', related_name='tracks', verbose_name=_('Courses'))
+
+    class Meta:
+        verbose_name = _('Track')
 
     def save(self, *args, **kwargs):
         if not self.slug:
@@ -63,7 +75,9 @@ class Track(models.Model):
 
 
 class TrackCourse(models.Model):
-    course = models.ForeignKey(Course, on_delete=models.DO_NOTHING)
-    track = models.ForeignKey(Track, on_delete=models.DO_NOTHING)
-    order = models.IntegerField()
+    course = models.ForeignKey(Course, on_delete=models.DO_NOTHING, verbose_name=_('Course'))
+    track = models.ForeignKey(Track, on_delete=models.DO_NOTHING, verbose_name=_('Track'))
+    order = models.IntegerField(verbose_name=_('Order'))
 
+    class Meta:
+        verbose_name = _('Track and Course')
