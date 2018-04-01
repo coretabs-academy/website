@@ -5,5 +5,7 @@ export default {
    components: {
       HeaderComponent,
       FooterComponent
+   },
+   methods: {
    }
 }
