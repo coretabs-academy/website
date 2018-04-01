@@ -21,6 +21,7 @@ class Lesson(models.Model):
 
     class Meta:
         verbose_name = _('Lesson')
+        verbose_name_plural = _('Lessons')
 
     def save(self, *args, **kwargs):
         if not self.slug:
@@ -38,6 +39,7 @@ class Course(models.Model):
 
     class Meta:
         verbose_name = _('Course')
+        verbose_name_plural = _('Courses')
 
     def save(self, *args, **kwargs):
         if not self.slug:
@@ -55,6 +57,7 @@ class CourseLesson(models.Model):
 
     class Meta:
         verbose_name = _('Course and Lesson')
+        verbose_name_plural = _('Courses and Lessons')
 
 
 class Track(models.Model):
@@ -64,6 +67,7 @@ class Track(models.Model):
 
     class Meta:
         verbose_name = _('Track')
+        verbose_name_plural = _('Tracks')
 
     def save(self, *args, **kwargs):
         if not self.slug:
@@ -81,3 +85,4 @@ class TrackCourse(models.Model):
 
     class Meta:
         verbose_name = _('Track and Course')
+        verbose_name_plural = _('Tracks and Courses')
