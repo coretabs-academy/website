@@ -1,6 +1,7 @@
 @import 'assets/vendor/normalize.min.scss';
 @import 'assets/vendor/fonts/roboto/roboto.min.scss';
 @import 'assets/vendor/fonts/material-design-icons/material-icons.min.scss';
+@import 'assets/styles/vars.scss';
 @import 'assets/styles/scrollbar.scss';
 /*=====================================
 Global Style
@@ -10,8 +11,14 @@ Global Style
 }
 
 html {
+   line-height: 1.5;
    box-sizing: border-box;
    scroll-behavior: smooth;
+   font-family: 'Roboto',sans-serif;
+}
+
+html[direction='rtl'] {
+   font-family: 'Cairo', sans-serif;
 }
 
 *,
@@ -23,4 +30,16 @@ html {
 ::selection {
    color: #ffffff;
    background: #7f2a90;
+}
+
+.no-select {
+   user-select: none;
+}
+
+.content {
+   margin-top: calc(#{$header-height} * -1);
+
+   .container {
+      padding: 0;
+   }
 }

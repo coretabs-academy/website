@@ -6,6 +6,16 @@ export default {
       HeaderComponent,
       FooterComponent
    },
-   methods: {
-   }
+   data: () => ({}),
+   created() {
+      this.$store.state.direction = 'rtl'
+      this.$store.state.title = 'Coretabs'
+      $('html')
+         .css('direction', this.$store.state.direction)
+         .attr('direction', this.$store.state.direction)
+   },
+   computed: {
+
+   },
+   methods: {}
 }

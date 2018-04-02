@@ -35,7 +35,8 @@
          "@vue/standard"
       ],
       "rules": {
-         "indent": 0
+         "indent": 0,
+         "space-before-function-paren": ["error", "never"]
       }
    },
    "postcss": {

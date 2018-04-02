@@ -1,14 +1,12 @@
 <template>
 <div class="header">
-   <v-navigation-drawer app></v-navigation-drawer>
-   <v-toolbar app>
-      <v-toolbar-side-icon></v-toolbar-side-icon>
-      <v-toolbar-title>Title</v-toolbar-title>
-      <v-spacer></v-spacer>
+   <v-toolbar v-bind:class="{ 'toolbar--fixed': fixed,'elevation-0':!fixed }">
       <v-toolbar-items class="hidden-sm-and-down">
-         <v-btn flat>المنتدى</v-btn>
-         <v-btn flat>تسجيل</v-btn>
+         <v-btn round v-for="nav in navs" :key="nav.name">{{nav.name}}</v-btn>
       </v-toolbar-items>
+      <v-spacer></v-spacer>
+      <v-toolbar-title>{{title}}</v-toolbar-title>
+      <v-toolbar-side-icon></v-toolbar-side-icon>
    </v-toolbar>
 </div>
 </template>

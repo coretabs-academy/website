@@ -1,0 +1,8 @@
+.header .toolbar:not(.toolbar--fixed) {
+   z-index: 100;
+   background: transparent;
+
+   .toolbar__content {
+      height: $header-height;
+   }
+}

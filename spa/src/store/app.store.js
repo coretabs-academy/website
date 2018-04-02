@@ -3,12 +3,14 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-export const appStore = new Vuex.Store({
-   state: {},
+export default new Vuex.Store({
+   state: {
+      title: '',
+      direction: ''
+   },
    mutations: {},
    actions: {
-      getImgUrl: (img) => {
-         console.log('img', img)
+      getImgUrl(state, img) {
          return require(`@/assets/multimedia/images/${img}`)
       }
    }

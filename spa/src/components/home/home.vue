@@ -4,7 +4,8 @@
       <v-container fill-height>
          <v-layout align-center>
             <v-flex text-xs-center>
-               <h3 class="display-3">Gradient over Image</h3>
+               <h1>تطوير الويب</h1>
+               <p>إن الإلمام بمجال البرمجة، أمرٌ لا غنى عنه في أيامنا هذه. وإن تعلُّم البرمجة هو من أكثر الأمور الغنية والمفيدة التي يمكنك القيام بها.</p>
             </v-flex>
          </v-layout>
       </v-container>
