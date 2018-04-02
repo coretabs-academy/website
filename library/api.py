@@ -4,51 +4,51 @@ from . import serializers
 from . import models
 
 
-class LessonListCreateAPIView(generics.ListCreateAPIView):
+class LessonListAPIView(generics.ListAPIView):
     queryset = models.Lesson.objects.all()
     serializer_class = serializers.LessonSerializer
 
 
-class LessonRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
+class LessonRetrieveAPIView(generics.RetrieveAPIView):
     queryset = models.Lesson.objects.all()
     serializer_class = serializers.LessonSerializer
 
 
-class CourseListCreateAPIView(generics.ListCreateAPIView):
+class CourseListAPIView(generics.ListAPIView):
     queryset = models.Course.objects.all()
     serializer_class = serializers.CourseSerializer
 
 
-class CourseRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
+class CourseRetrieveAPIView(generics.RetrieveAPIView):
     queryset = models.Course.objects.all()
     serializer_class = serializers.CourseSerializer
 
 
-class CourseLessonListCreateAPIView(generics.ListCreateAPIView):
+class CourseLessonListAPIView(generics.ListAPIView):
     queryset = models.CourseLesson.objects.all()
     serializer_class = serializers.CourseLessonSerializer
 
 
-class CourseLessonRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
+class CourseLessonRetrieveAPIView(generics.RetrieveAPIView):
     queryset = models.CourseLesson.objects.all()
     serializer_class = serializers.CourseLessonSerializer
 
 
-class TrackListCreateAPIView(generics.ListCreateAPIView):
+class TrackListAPIView(generics.ListAPIView):
     queryset = models.Track.objects.all()
     serializer_class = serializers.TrackSerializer
 
 
-class TrackRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
+class TrackRetrieveAPIView(generics.RetrieveAPIView):
     queryset = models.Track.objects.all()
     serializer_class = serializers.TrackSerializer
 
 
-class TrackCourseListCreateAPIView(generics.ListCreateAPIView):
+class TrackCourseListAPIView(generics.ListAPIView):
     queryset = models.TrackCourse.objects.all()
     serializer_class = serializers.TrackCourseSerializer
 
 
-class TrackCourseRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
+class TrackCourseRetrieveAPIView(generics.RetrieveAPIView):
     queryset = models.TrackCourse.objects.all()
     serializer_class = serializers.TrackCourseSerializer
