@@ -25,6 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('account/', include('account.urls')),
     path('api/', include('library.urls')),
+    path('api-auth/', include('rest_framework.urls')),
     path('lang/set/', include('django.conf.urls.i18n'), name='set_language'),
     path('fullstack/', TemplateView.as_view(template_name='fullstack/index.html'), name='fullstack'),
     path('frontend/', TemplateView.as_view(template_name='frontend/index.html'), name='frontend'),
