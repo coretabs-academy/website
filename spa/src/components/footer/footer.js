@@ -17,7 +17,7 @@ export default {
             url: ''
          },
          {
-            icon: 'fab fa-google-plus0',
+            icon: 'forum',
             url: 'https://coretabs.freeflarum.com'
          }
       ]

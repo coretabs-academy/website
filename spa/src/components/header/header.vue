@@ -15,7 +15,7 @@
       </v-list>
    </v-navigation-drawer>
    <v-toolbar :fixed="fixed" :flat="!fixed" v-bind:class="{'primary': fixed}">
-      <v-toolbar-side-icon class="white--text" v-on:click="openDrawer()"></v-toolbar-side-icon>
+      <v-toolbar-side-icon class="white--text hidden-md-and-up" v-on:click="openDrawer()"></v-toolbar-side-icon>
       <v-toolbar-items class="hidden-sm-and-down">
          <template v-if="fixed">
             <template v-for="nav in navs">

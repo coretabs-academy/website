@@ -27,7 +27,7 @@ header {
       &:not(.toolbar--fixed) {
          background: transparent !important;
 
-         .btn {
+         .btn:not(.toolbar__side-icon) {
             margin-top: 10px !important;
             margin-left: 5px !important;
             height: calc(#{$header-height} - 20px) !important;
