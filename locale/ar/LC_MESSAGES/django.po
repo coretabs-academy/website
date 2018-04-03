@@ -182,10 +182,6 @@ msgstr ""
 "إن الإلمام بمجال البرمجة، أمرٌ لا غنى عنه في أيامنا هذه. وإن تعلُّم "
 "البرمجة هو من أكثر الأمور الغنية والمفيدة التي يمكنك القيام بها."
 
-#: templates/home.html:35 templates/home.html:46
-msgid "Courses"
-msgstr "الدروس"
-
 #: templates/home.html:64
 msgid "About website"
 msgstr "عن الموقع"

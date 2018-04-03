@@ -81,7 +81,7 @@ msgstr "مسار"
 
 #: models.py:73
 msgid "Tracks"
-msgstr "المسار"
+msgstr "المسارات"
 
 #: models.py:90
 msgid "Track and Course"
