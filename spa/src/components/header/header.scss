@@ -1,8 +1,37 @@
-.header .toolbar:not(.toolbar--fixed) {
-   z-index: 100;
-   background: transparent;
+@import '~@/assets/styles/vars.scss';
+/*=====================================
+Header Style
+=======================================*/
+header {
+   .navigation-drawer {
+      z-index: 150 !important;
+   }
 
-   .toolbar__content {
-      height: $header-height;
+   .toolbar {
+      z-index: 100 !important;
+
+      .toolbar__content {
+         height: $header-height !important;
+
+         .toolbar__title {
+            font-size: 25px !important;
+            font-weight: bold !important;
+         }
+
+         .btn {
+            font-size: 16px !important;
+            font-weight: 700 !important;
+         }
+      }
+
+      &:not(.toolbar--fixed) {
+         background: transparent !important;
+
+         .btn {
+            margin-top: 10px !important;
+            margin-left: 5px !important;
+            height: calc(#{$header-height} - 20px) !important;
+         }
+      }
    }
 }

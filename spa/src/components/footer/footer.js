@@ -6,7 +6,7 @@ export default {
       description: '',
       socials: [{
             icon: 'fab fa-facebook',
-            url: ''
+            url: 'https://www.facebook.com/groups/ProgrammersUnion/'
          },
          {
             icon: 'fab fa-twitter',
@@ -17,12 +17,8 @@ export default {
             url: ''
          },
          {
-            icon: 'fab fa-linkedin',
-            url: ''
-         },
-         {
-            icon: 'fab fa-instagram',
-            url: ''
+            icon: 'fab fa-google-plus0',
+            url: 'https://coretabs.freeflarum.com'
          }
       ]
    }),

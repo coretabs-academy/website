@@ -2,10 +2,11 @@ import {
    mapActions
 } from 'vuex'
 export default {
-   name: 'home',
+   name: 'HomeComponent',
    components: {},
    data: () => ({
       src: '',
+      height: 0,
       gradient: '#5400ffcc, #ca3e4bcc'
    }),
    created() {
@@ -14,6 +15,7 @@ export default {
       }).catch(error => {
          throw new Error(error.message);
       })
+      // this.height = window.innerHeight
    },
    computed: {
 

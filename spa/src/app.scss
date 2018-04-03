@@ -1,30 +1,28 @@
-@import 'assets/vendor/normalize.min.scss';
-@import 'assets/vendor/fonts/roboto/roboto.min.scss';
-@import 'assets/vendor/fonts/material-design-icons/material-icons.min.scss';
 @import 'assets/styles/vars.scss';
+@import 'assets/vendor/fonts/cario/cario.scss';
+@import 'assets/vendor/fonts/roboto/roboto.scss';
+@import 'assets/vendor/fonts/montserrat/montserrat.scss';
+@import 'assets/vendor/fonts/material-design-icons/material-icons.scss';
 @import 'assets/styles/scrollbar.scss';
 /*=====================================
 Global Style
 =======================================*/
 * {
    outline: none;
-}
-
-html {
-   line-height: 1.5;
-   box-sizing: border-box;
-   scroll-behavior: smooth;
-   font-family: 'Roboto',sans-serif;
-}
-
-html[direction='rtl'] {
    font-family: 'Cairo', sans-serif;
+   // font-family: 'Roboto',sans-serif;
+   // font-family: 'Montserrat',sans-serif;
 }
 
 *,
 *::after,
 *::before {
-   box-sizing: inherit;
+   box-sizing: border-box;
+}
+
+html {
+   line-height: 1.5;
+   scroll-behavior: smooth;
 }
 
 ::selection {
@@ -32,13 +30,16 @@ html[direction='rtl'] {
    background: #7f2a90;
 }
 
+body {
+   color: $black;
+   background: $white;
+}
+
 .no-select {
    user-select: none;
 }
 
 .content {
-   margin-top: calc(#{$header-height} * -1);
-
    .container {
       padding: 0;
    }
