@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-02 00:11+0200\n"
+"POT-Creation-Date: 2018-04-03 12:08+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,62 +23,70 @@ msgstr ""
 msgid "Library"
 msgstr "المكتبة"
 
-#: models.py:17 models.py:36 models.py:64
+#: models.py:18 models.py:38 models.py:67
 msgid "Title"
 msgstr "العنوان"
 
-#: models.py:18 models.py:37 models.py:65
+#: models.py:19 models.py:39 models.py:68
 msgid "Slug"
 msgstr "العنوان في الرابط"
 
-#: models.py:19
+#: models.py:20
 msgid "Type"
 msgstr "النوع"
 
-#: models.py:20
+#: models.py:21
 msgid "URL"
 msgstr "الرابط"
 
-#: models.py:23 models.py:54
+#: models.py:22
+msgid "User"
+msgstr "المستخدم"
+
+#: models.py:25 models.py:57
 msgid "Lesson"
 msgstr "دروس"
 
-#: models.py:24 models.py:38
+#: models.py:26 models.py:40
 msgid "Lessons"
 msgstr "الدروس"
 
-#: models.py:41 models.py:55 models.py:82
+#: models.py:41
+msgid "Publication Date"
+msgstr "تاريخ الإنشاء"
+
+#: models.py:44 models.py:58 models.py:85
 msgid "Course"
 msgstr "كورس"
 
-#: models.py:42 models.py:66
+#: models.py:45 models.py:69
 msgid "Courses"
 msgstr "الكورسات"
 
-#: models.py:56 models.py:84
+#: models.py:59 models.py:87
 msgid "Order"
 msgstr "الترتيب"
 
-#: models.py:59
+#: models.py:62
 msgid "Course and Lesson"
 msgstr "كورس ودرس"
 
-#: models.py:60
+#: models.py:63
 msgid "Courses and Lessons"
 msgstr "الكورسات والدروس"
 
-#: models.py:69 models.py:83
+#: models.py:72 models.py:86
 msgid "Track"
 msgstr "مسار"
 
-#: models.py:70
+#: models.py:73
 msgid "Tracks"
 msgstr "المسار"
 
-#: models.py:87
+#: models.py:90
 msgid "Track and Course"
 msgstr "مسار وكورس"
 
-#: models.py:88
+#: models.py:91
 msgid "Tracks and Courses"
 msgstr "المسارات والكورسات"

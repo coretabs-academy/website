@@ -38,6 +38,7 @@ class Course(models.Model):
     title = models.CharField(max_length=60, verbose_name=_('Title'))
     slug = models.SlugField(max_length=140, unique=True, blank=True, allow_unicode=True, verbose_name=_('Slug'))
     lessons = models.ManyToManyField(Lesson, through='CourseLesson', related_name='courses', verbose_name=_('Lessons'))
+    pub_date = models.DateTimeField(auto_now=True, verbose_name=_('Publication Date'))
 
     class Meta:
         verbose_name = _('Course')
