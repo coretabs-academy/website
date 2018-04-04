@@ -5,7 +5,7 @@ export default {
       navs: [],
       title: '',
       right: '',
-      fixed: true,
+      fixed: false,
       drawer: {
          width: 0,
          isOpen: false,
@@ -16,13 +16,13 @@ export default {
       switch (this.$route.name) {
          case 'home':
             this.navs = [{
-               route: false,
-               name: 'المنتدى',
-               url: 'https://forums.coretabs.net'
-            }, {
                url: '/',
                route: true,
                name: 'تسجيل'
+            }, {
+               route: false,
+               name: 'المنتدى',
+               url: 'https://forums.coretabs.net'
             }]
             break;
       }

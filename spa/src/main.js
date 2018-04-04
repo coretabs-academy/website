@@ -2,15 +2,13 @@ import Vue from 'vue'
 import App from './app.vue'
 import jQuery from 'jquery'
 import Vuetify from 'vuetify'
-import 'vuetify/dist/vuetify.min.css'
-
 import router from './router'
 import store from './store/app.store'
 
 global.$ = jQuery
 global.jQuery = jQuery
 Vue.config.productionTip = false
-// import Vuetify material desing && customize theme
+// User Vuetify material desing && customize own theme
 Vue.use(Vuetify, {
    theme: {
       primary: '#7b1fa2',

@@ -1,3 +1,7 @@
+@import '~@/assets/styles/vars.scss';
+/*=====================================
+Home Style
+=======================================*/
 .home::-webkit-scrollbar-thumb {
    background: #4e0ed9;
 }
@@ -8,4 +12,83 @@
 
 .home::-webkit-scrollbar-thumb:active {
    background: #4e0ed9;
+}
+
+.home {
+   .jumbotron {
+      h1.section-title {
+         position: relative;
+         display: inline-block;
+
+         &:after,
+         &:before {
+            top: 50%;
+            content: '';
+            height: 5px;
+            width: 70px;
+            position: absolute;
+            background: $black;
+         }
+
+         &:after {
+            left: 100%;
+            margin-left: 20px;
+         }
+
+         &:before {
+            right: 100%;
+            margin-right: 20px;
+         }
+      }
+
+      h1 {
+         font-weight: 700 !important;
+      }
+
+      p {
+         font-size: 20px;
+         font-weight: 450 !important;
+      }
+
+      &.courses {
+         .flex {
+            > h1 {
+               position: relative;
+               display: inline-block;
+
+               &:after,
+               &:before {
+                  top: 50%;
+                  content: '';
+                  height: 5px;
+                  width: 70px;
+                  position: absolute;
+                  background: $black;
+               }
+
+               &:after {
+                  left: 100%;
+                  margin-left: 20px;
+               }
+
+               &:before {
+                  right: 100%;
+                  margin-right: 20px;
+               }
+            }
+
+            .card__title {
+               padding: 5px 25px 5px 0 !important;
+            }
+
+            .card__text {
+               padding: 25px 20px !important;
+            }
+         }
+      }
+
+      &.about {
+         p {}
+      }
+   }
 }
