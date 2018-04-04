@@ -36,6 +36,13 @@ export default {
       },
       closeDrawer() {
          this.drawer.isOpen = false;
+      },
+      onScroll(e) {
+         if (window.pageYOffset || document.documentElement.scrollTop > 0) {
+            this.fixed = true;
+         }else{
+            this.fixed = false;
+         }
       }
    }
 }

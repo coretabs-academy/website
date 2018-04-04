@@ -77,12 +77,24 @@ Home Style
                }
             }
 
-            .card__title {
-               padding: 5px 25px 5px 0 !important;
-            }
+            .card {
+               position: relative !important;
 
-            .card__text {
-               padding: 25px 20px !important;
+               .card__title {
+                  height: 60px !important;
+                  line-height: 60px !important;
+                  padding: 0 25px 0 0 !important;
+               }
+
+               .card__text {
+                  top: 0 !important;
+                  z-index: 100 !important;
+                  border-radius: 0 !important;
+                  position: absolute !important;
+                  padding: 25px 50px !important;
+                  background: $white !important;
+                  height: calc(100% - 60px) !important;
+               }
             }
          }
       }
