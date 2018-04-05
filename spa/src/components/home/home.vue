@@ -22,15 +22,15 @@
             <v-flex xs8 sm6 md4 v-for="card in courses.cards" :key="card.background" class="mb-5">
                <v-card>
                   <v-card-media :src="card.background" height="300px"></v-card-media>
-                  <v-card-title primary-title clas="primary">
-                     <h1 class="headline text-xs-center"><a :href="card.href" class="black--text">{{card.title}}</a></h1>
+                  <v-card-title primary-title class="primary">
+                     <h1 class="headline text-xs-center"><a :href="card.href" class="white--text">{{card.title}}</a></h1>
                      <v-spacer></v-spacer>
-                     <v-btn icon @click.native="card.show = !card.show">
+                     <v-btn icon @click.native="card.show = !card.show" class="white--text">
                         <v-icon>{{ card.show ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}</v-icon>
                      </v-btn>
                   </v-card-title>
                   <v-slide-y-transition>
-                     <v-card-text class="body-2 elevation-2 primary" v-show="card.show">
+                     <v-card-text class="body-2 elevation-2 primary white--text" v-show="card.show">
                         <v-layout justify-content align-center>
                            <v-flex xs12>
                               {{card.description}}
