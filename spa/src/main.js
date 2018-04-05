@@ -11,13 +11,13 @@ Vue.config.productionTip = false
 // User Vuetify material desing && customize own theme
 Vue.use(Vuetify, {
    theme: {
-      primary: '#7b1fa2',
-      secondary: '#bdbdbd',
-      accent: '#ba68c8',
-      error: '#ff6d00',
-      warning: '#ffd600',
+      primary: '#3f51b5',
+      secondary: '#e0e0e0',
+      accent: '#ff4081',
+      error: '#f44336',
+      warning: '#ffeb3b',
       info: '#2196f3',
-      success: '#7cb342'
+      success: '#4caf50'
    }
 })
 

@@ -9,13 +9,14 @@ export default {
    data: () => ({}),
    created() {
       this.$store.state.direction = 'rtl'
-      this.$store.state.title = 'Coretabs'
+      // this.$store.state.title = 'Coretabs'
+      this.$store.state.title = 'كورتاب'
       $('html').css('direction', this.$store.state.direction)
    },
    mounted() {
-      $('main.content').css({
-         'margin-top': `${$('header .toolbar').hasClass('toolbar--fixed') ? $('header .toolbar__content').height(): $('header .toolbar__content').height() * -1}px`
-      })
+      // $('main.content').css({
+      //    'margin-top': `${$('header .toolbar').hasClass('toolbar--fixed') ? $('header .toolbar__content').height(): $('header .toolbar__content').height() * -1}px`
+      // })
    },
    computed: {
 

@@ -13,10 +13,7 @@
            </v-card-text>
          </v-flex>
      </v-layout>
-     <v-card-text class="white--text pt-0">
-     Made with by Our<a href="/contributors" class="contributors white--text"> Contributors</a>
-      &copy;{{new Date().getFullYear()}} <strong>{{title}}</strong>
-     </v-card-text>
+     <v-card-text class="white--text pt-0">{{copyright}}&nbsp;<router-link to="/about" class="white--text"><strong>{{title}}</strong></router-link> &copy;&nbsp;{{new Date().getFullYear()}}</v-card-text>
    </v-card>
  </v-footer>
  </template>

@@ -2,18 +2,6 @@
 /*=====================================
 Home Style
 =======================================*/
-.home::-webkit-scrollbar-thumb {
-   background: #4e0ed9;
-}
-
-.home::-webkit-scrollbar-thumb:hover {
-   background: #4e0ed9;
-}
-
-.home::-webkit-scrollbar-thumb:active {
-   background: #4e0ed9;
-}
-
 .home {
    .jumbotron {
       h1.section-title {
@@ -27,7 +15,7 @@ Home Style
             height: 5px;
             width: 70px;
             position: absolute;
-            background: $black;
+            background: $black-color;
          }
 
          &:after {
@@ -50,6 +38,12 @@ Home Style
          font-weight: 450 !important;
       }
 
+      &.main {
+         .jumbotron__background {
+            background: linear-gradient(rgba($primary-color, 0.8), rgba($accent-color, 0.8)) !important;
+         }
+      }
+
       &.courses {
          .flex {
             > h1 {
@@ -63,7 +57,7 @@ Home Style
                   height: 5px;
                   width: 70px;
                   position: absolute;
-                  background: $black;
+                  background: $black-color;
                }
 
                &:after {
@@ -88,11 +82,11 @@ Home Style
 
                .card__text {
                   top: 0 !important;
-                  z-index: 100 !important;
+                  z-index: 80 !important;
                   border-radius: 0 !important;
                   position: absolute !important;
                   padding: 25px 50px !important;
-                  background: $white !important;
+                  background: $white-color !important;
                   height: calc(100% - 60px) !important;
                }
             }

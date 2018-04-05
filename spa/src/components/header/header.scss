@@ -9,7 +9,7 @@ header {
 
    .toolbar {
       z-index: 100 !important;
-      padding: 0 10px !important;
+      padding: 0 20px !important;
 
       .toolbar__content {
          height: $header-height !important;
@@ -25,16 +25,7 @@ header {
          }
 
          .btn:not(.toolbar__side-icon) {
-            min-width: 140px !important;
-         }
-      }
-
-      &:not(.toolbar--fixed) {
-         background: transparent !important;
-
-         .btn:not(.toolbar__side-icon) {
-            margin: 15px 12px 0 0 !important;
-            height: calc(#{$header-height} - 20px) !important;
+            min-width: 120px !important;
          }
       }
    }

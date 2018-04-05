@@ -2,7 +2,27 @@ export default {
    name: 'HeaderComponent',
    components: {},
    data: () => ({
-      navs: [],
+      navs: [{
+         active: true,
+         name: 'الرئيسية',
+         url: '/'
+      }, {
+         active: true,
+         name: 'دخول',
+         url: '/signin'
+      }, {
+         active: true,
+         name: 'حساب جديد',
+         url: '/signup'
+      }, {
+         active: true,
+         name: 'عن الموقع',
+         url: '/about'
+      }, {
+         active: true,
+         name: 'إتصل بنا',
+         url: '/contact'
+      }],
       title: '',
       right: '',
       fixed: false,
@@ -13,22 +33,33 @@ export default {
       }
    }),
    created() {
-      switch (this.$route.name) {
-         case 'home':
-            this.navs = [{
-               url: '/',
-               route: true,
-               name: 'تسجيل'
-            }, {
-               route: false,
-               name: 'المنتدى',
-               url: 'https://forums.coretabs.net'
-            }]
-            break;
-      }
       this.title = this.$store.state.title
       this.drawer.width = window.innerWidth
       this.drawer.isRight = this.$store.state.direction === 'rtl' ? true : false
+      // switch (this.$route.name) {
+      //    case 'home':
+      //       this.navs = [{
+      //          name: 'الرئيسية',
+      //          url: '/'
+      //       }, {
+      //          name: 'دخول',
+      //          url: '/signin'
+      //       }, {
+      //          name: 'حساب جديد',
+      //          url: '/signup'
+      //       }, {
+      //          name: 'عن الموقع',
+      //          url: '/about'
+      //       }, {
+      //          name: 'إتصل بنا',
+      //          url: '/contact'
+      //       }]
+      //       break;
+      //    case 'contributors':
+      //       this.navs = []
+      //       this.fixed = true
+      //       break;
+      // }
    },
    methods: {
       openDrawer() {
@@ -40,7 +71,7 @@ export default {
       onScroll(e) {
          if (window.pageYOffset || document.documentElement.scrollTop > 0) {
             this.fixed = true;
-         }else{
+         } else {
             this.fixed = false;
          }
       }

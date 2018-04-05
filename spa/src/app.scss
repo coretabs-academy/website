@@ -22,8 +22,8 @@ Global Style
 }
 
 ::selection {
-   color: #ffffff;
-   background: #7f2a90;
+   color: $white-color;
+   background: $primary-color;
 }
 
 html {
@@ -32,8 +32,8 @@ html {
 }
 
 body {
-   color: $black;
-   background: $white;
+   color: $black-color;
+   background: $white-color;
 }
 
 a {
