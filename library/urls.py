@@ -5,43 +5,43 @@ from . import api
 
 api_urls = [
     path('lessons/',
-         api.LessonListCreateAPIView.as_view(),
+         api.LessonListAPIView.as_view(),
          name='lesson_list_create_api'),
 
     path('lessons/<int:pk>/',
-         api.LessonRetrieveUpdateDestroyAPIView.as_view(),
+         api.LessonRetrieveAPIView.as_view(),
          name='lesson_retrieve_update_destroy_api'),
 
     path('courses/',
-         api.CourseListCreateAPIView.as_view(),
+         api.CourseListAPIView.as_view(),
          name='course_list_create_api'),
 
     path('courses/<int:pk>/',
-         api.CourseRetrieveUpdateDestroyAPIView.as_view(),
+         api.CourseRetrieveAPIView.as_view(),
          name='course_retrieve_update_destroy_api'),
 
     path('courses_lessons/',
-         api.CourseLessonListCreateAPIView.as_view(),
+         api.CourseLessonListAPIView.as_view(),
          name='course_lesson_list_create_api'),
 
     path('courses_lessons/<int:pk>/',
-         api.CourseLessonRetrieveUpdateDestroyAPIView.as_view(),
+         api.CourseLessonRetrieveAPIView.as_view(),
          name='course_lesson_retrieve_update_destroy_api'),
 
     path('tracks/',
-         api.TrackListCreateAPIView.as_view(),
+         api.TrackListAPIView.as_view(),
          name='tracks_list_create_api'),
 
     path('tracks/<int:pk>/',
-         api.TrackRetrieveUpdateDestroyAPIView.as_view(),
+         api.TrackRetrieveAPIView.as_view(),
          name='tracks_retrieve_update_destroy_api'),
 
     path('tracks_courses/',
-         api.TrackCourseListCreateAPIView.as_view(),
+         api.TrackCourseListAPIView.as_view(),
          name='track_course_list_create_api'),
 
     path('tracks_courses/<int:pk>/',
-         api.TrackCourseRetrieveUpdateDestroyAPIView.as_view(),
+         api.TrackCourseRetrieveAPIView.as_view(),
          name='track_course_retrieve_update_destroy_api'),
 ]
 

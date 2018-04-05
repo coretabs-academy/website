@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from library.utils import get_unique_slug
+from django.contrib.auth.models import User
 
 
 class Lesson(models.Model):
@@ -18,6 +19,7 @@ class Lesson(models.Model):
     slug = models.SlugField(max_length=140, unique=True, blank=True, allow_unicode=True, verbose_name=_('Slug'))
     type = models.CharField(max_length=10, choices=TYPE_CHOICES, default=MARKDOWN, verbose_name=_('Type'))
     url = models.URLField(verbose_name=_('URL'))
+    user = models.ForeignKey(User, on_delete=models.DO_NOTHING, verbose_name=_('User'))
 
     class Meta:
         verbose_name = _('Lesson')
@@ -36,6 +38,7 @@ class Course(models.Model):
     title = models.CharField(max_length=60, verbose_name=_('Title'))
     slug = models.SlugField(max_length=140, unique=True, blank=True, allow_unicode=True, verbose_name=_('Slug'))
     lessons = models.ManyToManyField(Lesson, through='CourseLesson', related_name='courses', verbose_name=_('Lessons'))
+    pub_date = models.DateTimeField(auto_now=True, verbose_name=_('Publication Date'))
 
     class Meta:
         verbose_name = _('Course')
