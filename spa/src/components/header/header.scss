@@ -1,0 +1,32 @@
+@import '~@/assets/styles/vars.scss';
+/*=====================================
+Header Style
+=======================================*/
+header {
+   .navigation-drawer {
+      z-index: 150 !important;
+   }
+
+   .toolbar {
+      z-index: 100 !important;
+      padding: 0 20px !important;
+
+      .toolbar__content {
+         height: $header-height !important;
+
+         .toolbar__title {
+            font-size: 25px !important;
+            font-weight: bold !important;
+         }
+
+         .btn {
+            font-size: 16px !important;
+            font-weight: 700 !important;
+         }
+
+         .btn:not(.toolbar__side-icon) {
+            min-width: 120px !important;
+         }
+      }
+   }
+}

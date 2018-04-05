@@ -1,0 +1,99 @@
+@import '~@/assets/styles/vars.scss';
+/*=====================================
+Home Style
+=======================================*/
+.home {
+   .jumbotron {
+      h1.section-title {
+         position: relative;
+         display: inline-block;
+
+         &:after,
+         &:before {
+            top: 50%;
+            content: '';
+            height: 5px;
+            width: 70px;
+            position: absolute;
+            background: $black-color;
+         }
+
+         &:after {
+            left: 100%;
+            margin-left: 20px;
+         }
+
+         &:before {
+            right: 100%;
+            margin-right: 20px;
+         }
+      }
+
+      h1 {
+         font-weight: 700 !important;
+      }
+
+      p {
+         font-size: 20px;
+         font-weight: 450 !important;
+      }
+
+      &.main {
+         .jumbotron__background {
+            background: linear-gradient(rgba($primary-color, 0.8), rgba($accent-color, 0.8)) !important;
+         }
+      }
+
+      &.courses {
+         .flex {
+            > h1 {
+               position: relative;
+               display: inline-block;
+
+               &:after,
+               &:before {
+                  top: 50%;
+                  content: '';
+                  height: 5px;
+                  width: 70px;
+                  position: absolute;
+                  background: $black-color;
+               }
+
+               &:after {
+                  left: 100%;
+                  margin-left: 20px;
+               }
+
+               &:before {
+                  right: 100%;
+                  margin-right: 20px;
+               }
+            }
+
+            .card {
+               position: relative !important;
+
+               .card__title {
+                  height: 60px !important;
+                  line-height: 60px !important;
+                  padding: 0 25px 0 0 !important;
+               }
+
+               .card__text {
+                  top: 0 !important;
+                  z-index: 80 !important;
+                  border-radius: 0 !important;
+                  position: absolute !important;
+                  padding: 25px 50px !important;
+                  height: calc(100% - 60px) !important;
+               }
+            }
+         }
+      }
+
+      &.about {
+         p {}
+      }
+   }
+}
