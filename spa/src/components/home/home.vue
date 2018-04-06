@@ -25,7 +25,7 @@
                   <v-card-title primary-title class="primary">
                      <h1 class="text-xs-center"><router-link :to="card.href" class="white--text">{{card.title}}</router-link></h1>
                      <v-spacer></v-spacer>
-                     <v-btn icon @click.native="card.show = !card.show" class="white--text">
+                     <v-btn icon @click.native="card.show = !card.show" class="white--text close-btn">
                         <v-icon>{{ card.show ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}</v-icon>
                      </v-btn>
                   </v-card-title>

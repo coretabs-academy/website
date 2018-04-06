@@ -44,11 +44,10 @@ Home Style
          height: 100vh !important;
 
          .jumbotron__background {
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
             background-image: linear-gradient(rgba($primary-color, 0.8), rgba($accent-color, 0.8)), url("../../assets/multimedia/images/home/home_background.jpg");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
          }
 
          h1 {
@@ -70,7 +69,14 @@ Home Style
                position: relative !important;
 
                .card__media {
-                  
+                  /* 16:9 Aspect Ratio */
+                  padding-top: 56.25% !important;
+                  /* 4:3 Aspect Ratio */
+                  padding-top: 75%;
+                  /* 3:2 Aspect Ratio */
+                  padding-top: 66.66%;
+                  /* 8:5 Aspect Ratio */
+                  padding-top: 62.5%;
                }
 
                .card__title {
