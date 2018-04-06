@@ -1,6 +1,6 @@
 <template>
 <div class="home">
-   <v-jumbotron class="main" :src="main.background" :height="main.height" v-resize="onResize">
+   <v-jumbotron class="main" height="auto">
       <v-container fluid grid-list-xl fill-height>
          <v-layout align-center justify-center>
             <v-flex text-xs-center xs10 sm6 md6>

@@ -40,8 +40,15 @@ Home Style
       }
 
       &.main {
+         width: 100vw !important;
+         height: 100vh !important;
+
          .jumbotron__background {
-            background: linear-gradient(rgba($primary-color, 0.8), rgba($accent-color, 0.8)) !important;
+            background-image: linear-gradient(rgba($primary-color, 0.8), rgba($accent-color, 0.8)), url("../../assets/multimedia/images/home/home_background.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
          }
 
          h1 {

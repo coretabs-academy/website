@@ -6,13 +6,11 @@ export default {
    components: {},
    data: () => ({
       main: {
-         height: '',
-         background: '',
-         title:'تطوير الويب',
-         description:'إن الإلمام بمجال البرمجة، أمرٌ لا غنى عنه في أيامنا هذه. وإن تعلُّم البرمجة هو من أكثر الأمور الغنية والمفيدة التي يمكنك القيام بها.'
+         title: 'تطوير الويب',
+         description: 'إن الإلمام بمجال البرمجة، أمرٌ لا غنى عنه في أيامنا هذه. وإن تعلُّم البرمجة هو من أكثر الأمور الغنية والمفيدة التي يمكنك القيام بها.'
       },
       courses: {
-         title:'المسارات',
+         title: 'المسارات',
          cards: [{
             show: false,
             href: 'fullstack',
@@ -29,29 +27,12 @@ export default {
       }
    }),
    created() {
-      this.$store.dispatch('getImgUrl', 'home/home_background.jpg').then(img => {
-         this.main.background = img
-      }).catch(error => {
-         throw new Error(error.message);
-      })
-
       for (let i = 0; i < this.courses.cards.length; i++) {
          this.$store.dispatch('getImgUrl', this.courses.cards[i].background).then(img => {
             this.courses.cards[i].background = img
          }).catch(error => {
             throw new Error(error.message);
          })
-      }
-   },
-   mounted() {
-      this.onResize()
-   },
-   computed: {
-
-   },
-   methods: {
-      onResize(e) {
-         this.main.height = `${window.innerHeight - $('header .toolbar .toolbar__content').height()}px`
       }
    }
 }

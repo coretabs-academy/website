@@ -39,7 +39,7 @@
             </v-list>
          </v-menu>
       </v-toolbar-items>
-      <v-toolbar-side-icon class="white--text " @click="openDrawer()"></v-toolbar-side-icon>
+      <v-toolbar-side-icon class="white--text hidden-md-and-up" @click="openDrawer()"></v-toolbar-side-icon>
    </v-toolbar>
 </header>
 </template>
