@@ -1,0 +1,11 @@
+@import '~@/../node_modules/rfs/scss/_rfs';
+
+footer {
+   .about {
+      @include responsive-font-size(0.85rem,true);
+   }
+
+   .copyright {
+      @include responsive-font-size(0.8rem,true);
+   }
+}

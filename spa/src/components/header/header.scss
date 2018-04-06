@@ -1,10 +1,50 @@
 @import '~@/assets/styles/vars.scss';
+@import '~@/../node_modules/rfs/scss/_rfs';
 /*=====================================
 Header Style
 =======================================*/
 header {
    .navigation-drawer {
       z-index: 150 !important;
+
+      .list {
+         .list__tile {
+            padding: 0 !important;
+         }
+
+         .btn {
+            margin: 0 !important;
+            width: 100% !important;
+         }
+
+         .list__group__header {
+            flex-wrap: wrap !important;
+
+            > div:not(.list__group__header__append-icon) {
+               flex: 100% !important;
+
+               .list__tile__title {
+                  text-align: center !important;
+                  @include responsive-font-size(0.82rem,true);
+               }
+            }
+
+            .list__group__header__append-icon {
+               position: absolute !important;
+            }
+
+            .list__group__header__append-icon i,
+            .list__tile__title {
+               font-weight: 700 !important;
+               color: $white-color !important;
+            }
+         }
+      }
+   }
+
+   .btn {
+      font-weight: 700 !important;
+      @include responsive-font-size(0.82rem,true);
    }
 
    .toolbar {
@@ -15,18 +55,33 @@ header {
          height: $header-height !important;
 
          .toolbar__title {
-            font-size: 25px !important;
             font-weight: bold !important;
-         }
-
-         .btn {
-            font-size: 16px !important;
-            font-weight: 700 !important;
+            @include responsive-font-size(1.5rem,true);
          }
 
          .btn:not(.toolbar__side-icon) {
-            min-width: 120px !important;
+            min-width: 3vw !important;
          }
+      }
+   }
+}
+
+[dir='ltr'] {
+   header .list__group__header__append-icon {
+      right: 0 !important;
+   }
+}
+
+.nav-dropdown {
+   .list__tile {
+      padding: 0 !important;
+      width: 100% !important;
+
+      .btn {
+         margin: 0 !important;
+         width: 100% !important;
+         font-weight: 700 !important;
+         @include responsive-font-size(0.82rem,true);
       }
    }
 }

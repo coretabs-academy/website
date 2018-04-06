@@ -7,13 +7,11 @@
        </v-btn>
      </v-card-text>
      <v-layout xs12 sm12 md12 justify-center align-center>
-         <v-flex xs11 sm9 md7>
-           <v-card-text class="white--text pt-0 my-3">
-               {{description}}
-           </v-card-text>
+         <v-flex xs12 sm8 md6>
+           <v-card-text class="white--text pt-0 my-3 about">{{description}}</v-card-text>
          </v-flex>
      </v-layout>
-     <v-card-text class="white--text pt-0">{{copyright}}&nbsp;<router-link to="/about" class="white--text"><strong>{{title}}</strong></router-link> &copy;&nbsp;{{new Date().getFullYear()}}</v-card-text>
+     <v-card-text class="white--text pt-0 copyright">{{copyright}}&nbsp;<router-link to="/about" class="white--text"><strong>{{title}}</strong></router-link> &copy;&nbsp;{{new Date().getFullYear()}}</v-card-text>
    </v-card>
  </v-footer>
  </template>

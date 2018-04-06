@@ -1,36 +1,37 @@
 @import '~@/assets/styles/vars.scss';
+@import '~@/../node_modules/rfs/scss/_rfs';
 /*=====================================
 Home Style
 =======================================*/
 .home {
    .jumbotron {
-      h1.section-title {
-         position: relative;
-         display: inline-block;
-
-         &:after,
-         &:before {
-            top: 50%;
-            content: '';
-            height: 5px;
-            width: 70px;
-            position: absolute;
-            background: $black-color;
-         }
-
-         &:after {
-            left: 100%;
-            margin-left: 20px;
-         }
-
-         &:before {
-            right: 100%;
-            margin-right: 20px;
-         }
-      }
-
       h1 {
          font-weight: 700 !important;
+
+         &.section-title {
+            position: relative;
+            display: inline-block;
+
+            &:after,
+            &:before {
+               top: 50%;
+               content: '';
+               height: 5px;
+               width: 35px;
+               position: absolute;
+               background: $black-color;
+            }
+
+            &:after {
+               left: 100%;
+               margin-left: 10px;
+            }
+
+            &:before {
+               right: 100%;
+               margin-right: 10px;
+            }
+         }
       }
 
       p {
@@ -42,42 +43,37 @@ Home Style
          .jumbotron__background {
             background: linear-gradient(rgba($primary-color, 0.8), rgba($accent-color, 0.8)) !important;
          }
+
+         h1 {
+            @include responsive-font-size(2.35rem,true);
+         }
+
+         p {
+            @include responsive-font-size(1.35rem,true);
+         }
       }
 
       &.courses {
          .flex {
             > h1 {
-               position: relative;
-               display: inline-block;
-
-               &:after,
-               &:before {
-                  top: 50%;
-                  content: '';
-                  height: 5px;
-                  width: 70px;
-                  position: absolute;
-                  background: $black-color;
-               }
-
-               &:after {
-                  left: 100%;
-                  margin-left: 20px;
-               }
-
-               &:before {
-                  right: 100%;
-                  margin-right: 20px;
-               }
+               @include responsive-font-size(2.3rem,true);
             }
 
             .card {
                position: relative !important;
 
+               .card__media {
+                  height: 30vh !important;
+               }
+
                .card__title {
-                  height: 60px !important;
-                  line-height: 60px !important;
+                  height: 50px !important;
+                  line-height: 50px !important;
                   padding: 0 25px 0 0 !important;
+
+                  h1 {
+                     @include responsive-font-size(0.99rem,true);
+                  }
                }
 
                .card__text {
@@ -85,15 +81,11 @@ Home Style
                   z-index: 80 !important;
                   border-radius: 0 !important;
                   position: absolute !important;
-                  padding: 25px 50px !important;
-                  height: calc(100% - 60px) !important;
+                  height: calc(100% - 50px) !important;
+                  @include responsive-font-size(0.85rem,true);
                }
             }
          }
-      }
-
-      &.about {
-         p {}
       }
    }
 }

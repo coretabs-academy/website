@@ -6,15 +6,24 @@ Scrollbar Style
    width: 5px !important;
    background: $secondary-color !important;
 }
-// ::-webkit-scrollbar-button:start:decrement {
-//    height: $header-height;
-// }
-//
-// ::-webkit-scrollbar-button:end:increment {
-//    height: 0 !important;
-// }
+
+::-webkit-scrollbar-button:start:decrement {
+   height: 0 !important;
+}
+
+::-webkit-scrollbar-button:end:increment {
+   height: 0 !important;
+}
 
 ::-webkit-scrollbar-thumb {
-   border-radius: 10px !important;
+   border-radius: 0 !important;
+   background: $primary-color !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background: $primary-color !important;
+}
+
+::-webkit-scrollbar-thumb:active {
    background: $primary-color !important;
 }

@@ -4,22 +4,42 @@
       <v-toolbar flat class="primary">
          <v-toolbar-title class="white--text">{{title}}</v-toolbar-title>
          <v-spacer></v-spacer>
-         <v-toolbar-side-icon class="white--text" v-on:click="closeDrawer()"></v-toolbar-side-icon>
+         <v-toolbar-side-icon class="white--text" @click="closeDrawer"></v-toolbar-side-icon>
       </v-toolbar>
       <v-divider></v-divider>
-      <v-list class="pt-0">
-         <v-list-tile v-for="nav in navs" :key="nav.name" v-show="nav.active">
-            <v-btn flat block large class="white--text" :to="nav.url">{{nav.name}}</v-btn>
-         </v-list-tile>
+      <v-list class="py-0">
+         <template v-for="nav in navs" v-show="nav.active">
+            <v-list-tile v-if="!nav.dropdown" :key="nav.name">
+               <v-btn flat block large class="white--text" :to="nav.url">{{nav.name}}</v-btn>
+            </v-list-tile>
+            <v-list-group v-else :key="nav.name">
+               <v-list-tile slot="activator">
+                  <v-list-tile-content>
+                     <v-list-tile-title>{{ nav.name }}</v-list-tile-title>
+                  </v-list-tile-content>
+               </v-list-tile>
+               <v-list-tile v-for="child in nav.children" :key="child.name">
+                  <v-btn flat block large class="white--text" :to="child.url">{{child.name}}</v-btn>
+               </v-list-tile>
+            </v-list-group>
+         </template>
       </v-list>
    </v-navigation-drawer>
    <v-toolbar :fixed="fixed" :flat="!fixed" class="primary" v-scroll="onScroll">
       <v-toolbar-title class="white--text">{{title}}</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
-         <v-btn v-for="nav in navs" :key="nav.name" v-show="nav.active" flat large class="white--text" :to="nav.url">{{nav.name}}</v-btn>
+         <v-btn v-for="nav in navs" :key="nav.name" v-if="!nav.dropdown" v-show="nav.active" flat large class="white--text" :to="nav.url">{{nav.name}}</v-btn>
+         <v-menu v-else open-on-hover>
+            <v-btn flat large class="white--text" slot="activator">{{nav.name}}</v-btn>
+            <v-list class="primary white--text nav-dropdown py-0">
+               <v-list-tile v-for="child in nav.children" :key="child.name">
+                  <v-btn flat large class="white--text">{{child.name}}</v-btn>
+               </v-list-tile>
+            </v-list>
+         </v-menu>
       </v-toolbar-items>
-      <v-toolbar-side-icon class="white--text hidden-md-and-up" v-on:click="openDrawer()"></v-toolbar-side-icon>
+      <v-toolbar-side-icon class="white--text " @click="openDrawer()"></v-toolbar-side-icon>
    </v-toolbar>
 </header>
 </template>

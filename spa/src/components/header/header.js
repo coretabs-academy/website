@@ -4,28 +4,50 @@ export default {
    data: () => ({
       navs: [{
          active: true,
+         dropdown: false,
          name: 'الرئيسية',
          url: '/'
       }, {
          active: true,
-         name: 'دخول',
+         dropdown: false,
+         name: 'تسجيل الدخول',
          url: '/signin'
       }, {
          active: true,
+         dropdown: false,
          name: 'حساب جديد',
          url: '/signup'
       }, {
          active: true,
+         dropdown: false,
          name: 'عن الموقع',
          url: '/about'
       }, {
          active: true,
+         dropdown: false,
          name: 'إتصل بنا',
          url: '/contact'
+      }, {
+         active: true,
+         dropdown: true,
+         name: 'اللغات',
+         children: [{
+            active: true,
+            name: 'العربية',
+            url: ''
+         }, {
+            active: true,
+            name: 'الإنجليزية',
+            url: ''
+         }, {
+            active: true,
+            name: 'الفرنسية',
+            url: ''
+         }]
       }],
       title: '',
-      right: '',
       fixed: false,
+      direction: '',
       drawer: {
          width: 0,
          isOpen: false,
@@ -35,7 +57,8 @@ export default {
    created() {
       this.title = this.$store.state.title
       this.drawer.width = window.innerWidth
-      this.drawer.isRight = this.$store.state.direction === 'rtl' ? true : false
+      this.direction = this.$store.state.direction
+      this.drawer.isRight = this.direction === 'rtl' ? true : false
       // switch (this.$route.name) {
       //    case 'home':
       //       this.navs = [{

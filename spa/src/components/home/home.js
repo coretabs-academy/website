@@ -12,7 +12,7 @@ export default {
          description:'إن الإلمام بمجال البرمجة، أمرٌ لا غنى عنه في أيامنا هذه. وإن تعلُّم البرمجة هو من أكثر الأمور الغنية والمفيدة التي يمكنك القيام بها.'
       },
       courses: {
-         title:'الدروس',
+         title:'المسارات',
          cards: [{
             show: false,
             href: 'fullstack',
@@ -51,7 +51,7 @@ export default {
    },
    methods: {
       onResize(e) {
-         this.main.height = `${window.innerHeight}px`
+         this.main.height = `${window.innerHeight - $('header .toolbar .toolbar__content').height()}px`
       }
    }
 }
