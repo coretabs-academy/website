@@ -176,11 +176,9 @@ msgstr "تطوير الويب"
 
 #: templates/home.html:33
 msgid ""
-"Familiarity with programming is indispensable today. Learning programming is "
-"one of the most rich and useful things you can do."
+"Coretabs Academy is the first step that will transform your career as a developer. Start talking the future language, select your track, we will make you READY to work"
 msgstr ""
-"إن الإلمام بمجال البرمجة، أمرٌ لا غنى عنه في أيامنا هذه. وإن تعلُّم "
-"البرمجة هو من أكثر الأمور الغنية والمفيدة التي يمكنك القيام بها."
+"أكاديمية Coretabs هي الخطوة الأولى التي ستُغير حياتك كمطور. ابدأ التحدث بلغة المستقبل، اختر المسار المناسب لك، ونحن سنأخذ بيدك إلى سوق العمل"
 
 #: templates/home.html:35 templates/home.html:46
 msgid "Courses"
