@@ -9,7 +9,7 @@
    },
    "dependencies": {
       "jquery": "^3.3.1",
-      "vue": "^2.5.13",
+      "vue": "^2.5.16",
       "vue-router": "^3.0.1",
       "vuetify": "^1.0.11",
       "vuex": "^3.0.1"
@@ -36,7 +36,10 @@
       ],
       "rules": {
          "indent": 0,
-         "space-before-function-paren": ["error", "never"]
+         "space-before-function-paren": [
+            "error",
+            "never"
+         ]
       }
    },
    "postcss": {
