@@ -7,7 +7,8 @@ export default new Vuex.Store({
    state: {
       lang: '',
       title: '',
-      direction: ''
+      direction: '',
+      isLogin: false
    },
    mutations: {},
    actions: {

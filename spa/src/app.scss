@@ -39,6 +39,32 @@ a {
    text-decoration: none !important;
 }
 
+.section-title {
+   position: relative;
+   display: inline-block;
+   font-weight: 700 !important;
+
+   &:after,
+   &:before {
+      top: 50%;
+      content: '';
+      height: 5px;
+      width: 35px;
+      position: absolute;
+      background: $black-color;
+   }
+
+   &:after {
+      left: 100%;
+      margin-left: 10px;
+   }
+
+   &:before {
+      right: 100%;
+      margin-right: 10px;
+   }
+}
+
 .no-select {
    user-select: none;
 }

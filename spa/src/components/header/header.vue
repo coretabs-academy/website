@@ -8,7 +8,7 @@
       </v-toolbar>
       <v-divider></v-divider>
       <v-list class="py-0">
-         <template v-for="nav in navs" v-show="nav.active">
+         <template v-for="nav in navs">
             <v-list-tile v-if="!nav.dropdown" :key="nav.name">
                <v-btn flat block large class="white--text" :to="nav.url">{{nav.name}}</v-btn>
             </v-list-tile>
@@ -29,7 +29,7 @@
       <v-toolbar-title class="white--text">{{title}}</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
-         <v-btn v-for="nav in navs" :key="nav.name" v-if="!nav.dropdown" v-show="nav.active" flat large class="white--text" :to="nav.url">{{nav.name}}</v-btn>
+         <v-btn v-for="nav in navs" :key="nav.name" v-if="!nav.dropdown" flat large class="white--text" :to="nav.url">{{nav.name}}</v-btn>
          <v-menu v-else open-on-hover>
             <v-btn flat large class="white--text" slot="activator">{{nav.name}}</v-btn>
             <v-list class="primary white--text nav-dropdown py-0">

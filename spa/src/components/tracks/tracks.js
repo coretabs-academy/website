@@ -4,27 +4,40 @@ export default {
    name: 'TracksComponent',
    components: {},
    data: () => ({
-      host: '',
-      track: '',
-      action: '',
-      course: '',
-      number: '',
-      courses: [],
-      isTrak: false
+      tracks: {
+         title: 'المسارات',
+         cards: [{
+            show: false,
+            href: '/tracks/fullstack',
+            title: 'تطوير الويب الشامل',
+            background: 'home/fullstack.jpg',
+            description: 'هذا الجزء مخصص لدروس تطوير الويب الشامل, باعتبارها من أكثر الوظائف طلباً في عالم النت !سنتعرف من خلاله على مختلف الأجزاء المتعلقة بالمجال ابتداءاً من أساسيات البرمجة باستعمال لغة بايثون, وصولاً إلى إنشاء موقعنا الخاص و مشاركته مع الآخرين. لإكتشاف المزيد انطلق فوراً مع الدروس.'
+         }, {
+            show: false,
+            href: '/tracks/frontend',
+            title: 'تطوير واجهات المواقع',
+            background: 'home/frontend.jpg',
+            description: 'هذا الجزء مخصص لدروس تطوير واجهات المواقع, باعتبارها من أكثر الوظائف طلباً في عالم النت !خلال دروس هذا المسار ستتعلم بشكل سلس ومختصر العديد من المهارات التي ستصبح مستعد لتوظيفها على مشاريع حقيقة فما ستجدة في هذه القائمة هي دروس متعلقة بالمجال إبتداءاً من الأساسيات و وصولاً لورش عمل تطبيقية سنقوم خلالها بعمل مواقع وتطبيقات متقدمة بطريقة سهلة وممتعة.'
+         }]
+      }
    }),
    created() {
-      this.action = 'إبدأ'
-      this.track = this.$route.params.track
-      this.course = this.$route.params.course
-      this.number = this.$route.params.number
-      if (this.course === undefined && this.number === undefined) {
-         this.isTrak = true
-         this.$http.get(`https://raw.githubusercontent.com/coretabs-academy/${this.track}-tutorials/master/topics.json`).then(response => {
-            this.host = response.body.host
-            this.courses = response.body.categories
-         }, err => {
-            console.error(err)
-         })
+      if (this.$route.name === 'home') {
+         for (let i = 0; i < this.tracks.cards.length; i++) {
+            this.$store.dispatch('getImgUrl', this.tracks.cards[i].background).then(img => {
+               this.tracks.cards[i].background = img
+            }).catch(error => {
+               throw new Error(error.message);
+            })
+         }
+      } else {
+         for (let i = 0; i < this.tracks.cards.length; i++) {
+            this.$store.dispatch('getImgUrl', this.tracks.cards[i].background).then(img => {
+               this.tracks.cards[i].background = img
+            }).catch(error => {
+               throw new Error(error.message);
+            })
+         }
       }
    }
 }

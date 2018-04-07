@@ -2,51 +2,78 @@ export default {
    name: 'HeaderComponent',
    components: {},
    data: () => ({
-      navs: [{
-         active: true,
+      navs: [],
+      default_navs: [{
          dropdown: false,
          name: 'الرئيسية',
          url: '/'
       }, {
-         active: true,
          dropdown: false,
          name: 'تسجيل الدخول',
          url: '/signin'
       }, {
-         active: true,
          dropdown: false,
          name: 'حساب جديد',
          url: '/signup'
       }, {
-         active: true,
+         dropdown: false,
+         name: 'المسارات',
+         url: '/tracks'
+      }, {
          dropdown: false,
          name: 'عن الموقع',
          url: '/about'
       }, {
-         active: true,
          dropdown: false,
          name: 'إتصل بنا',
          url: '/contact'
       }, {
-         active: true,
          dropdown: true,
          name: 'اللغات',
          children: [{
-            active: true,
             name: 'العربية',
             url: ''
          }, {
-            active: true,
             name: 'الإنجليزية',
             url: ''
          }, {
-            active: true,
             name: 'الفرنسية',
             url: ''
          }]
       }],
+      user_navs: [{
+         dropdown: false,
+         name: 'الرئيسية',
+         url: '/tracks'
+      }, {
+         dropdown: false,
+         name: 'الملف الشخصي',
+         url: '/profile'
+      }, {
+         dropdown: false,
+         name: 'عن الموقع',
+         url: '/about'
+      }, {
+         dropdown: false,
+         name: 'إتصل بنا',
+         url: '/contact'
+      }, {
+         name: 'اللغات',
+         dropdown: true,
+         children: [{
+            name: 'العربية',
+            url: ''
+         }, {
+            name: 'الإنجليزية',
+            url: ''
+         }, {
+            name: 'الفرنسية',
+            url: ''
+         }]
+      }],
+      admin_navs: [],
       title: '',
-      fixed: false,
+      fixed: true,
       direction: '',
       drawer: {
          width: 0,
@@ -55,6 +82,7 @@ export default {
       }
    }),
    created() {
+      this.setHeader()
       this.title = this.$store.state.title
       this.drawer.width = window.innerWidth
       this.direction = this.$store.state.direction
@@ -62,101 +90,34 @@ export default {
    },
    watch: {
       $route(to, from) {
+         this.setHeader()
+      }
+   },
+   methods: {
+      setHeader() {
          switch (this.$route.name) {
             case 'home':
             case 'about':
             case 'signin':
             case 'singup':
             case 'contact':
-               this.navs = [{
-                  active: true,
-                  dropdown: false,
-                  name: 'الرئيسية',
-                  url: '/'
-               }, {
-                  active: true,
-                  dropdown: false,
-                  name: 'تسجيل الدخول',
-                  url: '/signin'
-               }, {
-                  active: true,
-                  dropdown: false,
-                  name: 'حساب جديد',
-                  url: '/signup'
-               }, {
-                  active: true,
-                  dropdown: false,
-                  name: 'عن الموقع',
-                  url: '/about'
-               }, {
-                  active: true,
-                  dropdown: false,
-                  name: 'إتصل بنا',
-                  url: '/contact'
-               }, {
-                  active: true,
-                  dropdown: true,
-                  name: 'اللغات',
-                  children: [{
-                     active: true,
-                     name: 'العربية',
-                     url: ''
-                  }, {
-                     active: true,
-                     name: 'الإنجليزية',
-                     url: ''
-                  }, {
-                     active: true,
-                     name: 'الفرنسية',
-                     url: ''
-                  }]
-               }]
+               this.fixed = false
+               this.navs = this.default_navs;
+               break;
+            case 'tracks':
+               if (this.$store.state.isLogin) {
+                  this.navs = this.user_navs;
+               } else {
+                  this.navs = this.default_navs;
+               }
+               this.fixed = false
                break;
             case 'track':
-               this.navs = [{
-                  active: true,
-                  dropdown: false,
-                  name: 'الرئيسية',
-                  url: '/tracks'
-               }, {
-                  active: true,
-                  dropdown: false,
-                  name: '',
-                  url: ''
-               }, {
-                  active: true,
-                  dropdown: false,
-                  name: 'عن الموقع',
-                  url: '/about'
-               }, {
-                  active: true,
-                  dropdown: false,
-                  name: 'إتصل بنا',
-                  url: '/contact'
-               }, {
-                  dropdown: true,
-                  active: true,
-                  name: 'اللغات',
-                  children: [{
-                     active: true,
-                     name: 'العربية',
-                     url: ''
-                  }, {
-                     active: true,
-                     name: 'الإنجليزية',
-                     url: ''
-                  }, {
-                     active: true,
-                     name: 'الفرنسية',
-                     url: ''
-                  }]
-               }]
                this.fixed = true
+               this.navs = this.user_navs;
                break;
          }
-      }
-   },
-   methods: {
+      },
       openDrawer() {
          this.drawer.isOpen = true;
       },

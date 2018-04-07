@@ -8,6 +8,7 @@ import SignUpComponent from './components/signup/signup.vue'
 import TracksComponent from './components/tracks/tracks.vue'
 import ContactComponent from './components/contact/contact.vue'
 import CoursesComponent from './components/courses/courses.vue'
+import ProfileComponent from './components/profile/profile.vue'
 import NotFoundComponent from './components/not-found/not-found.vue'
 
 Vue.use(Router)
@@ -63,5 +64,9 @@ export default new Router({
       components: {
          courses: CoursesComponent
       }
+   }, {
+      path: '/profile',
+      name: 'profile',
+      component: ProfileComponent
    }]
 })
