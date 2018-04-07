@@ -43,6 +43,9 @@ export default new Router({
       name: '404',
       component: NotFoundComponent
    }, {
+      path: '*',
+      redirect: '/404'
+   }, {
       path: '/tracks',
       name: 'tracks',
       component: TracksComponent
