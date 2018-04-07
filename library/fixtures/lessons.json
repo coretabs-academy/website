@@ -1,0 +1,13 @@
+[
+  {
+    "model": "library.lesson",
+    "pk": 1,
+    "fields": {
+      "title": "الهيكلة Wire-Framing",
+      "slug": "الهيكلية-wire-framing",
+      "type": "markdown",
+      "url": "https://github.com/coretabs-academy/fullstack-tutorials/tree/master/1",
+      "user": 1
+    }
+  }
+]
