@@ -11,9 +11,7 @@ export default {
       this.$store.state.lang = 'ar'
       this.$store.state.title = 'كورتاب'
       this.$store.state.direction = 'rtl'
-      $('html').attr({
-         'lang': this.$store.state.lang,
-         'dir': this.$store.state.direction
-      })
+      document.querySelector('html').setAttribute('lang', this.$store.state.lang)
+      document.querySelector('html').setAttribute('dir', this.$store.state.direction)
    }
 }

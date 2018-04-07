@@ -1,5 +1,7 @@
+import Vue from 'vue';
+
 export default {
-   name: 'ContributorsComponent',
+   name: 'TrackComponent',
    components: {},
    data: () => ({}),
    created() {}

@@ -8,9 +8,9 @@
       "lint": "vue-cli-service lint"
    },
    "dependencies": {
-      "jquery": "^3.3.1",
       "rfs": "^7.1.1",
       "vue": "^2.5.13",
+      "vue-resource": "^1.5.0",
       "vue-router": "^3.0.1",
       "vuetify": "^1.0.11",
       "vuex": "^3.0.1"

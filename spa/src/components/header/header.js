@@ -59,30 +59,102 @@ export default {
       this.drawer.width = window.innerWidth
       this.direction = this.$store.state.direction
       this.drawer.isRight = this.direction === 'rtl' ? true : false
-      // switch (this.$route.name) {
-      //    case 'home':
-      //       this.navs = [{
-      //          name: 'الرئيسية',
-      //          url: '/'
-      //       }, {
-      //          name: 'دخول',
-      //          url: '/signin'
-      //       }, {
-      //          name: 'حساب جديد',
-      //          url: '/signup'
-      //       }, {
-      //          name: 'عن الموقع',
-      //          url: '/about'
-      //       }, {
-      //          name: 'إتصل بنا',
-      //          url: '/contact'
-      //       }]
-      //       break;
-      //    case 'contributors':
-      //       this.navs = []
-      //       this.fixed = true
-      //       break;
-      // }
+   },
+   watch: {
+      $route(to, from) {
+         switch (this.$route.name) {
+            case 'home':
+            case 'about':
+            case 'signin':
+            case 'singup':
+            case 'contact':
+               this.navs = [{
+                  active: true,
+                  dropdown: false,
+                  name: 'الرئيسية',
+                  url: '/'
+               }, {
+                  active: true,
+                  dropdown: false,
+                  name: 'تسجيل الدخول',
+                  url: '/signin'
+               }, {
+                  active: true,
+                  dropdown: false,
+                  name: 'حساب جديد',
+                  url: '/signup'
+               }, {
+                  active: true,
+                  dropdown: false,
+                  name: 'عن الموقع',
+                  url: '/about'
+               }, {
+                  active: true,
+                  dropdown: false,
+                  name: 'إتصل بنا',
+                  url: '/contact'
+               }, {
+                  active: true,
+                  dropdown: true,
+                  name: 'اللغات',
+                  children: [{
+                     active: true,
+                     name: 'العربية',
+                     url: ''
+                  }, {
+                     active: true,
+                     name: 'الإنجليزية',
+                     url: ''
+                  }, {
+                     active: true,
+                     name: 'الفرنسية',
+                     url: ''
+                  }]
+               }]
+               break;
+            case 'track':
+               this.navs = [{
+                  active: true,
+                  dropdown: false,
+                  name: 'الرئيسية',
+                  url: '/tracks'
+               }, {
+                  active: true,
+                  dropdown: false,
+                  name: '',
+                  url: ''
+               }, {
+                  active: true,
+                  dropdown: false,
+                  name: 'عن الموقع',
+                  url: '/about'
+               }, {
+                  active: true,
+                  dropdown: false,
+                  name: 'إتصل بنا',
+                  url: '/contact'
+               }, {
+                  dropdown: true,
+                  active: true,
+                  name: 'اللغات',
+                  children: [{
+                     active: true,
+                     name: 'العربية',
+                     url: ''
+                  }, {
+                     active: true,
+                     name: 'الإنجليزية',
+                     url: ''
+                  }, {
+                     active: true,
+                     name: 'الفرنسية',
+                     url: ''
+                  }]
+               }]
+               this.fixed = true
+               break;
+         }
+      }
    },
    methods: {
       openDrawer() {

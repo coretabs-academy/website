@@ -1,13 +1,12 @@
 import Vue from 'vue'
 import App from './app.vue'
-import jQuery from 'jquery'
 import Vuetify from 'vuetify'
+import VueResource from 'vue-resource'
 import router from './router'
 import store from './store/app.store'
 
-global.$ = jQuery
-global.jQuery = jQuery
-Vue.config.productionTip = false
+Vue.use(VueResource)
+
 // User Vuetify material desing && customize own theme
 Vue.use(Vuetify, {
    theme: {
@@ -20,6 +19,9 @@ Vue.use(Vuetify, {
       success: '#4caf50'
    }
 })
+
+Vue.config.productionTip = false
+Vue.http.options.emulateJSON = true
 
 new Vue({
    router,
