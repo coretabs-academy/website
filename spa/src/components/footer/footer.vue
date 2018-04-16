@@ -1,5 +1,5 @@
 <template>
-<v-footer height="auto" inset>
+<v-footer height="auto" inset v-show="show">
    <v-card flat tile class="primary white--text text-xs-center">
      <v-card-text class="mt-3">
        <v-btn v-for="social in socials" :key="social.icon" icon :href="social.url" target="_blank" class="mx-3 white--text">

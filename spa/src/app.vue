@@ -2,7 +2,7 @@
 <v-app>
    <header-component></header-component>
    <v-content>
-      <v-container fluid>
+      <v-container fluid class="main-container">
          <router-view></router-view>
       </v-container>
    </v-content>

@@ -3,6 +3,8 @@ export default {
    components: {},
    data: () => ({
       navs: [],
+      logo: '',
+      show: true,
       default_navs: [{
          url: '/',
          dropdown: false,
@@ -87,6 +89,11 @@ export default {
    }),
    created() {
       this.setHeader()
+      this.$store.dispatch('getImgUrl', 'icons/icon.jpg').then(img => {
+         this.logo = img
+      }).catch(error => {
+         throw new Error(error.message);
+      })
       this.title = this.$store.state.title
       this.drawer.width = window.innerWidth
       this.direction = this.$store.state.direction
@@ -103,12 +110,14 @@ export default {
             case 'home':
             case 'signin':
             case 'singup':
+               this.show = true;
                this.navs = this.default_navs;
                break;
             case '404':
             case 'about':
             case 'tracks':
             case 'contact':
+               this.show = true;
                if (!this.$store.state.isLogin) {
                   this.navs = this.user_navs;
                } else {
@@ -117,15 +126,16 @@ export default {
                break;
             case 'track':
             case 'profile':
+               this.show = true;
                this.navs = this.user_navs;
+               break;
+            case 'courses':
+               this.show = false;
                break;
          }
       },
-      openDrawer() {
-         this.drawer.isOpen = true;
-      },
-      closeDrawer() {
-         this.drawer.isOpen = false;
+      toggleDrawer() {
+         this.drawer.isOpen = !this.drawer.isOpen;
       },
       onScroll(e) {
          if (window.pageYOffset || document.documentElement.scrollTop > 0) {

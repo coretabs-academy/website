@@ -1,12 +1,6 @@
 <template>
-<header>
+<header v-show="show">
    <v-navigation-drawer :right="drawer.isRight" app temporary floating v-model="drawer.isOpen" :width="drawer.width" class="primary">
-      <v-toolbar flat class="primary">
-         <v-toolbar-title class="white--text">{{title}}</v-toolbar-title>
-         <v-spacer></v-spacer>
-         <v-toolbar-side-icon class="white--text" @click="closeDrawer"></v-toolbar-side-icon>
-      </v-toolbar>
-      <v-divider></v-divider>
       <v-list class="py-0">
          <template v-for="nav in navs">
             <v-list-tile v-if="!nav.dropdown" :key="nav.name">
@@ -26,6 +20,9 @@
       </v-list>
    </v-navigation-drawer>
    <v-toolbar :fixed="fixed" :flat="!fixed" class="primary" v-scroll="onScroll">
+      <v-avatar class="brand-logo">
+         <img :src="logo" alt="avatar">
+      </v-avatar>
       <v-toolbar-title class="white--text">{{title}}</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
@@ -39,7 +36,7 @@
             </v-list>
          </v-menu>
       </v-toolbar-items>
-      <v-toolbar-side-icon class="white--text hidden-md-and-up" @click="openDrawer()"></v-toolbar-side-icon>
+      <v-toolbar-side-icon class="white--text hidden-md-and-up" @click="toggleDrawer()"></v-toolbar-side-icon>
    </v-toolbar>
 </header>
 </template>

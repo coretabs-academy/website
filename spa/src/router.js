@@ -40,33 +40,30 @@ export default new Router({
       path: '/contact',
       component: ContactComponent
    }, {
-      path: '/404',
       name: '404',
+      path: '/404',
       component: NotFoundComponent
    }, {
       path: '*',
       redirect: '/404'
    }, {
-      path: '/tracks',
       name: 'tracks',
+      path: '/tracks',
       component: TracksComponent
    }, {
-      path: '/tracks/:track',
       name: 'track',
+      path: '/tracks/:track',
       component: TrackComponent
    }, {
       path: '/tracks/:track/:course',
-      name: 'tracks-courses',
-      component: CoursesComponent
+      redirect: '/tracks/:track/:course/1'
    }, {
-      path: '/tracks/:track/:course/:number',
-      name: 'tracks-courses-number',
-      components: {
-         courses: CoursesComponent
-      }
+      name: 'courses',
+      component: CoursesComponent,
+      path: '/tracks/:track/:course/:number'
    }, {
-      path: '/profile',
       name: 'profile',
+      path: '/profile',
       component: ProfileComponent
    }]
 })

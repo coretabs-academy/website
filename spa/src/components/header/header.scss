@@ -6,6 +6,9 @@ Header Style
 header {
    .navigation-drawer {
       z-index: 150 !important;
+      box-shadow: none !important;
+      margin-top: $header-height !important;
+      max-height: calc(100vh - $header-height) !important;
 
       .list {
          .list__tile {
@@ -49,7 +52,7 @@ header {
 
    .toolbar {
       z-index: 100 !important;
-      padding: 0 20px !important;
+      padding: 0 5px !important;
 
       .toolbar__content {
          height: $header-height !important;
@@ -57,6 +60,19 @@ header {
          .toolbar__title {
             font-weight: bold !important;
             @include responsive-font-size(1.5rem,true);
+         }
+
+         .brand-logo {
+            border-radius: 50% !important;
+            width: $header-height - 10px !important;
+            height: $header-height - 10px !important;
+
+            img {
+               width: auto !important;
+               height: auto !important;
+               max-width: $header-height - 10px !important;
+               max-height: $header-height - 10px !important;
+            }
          }
 
          .btn:not(.toolbar__side-icon) {

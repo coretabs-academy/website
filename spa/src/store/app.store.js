@@ -13,7 +13,7 @@ export default new Vuex.Store({
    mutations: {},
    actions: {
       getImgUrl(state, img) {
-         return require(`@/assets/multimedia/images/${img}`)
+         return require(`@/assets/multimedia/${img}`)
       }
    }
 })
