@@ -6,7 +6,7 @@
             <v-flex text-xs-center xs12 sm12 md12>
                <h1 class="my-5 section-title">{{tracks.title}}</h1>
             </v-flex>
-            <v-flex xs11 sm8 md4 v-for="card in tracks.cards" :key="card.background" class="mb-5">
+            <v-flex xs12 sm9 md4 v-for="card in tracks.cards" :key="card.background" class="mb-5">
                <v-card>
                   <v-card-media :src="card.background"></v-card-media>
                   <v-card-title primary-title class="primary">

@@ -5,43 +5,41 @@ Tracks Style
 =======================================*/
 .tracks {
    .jumbotron {
-      .flex {
-         > h1 {
-            @include responsive-font-size(2.3rem,true);
+      .layout {
+         margin: 0px 20px !important;
+      }
+
+      .card {
+         position: relative !important;
+
+         .card__media {
+            /* 16:9 Aspect Ratio */
+            padding-top: 56.25% !important;
+            /* 4:3 Aspect Ratio */
+            padding-top: 75%;
+            /* 3:2 Aspect Ratio */
+            padding-top: 66.66%;
+            /* 8:5 Aspect Ratio */
+            padding-top: 62.5%;
          }
 
-         .card {
-            position: relative !important;
+         .card__title {
+            height: 50px !important;
+            line-height: 50px !important;
+            padding: 0 25px 0 0 !important;
 
-            .card__media {
-               /* 16:9 Aspect Ratio */
-               padding-top: 56.25% !important;
-               /* 4:3 Aspect Ratio */
-               padding-top: 75%;
-               /* 3:2 Aspect Ratio */
-               padding-top: 66.66%;
-               /* 8:5 Aspect Ratio */
-               padding-top: 62.5%;
+            h1 {
+               @include responsive-font-size(0.99rem,true);
             }
+         }
 
-            .card__title {
-               height: 50px !important;
-               line-height: 50px !important;
-               padding: 0 25px 0 0 !important;
-
-               h1 {
-                  @include responsive-font-size(0.99rem,true);
-               }
-            }
-
-            .card__text {
-               top: 0 !important;
-               z-index: 80 !important;
-               border-radius: 0 !important;
-               position: absolute !important;
-               height: calc(100% - 50px) !important;
-               @include responsive-font-size(0.85rem,true);
-            }
+         .card__text {
+            top: 0 !important;
+            z-index: 80 !important;
+            border-radius: 0 !important;
+            position: absolute !important;
+            height: calc(100% - 50px) !important;
+            @include responsive-font-size(0.85rem,true);
          }
       }
    }

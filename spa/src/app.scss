@@ -30,8 +30,9 @@ html {
 }
 
 body {
-   color: $black-color;
-   background: $white-color;
+   color: $white-color;
+   background: $black-color;
+   overflow-x: hidden !important;
 }
 
 a {
@@ -43,6 +44,7 @@ a {
    position: relative;
    display: inline-block;
    font-weight: 700 !important;
+   @include responsive-font-size(2rem,true);
 
    &:after,
    &:before {

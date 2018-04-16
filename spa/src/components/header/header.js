@@ -4,76 +4,80 @@ export default {
    data: () => ({
       navs: [],
       default_navs: [{
+         url: '/',
          dropdown: false,
-         name: 'الرئيسية',
-         url: '/'
+         name: 'الرئيسية'
       }, {
+         url: '/signin',
          dropdown: false,
-         name: 'تسجيل الدخول',
-         url: '/signin'
+         name: 'تسجيل الدخول'
       }, {
+         url: '/signup',
          dropdown: false,
-         name: 'حساب جديد',
-         url: '/signup'
+         name: 'حساب جديد'
       }, {
+         url: '/tracks',
          dropdown: false,
-         name: 'المسارات',
-         url: '/tracks'
+         name: 'المسارات'
       }, {
+         url: '/about',
          dropdown: false,
-         name: 'عن الموقع',
-         url: '/about'
+         name: 'عن الموقع'
       }, {
+         url: '/contact',
          dropdown: false,
-         name: 'إتصل بنا',
-         url: '/contact'
+         name: 'إتصل بنا'
       }, {
-         dropdown: true,
          name: 'اللغات',
+         dropdown: true,
          children: [{
-            name: 'العربية',
-            url: ''
+            url: '',
+            name: 'العربية'
          }, {
-            name: 'الإنجليزية',
-            url: ''
+            url: '',
+            name: 'الإنجليزية'
          }, {
-            name: 'الفرنسية',
-            url: ''
+            url: '',
+            name: 'الفرنسية'
          }]
       }],
       user_navs: [{
+         url: '/tracks',
          dropdown: false,
-         name: 'الرئيسية',
-         url: '/tracks'
+         name: 'الرئيسية'
       }, {
+         url: '/profile',
          dropdown: false,
-         name: 'الملف الشخصي',
-         url: '/profile'
+         name: 'الملف الشخصي'
       }, {
+         url: '/about',
          dropdown: false,
-         name: 'عن الموقع',
-         url: '/about'
+         name: 'عن الموقع'
       }, {
+         url: '/contact',
          dropdown: false,
-         name: 'إتصل بنا',
-         url: '/contact'
+         name: 'إتصل بنا'
       }, {
          name: 'اللغات',
          dropdown: true,
          children: [{
-            name: 'العربية',
-            url: ''
+            url: '',
+            name: 'العربية'
          }, {
-            name: 'الإنجليزية',
-            url: ''
+            url: '',
+            name: 'الإنجليزية'
          }, {
-            name: 'الفرنسية',
-            url: ''
+            url: '',
+            name: 'الفرنسية'
          }]
+      }, {
+         url: '',
+         name: 'خروج',
+         dropdown: false
       }],
       admin_navs: [],
       title: '',
-      fixed: true,
+      fixed: false,
       direction: '',
       drawer: {
          width: 0,
@@ -97,23 +101,22 @@ export default {
       setHeader() {
          switch (this.$route.name) {
             case 'home':
-            case 'about':
             case 'signin':
             case 'singup':
-            case 'contact':
-               this.fixed = false
                this.navs = this.default_navs;
                break;
+            case '404':
+            case 'about':
             case 'tracks':
-               if (this.$store.state.isLogin) {
+            case 'contact':
+               if (!this.$store.state.isLogin) {
                   this.navs = this.user_navs;
                } else {
                   this.navs = this.default_navs;
                }
-               this.fixed = false
                break;
             case 'track':
-               this.fixed = true
+            case 'profile':
                this.navs = this.user_navs;
                break;
          }

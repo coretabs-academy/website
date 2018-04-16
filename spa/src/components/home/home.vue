@@ -1,7 +1,7 @@
 <template>
 <div class="home">
    <v-jumbotron class="main" height="auto">
-      <v-container fluid grid-list-xl fill-height>
+      <v-container fluid fill-height>
          <v-layout align-center justify-center>
             <v-flex text-xs-center xs10 sm6 md6>
                <h1 class="white--text mb-2">{{main.title}}</h1>

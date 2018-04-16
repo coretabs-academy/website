@@ -3,3 +3,54 @@
 /*=====================================
 Track Style
 =======================================*/
+.track {
+   padding: 15px 0 50px 0 !important;
+
+   .card {
+      padding: 0 15px !important;
+      position: relative !important;
+
+      .card__title {
+         font-weight: 700 !important;
+         @include responsive-font-size(1.9rem,true);
+
+         div {
+            width: 100% !important;
+            height: 100% !important;
+         }
+      }
+
+      .card__text {
+         font-weight: 700 !important;
+         @include responsive-font-size(1.2rem,true);
+      }
+
+      .card__media {
+         padding-top: 100% !important;
+      }
+
+      .card__actions {
+         padding: 0 15px !important;
+
+         .btn {
+            font-weight: 600 !important;
+            margin-left: 50px !important;
+            margin-right: 10px !important;
+            @include responsive-font-size(1.2rem,true);
+         }
+      }
+   }
+}
+
+html[dir="rtl"] {
+   .track {
+      .card {
+         .card__actions {
+            .btn {
+               margin-left: 10px !important;
+               margin-right: 50px !important;
+            }
+         }
+      }
+   }
+}
