@@ -43,16 +43,14 @@ export default {
                                  title: course[`title-${this.$store.state.lang}`],
                                  content: this.b64DecodeUnicode(data.body.content)
                               });
-
                               if (courseNumber === item.topics.length - 1) {
                                  this.currentCourse = {
                                     id: this.courses[0].id,
                                     title: this.courses[0].title,
-                                    coursesGroup: `${index} ${item[title-`${this.$store.state.lang}`]}`
+                                    coursesGroup: `الدرس ${index + 1} : ${item[`title-${this.$store.state.lang}`]}`
                                  }
-                                 this.trackURL = `/tracks/${this.$route.params.track}/${Number(this.$route.params.course) + 1}`;
+                                 this.trackURL = `/tracks/${this.$route.params.track}/${Number(this.$route.params.course)}`
                                  this.dialog.url = `/tracks/${this.$route.params.track}/${Number(this.$route.params.course) + 1}/1`
-                                 console.log(this.courses)
                                  this.loaded = true
                               }
                            }, error => {
