@@ -4,7 +4,8 @@ export default {
    data: () => ({
       title: '',
       courses: [],
-      action: 'عرض'
+      action: 'عرض',
+      loaded: false
    }),
    created() {
       this.$http.get(`https://raw.githubusercontent.com/coretabs-academy/${this.$route.params.track}-tutorials/master/topics.json`)
@@ -19,6 +20,9 @@ export default {
                   image: `${result.body.host}/images/${item.image}`,
                   url: `/tracks/${this.$route.params.track}/${index}/1`
                })
+               if (index === result.body.categories.length - 1) {
+                  this.loaded = true
+               }
             })
          }, error => {
             console.error(error);

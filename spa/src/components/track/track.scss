@@ -5,54 +5,52 @@ Track Style
 =======================================*/
 .track {
    padding: 0 !important;
+   height: 100% !important;
+
+   .flex {
+      padding: 0 !important;
+   }
 
    .card {
       padding: 0 !important;
-      border-radius: 6px !important;
+      position: relative !important;
+      border-radius: 4px !important;
 
-      .flex:nth-child(1) {
-         padding: 10px 0 !important;
+      .card__title {
+         font-weight: 700 !important;
+         @include responsive-font-size(1.6rem,true);
 
-         .card__title {
-            font-weight: 700 !important;
-            @include responsive-font-size(1.9rem,true);
-
-            div {
-               width: 100% !important;
-               height: 100% !important;
-            }
-         }
-
-         .card__text {
-            font-weight: 700 !important;
-            @include responsive-font-size(1.2rem,true);
+         div {
+            width: 100% !important;
+            height: 100% !important;
          }
       }
 
-      .flex:nth-child(2) {
-         padding: 0 !important;
+      .card__text {
+         font-weight: 700 !important;
+         padding: 0 16px 0 48px !important;
+         @include responsive-font-size(1.2rem,true);
+      }
 
-         .card__media {
-            width: 100% !important;
-            border-radius: 6px 0 0 6px !important;
-            background: linear-gradient(45deg, rgb(198, 189, 187), $secondary-color) !important;
+      .card__media {
+         width: 100% !important;
+         height: 100% !important;
+         border-radius: 4px 0 0 4px !important;
+         // background: linear-gradient(45deg,$error-color, $error-color) !important;
+         .card__media__background {
+            @include center(false);
+            height: 70% !important;
+            background-size: contain !important;
+         }
 
-            .card__media__background {
-               top: 50% !important;
-               left: 50% !important;
-               height: 80% !important;
-               transform: translate(-50%,-50%);
-               background-size: contain !important;
-            }
-
-            .card__media__content {
-               display: none !important;
-            }
+         .card__media__content {
+            display: none !important;
          }
       }
 
       .card__actions {
-         padding: 0 15px !important;
+         padding: 15px !important;
+         border-top: 1px solid rgba($black-color,0.19) !important;
 
          .btn {
             margin: 0 !important;
@@ -64,13 +62,14 @@ Track Style
             width: 100% !important;
             display: flex !important;
             align-items: center !important;
+            padding: 0 16px 0 32px !important;
 
             .progress-linear {
                border-radius: 25px !important;
             }
 
             span {
-               font-weight: 600 !important;
+               font-weight: 700 !important;
                margin: 0 15px 0 10px !important;
                @include responsive-font-size(1rem,true);
             }
@@ -82,8 +81,14 @@ Track Style
 html[dir="rtl"] {
    .track {
       .card {
+         .card__text {
+            padding: 0 32px 0 16px !important;
+         }
+
          .card__actions {
             .progress {
+               padding: 0 48px 0 16px !important;
+
                .span {
                   margin: 0 10px 0 15px !important;
                }

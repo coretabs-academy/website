@@ -66,6 +66,7 @@ a {
       margin-right: 10px;
    }
 }
+@include center(true);
 
 .no-select {
    user-select: none;
@@ -73,6 +74,10 @@ a {
 
 .align-center {
    text-align: center !important;
+}
+
+.hide {
+   display: none !important;
 }
 
 .content {

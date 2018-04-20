@@ -10,3 +10,19 @@ $secondary-color: #e0e0e0;
 $header-height: 60px;
 $cario-font: 'assets/vendor/fonts/cario/';
 $material-design-font: 'assets/vendor/fonts/material-design-icons/';
+@mixin center($class) {
+   @if($class) {
+      .center {
+         top: 50% !important;
+         left: 50% !important;
+         position: absolute !important;
+         transform: translate(-50%,-50%) !important;
+      }
+   }
+
+   @else {
+      top: 50% !important;
+      left: 50% !important;
+      transform: translate(-50%,-50%) !important;
+   }
+}

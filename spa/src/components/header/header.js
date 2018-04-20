@@ -80,7 +80,6 @@ export default {
       admin_navs: [],
       title: '',
       fixed: false,
-      direction: '',
       drawer: {
          width: 0,
          isOpen: false,
@@ -96,8 +95,7 @@ export default {
       })
       this.title = this.$store.state.title
       this.drawer.width = window.innerWidth
-      this.direction = this.$store.state.direction
-      this.drawer.isRight = this.direction === 'rtl' ? true : false
+      this.drawer.isRight = this.$store.state.direction === 'rtl' ? true : false
    },
    watch: {
       $route(to, from) {
