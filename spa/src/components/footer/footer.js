@@ -17,7 +17,7 @@ export default {
          url: ''
       }, {
          icon: 'forum',
-         url: 'https://coretabs.freeflarum.com'
+         url: 'https://forums.coretabs.net/'
       }]
    }),
    created() {

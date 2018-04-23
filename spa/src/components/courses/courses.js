@@ -98,6 +98,7 @@ export default {
                                        this.dialog.url = `/tracks/${this.$route.params.track}/${nextCourseNumber}`
                                     } else {
                                        this.dialog.url = `/tracks/${this.$route.params.track}`
+                                       this.dialog.message = 'نهاية المسار هل تريد الإنتقال إلى قائمة الدروس'
                                     }
                                     this.trackURL = `/tracks/${this.$route.params.track}`
                                     this.loaded = true

@@ -113,11 +113,11 @@ main {
          > div {
             width: 100% !important;
             height: 100% !important;
-            padding: 40px !important;
             transition: none !important;
             user-select: text !important;
             overflow-y: scroll !important;
             overflow-x: hidden !important;
+            padding: 40px 100px !important;
          }
       }
 
