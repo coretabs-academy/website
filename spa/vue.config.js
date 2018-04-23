@@ -4,7 +4,7 @@ module.exports = {
    configureWebpack: {
       output: {
          publicPath: '/public/',
-         path: path.resolve(__dirname, './public')
+         path: path.resolve(__dirname, '../public')
       },
       plugins: [
          new FaviconsWebpackPlugin({
