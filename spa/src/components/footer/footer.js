@@ -35,10 +35,10 @@ export default {
             case '404':
             case 'course':
             case 'courses':
-               this.show = false;
-               break;
+               this.show = false
+               break
             default:
-               this.show = true;
+               this.show = true
          }
       }
    }

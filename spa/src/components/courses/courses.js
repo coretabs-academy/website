@@ -29,7 +29,7 @@ export default {
       next: 'التالي'
    }),
    created() {
-      this.drawer.isRight = this.$store.state.direction === 'rtl' ? true : false
+      this.drawer.isRight = this.$store.state.direction === 'rtl'
       this.getCourses()
    },
    watch: {
@@ -52,7 +52,7 @@ export default {
             repo: `${this.$route.params.track}-tutorials`,
             path: 'topics.json'
          })
-         let BreakException = {};
+         let BreakException = {}
          try {
             this.$http.get(this.$store.state.githubFileURL)
                .then(data => {
@@ -79,7 +79,7 @@ export default {
                                        url: query
                                     }
                                  }
-                              });
+                              })
                               if (courseNumber === item.topics.length - 1) {
                                  let id = Number(this.$route.params.number)
                                  if (typeof this.courses[id - 1] !== 'undefined') {
@@ -119,7 +119,6 @@ export default {
                      throw e
                   }
                })
-
          } catch (e) {
             if (e !== BreakException) {
                console.error(e)
@@ -139,13 +138,13 @@ export default {
          })
       },
       nextStep(n) {
-         this.currentCourse.id = n + 1;
+         this.currentCourse.id = n + 1
          if (n === this.courses.length) {
             this.dialog.open = true
          }
          if (n < this.courses.length) {
             let course = this.courses[n]
-            this.currentCourse.title = course.title;
+            this.currentCourse.title = course.title
             this.$router.push({
                name: 'course',
                params: {
@@ -158,9 +157,9 @@ export default {
          }
       },
       prevStep(n) {
-         this.currentCourse.id = n - 1;
+         this.currentCourse.id = n - 1
          let course = this.courses[n - 2]
-         this.currentCourse.title = course.title;
+         this.currentCourse.title = course.title
          this.$router.push({
             name: 'course',
             params: {

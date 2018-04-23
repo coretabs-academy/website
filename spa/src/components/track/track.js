@@ -35,7 +35,7 @@ export default {
          })
    },
    updated() {
-      let cards = document.querySelectorAll('.track .card');
+      let cards = document.querySelectorAll('.track .card')
       for (let i = 0; i < cards.length; i++) {
          cards[i].querySelector('.card__media').style.height = `${cards[i].offsetHeight}px`
       }

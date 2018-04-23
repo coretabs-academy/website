@@ -32,7 +32,7 @@ export default {
             url: '/contact',
             dropdown: false,
             name: 'إتصل بنا'
-         },
+         }
          // {
          //    name: 'اللغات',
          //    dropdown: true,
@@ -96,11 +96,11 @@ export default {
       this.$store.dispatch('getImgUrl', 'icons/icon.jpg').then(img => {
          this.logo = img
       }).catch(error => {
-         throw new Error(error.message);
+         throw new Error(error.message)
       })
       this.title = this.$store.state.title
       this.drawer.width = window.innerWidth
-      this.drawer.isRight = this.$store.state.direction === 'rtl' ? true : false
+      this.drawer.isRight = this.$store.state.direction === 'rtl'
    },
    watch: {
       $route(to, from) {
@@ -124,40 +124,40 @@ export default {
             case 'home':
             case 'signin':
             case 'singup':
-               this.show = true;
-               this.navs = this.default_navs;
-               break;
+               this.show = true
+               this.navs = this.default_navs
+               break
             case 'about':
             case 'tracks':
             case 'contact':
-               this.show = true;
+               this.show = true
                // if (!this.$store.state.isLogin) {
                //    this.navs = this.user_navs;
                // } else {
-               this.navs = this.default_navs;
+               this.navs = this.default_navs
                // }
-               break;
+               break
             case 'track':
             case 'profile':
-               this.show = true;
+               this.show = true
                // this.navs = this.user_navs;
-               this.navs = this.default_navs;
-               break;
+               this.navs = this.default_navs
+               break
             case '404':
             case 'course':
             case 'courses':
-               this.show = false;
-               break;
+               this.show = false
+               break
          }
       },
       toggleDrawer() {
-         this.drawer.isOpen = !this.drawer.isOpen;
+         this.drawer.isOpen = !this.drawer.isOpen
       },
       onScroll(e) {
          if (window.pageYOffset || document.documentElement.scrollTop > 0) {
-            this.fixed = true;
+            this.fixed = true
          } else {
-            this.fixed = false;
+            this.fixed = false
          }
       }
    }

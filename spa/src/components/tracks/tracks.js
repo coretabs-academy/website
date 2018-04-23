@@ -24,7 +24,7 @@ export default {
          this.$store.dispatch('getImgUrl', this.tracks.cards[i].background).then(img => {
             this.tracks.cards[i].background = img
          }).catch(error => {
-            throw new Error(error.message);
+            throw new Error(error.message)
          })
       }
    }

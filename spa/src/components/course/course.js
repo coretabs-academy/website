@@ -37,7 +37,7 @@ export default {
             sanitize: true,
             smartLists: true,
             smartypants: false
-         });
+         })
          return marked(mdText)
       }
    }
