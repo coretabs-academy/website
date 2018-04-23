@@ -1,6 +1,9 @@
 export default {
    name: 'NotFoundComponent',
    components: {},
-   data: () => ({}),
+   data() {
+       return {
+       }
+   },
    created() {}
 }

@@ -35,10 +35,10 @@ export default {
          path: 'topics.json'
       })
 
-      let data = await this.$http.get(this.$store.state.githubFileURL)
-      data = JSON.parse(this.$api.b64DecodeUnicode(data.content)).categories
       let BreakException = {};
       try {
+         let data = await this.$http.get(this.$store.state.githubFileURL)
+         data = JSON.parse(this.$api.b64DecodeUnicode(data.content)).categories
          data.forEach((item, index) => {
             if (index === Number(this.$route.params.course)) {
                item.topics.forEach(async (course, courseNumber) => {
@@ -65,7 +65,7 @@ export default {
          })
       } catch (e) {
          if (e !== BreakException) {
-            throw e
+            throw new e
          }
       }
       this.courses.sort((a, b) => {

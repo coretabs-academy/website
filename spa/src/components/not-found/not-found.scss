@@ -3,3 +3,49 @@
 /*=====================================
 404 page Style
 =======================================*/
+.not-found {
+   svg {
+      width: 70%;
+      position: relative;
+      // margin-top: -100px;
+   }
+
+   svg #all {
+      animation: bounce 5s infinite linear;
+   }
+   @keyframes bounce {
+      0% {
+         transform: translateY(0px);
+      }
+
+      50% {
+         transform: translateY(15px);
+      }
+
+      100% {
+         transform: translateY(0px);
+      }
+   }
+
+   .nf-container {
+      display: flex;
+      align-content: center;
+      align-items: center;
+
+      .nf-content {
+         flex: 1;
+      }
+   }
+
+   .nf-container {
+      color: rgb(77, 77, 77);
+
+      h1 {
+         @include rfs(170);
+      }
+
+      p {
+         @include rfs(30);
+      }
+   }
+}

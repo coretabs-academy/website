@@ -31,10 +31,11 @@ export default {
    },
    methods: {
       setFooter() {
-         if (this.$route.name === 'courses') {
-            this.show = false;
-         } else {
-            this.show = true;
+         switch (this.$route.name) {
+            case '404':
+            case 'courses':
+               this.show = false;
+               break;
          }
       }
    }
