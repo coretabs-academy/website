@@ -9,19 +9,21 @@ export default {
          url: '/',
          dropdown: false,
          name: 'الرئيسية'
-      }, {
-         url: '/signin',
-         dropdown: false,
-         name: 'تسجيل الدخول'
-      }, {
-         url: '/signup',
-         dropdown: false,
-         name: 'حساب جديد'
-      }, {
-         url: '/tracks',
-         dropdown: false,
-         name: 'المسارات'
-      }, {
+      },
+      //  {
+      //    url: '/signin',
+      //    dropdown: false,
+      //    name: 'تسجيل الدخول'
+      // }, {
+      //    url: '/signup',
+      //    dropdown: false,
+      //    name: 'حساب جديد'
+      // }, {
+      //    url: '/tracks',
+      //    dropdown: false,
+      //    name: 'المسارات'
+      // },
+      {
          url: '/about',
          dropdown: false,
          name: 'عن الموقع'
@@ -29,20 +31,22 @@ export default {
          url: '/contact',
          dropdown: false,
          name: 'إتصل بنا'
-      }, {
-         name: 'اللغات',
-         dropdown: true,
-         children: [{
-            url: '',
-            name: 'العربية'
-         }, {
-            url: '',
-            name: 'الإنجليزية'
-         }, {
-            url: '',
-            name: 'الفرنسية'
-         }]
-      }],
+      },
+      // {
+      //    name: 'اللغات',
+      //    dropdown: true,
+      //    children: [{
+      //       url: '',
+      //       name: 'العربية'
+      //    }, {
+      //       url: '',
+      //       name: 'الإنجليزية'
+      //    }, {
+      //       url: '',
+      //       name: 'الفرنسية'
+      //    }]
+      // }
+   ],
       user_navs: [{
          url: '/tracks',
          dropdown: false,
@@ -116,16 +120,17 @@ export default {
             case 'tracks':
             case 'contact':
                this.show = true;
-               if (!this.$store.state.isLogin) {
-                  this.navs = this.user_navs;
-               } else {
+               // if (!this.$store.state.isLogin) {
+               //    this.navs = this.user_navs;
+               // } else {
                   this.navs = this.default_navs;
-               }
+               // }
                break;
             case 'track':
             case 'profile':
                this.show = true;
-               this.navs = this.user_navs;
+               // this.navs = this.user_navs;
+               this.navs = this.default_navs;
                break;
             case 'courses':
                this.show = false;

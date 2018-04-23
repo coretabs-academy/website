@@ -1,6 +1,6 @@
 <template>
 <div v-if="loaded" class="courses">
-   <v-stepper v-model="currentCourse.id" vertical non-linear>
+   <v-stepper v-model="currentCourse.id" vertical v-resize="onResize">
       <v-toolbar app>
          <v-toolbar-side-icon class="white--text" @click="drawer.isOpen = !drawer.isOpen"></v-toolbar-side-icon>
          <v-toolbar-title class="white--text mx-auto">{{currentCourse.title}}</v-toolbar-title>
@@ -16,26 +16,28 @@
             <v-toolbar-title class="white--text">{{currentCourse.coursesGroup}}</v-toolbar-title>
          </v-toolbar>
          <v-divider></v-divider>
-         <v-stepper-step v-bind:class="{'active':currentCourse.id === course.id}" v-for="course in courses" :key="`${course.id}-step`" :step="course.id" :complete="currentCourse.id > course.id">{{course.title}}</v-stepper-step>
+         <div class="stepper-group">
+            <v-stepper-step v-bind:class="{'active':currentCourse.id === course.id}" v-for="course in courses" :key="`${course.id}-step`" :step="course.id" @click="gotToStep(course.id)" editable>{{course.title}}</v-stepper-step>
+         </div>
       </v-navigation-drawer>
-      <v-stepper-content :step="course.id" v-for="course in courses" :key="`${course.id}-content`" v-bind:class="{'hide':currentCourse.id !== course.id}">
+      <v-stepper-content :step="course.id" v-for="course in courses" :key="`${course.id}-content`" v-bind:class="{'hide':currentCourse.id !== course.id}" v-bind:style="{ height: height + 'px' }">
          <div v-html="previewText(course.content)"></div>
       </v-stepper-content>
-      <v-footer app inset class="toolbar-footer">
+      <v-footer app class="toolbar-footer">
          <div class="mx-auto">
             <v-btn color="white" @click="prevStep(currentCourse.id)" :disabled="currentCourse.id === 1">{{prev}}</v-btn>
             <v-btn color="white" @click="nextStep(currentCourse.id)" :disabled="currentCourse.id > courses.length">{{next}}</v-btn>
          </div>
       </v-footer>
    </v-stepper>
-   <v-dialog v-model="dialog.open" max-width="400px" content-class="courses-dialog">
+   <v-dialog v-model="dialog.open" max-width="400px" content-class="courses-dialog" persistent>
       <v-card color="primary">
          <v-card-text class="white--text text-xs-center">{{dialog.message}}</v-card-text>
          <v-card-actions>
             <v-container fluid grid-list-xs fill-height>
                <v-layout row align-center justify-center>
                   <v-flex xs5 sm4 md4>
-                     <v-btn color="white" :to="dialog.url">{{dialog.yesBtn}}</v-btn>
+                     <v-btn color="white" :to="dialog.url" @click="dialog.open = false">{{dialog.yesBtn}}</v-btn>
                   </v-flex>
                   <v-flex xs5 sm4 md4>
                      <v-btn color="white" @click="dialog.open = false">{{dialog.noBtn}}</v-btn>

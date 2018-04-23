@@ -6,30 +6,31 @@ Tracks Style
 .tracks {
    .jumbotron {
       .layout {
-         margin: 0px 20px !important;
+         margin: 0 5px !important;
       }
 
       .card {
          position: relative !important;
 
          .card__media {
+
             /* 16:9 Aspect Ratio */
-            padding-top: 56.25% !important;
+            // padding-top: 56.25% !important;
             /* 4:3 Aspect Ratio */
-            padding-top: 75%;
+            // padding-top: 75% !important;
             /* 3:2 Aspect Ratio */
-            padding-top: 66.66%;
+            // padding-top: 66.66% !important;
             /* 8:5 Aspect Ratio */
-            padding-top: 62.5%;
+            padding-top: 62.5% !important;
          }
 
          .card__title {
-            height: 50px !important;
-            line-height: 50px !important;
+            height: 45px !important;
+            line-height: 45px !important;
             padding: 0 25px 0 0 !important;
 
             h1 {
-               @include responsive-font-size(0.99rem,true);
+               @include responsive-font-size(0.8rem,true);
             }
          }
 
@@ -37,9 +38,10 @@ Tracks Style
             top: 0 !important;
             z-index: 80 !important;
             border-radius: 0 !important;
+            font-weight: 600 !important;
             position: absolute !important;
-            height: calc(100% - 50px) !important;
-            @include responsive-font-size(0.85rem,true);
+            height: calc(100% - 45px) !important;
+            @include responsive-font-size(0.8rem,true);
          }
       }
    }

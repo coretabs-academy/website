@@ -19,7 +19,7 @@
                   <v-slide-y-transition>
                      <v-card-text class="elevation-2 primary white--text" v-show="card.show">
                         <v-layout justify-content align-center>
-                           <v-flex xs12 text-xs-center>{{card.description}}</v-flex>
+                           {{card.description}}
                         </v-layout>
                      </v-card-text>
                   </v-slide-y-transition>

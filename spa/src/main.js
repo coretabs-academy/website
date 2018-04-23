@@ -1,11 +1,11 @@
 import Vue from 'vue'
+import API from './api'
 import App from './app.vue'
 import Vuetify from 'vuetify'
-import VueResource from 'vue-resource'
 import router from './router'
 import store from './store/app.store'
 
-Vue.use(VueResource)
+Vue.use(API)
 
 // User Vuetify material desing && customize own theme
 Vue.use(Vuetify, {
@@ -21,7 +21,6 @@ Vue.use(Vuetify, {
 })
 
 Vue.config.productionTip = false
-Vue.http.options.emulateJSON = true
 
 new Vue({
    router,

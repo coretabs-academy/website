@@ -8,9 +8,15 @@ export default new Vuex.Store({
       lang: '',
       title: '',
       direction: '',
-      isLogin: false
+      isLogin: false,
+      githubFileURL: ''
    },
-   mutations: {},
+   mutations: {
+      getGithubFileURL(state, params) {
+         params.owner = params.owner === undefined ? 'coretabs-academy' : params.owner
+         state.githubFileURL = `https://api.github.com/repos/${params.owner}/${params.repo}/contents/${params.path}`
+      }
+   },
    actions: {
       getImgUrl(state, img) {
          return require(`@/assets/multimedia/${img}`)
