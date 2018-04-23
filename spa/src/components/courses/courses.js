@@ -46,6 +46,9 @@ export default {
       onResize() {
          this.height = window.innerHeight - document.querySelector('.courses .stepper>.toolbar').offsetHeight - document.querySelector('.courses .stepper>.footer').offsetHeight
       },
+      handleScroll(e) {
+         console.log(e)
+      },
       getCourses() {
          this.courses = []
          this.$store.commit('getGithubFileURL', {
@@ -56,7 +59,7 @@ export default {
          try {
             this.$http.get(this.$store.state.githubFileURL)
                .then(data => {
-                  data = JSON.parse(this.$api.b64DecodeUnicode(data.content)).categories
+                  data = data.categories
                   if (Number(this.$route.params.course) > 0 && Number(this.$route.params.course) <= data.length) {
                      data.forEach((item, index) => {
                         if (index === Number(this.$route.params.course) - 1) {

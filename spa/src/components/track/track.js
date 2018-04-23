@@ -15,7 +15,6 @@ export default {
       this.$http.get(this.$store.state.githubFileURL)
          .then(data => {
             this.title = 'دروس تطوير الويب الشامل'
-            data = JSON.parse(this.$api.b64DecodeUnicode(data.content))
             let host = data.host
             data = data.categories
             data.forEach((item, index) => {

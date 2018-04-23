@@ -17,11 +17,21 @@ export default {
          }, 100)
       }
    },
+   updated() {
+      document.querySelectorAll('.course img').forEach((img) => {
+         let src = img.src.replace(/^.*[\\\/]/, '')
+         this.$store.commit('getGithubFileURL', {
+            repo: `${this.$route.params.track}-tutorials`,
+            path: `${this.$api.b64DecodeUnicode(this.$route.query.url).replace(/[a-zA-Z-]+\.txt/,'')}/${src}`
+         })
+         img.src = this.$store.state.githubFileURL
+      })
+   },
    methods: {
       getCourse() {
          this.$http.get(this.$api.b64DecodeUnicode(this.$route.query.url))
             .then(data => {
-               this.course = this.$api.b64DecodeUnicode(data.content)
+               this.course = data
                this.loaded = true
             }).catch(err => {
                console.error(err)
@@ -38,7 +48,12 @@ export default {
             smartLists: true,
             smartypants: false
          })
-         return marked(mdText)
+         let youtube = /(?:http?s?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=)?(.+)/g
+         mdText = mdText.replace(youtube, 'iframe.youtube.com/embed/$1/iframe')
+         let html = marked(mdText)
+         html = html.replace('iframe', '<iframe class="youtube" height="345" src="http://www')
+         html = html.replace('/iframe', '" frameborder="0" allowfullscreen></iframe>')
+         return html
       }
    }
 }

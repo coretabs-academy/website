@@ -20,7 +20,7 @@
             <v-stepper-step v-bind:class="{'active':currentCourse.id === course.id}" v-for="course in courses" :key="`${course.id}-step`" :step="course.id" @click.native="gotToStep(course.id)" editable>{{course.title}}</v-stepper-step>
          </div>
       </v-navigation-drawer>
-      <div class="content" v-bind:style="{ height: height + 'px' }">
+      <div class="content" v-bind:style="{ height: height + 'px' }" v-on:scroll="handleScroll">
          <router-view></router-view>
       </div>
       <v-footer app class="toolbar-footer">

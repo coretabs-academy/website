@@ -21,6 +21,7 @@ Vue.use(Vuetify, {
 })
 
 Vue.config.productionTip = false
+Vue.config.delimiters = ['[[', ']]']
 
 new Vue({
    router,

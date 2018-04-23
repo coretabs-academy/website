@@ -3,4 +3,25 @@
 /*=====================================
 Course Style
 =======================================*/
-.course {}
+.course {
+   ul {
+      list-style: none;
+   }
+
+   ul ul {
+      list-style: disc;
+   }
+
+   img {
+      max-width: 100%;
+   }
+
+   iframe.youtube {
+      width: 420px;
+   }
+   @media screen and (max-width: 480px) {
+      iframe.youtube {
+         width: 100%;
+      }
+   }
+}

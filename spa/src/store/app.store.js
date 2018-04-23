@@ -14,7 +14,7 @@ export default new Vuex.Store({
    mutations: {
       getGithubFileURL(state, params) {
          params.owner = params.owner === undefined ? 'coretabs-academy' : params.owner
-         state.githubFileURL = `https://api.github.com/repos/${params.owner}/${params.repo}/contents/${params.path}`
+         state.githubFileURL = `https://raw.githubusercontent.com/${params.owner}/${params.repo}/master/${params.path}`
       }
    },
    actions: {
