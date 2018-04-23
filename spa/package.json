@@ -4,7 +4,7 @@
    "private": true,
    "scripts": {
       "serve": "vue-cli-service serve",
-      "build": "vue-cli-service build --dest ../public/",
+      "build": "vue-cli-service build --dest ../templates/",
       "lint": "vue-cli-service lint"
    },
    "dependencies": {
@@ -13,7 +13,7 @@
       "rfs": "^7.1.1",
       "vue": "^2.5.13",
       "vue-router": "^3.0.1",
-      "vuetify": "^1.0.11",
+      "vuetify": "^1.0.17",
       "vuex": "^3.0.1"
    },
    "devDependencies": {

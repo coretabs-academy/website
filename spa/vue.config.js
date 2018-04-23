@@ -3,8 +3,8 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin'),
 module.exports = {
    configureWebpack: {
       output: {
-         publicPath: '/public/',
-         path: path.resolve(__dirname, '../public')
+         publicPath: '/static/',
+         path: path.resolve(__dirname, '../static')
       },
       plugins: [
          new FaviconsWebpackPlugin({

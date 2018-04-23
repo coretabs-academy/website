@@ -21,8 +21,8 @@ from django.views.generic import TemplateView
 from . import views
 
 urlpatterns = [
+    path('', TemplateView.as_view(template_name='index.html'), name='index')
     # path('', views.HomeView.as_view(extra_context={'settings_form': SettingsForm}), name='home'),
-    path('', TemplateView.as_view(template_name='index.html'), name=''),
     # path('admin/', admin.site.urls),
     # path('account/', include('account.urls')),
     # path('lang/set/', include('django.conf.urls.i18n'), name='set_language'),
@@ -36,4 +36,4 @@ urlpatterns = [
 ]
 
 # handler404 = 'coretabs.views.handler404'
-# handler500 = 'coretabs.views.handler500'
+handler500 = 'coretabs.views.handler500'
