@@ -6,7 +6,8 @@ Courses Style
 $toolbar-height: 60px;
 $navigation-toolbar-height: 80px;
 
-main {
+main.course-main-content,
+main.courses-main-content {
    padding-top: $toolbar-height !important;
    padding-bottom: $toolbar-height !important;
 }
