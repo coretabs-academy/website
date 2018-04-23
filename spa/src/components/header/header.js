@@ -132,6 +132,7 @@ export default {
                this.navs = this.default_navs;
                break;
             case '404':
+            case 'course':
             case 'courses':
                this.show = false;
                break;

@@ -33,9 +33,12 @@ export default {
       setFooter() {
          switch (this.$route.name) {
             case '404':
+            case 'course':
             case 'courses':
                this.show = false;
                break;
+            default:
+               this.show = true;
          }
       }
    }
