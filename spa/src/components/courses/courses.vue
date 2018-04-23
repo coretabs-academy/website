@@ -17,7 +17,7 @@
          </v-toolbar>
          <v-divider></v-divider>
          <div class="stepper-group">
-            <v-stepper-step v-bind:class="{'active':currentCourse.id === course.id}" v-for="course in courses" :key="`${course.id}-step`" :step="course.id" @click="gotToStep(course.id)" editable>{{course.title}}</v-stepper-step>
+            <v-stepper-step v-bind:class="{'active':currentCourse.id === course.id}" v-for="course in orderedCourses" :key="`${course.id}-step`" :step="course.id" @click="gotToStep(course.id)" editable>{{course.title}}</v-stepper-step>
          </div>
       </v-navigation-drawer>
       <v-stepper-content :step="course.id" v-for="course in courses" :key="`${course.id}-content`" v-bind:class="{'hide':currentCourse.id !== course.id}" v-bind:style="{ height: height + 'px' }">

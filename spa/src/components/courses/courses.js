@@ -1,3 +1,4 @@
+import _ from 'lodash'
 import marked from 'marked'
 
 export default {
@@ -28,7 +29,7 @@ export default {
       prev: 'السابق',
       next: 'التالي'
    }),
-   async created() {
+   created() {
       this.drawer.isRight = this.$store.state.direction === 'rtl' ? true : false
       this.$store.commit('getGithubFileURL', {
          repo: `${this.$route.params.track}-tutorials`,
@@ -37,43 +38,59 @@ export default {
 
       let BreakException = {};
       try {
-         let data = await this.$http.get(this.$store.state.githubFileURL)
-         data = JSON.parse(this.$api.b64DecodeUnicode(data.content)).categories
-         data.forEach((item, index) => {
-            if (index === Number(this.$route.params.course)) {
-               item.topics.forEach(async (course, courseNumber) => {
-                  this.$store.commit('getGithubFileURL', {
-                     repo: `${this.$route.params.track}-tutorials`,
-                     path: `${course.id}/topic-${this.$store.state.lang}.txt`
-                  })
-                  data = await this.$http.get(this.$store.state.githubFileURL)
-                  this.courses.push({
-                     id: courseNumber + 1,
-                     title: course[`title-${this.$store.state.lang}`],
-                     content: this.$api.b64DecodeUnicode(data.content)
-                  });
-                  if (courseNumber == 0) {
-                     this.currentCourse = {
-                        id: courseNumber + 1,
-                        title: course[`title-${this.$store.state.lang}`],
-                        coursesGroup: `الدرس ${index + 1} : ${item[`title-${this.$store.state.lang}`]}`
-                     }
+         this.$http.get(this.$store.state.githubFileURL)
+            .then(data1 => {
+               data1 = JSON.parse(this.$api.b64DecodeUnicode(data1.content)).categories
+               data1.forEach((item, index) => {
+                  if (index === Number(this.$route.params.course)) {
+                     item.topics.forEach((course, courseNumber) => {
+                        this.$store.commit('getGithubFileURL', {
+                           repo: `${this.$route.params.track}-tutorials`,
+                           path: `${course.id}/topic-${this.$store.state.lang}.txt`
+                        })
+                        this.$http.get(this.$store.state.githubFileURL)
+                           .then(data2 => {
+                              this.courses.push({
+                                 id: courseNumber + 1,
+                                 title: course[`title-${this.$store.state.lang}`],
+                                 content: this.$api.b64DecodeUnicode(data2.content)
+                              });
+                              if (courseNumber == 0) {
+                                 this.currentCourse = {
+                                    id: courseNumber + 1,
+                                    title: course[`title-${this.$store.state.lang}`],
+                                    coursesGroup: `الدرس ${index + 1} : ${item[`title-${this.$store.state.lang}`]}`
+                                 }
+                              }
+                              if (courseNumber === item.topics.length - 1) {
+                                 this.dialog.url = `/tracks/${this.$route.params.track}/${Number(this.$route.params.course) + 1}/1`
+                                 this.trackURL = `/tracks/${this.$route.params.track}`
+                                 this.loaded = true
+                              }
+                           }).catch(e => {
+                              throw e
+                           })
+                     })
+                     throw BreakException
                   }
                })
-               throw BreakException
-            }
-         })
+            })
+            .catch(e => {
+               if (e !== BreakException) {
+                  throw e
+               }
+            })
+
       } catch (e) {
          if (e !== BreakException) {
-            throw new e
+            console.error(e)
          }
       }
-      this.courses.sort((a, b) => {
-         return a.id > b.id
-      })
-      this.dialog.url = `/tracks/${this.$route.params.track}/${Number(this.$route.params.course) + 1}/1`
-      this.trackURL = `/tracks/${this.$route.params.track}`
-      this.loaded = true
+   },
+   computed: {
+      orderedCourses: function() {
+         return _.orderBy(this.courses, 'id')
+      }
    },
    methods: {
       onResize() {
