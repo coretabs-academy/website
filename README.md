@@ -1,1 +1,1 @@
-# 1MAC_COURSES
+# WARNING: this repo is deprecated, the update website can be found here: https://github.com/coretabs-academy/website-v2
